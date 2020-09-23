@@ -1,0 +1,25 @@
+location,location_name,type,quantile,horizon,value,target_end_date,forecast_date,target
+PL,Poland,quantile,0.05,1,428.1,2020-09-26,2020-09-23,1 wk ahead inc case
+PL,Poland,quantile,0.25,1,1284.3,2020-09-26,2020-09-23,1 wk ahead inc case
+PL,Poland,quantile,0.5,1,4281,2020-09-26,2020-09-23,1 wk ahead inc case
+PL,Poland,quantile,0.75,1,7277.7,2020-09-26,2020-09-23,1 wk ahead inc case
+PL,Poland,quantile,0.95,1,10702.5,2020-09-26,2020-09-23,1 wk ahead inc case
+PL,Poland,quantile,0.05,2,428.1,2020-10-03,2020-09-23,2 wk ahead inc case
+PL,Poland,quantile,0.25,2,1284.3,2020-10-03,2020-09-23,2 wk ahead inc case
+PL,Poland,quantile,0.5,2,4281,2020-10-03,2020-09-23,2 wk ahead inc case
+PL,Poland,quantile,0.75,2,7277.7,2020-10-03,2020-09-23,2 wk ahead inc case
+PL,Poland,quantile,0.95,2,10702.5,2020-10-03,2020-09-23,2 wk ahead inc case
+PL,Poland,quantile,0.05,3,428.1,2020-10-10,2020-09-23,3 wk ahead inc case
+PL,Poland,quantile,0.25,3,1284.3,2020-10-10,2020-09-23,3 wk ahead inc case
+PL,Poland,quantile,0.5,3,4281,2020-10-10,2020-09-23,3 wk ahead inc case
+PL,Poland,quantile,0.75,3,7277.7,2020-10-10,2020-09-23,3 wk ahead inc case
+PL,Poland,quantile,0.95,3,10702.5,2020-10-10,2020-09-23,3 wk ahead inc case
+PL,Poland,quantile,0.05,4,428.1,2020-10-17,2020-09-23,4 wk ahead inc case
+PL,Poland,quantile,0.25,4,1284.3,2020-10-17,2020-09-23,4 wk ahead inc case
+PL,Poland,quantile,0.5,4,4281,2020-10-17,2020-09-23,4 wk ahead inc case
+PL,Poland,quantile,0.75,4,7277.7,2020-10-17,2020-09-23,4 wk ahead inc case
+PL,Poland,quantile,0.95,4,10702.5,2020-10-17,2020-09-23,4 wk ahead inc case
+PL,Poland,point,,1,4281,2020-09-26,2020-09-23,1 wk ahead inc case
+PL,Poland,point,,2,4281,2020-10-03,2020-09-23,2 wk ahead inc case
+PL,Poland,point,,3,4281,2020-10-10,2020-09-23,3 wk ahead inc case
+PL,Poland,point,,4,4281,2020-10-17,2020-09-23,4 wk ahead inc case

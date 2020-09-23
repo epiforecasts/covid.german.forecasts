@@ -1,0 +1,1 @@
+# command to deploy app. Useful to update data. maybe make this a bash script instead?

@@ -1,0 +1,25 @@
+location,location_name,type,quantile,horizon,value,target_end_date,forecast_date,target
+GM,Germany,quantile,0.05,1,1159,2020-09-26,2020-09-23,1 wk ahead inc case
+GM,Germany,quantile,0.25,1,3477,2020-09-26,2020-09-23,1 wk ahead inc case
+GM,Germany,quantile,0.5,1,11590,2020-09-26,2020-09-23,1 wk ahead inc case
+GM,Germany,quantile,0.75,1,19703,2020-09-26,2020-09-23,1 wk ahead inc case
+GM,Germany,quantile,0.95,1,28975,2020-09-26,2020-09-23,1 wk ahead inc case
+GM,Germany,quantile,0.05,2,1159,2020-10-03,2020-09-23,2 wk ahead inc case
+GM,Germany,quantile,0.25,2,3477,2020-10-03,2020-09-23,2 wk ahead inc case
+GM,Germany,quantile,0.5,2,11590,2020-10-03,2020-09-23,2 wk ahead inc case
+GM,Germany,quantile,0.75,2,19703,2020-10-03,2020-09-23,2 wk ahead inc case
+GM,Germany,quantile,0.95,2,28975,2020-10-03,2020-09-23,2 wk ahead inc case
+GM,Germany,quantile,0.05,3,1159,2020-10-10,2020-09-23,3 wk ahead inc case
+GM,Germany,quantile,0.25,3,3477,2020-10-10,2020-09-23,3 wk ahead inc case
+GM,Germany,quantile,0.5,3,11590,2020-10-10,2020-09-23,3 wk ahead inc case
+GM,Germany,quantile,0.75,3,19703,2020-10-10,2020-09-23,3 wk ahead inc case
+GM,Germany,quantile,0.95,3,28975,2020-10-10,2020-09-23,3 wk ahead inc case
+GM,Germany,quantile,0.05,4,1159,2020-10-17,2020-09-23,4 wk ahead inc case
+GM,Germany,quantile,0.25,4,3477,2020-10-17,2020-09-23,4 wk ahead inc case
+GM,Germany,quantile,0.5,4,11590,2020-10-17,2020-09-23,4 wk ahead inc case
+GM,Germany,quantile,0.75,4,19703,2020-10-17,2020-09-23,4 wk ahead inc case
+GM,Germany,quantile,0.95,4,28975,2020-10-17,2020-09-23,4 wk ahead inc case
+GM,Germany,point,,1,11590,2020-09-26,2020-09-23,1 wk ahead inc case
+GM,Germany,point,,2,11590,2020-10-03,2020-09-23,2 wk ahead inc case
+GM,Germany,point,,3,11590,2020-10-10,2020-09-23,3 wk ahead inc case
+GM,Germany,point,,4,11590,2020-10-17,2020-09-23,4 wk ahead inc case

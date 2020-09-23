@@ -1,0 +1,103 @@
+
+
+get_data <- function(load_from_server = FALSE, 
+                     cumulative = FALSE,
+                     cases = TRUE,
+                     country = "Germany_Poland",
+                     weekly = TRUE) {
+  
+  if (load_from_server) {
+    if (country == "US") {
+      incident_cases <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Incident%20Cases.csv?raw=true")
+      incident_deaths <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Incident%20Deaths.csv?raw=true")
+      
+      if (!weekly) {
+        # we only need cumulative data if we don't sum up anyway. Could in principle also drop cumulative data entirely
+        cumulative_cases <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Cumulative%20Cases.csv?raw=true")
+        cumulative_deaths <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Cumulative%20Deaths.csv?raw=true")
+      }
+      
+    } else if (country == "Germany_Poland") {
+      incident_cases <- data.table::rbindlist(list(
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Germany.csv"), 
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Poland.csv")
+      ))
+      cumulative_cases <- data.table::rbindlist(list(
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Cases_Germany.csv"), 
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Cases_Poland.csv")
+      ))
+      incident_deaths <- data.table::rbindlist(list(
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Deaths_Germany.csv"), 
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Deaths_Poland.csv")
+      ))
+      cumulative_deaths <- data.table::rbindlist(list(
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Germany.csv"), 
+        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Poland.csv")
+      ))
+    }
+    data.table::fwrite(incident_cases, here::here("data", paste0("daily-incidence-cases-", country, ".csv")))
+    data.table::fwrite(incident_deaths, here::here("data", paste0("daily-incidence-deaths-", country, ".csv")))
+    
+    if (!weekly) {
+      data.table::fwrite(cumulative_cases, here::here("data", paste0("daily-cumulative-cases-", country, ".csv")))
+      data.table::fwrite(cumulative_deaths, here::here("data", paste0("daily-cumulative-deaths-", country, ".csv")))
+    }
+    
+  } else {
+    incident_cases <- data.table::fread(here::here("data", paste0("daily-incidence-cases-", country, ".csv")))
+    incident_deaths <- data.table::fread(here::here("data", paste0("daily-incidence-deaths-", country, ".csv")))
+    
+    if (!weekly) {
+      cumulative_cases <- data.table::fread(here::here("data", paste0("daily-cumulative-cases-", country, ".csv")))
+      cumulative_deaths <- data.table::fread(here::here("data", paste0("daily-cumulative-deaths-", country, ".csv")))
+    }
+  }
+  
+  if (weekly) {
+    # cases
+    if (cases) {
+      incident_cases_weekly <- incident_cases %>%
+        dplyr::mutate(epiweek = lubridate::epiweek(date)) %>%
+        dplyr::group_by(location, location_name, epiweek) %>%
+        dplyr::summarise(value = sum(value), 
+                         target_end_date = max(date))
+      if (cumulative) {
+        cumulative_cases_weekly <- incident_cases_weekly %>%
+          dplyr::mutate(value = cumsum(value))
+        return(cumulative_cases_weekly)
+      } else {
+        return(incident_cases_weekly)
+      }
+      
+    # deaths
+    } else {
+      incident_deaths_weekly <- incident_deaths %>%
+        dplyr::mutate(epiweek = lubridate::epiweek(date)) %>%
+        dplyr::group_by(location, location_name, epiweek) %>%
+        dplyr::summarise(value = sum(value), 
+                         target_end_date = max(date))
+      if (cumulative) {
+        cumulative_deaths_weekly <- incident_deaths_weekly %>%
+          dplyr::mutate(value = cumsum(value))
+        return(cumulative_deaths_weekly)
+      } else {
+        return(incident_deaths_weekly)
+      }
+    }
+  }
+  
+  # if not weekly
+  if (cases) {
+    if (cumulative) {
+      return(cumulative_cases)
+    } else {
+      return(incident_cases)
+    }
+  } else {
+    if (cumulative) {
+      return(cumulative_deaths)
+    } else {
+      return(incident_deaths)
+    }
+  }
+}
