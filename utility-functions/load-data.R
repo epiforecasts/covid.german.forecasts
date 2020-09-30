@@ -7,6 +7,8 @@ get_data <- function(load_from_server = FALSE,
                      weekly = TRUE) {
   
   if (load_from_server) {
+    
+    # country is US
     if (country == "US") {
       incident_cases <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Incident%20Cases.csv?raw=true")
       incident_deaths <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Incident%20Deaths.csv?raw=true")
@@ -16,7 +18,8 @@ get_data <- function(load_from_server = FALSE,
         cumulative_cases <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Cumulative%20Cases.csv?raw=true")
         cumulative_deaths <- readr::read_csv("https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Cumulative%20Deaths.csv?raw=true")
       }
-      
+    
+    # country not US
     } else if (country == "Germany_Poland") {
       incident_cases <- data.table::rbindlist(list(
         readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Germany.csv"), 
@@ -35,18 +38,23 @@ get_data <- function(load_from_server = FALSE,
         readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Poland.csv")
       ))
     }
+    
+    # write incident cases and deaths
     data.table::fwrite(incident_cases, here::here("data", paste0("daily-incidence-cases-", country, ".csv")))
     data.table::fwrite(incident_deaths, here::here("data", paste0("daily-incidence-deaths-", country, ".csv")))
     
-    if (!weekly) {
-      data.table::fwrite(cumulative_cases, here::here("data", paste0("daily-cumulative-cases-", country, ".csv")))
-      data.table::fwrite(cumulative_deaths, here::here("data", paste0("daily-cumulative-deaths-", country, ".csv")))
-    }
-    
+    data.table::fwrite(cumulative_cases, here::here("data", paste0("daily-cumulative-cases-", country, ".csv")))
+    data.table::fwrite(cumulative_deaths, here::here("data", paste0("daily-cumulative-deaths-", country, ".csv")))
+
+  # ----------------------------------------------------------------------------
+  # if not load from server
   } else {
     incident_cases <- data.table::fread(here::here("data", paste0("daily-incidence-cases-", country, ".csv")))
     incident_deaths <- data.table::fread(here::here("data", paste0("daily-incidence-deaths-", country, ".csv")))
     
+    # cumulative cases are only relevant for daily data. for weekly, they get computed
+    # could in principle just omit that and have cumulative computed as well. 
+    # leaving it as we actually have ground truth data available
     if (!weekly) {
       cumulative_cases <- data.table::fread(here::here("data", paste0("daily-cumulative-cases-", country, ".csv")))
       cumulative_deaths <- data.table::fread(here::here("data", paste0("daily-cumulative-deaths-", country, ".csv")))
