@@ -18,6 +18,9 @@ library(magrittr)
 # drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 # sheets_auth(token = drive_token())
 
+# source(here::here("dialog-messages.R"))
+source(here::here("human-forecasts", "dialog-messages.R"))
+
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 
 # load data
@@ -64,6 +67,8 @@ selection_names <- apply(selections, MARGIN = 1,
 
 
 
+
+
 ui <- fluidPage(
   headerPanel("Predictions"),
   
@@ -83,13 +88,17 @@ ui <- fluidPage(
            column(2, 
                   offset = 0,
                   style = 'padding: 20px; border: 2px double black; background-color: aliceblue',
-                  fluidRow(selectInput(inputId = "selection", 
-                                       label = "Selection:", 
+                  fluidRow(selectInput(inputId = "selection",
+                                       label = "Selection:",
                                        choices = selection_names, 
                                        selected = "Germany")),
                   fluidRow(numericInput(inputId = "num_past_obs", 
                                         value = 12,
                                         label = "Past weeks to show")), 
+                  fluidRow(selectInput(inputId = "interval_range", 
+                                       choices = c(seq(10, 90, 10), 95, 98),
+                                       label = "interval range", 
+                                       selected = 90)), 
                   # fluidRow(numericInput(inputId = "move_forecast", 
                   #                       value = 0,
                   #                       label = "Move forecast up or down")),
@@ -254,13 +263,17 @@ server <- function(input, output, session) {
   })
   
   quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
-  
+
   forecast_values_x <- reactive({
-    qlnorm(quantile_grid)
+    qlnorm(quantile_grid, 
+           meanlog = log(rv$median[1]), 
+           sdlog = rv$sigma_log_normal[1])
   })
   
   forecast_values_y <- reactive({
-    dlnorm(forecast_values_x())
+    dlnorm(forecast_values_x(), 
+           meanlog = log(rv$median[1]), 
+           sdlog = rv$sigma_log_normal[1])
   })
   
   
@@ -277,8 +290,10 @@ server <- function(input, output, session) {
     lower_50 = NULL,
     upper_90 = NULL,
     lower_90 = NULL,
+    lower_quantile_level = NULL,
+    upper_quantile_level = NULL,
     selection_number = NULL,
-    sigma_log_normal = 0
+    sigma_log_normal = NULL
   )
   
   output$p <- renderPlotly({
@@ -335,7 +350,7 @@ server <- function(input, output, session) {
       add_trace(x = x_pred(),
                 y = rv$median, type = "scatter",
                 name = 'median prediction',mode = 'lines+markers', color = I("dark green")) %>%
-      add_ribbons(x = x_pred(), ymin = rv$lower_90, ymax = rv$upper_90, 
+      add_ribbons(x = x_pred(), ymin = rv[["lower_90"]], ymax = rv$upper_90, 
                   name = "95% prediction interval",
                   line = list(color = "transparent"),
                   fillcolor = 'rgba(26,150,65,0.4)') %>%
@@ -371,7 +386,9 @@ server <- function(input, output, session) {
                 name = 'observed data',mode = 'lines+markers') %>%
       layout(title = list(text = paste("Forecast Distribution"), 
                           x = 0.1)) %>%
-      layout(shapes = list(vline(4)))
+      layout(shapes = list(vline(rv$median[1]), 
+                           vline(rv$lower_90[1], color = "blue"), 
+                           vline(rv$upper_90[1], color = "blue")))
   })
   
   # output$plot_deaths <- renderPlotly({
@@ -387,73 +404,7 @@ server <- function(input, output, session) {
                {
                  showModal(modalDialog(
                    title = "Instructions",
-                   HTML('<h3> Welcome! </h3> 
-                        Please read these instructions and terms carefully. If you agree, please click "I consent" to access the app. If you do not consent, you cannot use this app. 
-                        <br>
-                        <h4> What this app does </h4>
-                        This app is designed to collect forecasts from expert and non-experts. Predictions are made for weekly incident case numbers and deaths from Covid-19 in Germany and Poland. 
-                        We do not create user accounts, so you need to reenter your data every time you visit the app to make a forecast. 
-                        <h4> Making Forecasts </h4>
-                        You can either drag the points to adjust forecasts or use the numeric input fields.
-                        If you want to reset the forecasts, press reset. For reference, you see a smaller plot with incident cases in the chosen location. These may help you when forecasting deaths. You can toggle between daily and weekly cases. 
-                        <br>
-                        <h4> Submitting Forecasts </h4>
-                        Once you are satisfied, type in your name and press submit. <b>We do not create an account for you, so you need to be consistent in your naming between diffrent forecasts you make</b>. If you prefer that you can also enter a fake name, but again: please be conistent. Also make sure you choose a name that is unique enough that nobody else will choose the same name.
-                        <br>
-                        Once you submit a forecast, the next input will be selected until you have made forecasts for all targets. You can submit multiple times if you want and we will only count the latest submission. By submitting a forecast you agree that we can store and use your data and your forecasts in the ways outlied below.
-                        <br>
-                        <h4> Providing your e-mail address </h4>
-                        Having your e-mail address (as well as your real name) is not absolutely necessary and we will therefore not force you to provide it. We would, however, very much encourage you to provide it. This makes identification easier and allows us to contact you in case we have questions or something went wrong. If you provide us your e-mail address we will send you a weekly reminder for the forecasts. 
-                        <h4> Performance Board </h4>
-                        If you like you can have your name appear on our Performance Board. If you put a name in the corresponding field, this is what appears on the board. If you leave it blank, your forecast will be anonymised.
-                        <br>
-                        <h3> Data Policy</h3> 
-                        
-                        <h4> Responsible for the data policy </h4>
-                   Nikos Bosse<br>
-                   London School of Hygiene and Tropical Medicine<br>
-                   Keppel Street<br>
-                   WC1E 7HT London<br>
-                   nikos.bosse@lshtm.ac.uk
-                   <br>
-                   <h4> What data we collect </h4>
-                   With your consent we collect
-                    <ul>
-                    <li>Your first and last name</li>
-                    <li>Your e-mailaddress</li>
-                    <li>The forecasts you submit through this app</li>
-                    <li>The name you want to appear on the performance board</li>
-                    </ul>
-                    While we would prefer if you used your real name, you may also enter a fake name if you do not want to disclose your real name. In order for the app to work properly, you need to be consistent with the name you provide. 
-                    You are also not obliged to provide your e-mail address, but we would prefer if you did so we can contact you with updates and questions. 
-                    <br>
-                    <h4> What we do with your data</h4>
-                    Your first and last name (as well as your e-mail address if you choose to provide it) will be used to identify you. This is necessary to correctly attribute forecasts to forecasters. 
-                    <br>
-                    If you choose to provide your e-mail address we will send you a weekly reminder for the foreacsts. 
-                    <br>
-                    The name you choose for the leaderboard will appear on the performance board here (LINK). The leaderboard shows information about performance of past forecasters. If you leave the field blank, your name will be anonymised. 
-                    <br>
-                    Your forecasts will used for research on forecasting as well as on Covid-19. Use cases will include, but are not limited to: 
-                    <ul>
-                    <li>Sharing anonymised and/or aggregate forecasts with other research institutions, especially the German Forecast Hub</li>
-                    <li>Sharing anonymised forecasts on public repositories on github.com</li>
-                    <li>Using anonymised versions of the forecasts for scientific publications about forecasting and/or Covid-19. </li>
-                    <li>Sharing anonymised forecasts with the public</li>
-                    </ul>
-                    Under no circumstances will we share your personal data (your first and last name and your e-mail address) with anyone. 
-                    
-                    <h4>How do we store your data</h4>
-                    Once you click submit, your data will be sent to a Google Sheet stored in a Google Drive folder. One sheet will hold your personal information (first name, last name, e-mail address) as well as an encrypted version your name and a randomly generated forecaster ID. The encryption algorithm used is SHA-256. A second sheet will hold your encrypted name as well as your forecasts. 
-                    <br>
-                    Every Monday, the forecast sheet will be cleared and forecasts will be deleted from the Google Drive (information that links your personal information to the foreacster ID remains). Raw forecasts will be uploaded to Github, using only the randomised forecaster ID so forecasts cannot be easily attributed to individual forecasters. In addition, the performance board will be updated using the name you provided in the app. 
-                    <h4>How long do we store your data</h4>
-                    We will store the data as long as is necessary to conduct research on forecasting and Covid-19. We will store your personal information (name and e-mail) as long as may be necessary to contact you with questions and updates. We expect to delete all personal information at the end of 2022. 
-                    <br>
-                    Anonmysed versions of your forecasts may be stored indefinitely, e.g. as part of a publication. 
-                    <br>
-                    You can, at any point, request deletion of your personal data. To that end, please send an e-mail at nikos.bosse@lshtm.ac.uk.'
-                        ),
+                   HTML(instructions),
                    # a("test", href = "https://google.de", target = "_blank"), 
                    footer = modalButton("I understand and consent")
                  ))
@@ -464,52 +415,7 @@ server <- function(input, output, session) {
                {
                  showModal(modalDialog(
                    title = "Data Policy",
-                   HTML('This app allows experts and non-experts to make forecasts about the trajectory of the Covid-19 pandemic in Germany and Poland. To that end we will collect and store the data outlined below.
-                   <br>
-                   <h4> Responsible for the data policy </h4>
-                   Nikos Bosse
-                   London School of Hygiene and Tropical Medicine
-                   Keppel Street
-                   WC1E 7HT London
-                   nikos.bosse@lshtm.ac.uk
-                   <br>
-                   <h4> What data we collect </h4>
-                   With your consent we collect
-                    <ul>
-                    <li>Your first and last name</li>
-                    <li>Your e-mailaddress</li>
-                    <li>The forecasts you submit through this app</li>
-                    <li>The name you want to appear on the leaderboard</li>
-                    </ul>
-                    While we would prefer if you used your real name, you may also enter a fake name if you do not want to disclose your real name. In order for the app to work properly, you need to be consistent with the name you provide. 
-                    You are also not obliged to provide your e-mail address, but we would prefer if you did so we can contact you with updates and questions. 
-                    <br>
-                    <h4> What we do with your data</h4>
-                    Your first and last name (as well as your e-mail address if you choose to provide it) will be used to identify you. This is necessary to correctly attribute forecasts to forecasters. 
-                    <br>
-                    If you choose to provide your e-mail address we will send you a weekly reminder for the foreacsts. 
-                    <br>
-                    The name you choose for the leaderboard will appear on the leaderboard here (LINK). The leaderboard shows information about performance of past forecasters. If you leave the field blank, your name will be anonymised. 
-                    <br>
-                    Your forecasts will used for research on forecasting as well as on Covid-19. Use cases will include, but are not limited to: 
-                    <ul>
-                    <li>Sharing anonymised and/or aggregate forecasts with other research institutions, especially the German Forecast Hub</li>
-                    <li>Using anonymised versions of the forecasts for scientific publications about forecasting and/or Covid-19. </li>
-                    <li>Sharing anonymised forecasts with the public</li>
-                    </ul>
-                    Under no circumstances will we share your personal data (your first and last name and your e-mail address) with anyone. 
-                    
-                    <h4>How do we store your data</h4>
-                    Once you click submit, your data will be sent to a Google Sheet stored in a Google Drive folder. One sheet will hold your personal information (first name, last name, e-mail address) as well as an encrypted version your name and a randomly generated forecaster ID. The encryption algorithm used is SHA-256. A second sheet will hold your encrypted name as well as your forecasts. 
-                    <br>
-                    Every Monday, the forecast sheet will be cleared and forecasts will be deleted from the Google Drive (information that links your personal information to the foreacster ID remains). Raw forecasts will be uploaded to Github, using only the randomised forecaster ID so forecasts cannot be easily attributed to individual forecasters. In addition, the leaderboard will be updated using the name you provided in the app. 
-                    <h4>How long do we store your data</h4>
-                    We will store the data as long as is necessary to conduct research on forecasting and Covid-19. We will store your personal information (name and e-mail) as long as may be necessary to contact you with questions and updates. We expect to delete all personal information at the end of 2022. 
-                    <br>
-                    Anonmysed versions of your forecasts may be stored indefinitely, e.g. as part of a publication. 
-                    <br>
-                    You can, at any point, request deletion of your personal data. To that end, please send an e-mail at nikos.bosse@lshtm.ac.uk. 
-                        '),
+                   HTML(data_policy),
                    # a("test", href = "https://google.de", target = "_blank"), 
                    footer = modalButton("OK")
                  ))
@@ -565,7 +471,15 @@ server <- function(input, output, session) {
                  rv$lower_50 <- rep(last_value() * 0.3, 4)
                  rv$upper_90 <- rep(last_value() * 2.5, 4)
                  rv$lower_90 <- rep(last_value() * 0.1, 4)
-                 rv$sigma_log_normal <- 0.1
+                 rv$sigma_log_normal <- rep(0.1, 4)
+               }, 
+               priority = 2)
+  
+  observeEvent(input$interval_range,
+               {
+                 print("interval trigger")
+                 rv$lower_quantile_level <- (100 - as.numeric(input$interval_range)) / (2 * 100)
+                 rv$upper_quantile_level <- 1 - rv$lower_quantile_level
                }, 
                priority = 2)
   
@@ -586,6 +500,10 @@ server <- function(input, output, session) {
                    updateNumericInput(session, 
                                       paste0("upper_90_forecast_", i), 
                                       value = round(rv$upper_90[i], 2))
+                   updateNumericInput(session, 
+                                      paste0("shape_log_normal_", i), 
+                                      value = round(rv$sigma_log_normal[i], 2))
+                   
                  }
                  
                }, 
@@ -722,6 +640,27 @@ server <- function(input, output, session) {
                }, 
                priority = 99)
   
+  
+  observeEvent(input$shape_log_normal_1,
+               {
+                 rv$sigma_log_normal[1] <- input$shape_log_normal_1
+               }, 
+               priority = 99)
+  observeEvent(input$shape_log_normal_2,
+               {
+                 rv$sigma_log_normal[2] <- input$shape_log_normal_2
+               }, 
+               priority = 99)
+  observeEvent(input$shape_log_normal_3,
+               {
+                 rv$sigma_log_normal[3] <- input$shape_log_normal_3
+               }, 
+               priority = 99)
+  observeEvent(input$shape_log_normal_4,
+               {
+                 rv$sigma_log_normal[4] <- input$shape_log_normal_4
+               }, 
+               priority = 99)
 }
 
 shinyApp(ui, server)
