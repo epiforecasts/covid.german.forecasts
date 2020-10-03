@@ -13,10 +13,10 @@ library(magrittr)
 # drive_auth()
 # drive_auth(cache = ".secrets", email = "nikosbosse@gmail.com")
 
-
-options(gargle_oauth_cache = ".secrets")
-drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
-sheets_auth(token = drive_token())
+# 
+# options(gargle_oauth_cache = ".secrets")
+# drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
+# sheets_auth(token = drive_token())
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 
@@ -112,75 +112,65 @@ ui <- fluidPage(
              column(2, numericInput(inputId = "median_forecast_1", 
                                     value = 0,
                                     label = "median")), 
-             column(2, numericInput(inputId = "lower_95_forecast_1", 
+             column(2, numericInput(inputId = "lower_90_forecast_1", 
                                     value = 0,
-                                    label = "Lower 95%")), 
-             column(2, numericInput(inputId = "lower_50_forecast_1", 
+                                    label = "Lower 90%")),
+             column(2, numericInput(inputId = "upper_90_forecast_1", 
                                     value = 0,
-                                    label = "Lower 50%")), 
-             column(2, numericInput(inputId = "upper_50_forecast_1", 
+                                    label = "Upper 90%")),
+             column(2, numericInput(inputId = "shape_log_normal_1", 
                                     value = 0,
-                                    label = "Upper 50%")),
-             column(2, numericInput(inputId = "upper_95_forecast_1", 
-                                    value = 0,
-                                    label = "Upper 95%"))
+                                    label = "Shape Log Normal"))
            ), 
            fluidRow(
              column(2, helpText("2 week ahead predictions")),
              column(2, numericInput(inputId = "median_forecast_2", 
                                     value = 0,
                                     label = "median")), 
-             column(2, numericInput(inputId = "lower_95_forecast_2", 
+             column(2, numericInput(inputId = "lower_90_forecast_2", 
                                     value = 0,
-                                    label = "Lower 95%")), 
-             column(2, numericInput(inputId = "lower_50_forecast_2", 
+                                    label = "Lower 90%")), 
+             column(2, numericInput(inputId = "upper_90_forecast_2", 
                                     value = 0,
-                                    label = "Lower 50%")), 
-             column(2, numericInput(inputId = "upper_50_forecast_2", 
+                                    label = "Upper 90%")),
+             column(2, numericInput(inputId = "shape_log_normal_2", 
                                     value = 0,
-                                    label = "Upper 50%")),
-             column(2, numericInput(inputId = "upper_95_forecast_2", 
-                                    value = 0,
-                                    label = "Upper 95%"))
+                                    label = "Shape Log Normal"))
            ),
            fluidRow(
              column(2, helpText("3 week ahead predictions")),
              column(2, numericInput(inputId = "median_forecast_3", 
                                     value = 0,
                                     label = "median")), 
-             column(2, numericInput(inputId = "lower_95_forecast_3", 
+             column(2, numericInput(inputId = "lower_90_forecast_3", 
                                     value = 0,
-                                    label = "Lower 95%")), 
-             column(2, numericInput(inputId = "lower_50_forecast_3", 
+                                    label = "Lower 90%")), 
+             column(2, numericInput(inputId = "upper_90_forecast_3", 
                                     value = 0,
-                                    label = "Lower 50%")), 
-             column(2, numericInput(inputId = "upper_50_forecast_3", 
+                                    label = "Upper 90%")),
+             column(2, numericInput(inputId = "shape_log_normal_3", 
                                     value = 0,
-                                    label = "Upper 50%")),
-             column(2, numericInput(inputId = "upper_95_forecast_3", 
-                                    value = 0,
-                                    label = "Upper 95%"))
+                                    label = "Shape Log Normal"))
            ),
            fluidRow(
              column(2, helpText("4 week ahead predictions")),
              column(2, numericInput(inputId = "median_forecast_4", 
                                     value = 0,
                                     label = "median")), 
-             column(2, numericInput(inputId = "lower_95_forecast_4", 
+             column(2, numericInput(inputId = "lower_90_forecast_4", 
                                     value = 0,
-                                    label = "Lower 95%")), 
-             column(2, numericInput(inputId = "lower_50_forecast_4", 
+                                    label = "Lower 90%")), 
+             column(2, numericInput(inputId = "upper_90_forecast_4", 
                                     value = 0,
-                                    label = "Lower 50%")), 
-             column(2, numericInput(inputId = "upper_50_forecast_4", 
+                                    label = "Upper 90%")),
+             column(2, numericInput(inputId = "shape_log_normal_4", 
                                     value = 0,
-                                    label = "Upper 50%")),
-             column(2, numericInput(inputId = "upper_95_forecast_4", 
-                                    value = 0,
-                                    label = "Upper 95%"))
+                                    label = "Shape Log Normal"))
            )
            ), 
-    column(4, offset = 1, plotlyOutput("plot_cases"))
+    column(4, offset = 1, 
+           fluidRow(plotlyOutput("plot_cases")), 
+           fluidRow(plotlyOutput("forecast_distribution")))
   )
   
   # fluidRow(id = "first",
@@ -204,6 +194,18 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+  
+  vline <- function(x = 0, color = "red") {
+    list(
+      type = "line", 
+      y0 = 0, 
+      y1 = 1, 
+      yref = "paper",
+      x0 = x, 
+      x1 = x, 
+      line = list(color = color)
+    )
+  }
   
   location_input <- reactive({
     selection_number <- which(selection_names == input$selection)
@@ -251,8 +253,19 @@ server <- function(input, output, session) {
           sep = "_")
   })
   
+  quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
+  
+  forecast_values_x <- reactive({
+    qlnorm(quantile_grid)
+  })
+  
+  forecast_values_y <- reactive({
+    dlnorm(forecast_values_x())
+  })
+  
+  
   tmp_cases <- reactive({
-    daily_cases %>%
+    cases_daily_inc %>%
       dplyr::mutate(date = as.Date(date)) %>%
       dplyr::filter(location_name == location_input(), 
                     date >= max(date) - input$num_past_obs * 7)
@@ -262,9 +275,10 @@ server <- function(input, output, session) {
     median  = NULL,
     upper_50 = NULL,
     lower_50 = NULL,
-    upper_95 = NULL,
-    lower_95 = NULL,
-    selection_number = NULL
+    upper_90 = NULL,
+    lower_90 = NULL,
+    selection_number = NULL,
+    sigma_log_normal = 0
   )
   
   output$p <- renderPlotly({
@@ -283,7 +297,7 @@ server <- function(input, output, session) {
                                line = list(color = "transparent"))
     )
     
-    circles_upper_95 <- map2(.x = x_pred(), .y  = rv$upper_95, 
+    circles_upper_90 <- map2(.x = x_pred(), .y  = rv$upper_90, 
                              ~list(type = "circle",
                                    # anchor circles at (mpg, wt)
                                    xanchor = .x,
@@ -297,22 +311,7 @@ server <- function(input, output, session) {
                                    fillcolor = "red",
                                    line = list(color = "transparent"))
     )
-    circles_lower_95 <- map2(.x = x_pred(), .y  = rv$lower_95, 
-                             ~list(type = "circle",
-                                   # anchor circles at (mpg, wt)
-                                   xanchor = .x,
-                                   yanchor = .y,
-                                   # give each circle a 2 pixel diameter
-                                   x0 = -5, x1 = 5,
-                                   y0 = -5, y1 = 5,
-                                   xsizemode = "pixel", 
-                                   ysizemode = "pixel",
-                                   # other visual properties
-                                   fillcolor = "red",
-                                   line = list(color = "transparent"))
-    )
-    
-    circles_lower_50 <- map2(.x = x_pred(), .y  = rv$lower_50, 
+    circles_lower_90 <- map2(.x = x_pred(), .y  = rv$lower_90, 
                              ~list(type = "circle",
                                    # anchor circles at (mpg, wt)
                                    xanchor = .x,
@@ -327,20 +326,7 @@ server <- function(input, output, session) {
                                    line = list(color = "transparent"))
     )
     
-    circles_upper_50 <- map2(.x = x_pred(), .y  = rv$upper_50, 
-                             ~list(type = "circle",
-                                   # anchor circles at (mpg, wt)
-                                   xanchor = .x,
-                                   yanchor = .y,
-                                   # give each circle a 2 pixel diameter
-                                   x0 = -5, x1 = 5,
-                                   y0 = -5, y1 = 5,
-                                   xsizemode = "pixel", 
-                                   ysizemode = "pixel",
-                                   # other visual properties
-                                   fillcolor = "red",
-                                   line = list(color = "transparent"))
-    )
+    
     
     plot_ly() %>%
       add_trace(x = df()$target_end_date,
@@ -349,20 +335,15 @@ server <- function(input, output, session) {
       add_trace(x = x_pred(),
                 y = rv$median, type = "scatter",
                 name = 'median prediction',mode = 'lines+markers', color = I("dark green")) %>%
-      add_ribbons(x = x_pred(), ymin = rv$lower_95, ymax = rv$upper_95, 
+      add_ribbons(x = x_pred(), ymin = rv$lower_90, ymax = rv$upper_90, 
                   name = "95% prediction interval",
                   line = list(color = "transparent"),
-                  fillcolor = 'rgba(26,150,65,0.1)') %>%
-      add_ribbons(x = x_pred(), ymin = rv$lower_50, ymax = rv$upper_50, 
-                  name = "50% prediction interval",
-                  line = list(color = "transparent"),
-                  fillcolor = 'rgba(26,150,65,0.5)') %>%
+                  fillcolor = 'rgba(26,150,65,0.4)') %>%
       layout(title = paste(input$selection), list(
         xanchor = "left"
       )) %>%
       layout(xaxis = list(range = c(min(x()), max(x_pred()) + 5))) %>%
-      layout(shapes = c(circles_pred, circles_upper_95, circles_lower_95, 
-                        circles_lower_50, circles_upper_50)) %>%
+      layout(shapes = c(circles_pred, circles_upper_90, circles_lower_90)) %>%
       layout(legend = list(orientation = 'h')) %>%
       config(edits = list(shapePosition = TRUE))
     
@@ -376,9 +357,21 @@ server <- function(input, output, session) {
     plot_ly(height=200) %>%
       add_trace(x = tmp_cases()$target_end_date,
                 y = tmp_cases()$value, type = "scatter",
-                name = 'observed data',mode = 'lines+markers') %>%
+                name = 'observed data',mode = 'lines') %>%
       layout(title = list(text = paste("Daily cases in", location_input(), sep = " "), 
              x = 0.1))
+  })
+  
+  
+  output$forecast_distribution <- renderPlotly({
+    
+    plot_ly(height=400) %>%
+      add_trace(x = forecast_values_x(),
+                y = forecast_values_y(), type = "scatter",
+                name = 'observed data',mode = 'lines+markers') %>%
+      layout(title = list(text = paste("Forecast Distribution"), 
+                          x = 0.1)) %>%
+      layout(shapes = list(vline(4)))
   })
   
   # output$plot_deaths <- renderPlotly({
@@ -534,14 +527,26 @@ server <- function(input, output, session) {
                  if (row_index %in% 1:4) {
                    # median was moved
                    rv$median[row_index] <- y_coord
+                   
+                   updateNumericInput(session, 
+                                      paste0("median_forecast_", row_index), 
+                                      value = round(y_coord, 2))
+                   
                    print("relayout trigger")
                    print(rv$median)
                  } else if (row_index %in% 5:8) {
                    # upper quantile was moved
-                   rv$upper_95[row_index - 4] <- y_coord
+                   rv$upper_90[row_index - 4] <- y_coord
+                   updateNumericInput(session, 
+                                      paste0("upper_90_forecast_", (row_index - 4)), 
+                                      value = round(y_coord, 2))
+                   
                  } else if (row_index %in% 9:12) {
                    # upper quantile was moved
-                   rv$lower_95[row_index - 8] <- y_coord
+                   rv$lower_90[row_index - 8] <- y_coord
+                   updateNumericInput(session, 
+                                      paste0("lower_90_forecast_", (row_index - 8)), 
+                                      value = round(y_coord, 2))
                  } else if (row_index %in% 13:16) {
                    # upper quantile was moved
                    rv$lower_50[row_index - 12] <- y_coord
@@ -558,20 +563,34 @@ server <- function(input, output, session) {
                  rv$median <- rep(last_value(), 4)
                  rv$upper_50 <- rep(last_value() * 1.7, 4)
                  rv$lower_50 <- rep(last_value() * 0.3, 4)
-                 rv$upper_95 <- rep(last_value() * 2.5, 4)
-                 rv$lower_95 <- rep(last_value() * 0.1, 4)
+                 rv$upper_90 <- rep(last_value() * 2.5, 4)
+                 rv$lower_90 <- rep(last_value() * 0.1, 4)
+                 rv$sigma_log_normal <- 0.1
                }, 
                priority = 2)
   
   observeEvent(input$reset,
                {
                  rv$median <- rep(last_value(), 4)
-                 rv$upper_50 <- rep(last_value() * 1.7, 4)
-                 rv$lower_50 <- rep(last_value() * 0.3, 4)
-                 rv$upper_95 <- rep(last_value() * 2.5, 4)
-                 rv$lower_95 <- rep(last_value() * 0.1, 4)
+                 rv$upper_90 <- rep(last_value() * 2.5, 4)
+                 rv$lower_90 <- rep(last_value() * 0.1, 4)
+                 
+                 for (i in 1:4) {
+                   
+                   updateNumericInput(session, 
+                                      paste0("median_forecast_", i), 
+                                      value = round(rv$median[i], 2))
+                   updateNumericInput(session, 
+                                      paste0("lower_90_forecast_", i), 
+                                      value = round(rv$lower_90[i], 2))
+                   updateNumericInput(session, 
+                                      paste0("upper_90_forecast_", i), 
+                                      value = round(rv$upper_90[i], 2))
+                 }
+                 
                }, 
-               priority = 99)
+               priority = -2,
+               ignoreNULL = FALSE)
   
   
   observeEvent(input$submit,
@@ -582,7 +601,7 @@ server <- function(input, output, session) {
                  } else {
                    
                    value <- c(rv$median, rv$lower_50, rv$upper_50, 
-                              rv$lower_95, rv$upper_95)
+                              rv$lower_90, rv$upper_90)
                    horizon <- rep(1:4, 5)
                    quantile <- rep(c(0.5, 0.25, 0.75, 0.05, 0.95), each = 4)
                    target_end_dates <- rep(x_pred(), 5)
@@ -627,8 +646,8 @@ server <- function(input, output, session) {
                  rv$median <- rv$median + input$move_forecast
                  rv$upper_50 <- rv$upper_50 + input$move_forecast
                  rv$lower_50 <- rv$lower_50 + input$move_forecast
-                 rv$upper_95 <- rv$upper_95 + input$move_forecast
-                 rv$lower_95 <- rv$lower_95 + input$move_forecast
+                 rv$upper_90 <- rv$upper_90 + input$move_forecast
+                 rv$lower_90 <- rv$lower_90 + input$move_forecast
                  # }
                  
                }, 
@@ -658,93 +677,48 @@ server <- function(input, output, session) {
   
   
   
-  # lower 50
-  observeEvent(input$lower_50_forecast_1,
+  
+  
+  observeEvent(input$lower_90_forecast_1,
                {
-                 rv$lower_50[1] <- input$lower_50_forecast_1
+                 rv$lower_90[1] <- input$lower_90_forecast_1
                }, 
                priority = 99)
-  observeEvent(input$lower_50_forecast_2,
+  observeEvent(input$lower_90_forecast_2,
                {
-                 rv$lower_50[2] <- input$lower_50_forecast_2
+                 rv$lower_90[2] <- input$lower_90_forecast_2
                }, 
                priority = 99)
-  observeEvent(input$lower_50_forecast_3,
+  observeEvent(input$lower_90_forecast_3,
                {
-                 rv$lower_50[3] <- input$lower_50_forecast_3
+                 rv$lower_90[3] <- input$lower_90_forecast_3
                }, 
                priority = 99)
-  observeEvent(input$lower_50_forecast_4,
+  observeEvent(input$lower_90_forecast_4,
                {
-                 rv$lower_50[4] <- input$lower_50_forecast_4
+                 rv$lower_90[4] <- input$lower_90_forecast_4
                }, 
                priority = 99)
   
   
-  # upper 50
-  observeEvent(input$upper_50_forecast_1,
+  observeEvent(input$upper_90_forecast_1,
                {
-                 rv$upper_50[1] <- input$upper_50_forecast_1
+                 rv$upper_90[1] <- input$upper_90_forecast_1
                }, 
                priority = 99)
-  observeEvent(input$upper_50_forecast_2,
+  observeEvent(input$upper_90_forecast_2,
                {
-                 rv$upper_50[2] <- input$upper_50_forecast_2
+                 rv$upper_90[2] <- input$upper_90_forecast_2
                }, 
                priority = 99)
-  observeEvent(input$upper_50_forecast_3,
+  observeEvent(input$upper_90_forecast_3,
                {
-                 rv$upper_50[3] <- input$upper_50_forecast_3
+                 rv$upper_90[3] <- input$upper_90_forecast_3
                }, 
                priority = 99)
-  observeEvent(input$upper_50_forecast_4,
+  observeEvent(input$upper_90_forecast_4,
                {
-                 rv$upper_50[4] <- input$upper_50_forecast_4
-               }, 
-               priority = 99)
-  
-  
-  
-  observeEvent(input$lower_95_forecast_1,
-               {
-                 rv$lower_95[1] <- input$lower_95_forecast_1
-               }, 
-               priority = 99)
-  observeEvent(input$lower_95_forecast_2,
-               {
-                 rv$lower_95[2] <- input$lower_95_forecast_2
-               }, 
-               priority = 99)
-  observeEvent(input$lower_95_forecast_3,
-               {
-                 rv$lower_95[3] <- input$lower_95_forecast_3
-               }, 
-               priority = 99)
-  observeEvent(input$lower_95_forecast_4,
-               {
-                 rv$lower_95[4] <- input$lower_95_forecast_4
-               }, 
-               priority = 99)
-  
-  
-  observeEvent(input$upper_95_forecast_1,
-               {
-                 rv$upper_95[1] <- input$upper_95_forecast_1
-               }, 
-               priority = 99)
-  observeEvent(input$upper_95_forecast_2,
-               {
-                 rv$upper_95[2] <- input$upper_95_forecast_2
-               }, 
-               priority = 99)
-  observeEvent(input$upper_95_forecast_3,
-               {
-                 rv$upper_95[3] <- input$upper_95_forecast_3
-               }, 
-               priority = 99)
-  observeEvent(input$upper_95_forecast_4,
-               {
-                 rv$upper_95[4] <- input$upper_95_forecast_4
+                 rv$upper_90[4] <- input$upper_90_forecast_4
                }, 
                priority = 99)
   

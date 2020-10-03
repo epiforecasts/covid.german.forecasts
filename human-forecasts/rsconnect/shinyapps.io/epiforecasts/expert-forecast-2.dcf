@@ -5,8 +5,8 @@ account: epiforecasts
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2853286
-bundleId: 3678882
+bundleId: 3690567
 url: https://epiforecasts.shinyapps.io/expert-forecast-2/
-when: 1601298100.59033
+when: 1601538330.04478
 asMultiple: FALSE
 asStatic: FALSE
