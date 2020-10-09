@@ -215,64 +215,6 @@ ui <- fluidPage(
                          placement = "top",
                          title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value"))
   ),
-  
-  br(),
-  br(),
-  # fluidRow(
-  #   column(6, 
-  #          fluidRow(
-  #            column(2, helpText("2 week ahead predictions")),
-  #            column(2, numericInput(inputId = "median_forecast_2", 
-  #                                   value = 0,
-  #                                   label = "median")),
-  #            column(2, numericInput(inputId = "shape_log_normal_2", 
-  #                                   value = 0,
-  #                                   label = "Forecast Width", 
-  #                                   step = 0.1))
-  #          ),
-  #          fluidRow(
-  #            column(2, helpText("3 week ahead predictions")),
-  #            column(2, numericInput(inputId = "median_forecast_3", 
-  #                                   value = 0,
-  #                                   label = "median")), 
-  #            column(2, numericInput(inputId = "shape_log_normal_3", 
-  #                                   value = 0,
-  #                                   label = "Forecast Width", 
-  #                                   step = 0.1))
-  #          ),
-  #          fluidRow(
-  #            column(2, helpText("4 week ahead predictions")),
-  #            column(2, numericInput(inputId = "median_forecast_4", 
-  #                                   value = 0,
-  #                                   label = "median")), 
-  #            column(2, numericInput(inputId = "shape_log_normal_4", 
-  #                                   value = 0,
-  #                                   label = "Forecast Width", 
-  #                                   step = 0.1))
-  #          )
-  #          ),
-  #   # column(4, offset = 1, 
-  #          # fluidRow(plotlyOutput("plot_cases")), 
-  #          # fluidRow(plotlyOutput("forecast_distribution")))
-  # )
-  
-  # fluidRow(id = "first",
-  #          column(2, selectInput(inputId = "selection", 
-  #                                label = "Selection:", 
-  #                                choices = selection_names, 
-  #                                selected = "Germany")),
-  #          column(2, numericInput(inputId = "num_past_obs", 
-  #                                 value = 999,
-  #                                 label = "Number of past weeks of data")),
-  #          column(2, numericInput(inputId = "move_forecast", 
-  #                                 value = 0,
-  #                                 label = "Move forecast up or down")), 
-  #          column(2, helpText("Reset forecasts"), actionButton("reset", label = "Reset")),
-  #          column(2, helpText("Enter your name in the format firstname_lastname in all lower letters. Please be consistent."), 
-  #                 textInput("forecaster_name", label = "Enter name")),
-  #          column(2, helpText("Submit Forecasts"), actionButton("submit", label = "Submit"))
-  # )
-
 )
 
 
@@ -585,16 +527,7 @@ server <- function(input, output, session) {
                            vline(rv$lower_bound[4], color = "CornflowerBlue"), 
                            vline(rv$upper_bound[4], color = "CornflowerBlue")))
   })
-  
-  # output$plot_deaths <- renderPlotly({
-  #   
-  #   plot_ly() %>%
-  #     add_trace(x = as.Date(tmp_deaths$target_end_date),
-  #               y = tmp_deaths$value, type = "scatter",
-  #               name = 'observed data',mode = 'lines+markers') %>%
-  #     layout(title = paste(inc_input(), "deaths in", location_input(), sep = " "))
-  # })
-  
+
   observeEvent(input$instructions, 
                {
                  showModal(modalDialog(
@@ -606,15 +539,7 @@ server <- function(input, output, session) {
                }, 
                ignoreNULL = FALSE)
   
-  observeEvent(input$datapolicy, 
-               {
-                 showModal(modalDialog(
-                   title = "Data Policy",
-                   HTML(data_policy),
-                   # a("test", href = "https://google.de", target = "_blank"), 
-                   footer = modalButton("OK")
-                 ))
-               })
+  
   
   # update x/y reactive values in response to changes in shape anchors
   observeEvent(event_data("plotly_relayout"),
@@ -635,19 +560,6 @@ server <- function(input, output, session) {
 
                    print("relayout trigger median")
                    print(rv$median)
-                 } else if (row_index %in% 5:8) {
-                   # upper quantile was moved
-                   # rv$upper_90[row_index - 4] <- y_coord
-                   # updateNumericInput(session,
-                   #                    paste0("upper_90_forecast_", (row_index - 4)),
-                   #                    value = round(y_coord, 2))
-
-                 } else if (row_index %in% 9:12) {
-                   # upper quantile was moved
-                   # rv$lower_90[row_index - 8] <- y_coord
-                   # updateNumericInput(session,
-                   #                    paste0("lower_90_forecast_", (row_index - 8)),
-                   #                    value = round(y_coord, 2))
                  } 
                })
   
@@ -672,38 +584,61 @@ server <- function(input, output, session) {
                  
                }, 
                priority = 2)
-  
-  observeEvent(input$interval_range,
+
+
+
+  # change values by numeric input
+  observeEvent(input$median_forecast_1,
                {
-                 rv$lower_quantile_level <- (100 - as.numeric(input$interval_range)) / (2 * 100)
-                 rv$upper_quantile_level <- 1 - rv$lower_quantile_level
+                 rv$median[1] <- input$median_forecast_1
+                 # update_values()
+               }, 
+               priority = 99)
+  observeEvent(input$median_forecast_2,
+               {
+                 rv$median[2] <- input$median_forecast_2
+                 # update_values()
+               }, 
+               priority = 99)
+  observeEvent(input$median_forecast_3,
+               {
+                 rv$median[3] <- input$median_forecast_3
+                 # update_values()
+               }, 
+               priority = 99)
+  observeEvent(input$median_forecast_4,
+               {
+                 rv$median[4] <- input$median_forecast_4
+                 # update_values()
+               }, 
+               priority = 99)
+  
+  
+  observeEvent(input$shape_log_normal_1,
+               {
+                 rv$sigma_log_normal[1] <- input$shape_log_normal_1
                  
                  update_values()
-                 # maybe have a function that just updates bounds?
                }, 
-               priority = 2)
-  
-  # observeEvent(input$reset,
-  #              {
-  #                rv$median <- rep(last_value(), 4)
-  #                rv$upper_90 <- rep(last_value() * 2.5, 4)
-  #                rv$lower_90 <- rep(last_value() * 0.1, 4)
-  #                
-  #                for (i in 1:4) {
-  #                  
-  #                  updateNumericInput(session, 
-  #                                     paste0("median_forecast_", i), 
-  #                                     value = round(rv$median[i], 2))
-  #                  updateNumericInput(session, 
-  #                                     paste0("shape_log_normal_", i), 
-  #                                     value = round(rv$sigma_log_normal[i], 2))
-  #                  
-  #                }
-  #                
-  #              }, 
-  #              priority = -2,
-  #              ignoreNULL = FALSE)
-  
+               priority = 99)
+  observeEvent(input$shape_log_normal_2,
+               {
+                 rv$sigma_log_normal[2] <- input$shape_log_normal_2
+                 update_values()
+               }, 
+               priority = 99)
+  observeEvent(input$shape_log_normal_3,
+               {
+                 rv$sigma_log_normal[3] <- input$shape_log_normal_3
+                 update_values()
+               }, 
+               priority = 99)
+  observeEvent(input$shape_log_normal_4,
+               {
+                 rv$sigma_log_normal[4] <- input$shape_log_normal_4
+                 update_values()
+               }, 
+               priority = 99)
   
   observeEvent(input$submit,
                {
@@ -732,8 +667,8 @@ server <- function(input, output, session) {
                                              target_end_date = target_end_dates)
                    
                    googlesheets4::sheet_append(data = submissions,
-                                              ss = spread_sheet,
-                                              sheet = "predictions")
+                                               ss = spread_sheet,
+                                               sheet = "predictions")
                    
                    rv$selection_number <- which(selection_names == input$selection) + 1
                    newSelection <- selection_names[rv$selection_number]
@@ -746,106 +681,7 @@ server <- function(input, output, session) {
                  }
                }, 
                priority = 99)
-
-  # change values by numeric input
-  observeEvent(input$median_forecast_1,
-               {
-                 rv$median[1] <- input$median_forecast_1
-                 update_values()
-               }, 
-               priority = 99)
-  observeEvent(input$median_forecast_2,
-               {
-                 rv$median[2] <- input$median_forecast_2
-                 update_values()
-               }, 
-               priority = 99)
-  observeEvent(input$median_forecast_3,
-               {
-                 rv$median[3] <- input$median_forecast_3
-                 update_values()
-               }, 
-               priority = 99)
-  observeEvent(input$median_forecast_4,
-               {
-                 rv$median[4] <- input$median_forecast_4
-                 update_values()
-               }, 
-               priority = 99)
   
-  
-  
-  # 
-  # 
-  # observeEvent(input$lower_90_forecast_1,
-  #              {
-  #                rv$lower_90[1] <- input$lower_90_forecast_1
-  #              }, 
-  #              priority = 99)
-  # observeEvent(input$lower_90_forecast_2,
-  #              {
-  #                rv$lower_90[2] <- input$lower_90_forecast_2
-  #              }, 
-  #              priority = 99)
-  # observeEvent(input$lower_90_forecast_3,
-  #              {
-  #                rv$lower_90[3] <- input$lower_90_forecast_3
-  #              }, 
-  #              priority = 99)
-  # observeEvent(input$lower_90_forecast_4,
-  #              {
-  #                rv$lower_90[4] <- input$lower_90_forecast_4
-  #              }, 
-  #              priority = 99)
-  # 
-  # 
-  # observeEvent(input$upper_90_forecast_1,
-  #              {
-  #                rv$upper_90[1] <- input$upper_90_forecast_1
-  #              }, 
-  #              priority = 99)
-  # observeEvent(input$upper_90_forecast_2,
-  #              {
-  #                rv$upper_90[2] <- input$upper_90_forecast_2
-  #              }, 
-  #              priority = 99)
-  # observeEvent(input$upper_90_forecast_3,
-  #              {
-  #                rv$upper_90[3] <- input$upper_90_forecast_3
-  #              }, 
-  #              priority = 99)
-  # observeEvent(input$upper_90_forecast_4,
-  #              {
-  #                rv$upper_90[4] <- input$upper_90_forecast_4
-  #              }, 
-  #              priority = 99)
-  
-  
-  observeEvent(input$shape_log_normal_1,
-               {
-                 rv$sigma_log_normal[1] <- input$shape_log_normal_1
-                 
-                 update_values()
-               }, 
-               priority = 99)
-  observeEvent(input$shape_log_normal_2,
-               {
-                 rv$sigma_log_normal[2] <- input$shape_log_normal_2
-                 update_values()
-               }, 
-               priority = 99)
-  observeEvent(input$shape_log_normal_3,
-               {
-                 rv$sigma_log_normal[3] <- input$shape_log_normal_3
-                 update_values()
-               }, 
-               priority = 99)
-  observeEvent(input$shape_log_normal_4,
-               {
-                 rv$sigma_log_normal[4] <- input$shape_log_normal_4
-                 update_values()
-               }, 
-               priority = 99)
 }
 
 shinyApp(ui, server)
