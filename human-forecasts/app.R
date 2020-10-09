@@ -1,6 +1,7 @@
 library(plotly)
 library(purrr)
 library(shiny)
+library(shinyBS)
 
 library(googledrive)
 library(googlesheets4)
@@ -55,12 +56,7 @@ selections <- expand.grid(list(location = location_vector,
 selection_names <- apply(selections, MARGIN = 1, 
                          FUN = function(x) {
                            paste(x, collapse = "-")
-                           })
-
-
-
-
-
+                         })
 
 
 
@@ -70,7 +66,7 @@ selection_names <- apply(selections, MARGIN = 1,
 
 
 ui <- fluidPage(
-  headerPanel("Predictions"),
+  # headerPanel("Predictions"),
   
   # tags$style(HTML("
   #     #first {
@@ -80,107 +76,185 @@ ui <- fluidPage(
   #         border: 2px dashed blue;
   #     }
   #   ")),
-  fluidRow(column(1, offset = 1, 
-                  actionButton("instructions", label = "Instructions", icon = NULL)), 
+  fluidRow(column(10, h1("Covid Human Forecast App")), 
+           column(1,
+                  style = 'padding-top: 20px',
+                  tipify(actionButton("reset", label = "Reset"), 
+                                   title = "Use this to reset all forecast to their previous default values", 
+                                   placement = "bottom")),  
            column(1, 
-                  actionButton("datapolicy", label = "Data Policy", icon = NULL))),
-  fluidRow(column(9, plotlyOutput("p", width = "100%")), 
-           column(2, 
+                  style = 'padding-top: 20px; padding-left: 20px',
+                  actionButton("instructions", label = "Instructions", icon = NULL))),
+  br(),
+  fluidRow(column(9, 
+                  # plotlyOutput("p", width = "100%")
+                  tipify(tabsetPanel(type = "tabs",
+                                     tabPanel("Make a Forecast", plotlyOutput("p")),
+                                     tabPanel("For Reference: Show Daily Cases",
+                                              plotlyOutput("plot_cases"))), 
+                         title = "Visualisation of the Forecast. You can drag the points in the plot to alter the  forecasts. Toggle the tab to see more data visualisations.")
+                  ),
+           column(3, 
                   offset = 0,
                   style = 'padding: 20px; border: 2px double black; background-color: aliceblue',
-                  fluidRow(selectInput(inputId = "selection",
+                  fluidRow(column(8, tipify(selectInput(inputId = "selection",
                                        label = "Selection:",
                                        choices = selection_names, 
-                                       selected = "Germany")),
-                  fluidRow(numericInput(inputId = "num_past_obs", 
-                                        value = 12,
-                                        label = "Past weeks to show")), 
-                  fluidRow(selectInput(inputId = "interval_range", 
-                                       choices = c(seq(10, 90, 10), 95, 98),
-                                       label = "interval range", 
-                                       selected = 90)), 
-                  # fluidRow(numericInput(inputId = "move_forecast", 
-                  #                       value = 0,
-                  #                       label = "Move forecast up or down")),
-                  fluidRow(column(6,textInput("first_name", label = "First name")), 
-                           column(6,textInput("last_name", label = "Last name"))),
-                  fluidRow(column(6, actionButton("reset", label = "Reset")), 
-                           column(6, actionButton("submit", label = "Submit"))
-                           )
+                                       selected = "Germany"), 
+                           title = "Select location and data type", 
+                           placement = "bottom")), 
+                           column(4, tipify(numericInput(inputId = "num_past_obs", 
+                                                         value = 12,
+                                                         label = "Number weeks"), 
+                                            title = "Change the number of past weeks to show", 
+                                            placement = "bottom"))),
+                  fluidRow(tipify(checkboxGroupInput("ranges", "Prediction intervals to show", 
+                                                               choices = c("20%", "50%", "90%", "95%"), 
+                                                               selected = "90%",
+                                                               inline = TRUE), 
+                                            title = "Change the prediction intervals you want to see", 
+                                            placement = "top")),
+                  fluidRow(tipify(checkboxInput(inputId = "expert", 
+                                               label = "Do you have domain expertise?"),
+                                  title = "Do you work in infectious disease modelling, have professional experience in any related field, or have spent a lot of time thinking about forecasting or Covid-19?", 
+                                  placement = "left")),
+                  fluidRow(column(8, 
+                                  fluidRow(column(6, textInput("first_name", label = "First name")), 
+                                           column(6, textInput("last_name", label = "Last name"))), 
+                                  fluidRow(column(12, tipify(textInput("leaderboardname", label = "Name for Performance Board"), 
+                                                             title = "The name with which you want to appear on the Performance Board")))),
+                           column(4, tipify(radioButtons(inputId = "appearboard", label = "Appear on the Performance Board?", 
+                                                                choices = c("yes", "no", "anonymous"), selected = "anonymous", inline = FALSE), 
+                                                   title = "Do you want to appear on the Performance Board at all?"))),
+                  fluidRow(column(12, textInput("email", label = "Email"))),
+                  fluidRow(column(6, tipify(actionButton("submit", label = "Submit"), 
+                                            title = "You can submit multiple times, but only the last submission will be counted.",
+                                            placement = "bottom")))
                   )
            ),
+
+  fluidRow(column(3, 
+                  h3("One week ahead forecast"),
+                  style = 'padding-left: 20px; padding-right: 20px; border: 2px double black; background-color: aliceblue',
+                  fluidRow(column(3,  tipify(numericInput(inputId = "median_forecast_1", 
+                                                   value = 0,
+                                                   label = "Median"), 
+                                             title = "Change the median forecast. This corresponds to the location parameter of a log-normal distribution. Click update for changes to take effect.")), 
+                           column(3,  tipify(numericInput(inputId = "shape_log_normal_1", 
+                                                   value = 0,
+                                                   label = "Width", 
+                                                   step = 0.01),
+                                             title = "Change the shape parameter of the log-normal distribution to make forecasts wider or narrower, Click update for changes to take effect.")), 
+                           column(3, tipify(actionButton(inputId = "propagate_1", "Propagate", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press to propagate changes forward to following weeks")),
+                           column(3, tipify(actionButton(inputId = "update_1", "Update", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press so that your changes take effect"))),
+                  tipify(fluidRow(plotlyOutput("forecast_distribution_1")),
+                         placement = "top",
+                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value")),
+           column(3, 
+                  h3("Two week ahead forecast"),
+                  style = 'padding-left: 20px; padding-right: 20px; border: 2px double black; background-color: aliceblue',
+                  fluidRow(column(3,  tipify(numericInput(inputId = "median_forecast_2", 
+                                                          value = 0,
+                                                          label = "Median"), 
+                                             title = "Change the median forecast. This corresponds to the location parameter of a log-normal distribution. Click update for changes to take effect.")), 
+                           column(3,  tipify(numericInput(inputId = "shape_log_normal_2", 
+                                                          value = 0,
+                                                          label = "Width", 
+                                                          step = 0.01),
+                                             title = "Change the shape parameter of the log-normal distribution to make forecasts wider or narrower, Click update for changes to take effect.")), 
+                           column(3, tipify(actionButton(inputId = "propagate_2", "Propagate", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press to propagate changes forward to following weeks")),
+                           column(3, tipify(actionButton(inputId = "update_2", "Update", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press so that your changes take effect"))),
+                  tipify(fluidRow(plotlyOutput("forecast_distribution_2")),
+                         placement = "left",
+                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value")), 
+           column(3, 
+                  h3("Three week ahead forecast"),
+                  style = 'padding-left: 20px; padding-right: 20px; border: 2px double black; background-color: aliceblue',
+                  fluidRow(column(3,  tipify(numericInput(inputId = "median_forecast_3", 
+                                                          value = 0,
+                                                          label = "Median"), 
+                                             title = "Change the median forecast. This corresponds to the location parameter of a log-normal distribution. Click update for changes to take effect.")), 
+                           column(3,  tipify(numericInput(inputId = "shape_log_normal_3", 
+                                                          value = 0,
+                                                          label = "Width", 
+                                                          step = 0.01),
+                                             title = "Change the shape parameter of the log-normal distribution to make forecasts wider or narrower, Click update for changes to take effect.")), 
+                           column(3, tipify(actionButton(inputId = "propagate_3", "Propagate", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press to propagate changes forward to following weeks")),
+                           column(3, tipify(actionButton(inputId = "update_3", "Update", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press so that your changes take effect"))),
+                  tipify(fluidRow(plotlyOutput("forecast_distribution_3")),
+                         placement = "top",
+                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value")), 
+           column(3, 
+                  h3("Four week ahead forecast"),
+                  style = 'padding-left: 20px; padding-right: 20px; border: 2px double black; background-color: aliceblue',
+                  fluidRow(column(3,  tipify(numericInput(inputId = "median_forecast_4", 
+                                                          value = 0,
+                                                          label = "Median"), 
+                                             title = "Change the median forecast. This corresponds to the location parameter of a log-normal distribution. Click update for changes to take effect.")), 
+                           column(3,  tipify(numericInput(inputId = "shape_log_normal_4", 
+                                                          value = 0,
+                                                          label = "Width", 
+                                                          step = 0.01),
+                                             title = "Change the shape parameter of the log-normal distribution to make forecasts wider or narrower, Click update for changes to take effect.")), 
+                           column(3, tipify(actionButton(inputId = "update_4", "Update", 
+                                                         style = 'margin-top: 25px'), 
+                                            title = "Press so that your changes take effect"))),
+                  tipify(fluidRow(plotlyOutput("forecast_distribution_4")),
+                         placement = "top",
+                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value"))
+  ),
   
   br(),
   br(),
-  br(),
-  
-  fluidRow(
-    column(6, 
-           fluidRow(
-             column(2, helpText("1 week ahead predictions")),
-             column(2, numericInput(inputId = "median_forecast_1", 
-                                    value = 0,
-                                    label = "median")), 
-             column(2, numericInput(inputId = "lower_90_forecast_1", 
-                                    value = 0,
-                                    label = "Lower 90%")),
-             column(2, numericInput(inputId = "upper_90_forecast_1", 
-                                    value = 0,
-                                    label = "Upper 90%")),
-             column(2, numericInput(inputId = "shape_log_normal_1", 
-                                    value = 0,
-                                    label = "Shape Log Normal"))
-           ), 
-           fluidRow(
-             column(2, helpText("2 week ahead predictions")),
-             column(2, numericInput(inputId = "median_forecast_2", 
-                                    value = 0,
-                                    label = "median")), 
-             column(2, numericInput(inputId = "lower_90_forecast_2", 
-                                    value = 0,
-                                    label = "Lower 90%")), 
-             column(2, numericInput(inputId = "upper_90_forecast_2", 
-                                    value = 0,
-                                    label = "Upper 90%")),
-             column(2, numericInput(inputId = "shape_log_normal_2", 
-                                    value = 0,
-                                    label = "Shape Log Normal"))
-           ),
-           fluidRow(
-             column(2, helpText("3 week ahead predictions")),
-             column(2, numericInput(inputId = "median_forecast_3", 
-                                    value = 0,
-                                    label = "median")), 
-             column(2, numericInput(inputId = "lower_90_forecast_3", 
-                                    value = 0,
-                                    label = "Lower 90%")), 
-             column(2, numericInput(inputId = "upper_90_forecast_3", 
-                                    value = 0,
-                                    label = "Upper 90%")),
-             column(2, numericInput(inputId = "shape_log_normal_3", 
-                                    value = 0,
-                                    label = "Shape Log Normal"))
-           ),
-           fluidRow(
-             column(2, helpText("4 week ahead predictions")),
-             column(2, numericInput(inputId = "median_forecast_4", 
-                                    value = 0,
-                                    label = "median")), 
-             column(2, numericInput(inputId = "lower_90_forecast_4", 
-                                    value = 0,
-                                    label = "Lower 90%")), 
-             column(2, numericInput(inputId = "upper_90_forecast_4", 
-                                    value = 0,
-                                    label = "Upper 90%")),
-             column(2, numericInput(inputId = "shape_log_normal_4", 
-                                    value = 0,
-                                    label = "Shape Log Normal"))
-           )
-           ), 
-    column(4, offset = 1, 
-           fluidRow(plotlyOutput("plot_cases")), 
-           fluidRow(plotlyOutput("forecast_distribution")))
-  )
+  # fluidRow(
+  #   column(6, 
+  #          fluidRow(
+  #            column(2, helpText("2 week ahead predictions")),
+  #            column(2, numericInput(inputId = "median_forecast_2", 
+  #                                   value = 0,
+  #                                   label = "median")),
+  #            column(2, numericInput(inputId = "shape_log_normal_2", 
+  #                                   value = 0,
+  #                                   label = "Forecast Width", 
+  #                                   step = 0.1))
+  #          ),
+  #          fluidRow(
+  #            column(2, helpText("3 week ahead predictions")),
+  #            column(2, numericInput(inputId = "median_forecast_3", 
+  #                                   value = 0,
+  #                                   label = "median")), 
+  #            column(2, numericInput(inputId = "shape_log_normal_3", 
+  #                                   value = 0,
+  #                                   label = "Forecast Width", 
+  #                                   step = 0.1))
+  #          ),
+  #          fluidRow(
+  #            column(2, helpText("4 week ahead predictions")),
+  #            column(2, numericInput(inputId = "median_forecast_4", 
+  #                                   value = 0,
+  #                                   label = "median")), 
+  #            column(2, numericInput(inputId = "shape_log_normal_4", 
+  #                                   value = 0,
+  #                                   label = "Forecast Width", 
+  #                                   step = 0.1))
+  #          )
+  #          ),
+  #   # column(4, offset = 1, 
+  #          # fluidRow(plotlyOutput("plot_cases")), 
+  #          # fluidRow(plotlyOutput("forecast_distribution")))
+  # )
   
   # fluidRow(id = "first",
   #          column(2, selectInput(inputId = "selection", 
@@ -198,9 +272,16 @@ ui <- fluidPage(
   #                 textInput("forecaster_name", label = "Enter name")),
   #          column(2, helpText("Submit Forecasts"), actionButton("submit", label = "Submit"))
   # )
-  
-  
+
 )
+
+
+
+
+
+
+
+
 
 server <- function(input, output, session) {
   
@@ -214,6 +295,34 @@ server <- function(input, output, session) {
       x1 = x, 
       line = list(color = color)
     )
+  }
+  
+  update_values <- function(horizon = NULL, 
+                            update_forecasts = TRUE, 
+                            update_bounds = TRUE) {
+    
+    if (is.null(horizon)) {
+      steps <- 1:4
+    } else {
+      steps <- horizon
+    }
+    
+    for (i in steps) {
+      if (update_forecasts) {
+        rv[[paste0("forecasts_week_", i)]] <<- qlnorm(quantile_grid, 
+                                                      meanlog = log(rv$median[i]), 
+                                                      sdlog = as.numeric(rv$sigma_log_normal[i]))
+      }
+      if (update_bounds) {
+        rv$lower_bound[i] <<- qlnorm(as.numeric(rv$lower_quantile_level), 
+                                     meanlog = log(rv$median[i]), 
+                                     sdlog = as.numeric(rv$sigma_log_normal[i]))
+        rv$upper_bound[i] <<- qlnorm(as.numeric(rv$upper_quantile_level), 
+                                     meanlog = log(rv$median[i]), 
+                                     sdlog = as.numeric(rv$sigma_log_normal[i]))
+      }
+    }
+    
   }
   
   location_input <- reactive({
@@ -239,8 +348,9 @@ server <- function(input, output, session) {
                     target_end_date >= max(target_end_date) - input$num_past_obs * 7)
   })
   
-  observations_dates <- reactive({
-    
+  prediction_intervals <- reactive({
+    sub(pattern = "%", replacement = "", input$ranges) %>%
+      as.numeric()
   })
   
   x <- reactive({
@@ -264,16 +374,25 @@ server <- function(input, output, session) {
   
   quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 
-  forecast_values_x <- reactive({
-    qlnorm(quantile_grid, 
+  forecast_values_y_1 <- reactive({
+    dlnorm(rv$forecasts_week_1,
            meanlog = log(rv$median[1]), 
            sdlog = rv$sigma_log_normal[1])
   })
-  
-  forecast_values_y <- reactive({
-    dlnorm(forecast_values_x(), 
-           meanlog = log(rv$median[1]), 
-           sdlog = rv$sigma_log_normal[1])
+  forecast_values_y_2 <- reactive({
+    dlnorm(rv$forecasts_week_2,
+           meanlog = log(rv$median[2]), 
+           sdlog = rv$sigma_log_normal[2])
+  })
+  forecast_values_y_3 <- reactive({
+    dlnorm(rv$forecasts_week_3,
+           meanlog = log(rv$median[3]), 
+           sdlog = rv$sigma_log_normal[3])
+  })
+  forecast_values_y_4 <- reactive({
+    dlnorm(rv$forecasts_week_4,
+           meanlog = log(rv$median[4]), 
+           sdlog = rv$sigma_log_normal[4])
   })
   
   
@@ -286,12 +405,14 @@ server <- function(input, output, session) {
   
   rv <- reactiveValues(
     median  = NULL,
-    upper_50 = NULL,
-    lower_50 = NULL,
-    upper_90 = NULL,
-    lower_90 = NULL,
+    forecasts_week_1 = NULL,
+    forecasts_week_2 = NULL,
+    forecasts_week_2 = NULL,
+    forecasts_week_4 = NULL,
     lower_quantile_level = NULL,
     upper_quantile_level = NULL,
+    lower_bound = NULL,
+    upper_bound = NULL,
     selection_number = NULL,
     sigma_log_normal = NULL
   )
@@ -343,25 +464,50 @@ server <- function(input, output, session) {
     
     
     
-    plot_ly() %>%
+    p <- plot_ly() %>%
       add_trace(x = df()$target_end_date,
                 y = df()$value, type = "scatter",
                 name = 'observed data',mode = 'lines+markers') %>%     
       add_trace(x = x_pred(),
                 y = rv$median, type = "scatter",
                 name = 'median prediction',mode = 'lines+markers', color = I("dark green")) %>%
-      add_ribbons(x = x_pred(), ymin = rv[["lower_90"]], ymax = rv$upper_90, 
-                  name = "95% prediction interval",
-                  line = list(color = "transparent"),
-                  fillcolor = 'rgba(26,150,65,0.4)') %>%
       layout(title = paste(input$selection), list(
         xanchor = "left"
       )) %>%
       layout(xaxis = list(range = c(min(x()), max(x_pred()) + 5))) %>%
+      layout(yaxis = list(hoverformat = '.1f', rangemode = "tozero")) %>%
       layout(shapes = c(circles_pred, circles_upper_90, circles_lower_90)) %>%
       layout(legend = list(orientation = 'h')) %>%
       config(edits = list(shapePosition = TRUE))
     
+    for (i in prediction_intervals()) {
+      
+      lower_quantile <- round((100 - i) / (2 * 100), 3)
+      upper_quantile <- 1 - lower_quantile
+      
+      print(quantile_grid)
+      print(paste("ul",quantile_grid - upper_quantile))
+      
+      lower_bound <- c(rv$forecasts_week_1[round(quantile_grid, 3) == lower_quantile], 
+                       rv$forecasts_week_2[round(quantile_grid, 3) == lower_quantile], 
+                       rv$forecasts_week_3[round(quantile_grid, 3) == lower_quantile], 
+                       rv$forecasts_week_4[round(quantile_grid, 3) == lower_quantile])
+      print(lower_bound)
+      
+      upper_bound <- c(rv$forecasts_week_1[round(quantile_grid, 3) == upper_quantile], 
+                       rv$forecasts_week_2[round(quantile_grid, 3) == upper_quantile], 
+                       rv$forecasts_week_3[round(quantile_grid, 3) == upper_quantile], 
+                       rv$forecasts_week_4[round(quantile_grid, 3) == upper_quantile])
+      print(paste("test", upper_bound))
+      
+      p <- p %>%
+        add_ribbons(x = x_pred(), ymin = lower_bound, ymax = upper_bound,
+                    name = paste0(i, "% prediction interval"),
+                    line = list(color = "transparent"),
+                    fillcolor = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))
+        
+    }
+    p
     
     
   })
@@ -369,26 +515,75 @@ server <- function(input, output, session) {
   
   output$plot_cases <- renderPlotly({
     
-    plot_ly(height=200) %>%
-      add_trace(x = tmp_cases()$target_end_date,
-                y = tmp_cases()$value, type = "scatter",
+    plot_ly() %>%
+      add_trace(x = tmp_cases()$date,
+                y = tmp_cases()$value, type = "scatter", 
                 name = 'observed data',mode = 'lines') %>%
-      layout(title = list(text = paste("Daily cases in", location_input(), sep = " "), 
-             x = 0.1))
+      layout(xaxis = list(hoverformat = '.1f')) %>%
+      layout(yaxis = list(hoverformat = '.1f', rangemode = "tozero")) %>%
+      layout(title = list(text = paste("Daily cases in", location_input(), sep = " ")))
   })
   
-  
-  output$forecast_distribution <- renderPlotly({
+
+  output$forecast_distribution_1 <- renderPlotly({
     
-    plot_ly(height=400) %>%
-      add_trace(x = forecast_values_x(),
-                y = forecast_values_y(), type = "scatter",
+    plot_ly() %>%
+      add_trace(x = rv$forecasts_week_1,
+                y = forecast_values_y_1(), type = "scatter",
+                color = I("dark green"),
                 name = 'observed data',mode = 'lines+markers') %>%
+      layout(xaxis = list(hoverformat = '.1f')) %>%
+      layout(yaxis = list(hoverformat = '.1f', rangemode = "tozero")) %>%
       layout(title = list(text = paste("Forecast Distribution"), 
                           x = 0.1)) %>%
       layout(shapes = list(vline(rv$median[1]), 
-                           vline(rv$lower_90[1], color = "blue"), 
-                           vline(rv$upper_90[1], color = "blue")))
+                           vline(rv$lower_bound[1], color = "CornflowerBlue"), 
+                           vline(rv$upper_bound[1], color = "CornflowerBlue")))
+  })
+  output$forecast_distribution_2 <- renderPlotly({
+    
+    plot_ly() %>%
+      add_trace(x = rv$forecasts_week_2,
+                y = forecast_values_y_2(), type = "scatter",
+                color = I("dark green"),
+                name = 'observed data',mode = 'lines+markers') %>%
+      layout(title = list(text = paste("Forecast Distribution"), 
+                          x = 0.1)) %>%
+      layout(xaxis = list(hoverformat = '.1f')) %>%
+      layout(yaxis = list(hoverformat = '.1f', rangemode = "tozero")) %>%
+      layout(shapes = list(vline(rv$median[2]), 
+                           vline(rv$lower_bound[2], color = "CornflowerBlue"), 
+                           vline(rv$upper_bound[2], color = "CornflowerBlue")))
+  })
+  output$forecast_distribution_3 <- renderPlotly({
+    
+    plot_ly() %>%
+      add_trace(x = rv$forecasts_week_3,
+                y = forecast_values_y_3(), type = "scatter",
+                color = I("dark green"),
+                name = 'observed data',mode = 'lines+markers') %>%
+      layout(title = list(text = paste("Forecast Distribution"), 
+                          x = 0.1)) %>%
+      layout(xaxis = list(hoverformat = '.1f')) %>%
+      layout(yaxis = list(hoverformat = '.1f', rangemode = "tozero")) %>%
+      layout(shapes = list(vline(rv$median[3]), 
+                           vline(rv$lower_bound[3], color = "CornflowerBlue"), 
+                           vline(rv$upper_bound[3], color = "CornflowerBlue")))
+  })
+  output$forecast_distribution_4 <- renderPlotly({
+    
+    plot_ly() %>%
+      add_trace(x = rv$forecasts_week_4,
+                y = forecast_values_y_4(), type = "scatter",
+                color = I("dark green"),
+                name = 'observed data',mode = 'lines+markers') %>%
+      layout(title = list(text = paste("Forecast Distribution"), 
+                          x = 0.1)) %>%
+      layout(xaxis = list(hoverformat = '.1f')) %>%
+      layout(yaxis = list(hoverformat = '.1f', rangemode = "tozero")) %>%
+      layout(shapes = list(vline(rv$median[4]), 
+                           vline(rv$lower_bound[4], color = "CornflowerBlue"), 
+                           vline(rv$upper_bound[4], color = "CornflowerBlue")))
   })
   
   # output$plot_deaths <- renderPlotly({
@@ -422,93 +617,92 @@ server <- function(input, output, session) {
                })
   
   # update x/y reactive values in response to changes in shape anchors
-  observeEvent(event_data("plotly_relayout"), 
+  observeEvent(event_data("plotly_relayout"),
                {
                  ed <- event_data("plotly_relayout", priority = "input")
                  shape_anchors <- ed[grepl("^shapes.*anchor$", names(ed))]
                  if (length(shape_anchors) != 2) return()
                  row_index <- unique(readr::parse_number(names(shape_anchors)) + 1)
                  y_coord <- as.numeric(shape_anchors[2])
-                 
+
                  if (row_index %in% 1:4) {
                    # median was moved
                    rv$median[row_index] <- y_coord
-                   
-                   updateNumericInput(session, 
-                                      paste0("median_forecast_", row_index), 
+
+                   updateNumericInput(session,
+                                      paste0("median_forecast_", row_index),
                                       value = round(y_coord, 2))
-                   
-                   print("relayout trigger")
+
+                   print("relayout trigger median")
                    print(rv$median)
                  } else if (row_index %in% 5:8) {
                    # upper quantile was moved
-                   rv$upper_90[row_index - 4] <- y_coord
-                   updateNumericInput(session, 
-                                      paste0("upper_90_forecast_", (row_index - 4)), 
-                                      value = round(y_coord, 2))
-                   
+                   # rv$upper_90[row_index - 4] <- y_coord
+                   # updateNumericInput(session,
+                   #                    paste0("upper_90_forecast_", (row_index - 4)),
+                   #                    value = round(y_coord, 2))
+
                  } else if (row_index %in% 9:12) {
                    # upper quantile was moved
-                   rv$lower_90[row_index - 8] <- y_coord
-                   updateNumericInput(session, 
-                                      paste0("lower_90_forecast_", (row_index - 8)), 
-                                      value = round(y_coord, 2))
-                 } else if (row_index %in% 13:16) {
-                   # upper quantile was moved
-                   rv$lower_50[row_index - 12] <- y_coord
-                 } else if (row_index %in% 17:20) {
-                   # upper quantile was moved
-                   rv$upper_50[row_index - 16] <- y_coord
-                 }
+                   # rv$lower_90[row_index - 8] <- y_coord
+                   # updateNumericInput(session,
+                   #                    paste0("lower_90_forecast_", (row_index - 8)),
+                   #                    value = round(y_coord, 2))
+                 } 
                })
   
   # set default values when changing a location
-  observeEvent(input$selection,
+  observeEvent(c(input$selection, input$reset),
                {
-                 print("selection trigger")
                  rv$median <- rep(last_value(), 4)
-                 rv$upper_50 <- rep(last_value() * 1.7, 4)
-                 rv$lower_50 <- rep(last_value() * 0.3, 4)
-                 rv$upper_90 <- rep(last_value() * 2.5, 4)
-                 rv$lower_90 <- rep(last_value() * 0.1, 4)
                  rv$sigma_log_normal <- rep(0.1, 4)
-               }, 
-               priority = 2)
-  
-  observeEvent(input$interval_range,
-               {
-                 print("interval trigger")
-                 rv$lower_quantile_level <- (100 - as.numeric(input$interval_range)) / (2 * 100)
-                 rv$upper_quantile_level <- 1 - rv$lower_quantile_level
-               }, 
-               priority = 2)
-  
-  observeEvent(input$reset,
-               {
-                 rv$median <- rep(last_value(), 4)
-                 rv$upper_90 <- rep(last_value() * 2.5, 4)
-                 rv$lower_90 <- rep(last_value() * 0.1, 4)
+                 
+                 update_values()
                  
                  for (i in 1:4) {
                    
-                   updateNumericInput(session, 
-                                      paste0("median_forecast_", i), 
+                   updateNumericInput(session,
+                                      paste0("median_forecast_", i),
                                       value = round(rv$median[i], 2))
-                   updateNumericInput(session, 
-                                      paste0("lower_90_forecast_", i), 
-                                      value = round(rv$lower_90[i], 2))
-                   updateNumericInput(session, 
-                                      paste0("upper_90_forecast_", i), 
-                                      value = round(rv$upper_90[i], 2))
-                   updateNumericInput(session, 
-                                      paste0("shape_log_normal_", i), 
+                   updateNumericInput(session,
+                                      paste0("shape_log_normal_", i),
                                       value = round(rv$sigma_log_normal[i], 2))
                    
                  }
                  
                }, 
-               priority = -2,
-               ignoreNULL = FALSE)
+               priority = 2)
+  
+  observeEvent(input$interval_range,
+               {
+                 rv$lower_quantile_level <- (100 - as.numeric(input$interval_range)) / (2 * 100)
+                 rv$upper_quantile_level <- 1 - rv$lower_quantile_level
+                 
+                 update_values()
+                 # maybe have a function that just updates bounds?
+               }, 
+               priority = 2)
+  
+  # observeEvent(input$reset,
+  #              {
+  #                rv$median <- rep(last_value(), 4)
+  #                rv$upper_90 <- rep(last_value() * 2.5, 4)
+  #                rv$lower_90 <- rep(last_value() * 0.1, 4)
+  #                
+  #                for (i in 1:4) {
+  #                  
+  #                  updateNumericInput(session, 
+  #                                     paste0("median_forecast_", i), 
+  #                                     value = round(rv$median[i], 2))
+  #                  updateNumericInput(session, 
+  #                                     paste0("shape_log_normal_", i), 
+  #                                     value = round(rv$sigma_log_normal[i], 2))
+  #                  
+  #                }
+  #                
+  #              }, 
+  #              priority = -2,
+  #              ignoreNULL = FALSE)
   
   
   observeEvent(input$submit,
@@ -552,113 +746,104 @@ server <- function(input, output, session) {
                  }
                }, 
                priority = 99)
-  
-  # move forecast up or down
-  observeEvent(input$move_forecast,
-               {
-                 # check_condition <- purrr::safely(.f = function(x) {
-                 #   return(as.integer(x) == x)
-                 # }, otherwise = FALSE)
-                 # 
-                 # if (check_condition(input$move_forecast)$result) {
-                 rv$median <- rv$median + input$move_forecast
-                 rv$upper_50 <- rv$upper_50 + input$move_forecast
-                 rv$lower_50 <- rv$lower_50 + input$move_forecast
-                 rv$upper_90 <- rv$upper_90 + input$move_forecast
-                 rv$lower_90 <- rv$lower_90 + input$move_forecast
-                 # }
-                 
-               }, 
-               priority = -5)
-  
+
   # change values by numeric input
   observeEvent(input$median_forecast_1,
                {
                  rv$median[1] <- input$median_forecast_1
+                 update_values()
                }, 
                priority = 99)
   observeEvent(input$median_forecast_2,
                {
                  rv$median[2] <- input$median_forecast_2
+                 update_values()
                }, 
                priority = 99)
   observeEvent(input$median_forecast_3,
                {
                  rv$median[3] <- input$median_forecast_3
+                 update_values()
                }, 
                priority = 99)
   observeEvent(input$median_forecast_4,
                {
                  rv$median[4] <- input$median_forecast_4
+                 update_values()
                }, 
                priority = 99)
   
   
   
-  
-  
-  observeEvent(input$lower_90_forecast_1,
-               {
-                 rv$lower_90[1] <- input$lower_90_forecast_1
-               }, 
-               priority = 99)
-  observeEvent(input$lower_90_forecast_2,
-               {
-                 rv$lower_90[2] <- input$lower_90_forecast_2
-               }, 
-               priority = 99)
-  observeEvent(input$lower_90_forecast_3,
-               {
-                 rv$lower_90[3] <- input$lower_90_forecast_3
-               }, 
-               priority = 99)
-  observeEvent(input$lower_90_forecast_4,
-               {
-                 rv$lower_90[4] <- input$lower_90_forecast_4
-               }, 
-               priority = 99)
-  
-  
-  observeEvent(input$upper_90_forecast_1,
-               {
-                 rv$upper_90[1] <- input$upper_90_forecast_1
-               }, 
-               priority = 99)
-  observeEvent(input$upper_90_forecast_2,
-               {
-                 rv$upper_90[2] <- input$upper_90_forecast_2
-               }, 
-               priority = 99)
-  observeEvent(input$upper_90_forecast_3,
-               {
-                 rv$upper_90[3] <- input$upper_90_forecast_3
-               }, 
-               priority = 99)
-  observeEvent(input$upper_90_forecast_4,
-               {
-                 rv$upper_90[4] <- input$upper_90_forecast_4
-               }, 
-               priority = 99)
+  # 
+  # 
+  # observeEvent(input$lower_90_forecast_1,
+  #              {
+  #                rv$lower_90[1] <- input$lower_90_forecast_1
+  #              }, 
+  #              priority = 99)
+  # observeEvent(input$lower_90_forecast_2,
+  #              {
+  #                rv$lower_90[2] <- input$lower_90_forecast_2
+  #              }, 
+  #              priority = 99)
+  # observeEvent(input$lower_90_forecast_3,
+  #              {
+  #                rv$lower_90[3] <- input$lower_90_forecast_3
+  #              }, 
+  #              priority = 99)
+  # observeEvent(input$lower_90_forecast_4,
+  #              {
+  #                rv$lower_90[4] <- input$lower_90_forecast_4
+  #              }, 
+  #              priority = 99)
+  # 
+  # 
+  # observeEvent(input$upper_90_forecast_1,
+  #              {
+  #                rv$upper_90[1] <- input$upper_90_forecast_1
+  #              }, 
+  #              priority = 99)
+  # observeEvent(input$upper_90_forecast_2,
+  #              {
+  #                rv$upper_90[2] <- input$upper_90_forecast_2
+  #              }, 
+  #              priority = 99)
+  # observeEvent(input$upper_90_forecast_3,
+  #              {
+  #                rv$upper_90[3] <- input$upper_90_forecast_3
+  #              }, 
+  #              priority = 99)
+  # observeEvent(input$upper_90_forecast_4,
+  #              {
+  #                rv$upper_90[4] <- input$upper_90_forecast_4
+  #              }, 
+  #              priority = 99)
   
   
   observeEvent(input$shape_log_normal_1,
                {
                  rv$sigma_log_normal[1] <- input$shape_log_normal_1
+                 
+                 update_values()
                }, 
                priority = 99)
   observeEvent(input$shape_log_normal_2,
                {
                  rv$sigma_log_normal[2] <- input$shape_log_normal_2
+                 update_values()
                }, 
                priority = 99)
   observeEvent(input$shape_log_normal_3,
                {
                  rv$sigma_log_normal[3] <- input$shape_log_normal_3
+                 update_values()
                }, 
                priority = 99)
   observeEvent(input$shape_log_normal_4,
                {
                  rv$sigma_log_normal[4] <- input$shape_log_normal_4
+                 update_values()
                }, 
                priority = 99)
 }
