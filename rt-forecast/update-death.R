@@ -6,15 +6,15 @@ library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
 # method ------------------------------------------------------------------
-method <- "approximate" # "exact"
+method <- "exact" # "approximate"
 
 # Set target date ---------------------------------------------------------
 target_date <- as.character(Sys.Date())
 
 # Update delays -----------------------------------------------------------
-generation_time <- readRDS(here::here("rt-forecast", "delays", "generation_time.rds"))
-incubation_period <- readRDS(here::here("rt-forecast", "delays", "incubation_period.rds"))
-onset_to_death <- readRDS(here::here("rt-forecast", "delays", "onset_to_death.rds"))
+generation_time <- readRDS(here::here("rt-forecast", "data", "delays", "generation_time.rds"))
+incubation_period <- readRDS(here::here("rt-forecast", "data", "delays", "incubation_period.rds"))
+onset_to_death <- readRDS(here::here("rt-forecast", "data", "delays", "onset_to_death.rds"))
 
 # Get cases  ---------------------------------------------------------------
 deaths <- data.table::fread(file.path("data", "daily-incidence-deaths-Germany_Poland.csv"))
@@ -43,9 +43,10 @@ regional_epinow(reported_cases = deaths,
                 samples = 4000, horizon = 30, burn_in = 14, 
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
-                target_folder = here::here("rt-forecast", "samples", "deaths"), 
-                summary_args = list(summary_dir = here::here("rt-forecast", "summary", 
-                                                             "deaths", target_date),
+                target_folder = here::here("rt-forecast", "data", "samples", "deaths"), 
+                summary_args = list(summary_dir = here::here("rt-forecast", "data",
+                                                             "summary", "deaths",
+                                                             target_date),
                                     all_regions = TRUE),
                 logs = "rt-forecast/logs/deaths", future = TRUE, max_execution_time = 60 * 60)
 

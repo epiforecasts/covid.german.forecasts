@@ -1,0 +1,5 @@
+region,point,lower,upper,mid_lower,mid_upper,central_lower,central_upper,metric,Expected change in daily cases
+Germany,3033,2281,3977,2714,3276,2782,2987,New confirmed cases by infection date,Increasing
+Poland,2261,394,11041,888,2414,1231,1647,New confirmed cases by infection date,Increasing
+Germany,1.1,1,1.1,1.1,1.1,1.1,1.1,Effective reproduction no.,Increasing
+Poland,1.1,1.1,1.2,1.1,1.1,1.1,1.1,Effective reproduction no.,Increasing

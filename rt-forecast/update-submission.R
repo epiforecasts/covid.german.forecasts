@@ -7,12 +7,12 @@ target_date <- Sys.Date()
 
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "samples", "cases"),
+  EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "data", "samples", "cases"),
                                 date = lubridate::ymd(target_date),
                                 forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
 
 death_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "samples", "deaths"),
+  EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "data", "samples", "deaths"),
                                 date = lubridate::ymd(target_date),
                                 forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
 
