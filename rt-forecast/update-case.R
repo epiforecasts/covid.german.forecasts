@@ -4,6 +4,10 @@ library(data.table, quietly = TRUE)
 library(future, quietly = TRUE)
 library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
+
+# method ------------------------------------------------------------------
+method <- "approximate" # "exact"
+
 # Set target date ---------------------------------------------------------
 target_date <- as.character(Sys.Date())
 
@@ -23,13 +27,20 @@ data.table::setorder(cases, region, date)
 setup_future(cases)
 
 # Run Rt estimation -------------------------------------------------------
-regional_epinow(reported_cases = cases, fixed_future_rt = TRUE, 
+if (method == "exact") {
+  stan_args <-list(warmup = 1000, 
+                   control = list(adapt_delta = 0.95,
+                                  max_treedepth = 15))
+}else{
+  stan_args <- NULL
+}
+
+regional_epinow(reported_cases = cases,
+                method = method, fixed_future_rt = TRUE, 
                 generation_time = generation_time, 
                 delays = list(incubation_period, onset_to_report),
                 samples = 4000, horizon = 30, burn_in = 14, 
-                stan_args = list(warmup = 1000, 
-                                 control = list(adapt_delta = 0.95,
-                                                max_treedepth = 15)), 
+                stan_args = stan_args,
                 output = c("region", "summary", "timing"),
                 target_date = target_date,
                 target_folder = here::here("rt-forecast", "samples", "cases"), 
