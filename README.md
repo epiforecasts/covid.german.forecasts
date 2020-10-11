@@ -22,7 +22,7 @@ Runs an Rt based forecast model using [`{EpiNow2}`](https://epiforecasts.io/EpiN
 bash rt-forecast/update.sh
 ```
 
-Runtime on a 4 core computer should be approximately 30 minutes but may take up to 2 hours.
+Runtime on a 4 core computer should be approximately 30 minutes but may take up to 2 hours for edge cases.
 
 ## Updating models
 

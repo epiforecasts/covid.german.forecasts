@@ -6,7 +6,7 @@ library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
 # method ------------------------------------------------------------------
-method <- "approximate" # "exact"
+method <- "exact" # "approximate"
 
 # Set target date ---------------------------------------------------------
 target_date <- as.character(Sys.Date())
@@ -47,5 +47,6 @@ regional_epinow(reported_cases = cases,
                 summary_args = list(summary_dir = here::here("rt-forecast", "data", "summary", 
                                                              "cases", target_date),
                                     all_regions = TRUE),
-                logs = "rt-forecast/logs/cases", future = TRUE, max_execution_time = 60 * 60)
+                logs = "rt-forecast/logs/cases", future = TRUE, 
+                max_execution_time = 60 * 60)
 

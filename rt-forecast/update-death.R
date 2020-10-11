@@ -48,5 +48,6 @@ regional_epinow(reported_cases = deaths,
                                                              "summary", "deaths",
                                                              target_date),
                                     all_regions = TRUE),
-                logs = "rt-forecast/logs/deaths", future = TRUE, max_execution_time = 60 * 60)
+                logs = "rt-forecast/logs/deaths", future = TRUE,
+                max_execution_time = 60 * 60)
 
