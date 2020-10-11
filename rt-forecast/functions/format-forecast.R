@@ -3,7 +3,7 @@ require(EpiNow2)
 require(data.table)
 require(lubridate)
 source(here::here("rt-forecast/functions/dates-to-epiweek.R"))
-
+ 
 format_forecast<- function(forecasts, 
                            forecast_date = NULL, 
                            submission_date = NULL,
@@ -46,7 +46,7 @@ format_forecast<- function(forecasts,
   forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_point))
   
   # drop unnecessary columns
-  forecasts_format <- forecasts_format[, !c("horizon", "target_value", "epiweek", "region")]
+  forecasts_format <- forecasts_format[, !c("target_value", "epiweek", "region")]
   
   # Set column order
   forecasts_format <- data.table::setcolorder(forecasts_format,

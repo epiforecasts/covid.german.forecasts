@@ -16,11 +16,13 @@ This app is designed to elicit forecasts in order to submit them to the [German 
 
 ### Rt based forecasts
 
+Runs an Rt based forecast model using [`{EpiNow2}`](https://epiforecasts.io/EpiNow2/). To update the forecast: 
+
+```bash
+bash rt-forecast/update.sh
+```
+
+Runtime on a 4 core computer should be approximately 30 minutes but may take up to 2 hours.
 
 ## Updating models
 
-
-## Todos
-
-- [ ] Tick first item
-- [x] Tick second item
