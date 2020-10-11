@@ -5,9 +5,6 @@ library(future, quietly = TRUE)
 library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
-# method ------------------------------------------------------------------
-method <- "exact" # "approximate"
-
 # Set target date ---------------------------------------------------------
 target_date <- as.character(Sys.Date())
 
@@ -27,19 +24,13 @@ data.table::setorder(deaths, region, date)
 cores <- setup_future(deaths)
 
 # Run Rt estimation -------------------------------------------------------
-if (method == "exact") {
-  stan_args <-list(warmup = 1000, 
-                   control = list(adapt_delta = 0.95,
-                                  max_treedepth = 15))
-}else{
-  stan_args <- NULL
-}
-
 regional_epinow(reported_cases = deaths,
-                method = method, fixed_future_rt = TRUE, 
+                fixed_future_rt = TRUE, 
                 generation_time = generation_time, 
                 delays = list(incubation_period, onset_to_death),
-                stan_args = stan_args, 
+                stan_args <-list(warmup = 1000, 
+                                 control = list(adapt_delta = 0.95,
+                                                max_treedepth = 15)), 
                 samples = 4000, horizon = 30, burn_in = 14, 
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
