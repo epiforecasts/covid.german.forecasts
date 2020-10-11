@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 .secrets
+rt-forecast/samples
+rt-forecast/logs
