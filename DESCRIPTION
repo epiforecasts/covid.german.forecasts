@@ -21,9 +21,11 @@ LazyData: true
 Imports:
   covidregionaldata,
   data.table,
+  dplyr,
   EpiNow2 (>= 1.2.0),
   future,
-  here
+  here,
+  tibble
 Remotes:
   epiforecasts/EpiNow2@update-output-interface,
   epiforecasts/covidregionaldata
