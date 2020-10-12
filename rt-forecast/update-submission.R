@@ -22,13 +22,13 @@ source(here::here("rt-forecast", "functions", "format-forecast.R"))
 case_forecast <- format_forecast(case_forecast[, value := cases], 
                                  forecast_date = target_date,
                                  submission_date = target_date,
-                                 CrI_samples = 0.4,
+                                 CrI_samples = 0.5,
                                  target = "cases")
 
 death_forecast <- format_forecast(death_forecast[, value := cases], 
                                   forecast_date = target_date,
                                   submission_date = target_date,
-                                  CrI_samples = 0.4,
+                                  CrI_samples = 0.5,
                                   target = "deaths")
 
 # Save forecasts ----------------------------------------------------------
