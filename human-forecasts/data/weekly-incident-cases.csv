@@ -1,5 +1,4 @@
 location,location_name,epiweek,value,target_end_date
-GM,Germany,1,0,2020-01-04
 GM,Germany,2,0,2020-01-11
 GM,Germany,3,0,2020-01-18
 GM,Germany,4,0,2020-01-25
@@ -40,7 +39,6 @@ GM,Germany,38,11590,2020-09-19
 GM,Germany,39,12660,2020-09-26
 GM,Germany,40,14228,2020-10-03
 GM,Germany,41,22423,2020-10-10
-GM,Germany,42,3483,2020-10-12
 PL,Poland,10,5,2020-03-07
 PL,Poland,11,63,2020-03-14
 PL,Poland,12,357,2020-03-21
@@ -73,4 +71,3 @@ PL,Poland,38,4281,2020-09-19
 PL,Poland,39,7068,2020-09-26
 PL,Poland,40,11377,2020-10-03
 PL,Poland,41,20565,2020-10-10
-PL,Poland,42,9478,2020-10-12
