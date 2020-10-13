@@ -1,0 +1,12 @@
+name: human-forecasts
+title: human-forecasts
+username:
+account: cmmid-lshtm
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2981427
+bundleId: 3725808
+url: https://cmmid-lshtm.shinyapps.io/human-forecasts/
+when: 1602406630.78921
+asMultiple: FALSE
+asStatic: FALSE

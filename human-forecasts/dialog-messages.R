@@ -1,11 +1,13 @@
 instructions <- '<h3> Welcome! </h3> 
-                        Please read these instructions and terms carefully. If you agree, please click "I understand and consent" to access the app. If you do not consent, you cannot use this app. 
+                        Please read these instructions and terms carefully. If you agree, please click "I understand and consent" to access the app. If you do not consent, you cannot use this app.
                         <br>
                         <h4> What this app does </h4>
                         This app is designed to collect forecasts from experts and non-experts. Predictions are made for weekly incident case numbers and deaths from Covid-19 in Germany and Poland. We do not create user accounts, so you need to reeenter your data every time you visit the app to make a forecast. 
 
                         <h4> Making Forecasts </h4>
                         You can either drag the points to adjust forecasts or use the numeric input fields. If you want to reset the forecasts, press reset. For reference, you can look at a plot with incident cases in the chosen location. 
+                        <br>
+                        If you cannot see the entire user interface you may want to zoom out in your browser.
                         <br>
                         <h4> Providing your name </h4>
                         Please provide your first and last name. If you prefer that you can also enter an imaginary name, but please be consistent. We do not create an account for you, so you need to be consistent in your naming between different forecasts you make. Also make sure you choose a name that is unique enough that nobody else will choose the same name. 
@@ -29,15 +31,15 @@ instructions <- '<h3> Welcome! </h3>
                    With your consent we collect
                     <ul>
                     <li>Your first and last name</li>
-                    <li>Your e-mailaddress</li>
+                    <li>Your email address</li>
                     <li>The forecasts you submit through this app</li>
                     <li>The name you want to appear on the performance board</li>
                     </ul>
                     <br>
                     <h4> What we do with your data</h4>
-                    Your first and last name (as well as your e-mail address if you choose to provide it) will be used to attribute forecasts to forecasters.
+                    Your first and last name (as well as your email address if you choose to provide it) will be used to attribute forecasts to forecasters.
                     <br>
-If you choose to provide your e-mail address we will send you a weekly reminder for the forecasts.
+If you choose to provide your email address we will send you a weekly reminder for the forecasts.
                     <br>
 The name you choose for the Performance Board will appear here (LINK). The leaderboard shows information about performance of past forecasters. 
                     <br>
@@ -49,10 +51,10 @@ The name you choose for the Performance Board will appear here (LINK). The leade
                     <li>Using anonymised versions of the forecasts for scientific publications about forecasting and/or Covid-19. </li>
                     <li>Sharing anonymised forecasts with the public</li>
                     </ul>
-                    Under no circumstances will we share your personal data (your first and last name and your e-mail address) with anyone. 
+                    Under no circumstances will we share your personal data (your first and last name and your email address) with anyone. 
                     
                     <h4>How do we store your data</h4>
-                    Once you click submit, your data will be sent to a Google Sheet stored in a Google Drive folder. One sheet will hold your personal information (first name, last name, e-mail address) as well as an encrypted version of your name and a randomly generated forecaster ID. The encryption algorithm used is SHA-256. A second sheet will hold your encrypted name as well as your forecasts.
+                    Once you click submit, your data will be sent to a Google Sheet stored in a Google Drive folder. One sheet will hold your personal information (first name, last name, email address) as well as an encrypted version of your name and a randomly generated forecaster ID. The encryption algorithm used is SHA-256. A second sheet will hold your encrypted name as well as your forecasts.
                     <br>
 Every Monday, the forecast sheet will be cleared and forecasts will be deleted from Google Drive (information that links your personal information to the forecaster ID remains). Raw forecasts will be uploaded to Github, using only the randomised forecaster ID so forecasts cannot be attributed to the identity of individual forecasters. In addition, the performance board will be updated using the name you provided in the app.
                     <h4> How long do we store your data? </h4>
@@ -60,7 +62,7 @@ We will store the data as long as is necessary to conduct research on forecastin
 <br>
 Anonymised versions of your forecasts may be stored indefinitely, e.g. as part of a publication.
 <br>
-You can, at any point, request deletion of your personal data. To that end, please send an e-mail at nikos.bosse@lshtm.ac.uk.'
+You can, at any point, request deletion of your personal data. To that end, please send an email at nikos.bosse@lshtm.ac.uk.'
 
 
 
@@ -79,12 +81,12 @@ data_policy <- 'This app allows experts and non-experts to make forecasts about 
                    With your consent we collect
                     <ul>
                     <li>Your first and last name</li>
-                    <li>Your e-mailaddress</li>
+                    <li>Your email address</li>
                     <li>The forecasts you submit through this app</li>
                     <li>The name you want to appear on the leaderboard</li>
                     </ul>
                     While we would prefer if you used your real name, you may also enter a fake name if you do not want to disclose your real name. In order for the app to work properly, you need to be consistent with the name you provide. 
-                    You are also not obliged to provide your e-mail address, but we would prefer if you did so we can contact you with updates and questions. 
+                    You are also not obliged to provide your email address, but we would prefer if you did so we can contact you with updates and questions. 
                     <br>
                     <h4> What we do with your data</h4>
                     Your first and last name (as well as your e-mail address if you choose to provide it) will be used to identify you. This is necessary to correctly attribute forecasts to forecasters. 
