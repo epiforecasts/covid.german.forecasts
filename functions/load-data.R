@@ -1,4 +1,4 @@
-
+source(here::here("functions", "dates-to-epiweek.R"))
 
 get_data <- function(load_from_server = FALSE, 
                      cumulative = FALSE,
@@ -65,7 +65,8 @@ get_data <- function(load_from_server = FALSE,
     # cases
     if (cases) {
       incident_cases_weekly <- incident_cases %>%
-        dplyr::mutate(epiweek = lubridate::epiweek(date)) %>%
+        dates_to_epiweek() %>% 
+        dplyr::filter(epiweek_full == TRUE) %>% 
         dplyr::group_by(location, location_name, epiweek) %>%
         dplyr::summarise(value = sum(value), 
                          target_end_date = max(date))
@@ -80,7 +81,8 @@ get_data <- function(load_from_server = FALSE,
     # deaths
     } else {
       incident_deaths_weekly <- incident_deaths %>%
-        dplyr::mutate(epiweek = lubridate::epiweek(date)) %>%
+        dates_to_epiweek() %>% 
+        dplyr::filter(epiweek_full == TRUE) %>% 
         dplyr::group_by(location, location_name, epiweek) %>%
         dplyr::summarise(value = sum(value), 
                          target_end_date = max(date))

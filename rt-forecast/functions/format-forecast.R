@@ -2,9 +2,10 @@
 require(EpiNow2)
 require(data.table)
 require(lubridate)
-source(here::here("rt-forecast/functions/dates-to-epiweek.R"))
+source(here::here("functions/dates-to-epiweek.R"))
  
 format_forecast<- function(forecasts, 
+                           cumulative = NULL,
                            forecast_date = NULL, 
                            submission_date = NULL,
                            CrI_samples = 1,
@@ -55,5 +56,16 @@ format_forecast<- function(forecasts,
                                                 "forecast_date", "target"))
   
   forecasts_format <- forecasts_format[target_end_date > forecast_date]
+  
+  # cumulative forecast 
+  if (!is.null(cumulative)) {
+    cumulative <- cumulative[, .SD[epiweek == max(epiweek)], by = location]
+    cumulative <- cumulative[,.(location, cum_value = value)]
+    forecasts_cum <- data.table::copy(forecasts_format)[cumulative, on = "location"]
+    forecasts_cum <- forecasts_cum[, value := value + cum_value][, cum_value := NULL]
+    forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_cum))
+  }
+  
+  data.table::setorder(forecasts_format, location, target, horizon)
   return(forecasts_format)
 }
