@@ -9,7 +9,7 @@ format_forecast<- function(forecasts,
                            forecast_date = NULL, 
                            submission_date = NULL,
                            CrI_samples = 1,
-                           target = NULL) {
+                           target_value = NULL) {
   
   # Filter to full epiweeks
   forecasts <- dates_to_epiweek(forecasts)
@@ -29,7 +29,7 @@ format_forecast<- function(forecasts,
   weekly_forecasts <- weekly_forecasts_inc[, 
                                            .(value = quantile(value, probs = c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), na.rm=T),
                                              quantile = c(0.01, 0.025, seq(0.05, 0.95, by = 0.05), 0.975, 0.99), 
-                                             target_end_date = max(target_end_date), target_value = "inc"), 
+                                             target_end_date = max(target_end_date)), 
                                               by = .(region, epiweek)][order(region, epiweek)]
   
   # Add necessary columns
@@ -39,7 +39,7 @@ format_forecast<- function(forecasts,
                                               location_name = region,
                                               location = ifelse(region == "Germany", "GM", "PL"),
                                               horizon = 1 + epiweek - lubridate::epiweek(submission_date))][,
-                                   target := paste0(horizon, " wk ahead ", target_value, " ", target)]
+                                   target := paste0(horizon, " wk ahead inc ", target_value)]
   
   # Add point forecasts
   forecasts_point <- forecasts_format[quantile == 0.5]
@@ -47,7 +47,7 @@ format_forecast<- function(forecasts,
   forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_point))
   
   # drop unnecessary columns
-  forecasts_format <- forecasts_format[, !c("target_value", "epiweek", "region")]
+  forecasts_format <- forecasts_format[, !c("epiweek", "region")]
   
   # Set column order
   forecasts_format <- data.table::setcolorder(forecasts_format,
@@ -63,7 +63,7 @@ format_forecast<- function(forecasts,
     cumulative <- cumulative[,.(location, cum_value = value)]
     forecasts_cum <- data.table::copy(forecasts_format)[cumulative, on = "location"]
     forecasts_cum <- forecasts_cum[, value := value + cum_value][, cum_value := NULL]
-    forecasts_cum <- forecasts_cum[, target := paste0(horizon, " wk ahead cum ", target)]
+    forecasts_cum <- forecasts_cum[, target := paste0(horizon, " wk ahead cum ", target_value)]
     forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_cum))
   }
   

@@ -23,15 +23,15 @@ case_forecast <- format_forecast(case_forecast[, value := cases],
                                  cumulative =  data.table::fread(here::here("data", "weekly-cumulative-cases.csv")),
                                  forecast_date = target_date,
                                  submission_date = target_date,
-                                 CrI_samples = 0.5,
-                                 target = "cases")
+                                 CrI_samples = 0.4,
+                                 target_value = "case")
 
 death_forecast <- format_forecast(death_forecast[, value := cases], 
                                   cumulative = data.table::fread(here::here("data", "weekly-cumulative-deaths.csv")),
                                   forecast_date = target_date,
                                   submission_date = target_date,
-                                  CrI_samples = 0.5,
-                                  target = "death")
+                                  CrI_samples = 0.4,
+                                  target_value = "death")
 
 # Save forecasts ----------------------------------------------------------
 target_folder <- here::here("submissions", "rt-forecasts", target_date)
@@ -40,7 +40,7 @@ if (!dir.exists(target_folder)) {
 }
 
 name_forecast <- function(name, type = ""){
-  paste0(target_date, "-", name, "-EpiNow2-", type, ".csv")
+  paste0(target_date, "-", name, "-EpiNow2", type, ".csv")
 }
 
 save_forecast <- function(forecast, name, type = "") {
@@ -48,7 +48,7 @@ save_forecast <- function(forecast, name, type = "") {
                      file.path(target_folder, name_forecast(name, type)))
 }
 
-save_forecast(case_forecast, "Germany", "case")
-save_forecast(case_forecast, "Poland", "case")
+save_forecast(case_forecast, "Germany", "-case")
+save_forecast(case_forecast, "Poland", "-case")
 save_forecast(death_forecast, "Germany")
 save_forecast(death_forecast, "Poland")
