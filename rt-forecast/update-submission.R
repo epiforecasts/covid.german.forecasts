@@ -29,15 +29,24 @@ death_forecast <- format_forecast(death_forecast[, value := cases],
                                   forecast_date = target_date,
                                   submission_date = target_date,
                                   CrI_samples = 0.5,
-                                  target = "deaths")
+                                  target = "death")
 
 # Save forecasts ----------------------------------------------------------
-target_folder <- here::here("rt-forecast", "submissions", target_date)
+target_folder <- here::here("submissions", "rt-forecasts", target_date)
 if (!dir.exists(target_folder)) {
   dir.create(target_folder, recursive = TRUE)
 }
 
-data.table::fwrite(case_forecast[location_name == "Germany"], file.path(target_folder, "cases-germany.csv"))
-data.table::fwrite(case_forecast[location_name == "Poland"], file.path(target_folder, "cases-poland.csv"))
-data.table::fwrite(death_forecast[location_name == "Germany"], file.path(target_folder, "deaths-germany.csv"))
-data.table::fwrite(death_forecast[location_name == "Poland"], file.path(target_folder, "deaths-poland.csv"))
+name_forecast <- function(name, type = ""){
+  paste0(target_date, "-", name, "-EpiNow2-", type, "csv")
+}
+
+save_forecast <- function(forecast, name, type = "") {
+  data.table::fwrite(forecast[location_name == name], 
+                     file.path(target_folder, name_file(name, type)))
+}
+
+save_forecast(case_forecast, "Germany", "case")
+save_forecast(case_forecast, "Poland", "case")
+save_forecast(death_forecast, "Germany")
+save_forecast(death_forecast, "Poland")
