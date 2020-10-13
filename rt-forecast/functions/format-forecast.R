@@ -63,6 +63,7 @@ format_forecast<- function(forecasts,
     cumulative <- cumulative[,.(location, cum_value = value)]
     forecasts_cum <- data.table::copy(forecasts_format)[cumulative, on = "location"]
     forecasts_cum <- forecasts_cum[, value := value + cum_value][, cum_value := NULL]
+    forecasts_cum <- forecasts_cum[, target := paste0(horizon, " wk ahead cum ", target)]
     forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_cum))
   }
   
