@@ -40,7 +40,7 @@ if (!dir.exists(target_folder)) {
 }
 
 name_forecast <- function(name, type = ""){
-  paste0(target_date, "-", name, "-EpiNow2", type, ".csv")
+  paste0(target_date, "-", name, "-epiforecasts-EpiNow2", type, ".csv")
 }
 
 save_forecast <- function(forecast, name, type = "") {
