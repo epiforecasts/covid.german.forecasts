@@ -67,7 +67,8 @@ ids <- ids %>%
 
 # write updated sheet
 googlesheets4::write_sheet(data = ids, 
-                           ss = identification_sheet)
+                           ss = identification_sheet, 
+                           sheet = "ids")
 
 all_ids <- ids %>%
   dplyr::select(forecaster = forecaster_hash, forecaster_id) %>%
@@ -193,7 +194,8 @@ forecast_cum <- forecast_inc %>%
   dplyr::mutate(value = value + last_value) %>%
   dplyr::select(-last_value, -case)
 
-forecast_submission <- dplyr::bind_rows(forecast_inc, forecast_cum)  
+forecast_submission <- dplyr::bind_rows(forecast_inc, forecast_cum) %>%
+  dplyr::mutate(forecast_date = submission_date)
 
 
 
