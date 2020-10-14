@@ -3,7 +3,7 @@ library(data.table)
 library(EpiNow2)
 
 # Dates -------------------------------------------------------------------
-target_date <- Sys.Date() - 1
+target_date <- Sys.Date() - 2
 
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(

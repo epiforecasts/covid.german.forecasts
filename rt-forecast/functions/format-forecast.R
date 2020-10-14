@@ -48,13 +48,6 @@ format_forecast<- function(forecasts,
   
   # drop unnecessary columns
   forecasts_format <- forecasts_format[, !c("epiweek", "region")]
-  
-  # Set column order
-  forecasts_format <- data.table::setcolorder(forecasts_format,
-                                              c("location", "location_name", "type", 
-                                                "quantile", "horizon", "value", "target_end_date",
-                                                "forecast_date", "target"))
-  
   forecasts_format <- forecasts_format[target_end_date > forecast_date]
   
   # cumulative forecast 
@@ -62,11 +55,18 @@ format_forecast<- function(forecasts,
     cumulative <- cumulative[, .SD[epiweek == max(epiweek)], by = location]
     cumulative <- cumulative[,.(location, cum_value = value)]
     forecasts_cum <- data.table::copy(forecasts_format)[cumulative, on = "location"]
+    forecasts_cum <- forecasts_cum[order(date)][, .SD[, value := cumsum(value)], 
+                                                by = .(location, type, quantile)]
     forecasts_cum <- forecasts_cum[, value := value + cum_value][, cum_value := NULL]
     forecasts_cum <- forecasts_cum[, target := paste0(horizon, " wk ahead cum ", target_value)]
     forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_cum))
   }
   
   data.table::setorder(forecasts_format, location, target, horizon)
+  # Set column order
+  forecasts_format <- data.table::setcolorder(forecasts_format,
+                                              c("location", "location_name", "type", 
+                                                "quantile", "horizon", "value", "target_end_date",
+                                                "forecast_date", "target"))
   return(forecasts_format)
 }
