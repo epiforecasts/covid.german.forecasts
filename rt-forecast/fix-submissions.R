@@ -27,3 +27,17 @@ manual_update(file = "2020-10-12/2020-10-12-Germany-EpiNow2-case.csv", cum_value
 manual_update(file = "2020-10-12/2020-10-12-Poland-EpiNow2-case.csv", cum_value = 116338)
 manual_update(file = "2020-10-12/2020-10-12-Germany-EpiNow2.csv", cum_value = 9604)
 manual_update(file = "2020-10-12/2020-10-12-Poland-EpiNow2.csv", cum_value = 2919)
+
+fix_submissions <- function(file) {
+  target_file <- here::here("submissions", "rt-forecasts", file)
+  df <- data.table::fread(target_file)
+  df <- df[, c("horizon", "submission_date") := NULL]
+  data.table::fwrite(df, target_file)
+  return(invisible(NULL))
+}
+
+
+fix_submissions(file = "2020-10-12/2020-10-12-Germany-EpiNow2-case.csv")
+fix_submissions(file = "2020-10-12/2020-10-12-Poland-EpiNow2-case.csv")
+fix_submissions(file = "2020-10-12/2020-10-12-Germany-EpiNow2.csv")
+fix_submissions(file = "2020-10-12/2020-10-12-Poland-EpiNow2.csv")
