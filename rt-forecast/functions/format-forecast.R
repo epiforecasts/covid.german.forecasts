@@ -68,5 +68,7 @@ format_forecast<- function(forecasts,
                                               c("location", "location_name", "type", 
                                                 "quantile", "horizon", "value", "target_end_date",
                                                 "forecast_date", "target"))
+  
+  forecasts_format <- forecasts_format[, c("horizon", "submission_date") := NULL]
   return(forecasts_format)
 }
