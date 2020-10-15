@@ -1,0 +1,146 @@
+region,date,type,median,mean,sd,lower_20,upper_20,lower_50,upper_50,lower_90,upper_90
+Germany,2020-08-31,estimate,1,1,2,0,0,0,1,0,3
+Germany,2020-09-01,estimate,4,5,4,1,2,1,4,0,9
+Germany,2020-09-02,estimate,6,7,5,3,4,1,6,0,13
+Germany,2020-09-03,estimate,5,6,4,2,3,1,5,0,12
+Germany,2020-09-04,estimate,3,4,3,1,2,0,3,0,8
+Germany,2020-09-05,estimate,4,5,3,1,2,1,4,0,9
+Germany,2020-09-06,estimate,2,2,2,1,1,0,2,0,5
+Germany,2020-09-07,estimate,1,2,2,0,0,0,1,0,4
+Germany,2020-09-08,estimate,4,5,4,1,2,0,4,0,10
+Germany,2020-09-09,estimate,7,8,5,1,3,2,7,0,14
+Germany,2020-09-10,estimate,6,7,5,3,4,1,6,0,13
+Germany,2020-09-11,estimate,4,5,4,1,2,1,4,0,9
+Germany,2020-09-12,estimate,5,5,4,1,2,1,5,0,10
+Germany,2020-09-13,estimate,2,3,2,1,1,0,2,0,6
+Germany,2020-09-14,estimate,1,2,2,0,0,0,1,0,4
+Germany,2020-09-15,estimate,5,6,4,2,3,2,6,0,12
+Germany,2020-09-16,estimate,8,10,6,3,5,3,9,0,17
+Germany,2020-09-17,estimate,7,8,6,2,4,2,8,1,16
+Germany,2020-09-18,estimate,5,6,4,2,3,1,5,0,11
+Germany,2020-09-19,estimate,6,7,5,1,3,1,6,0,13
+Germany,2020-09-20,estimate,3,4,3,0,1,0,3,0,8
+Germany,2020-09-21,estimate,2,3,2,1,1,0,2,0,5
+Germany,2020-09-22,estimate,7,8,5,2,4,1,7,0,15
+Germany,2020-09-23,estimate,11,13,8,4,7,5,13,0,23
+Germany,2020-09-24,estimate based on partial data,10,12,8,3,6,3,11,1,21
+Germany,2020-09-25,estimate based on partial data,7,8,5,2,4,3,8,0,15
+Germany,2020-09-26,estimate based on partial data,8,9,6,3,5,3,9,0,17
+Germany,2020-09-27,estimate based on partial data,4,5,4,1,2,0,4,0,10
+Germany,2020-09-28,estimate based on partial data,3,3,3,0,1,0,3,0,7
+Germany,2020-09-29,estimate based on partial data,10,11,7,7,9,4,11,1,20
+Germany,2020-09-30,estimate based on partial data,15,17,11,6,10,5,16,1,30
+Germany,2020-10-01,estimate based on partial data,13,15,9,8,11,4,14,1,27
+Germany,2020-10-02,estimate based on partial data,9,10,7,4,6,2,9,1,20
+Germany,2020-10-03,estimate based on partial data,11,12,8,3,6,3,11,1,22
+Germany,2020-10-04,estimate based on partial data,5,6,5,3,4,0,5,0,13
+Germany,2020-10-05,estimate based on partial data,4,4,4,1,2,1,4,0,9
+Germany,2020-10-06,estimate based on partial data,12,14,9,6,9,5,14,0,26
+Germany,2020-10-07,estimate based on partial data,19,22,13,9,14,7,21,1,39
+Germany,2020-10-08,estimate based on partial data,17,19,13,8,12,4,17,1,35
+Germany,2020-10-09,estimate based on partial data,11,13,9,4,7,3,12,0,24
+Germany,2020-10-10,estimate based on partial data,13,15,10,8,11,4,14,1,29
+Germany,2020-10-11,estimate based on partial data,7,8,6,2,4,1,7,0,16
+Germany,2020-10-12,forecast,5,6,5,1,2,1,5,0,11
+Germany,2020-10-13,forecast,15,19,16,6,10,4,16,1,36
+Germany,2020-10-14,forecast,24,30,33,8,15,7,26,1,56
+Germany,2020-10-15,forecast,21,28,68,7,13,5,22,0,49
+Germany,2020-10-16,forecast,14,24,156,4,8,3,15,0,39
+Germany,2020-10-17,forecast,16,47,1043,5,10,3,17,0,44
+Germany,2020-10-18,forecast,9,59,2165,4,6,1,9,0,25
+Germany,2020-10-19,forecast,6,160,7125,0,2,1,6,0,19
+Germany,2020-10-20,forecast,19,799,33943,4,10,3,20,0,63
+Germany,2020-10-21,forecast,29,6534,308582,7,16,2,29,0,104
+Germany,2020-10-22,forecast,25,5189,185494,6,14,2,26,0,98
+Germany,2020-10-23,forecast,17,5638,227409,2,8,0,17,0,74
+Germany,2020-10-24,forecast,20,14680,485956,2,9,0,20,0,95
+Germany,2020-10-25,forecast,11,9111,286750,2,5,1,11,0,52
+Germany,2020-10-26,forecast,7,8327,244307,0,2,0,7,0,40
+Germany,2020-10-27,forecast,23,19029,505875,3,10,0,23,0,138
+Germany,2020-10-28,forecast,35,17544,411390,1,13,0,35,0,236
+Germany,2020-10-29,forecast,31,26282,577788,0,11,0,31,0,222
+Germany,2020-10-30,forecast,22,31919,726671,0,7,0,22,0,179
+Germany,2020-10-31,forecast,24,17587,317405,0,8,0,24,0,226
+Germany,2020-11-01,forecast,13,18333,347293,0,4,0,13,0,130
+Germany,2020-11-02,forecast,9,26094,544836,0,2,0,9,0,95
+Germany,2020-11-03,forecast,29,36964,539852,0,8,0,29,0,350
+Germany,2020-11-04,forecast,44,58389,721767,0,12,0,44,0,583
+Germany,2020-11-05,forecast,39,75645,944368,0,10,0,39,0,594
+Germany,2020-11-06,forecast,27,65494,820355,0,7,0,27,0,447
+Germany,2020-11-07,forecast,30,84109,1044912,0,7,0,30,0,549
+Germany,2020-11-08,forecast,16,74852,974837,0,4,0,17,0,293
+Germany,2020-11-09,forecast,11,80596,1029881,0,2,0,11,0,241
+Germany,2020-11-10,forecast,35,98552,1109401,0,7,0,35,0,829
+Poland,2020-08-30,estimate,11,12,6,7,9,5,12,2,20
+Poland,2020-08-31,estimate,4,5,3,1,2,1,4,0,9
+Poland,2020-09-01,estimate,7,8,5,3,5,3,8,0,14
+Poland,2020-09-02,estimate,14,15,8,8,11,6,15,2,25
+Poland,2020-09-03,estimate,14,15,8,7,10,5,14,2,25
+Poland,2020-09-04,estimate,12,13,7,9,11,5,13,3,23
+Poland,2020-09-05,estimate,10,11,6,5,7,5,11,2,19
+Poland,2020-09-06,estimate,12,13,7,5,8,4,12,2,22
+Poland,2020-09-07,estimate,4,5,3,1,2,2,5,0,9
+Poland,2020-09-08,estimate,8,9,5,3,5,4,9,2,16
+Poland,2020-09-09,estimate,15,16,8,8,11,7,16,3,27
+Poland,2020-09-10,estimate,15,16,8,8,11,6,16,3,27
+Poland,2020-09-11,estimate,13,14,8,7,10,7,15,3,25
+Poland,2020-09-12,estimate,11,12,6,7,9,5,12,2,20
+Poland,2020-09-13,estimate,13,14,8,7,10,5,14,2,24
+Poland,2020-09-14,estimate,5,5,3,2,3,1,5,0,10
+Poland,2020-09-15,estimate,9,10,6,4,6,4,10,2,18
+Poland,2020-09-16,estimate,17,18,9,8,12,10,20,4,31
+Poland,2020-09-17,estimate,17,19,10,9,13,8,19,4,32
+Poland,2020-09-18,estimate,16,17,9,11,14,8,18,3,30
+Poland,2020-09-19,estimate,13,14,8,6,9,6,14,2,24
+Poland,2020-09-20,estimate,16,18,9,7,11,8,18,3,30
+Poland,2020-09-21,estimate,6,7,4,3,4,3,7,0,12
+Poland,2020-09-22,estimate,11,13,7,8,10,4,12,1,22
+Poland,2020-09-23,estimate,22,23,12,14,18,12,25,4,39
+Poland,2020-09-24,estimate based on partial data,23,25,12,12,17,11,25,5,41
+Poland,2020-09-25,estimate based on partial data,22,24,12,11,16,13,26,4,39
+Poland,2020-09-26,estimate based on partial data,18,20,10,10,14,7,19,4,33
+Poland,2020-09-27,estimate based on partial data,23,25,13,13,18,12,26,5,43
+Poland,2020-09-28,estimate based on partial data,9,10,6,4,6,4,10,2,18
+Poland,2020-09-29,estimate based on partial data,17,19,10,9,13,7,18,4,32
+Poland,2020-09-30,estimate based on partial data,33,35,17,20,27,19,38,8,59
+Poland,2020-10-01,estimate based on partial data,34,37,18,24,31,18,39,9,63
+Poland,2020-10-02,estimate based on partial data,34,36,17,23,30,19,39,8,60
+Poland,2020-10-03,estimate based on partial data,28,30,15,18,24,14,31,6,50
+Poland,2020-10-04,estimate based on partial data,36,39,19,19,27,17,39,9,65
+Poland,2020-10-05,estimate based on partial data,14,16,9,9,12,7,16,3,28
+Poland,2020-10-06,estimate based on partial data,28,30,15,19,25,15,32,6,51
+Poland,2020-10-07,estimate based on partial data,54,59,28,33,45,33,65,15,97
+Poland,2020-10-08,estimate based on partial data,57,62,30,51,63,31,65,14,102
+Poland,2020-10-09,estimate based on partial data,56,61,29,46,58,28,62,13,100
+Poland,2020-10-10,estimate based on partial data,47,52,27,31,41,23,53,9,88
+Poland,2020-10-11,estimate based on partial data,62,67,34,39,53,33,71,16,112
+Poland,2020-10-12,forecast,25,28,16,12,18,11,28,4,49
+Poland,2020-10-13,forecast,48,54,32,32,43,23,54,12,97
+Poland,2020-10-14,forecast,95,109,65,54,76,48,110,21,196
+Poland,2020-10-15,forecast,99,117,79,67,92,44,112,18,213
+Poland,2020-10-16,forecast,98,120,94,56,80,42,108,19,217
+Poland,2020-10-17,forecast,81,105,100,35,56,32,90,16,201
+Poland,2020-10-18,forecast,107,145,217,52,80,39,118,16,267
+Poland,2020-10-19,forecast,43,64,110,16,28,12,46,4,119
+Poland,2020-10-20,forecast,83,137,392,37,60,22,89,7,249
+Poland,2020-10-21,forecast,164,280,788,72,117,41,178,11,500
+Poland,2020-10-22,forecast,175,358,2256,75,125,44,189,12,574
+Poland,2020-10-23,forecast,168,384,2189,64,112,33,176,5,639
+Poland,2020-10-24,forecast,144,416,3966,54,95,29,153,5,585
+Poland,2020-10-25,forecast,186,612,5909,59,115,34,197,6,782
+Poland,2020-10-26,forecast,74,337,4431,18,40,6,75,0,381
+Poland,2020-10-27,forecast,146,1253,26226,35,79,11,148,2,802
+Poland,2020-10-28,forecast,274,2002,32741,54,140,23,283,4,1695
+Poland,2020-10-29,forecast,306,3991,97519,51,144,25,316,5,1897
+Poland,2020-10-30,forecast,289,7153,177525,82,169,13,294,2,2023
+Poland,2020-10-31,forecast,246,9721,258629,31,105,11,251,2,1991
+Poland,2020-11-01,forecast,315,11715,273260,36,130,9,318,0,2866
+Poland,2020-11-02,forecast,127,8967,231535,12,48,3,128,0,1262
+Poland,2020-11-03,forecast,245,15044,352524,22,91,1,245,0,2665
+Poland,2020-11-04,forecast,474,24915,477547,26,161,3,475,1,5881
+Poland,2020-11-05,forecast,504,26027,383898,37,179,3,506,0,6830
+Poland,2020-11-06,forecast,482,36892,579585,18,159,0,482,0,7547
+Poland,2020-11-07,forecast,410,32368,485915,13,122,1,410,0,6872
+Poland,2020-11-08,forecast,555,47719,690918,4,148,0,555,0,10170
+Poland,2020-11-09,forecast,221,40525,658235,0,54,0,221,0,4499
+Poland,2020-11-10,forecast,416,52700,679705,0,98,0,416,0,9445
