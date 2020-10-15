@@ -23,9 +23,9 @@ drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 sheets_auth(token = drive_token())
 
 # for server
-source(here::here("dialog-messages.R"))
+# source(here::here("dialog-messages.R"))
 # for use on computer
-# source(here::here("human-forecasts", "dialog-messages.R"))
+source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 spred_sheet_id <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
@@ -77,7 +77,7 @@ ui <- fluidPage(
   #         border: 2px dashed blue;
   #     }
   #   ")),
-  fluidRow(column(6, 
+  fluidRow(column(3, 
                   tipify(h2("Covid Human Forecast App"), 
                          title = "If you can't see the entire user interface, you may want to zoom out in your browser."))),
   fluidRow(column(3,
@@ -678,7 +678,7 @@ server <- function(input, output, session) {
                {
                  for (i in 2:4) {
                    rv$median_latent[i] <- rv$median_latent[1]
-                   rv$sigma_log_normal_latent[i] <- rv$sigma_log_normal_latent[1]
+                   rv$sigma_log_normal_latent[i] <- rv$sigma_log_normal_latent[1] + 0.01 * (i - 1)
                    updateNumericInput(session,
                                       paste0("median_forecast_", i),
                                       value = round(rv$median_latent[i], 0))
@@ -693,7 +693,7 @@ server <- function(input, output, session) {
                {
                  for (i in 3:4) {
                    rv$median_latent[i] <- rv$median_latent[2]
-                   rv$sigma_log_normal_latent[i] <- rv$sigma_log_normal_latent[2]
+                   rv$sigma_log_normal_latent[i] <- rv$sigma_log_normal_latent[2] + 0.01 * (i - 2)
                    updateNumericInput(session,
                                       paste0("median_forecast_", i),
                                       value = round(rv$median_latent[i], 0))
@@ -707,7 +707,7 @@ server <- function(input, output, session) {
                {
                  for (i in 4:4) {
                    rv$median_latent[i] <- rv$median_latent[3]
-                   rv$sigma_log_normal_latent[i] <- rv$sigma_log_normal_latent[3]
+                   rv$sigma_log_normal_latent[i] <- rv$sigma_log_normal_latent[3] + 0.01 * (i - 3)
                    updateNumericInput(session,
                                       paste0("median_forecast_", i),
                                       value = round(rv$median_latent[i], 0))
@@ -823,7 +823,8 @@ server <- function(input, output, session) {
                                                sheet = "predictions")
                    
                    googlesheets4::sheet_append(data = identification, 
-                                               ss = spred_sheet_id)
+                                               ss = spred_sheet_id, 
+                                               sheet = "ids")
                    
                    rv$selection_number <- which(selection_names == input$selection) + 1
                    newSelection <- selection_names[rv$selection_number]
