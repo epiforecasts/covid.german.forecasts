@@ -81,21 +81,36 @@ all_ids <- ids %>%
 
 
 # load forecasts from Google Sheet ---------------------------------------------
-forecasts <- googlesheets4::read_sheet(ss = spread_sheet)
+forecasts <- googlesheets4::read_sheet(ss = spread_sheet, 
+                                       sheet = "predictions")
 
 # merge with ids
 forecasts <- dplyr::full_join(forecasts, all_ids)
 
-# write raw forecasts
-data.table::fwrite(forecasts %>%
-                     dplyr::select(- forecaster),
+# extract comments and store separately
+comments <- forecasts %>%
+  dplyr::select(forecaster_id, comments) %>%
+  dplyr::filter(!is.na(comments))
+
+# append comments to google sheets
+comment_sheet <- "1isJQbE1RLvXYDpaaDADPHObgh8DMsTIHOonu8S1W8zc"
+googlesheets4::sheet_append(ss = comment_sheet,
+                            data = comments)
+
+# clean and write raw forecasts
+raw_forecasts <- forecasts %>%
+  dplyr::select(-forecaster, -comments, -name_board, -leaderboard, -email)
+
+# maybe change forecast time to forecast duration. Also remove forecast date?
+
+data.table::fwrite(raw_forecasts,
                    here::here("human-forecasts", "raw-forecast-data", 
                               paste0(submission_date, "-raw-forecasts.csv")))
 
 # filter forecasts -------------------------------------------------------------
 # use only the latest forecast from a given forecaster
-filtered_forecasts <- forecasts %>%
-  dplyr::group_by(forecaster, location, inc, type) %>%
+filtered_forecasts <- raw_forecasts %>%
+  dplyr::group_by(forecaster_id, location, inc, type) %>%
   dplyr::filter(forecast_time == max(forecast_time))
 # maybe filter by some sanity check again
 # i.e. quantiles must be monotonously increasing
@@ -116,39 +131,27 @@ forecast_quantiles <- filtered_forecasts %>%
                 type = "quantile")
 
 
+# save forecasts in quantile-format
+data.table::fwrite(forecast_quantiles,
+                   here::here("human-forecasts", "processed-forecast-data", 
+                              paste0(submission_date, "-processed-forecasts.csv")))
+
 # empty google sheet
-# cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
-# names(cols) <- names(forecasts)
-# googlesheets4::write_sheet(data = cols, 
-#                            ss = spread_sheet, 
-#                            sheet = "predictions")
-
-
+cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
+names(cols) <- names(forecasts)
+googlesheets4::write_sheet(data = cols,
+                           ss = spread_sheet,
+                           sheet = "predictions")
 
 
 
 # make median ensemble ---------------------------------------------------------
-# fit distribution to quantiles to obtain more quantiles. Then make median ensemble
 median_ensemble <- forecast_quantiles %>%
+  dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
   dplyr::group_by(location, location_name, target, type, quantile, horizon, target_end_date) %>%
   dplyr::summarise(value = median(value)) %>%
   dplyr::ungroup() %>%
   dplyr::select(target, target_end_date, location, type, quantile, value, location_name)
-
-# missinng: fit distribution and add more quantiles
-
-
-# format ensemble for submission -----------------------------------------------
-# forecast_submission <- median_ensemble %>%
-  # dplyr::mutate(forecast_date = Sys.Date(), 
-  #               inc = ifelse(inc == "incident", "inc", "cum"),
-  #               type = ifelse(type == "deaths", "death", "case"),
-  #               target = paste(horizon, "wk ahead", inc, type, sep = " "), 
-  #               target_end_date = as.Date(target_end_date), 
-  #               type = "quantile") %>%
-  # dplyr::select(-inc) %>%
-  # dplyr::select(forecast_date, target, target_end_date, location, type, quantile, value, location_name)
-
 
 # add median forecast
 forecast_inc <- dplyr::bind_rows(median_ensemble, 
@@ -166,6 +169,7 @@ first_forecast_date <- forecasts %>%
   unique() %>%
   min()
 
+# add latest deaths and cases
 source(here::here("utility-functions", "load-data.R"))
 
 deaths <- get_data(cumulative = TRUE, weekly = TRUE, cases = FALSE) %>%
@@ -198,10 +202,7 @@ forecast_submission <- dplyr::bind_rows(forecast_inc, forecast_cum) %>%
   dplyr::mutate(forecast_date = submission_date)
 
 
-
-
 # write submission files -------------------------------------------------------
-
 if (!dir.exists(here::here("submissions", "human-forecasts", submission_date))) {
   dir.create(here::here("submissions", "human-forecasts", submission_date))
 }
@@ -211,26 +212,26 @@ forecast_submission %>%
                 grepl("death", target)) %>%
   data.table::fwrite(here::here("submissions", "human-forecasts", submission_date,
                                 paste0(submission_date, 
-                                       "-Germany-EpiExpert.csv")))
+                                       "-Germany-epiforecasts-EpiExpert.csv")))
 
 forecast_submission %>%
   dplyr::filter(location_name %in% "Germany", 
                 grepl("case", target)) %>%
   data.table::fwrite(here::here("submissions", "human-forecasts", submission_date,
                                 paste0(submission_date, 
-                                       "-Germany-EpiExpert-case.csv")))
+                                       "-Germany-epiforecasts-EpiExpert-case.csv")))
 
 forecast_submission %>%
   dplyr::filter(location_name %in% "Poland", 
                 grepl("death", target)) %>%
   data.table::fwrite(here::here("submissions", "human-forecasts", submission_date,
                                 paste0(submission_date, 
-                                       "-Poland-EpiExpert.csv")))
+                                       "-Poland-epiforecasts-EpiExpert.csv")))
 
 forecast_submission %>%
   dplyr::filter(location_name %in% "Poland", 
                 grepl("case", target)) %>%
   data.table::fwrite(here::here("submissions", "human-forecasts", submission_date,
                                 paste0(submission_date, 
-                                       "-Poland-EpiExpert-case.csv")))
+                                       "-Poland-epiforecasts-EpiExpert-case.csv")))
 
