@@ -1,0 +1,33 @@
+team_name: epiforecasts
+team_abbr: epiforecasts
+
+model_contributors: Nikos Bosse (nikos.bosse@lshtm.ac.uk), Sam Abbott (sam.abbott@lshtm.ac.uk), Sebastian Funk (sebastian.funk@lshtm.ac.uk)
+institution_affil: Centre for Mathematical Modelling of Infectious Diseases (CMMID) at the London School of Hygiene and Tropical Medicine (LSHTM)
+
+team_experience: 
+team_funding: 
+
+model_name: EpiExpert
+model_abbr: EpiExpert
+model_output: 
+model_repo: 
+
+model_targets: weekly / cumulative incidences & deaths
+target_loc: Germany and Poland
+Data_format: percentile estimates
+forecast_startdate: 2020-10-12
+forecast_frequency: once per week
+
+data_inputs_known: Country level daily cases and deaths
+data_source_known: ECDC
+
+this_model_is_an_ensemble: yes
+this_model_is_unconditional: yes
+
+methods: >-
+    Median ensemble of predictions from experts and non-experts collected via a web-app.
+
+methods_long: >-
+    Experts and non-experts are asked to submit predictions via a web-app. Currently, predictions are made by asking for the location and shape parameter of a log-normal distribution. Other methods, such as eliciting specific quantiles, will be tested in the future. At the moment only members of the epiforecasts working group at LSHTM participate, but the number of participants will be expanded in the future. 
+
+citation: N/A
