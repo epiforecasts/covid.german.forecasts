@@ -25,7 +25,7 @@ cores <- setup_future(cases)
 
 # Run Rt estimation -------------------------------------------------------
 regional_epinow(reported_cases = cases,
-                fixed_future_rt = TRUE, 
+                future_rt = "estimate", 
                 generation_time = generation_time, 
                 delays = list(incubation_period, onset_to_report),
                 samples = 4000, horizon = 30, burn_in = 14, 
@@ -39,5 +39,5 @@ regional_epinow(reported_cases = cases,
                                                              "cases", target_date),
                                     all_regions = TRUE),
                 logs = "rt-forecast/logs/cases", future = TRUE, 
-                max_execution_time = 60 * 60)
+                max_execution_time = 60 * 30)
 
