@@ -22,7 +22,7 @@ Imports:
   covidregionaldata,
   data.table,
   dplyr,
-  EpiNow2 (>= 1.2.0),
+  EpiNow2 (>= 1.2.1),
   future,
   here,
   tibble
