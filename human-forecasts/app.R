@@ -23,9 +23,9 @@ drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 sheets_auth(token = drive_token())
 
 # for server
-# source(here::here("dialog-messages.R"))
+source(here::here("dialog-messages.R"))
 # for use on computer
-source(here::here("human-forecasts", "dialog-messages.R"))
+# source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 spred_sheet_id <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
@@ -150,11 +150,14 @@ ui <- fluidPage(
                                                                 choices = c("yes", "no", "anonymous"), selected = "anonymous", inline = FALSE), 
                                                    title = "Do you want to appear on the Performance Board at all?"))),
                   fluidRow(column(12, textInput("email", label = "Email"))),
-                  fluidRow(column(12, 
+                  fluidRow(column(6, 
                                   tipify(checkboxInput(inputId = "expert", 
                                                        label = "Do you have domain expertise?"),
                                          title = "Do you work in infectious disease modelling, have professional experience in any related field, or have spent a lot of time thinking about forecasting or Covid-19?", 
-                                         placement = "left"))),
+                                         placement = "left")), 
+                           column(6, 
+                                  tipify(textInput(inputId = "affiliation", label = "Affiliation"), 
+                                         title = "If you have domain expertise: What institution, if any, are you affiliated with?"))),
                   fluidRow(column(3, tipify(actionButton("submit", label = HTML('<b>Submit</b>')), 
                                             title = "You can submit multiple times, but only the last submission will be counted.",
                                             placement = "bottom")), 
@@ -816,7 +819,14 @@ server <- function(input, output, session) {
                    
                    identification <- data.frame(forecaster = forecaster_name(), 
                                                 forecaster_hash = as.character(sha256(forecaster_name())), 
-                                                email = input$email)
+                                                email = input$email,
+                                                expert = input$expert,
+                                                affiliation = input$affiliation,
+                                                potential_problem = NA, 
+                                                identifier = NA,
+                                                forecaster_n = NA,
+                                                identifier_id = NA,
+                                                forecaster_id = NA)
                    
                    googlesheets4::sheet_append(data = submissions,
                                                ss = spread_sheet,
