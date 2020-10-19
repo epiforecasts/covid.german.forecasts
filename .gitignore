@@ -5,3 +5,5 @@
 .secrets
 rt-forecast/data/samples
 rt-forecast/logs
+data
+human-forecasts/data
