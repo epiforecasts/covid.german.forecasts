@@ -14,11 +14,13 @@ identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 
 # setup ------------------------------------------------------------------------
-submission_date <- Sys.Date()
+# - 1 as this is usually updated on a Tuesday
+submission_date <- Sys.Date() - 1
 
 
 # load identifier from Google Sheet --------------------------------------------
-ids <- googlesheets4::read_sheet(ss = identification_sheet)
+ids <- googlesheets4::read_sheet(ss = identification_sheet, 
+                                 sheet = "ids")
 
 # add identifiers
 ids <- ids %>% 
@@ -43,8 +45,8 @@ ids <- ids %>%
 # add problem flag
 ids <- ids %>%
   dplyr::mutate(potential_problem = ifelse(identifier_n == forecaster_n, FALSE, TRUE))
-  
-  
+
+
 # get existing ids
 existing_ids <- ids %>%
   dplyr::filter(!is.na(forecaster_id)) %>%
@@ -123,7 +125,7 @@ forecast_quantiles <- filtered_forecasts %>%
   dplyr::rowwise() %>%
   dplyr::mutate(quantile = list(quantile_grid),
                 value = list(qlnorm(quantile_grid, meanlog = log(median), 
-                                   sdlog = shape_log_normal))) %>%
+                                    sdlog = shape_log_normal))) %>%
   tidyr::unnest(cols = c(quantile, value)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(type = ifelse(type == "cases", "case", "death"), 
@@ -135,14 +137,6 @@ forecast_quantiles <- filtered_forecasts %>%
 data.table::fwrite(forecast_quantiles,
                    here::here("human-forecasts", "processed-forecast-data", 
                               paste0(submission_date, "-processed-forecasts.csv")))
-
-# empty google sheet
-cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
-names(cols) <- names(forecasts)
-googlesheets4::write_sheet(data = cols,
-                           ss = spread_sheet,
-                           sheet = "predictions")
-
 
 
 # make median ensemble ---------------------------------------------------------
@@ -167,10 +161,10 @@ first_forecast_date <- forecasts %>%
   dplyr::pull(target_end_date) %>%
   as.Date() %>%
   unique() %>%
-  min()
+  min(na.rm = TRUE)
 
 # add latest deaths and cases
-source(here::here("utility-functions", "load-data.R"))
+source(here::here("functions", "load-data.R"))
 
 deaths <- get_data(cumulative = TRUE, weekly = TRUE, cases = FALSE) %>%
   dplyr::group_by(location) %>%
@@ -234,4 +228,14 @@ forecast_submission %>%
   data.table::fwrite(here::here("submissions", "human-forecasts", submission_date,
                                 paste0(submission_date, 
                                        "-Poland-epiforecasts-EpiExpert-case.csv")))
+
+
+
+
+# empty google sheet
+cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
+names(cols) <- names(forecasts)
+googlesheets4::write_sheet(data = cols,
+                           ss = spread_sheet,
+                           sheet = "predictions")
 
