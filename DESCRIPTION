@@ -22,12 +22,12 @@ Imports:
   covidregionaldata,
   data.table,
   dplyr,
-  EpiNow2 (>= 1.2.0),
+  EpiNow2 (>= 1.2.1),
   future,
   here,
   tibble
 Remotes:
-  epiforecasts/EpiNow2@update-output-interface,
+  epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
