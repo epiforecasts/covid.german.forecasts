@@ -8,6 +8,10 @@ get_data(load_from_server = TRUE)
 weekly_cases <- get_data(cases = TRUE)
 weekly_deaths <- get_data(cases = FALSE)
 
+if (!dir.exists(here::here("data"))) {
+  dir.create("data", recursive = TRUE)
+}
+
 data.table::fwrite(weekly_cases, 
                    here::here("data", "weekly-incident-cases.csv"))
 data.table::fwrite(weekly_deaths, 
@@ -22,6 +26,10 @@ data.table::fwrite(weekly_cases_cum,
 data.table::fwrite(weekly_deaths_cum, 
                    here::here("data", "weekly-cumulative-deaths.csv"))
 
+
+if (!dir.exists(here::here("human-forecasts", "data"))) {
+  dir.create("human-forecasts", "data", recursive = TRUE)
+}
 
 # copy data into human forecast app
 file.copy(from = here::here("data"), 

@@ -53,9 +53,9 @@ format_forecast<- function(forecasts,
   # cumulative forecast 
   if (!is.null(cumulative)) {
     cumulative <- cumulative[, .SD[epiweek == max(epiweek)], by = location]
-    cumulative <- cumulative[,.(location, cum_value = value)]
+    cumulative <- cumulative[, .(location, cum_value = value)]
     forecasts_cum <- data.table::copy(forecasts_format)[cumulative, on = "location"]
-    forecasts_cum <- forecasts_cum[order(date)][, .SD[, value := cumsum(value)], 
+    forecasts_cum <- forecasts_cum[order(horizon)][, value := cumsum(value), 
                                                 by = .(location, type, quantile)]
     forecasts_cum <- forecasts_cum[, value := value + cum_value][, cum_value := NULL]
     forecasts_cum <- forecasts_cum[, target := paste0(horizon, " wk ahead cum ", target_value)]
