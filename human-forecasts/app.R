@@ -3,6 +3,7 @@ library(purrr)
 library(shiny)
 library(shinyBS)
 library(openssl)
+library(shinyauthr)
 
 library(googledrive)
 library(googlesheets4)
@@ -14,18 +15,14 @@ library(magrittr)
 # options(gargle_quiet = FALSE)
 # drive_auth()
 
-
-
-
- 
 options(gargle_oauth_cache = ".secrets")
 drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 sheets_auth(token = drive_token())
 
 # for server
-source(here::here("dialog-messages.R"))
+# source(here::here("dialog-messages.R"))
 # for use on computer
-# source(here::here("human-forecasts", "dialog-messages.R"))
+source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 spred_sheet_id <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
@@ -65,6 +62,17 @@ selection_names <- apply(selections, MARGIN = 1,
                          })
 
 
+user_base <- data.frame(
+  user = c("user1", "user2"),
+  password = c("pass1", "pass2"), 
+  permissions = c("admin", "standard"),
+  name = c("User One", "User Two"),
+  stringsAsFactors = FALSE,
+  row.names = NULL
+)
+
+
+
 
 ui <- fluidPage(
   # headerPanel("Predictions"),
@@ -77,11 +85,15 @@ ui <- fluidPage(
   #         border: 2px dashed blue;
   #     }
   #   ")),
+  
+  shinyjs::useShinyjs(),
+  
   fluidRow(column(3, 
-                  tipify(h2("Covid Human Forecast App"), 
-                         title = "If you can't see the entire user interface, you may want to zoom out in your browser."))),
+                  optional_tipify(h2("Covid Human Forecast App"), 
+                         title = "If you can't see the entire user interface, you may want to zoom out in your browser.")), 
+           column(2, checkboxInput(inputId = "tooltip", label = "Show tooltips"))),
   fluidRow(column(3,
-                  tipify(selectInput(inputId = "selection",
+                  optional_tipify(selectInput(inputId = "selection",
                                      label = "Selection:",
                                      choices = selection_names, 
                                      selected = "Germany"), 
@@ -251,6 +263,19 @@ ui <- fluidPage(
 
 
 server <- function(input, output, session) {
+  
+  credentials <- callModule(shinyauthr::login, 
+                            id = "login", 
+                            data = user_base,
+                            user_col = user,
+                            pwd_col = password,
+                            log_out = reactive(logout_init()))
+  
+  logout_init <- callModule(shinyauthr::logout, 
+                            id = "logout", 
+                            active = reactive(credentials()$user_auth))
+  
+  
   
   vline <- function(x = 0, color = "red") {
     list(
@@ -610,18 +635,51 @@ server <- function(input, output, session) {
       layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
       layout(shapes = vertical_lines)
   })
-
-  observeEvent(input$instructions, 
+  
+  observeEvent(input$instructions,
                {
                  showModal(modalDialog(
                    title = "Instructions",
                    HTML(instructions),
-                   # a("test", href = "https://google.de", target = "_blank"), 
-                   footer = modalButton("I understand and consent")
+                   # a("test", href = "https://google.de", target = "_blank"),
+                   footer = req(modalButton("I understand and consent"))
                  ))
-               }, 
+               },
+               ignoreNULL = TRUE)
+  
+  # open Modal or close Modal once credentials have been submitted
+  observeEvent(credentials()$user_auth, 
+               if (credentials()$user_auth) {
+                 removeModal()
+               } else {
+                 showModal(modalDialog(
+                   loginUI(id = "login"),
+                   br(), 
+                   actionButton(inputId = "new_user", 
+                                label = "Create New User"),
+                   footer = NULL
+                 ))}, 
                ignoreNULL = FALSE)
   
+  # open dialog to create new user
+  observeEvent(input$new_user, 
+               {
+                 removeModal()
+                 showModal(modalDialog(title = "Create New User"))
+               })
+  
+  observeEvent(input$tooltip,
+               {
+                 if (input$tooltip) {
+                   addTooltip(session = session, 
+                              id = "tooltip", 
+                              title = "Toggle tooltips on and off", 
+                              placement = "bottom", trigger = "hover",
+                              options = NULL)
+                 } else {
+                   removeTooltip(session = session, id = "tooltip")
+                 }
+               })
   
   
   # update x/y reactive values in response to changes in shape anchors
