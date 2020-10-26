@@ -17,7 +17,7 @@ onset_to_death <- readRDS(here::here("rt-forecast", "data", "delays", "onset_to_
 deaths <- data.table::fread(file.path("data", "daily-incidence-deaths-Germany_Poland.csv"))
 deaths <- deaths[, .(region = as.character(location_name), date = as.Date(date), 
                    confirm = value)]
-deaths <- deaths[date >= (max(date) - lubridate::weeks(8))]
+deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(deaths, region, date)
 
 # Set up parallel ---------------------------------------------------------
@@ -40,5 +40,5 @@ regional_epinow(reported_cases = deaths,
                                                              "summary", "deaths",
                                                              target_date)),
                 logs = "rt-forecast/logs/deaths", future = TRUE,
-                max_execution_time = 60 * 30)
+                max_execution_time = 60 * 45)
 

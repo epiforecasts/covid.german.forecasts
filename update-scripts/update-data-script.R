@@ -2,15 +2,17 @@
 library(magrittr)
 source(here::here("functions", "load-data.R"))
 
+if (!dir.exists(here::here("data"))) {
+  dir.create("data", recursive = TRUE)
+}
+
 # maybe it would be cleaner to separate the saving step from the get data step
 get_data(load_from_server = TRUE)
 
 weekly_cases <- get_data(cases = TRUE)
 weekly_deaths <- get_data(cases = FALSE)
 
-if (!dir.exists(here::here("data"))) {
-  dir.create("data", recursive = TRUE)
-}
+
 
 data.table::fwrite(weekly_cases, 
                    here::here("data", "weekly-incident-cases.csv"))
