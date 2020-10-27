@@ -153,7 +153,7 @@ if (median_ensemble) {
                                      dplyr::mutate(type = "point", 
                                                    quantile = NA))
 } else {
-  # make median ensemble ---------------------------------------------------------
+  # make mean ensemble ---------------------------------------------------------
   mean_ensemble <- forecast_quantiles %>%
     dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
     dplyr::group_by(location, location_name, target, type, quantile, horizon, target_end_date) %>%
