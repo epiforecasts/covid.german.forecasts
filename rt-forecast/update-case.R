@@ -17,7 +17,7 @@ onset_to_report <- readRDS(here::here("rt-forecast", "data", "delays", "onset_to
 cases <- data.table::fread(file.path("data", "daily-incidence-cases-Germany_Poland.csv"))
 cases <- cases[, .(region = as.character(location_name), date = as.Date(date), 
                    confirm = value)]
-cases <- cases[date >= (max(date) - lubridate::weeks(8))]
+cases <- cases[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(cases, region, date)
 
 # Set up parallel ---------------------------------------------------------
@@ -40,5 +40,5 @@ regional_epinow(reported_cases = cases,
                                                              "cases", target_date),
                                     all_regions = TRUE),
                 logs = "rt-forecast/logs/cases", future = TRUE, verbose = TRUE,
-                max_execution_time = 60 * 30)
+                max_execution_time = 60 * 45)
 
