@@ -5,9 +5,9 @@ account: cmmid-lshtm
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2981427
-bundleId: 3752670
+bundleId: 3778207
 url: https://cmmid-lshtm.shinyapps.io/human-forecasts/
-when: 1602954557.84173
+when: 1603565253.99353
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: metadata-epioforecasts-EpiExpert.txt|README.md|processed-forecast-data/2020-10-12-processed-forecasts.csv|raw-forecast-data/2020-10-12-raw-forecasts.csv
