@@ -16,6 +16,7 @@ identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 # setup ------------------------------------------------------------------------
 # - 1 as this is usually updated on a Tuesday
 submission_date <- Sys.Date() - 1
+median_ensemble <- FALSE
 
 
 # load identifier from Google Sheet --------------------------------------------
@@ -79,9 +80,6 @@ all_ids <- ids %>%
 
 
 
-
-
-
 # load forecasts from Google Sheet ---------------------------------------------
 forecasts <- googlesheets4::read_sheet(ss = spread_sheet, 
                                        sheet = "predictions")
@@ -139,20 +137,38 @@ data.table::fwrite(forecast_quantiles,
                               paste0(submission_date, "-processed-forecasts.csv")))
 
 
-# make median ensemble ---------------------------------------------------------
-median_ensemble <- forecast_quantiles %>%
-  dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
-  dplyr::group_by(location, location_name, target, type, quantile, horizon, target_end_date) %>%
-  dplyr::summarise(value = median(value)) %>%
-  dplyr::ungroup() %>%
-  dplyr::select(target, target_end_date, location, type, quantile, value, location_name)
+if (median_ensemble) {
+  # make median ensemble ---------------------------------------------------------
+  median_ensemble <- forecast_quantiles %>%
+    dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
+    dplyr::group_by(location, location_name, target, type, quantile, horizon, target_end_date) %>%
+    dplyr::summarise(value = median(value)) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(target, target_end_date, location, type, quantile, value, location_name)
+  
+  # add median forecast
+  forecast_inc <- dplyr::bind_rows(median_ensemble, 
+                                   median_ensemble %>%
+                                     dplyr::filter(quantile == 0.5) %>%
+                                     dplyr::mutate(type = "point", 
+                                                   quantile = NA))
+} else {
+  # make median ensemble ---------------------------------------------------------
+  mean_ensemble <- forecast_quantiles %>%
+    dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
+    dplyr::group_by(location, location_name, target, type, quantile, horizon, target_end_date) %>%
+    dplyr::summarise(value = mean(value)) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(target, target_end_date, location, type, quantile, value, location_name)
+  
+  # add median forecast
+  forecast_inc <- dplyr::bind_rows(mean_ensemble, 
+                                   mean_ensemble %>%
+                                     dplyr::filter(quantile == 0.5) %>%
+                                     dplyr::mutate(type = "point", 
+                                                   quantile = NA))
+}
 
-# add median forecast
-forecast_inc <- dplyr::bind_rows(median_ensemble, 
-                                 median_ensemble %>%
-                                   dplyr::filter(quantile == 0.5) %>%
-                                   dplyr::mutate(type = "point", 
-                                                 quantile = NA))
 
 # add cumulative forecasts -----------------------------------------------------
 
