@@ -39,6 +39,6 @@ regional_epinow(reported_cases = deaths,
                 summary_args = list(summary_dir = here::here("rt-forecast", "data",
                                                              "summary", "deaths",
                                                              target_date)),
-                logs = "rt-forecast/logs/deaths", future = TRUE,
-                max_execution_time = 60 * 45)
+                logs = "rt-forecast/logs/deaths", max_execution_time = 60 * 60,
+                verbose = TRUE)
 
