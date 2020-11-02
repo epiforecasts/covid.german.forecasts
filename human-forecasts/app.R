@@ -495,7 +495,7 @@ server <- function(input, output, session) {
                     fillcolor = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))
         
     }
-    p
+    
     
     
   })

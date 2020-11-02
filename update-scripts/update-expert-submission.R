@@ -107,6 +107,10 @@ data.table::fwrite(raw_forecasts,
                    here::here("human-forecasts", "raw-forecast-data", 
                               paste0(submission_date, "-raw-forecasts.csv")))
 
+
+raw_forecasts <- data.table::fread(here::here("human-forecasts", "raw-forecast-data", 
+                                              paste0(submission_date, "-raw-forecasts.csv")))
+
 # filter forecasts -------------------------------------------------------------
 # use only the latest forecast from a given forecaster
 filtered_forecasts <- raw_forecasts %>%
