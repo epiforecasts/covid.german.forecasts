@@ -114,3 +114,5 @@ data_policy <- 'This app allows experts and non-experts to make forecasts about 
                     <br>
                     You can, at any point, request deletion of your personal data. To that end, please send an e-mail at nikos.bosse@lshtm.ac.uk. 
                         '
+
+

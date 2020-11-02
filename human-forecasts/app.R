@@ -2,8 +2,8 @@ library(plotly)
 library(purrr)
 library(shiny)
 library(shinyBS)
-library(openssl)
 library(shinyauthr)
+library(sodium)
 
 library(googledrive)
 library(googlesheets4)
@@ -20,12 +20,12 @@ drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 sheets_auth(token = drive_token())
 
 # for server
-# source(here::here("dialog-messages.R"))
+source(here::here("dialog-messages.R"))
 # for use on computer
-source(here::here("human-forecasts", "dialog-messages.R"))
+# source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
-spred_sheet_id <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
+identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 # load data
 deaths_inc <- data.table::fread(here::here("data", "weekly-incident-deaths.csv")) %>%
@@ -62,16 +62,6 @@ selection_names <- apply(selections, MARGIN = 1,
                          })
 
 
-user_base <- data.frame(
-  user = c("user1", "user2"),
-  password = c("pass1", "pass2"), 
-  permissions = c("admin", "standard"),
-  name = c("User One", "User Two"),
-  stringsAsFactors = FALSE,
-  row.names = NULL
-)
-
-
 
 
 ui <- fluidPage(
@@ -89,11 +79,11 @@ ui <- fluidPage(
   shinyjs::useShinyjs(),
   
   fluidRow(column(3, 
-                  optional_tipify(h2("Covid Human Forecast App"), 
+                  tipify(h2("Covid Human Forecast App"), 
                          title = "If you can't see the entire user interface, you may want to zoom out in your browser.")), 
            column(2, checkboxInput(inputId = "tooltip", label = "Show tooltips"))),
   fluidRow(column(3,
-                  optional_tipify(selectInput(inputId = "selection",
+                  tipify(selectInput(inputId = "selection",
                                      label = "Selection:",
                                      choices = selection_names, 
                                      selected = "Germany"), 
@@ -152,30 +142,8 @@ ui <- fluidPage(
            column(3, 
                   offset = 0,
                   style = 'padding: 20px; background-color: aliceblue',
-                  fluidRow(column(8, 
-                                  fluidRow(column(6, tipify(textInput("first_name", label = "First name"), 
-                                                            title = "If you prefer, you can also enter an imaginary name. But please be consistent so that we can attribute forecasts and forecaster.")), 
-                                           column(6, textInput("last_name", label = "Last name"))), 
-                                  fluidRow(column(12, tipify(textInput("leaderboardname", label = "Name for Performance Board"), 
-                                                             title = "The name with which you want to appear on the Performance Board")))),
-                           column(4, tipify(radioButtons(inputId = "appearboard", label = "Appear on Performance Board?", 
-                                                                choices = c("yes", "no", "anonymous"), selected = "anonymous", inline = FALSE), 
-                                                   title = "Do you want to appear on the Performance Board at all?"))),
-                  fluidRow(column(12, textInput("email", label = "Email"))),
-                  fluidRow(column(6, 
-                                  tipify(checkboxInput(inputId = "expert", 
-                                                       label = "Do you have domain expertise?"),
-                                         title = "Do you work in infectious disease modelling, have professional experience in any related field, or have spent a lot of time thinking about forecasting or Covid-19?", 
-                                         placement = "left")), 
-                           column(6, 
-                                  tipify(textInput(inputId = "affiliation", label = "Affiliation"), 
-                                         title = "If you have domain expertise: What institution, if any, are you affiliated with?"))),
-                  fluidRow(column(3, tipify(actionButton("submit", label = HTML('<b>Submit</b>')), 
-                                            title = "You can submit multiple times, but only the last submission will be counted.",
-                                            placement = "bottom")), 
-                           column(12, "(Please click 'update' before submitting)")), 
+                  htmlOutput("name_field"),
                   
-                  br(),
                   br(),
                   fluidRow(column(12, h3("Forecasts"))),
                   fluidRow(column(4, 
@@ -185,6 +153,7 @@ ui <- fluidPage(
                                                       step = 10), 
                                          title = "Change the median forecast. This corresponds to the location parameter of a log-normal distribution. Click update for changes to take effect.")),
                            column(4, 
+                                  
                                   tipify(numericInput(inputId = "shape_log_normal_1", 
                                                       value = 0,
                                                       label = "Width 1", 
@@ -244,15 +213,20 @@ ui <- fluidPage(
                            column(4, 
                                   tipify(actionButton(inputId = "update_1", HTML('<b>Update</b>'), 
                                                       style = 'margin-top: 25px'), 
-                                         title = "Press for your changes to take effect"))
-                  ), 
-                  
+                                         title = "Press for your changes to take effect"))),
+                  br(),
+                  fluidRow(column(3, tipify(actionButton("submit", label = HTML('<b>Submit</b>')), 
+                                            title = "You can submit multiple times, but only the last submission will be counted.",
+                                            placement = "bottom")), 
+                           column(12, "(Please click 'update' before submitting)")), 
+                  br(), 
+                  br(), 
+                  br(), 
+                  fluidRow(column(12, textInput(inputId = "comments", 
+                                     label = "Do you have any additional comments, suggestions, feedback?"))), 
+                  fluidRow(column(12, HTML('Preferably, you can submit an issue on <a href="https://github.com/epiforecasts/covid-german-forecasts">github</a>')))
                   )
-           ),
-  fluidRow(column(9), 
-           column(3, 
-                  textInput(inputId = "comments", 
-                            label = "Do you have any additional comments, suggestions, feedback?")))
+           )
 )
 
 
@@ -264,16 +238,22 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
+  
+  
+  user_base <- googlesheets4::read_sheet(ss = identification_sheet, 
+                                         sheet = "ids")
+  
   credentials <- callModule(shinyauthr::login, 
                             id = "login", 
                             data = user_base,
-                            user_col = user,
-                            pwd_col = password,
-                            log_out = reactive(logout_init()))
+                            user_col = username,
+                            pwd_col = Password,
+                            log_out = reactive(logout_init()), 
+                            sodium_hashed = TRUE)
   
   logout_init <- callModule(shinyauthr::logout, 
                             id = "logout", 
-                            active = reactive(credentials()$user_auth))
+                            active = reactive(TRUE))
   
   
   
@@ -378,12 +358,12 @@ server <- function(input, output, session) {
       sd()
   })
   
-  forecaster_name <- reactive({
-    
-    paste(stringr::str_to_lower(input$first_name), 
-          stringr::str_to_lower(input$last_name), 
-          sep = "_")
-  })
+  # forecaster_name <- reactive({
+  #   
+  #   paste(stringr::str_to_lower(input$first_name), 
+  #         stringr::str_to_lower(input$last_name), 
+  #         sep = "_")
+  # })
   
   quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 
@@ -479,7 +459,16 @@ server <- function(input, output, session) {
       layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
       layout(shapes = c(circles_pred, circles_upper_90, circles_lower_90)) %>%
       layout(legend = list(orientation = 'h')) %>%
-      config(edits = list(shapePosition = TRUE))
+      config(edits = list(shapePosition = TRUE)) %>%
+      layout(updatemenus = list(list(
+               active = 0,
+               buttons= list(
+                 list(label = 'linear',
+                      method = 'update',
+                      args = list(list(visible = c(TRUE, TRUE, TRUE, TRUE)), list(yaxis = list(type = 'linear')))),
+                 list(label = 'log',
+                      method = 'update', 
+                      args = list(list(visible = c(TRUE, TRUE, TRUE, TRUE)), list(yaxis = list(type = 'log'))))))))
     
     for (i in prediction_intervals()) {
       
@@ -509,6 +498,15 @@ server <- function(input, output, session) {
     p
     
     
+  })
+  
+  output$name_field <- renderUI({
+    str1 <- paste0("<b>Name</b>: ", credentials()$info$name)
+    str2 <- paste0("<b>Email</b>: ", credentials()$info$email)
+    str3 <- paste0("<b>Expert</b>: ", credentials()$info$expert)
+    str4 <- paste0("<b>Appear on Performance Board</b>: ", credentials()$info$appearboard)
+    str5 <- paste0("<b>Affiliation</b>: ", credentials()$info$affiliation, ", ", credentials()$info$website)
+    HTML(paste(str1, str2, str3, str4, str5, sep = '<br/>'))
   })
   
   
@@ -665,7 +663,45 @@ server <- function(input, output, session) {
   observeEvent(input$new_user, 
                {
                  removeModal()
-                 showModal(modalDialog(title = "Create New User"))
+                 showModal(modalDialog(
+                   size = "l",
+                   title = "Create New User", 
+                   fluidRow(column(12, h3("Your Name"))),
+                   fluidRow(column(12, tipify(textInput("name", label = NULL), 
+                                              title = "If you really do not wish to be identified, you can also enter an imaginary name"))),
+                   fluidRow(column(12, "Please enter your name. (If you really do not wish to be identified, you can also enter an imaginary name or leave it blank.)")),
+                   # br(),
+                   fluidRow(column(12, h3("User Name and Performance Board"))),
+                   fluidRow(column(6, textInput("username", label = "Your username")), 
+                            column(6, tipify(radioButtons(inputId = "appearboard", label = "Appear on Performance Board?", 
+                                                          choices = c("yes", "no", "anonymous"), selected = "anonymous", inline = TRUE), 
+                                             title = "Do you want to appear on the Performance Board at all?"))), 
+                   fluidRow(column(12, "Please provide a username needed to log in. If you select the appropriate option, this username will also appear on our performance board. If you select 'anonymous', an anonymous alias will appear instead")),
+                   # br(), 
+                   fluidRow(column(12, h3("Password"))),
+                   fluidRow(column(6, passwordInput("password", "Choose a password")), 
+                            column(6, passwordInput("password2", "Repeat password"))),
+                   # br(),
+                   fluidRow(column(12, h3("Email"))),
+                   fluidRow(column(12, "Please submit your email, if you like. If you provide your email, we will send you weekly reminders to conduct the survey and may contact you in case of questions.")), 
+                   fluidRow(column(12, textInput("email", label = "Email"))),
+                   fluidRow(column(12, h3("Domain Expertise"))),
+                   fluidRow(column(4, 
+                                   tipify(checkboxInput(inputId = "expert", 
+                                                        label = "Do you have domain expertise?"),
+                                          title = "Do you work in infectious disease modelling, have professional experience in any related field, or have spent a lot of time thinking about forecasting or Covid-19?", 
+                                          placement = "left")), 
+                            column(4, textInput(inputId = "affiliation", label = "Affiliation")),
+                            column(4, textInput(inputId = "affiliationsite", "Institution website"))),
+                   fluidRow(column(12, "If you work in infectious disease modelling or have professional experience in any related field, please tick the appropriate box and state the website of the institution you are or were associated with")),
+                   br(),
+                   fluidRow(column(3, actionButton(inputId = "createnew", 
+                                                    label = "Create new user")), 
+                            column(3, actionButton(inputId = "backtologin", 
+                                                   label = "Back to login"))),
+                   footer = NULL
+                 ))
+                 
                })
   
   observeEvent(input$tooltip,
@@ -680,6 +716,41 @@ server <- function(input, output, session) {
                    removeTooltip(session = session, id = "tooltip")
                  }
                })
+  
+  observeEvent(input$createnew,
+               {
+                 if ((input$username != "") && (input$password != "")) {
+                   if (input$password != input$password2) {
+                     showNotification("Passwords don't match", type = "error")
+                   } else {
+                     showNotification("New user created", type = "message")
+                     removeModal()
+                     identification <- data.frame(forecaster = input$name, 
+                                                  username = input$username,
+                                                  password = sodium::password_store(input$password),
+                                                  email = input$email,
+                                                  expert = input$expert,
+                                                  appearboard = input$appearboard,
+                                                  affiliation = stringr::str_to_lower(input$affiliation),
+                                                  website = stringr::str_to_lower(input$affiliationsite),
+                                                  forecaster_id = round(runif(1) * 1000000))
+                     
+                     googlesheets4::sheet_append(data = identification, 
+                                                 ss = identification_sheet, 
+                                                 sheet = "ids")
+                   }
+                 } else {
+                   showNotification("Username or password missing", type = "error")
+                 }
+               })
+  
+  
+  observeEvent(input$backtologin,
+               {
+                 session$reload()
+               })
+  
+
   
   
   # update x/y reactive values in response to changes in shape anchors
@@ -850,13 +921,11 @@ server <- function(input, output, session) {
                    mismatch <- TRUE
                  }
                  
-                 if(forecaster_name() == "_") {
-                   showNotification("Please enter a name", type = "error")
-                 } else if (mismatch) {
+                 if (mismatch) {
                    showNotification("Your forecasts don't match your inputs yet. Please press 'update' for all changes to take effect and submit again.", type = "error")
                  } else {
-                 
-                   submissions <- data.frame(forecaster = as.character(sha256(forecaster_name())), 
+                   
+                   submissions <- data.frame(forecaster_id = credentials()$info$forecaster_id, 
                                              location = unique(df()$location),
                                              location_name = location_input(),
                                              inc = inc_input(),
@@ -864,35 +933,31 @@ server <- function(input, output, session) {
                                              forecast_date = Sys.Date(),
                                              forecast_time = Sys.time(),
                                              forecast_week = lubridate::epiweek(Sys.Date()),
-                                             expert = input$expert,
-                                             leader_board = input$appearboard,
-                                             name_board = input$leaderboardname,
-                                             email = input$email,
+                                             expert = credentials()$info$expert,
+                                             leader_board = credentials()$info$appearboard,
+                                             name_board = "NA",
                                              median = rv$median, 
                                              shape_log_normal = rv$sigma_log_normal,
                                              horizon = 1:4,
                                              target_end_date = x_pred(), 
                                              zero_baseline = zero_baseline,
                                              comments = input$comments)
-                   
-                   identification <- data.frame(forecaster = forecaster_name(), 
-                                                forecaster_hash = as.character(sha256(forecaster_name())), 
-                                                email = input$email,
-                                                expert = input$expert,
-                                                affiliation = input$affiliation,
-                                                potential_problem = NA, 
-                                                identifier = NA,
-                                                forecaster_n = NA,
-                                                identifier_id = NA,
-                                                forecaster_id = NA)
+                   if(credentials()$info$appearboard == "anonymous") {
+                     submissions <- dplyr::mutate(submissions, 
+                                                  name_board = "anonymous")
+                   } else if (credentials()$info$appearboard == "yes") {
+                     submissions <- dplyr::mutate(submissions, 
+                                                 name_board = credentials()$info$username)
+                   } else {
+                     submissions <- dplyr::mutate(submissions, 
+                                                  name_board = "none")
+                   }
                    
                    googlesheets4::sheet_append(data = submissions,
                                                ss = spread_sheet,
                                                sheet = "predictions")
                    
-                   googlesheets4::sheet_append(data = identification, 
-                                               ss = spred_sheet_id, 
-                                               sheet = "ids")
+                   
                    
                    rv$selection_number <- which(selection_names == input$selection) + 1
                    newSelection <- selection_names[rv$selection_number]
