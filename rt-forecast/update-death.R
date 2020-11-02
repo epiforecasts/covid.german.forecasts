@@ -20,14 +20,12 @@ deaths <- deaths[, .(region = as.character(location_name), date = as.Date(date),
 deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(deaths, region, date)
 
-# Set up parallel ---------------------------------------------------------
-cores <- setup_future(deaths)
-
 # Run Rt estimation -------------------------------------------------------
 regional_epinow(reported_cases = deaths,
                 future_rt = "estimate", 
                 generation_time = generation_time, 
                 delays = list(incubation_period, onset_to_death),
+                rt_prior = list(mean = 1.1, sd = 0.2),
                 stan_args = list(warmup = 1000, 
                                  cores = cores,
                                  control = list(adapt_delta = 0.95,
@@ -39,6 +37,6 @@ regional_epinow(reported_cases = deaths,
                 summary_args = list(summary_dir = here::here("rt-forecast", "data",
                                                              "summary", "deaths",
                                                              target_date)),
-                logs = "rt-forecast/logs/deaths", max_execution_time = 60 * 60,
+                logs = "rt-forecast/logs/deaths", max_execution_time = Inf,
                 verbose = TRUE)
 
