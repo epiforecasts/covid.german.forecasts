@@ -502,11 +502,12 @@ server <- function(input, output, session) {
   
   output$name_field <- renderUI({
     str1 <- paste0("<b>Name</b>: ", credentials()$info$name)
+    str11 <- paste0("<b>ID</b>: ", credentials()$info$forecaster_id)
     str2 <- paste0("<b>Email</b>: ", credentials()$info$email)
     str3 <- paste0("<b>Expert</b>: ", credentials()$info$expert)
     str4 <- paste0("<b>Appear on Performance Board</b>: ", credentials()$info$appearboard)
     str5 <- paste0("<b>Affiliation</b>: ", credentials()$info$affiliation, ", ", credentials()$info$website)
-    HTML(paste(str1, str2, str3, str4, str5, sep = '<br/>'))
+    HTML(paste(str1, str11, str2, str3, str4, str5, sep = '<br/>'))
   })
   
   
