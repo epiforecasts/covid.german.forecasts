@@ -23,60 +23,60 @@ median_ensemble <- FALSE
 ids <- googlesheets4::read_sheet(ss = identification_sheet, 
                                  sheet = "ids")
 
-# add identifiers
-ids <- ids %>% 
-  dplyr::rowwise() %>%
-  dplyr::mutate(identifier = paste(forecaster, email, sep = "_")) %>%
-  dplyr::ungroup() %>%
-  unique()
-
-# find potential problems
-# see whether forecaster is unique
-ids <- ids %>%
-  dplyr::group_by(forecaster) %>%
-  dplyr::mutate(forecaster_n = dplyr::n()) %>%
-  dplyr::ungroup()
-
-# see whether identifier is unique
-ids <- ids %>%
-  dplyr::group_by(identifier) %>%
-  dplyr::mutate(identifier_n = dplyr::n()) %>%
-  dplyr::ungroup()
-
-# add problem flag
-ids <- ids %>%
-  dplyr::mutate(potential_problem = ifelse(identifier_n == forecaster_n, FALSE, TRUE))
-
-
-# get existing ids
-existing_ids <- ids %>%
-  dplyr::filter(!is.na(forecaster_id)) %>%
-  dplyr::select(forecaster, forecaster_id) %>%
-  unique()
-
-# merge with data
-ids <- dplyr::full_join(ids %>%
-                          dplyr::select(-forecaster_id), 
-                        existing_ids)
-
-# give new ids to the forecasters that do not have an ID yet
-ids <- ids %>%
-  dplyr::rowwise() %>%
-  dplyr::mutate(forecaster_id = ifelse(is.na(forecaster_id), 
-                                       round(runif(1) * 1000000), 
-                                       forecaster_id)) %>%
-  dplyr::ungroup() %>%
-  unique()
-
-# write updated sheet
-googlesheets4::write_sheet(data = ids, 
-                           ss = identification_sheet, 
-                           sheet = "ids")
-
-all_ids <- ids %>%
-  dplyr::select(forecaster = forecaster_hash, forecaster_id) %>%
-  unique()
-
+# # add identifiers
+# ids <- ids %>% 
+#   dplyr::rowwise() %>%
+#   dplyr::mutate(identifier = paste(forecaster, email, sep = "_")) %>%
+#   dplyr::ungroup() %>%
+#   unique()
+# 
+# # find potential problems
+# # see whether forecaster is unique
+# ids <- ids %>%
+#   dplyr::group_by(forecaster) %>%
+#   dplyr::mutate(forecaster_n = dplyr::n()) %>%
+#   dplyr::ungroup()
+# 
+# # see whether identifier is unique
+# ids <- ids %>%
+#   dplyr::group_by(identifier) %>%
+#   dplyr::mutate(identifier_n = dplyr::n()) %>%
+#   dplyr::ungroup()
+# 
+# # add problem flag
+# ids <- ids %>%
+#   dplyr::mutate(potential_problem = ifelse(identifier_n == forecaster_n, FALSE, TRUE))
+# 
+# 
+# # get existing ids
+# existing_ids <- ids %>%
+#   dplyr::filter(!is.na(forecaster_id)) %>%
+#   dplyr::select(forecaster, forecaster_id) %>%
+#   unique()
+# 
+# # merge with data
+# ids <- dplyr::full_join(ids %>%
+#                           dplyr::select(-forecaster_id), 
+#                         existing_ids)
+# 
+# # give new ids to the forecasters that do not have an ID yet
+# ids <- ids %>%
+#   dplyr::rowwise() %>%
+#   dplyr::mutate(forecaster_id = ifelse(is.na(forecaster_id), 
+#                                        round(runif(1) * 1000000), 
+#                                        forecaster_id)) %>%
+#   dplyr::ungroup() %>%
+#   unique()
+# 
+# # write updated sheet
+# googlesheets4::write_sheet(data = ids, 
+#                            ss = identification_sheet, 
+#                            sheet = "ids")
+# 
+# all_ids <- ids %>%
+#   dplyr::select(forecaster = forecaster_hash, forecaster_id) %>%
+#   unique()
+# 
 
 
 
@@ -84,13 +84,14 @@ all_ids <- ids %>%
 forecasts <- googlesheets4::read_sheet(ss = spread_sheet, 
                                        sheet = "predictions")
 
-# merge with ids
-forecasts <- dplyr::full_join(forecasts, all_ids)
+# # merge with ids
+# forecasts <- dplyr::full_join(forecasts, all_ids)
 
 # extract comments and store separately
 comments <- forecasts %>%
   dplyr::select(forecaster_id, comments) %>%
-  dplyr::filter(!is.na(comments))
+  dplyr::filter(!is.na(comments)) %>%
+  unique()
 
 # append comments to google sheets
 comment_sheet <- "1isJQbE1RLvXYDpaaDADPHObgh8DMsTIHOonu8S1W8zc"
@@ -99,7 +100,7 @@ googlesheets4::sheet_append(ss = comment_sheet,
 
 # clean and write raw forecasts
 raw_forecasts <- forecasts %>%
-  dplyr::select(-forecaster, -comments, -name_board, -leaderboard, -email)
+  dplyr::select(-comments)
 
 # maybe change forecast time to forecast duration. Also remove forecast date?
 
@@ -139,6 +140,10 @@ forecast_quantiles <- filtered_forecasts %>%
 data.table::fwrite(forecast_quantiles,
                    here::here("human-forecasts", "processed-forecast-data", 
                               paste0(submission_date, "-processed-forecasts.csv")))
+
+# copy data into human forecast app
+file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
+          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
 
 
 if (median_ensemble) {
@@ -220,6 +225,8 @@ forecast_submission <- dplyr::bind_rows(forecast_inc, forecast_cum) %>%
 if (!dir.exists(here::here("submissions", "human-forecasts", submission_date))) {
   dir.create(here::here("submissions", "human-forecasts", submission_date))
 }
+
+
 
 forecast_submission %>%
   dplyr::filter(location_name %in% "Germany", 

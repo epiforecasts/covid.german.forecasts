@@ -37,3 +37,6 @@ if (!dir.exists(here::here("human-forecasts", "data"))) {
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts"), recursive = TRUE)
 
+file.copy(from = here::here("data"), 
+          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
+
