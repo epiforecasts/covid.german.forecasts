@@ -7,11 +7,11 @@ library(here, quietly = TRUE)
 
 # Save incubation period and generation time ------------------------------
 generation_time <- get_generation_time(disease = "SARS-CoV-2", source = "ganyani",
-                                       max_value = 30)
+                                       max_value = 15)
 incubation_period <- get_incubation_period(disease = "SARS-CoV-2", source = "lauer",
-                                           max_value = 30)
-saveRDS(generation_time , here::here("rt-forecast", "delays", "generation_time.rds"))
-saveRDS(incubation_period, here::here("rt-forecast", "delays", "incubation_period.rds"))
+                                           max_value = 15)
+saveRDS(generation_time , here::here("rt-forecast", "data", "delays", "generation_time.rds"))
+saveRDS(incubation_period, here::here("rt-forecast", "data", "delays", "incubation_period.rds"))
 
 # Set up parallel ---------------------------------------------------------
 future::plan("multiprocess")
@@ -26,6 +26,6 @@ samples <- round(length(report_delay$delay_onset_report) / 100)
 onset_to_report <- EpiNow2::bootstrapped_dist_fit(report_delay$delay_onset_report,
                                                   bootstraps = 10,
                                                   bootstrap_samples = samples,
-                                                  max_value = 30)
-saveRDS(onset_to_report, here::here("rt-forecast", "delays", "onset_to_report.rds"))
+                                                  max_value = 15)
+saveRDS(onset_to_report, here::here("rt-forecast", "data", "delays", "onset_to_report.rds"))
 
