@@ -20,9 +20,9 @@ drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 sheets_auth(token = drive_token())
 
 # for server
-source(here::here("dialog-messages.R"))
+# source(here::here("dialog-messages.R"))
 # for use on computer
-# source(here::here("human-forecasts", "dialog-messages.R"))
+source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
@@ -82,19 +82,22 @@ ui <- fluidPage(
                   tipify(h2("Covid Human Forecast App"), 
                          title = "If you can't see the entire user interface, you may want to zoom out in your browser.")), 
            column(2, checkboxInput(inputId = "tooltip", label = "Show tooltips"))),
-  fluidRow(column(3,
+  fluidRow(column(2,
                   tipify(selectInput(inputId = "selection",
                                      label = "Selection:",
                                      choices = selection_names, 
                                      selected = "Germany"), 
                          title = "Select location and data type", 
                          placement = "bottom")),
-           column(3, 
+           column(2, 
                   tipify(numericInput(inputId = "num_past_obs", 
                                       value = 12,
                                       label = "Number of weeks to show"), 
                          title = "Change the number of past weeks to show", 
                          placement = "bottom")), 
+           column(2, radioButtons("plotscale", label = "Plot Scale", selected = "linear",
+                                  choices = c("linear", "logarithmic"), 
+                                  inline = TRUE)),
            column(4, 
                   tipify(checkboxGroupInput("ranges", "Prediction intervals to show", 
                                             choices = c("20%", "50%", "90%", "95%"), 
@@ -459,16 +462,12 @@ server <- function(input, output, session) {
       layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
       layout(shapes = c(circles_pred, circles_upper_90, circles_lower_90)) %>%
       layout(legend = list(orientation = 'h')) %>%
-      config(edits = list(shapePosition = TRUE)) %>%
-      layout(updatemenus = list(list(
-               active = 0,
-               buttons= list(
-                 list(label = 'linear',
-                      method = 'update',
-                      args = list(list(visible = c(TRUE, TRUE, TRUE, TRUE)), list(yaxis = list(type = 'linear')))),
-                 list(label = 'log',
-                      method = 'update', 
-                      args = list(list(visible = c(TRUE, TRUE, TRUE, TRUE)), list(yaxis = list(type = 'log'))))))))
+      config(edits = list(shapePosition = TRUE)) 
+    
+    if (input$plotscale == "logarithmic") {
+      p <- layout(p, yaxis = list(type = "log"))
+    }
+    
     
     for (i in prediction_intervals()) {
       
@@ -495,7 +494,7 @@ server <- function(input, output, session) {
                     fillcolor = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))
         
     }
-    
+    p
     
     
   })
