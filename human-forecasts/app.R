@@ -115,32 +115,11 @@ ui <- fluidPage(
                   actionButton("instructions", label = HTML('<b>Instructions</b>'), icon = NULL))),
   fluidRow(column(9, 
                   tipify(tabsetPanel(type = "tabs",
-                                     tabPanel("Make a Forecast", plotlyOutput("p")),
+                                     tabPanel("Make a Forecast", plotlyOutput("p", height = "800px")),
                                      tabPanel("For Reference: Daily Cases",
-                                              plotlyOutput("plot_cases"))), 
+                                              plotlyOutput("plot_cases", height = "800px"))), 
                          title = "Visualisation of the Forecast. You can drag the points in the plot to alter the  forecasts. Toggle the tab to see more data visualisations."), 
-                  br(),
-                  fluidRow(column(3, 
-                                  h4("One week ahead forecast"),
-                                  tipify(fluidRow(plotlyOutput("forecast_distribution_1")),
-                                         placement = "top",
-                                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value")),
-                           column(3, 
-                                  h4("Two week ahead forecast"),
-                                  tipify(fluidRow(plotlyOutput("forecast_distribution_2")),
-                                         placement = "left",
-                                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value")), 
-                           column(3, 
-                                  h4("Three week ahead forecast"),
-                                  tipify(fluidRow(plotlyOutput("forecast_distribution_3")),
-                                         placement = "top",
-                                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value")), 
-                           column(3, 
-                                  h4("Four week ahead forecast"),
-                                  tipify(fluidRow(plotlyOutput("forecast_distribution_4")),
-                                         placement = "top",
-                                         title = "Visualisation of your forecast distribution (log-normal). The red line shows the median prediction, blue lines show the boundaries of the selected prediction intervals. High values on the y-axis indicate a high probability given to a specific value"))
-                           )
+                  br()
                   ),
            column(3, 
                   offset = 0,
@@ -290,12 +269,13 @@ server <- function(input, output, session) {
     
     for (i in steps) {
       if (update_forecasts) {
-        rv[[paste0("forecasts_week_", i)]] <<- qlnorm(quantile_grid, 
-                                                      meanlog = log(rv$median[i]), 
-                                                      sdlog = as.numeric(rv$sigma_log_normal[i]))
-        rv[[paste0("forecast_values_y_", i)]] <- dlnorm(rv[[paste0("forecasts_week_", i)]],
-                                                        meanlog = log(rv$median[i]), 
-                                                        sdlog = rv$sigma_log_normal[i])
+        # rv[[paste0("forecasts_week_", i)]] <<- qlnorm(quantile_grid, 
+        #                                               meanlog = log(rv$median[i]), 
+        #                                               sdlog = as.numeric(rv$sigma_log_normal[i]))
+        rv[[paste0("forecasts_week_", i)]] <<- exp(qnorm(quantile_grid, 
+                                                         mean = log(rv$median[i]),
+                                                         sd = as.numeric(rv$sigma_log_normal[i])))
+        
       }
       if (update_bounds) {
         rv$lower_bound[i] <<- qlnorm(as.numeric(rv$lower_quantile_level), 
@@ -361,13 +341,7 @@ server <- function(input, output, session) {
       sd()
   })
   
-  # forecaster_name <- reactive({
-  #   
-  #   paste(stringr::str_to_lower(input$first_name), 
-  #         stringr::str_to_lower(input$last_name), 
-  #         sep = "_")
-  # })
-  
+
   quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 
   tmp_cases <- reactive({
@@ -385,12 +359,6 @@ server <- function(input, output, session) {
     forecasts_week_2 = NULL,
     forecasts_week_2 = NULL,
     forecasts_week_4 = NULL,
-    
-    #forecasts for individual week plots
-    forecast_values_y_1 = NULL,
-    forecast_values_y_2 = NULL,
-    forecast_values_y_3 = NULL,
-    forecast_values_y_4 = NULL,
     
     lower_quantile_level = NULL,
     upper_quantile_level = NULL,
@@ -522,125 +490,14 @@ server <- function(input, output, session) {
   })
   
 
-  output$forecast_distribution_1 <- renderPlotly({
-    
-    vertical_lines <- list(vline(rv$median[1], color = 'rgba(26,150,65,1'))
-    
-    for (i in prediction_intervals()) {
-      
-      lower_quantile <- round((100 - i) / (2 * 100), 3)
-      upper_quantile <- 1 - lower_quantile
-      
-      lower_bound <- c(rv$forecasts_week_1[round(quantile_grid, 3) == lower_quantile])
-      upper_bound <- c(rv$forecasts_week_1[round(quantile_grid, 3) == upper_quantile])
-      vertical_lines <- c(vertical_lines, 
-                          list(vline(lower_bound, color = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'")),
-                               vline(upper_bound, paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))))
-    }
-    
-    
-    plot <- plot_ly(height = 250) %>%
-      add_trace(x = rv$forecasts_week_1,
-                y = rv$forecast_values_y_1, type = "scatter",
-                color = I("dark green"),
-                name = 'observed data',mode = 'lines+markers') %>%
-      layout(xaxis = list(hoverformat = '.0f')) %>%
-      layout(yaxis = list(hoverformat = '.0f', rangemode = "tozero")) %>%
-      layout(title = list(text = paste("Forecast Distribution"), 
-                          x = 0.1)) %>%
-      layout(shapes = vertical_lines)
-    
-    
-  })
-  output$forecast_distribution_2 <- renderPlotly({
-    
-    vertical_lines <- list(vline(rv$median[2], color = 'rgba(26,150,65,1'))
-    
-    for (i in prediction_intervals()) {
-      
-      lower_quantile <- round((100 - i) / (2 * 100), 3)
-      upper_quantile <- 1 - lower_quantile
-      
-      lower_bound <- c(rv$forecasts_week_2[round(quantile_grid, 3) == lower_quantile])
-      upper_bound <- c(rv$forecasts_week_2[round(quantile_grid, 3) == upper_quantile])
-      vertical_lines <- c(vertical_lines, 
-                          list(vline(lower_bound, color = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'")),
-                               vline(upper_bound, paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))))
-    }
-    
-    plot_ly(height = 250) %>%
-      add_trace(x = rv$forecasts_week_2,
-                y = rv$forecast_values_y_2, type = "scatter",
-                color = I("dark green"),
-                name = 'observed data',mode = 'lines+markers') %>%
-      layout(title = list(text = paste("Forecast Distribution"), 
-                          x = 0.1)) %>%
-      layout(xaxis = list(hoverformat = '0f')) %>%
-      layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
-      layout(shapes = vertical_lines)
-  })
-  output$forecast_distribution_3 <- renderPlotly({
-    
-    vertical_lines <- list(vline(rv$median[3], color = 'rgba(26,150,65,1'))
-    
-    for (i in prediction_intervals()) {
-      
-      lower_quantile <- round((100 - i) / (2 * 100), 3)
-      upper_quantile <- 1 - lower_quantile
-      
-      lower_bound <- c(rv$forecasts_week_3[round(quantile_grid, 3) == lower_quantile])
-      upper_bound <- c(rv$forecasts_week_3[round(quantile_grid, 3) == upper_quantile])
-      vertical_lines <- c(vertical_lines, 
-                          list(vline(lower_bound, color = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'")),
-                               vline(upper_bound, paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))))
-    }
-    
-    plot_ly(height = 250) %>%
-      add_trace(x = rv$forecasts_week_3,
-                y = rv$forecast_values_y_3, type = "scatter",
-                color = I("dark green"),
-                name = 'observed data',mode = 'lines+markers') %>%
-      layout(title = list(text = paste("Forecast Distribution"), 
-                          x = 0.1)) %>%
-      layout(xaxis = list(hoverformat = '0f')) %>%
-      layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
-      layout(shapes = vertical_lines)
-  })
-  output$forecast_distribution_4 <- renderPlotly({
-    
-    vertical_lines <- list(vline(rv$median[4], color = 'rgba(26,150,65,1'))
-    
-    for (i in prediction_intervals()) {
-      
-      lower_quantile <- round((100 - i) / (2 * 100), 3)
-      upper_quantile <- 1 - lower_quantile
-      
-      lower_bound <- c(rv$forecasts_week_4[round(quantile_grid, 3) == lower_quantile])
-      upper_bound <- c(rv$forecasts_week_4[round(quantile_grid, 3) == upper_quantile])
-      vertical_lines <- c(vertical_lines, 
-                          list(vline(lower_bound, color = paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'")),
-                               vline(upper_bound, paste0("'rgba(26,150,65,", (1 - i/100 + 0.1), ")'"))))
-    }
-    
-    plot_ly(height = 250) %>%
-      add_trace(x = rv$forecasts_week_4,
-                y = rv$forecast_values_y_4, type = "scatter",
-                color = I("dark green"),
-                name = 'observed data',mode = 'lines+markers') %>%
-      layout(title = list(text = paste("Forecast Distribution"), 
-                          x = 0.1)) %>%
-      layout(xaxis = list(hoverformat = '0f')) %>%
-      layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
-      layout(shapes = vertical_lines)
-  })
-  
+
   observeEvent(input$instructions,
                {
                  showModal(modalDialog(
                    title = "Instructions",
                    HTML(instructions),
                    # a("test", href = "https://google.de", target = "_blank"),
-                   footer = req(modalButton("I understand and consent"))
+                   footer = modalButton("OK")
                  ))
                },
                ignoreNULL = TRUE)
@@ -659,8 +516,26 @@ server <- function(input, output, session) {
                  ))}, 
                ignoreNULL = FALSE)
   
-  # open dialog to create new user
   observeEvent(input$new_user, 
+               {
+                 removeModal()
+                 showModal(modalDialog(
+                   size = "l",
+                   title = "Terms and Instructions", 
+                   HTML(instructions),
+                   br(),
+                   br(),
+                   
+                   fluidRow(column(3, actionButton(inputId = "consent", 
+                                                   label = "I understand and consent")), 
+                            column(3, actionButton(inputId = "backtologin", 
+                                                   label = "Back to login"))),
+                   footer = NULL,
+                 ))
+               })
+  
+  # open dialog to create new user
+  observeEvent(input$consent, 
                {
                  removeModal()
                  showModal(modalDialog(
@@ -695,8 +570,8 @@ server <- function(input, output, session) {
                             column(4, textInput(inputId = "affiliationsite", "Institution website"))),
                    fluidRow(column(12, "If you work in infectious disease modelling or have professional experience in any related field, please tick the appropriate box and state the website of the institution you are or were associated with")),
                    br(),
-                   fluidRow(column(3, actionButton(inputId = "createnew", 
-                                                    label = "Create new user")), 
+                   fluidRow(column(3, actionButton(inputId = "createnew2", 
+                                                    label = HTML("<b>Create New User</b>"))), 
                             column(3, actionButton(inputId = "backtologin", 
                                                    label = "Back to login"))),
                    footer = NULL
@@ -717,7 +592,7 @@ server <- function(input, output, session) {
                  }
                })
   
-  observeEvent(input$createnew,
+  observeEvent(input$createnew2,
                {
                  if ((input$username != "") && (input$password != "")) {
                    if (input$password != input$password2) {
@@ -747,7 +622,16 @@ server <- function(input, output, session) {
   
   observeEvent(input$backtologin,
                {
-                 session$reload()
+                 print("triggered")
+                 # session$reload()
+                 removeModal()
+                 showModal(modalDialog(
+                   loginUI(id = "login"),
+                   br(), 
+                   actionButton(inputId = "new_user", 
+                                label = "Create new user"),
+                   footer = NULL
+                 ))
                })
   
 
