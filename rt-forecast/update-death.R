@@ -22,13 +22,12 @@ data.table::setorder(deaths, region, date)
 
 # Run Rt estimation -------------------------------------------------------
 regional_epinow(reported_cases = deaths,
-                future_rt = "estimate", 
                 generation_time = generation_time, 
-                delays = list(incubation_period, onset_to_death),
-                rt = list(prior = list(mean = 1.1, sd = 0.2), 
-                          future = "estimate"),
-                stan_args = list(warmup = 500, cores = 4), 
-                samples = 2000, horizon = 30,
+                delays = delay_opts(incubation_period, onset_to_death),
+                rt = rt_opts(prior = list(mean = 1.1, sd = 0.2), 
+                             future = "latest"),
+                stan = stan_opts(samples = 2000, warmup = 500, cores = 4), 
+                horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
                 target_folder = here::here("rt-forecast", "data", "samples", "deaths"), 
