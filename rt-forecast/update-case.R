@@ -22,20 +22,17 @@ data.table::setorder(cases, region, date)
 
 # Run Rt estimation -------------------------------------------------------
 regional_epinow(reported_cases = cases,
-                future_rt = "estimate", 
                 generation_time = generation_time, 
                 delays = list(incubation_period, onset_to_report),
-                rt_prior = list(mean = 1.1, sd = 0.2),
-                samples = 2000, horizon = 30, burn_in = 14, 
-                stan_args = list(warmup = 500, 
-                                 cores = 4,
-                                 control = list(adapt_delta = 0.99,
-                                                max_treedepth = 15)),
+                rt = list(prior = list(mean = 1.1, sd = 0.2), 
+                          future = "estimate"),
+                samples = 2000, horizon = 30,
+                stan_args = list(warmup = 500, cores = 4),
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
                 target_folder = here::here("rt-forecast", "data", "samples", "cases"), 
                 summary_args = list(summary_dir = here::here("rt-forecast", "data", "summary", 
                                                              "cases", target_date),
                                     all_regions = TRUE),
-                logs = "rt-forecast/logs/cases", verbose = TRUE, max_execution_time = Inf)
+                logs = "rt-forecast/logs/cases", verbose = TRUE)
 
