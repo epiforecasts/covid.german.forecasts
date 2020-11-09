@@ -20,9 +20,9 @@ drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 sheets_auth(token = drive_token())
 
 # for server
-# source(here::here("dialog-messages.R"))
+source(here::here("dialog-messages.R"))
 # for use on computer
-source(here::here("human-forecasts", "dialog-messages.R"))
+# source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
@@ -641,35 +641,26 @@ server <- function(input, output, session) {
                               title = "Change the median forecast. This will work no matter which distribution you choose", 
                               placement = "bottom", trigger = "hover",
                               options = NULL)
-                   
                    addTooltip(session = session, 
                               id = "width_1", 
                               title = "Change the width of your forecast. This will behave differently depending on the chosen distribution.", 
                               placement = "bottom", trigger = "hover",
                               options = NULL)
-                   
                    addTooltip(session = session, 
                               id = "propagate_1", 
                               title = "Press to propagate changes forward to following weeks", 
                               placement = "bottom", trigger = "hover",
                               options = NULL)
-                   
-                   
                    addTooltip(session = session, 
                               id = "update_1", 
                               title = "Press for changes to take effect", 
                               placement = "bottom", trigger = "hover",
                               options = NULL)
-                   
-                   
                    addTooltip(session = session, 
                               id = "submit", 
                               title = "You can submit multiple times, but only the last submission will be counted.", 
                               placement = "bottom", trigger = "hover",
                               options = NULL)
-                   
-                   
-                   
                  } else {
                    removeTooltip(session = session, id = "tooltip")
                    removeTooltip(session = session, id = "selection")
