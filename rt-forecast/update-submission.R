@@ -23,14 +23,14 @@ case_forecast <- format_forecast(case_forecast[, value := cases],
                                  cumulative =  data.table::fread(here::here("data", "weekly-cumulative-cases.csv")),
                                  forecast_date = target_date,
                                  submission_date = target_date,
-                                 CrI_samples = 0.9,
+                                 CrI_samples = 0.6,
                                  target_value = "case")
 
 death_forecast <- format_forecast(death_forecast[, value := cases], 
                                   cumulative = data.table::fread(here::here("data", "weekly-cumulative-deaths.csv")),
                                   forecast_date = target_date,
                                   submission_date = target_date,
-                                  CrI_samples = 0.9,
+                                  CrI_samples = 0.6,
                                   target_value = "death")
 
 # Save forecasts ----------------------------------------------------------
