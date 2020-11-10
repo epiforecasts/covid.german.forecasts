@@ -128,7 +128,7 @@ forecast_quantiles <- filtered_forecasts %>%
   dplyr::rowwise() %>%
   dplyr::mutate(quantile = list(quantile_grid),
                 value = list(qlnorm(quantile_grid, meanlog = log(median), 
-                                    sdlog = shape_log_normal))) %>%
+                                    sdlog = width))) %>%
   tidyr::unnest(cols = c(quantile, value)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(type = ifelse(type == "cases", "case", "death"), 
@@ -141,7 +141,7 @@ data.table::fwrite(forecast_quantiles,
                    here::here("human-forecasts", "processed-forecast-data", 
                               paste0(submission_date, "-processed-forecasts.csv")))
 
-# copy data into human forecast app
+# copy data into human forecast performance board app
 file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
           to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
 
