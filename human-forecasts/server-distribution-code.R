@@ -38,14 +38,6 @@ update_values <- function(horizon = NULL) {
                                                     mean = (rv$median[i]) ^ (1 / 7),
                                                     sd = as.numeric(rv$width[i]))) ^ 7
     } 
-    # if (update_bounds) {
-    #   rv$lower_bound[i] <<- qlnorm(as.numeric(rv$lower_quantile_level), 
-    #                                meanlog = log(rv$median[i]), 
-    #                                sdlog = as.numeric(rv$width[i]))
-    #   rv$upper_bound[i] <<- qlnorm(as.numeric(rv$upper_quantile_level), 
-    #                                meanlog = log(rv$median[i]), 
-    #                                sdlog = as.numeric(rv$width[i]))
-    # }
     
     
   }
@@ -70,35 +62,6 @@ output$p_distr <- renderPlotly({
                              line = list(color = "transparent"))
   )
   
-  circles_upper_90 <- map2(.x = x_pred(), .y  = rv$upper_90, 
-                           ~list(type = "circle",
-                                 # anchor circles at (mpg, wt)
-                                 xanchor = .x,
-                                 yanchor = .y,
-                                 # give each circle a 2 pixel diameter
-                                 x0 = -5, x1 = 5,
-                                 y0 = -5, y1 = 5,
-                                 xsizemode = "pixel", 
-                                 ysizemode = "pixel",
-                                 # other visual properties
-                                 fillcolor = "red",
-                                 line = list(color = "transparent"))
-  )
-  circles_lower_90 <- map2(.x = x_pred(), .y  = rv$lower_90, 
-                           ~list(type = "circle",
-                                 # anchor circles at (mpg, wt)
-                                 xanchor = .x,
-                                 yanchor = .y,
-                                 # give each circle a 2 pixel diameter
-                                 x0 = -5, x1 = 5,
-                                 y0 = -5, y1 = 5,
-                                 xsizemode = "pixel", 
-                                 ysizemode = "pixel",
-                                 # other visual properties
-                                 fillcolor = "red",
-                                 line = list(color = "transparent"))
-  )
-  
   
   
   p <- plot_ly() %>%
@@ -113,11 +76,11 @@ output$p_distr <- renderPlotly({
     )) %>%
     layout(xaxis = list(range = c(min(x()), max(x_pred()) + 5))) %>%
     layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
-    layout(shapes = c(circles_pred, circles_upper_90, circles_lower_90)) %>%
+    layout(shapes = c(circles_pred)) %>%
     layout(legend = list(orientation = 'h')) %>%
     config(edits = list(shapePosition = TRUE)) 
   
-  if (input$plotscale == "logarithmic") {
+  if (input$plotscale == "log") {
     p <- layout(p, yaxis = list(type = "log"))
   }
   
@@ -176,35 +139,50 @@ observeEvent(event_data("plotly_relayout"),
              })
 
 
-# set default values when changing a location or when resetting
-observeEvent(c(input$selection, input$reset),
-             {
-               if (zero_baseline) {
-                 rv$median_latent <- rep(0, 4)
-                 rv$width_latent <- rep(0, 4)
-               }
-               
-               else {
-                 rv$median_latent <- rep(last_value(), 4)
-                 rv$width_latent <- rep(baseline_sigma(), 4)
-               }
-               
-               
-               update_values()
-               
-               for (i in 1:4) {
-                 
-                 updateNumericInput(session,
-                                    paste0("median_forecast_", i),
-                                    value = round(rv$median[i], 0))
-                 updateNumericInput(session,
-                                    paste0("width_", i),
-                                    value = round(rv$width[i], 2))
-                 
-               }
-               
-             }, 
-             priority = 2)
+update_numeric_inputs <- function() {
+  
+  for (i in 1:4) {
+    
+    updateNumericInput(session,
+                       paste0("median_forecast_", i),
+                       value = round(rv$median[i], 0))
+    updateNumericInput(session,
+                       paste0("width_", i),
+                       value = round(rv$width[i], 2))
+    
+  }
+}
+
+# 
+# # set default values when changing a location or when resetting
+# observeEvent(c(input$selection, input$reset),
+#              {
+#                if (zero_baseline) {
+#                  rv$median_latent <- rep(0, 4)
+#                  rv$width_latent <- rep(0, 4)
+#                }
+#                
+#                else {
+#                  rv$median_latent <- rep(last_value(), 4)
+#                  rv$width_latent <- rep(baseline_sigma(), 4)
+#                }
+#                
+#                
+#                update_values()
+#                
+#                for (i in 1:4) {
+#                  
+#                  updateNumericInput(session,
+#                                     paste0("median_forecast_", i),
+#                                     value = round(rv$median[i], 0))
+#                  updateNumericInput(session,
+#                                     paste0("width_", i),
+#                                     value = round(rv$width[i], 2))
+#                  
+#                }
+#                
+#              }, 
+#              priority = 2)
 
 
 # propagate values
@@ -212,7 +190,7 @@ observeEvent(c(input$propagate_1),
              {
                for (i in 2:4) {
                  rv$median_latent[i] <- rv$median_latent[1]
-                 rv$width_latent[i] <- rv$width_latent[1] + 0.01 * (i - 1)
+                 rv$width_latent[i] <- rv$width_latent[1] #+ 0.01 * (i - 1)
                  updateNumericInput(session,
                                     paste0("median_forecast_", i),
                                     value = round(rv$median_latent[i], 0))
@@ -227,7 +205,7 @@ observeEvent(c(input$propagate_2),
              {
                for (i in 3:4) {
                  rv$median_latent[i] <- rv$median_latent[2]
-                 rv$width_latent[i] <- rv$width_latent[2] + 0.01 * (i - 2)
+                 rv$width_latent[i] <- rv$width_latent[2] #+ 0.01 * (i - 2)
                  updateNumericInput(session,
                                     paste0("median_forecast_", i),
                                     value = round(rv$median_latent[i], 0))
@@ -241,7 +219,7 @@ observeEvent(c(input$propagate_3),
              {
                for (i in 4:4) {
                  rv$median_latent[i] <- rv$median_latent[3]
-                 rv$width_latent[i] <- rv$width_latent[3] + 0.01 * (i - 3)
+                 rv$width_latent[i] <- rv$width_latent[3] #+ 0.01 * (i - 3)
                  updateNumericInput(session,
                                     paste0("median_forecast_", i),
                                     value = round(rv$median_latent[i], 0))
@@ -318,7 +296,7 @@ observeEvent(input$width_4,
 
 observeEvent(input$tooltip,
              {
-               if (input$tooltip) {
+               if (input$tooltip == "yes") {
                  addTooltip(session = session, 
                             id = "tooltip", 
                             title = "Toggle tooltips on and off", 
@@ -328,6 +306,12 @@ observeEvent(input$tooltip,
                  addTooltip(session = session, 
                             id = "tooltip", 
                             title = "Toggle tooltips on and off", 
+                            placement = "bottom", trigger = "hover",
+                            options = NULL)
+                 
+                 addTooltip(session = session, 
+                            id = "baseline_model", 
+                            title = "Select a baseline model. This will reset all your forecasts.", 
                             placement = "bottom", trigger = "hover",
                             options = NULL)
                  
@@ -357,7 +341,7 @@ observeEvent(input$tooltip,
                             options = NULL)
                  
                  addTooltip(session = session, 
-                            id = "plotpanel", 
+                            id = "plotpanel1", 
                             title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation.", 
                             placement = "bottom", trigger = "hover",
                             options = NULL)
@@ -395,19 +379,54 @@ observeEvent(input$tooltip,
                             options = NULL)
                } else {
                  removeTooltip(session = session, id = "tooltip")
+                 removeTooltip(session = session, id = "baseline_model")
                  removeTooltip(session = session, id = "selection")
                  removeTooltip(session = session, id = "num_past_obs")
                  removeTooltip(session = session, id = "plotscale")
                  removeTooltip(session = session, id = "reset")
-                 removeTooltip(session = session, id = "plotpanel")
-                 removeTooltip(session = session, id = "distribution")
-                 removeTooltip(session = session, id = "median_forecast_1")
-                 removeTooltip(session = session, id = "width_1")
-                 removeTooltip(session = session, id = "propagate_1")
-                 removeTooltip(session = session, id = "update_1")
-                 removeTooltip(session = session, id = "submit")
+                 removeTooltip(session = session, id = "plotpanel_q")
+                 removeTooltip(session = session, id = "median_forecast_1_q")
+                 removeTooltip(session = session, id = "lower_90_forecast_q")
+                 removeTooltip(session = session, id = "upper_90_forecast_q")
+                 removeTooltip(session = session, id = "propagate_1_q")
+                 removeTooltip(session = session, id = "update_1_q")
+                 removeTooltip(session = session, id = "submit_q")
                }
              })
 
 
 
+
+# Plot with daily cases
+# this needs to go here as the output name needs to be different across the two
+# conditions
+output$plot_cases1 <- renderPlotly({
+  
+  plot <- plot_ly() %>%
+    add_trace(x = tmp_cases()$date,
+              y = tmp_cases()$value, type = "scatter", 
+              name = 'observed data',mode = 'lines') %>%
+    layout(xaxis = list(hoverformat = '0f')) %>%
+    layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
+    layout(title = list(text = paste("Daily cases in", location_input(), sep = " ")))
+  
+  if (input$plotscale == "log") {
+    plot <- layout(plot, yaxis = list(type = "log"))
+  }
+  
+  plot
+  
+})
+
+
+# this needs to go here as the output name needs to be different across the two
+# conditions
+output$name_field <- renderUI({
+  str1 <- paste0("<b>Name</b>: ", identification()$name)
+  str11 <- paste0("<b>ID</b>: ", identification()$forecaster_id)
+  str2 <- paste0("<b>Email</b>: ", identification()$email)
+  str3 <- paste0("<b>Expert</b>: ", identification()$expert)
+  str4 <- paste0("<b>Appear on Performance Board</b>: ", identification()$appearboard)
+  str5 <- paste0("<b>Affiliation</b>: ", identification()$affiliation, ". ", identification()$website)
+  HTML(paste(str1, str11, str2, str3, str4, str5, sep = '<br/>'))
+})

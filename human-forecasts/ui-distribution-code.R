@@ -1,16 +1,18 @@
 conditionalPanel(
-  condition = "output.condition_distribution",
+  condition = "output.condition_distribution == true",
 
 fluidRow(column(9, 
                 tabsetPanel(type = "tabs",
-                            id = "plotpanel",
+                            id = "plotpanel1",
                             tabPanel("Make a Forecast", plotlyOutput("p_distr", height = "800px")),
                             tabPanel("For Reference: Daily Cases",
-                                     plotlyOutput("plot_cases", height = "800px")))),
+                                     plotlyOutput("plot_cases1", height = "800px")))),
          column(3, 
                 offset = 0,
                 style = 'padding: 20px; background-color: aliceblue',
-                htmlOutput("name_field"),
+                
+                fluidRow(column(8, htmlOutput("name_field")), 
+                         column(4, HTML('To request a change of your user information, please write us an <a href= "mailto:nikos.bosse@lshtm.ac.uk">email</a>'))),
                 
                 br(),
                 fluidRow(column(12, h3("Forecasts"))),

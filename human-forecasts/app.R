@@ -16,16 +16,17 @@ library(magrittr)
 # options(gargle_quiet = FALSE)
 # drive_auth()
 
+app_end_date <- "2020-11-17 12:00:00"
 
 
 options(gargle_oauth_cache = ".secrets")
 drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
-sheets_auth(token = drive_token())
+gs4_auth(token = drive_token())
 
 # for server
-# source(here::here("dialog-messages.R"))
+source(here::here("dialog-messages.R"))
 # for use on computer
-source(here::here("human-forecasts", "dialog-messages.R"))
+# source(here::here("human-forecasts", "dialog-messages.R"))
 
 spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
@@ -82,7 +83,7 @@ ui <- fluidPage(
   shinyjs::useShinyjs(),
   
   fluidRow(column(12,
-                  tipify(h2("Covid Human Forecast App"), 
+                  tipify(h1("Covid-19 Crowd Forecast"), 
                          title = "If you can't see the entire user interface, you may want to zoom out in your browser."))),
   fluidRow(column(2,
                   selectInput(inputId = "selection",
@@ -93,17 +94,27 @@ ui <- fluidPage(
                   numericInput(inputId = "num_past_obs", 
                                       value = 12,
                                       label = "Number of weeks to show")), 
-           column(2, radioButtons("plotscale", label = "Plot Scale", selected = "linear",
-                                  choices = c("linear", "logarithmic"), 
+           column(1, radioButtons("plotscale", label = "Plot Scale", selected = "linear",
+                                  choices = c("linear", "log"), 
                                   inline = TRUE)),
-           column(3, 
-                  checkboxGroupInput("ranges", "Prediction intervals to show", 
-                                            choices = c("20%", "50%", "90%", "95%"), 
-                                            selected = c("50%", "90%"),
-                                            inline = TRUE)),
+           column(2, 
+                  conditionalPanel(condition = "output.condition_distribution", 
+                                   checkboxGroupInput("ranges", "Prediction intervals to show", 
+                                                      choices = c("20%", "50%", "90%", "95%"), 
+                                                      selected = c("50%", "90%"),
+                                                      inline = TRUE))),
+           column(2, selectInput("baseline_model", 
+                                           label = "Baseline prediction",
+                                           choices = c("constant", "zero"), 
+                                           selected = "output.baseline_model")),
+           
+           
+           
            column(1, style = 'padding-top: 20px',
-                  checkboxInput(inputId = "tooltip", label = "Show tooltips", 
-                                value = TRUE)),
+                  radioButtons(inputId = "tooltip", label = "Show tooltips",
+                               choices = c("yes", "no"), 
+                               inline = FALSE,
+                               selected = "yes")),
            column(1,
                   style = 'padding-top: 20px',
                   actionButton("reset", label = "Reset Forecasts")),  
@@ -116,76 +127,54 @@ ui <- fluidPage(
   # source("ui-distribution-code.R", local = TRUE)$value,
   # source("ui-quantile-code.R", local = TRUE)$value,
   
-  selectInput("num", "Choose a number", 1:10),
   conditionalPanel(
-    condition = "output.squa_re == true",
-    "That's a perfect square!"
+    condition = "output.condition_distribution == true",
+    source("ui-distribution-code.R", local = TRUE)$value,
   ),
   br(),
   conditionalPanel(
-    condition = "output.squa_re == false",
-    "That's not a perfect square!"
-  ),
-  
- 
-  
-  br(),
-  fluidRow(column(3, actionButton("submit", label = HTML('<b>Submit</b>'))), 
-           column(12, "(Please click 'update' before submitting)")), 
-  br(), 
-  br(), 
-  br(), 
-  fluidRow(column(12, textInput(inputId = "comments", 
-                                label = "Do you have any additional comments, suggestions, feedback?"))), 
-  fluidRow(column(12, HTML('Preferably, you can submit an issue on <a href="https://github.com/epiforecasts/covid-german-forecasts">github</a>')))
+    condition = "output.condition_quantile == true",
+    source("ui-quantile-code.R", local = TRUE)$value,
+  )
 )
 
 
-
-
-
-
-
-
 server <- function(input, output, session) {
+
   
-  output$squa_re <- reactive({
-    
-    sqrt(as.numeric(input$num)) %% 1 == 0
-  })
-  outputOptions(output, 'squa_re', suspendWhenHidden = FALSE)
+  # sample random conditions ---------------------------------------------------
   
-  
-  
-  distribut_cond <- TRUE
-    #sample(c(TRUE, TRUE), 1)
-  
-  # distribution or quantile condition
+  # make forecasts using distributions or quantiles
+  condition_distribution <- sample(c(TRUE, FALSE), 1)
   output$condition_distribution <- reactive({
-    # distribut_cond
-    distribut_cond
+    condition_distribution
   })
   output$condition_quantile <- reactive({
-    # !distribut_cond
-    !distribut_cond
+    !condition_distribution
   })
+  
+  # randomise the baseline model that is shown
+  baseline_model <- sample(c("zero", "constant"), size = 1)
+  output$baseline_model <- reactive({
+    baseline_model
+  })
+  
+  
   outputOptions(output, 'condition_distribution', 
                 suspendWhenHidden = FALSE)
   outputOptions(output, 'condition_quantile', 
+                suspendWhenHidden = FALSE)
+  outputOptions(output, 'baseline_model', 
                 suspendWhenHidden = FALSE)
   
   
   source("server-user-management.R", local = TRUE)$value
   
-  
-  
-  zero_baseline <- sample(c(TRUE,FALSE), 1, prob = c(1/3, 2/3))
-  
-  # if (distribut_cond) {
-  #   source("server-distribution-code.R", local = TRUE)$value
-  # } else {
-  #   source("server-quantile-code.R", local = TRUE)$value
-  # }
+  if (condition_distribution) {
+    source("server-distribution-code.R", local = TRUE)$value
+  } else {
+    source("server-quantile-code.R", local = TRUE)$value
+  }
 
   location_input <- reactive({
     selection_number <- which(selection_names == input$selection)
@@ -219,25 +208,92 @@ server <- function(input, output, session) {
     as.Date(df()$target_end_date)
   })
   
+  identification <- reactiveVal()
+  
   x_pred <- reactive({
     max(x()) + seq(7, 28, 7)
   })
   
-  last_value <- reactive({
-    df()$value[nrow(df())]
-  })
+  # set baseline values --------------------------------------------------------
+  # normal baseline model
+  baseline_median <- reactiveVal()
+  baseline_sigma <- reactiveVal()
+  baseline_lower <- reactiveVal()
+  baseline_upper <- reactiveVal()
   
-  baseline_sigma <- reactive({
-    observations %>%
-      dplyr::mutate(target_end_date = as.Date(target_end_date), 
-                    difference = c(NA, diff(log(value)))) %>%
-      dplyr::filter(location_name == location_input(), 
-                    inc == inc_input(),
-                    type == type_input(),
-                    target_end_date > max(target_end_date) - 4 * 7) %>%
-      dplyr::pull(difference) %>%
-      sd()
-  })
+  observeEvent(c(input$baseline_model, input$selection, input$reset), 
+               {
+                 if (input$baseline_model == "constant") {
+                   last_value <- df()$value[nrow(df())]
+                   
+                   # assign to reactive values
+                   baseline_median(rep(last_value, 4))
+                   
+                   baseline_sigma <-  observations %>%
+                     dplyr::mutate(target_end_date = as.Date(target_end_date), 
+                                   difference = c(NA, diff(log(value)))) %>%
+                     dplyr::filter(location_name == location_input(), 
+                                   inc == inc_input(),
+                                   type == type_input(),
+                                   target_end_date > max(target_end_date) - 4 * 7) %>%
+                     dplyr::pull(difference) %>%
+                     sd()
+                   
+                   # assign to reactive values
+                   baseline_sigma(rep(baseline_sigma, 4))
+                   
+                   baseline_lower <- exp(qnorm(0.05, 
+                                               mean = log(baseline_median()),
+                                               sd = as.numeric(baseline_sigma())))
+                   
+                   baseline_lower(baseline_lower)
+                   
+                   baseline_upper <- exp(qnorm(0.95, 
+                                               mean = log(baseline_median()),
+                                               sd = as.numeric(baseline_sigma())))
+                   
+                   baseline_upper(baseline_upper)
+                 }
+                 
+                 if (input$baseline_model == "zero") {
+                   baseline_median(rep(0, 4))
+                   baseline_sigma(rep(0, 4))
+                   baseline_lower(rep(0, 4))
+                   baseline_upper(rep(0, 4))
+                 }
+                 
+                 rv$median_latent <- baseline_median()
+                 rv$width_latent <- baseline_sigma()
+                 rv$upper_90_latent <- baseline_upper()
+                 rv$lower_90_latent <- baseline_lower()
+                 
+                 update_values()
+                 update_numeric_inputs()
+                 
+               }, priority = 99)
+  
+  # last_value <- reactive({
+  #   df()$value[nrow(df())]
+  # })
+  # 
+  # baseline_sigma <- reactive({
+  #   observations %>%
+  #     dplyr::mutate(target_end_date = as.Date(target_end_date), 
+  #                   difference = c(NA, diff(log(value)))) %>%
+  #     dplyr::filter(location_name == location_input(), 
+  #                   inc == inc_input(),
+  #                   type == type_input(),
+  #                   target_end_date > max(target_end_date) - 4 * 7) %>%
+  #     dplyr::pull(difference) %>%
+  #     sd()
+  # })
+  # 
+  # baseline_lower <- reactive({
+  #   exp(qnorm(quantile_grid, 
+  #             mean = log(rv$median[i]),
+  #             sd = as.numeric(rv$width[i])))
+  #   
+  # })
   
   quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
   
@@ -251,22 +307,14 @@ server <- function(input, output, session) {
     forecasts_week_2 = NULL,
     forecasts_week_4 = NULL,
     
-    lower_90 = NULL,
-    upper_90 = NULL,
-    
-    # lower_1 = NULL, 
-    # lower_2 = NULL, 
-    # lower_3 = NULL, 
-    # lower_4 = NULL, 
-    # 
-    # upper_1 = NULL,
-    # upper_2 = NULL,
-    # upper_3 = NULL,
-    # upper_4 = NULL,
-    
+    lower_90 = NA,
+    lower_90_latent = NA,
+    upper_90 = NA,
+    upper_90_latent = NA,
+
     selection_number = NULL,
-    width = NULL,
-    width_latent = NULL
+    width = NA,
+    width_latent = NA
   )
   
 
@@ -276,40 +324,13 @@ server <- function(input, output, session) {
       dplyr::filter(location_name == location_input(), 
                     date >= max(date) - input$num_past_obs * 7)
   })
+
   
-  output$name_field <- renderUI({
-    str1 <- paste0("<b>Name</b>: ", credentials()$info$name)
-    str11 <- paste0("<b>ID</b>: ", credentials()$info$forecaster_id)
-    str2 <- paste0("<b>Email</b>: ", credentials()$info$email)
-    str3 <- paste0("<b>Expert</b>: ", credentials()$info$expert)
-    str4 <- paste0("<b>Appear on Performance Board</b>: ", credentials()$info$appearboard)
-    str5 <- paste0("<b>Affiliation</b>: ", credentials()$info$affiliation, ", ", credentials()$info$website)
-    HTML(paste(str1, str11, str2, str3, str4, str5, sep = '<br/>'))
+  comments <- reactive({
+    paste(input$comments, input$comments_q)
   })
   
-  
-  
-  
-  
-  
-  # Plot with daily cases
-  output$plot_cases <- renderPlotly({
-    
-    plot <- plot_ly() %>%
-      add_trace(x = tmp_cases()$date,
-                y = tmp_cases()$value, type = "scatter", 
-                name = 'observed data',mode = 'lines') %>%
-      layout(xaxis = list(hoverformat = '0f')) %>%
-      layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
-      layout(title = list(text = paste("Daily cases in", location_input(), sep = " ")))
-    
-    if (input$plotscale == "logarithmic") {
-      plot <- layout(plot, yaxis = list(type = "log"))
-    }
-    
-    plot
-    
-  })
+
 
   
   # Instruction button
@@ -325,21 +346,30 @@ server <- function(input, output, session) {
                ignoreNULL = TRUE)
   
   
-  observeEvent(input$submit,
+  observeEvent(c(input$submit, input$submit_q),
                {
                  # error handling
-                 if (all(rv$median == rv$median_latent && 
-                         all(rv$width == rv$width_latent))) {
+                 # expand this at some point to handle both conditions
+                 if (!is.na(rv$median) && all(rv$median == rv$median_latent)) {
                    mismatch <- FALSE
                  } else {
                    mismatch <- TRUE
                  }
                  
-                 if (mismatch) {
+                 if (Sys.Date() > app_end_date) {
+                   showNotification("The app does not currently allow submissions. Please wait until next Saturday, 17:00 CET to make new predictions", type = "error")
+                 } else if (mismatch) {
                    showNotification("Your forecasts don't match your inputs yet. Please press 'update' for all changes to take effect and submit again.", type = "error")
                  } else {
                    
-                   submissions <- data.frame(forecaster_id = credentials()$info$forecaster_id, 
+                   if (condition_distribution) {
+                     condition <- "distribution_forecast"
+                   } else {
+                     condition <- "quantile_forecast"
+                   }
+                   
+                   
+                   submissions <- data.frame(forecaster_id = identification()$forecaster_id, 
                                              location = unique(df()$location),
                                              location_name = location_input(),
                                              inc = inc_input(),
@@ -347,22 +377,26 @@ server <- function(input, output, session) {
                                              forecast_date = Sys.Date(),
                                              forecast_time = Sys.time(),
                                              forecast_week = lubridate::epiweek(Sys.Date()),
-                                             expert = credentials()$info$expert,
-                                             leader_board = credentials()$info$appearboard,
+                                             expert = identification()$expert,
+                                             leader_board = identification()$appearboard,
                                              name_board = "NA",
-                                             median = rv$median, 
-                                             width = rv$width,
+                                             forecast_type = condition,
                                              distribution = input$distribution,
+                                             median = rv$median, 
+                                             lower_90 = rv$lower_90,
+                                             upper_90 = rv$upper_90,
+                                             width = rv$width,
                                              horizon = 1:4,
                                              target_end_date = x_pred(), 
-                                             zero_baseline = zero_baseline,
-                                             comments = input$comments)
-                   if(credentials()$info$appearboard == "anonymous") {
+                                             assigned_baseline_model = baseline_model,
+                                             chosen_baseline_model = input$baseline_model,
+                                             comments = comments())
+                   if(identification()$appearboard == "anonymous") {
                      submissions <- dplyr::mutate(submissions, 
                                                   name_board = "anonymous")
-                   } else if (credentials()$info$appearboard == "yes") {
+                   } else if (identification()$appearboard == "yes") {
                      submissions <- dplyr::mutate(submissions, 
-                                                 name_board = credentials()$info$username)
+                                                 name_board = identification()$username)
                    } else {
                      submissions <- dplyr::mutate(submissions, 
                                                   name_board = "none")
@@ -384,7 +418,8 @@ server <- function(input, output, session) {
                    }
                  }
                }, 
-               priority = 99)
+               priority = 99, 
+               ignoreInit = TRUE)
   
   
 }
