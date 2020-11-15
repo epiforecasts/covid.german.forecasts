@@ -13,6 +13,9 @@ instructions <- '<h3> Welcome! </h3>
                         Lastly you can opt in to have your username appear on our performance board. Alternatively, you can appear with an anonymous alias or not at all. 
                         <br>
                         <h4> Making Forecasts </h4>
+                        
+                        You will be randomly assigned to one of two forecast conditions. In one condition, you are asked to provide a predictive distirbution for every week. You can choose a distribution and adjust the median and width of the forecast. In the other condition you are asked to provide the median as well as the lower and upper bound of a 90% prediction interval. 
+                        <br>
                         Tooltips will guide you through the interface, but you can also turn them off. If you cannot see the entire user interface you may want to zoom out in your browser.
                         <br>
                         You can either drag the points to adjust forecasts or use the numeric input fields. If you want to reset the forecasts, press reset. 
