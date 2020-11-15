@@ -3,6 +3,9 @@
 user_base <- googlesheets4::read_sheet(ss = identification_sheet, 
                                        sheet = "ids")
 
+identification <- reactiveVal()
+
+
 # login module
 credentials <- callModule(shinyauthr::login, 
                           id = "login", 
