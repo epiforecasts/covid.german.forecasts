@@ -21,11 +21,16 @@ deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(deaths, region, date)
 
 # Run Rt estimation -------------------------------------------------------
+# default Rt settings
+rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
+                        future = "latest"), deaths)
+# add population adjustment for each country
+rt$Germany$pop <- 80000000
+rt$Poland$pop <- 40000000
 regional_epinow(reported_cases = deaths,
                 generation_time = generation_time, 
                 delays = delay_opts(incubation_period, onset_to_death),
-                rt = rt_opts(prior = list(mean = 1.1, sd = 0.2), 
-                             future = "latest"),
+                rt = rt,
                 stan = stan_opts(samples = 2000, warmup = 500, cores = 4), 
                 horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
