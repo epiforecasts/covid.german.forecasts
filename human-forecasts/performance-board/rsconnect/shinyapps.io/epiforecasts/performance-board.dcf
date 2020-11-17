@@ -1,0 +1,12 @@
+name: performance-board
+title: performance-board
+username:
+account: epiforecasts
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3146756
+bundleId: 3811914
+url: https://epiforecasts.shinyapps.io/performance-board/
+when: 1604342887.90886
+asMultiple: FALSE
+asStatic: FALSE

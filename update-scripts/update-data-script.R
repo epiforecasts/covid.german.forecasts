@@ -7,6 +7,10 @@ if (!dir.exists(here::here("data"))) {
 }
 
 # maybe it would be cleaner to separate the saving step from the get data step
+if (!dir.exists(here::here("data"))) {
+  dir.create("data", recursive = TRUE)
+}
+
 get_data(load_from_server = TRUE)
 
 weekly_cases <- get_data(cases = TRUE)
@@ -36,4 +40,7 @@ if (!dir.exists(here::here("human-forecasts", "data"))) {
 # copy data into human forecast app
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts"), recursive = TRUE)
+
+file.copy(from = here::here("data"), 
+          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
 
