@@ -23,9 +23,8 @@ linelist <- linelist[country %in% "Germany"]
 # Fit delay from onset to admission ---------------------------------------
 report_delay <- data.table::copy(linelist)[!is.na(delay_onset_report)]
 samples <- round(length(report_delay$delay_onset_report) / 100)
-onset_to_report <- EpiNow2::bootstrapped_dist_fit(report_delay$delay_onset_report,
-                                                  bootstraps = 10,
-                                                  bootstrap_samples = samples,
-                                                  max_value = 15)
+onset_to_report <- estimate_delay(report_delay$delay_onset_report,
+                                  bootstraps = 10, bootstrap_samples = samples,
+                                  max_value = 15)
 saveRDS(onset_to_report, here::here("rt-forecast", "data", "delays", "onset_to_report.rds"))
 
