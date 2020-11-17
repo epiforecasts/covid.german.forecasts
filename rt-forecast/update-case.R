@@ -6,7 +6,7 @@ library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
 # Set target date ---------------------------------------------------------
-target_date <- as.character(Sys.Date() - lubridate::days(1)) 
+target_date <- as.character(Sys.Date()) 
 
 # Update delays -----------------------------------------------------------
 generation_time <- readRDS(here::here("rt-forecast", "data", "delays", "generation_time.rds"))
