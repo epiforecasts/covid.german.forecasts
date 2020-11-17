@@ -6,7 +6,7 @@ library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
 # Set target date ---------------------------------------------------------
-target_date <- as.character(Sys.Date())
+target_date <- as.character(Sys.Date() - lubridate::days(1)) 
 
 # Update delays -----------------------------------------------------------
 generation_time <- readRDS(here::here("rt-forecast", "data", "delays", "generation_time.rds"))
@@ -36,6 +36,7 @@ regional_epinow(reported_cases = deaths,
                 rt = rt,
                 stan = stan_opts(samples = 2000, warmup = 250, chains = 2,
                                  future = TRUE, max_execution_time = 45*60), 
+                obs = obs_opts(scale = list(mean = 0.01, sd = 0.0025)),
                 horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,

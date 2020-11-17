@@ -6,7 +6,7 @@ library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
 # Set target date ---------------------------------------------------------
-target_date <- as.character(Sys.Date())
+target_date <- as.character(Sys.Date() - lubridate::days(1)) 
 
 # Update delays -----------------------------------------------------------
 generation_time <- readRDS(here::here("rt-forecast", "data", "delays", "generation_time.rds"))
@@ -21,7 +21,7 @@ cases <- cases[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(cases, region, date)
 
 # Set up parallel execution -----------------------------------------------
-setup_future(deaths, min_cores_per_worker = 2)
+setup_future(cases, min_cores_per_worker = 2)
 
 # Run Rt estimation -------------------------------------------------------
 rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
@@ -36,6 +36,7 @@ regional_epinow(reported_cases = cases,
                 rt = rt,
                 stan = stan_opts(samples = 2000, warmup = 250, chains = 2,
                                  future = TRUE, max_execution_time = 45*60),
+                obs = obs_opts(scale = list(mean = 0.5, sd = 0.05)),
                 horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
