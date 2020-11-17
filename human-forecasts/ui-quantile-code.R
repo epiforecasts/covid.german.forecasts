@@ -7,7 +7,7 @@ conditionalPanel(
                               id = "plotpanel_q",
                               tabPanel("Make a Forecast", plotlyOutput("p_quant", height = "800px")),
                               tabPanel("For Reference: Daily Cases",
-                                       plotlyOutput("plot_cases", height = "800px")))),
+                                       plotlyOutput("plot_cases_q", height = "800px")))),
            column(4, 
                   offset = 0,
                   style = 'padding: 20px; background-color: aliceblue',

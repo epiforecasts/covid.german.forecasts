@@ -307,7 +307,7 @@ observeEvent(input$tooltip,
                                      title = "Show plot on a log or linear scale"), 
                                 list(id = "reset", 
                                      title = "Use this to reset all forecast to their previous default values"), 
-                                list(id = "plotpanel1", 
+                                list(id = "plotpanel", 
                                      title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation."),
                                 list(id = "distribution", 
                                      title = "Pick a distribution for your forecast. This allows you to specify the skew of your forecast flexibly. The behaviour of the width parameter will change according to the distribution you choose. Press update for changes to take effect"), 
@@ -342,7 +342,7 @@ observeEvent(input$tooltip,
 # Plot with daily cases
 # this needs to go here as the output name needs to be different across the two
 # conditions
-output$plot_cases1 <- renderPlotly({
+output$plot_cases <- renderPlotly({
   
   plot <- plot_ly() %>%
     add_trace(x = tmp_cases()$date,

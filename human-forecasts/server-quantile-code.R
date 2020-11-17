@@ -111,7 +111,7 @@ observeEvent(event_data("plotly_relayout"),
 
 
 # Plot with daily cases
-output$plot_cases <- renderPlotly({
+output$plot_cases_q <- renderPlotly({
   
   plot <- plot_ly() %>%
     add_trace(x = tmp_cases()$date,
@@ -301,95 +301,46 @@ observeEvent(c(input$update_q),
 
 observeEvent(input$tooltip,
              {
+               tooltips <- list(list(id = "tooltip", 
+                                     title = "Toggle tooltips on and off"), 
+                                list(id = "baseline_model", 
+                                     title = "Select a baseline model. This will reset all your forecasts."), 
+                                list(id = "selection", 
+                                     title = "Select location and data type"), 
+                                list(id = "num_past_obs", 
+                                     title = "Change the number of past weeks to show on the plot"), 
+                                list(id = "plotscale", 
+                                     title = "Show plot on a log or linear scale"), 
+                                list(id = "reset", 
+                                     title = "Use this to reset all forecast to their previous default values"), 
+                                list(id = "plotpanel_q", 
+                                     title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation."),
+                                list(id = "median_forecast_1_q", 
+                                     title = "Change the median forecast. This will work no matter which distribution you choose"), 
+                                list(id = "lower_90_forecast_1_q", 
+                                     title = "Change the lower bound of the 90% prediction interval."), 
+                                list(id = "upper_90_forecast_1_q", 
+                                     title = "Change the upper bound of the 90% prediction interval."), 
+                                list(id = "propagate_1_q", 
+                                     title = "Press to propagate changes forward to following weeks"), 
+                                list(id = "update_1_q", 
+                                     title = "Press for changes to take effect"), 
+                                list(id = "submit_q", 
+                                     title = "You can submit multiple times, but only the last submission will be counted."))
+               
+               addTooltip_helper <- function(args) {
+                 args <- c(session, args)
+                 do.call(addTooltip, args)
+               }
+               
+               removeTooltip_helper <- function(args) {
+                 do.call(removeTooltip, list(session = session, id = args$id))
+               }
+               
                if (input$tooltip == "yes") {
-                 addTooltip(session = session, 
-                            id = "tooltip", 
-                            title = "Toggle tooltips on and off", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 
-                 addTooltip(session = session, 
-                            id = "selection", 
-                            title = "Select location and data type", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "num_past_obs", 
-                            title = "Change the number of past weeks to show on the plot", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "plotscale", 
-                            title = "Show plot on a log or linear scale", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "reset", 
-                            title = "Use this to reset all forecast to their previous default values", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "plotpanel_q", 
-                            title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "median_forecast_1_q", 
-                            title = "Change the median forecast.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "lower_90_forecast_1_q", 
-                            title = "Change the lower bound of the 90% prediction interval.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "upper_90_forecast_1_q", 
-                            title = "Change the upper bound of the 90% prediction interval.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "propagate_1_q", 
-                            title = "Press to propagate changes forward to following weeks", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "update_q", 
-                            title = "Press for changes to take effect", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "submit_q", 
-                            title = "You can submit multiple times, but only the last submission will be counted.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "baseline_model", 
-                            title = "Select a baseline model. This will reset all your forecasts.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-               } else {
-                 removeTooltip(session = session, id = "tooltip")
-                 removeTooltip(session = session, id = "selection")
-                 removeTooltip(session = session, id = "num_past_obs")
-                 removeTooltip(session = session, id = "plotscale")
-                 removeTooltip(session = session, id = "reset")
-                 removeTooltip(session = session, id = "plotpanel1")
-                 removeTooltip(session = session, id = "distribution")
-                 removeTooltip(session = session, id = "median_forecast_1")
-                 removeTooltip(session = session, id = "width_1")
-                 removeTooltip(session = session, id = "propagate_1")
-                 removeTooltip(session = session, id = "update_1")
-                 removeTooltip(session = session, id = "submit")
-                 removeTooltip(session = session, id = "baseline_model")
+                 purrr::walk(.x = tooltips, .f = addTooltip_helper) }
+               else {
+                 purrr::walk(.x = tooltips, .f = removeTooltip_helper)
                }
              })
 

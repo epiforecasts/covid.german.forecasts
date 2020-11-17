@@ -3,10 +3,10 @@ conditionalPanel(
 
 fluidRow(column(9, 
                 tabsetPanel(type = "tabs",
-                            id = "plotpanel1",
+                            id = "plotpanel",
                             tabPanel("Make a Forecast", plotlyOutput("p_distr", height = "800px")),
                             tabPanel("For Reference: Daily Cases",
-                                     plotlyOutput("plot_cases1", height = "800px")))),
+                                     plotlyOutput("plot_cases", height = "800px")))),
          column(3, 
                 offset = 0,
                 style = 'padding: 20px; background-color: aliceblue',
