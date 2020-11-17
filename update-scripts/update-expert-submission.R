@@ -63,7 +63,9 @@ replace_date_and_time <- function(forecasts) {
     dplyr::mutate(forecast_duration = c(NA, diff(forecast_time))) %>%
     dplyr::ungroup()
   
-  forecasts <- dplyr::inner_join(forecasts, forecast_times) %>%
+  forecasts <- dplyr::inner_join(forecasts, forecast_times, 
+                                 by = c("forecaster_id", "location", "inc", 
+                                        "type", "forecast_time")) %>%
     dplyr::mutate(forecast_week = lubridate::epiweek(forecast_date), 
                   target_end_date = as.Date(target_end_date)) %>%
     dplyr::select(-forecast_time, -forecast_date)
@@ -127,6 +129,8 @@ calculate_quantiles <- function(quantile_grid,
 }
 
 forecast_quantiles <- filtered_forecasts %>%
+  # disregard quantile forecasts this week
+  dplyr::filter(forecast_type == "distribution_forecast") %>%
   dplyr::rowwise() %>%
   dplyr::mutate(quantile = list(quantile_grid),
                 value = calculate_quantiles(quantile_grid, 

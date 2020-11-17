@@ -56,12 +56,12 @@ output$p_quant <- renderPlotly({
                 name = "95% prediction interval",
                 line = list(color = "transparent"),
                 fillcolor = 'rgba(26,150,65,0.4)') %>%
-    layout(title = paste(input$selection), list(
+    layout(title = paste(input$selection, "- weekly"), list(
       xanchor = "left"
     )) %>%
     layout(xaxis = list(range = c(min(x()), max(x_pred()) + 5))) %>%
     layout(shapes = c(circles_pred, circles_upper_90, circles_lower_90)) %>%
-    layout(legend = list(orientation = 'h')) %>%
+    layout(legend = list(orientation = 'h', yanchor = "top")) %>%
     config(edits = list(shapePosition = TRUE))
   
   if (input$plotscale == "log") {

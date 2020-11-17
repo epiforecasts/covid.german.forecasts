@@ -2,10 +2,16 @@ library(shiny)
 library(magrittr)
 library(ggplot2)
 library(scoringutils)
+library(readr)
+library(dplyr)
 
+# if server
+# forecast_files <- list.files("processed-forecast-data/")
+# file_paths <- paste0("processed-forecast-data/", forecast_files)
 
-forecast_files <- list.files("processed-forecast-data/")
-file_paths <- paste0("processed-forecast-data/", forecast_files)
+# if local
+forecast_files <- list.files("human-forecasts/processed-forecast-data/")
+file_paths <- paste0("human-forecasts/processed-forecast-data/", forecast_files)
 
 forecasts <- lapply(file_paths, readr::read_csv) %>%
     dplyr::bind_rows() %>%
@@ -30,10 +36,9 @@ obs <- dplyr::bind_rows(deaths_inc, cases_inc) %>%
     dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
     dplyr::filter(epiweek >= lubridate::epiweek(Sys.Date()) - 10)
 
-combined <- dplyr::inner_join(obs, forecasts)
-
-combined_full <- dplyr::left_join(obs, forecasts)
-
+combined <- dplyr::inner_join(obs, forecasts, 
+                              by = c("location", "location_name", 
+                                     "target_end_date", "inc", "type"))
 
 
 scores <- scoringutils::eval_forecasts(combined, 
@@ -86,10 +91,6 @@ ui <- fluidPage(
                     
                     )
              )
-    
-    
-    
-         
 )
 
 
@@ -112,7 +113,6 @@ server <- function(input, output) {
     })
     
     output$interval_coverage <- renderPlot({
-        
         scoringutils::interval_coverage(scores_coverage, 
                                         colour = "forecaster_id")
     })
@@ -123,7 +123,6 @@ server <- function(input, output) {
     })
     
     output$predictions_germany <- renderPlot({
-        
         if(input$forecaster_selection == "all") {
             library(ggplot2)
             ggplot() + 
@@ -143,7 +142,6 @@ server <- function(input, output) {
     })
     
     output$predictions_poland <- renderPlot({
-        
         if(input$forecaster_selection == "all") {
             library(ggplot2)
             ggplot() + 
@@ -159,22 +157,8 @@ server <- function(input, output) {
                                                add_truth_data = obs %>%
                                                    dplyr::filter(location_name == "Germany"))
         }
-        
     })
-    
-    
-    
-    
 }
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
-# 
-# 
-# if (input$forecaster_selection == "all") {
-#     scoringutils::score_table(scores)
-# } else {
-#     scoringutils::score_table(scores %>%
-#                                   dplyr::filter(forecaster_id == input$forecaster_selection))
-# }
