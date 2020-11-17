@@ -71,7 +71,7 @@ output$p_distr <- renderPlotly({
     add_trace(x = x_pred(),
               y = rv$median, type = "scatter",
               name = 'median prediction',mode = 'lines+markers', color = I("dark green")) %>%
-    layout(title = paste(input$selection), list(
+    layout(title = paste(input$selection, "- weekly"), list(
       xanchor = "left"
     )) %>%
     layout(xaxis = list(range = c(min(x()), max(x_pred()) + 5))) %>%
@@ -290,111 +290,53 @@ observeEvent(input$width_4,
              priority = 99)
 
 
-
-
-
+l <- list()
 
 observeEvent(input$tooltip,
              {
+               
+               tooltips <- list(list(id = "tooltip", 
+                                     title = "Toggle tooltips on and off"), 
+                                list(id = "baseline_model", 
+                                     title = "Select a baseline model. This will reset all your forecasts."), 
+                                list(id = "selection", 
+                                     title = "Select location and data type"), 
+                                list(id = "num_past_obs", 
+                                     title = "Change the number of past weeks to show on the plot"), 
+                                list(id = "plotscale", 
+                                     title = "Show plot on a log or linear scale"), 
+                                list(id = "reset", 
+                                     title = "Use this to reset all forecast to their previous default values"), 
+                                list(id = "plotpanel1", 
+                                     title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation."),
+                                list(id = "distribution", 
+                                     title = "Pick a distribution for your forecast. This allows you to specify the skew of your forecast flexibly. The behaviour of the width parameter will change according to the distribution you choose. Press update for changes to take effect"), 
+                                list(id = "median_forecast_1", 
+                                     title = "Change the median forecast. This will work no matter which distribution you choose"), 
+                                list(id = "width_1", 
+                                     title = "Change the width of your forecast. This will behave differently depending on the chosen distribution."), 
+                                list(id = "propagate_1", 
+                                     title = "Press to propagate changes forward to following weeks"), 
+                                list(id = "update_1", 
+                                     title = "Press for changes to take effect"), 
+                                list(id = "submit", 
+                                     title = "You can submit multiple times, but only the last submission will be counted."))
+               
+               addTooltip_helper <- function(args) {
+                 args <- c(session, args)
+                 do.call(addTooltip, args)
+               }
+               
+               removeTooltip_helper <- function(args) {
+                 do.call(removeTooltip, list(session = session, id = args$id))
+               }
+               
                if (input$tooltip == "yes") {
-                 addTooltip(session = session, 
-                            id = "tooltip", 
-                            title = "Toggle tooltips on and off", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "tooltip", 
-                            title = "Toggle tooltips on and off", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "baseline_model", 
-                            title = "Select a baseline model. This will reset all your forecasts.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 
-                 addTooltip(session = session, 
-                            id = "selection", 
-                            title = "Select location and data type", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "num_past_obs", 
-                            title = "Change the number of past weeks to show on the plot", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "plotscale", 
-                            title = "Show plot on a log or linear scale", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "reset", 
-                            title = "Use this to reset all forecast to their previous default values", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "plotpanel1", 
-                            title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "distribution", 
-                            title = "Pick a distribution for your forecast. This allows you to specify the skew of your forecast flexibly. The behaviour of the width parameter will change according to the distribution you choose. Press update for changes to take effect", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 
-                 addTooltip(session = session, 
-                            id = "median_forecast_1", 
-                            title = "Change the median forecast. This will work no matter which distribution you choose", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "width_1", 
-                            title = "Change the width of your forecast. This will behave differently depending on the chosen distribution.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "propagate_1", 
-                            title = "Press to propagate changes forward to following weeks", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "update_1", 
-                            title = "Press for changes to take effect", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-                 addTooltip(session = session, 
-                            id = "submit", 
-                            title = "You can submit multiple times, but only the last submission will be counted.", 
-                            placement = "bottom", trigger = "hover",
-                            options = NULL)
-               } else {
-                 removeTooltip(session = session, id = "tooltip")
-                 removeTooltip(session = session, id = "baseline_model")
-                 removeTooltip(session = session, id = "selection")
-                 removeTooltip(session = session, id = "num_past_obs")
-                 removeTooltip(session = session, id = "plotscale")
-                 removeTooltip(session = session, id = "reset")
-                 removeTooltip(session = session, id = "plotpanel_q")
-                 removeTooltip(session = session, id = "median_forecast_1_q")
-                 removeTooltip(session = session, id = "lower_90_forecast_q")
-                 removeTooltip(session = session, id = "upper_90_forecast_q")
-                 removeTooltip(session = session, id = "propagate_1_q")
-                 removeTooltip(session = session, id = "update_1_q")
-                 removeTooltip(session = session, id = "submit_q")
+                 purrr::walk(.x = tooltips, .f = addTooltip_helper) }
+               else {
+                 purrr::walk(.x = tooltips, .f = removeTooltip_helper)
                }
              })
-
-
 
 
 # Plot with daily cases
