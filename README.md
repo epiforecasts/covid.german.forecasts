@@ -26,12 +26,4 @@ Data on test positive Covid-19 cases and deaths linked to Covid-19 were download
 
 Forecasts will be scored using proper scoring rules from [`scoringutils`](https://github.com/epiforecasts/scoringutils) and ensembled using [`quantgen`](https://github.com/ryantibs/quantgen) with the resulting ensembles also evaluated using using the same evaluation metrics. 
 
-## Results
 
-### Forecasts
-
-### Evaluation
-
-## Discussion
-
-## References
