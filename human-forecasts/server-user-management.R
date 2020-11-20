@@ -42,6 +42,8 @@ observeEvent(credentials()$user_auth,
                showModal(modalDialog(
                  loginUI(id = "login"),
                  br(), 
+                 fluidRow(column(12, h4("Note: If the app doesn't fit on your screen we highly recommend you zoom out a bit"))),
+                 br(),
                  actionButton(inputId = "new_user", 
                               label = "Create New User"),
                  footer = NULL

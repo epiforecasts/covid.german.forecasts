@@ -1,7 +1,4 @@
-conditionalPanel(
-  condition = "output.condition_distribution == true",
-
-fluidRow(column(9, 
+fluidRow(column(9,
                 tabsetPanel(type = "tabs",
                             id = "plotpanel",
                             tabPanel("Make a Forecast", plotlyOutput("p_distr", height = "800px")),
@@ -94,6 +91,4 @@ fluidRow(column(9,
                                               label = "Do you have any additional comments, suggestions, feedback?"))), 
                 fluidRow(column(12, HTML('Preferably, you can submit an issue on <a href="https://github.com/epiforecasts/covid-german-forecasts">github</a>')))
          )
-)
-
 )
