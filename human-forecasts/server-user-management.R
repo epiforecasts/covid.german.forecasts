@@ -3,6 +3,8 @@
 user_base <- googlesheets4::read_sheet(ss = identification_sheet, 
                                        sheet = "ids")
 
+animal_list <- readr::read_csv("animals.csv")$Animal
+
 identification <- reactiveVal()
 
 
@@ -122,11 +124,50 @@ observeEvent(input$consent,
 observeEvent(input$createnew2,
              {
                if ((input$username != "") && (input$password != "")) {
-                 if (input$password != input$password2) {
+                 existing_users <- unique(user_base$username)
+                 
+                 if (input$username %in% existing_users) {
+                   showNotification("Username already taken", type = "error")
+                 } else if (input$password != input$password2) {
                    showNotification("Passwords don't match", type = "error")
                  } else {
                    showNotification("New user created", type = "message")
                    removeModal()
+                   
+                   generate_random_id <- function() {
+                     existing_ids <- unique(user_base$forecast_id)
+                     id <- round(runif(1) * 1000000)
+                     while (id %in% existing_ids) {
+                       id <- round(runif(1) * 1000000)
+                     }
+                     return(id)
+                   }
+                   
+                   create_leaderboard_name <- function() {
+                     if (input$appearboard == "yes") {
+                       board_name <- input$username
+                     } else {
+                       existing_names <- unique(user_base$board_name)
+                       
+                       used_animals <- gsub(".*_","", existing_names)
+                       free_animals <- setdiff(animal_list, used_animals)
+                       
+                       if (length(free_animals) > 0) {
+                         n <- length(free_animals)
+                         index <- sample(x = 1:n, size = 1)
+                         board_name = paste0("anonymous_", free_animals[index])
+                       } else {
+                         # make this more flexible in the future
+                         animal_list <- paste0(animal_list, "_2")
+                         free_animals <- setdiff(animal_list, used_animals)
+                         n <- length(free_animals)
+                         index <- sample(x = 1:n, size = 1)
+                         board_name = paste0("anonymous_", free_animals[index])
+                       }
+                     }
+                     return(board_name) 
+                   }
+                   
                    identification <- data.frame(forecaster = input$name, 
                                                 username = input$username,
                                                 password = sodium::password_store(input$password),
@@ -135,7 +176,8 @@ observeEvent(input$createnew2,
                                                 appearboard = input$appearboard,
                                                 affiliation = stringr::str_to_lower(input$affiliation),
                                                 website = stringr::str_to_lower(input$affiliationsite),
-                                                forecaster_id = round(runif(1) * 1000000))
+                                                forecaster_id = generate_random_id(), 
+                                                board_name = create_leaderboard_name())
                    
                    # assign data.frame with identification values to the 
                    # reactive identification sheet

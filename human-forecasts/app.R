@@ -14,7 +14,7 @@ library(magrittr)
 # ------------------------------------------------------------------------------
 
 # define how long this app should accept forecasts -----------------------------
-app_end_date <- "2020-11-17 12:00:00" # Time is UTC
+app_end_date <- "2020-11-25 12:00:00" # Time is UTC
 
 
 # google authentification and connection ---------------------------------------
@@ -86,7 +86,7 @@ ui <- fluidPage(
                   conditionalPanel(condition = "input.condition == 'distribution'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by providing the a median prediction and a 90% prediction interval.
-                                   You can also change the forecast mode."))),
+                                   From next week on can also change the forecast mode."))),
                   conditionalPanel(condition = "input.condition == 'quantile'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by specifying the median and width of a predictive distribution.
@@ -95,7 +95,7 @@ ui <- fluidPage(
            column(3,
                   style = 'padding-top: 40px',
                   radioButtons(inputId = "condition", label = "Change Forecast mode", 
-                               choices = c("distribution", "quantile"), 
+                               choices = c("distribution", "distribution"), 
                                inline = TRUE,
                                selected = sample(c("distribution", 
                                                    "distribution"), size = 1)))),
@@ -168,22 +168,22 @@ server <- function(input, output, session) {
   #   !condition_distribution
   # })
   # 
-  # # randomise the baseline model that is shown
-  # baseline_model <- sample(c("zero", "constant"), size = 1)
-  # output$baseline_model <- reactive({
-  #   baseline_model
-  # })
+  # randomise the baseline model that is shown
+  baseline_model <- sample(c("zero", "constant"), size = 1)
+  output$baseline_model <- reactive({
+    baseline_model
+  })
   # 
   # outputOptions(output, 'condition_distribution', 
   #               suspendWhenHidden = FALSE)
   # outputOptions(output, 'condition_quantile', 
   #               suspendWhenHidden = FALSE)
-  # outputOptions(output, 'baseline_model', 
-  #               suspendWhenHidden = FALSE)
+  outputOptions(output, 'baseline_model',
+                suspendWhenHidden = FALSE)
   
   # store conditions and changes in conditions ---------------------------------
   condition <- reactiveValues(
-    intial = NULL,
+    initial = NULL,
     current = NULL
   )
   counter <- reactiveVal(value = 0)
@@ -192,6 +192,7 @@ server <- function(input, output, session) {
                {
                  if (counter() == 0) {
                    condition$initial <- input$condition
+                   condition$current <- input$condition
                  } else {
                    condition$current <- input$condition
                  }
@@ -395,6 +396,10 @@ server <- function(input, output, session) {
                    showNotification("Your forecasts don't match your inputs yet. Please press 'update' for all changes to take effect and submit again.", type = "error")
                  } else {
                    
+                   print(condition$current)
+                   print(baseline_model)
+                   print(input$baseline_model)
+                   
                    submissions <- data.frame(forecaster_id = identification()$forecaster_id, 
                                              location = unique(df()$location),
                                              location_name = location_input(),
@@ -405,7 +410,7 @@ server <- function(input, output, session) {
                                              forecast_week = lubridate::epiweek(Sys.Date()),
                                              expert = identification()$expert,
                                              leader_board = identification()$appearboard,
-                                             name_board = "NA",
+                                             name_board = identification()$board_name,
                                              assigned_forecast_type = condition$initial,
                                              forecast_type = condition$current,
                                              distribution = input$distribution,
@@ -418,16 +423,6 @@ server <- function(input, output, session) {
                                              assigned_baseline_model = baseline_model,
                                              chosen_baseline_model = input$baseline_model,
                                              comments = comments())
-                   if(identification()$appearboard == "anonymous") {
-                     submissions <- dplyr::mutate(submissions, 
-                                                  name_board = "anonymous")
-                   } else if (identification()$appearboard == "yes") {
-                     submissions <- dplyr::mutate(submissions, 
-                                                 name_board = identification()$username)
-                   } else {
-                     submissions <- dplyr::mutate(submissions, 
-                                                  name_board = "none")
-                   }
                    
                    print("submitting")
                    

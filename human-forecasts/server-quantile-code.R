@@ -136,8 +136,9 @@ output$name_field_q <- renderUI({
   str2 <- paste0("<b>Email</b>: ", identification()$email)
   str3 <- paste0("<b>Expert</b>: ", identification()$expert)
   str4 <- paste0("<b>Appear on Performance Board</b>: ", identification()$appearboard)
+  str41 <- paste0("<b>Name Performance Board</b>: ", identification()$board_name)
   str5 <- paste0("<b>Affiliation</b>: ", identification()$affiliation, ". ", identification()$website)
-  HTML(paste(str1, str11, str2, str3, str4, str5, sep = '<br/>'))
+  HTML(paste(str1, str11, str2, str3, str41, str5, sep = '<br/>'))
 })
 
 
