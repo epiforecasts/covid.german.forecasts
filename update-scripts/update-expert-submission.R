@@ -1,6 +1,7 @@
 library(googledrive)
 library(googlesheets4)
 library(dplyr)
+library(purrr)
 
 
 # Google sheets authentification -----------------------------------------------
@@ -152,10 +153,25 @@ data.table::fwrite(forecast_quantiles,
                    here::here("human-forecasts", "processed-forecast-data", 
                               paste0(submission_date, "-processed-forecasts.csv")))
 
+# also read all EpiNow2 forecasts, give them a board_name 
+folders <- list.files("submissions/rt-forecasts/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/rt-forecasts/", 
+                                                 folder_name))
+                      paste(paste0("submissions/rt-forecasts/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiNow2")
+data.table::fwrite(epinow_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
+
 # copy data into human forecast performance board app
 file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
           to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
-
 
 if (median_ensemble) {
   # make median ensemble ---------------------------------------------------------
