@@ -46,3 +46,4 @@ regional_epinow(reported_cases = cases,
                                     all_regions = TRUE),
                 logs = "rt-forecast/logs/cases", verbose = TRUE)
 
+plan("sequential")

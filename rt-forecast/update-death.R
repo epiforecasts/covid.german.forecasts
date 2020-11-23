@@ -47,3 +47,4 @@ regional_epinow(reported_cases = deaths,
                 logs = "rt-forecast/logs/deaths",
                 verbose = TRUE)
 
+plan("sequential")
