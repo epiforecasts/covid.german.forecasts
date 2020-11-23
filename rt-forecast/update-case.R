@@ -21,7 +21,7 @@ cases <- cases[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(cases, region, date)
 
 # Set up parallel execution -----------------------------------------------
-setup_future(cases, min_cores_per_worker = 2)
+setup_future(cases, min_cores_per_worker = 4)
 
 # Run Rt estimation -------------------------------------------------------
 rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
@@ -34,8 +34,8 @@ regional_epinow(reported_cases = cases,
                 generation_time = generation_time, 
                 delays = delay_opts(incubation_period, onset_to_report),
                 rt = rt,
-                stan = stan_opts(samples = 2000, warmup = 250, chains = 2,
-                                 future = TRUE, max_execution_time = 45*60),
+                stan = stan_opts(samples = 2000, warmup = 250, chains = 4,
+                                 future = TRUE, max_execution_time = 30*60),
                 obs = obs_opts(scale = list(mean = 0.5, sd = 0.05)),
                 horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
