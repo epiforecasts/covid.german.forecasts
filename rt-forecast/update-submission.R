@@ -3,8 +3,7 @@ library(data.table)
 library(EpiNow2)
 
 # Dates -------------------------------------------------------------------
-target_date <- Sys.Date() - lubridate::days(1)
-
+target_date <- Sys.Date()
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(
   EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "data", "samples", "cases"),

@@ -21,7 +21,7 @@ deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(deaths, region, date)
 
 # Set up parallel execution -----------------------------------------------
-setup_future(deaths, min_cores_per_worker = 4)
+setup_future(deaths, min_cores_per_worker = 2)
 
 # Run Rt estimation -------------------------------------------------------
 # default Rt settings

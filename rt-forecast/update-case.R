@@ -21,7 +21,7 @@ cases <- cases[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(cases, region, date)
 
 # Set up parallel execution -----------------------------------------------
-setup_future(cases, min_cores_per_worker = 4)
+setup_future(cases, min_cores_per_worker = 2)
 
 # Run Rt estimation -------------------------------------------------------
 rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
