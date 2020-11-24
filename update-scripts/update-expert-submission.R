@@ -51,7 +51,8 @@ filtered_forecasts <- raw_forecasts %>%
   # if someone reconnecs and then accidentally resubmits under a different
   # condition should that be removed or not? 
   dplyr::group_by(forecaster_id, forecast_type, location, inc, type) %>%
-  dplyr::filter(forecast_time == max(forecast_time))
+  dplyr::filter(forecast_time == max(forecast_time)) %>%
+  dplyr::ungroup()
 
 
 # replace forecast duration with exact data about forecast date and time
@@ -60,7 +61,9 @@ replace_date_and_time <- function(forecasts) {
   forecast_times <- forecasts %>%
     dplyr::group_by(forecaster_id, location, type, inc) %>%
     dplyr::summarise(forecast_time = unique(forecast_time)) %>%
-    dplyr::arrange(forecast_time) %>%
+    dplyr::ungroup() %>%
+    dplyr::arrange(forecaster_id, forecast_time) %>%
+    dplyr::group_by(forecaster_id) %>%
     dplyr::mutate(forecast_duration = c(NA, diff(forecast_time))) %>%
     dplyr::ungroup()
   
@@ -96,7 +99,7 @@ calculate_quantiles <- function(quantile_grid,
                              lower_90, 
                              upper_90) {
   
-  if (forecast_type == "distribution_forecast") {
+  if (forecast_type == "distribution") {
     if (distribution == "log-normal") {
       values <- list(exp(qnorm(quantile_grid, 
                                mean = log(as.numeric(median)),
@@ -109,17 +112,17 @@ calculate_quantiles <- function(quantile_grid,
     } else if (distribution == "cubic-normal") {
       values <- list((qnorm(quantile_grid, 
                             mean = (as.numeric(median) ^ (1/3)),
-                            sd = as.numeric(width)))) ^ 3
+                            sd = as.numeric(width))) ^ 3)
       
     } else if (distribution == "fifth-power-normal") {
       values <- list((qnorm(quantile_grid, 
                             mean = (as.numeric(median) ^ (1/5)),
-                            sd = as.numeric(width)))) ^ 5
+                            sd = as.numeric(width))) ^ 5)
       
     } else if (distribution == "seventh-power-normal") {
       values <- list((qnorm(quantile_grid, 
                             mean = (as.numeric(median) ^ (1/7)),
-                            sd = as.numeric(width)))) ^ 7
+                            sd = as.numeric(width))) ^ 7)
     }
     
   } else if (forecast_type == "quantile_forecast") {
@@ -131,7 +134,7 @@ calculate_quantiles <- function(quantile_grid,
 
 forecast_quantiles <- filtered_forecasts %>%
   # disregard quantile forecasts this week
-  dplyr::filter(forecast_type == "distribution_forecast") %>%
+  dplyr::filter(forecast_type == "distribution") %>%
   dplyr::rowwise() %>%
   dplyr::mutate(quantile = list(quantile_grid),
                 value = calculate_quantiles(quantile_grid, 
