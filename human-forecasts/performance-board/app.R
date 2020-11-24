@@ -6,21 +6,22 @@ library(readr)
 library(dplyr)
 
 # if server
-# forecast_files <- list.files("processed-forecast-data/")
-# file_paths <- paste0("processed-forecast-data/", forecast_files)
+forecast_files <- list.files("processed-forecast-data/")
+file_paths <- paste0("processed-forecast-data/", forecast_files)
 
 # if local
-forecast_files <- list.files("human-forecasts/processed-forecast-data/")
-file_paths <- paste0("human-forecasts/processed-forecast-data/", forecast_files)
+# forecast_files <- list.files("human-forecasts/processed-forecast-data/")
+# file_paths <- paste0("human-forecasts/processed-forecast-data/", forecast_files)
 
 forecasts <- lapply(file_paths, readr::read_csv) %>%
     dplyr::bind_rows() %>%
-    dplyr::filter(inc == "incident", 
-                  type == "quantile") %>%
+    dplyr::filter(type == "quantile") %>%
     dplyr::rename(prediction = value) %>%
     dplyr::mutate(target_end_date = as.Date(target_end_date),
                   forecast_date = as.Date(target_end_date), 
                   type = ifelse(grepl("case", target), "cases", "deaths")) 
+
+
 
 deaths_inc <- data.table::fread(here::here("data", "weekly-incident-deaths.csv")) %>%
     dplyr::mutate(inc = "incident", 
@@ -30,7 +31,6 @@ cases_inc <- data.table::fread(here::here("data", "weekly-incident-cases.csv")) 
     dplyr::mutate(inc = "incident", 
                   type = "cases")
 
-
 obs <- dplyr::bind_rows(deaths_inc, cases_inc) %>%
     dplyr::rename(true_value = value) %>%
     dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
@@ -38,25 +38,25 @@ obs <- dplyr::bind_rows(deaths_inc, cases_inc) %>%
 
 combined <- dplyr::inner_join(obs, forecasts, 
                               by = c("location", "location_name", 
-                                     "target_end_date", "inc", "type"))
+                                     "target_end_date", "type"))
 
 
 scores <- scoringutils::eval_forecasts(combined, 
-                                       summarise_by = "forecaster_id") %>%
-    dplyr::mutate(forecaster_id = as.character(forecaster_id))
+                                       summarise_by = "board_name") %>%
+    dplyr::select(-quantile_coverage, -coverage)
 
 
 scores_coverage <- scoringutils::eval_forecasts(combined, 
-                                                summarise_by = c("forecaster_id", 
+                                                summarise_by = c("board_name", 
                                                                  "range", 
-                                                                 "quantile")) %>%
-    dplyr::mutate(forecaster_id = as.factor(forecaster_id))
+                                                                 "quantile"))
 
 forecasters <- c("all", 
-                 unique(forecasts$forecaster_id))
+                 unique(forecasts$board_name))
 
 
-# Define UI for application that draws a histogram
+
+
 ui <- fluidPage(
 
     # Application title
@@ -68,7 +68,8 @@ ui <- fluidPage(
                                 choices = forecasters)),
              column(10, 
                     fluidRow(column(12, 
-                                    h2("All applaud the glorious leader"),
+                                    h2("Overall performance"),
+                                    h5("Note that this comparison is not fair as it comapres many different time points and favours new forecasters. This will be changed in the future"),
                                     tableOutput("table"))),
                     
                     h3("Score overview"), 
@@ -98,13 +99,8 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
     
-    ids <- data.frame(forecaster_id = as.character(c("332193", "991083", "424666", 
-                                                  "188218", "492860", "419395")), 
-                      name = c("Sophie", "Joel", "Seb", "Nikos", "Sam", "Kath"))
-    
     output$table <- renderTable({
-        dplyr::inner_join(ids, scores) %>%
-            dplyr::select(forecaster_id, interval_score, name) %>%
+        scores %>%
             dplyr::arrange(interval_score)
     })
 
@@ -114,12 +110,12 @@ server <- function(input, output) {
     
     output$interval_coverage <- renderPlot({
         scoringutils::interval_coverage(scores_coverage, 
-                                        colour = "forecaster_id")
+                                        colour = "board_name")
     })
     
     output$quantile_coverage <- renderPlot({
         scoringutils::quantile_coverage(scores_coverage, 
-                                        colour = "forecaster_id")
+                                        colour = "board_name")
     })
     
     output$predictions_germany <- renderPlot({
@@ -131,7 +127,7 @@ server <- function(input, output) {
                 theme_void()
         } else {
             combined %>%
-                dplyr::filter(forecaster_id == input$forecaster_selection, 
+                dplyr::filter(board_name == input$forecaster_selection, 
                               location_name == "Germany") %>%
                 scoringutils::plot_predictions(x = "target_end_date", 
                                                facet_formula = type ~ horizon, 
@@ -150,7 +146,7 @@ server <- function(input, output) {
                 theme_void()
         } else {
             combined %>%
-                dplyr::filter(forecaster_id == input$forecaster_selection, 
+                dplyr::filter(board_name == input$forecaster_selection, 
                               location_name == "Poland") %>%
                 scoringutils::plot_predictions(x = "target_end_date", 
                                                facet_formula = type ~ horizon, 

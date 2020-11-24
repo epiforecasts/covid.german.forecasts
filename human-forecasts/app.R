@@ -14,7 +14,8 @@ library(magrittr)
 # ------------------------------------------------------------------------------
 
 # define how long this app should accept forecasts -----------------------------
-app_end_date <- "2020-11-25 12:00:00" # Time is UTC
+app_end_date <- "2021-11-25 12:00:00" # Time is UTC
+is_updated <- FALSE
 
 
 # google authentification and connection ---------------------------------------
@@ -83,10 +84,10 @@ ui <- fluidPage(
                   tipify(h1("Covid-19 Crowd Forecast"), 
                          title = "If you can't see the entire user interface, 
                          you may want to zoom out in your browser."),
-                  conditionalPanel(condition = "input.condition == 'distribution'",
+                conditionalPanel(condition = "input.condition == 'distribution'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by providing the a median prediction and a 90% prediction interval.
-                                   From next week on can also change the forecast mode."))),
+                                   From next week on you can also change the forecast mode."))),
                   conditionalPanel(condition = "input.condition == 'quantile'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by specifying the median and width of a predictive distribution.
@@ -257,7 +258,12 @@ server <- function(input, output, session) {
   
   # obtain the x-values (i.e. the dates) of the period to be predicted
   x_pred <- reactive({
-    max(x()) + seq(7, 28, 7)
+    if (is_updated) {
+      max(x()) + seq(7, 28, 7)
+    } else {
+      max(x()) + seq(14, 35, 7)
+    }
+    
   })
   
   # subset daily case data according to selection for reference plot
