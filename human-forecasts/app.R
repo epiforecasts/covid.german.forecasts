@@ -14,7 +14,7 @@ library(magrittr)
 # ------------------------------------------------------------------------------
 
 # define how long this app should accept forecasts -----------------------------
-app_end_date <- "2020-11-25 12:00:00" # Time is UTC
+app_end_date <- "2021-11-25 12:00:00" # Time is UTC
 is_updated <- FALSE
 
 
@@ -87,7 +87,7 @@ ui <- fluidPage(
                 conditionalPanel(condition = "input.condition == 'distribution'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by providing the a median prediction and a 90% prediction interval.
-                                   From next week on can also change the forecast mode."))),
+                                   From next week on you can also change the forecast mode."))),
                   conditionalPanel(condition = "input.condition == 'quantile'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by specifying the median and width of a predictive distribution.
