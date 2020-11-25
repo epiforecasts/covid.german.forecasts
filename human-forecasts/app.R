@@ -16,6 +16,7 @@ library(magrittr)
 # define how long this app should accept forecasts -----------------------------
 app_end_date <- "2021-11-25 12:00:00" # Time is UTC
 is_updated <- FALSE
+submission_date <- as.Date("2020-11-30")
 
 
 # google authentification and connection ---------------------------------------
@@ -428,7 +429,8 @@ server <- function(input, output, session) {
                                              target_end_date = x_pred(), 
                                              assigned_baseline_model = baseline_model,
                                              chosen_baseline_model = input$baseline_model,
-                                             comments = comments())
+                                             comments = comments(), 
+                                             submission_date = submission_date)
                    
                    print("submitting")
                    
