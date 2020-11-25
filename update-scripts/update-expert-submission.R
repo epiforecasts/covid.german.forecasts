@@ -72,7 +72,7 @@ replace_date_and_time <- function(forecasts) {
                                         "type", "forecast_time")) %>%
     dplyr::mutate(forecast_week = lubridate::epiweek(forecast_date), 
                   target_end_date = as.Date(target_end_date)) %>%
-    dplyr::select(-forecast_time, -forecast_date)
+    dplyr::select(-forecast_time)
   
   return(forecasts)
 }
@@ -83,9 +83,9 @@ filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 
 # write raw forecasts
 data.table::fwrite(raw_forecasts %>%
-                     dplyr::select(-name_board),
-                   here::here("human-forecasts", "raw-forecast-data", 
-                              paste0(submission_date, "-raw-forecasts.csv")))
+                     dplyr::select(-board_named),
+                   paste0("human-forecasts/raw-forecast-data/", 
+                          submission_date, "-raw-forecasts.csv"))
 
 
 # obtain quantiles from forecasts ----------------------------------------------
@@ -153,8 +153,8 @@ forecast_quantiles <- filtered_forecasts %>%
 
 # save forecasts in quantile-format
 data.table::fwrite(forecast_quantiles,
-                   here::here("human-forecasts", "processed-forecast-data", 
-                              paste0(submission_date, "-processed-forecasts.csv")))
+                   paste0("human-forecasts/processed-forecast-data/", 
+                          submission_date, "-processed-forecasts.csv"))
 
 # also read all EpiNow2 forecasts, give them a board_name 
 folders <- list.files("submissions/rt-forecasts/")
@@ -168,7 +168,12 @@ files <- purrr::map(folders,
                     }) %>%
   unlist()
 epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
-  dplyr::mutate(board_name = "EpiNow2")
+  dplyr::mutate(board_name = "EpiNow2", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
 data.table::fwrite(epinow_forecasts, 
                    "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
 
