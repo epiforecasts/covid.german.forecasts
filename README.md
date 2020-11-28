@@ -22,7 +22,7 @@ Data on test positive Covid-19 cases and deaths linked to Covid-19 were download
 
 [`EpiExpert`](https://cmmid-lshtm.shinyapps.io/crowd-forecast/) is an ensemble of crowd opinion, both expert and non-expert.
 
-### Evaluation
+### [Evaluation](https://github.com/epiforecasts/GM-PL-forecast-evaluation)
 
 Forecasts will be scored using proper scoring rules from [`scoringutils`](https://github.com/epiforecasts/scoringutils) and ensembled using [`quantgen`](https://github.com/ryantibs/quantgen) with the resulting ensembles also evaluated using using the same evaluation metrics. 
 
