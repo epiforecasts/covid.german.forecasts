@@ -104,8 +104,8 @@ observeEvent(event_data("plotly_relayout"),
                  #                    value = round(y_coord, 2))
                } 
                
-               update_values()
-               update_numeric_inputs()
+               update_values_q()
+               update_numeric_inputs_q()
                
              })
 
@@ -136,12 +136,13 @@ output$name_field_q <- renderUI({
   str2 <- paste0("<b>Email</b>: ", identification()$email)
   str3 <- paste0("<b>Expert</b>: ", identification()$expert)
   str4 <- paste0("<b>Appear on Performance Board</b>: ", identification()$appearboard)
+  str41 <- paste0("<b>Name Performance Board</b>: ", identification()$board_name)
   str5 <- paste0("<b>Affiliation</b>: ", identification()$affiliation, ". ", identification()$website)
-  HTML(paste(str1, str11, str2, str3, str4, str5, sep = '<br/>'))
+  HTML(paste(str1, str11, str2, str3, str41, str5, sep = '<br/>'))
 })
 
 
-update_values <- function(horizon = NULL) {
+update_values_q <- function(horizon = NULL) {
   
   if (is.null(horizon)) {
     steps <- 1:4
@@ -159,7 +160,7 @@ update_values <- function(horizon = NULL) {
 }
 
 
-update_numeric_inputs <- function() {
+update_numeric_inputs_q <- function() {
   for (i in 1:4) {
     
     updateNumericInput(session,
@@ -185,7 +186,7 @@ observeEvent(c(input$propagate_1_q),
                  rv$lower_90_latent[i] <- rv$lower_90_latent[1]
                  rv$upper_90_latent[i] <- rv$upper_90_latent[1]
                }
-               update_numeric_inputs()
+               update_numeric_inputs_q()
              })
 
 observeEvent(c(input$propagate_2_q), 
@@ -195,7 +196,7 @@ observeEvent(c(input$propagate_2_q),
                  rv$lower_90_latent[i] <- rv$lower_90_latent[2]
                  rv$upper_90_latent[i] <- rv$upper_90_latent[2]
                }
-               update_numeric_inputs()
+               update_numeric_inputs_q()
              })
 
 
@@ -206,7 +207,7 @@ observeEvent(c(input$propagate_3_q),
                  rv$lower_90_latent[i] <- rv$lower_90_latent[3]
                  rv$upper_90_latent[i] <- rv$upper_90_latent[3]
                }
-               update_numeric_inputs()
+               update_numeric_inputs_q()
              })
 
 
@@ -215,25 +216,21 @@ observeEvent(c(input$propagate_3_q),
 observeEvent(input$median_forecast_1_q,
              {
                rv$median_latent[1] <- input$median_forecast_1_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$median_forecast_2_q,
              {
                rv$median_latent[2] <- input$median_forecast_2_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$median_forecast_3_q,
              {
                rv$median_latent[3] <- input$median_forecast_3_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$median_forecast_4_q,
              {
                rv$median_latent[4] <- input$median_forecast_4_q
-               # update_values()
              }, 
              priority = 99)
 
@@ -241,52 +238,44 @@ observeEvent(input$median_forecast_4_q,
 observeEvent(input$upper_90_forecast_1_q,
              {
                rv$upper_90_latent[1] <- input$upper_90_forecast_1_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$upper_90_forecast_2_q,
              {
                rv$upper_90_latent[2] <- input$upper_90_forecast_2_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$upper_90_forecast_3_q,
              {
                rv$upper_90_latent[3] <- input$upper_90_forecast_3_q
-               # update_values()
              }, 
              priority = 99)
 
 observeEvent(input$upper_90_forecast_4_q,
              {
                rv$upper_90_latent[4] <- input$upper_90_forecast_4_q
-               # update_values()
              }, 
              priority = 99)
 
 observeEvent(input$lower_90_forecast_1_q,
              {
                rv$lower_90_latent[1] <- input$lower_90_forecast_1_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$lower_90_forecast_2_q,
              {
                rv$lower_90_latent[2] <- input$lower_90_forecast_2_q
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$lower_90_forecast_3_q,
              {
                rv$lower_90_latent[3] <- input$lower_90_forecast_3_q
-               # update_values()
              }, 
              priority = 99)
 
 observeEvent(input$upper_90_forecast_4_q,
              {
                rv$lower_90_latent[4] <- input$lower_90_forecast_4_q
-               # update_values()
              }, 
              priority = 99)
 
@@ -294,55 +283,7 @@ observeEvent(input$upper_90_forecast_4_q,
 # update
 observeEvent(c(input$update_q), 
              {
-               update_values()
+               update_values_q()
              })
-
-
-
-observeEvent(input$tooltip,
-             {
-               tooltips <- list(list(id = "tooltip", 
-                                     title = "Toggle tooltips on and off"), 
-                                list(id = "baseline_model", 
-                                     title = "Select a baseline model. This will reset all your forecasts."), 
-                                list(id = "selection", 
-                                     title = "Select location and data type"), 
-                                list(id = "num_past_obs", 
-                                     title = "Change the number of past weeks to show on the plot"), 
-                                list(id = "plotscale", 
-                                     title = "Show plot on a log or linear scale"), 
-                                list(id = "reset", 
-                                     title = "Use this to reset all forecast to their previous default values"), 
-                                list(id = "plotpanel_q", 
-                                     title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation."),
-                                list(id = "median_forecast_1_q", 
-                                     title = "Change the median forecast. This will work no matter which distribution you choose"), 
-                                list(id = "lower_90_forecast_1_q", 
-                                     title = "Change the lower bound of the 90% prediction interval."), 
-                                list(id = "upper_90_forecast_1_q", 
-                                     title = "Change the upper bound of the 90% prediction interval."), 
-                                list(id = "propagate_1_q", 
-                                     title = "Press to propagate changes forward to following weeks"), 
-                                list(id = "update_1_q", 
-                                     title = "Press for changes to take effect"), 
-                                list(id = "submit_q", 
-                                     title = "You can submit multiple times, but only the last submission will be counted."))
-               
-               addTooltip_helper <- function(args) {
-                 args <- c(session, args)
-                 do.call(addTooltip, args)
-               }
-               
-               removeTooltip_helper <- function(args) {
-                 do.call(removeTooltip, list(session = session, id = args$id))
-               }
-               
-               if (input$tooltip == "yes") {
-                 purrr::walk(.x = tooltips, .f = addTooltip_helper) }
-               else {
-                 purrr::walk(.x = tooltips, .f = removeTooltip_helper)
-               }
-             })
-
 
 

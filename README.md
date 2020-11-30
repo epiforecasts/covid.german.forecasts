@@ -20,9 +20,9 @@ Data on test positive Covid-19 cases and deaths linked to Covid-19 were download
 
 [`EpiNow2`](https://epiforecasts.io/EpiNow2/) is an exponential growth model that uses a time-varying Rt trajectory to predict latent infections, and then convolves these infections using known delays to observations, via a negative binomial model coupled with a day of the week effect. It makes limited assumptions and is not tuned to the specifities of Covid in Germany and Poland beyond epidemioligical details such as literature estimates of the generation time, incubation period and the populatin of each area. The method and underlying theory are under active development with more details available [here](https://epiforecasts.io/covid/methods).
 
-`EpiExpert` is an ensemble of crowd opinion, both expert and non-expert.
+[`EpiExpert`](https://cmmid-lshtm.shinyapps.io/crowd-forecast/) is an ensemble of crowd opinion, both expert and non-expert.
 
-### Evaluation
+### [Evaluation](https://github.com/epiforecasts/GM-PL-forecast-evaluation)
 
 Forecasts will be scored using proper scoring rules from [`scoringutils`](https://github.com/epiforecasts/scoringutils) and ensembled using [`quantgen`](https://github.com/ryantibs/quantgen) with the resulting ensembles also evaluated using using the same evaluation metrics. 
 

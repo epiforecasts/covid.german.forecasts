@@ -1,12 +1,11 @@
-conditionalPanel(
-  condition = "output.condition_distribution == true",
-
-fluidRow(column(9, 
+fluidRow(column(9,
                 tabsetPanel(type = "tabs",
                             id = "plotpanel",
                             tabPanel("Make a Forecast", plotlyOutput("p_distr", height = "800px")),
                             tabPanel("For Reference: Daily Cases",
-                                     plotlyOutput("plot_cases", height = "800px")))),
+                                     plotlyOutput("plot_cases", height = "800px")), 
+                            tabPanel("Additional info", 
+                                     fluidRow(column(12, HTML('<a href = "https://ourworldindata.org/grapher/covid-stringency-index?tab=chart&stackMode=absolute&time=2020-01-22..latest&country=DEU~POL&region=Europe">Stringency of restrictions in Germany and Poland</a>')))))),
          column(3, 
                 offset = 0,
                 style = 'padding: 20px; background-color: aliceblue',
@@ -94,6 +93,4 @@ fluidRow(column(9,
                                               label = "Do you have any additional comments, suggestions, feedback?"))), 
                 fluidRow(column(12, HTML('Preferably, you can submit an issue on <a href="https://github.com/epiforecasts/covid-german-forecasts">github</a>')))
          )
-)
-
 )

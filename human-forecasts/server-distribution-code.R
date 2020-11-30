@@ -241,25 +241,21 @@ observeEvent(c(input$update_1, input$update_2, input$update_3, input$update_4),
 observeEvent(input$median_forecast_1,
              {
                rv$median_latent[1] <- input$median_forecast_1
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$median_forecast_2,
              {
                rv$median_latent[2] <- input$median_forecast_2
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$median_forecast_3,
              {
                rv$median_latent[3] <- input$median_forecast_3
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$median_forecast_4,
              {
                rv$median_latent[4] <- input$median_forecast_4
-               # update_values()
              }, 
              priority = 99)
 
@@ -267,76 +263,24 @@ observeEvent(input$median_forecast_4,
 observeEvent(input$width_1,
              {
                rv$width_latent[1] <- input$width_1
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$width_2,
              {
                rv$width_latent[2] <- input$width_2
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$width_3,
              {
                rv$width_latent[3] <- input$width_3
-               # update_values()
              }, 
              priority = 99)
 observeEvent(input$width_4,
              {
                rv$width_latent[4] <- input$width_4
-               # update_values()
              }, 
              priority = 99)
 
-
-l <- list()
-
-observeEvent(input$tooltip,
-             {
-               
-               tooltips <- list(list(id = "tooltip", 
-                                     title = "Toggle tooltips on and off"), 
-                                list(id = "baseline_model", 
-                                     title = "Select a baseline model. This will reset all your forecasts."), 
-                                list(id = "selection", 
-                                     title = "Select location and data type"), 
-                                list(id = "num_past_obs", 
-                                     title = "Change the number of past weeks to show on the plot"), 
-                                list(id = "plotscale", 
-                                     title = "Show plot on a log or linear scale"), 
-                                list(id = "reset", 
-                                     title = "Use this to reset all forecast to their previous default values"), 
-                                list(id = "plotpanel", 
-                                     title = "Visualisation of the forecast/data. You can drag the points in the plot to alter predictions  forecasts. Toggle the tab to switch between forecast and data visualisation."),
-                                list(id = "distribution", 
-                                     title = "Pick a distribution for your forecast. This allows you to specify the skew of your forecast flexibly. The behaviour of the width parameter will change according to the distribution you choose. Press update for changes to take effect"), 
-                                list(id = "median_forecast_1", 
-                                     title = "Change the median forecast. This will work no matter which distribution you choose"), 
-                                list(id = "width_1", 
-                                     title = "Change the width of your forecast. This will behave differently depending on the chosen distribution."), 
-                                list(id = "propagate_1", 
-                                     title = "Press to propagate changes forward to following weeks"), 
-                                list(id = "update_1", 
-                                     title = "Press for changes to take effect"), 
-                                list(id = "submit", 
-                                     title = "You can submit multiple times, but only the last submission will be counted."))
-               
-               addTooltip_helper <- function(args) {
-                 args <- c(session, args)
-                 do.call(addTooltip, args)
-               }
-               
-               removeTooltip_helper <- function(args) {
-                 do.call(removeTooltip, list(session = session, id = args$id))
-               }
-               
-               if (input$tooltip == "yes") {
-                 purrr::walk(.x = tooltips, .f = addTooltip_helper) }
-               else {
-                 purrr::walk(.x = tooltips, .f = removeTooltip_helper)
-               }
-             })
 
 
 # Plot with daily cases
@@ -369,6 +313,7 @@ output$name_field <- renderUI({
   str2 <- paste0("<b>Email</b>: ", identification()$email)
   str3 <- paste0("<b>Expert</b>: ", identification()$expert)
   str4 <- paste0("<b>Appear on Performance Board</b>: ", identification()$appearboard)
+  str41 <- paste0("<b>Name Performance Board</b>: ", identification()$board_name)
   str5 <- paste0("<b>Affiliation</b>: ", identification()$affiliation, ". ", identification()$website)
-  HTML(paste(str1, str11, str2, str3, str4, str5, sep = '<br/>'))
+  HTML(paste(str1, str11, str2, str3, str41, str5, sep = '<br/>'))
 })
