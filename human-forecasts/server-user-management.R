@@ -41,10 +41,23 @@ observeEvent(credentials()$user_auth,
                }
                
              } else {
+               
+               if (is_updated) {
+                 data_update_message <- ""
+               } else {
+                 data_update_message <- "Data will be updated every Saturday (around 16.00 UTC). You can make forecasts regardless, but you will not have the last week of data."
+               }
+                
+               
                showModal(modalDialog(
                  loginUI(id = "login"),
                  br(), 
-                 fluidRow(column(12, h4("Note: If the app doesn't fit on your screen we highly recommend you zoom out a bit"))),
+                 fluidRow(column(12, 
+                                 style = 'padding-left: 15px; padding-right: 15px',
+                                 h4("Note: If the app doesn't fit on your screen we highly recommend you zoom out a bit"))),
+                 fluidRow(column(12, 
+                                 style = 'padding-left: 15px; padding-right: 15px',
+                                 h4(data_update_message))),
                  br(),
                  actionButton(inputId = "new_user", 
                               label = "Create New User"),

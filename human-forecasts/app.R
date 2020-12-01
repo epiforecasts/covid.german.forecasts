@@ -7,6 +7,7 @@ library(sodium)
 library(googledrive)
 library(googlesheets4)
 library(magrittr)
+library(shinydisconnect)
 
 
 # ------------------------------------------------------------------------------
@@ -15,7 +16,8 @@ library(magrittr)
 
 # define how long this app should accept forecasts -----------------------------
 app_end_date <- "2021-11-25 12:00:00" # Time is UTC
-is_updated <- FALSE
+is_updated <- TRUE
+submission_date <- as.Date("2020-11-30")
 
 
 # google authentification and connection ---------------------------------------
@@ -69,14 +71,19 @@ selection_names <- apply(selections, MARGIN = 1,
 
 
 
-
-
-
 # ------------------------------------------------------------------------------
 # ------------------------------------- UI -------------------------------------
 # ------------------------------------------------------------------------------
 
 ui <- fluidPage(
+  
+
+  
+  disconnectMessage('Whoops. Something went wrong and we are very sorry for that. If this happened before the even app started, this is likely an error caused by a large number of simultaneous logins. Please wait a short while and try again. If this happened before the even app started, this is likely an error caused by a large number of simultaneous logins. Please wait a short while and try again. If this happened during your session, a timeout maybe the reason (we tried to set the timer quite high, but it still occasionally happens. If this happened while trying to submit, we likely just messed something up. If you could provide some feedback by creating an issue on github (github.com/epiforecasts/covid-german-forecasts), this would be tremendously helfpul. You can also send us a message at nikos.bosse@lshtm.ac.uk. Thank you for your patience!', 
+                    background = "aliceblue", 
+                    width = 800),
+  
+  # actionButton("disconnect", "Disconnect the app"),
   
   shinyjs::useShinyjs(),
   
@@ -84,10 +91,11 @@ ui <- fluidPage(
                   tipify(h1("Covid-19 Crowd Forecast"), 
                          title = "If you can't see the entire user interface, 
                          you may want to zoom out in your browser."),
-                conditionalPanel(condition = "input.condition == 'distribution'",
+                  HTML('<b> To learn how you and others are doing, visit our <a href = "https://epiforecasts.io/covid-german-forecasts" target="_blank">evaluation and performance board</a>!'),
+                  conditionalPanel(condition = "input.condition == 'distribution'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by providing the a median prediction and a 90% prediction interval.
-                                   From next week on you can also change the forecast mode."))),
+                                   In the future you can probably also change the forecast mode."))),
                   conditionalPanel(condition = "input.condition == 'quantile'",
                                    fluidRow(column(12, 
                                                    "Please make a forecast by specifying the median and width of a predictive distribution.
@@ -118,7 +126,7 @@ ui <- fluidPage(
            column(2, 
                   conditionalPanel(condition = ("input.condition == 'distribution'"), # "output.condition_distribution", 
                                    checkboxGroupInput("ranges", "Prediction intervals to show", 
-                                                      choices = c("20%", "50%", "90%", "95%"), 
+                                                      choices = c("20%", "50%", "90%", "95%", "98%"), 
                                                       selected = c("50%", "90%"),
                                                       inline = TRUE))),
            column(2, selectInput("baseline_model", 
@@ -158,6 +166,10 @@ ui <- fluidPage(
 # ------------------------------------------------------------------------------
 
 server <- function(input, output, session) {
+  # 
+  # observeEvent(input$disconnect, {
+  #   session$close()
+  # })
   
   # # sample random conditions ---------------------------------------------------
   # # make forecasts using distributions or quantiles
@@ -428,7 +440,8 @@ server <- function(input, output, session) {
                                              target_end_date = x_pred(), 
                                              assigned_baseline_model = baseline_model,
                                              chosen_baseline_model = input$baseline_model,
-                                             comments = comments())
+                                             comments = comments(), 
+                                             submission_date = submission_date)
                    
                    print("submitting")
                    

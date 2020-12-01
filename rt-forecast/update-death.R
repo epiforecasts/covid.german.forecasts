@@ -21,7 +21,7 @@ deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
 data.table::setorder(deaths, region, date)
 
 # Set up parallel execution -----------------------------------------------
-setup_future(deaths, min_cores_per_worker = 2)
+no_cores <- setup_future(deaths)
 
 # Run Rt estimation -------------------------------------------------------
 # default Rt settings
@@ -34,9 +34,9 @@ regional_epinow(reported_cases = deaths,
                 generation_time = generation_time, 
                 delays = delay_opts(incubation_period, onset_to_death),
                 rt = rt,
-                stan = stan_opts(samples = 2000, warmup = 250, chains = 4,
-                                 future = TRUE, max_execution_time = 30*60), 
-                obs = obs_opts(scale = list(mean = 0.01, sd = 0.0025)),
+                stan = stan_opts(samples = 2000, warmup = 250, 
+                                 chains = 4, cores = no_cores), 
+                obs = obs_opts(scale = list(mean = 0.005, sd = 0.0025)),
                 horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
