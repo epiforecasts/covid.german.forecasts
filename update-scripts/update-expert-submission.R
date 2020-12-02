@@ -83,7 +83,7 @@ filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 
 # write raw forecasts
 data.table::fwrite(raw_forecasts %>%
-                     dplyr::select(-board_named),
+                     dplyr::select(-board_name),
                    paste0("human-forecasts/raw-forecast-data/", 
                           submission_date, "-raw-forecasts.csv"))
 
@@ -152,7 +152,8 @@ forecast_quantiles <- filtered_forecasts %>%
 
 
 # save forecasts in quantile-format
-data.table::fwrite(forecast_quantiles,
+data.table::fwrite(forecast_quantiles %>%
+                     dplyr::mutate(submission_date = submission_date),
                    paste0("human-forecasts/processed-forecast-data/", 
                           submission_date, "-processed-forecasts.csv"))
 
