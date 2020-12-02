@@ -4,13 +4,16 @@ library(data.table, quietly = TRUE)
 library(here, quietly = TRUE)
 library(future, quietly = TRUE)
 library(devtools, quietly = TRUE)
+library(lubridate, quietly = TRUE)
+library(ggplot2, quietly = TRUE)
+library(purrr, quietly = TRUE)
 
 # Set target date ---------------------------------------------------------
 target_date <- "2020-11-30" #as.character(Sys.Date()) 
 
 # Get Observations --------------------------------------------------------
-deaths <- fread(file.path("data", "daily-incidence-deaths-Germany_Poland.csv"))
-cases <- fread(file.path("data", "daily-incidence-cases-Germany_Poland.csv"))
+deaths <- fread(here("data", "daily-incidence-deaths-Germany_Poland.csv"))
+cases <- fread(here("data", "daily-incidence-cases-Germany_Poland.csv"))
 deaths <- deaths[, secondary := value][, value := NULL]
 cases <- cases[, primary := value][, value := NULL]
 observations <- merge(cases, deaths, by = c("location", "location_name", "date"))
@@ -21,8 +24,8 @@ setorder(observations, region, date)
 
 # Get case forecasts ------------------------------------------------------
 case_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "data", "samples", "cases"),
-                                date = lubridate::ymd(target_date),
+  EpiNow2::get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
+                                date = ymd(target_date),
                                 forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
 
 # Forecast deaths from cases ----------------------------------------------
@@ -42,5 +45,28 @@ forecast <- regional_secondary(observations, case_forecast,
                                burn_in = as.integer(max(observations$date) - min(observations$date)) - 4*7,
                                control = list(adapt_delta = 0.95, max_treedepth = 15))
 
+# Save results to disk ----------------------------------------------------
 
+samples_path <- here("rt-forecast", "data", "samples", "deaths-from-cases", target_date)
+summarised_path <- here("rt-forecast", "data", "summary", "deaths-from-cases", target_date)
 
+check_dir <- function(dir) {
+  if (!dir.exists(dir)) {
+    dir.create(dir, recursive = TRUE)
+  }
+  return(invisible(NULL))
+}
+check_dir(samples_path)
+check_dir(summarised_path)
+
+# save summary and samples
+fwrite(forecast$samples, file.path(samples_path, "samples.csv"))
+fwrite(forecast$summarised, file.path(summarised_path, "summary.csv"))
+
+# save plots 
+walk2(forecast$region, names(forecast$region), function(f, n) {
+  walk(1:length(f$plots),
+       ~ ggsave(filename = paste0(n, "-", names(f$plots)[.], ".png"), 
+                plot = f$plots[[.]], 
+                path = paste0(samples_path, "/")))
+  })
