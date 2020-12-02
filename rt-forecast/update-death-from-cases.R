@@ -46,16 +46,9 @@ forecast <- regional_secondary(observations, case_forecast,
                                control = list(adapt_delta = 0.95, max_treedepth = 15))
 
 # Save results to disk ----------------------------------------------------
-
+source(here("rt-forecast", "functions", "check-dir.R"))
 samples_path <- here("rt-forecast", "data", "samples", "deaths-from-cases", target_date)
 summarised_path <- here("rt-forecast", "data", "summary", "deaths-from-cases", target_date)
-
-check_dir <- function(dir) {
-  if (!dir.exists(dir)) {
-    dir.create(dir, recursive = TRUE)
-  }
-  return(invisible(NULL))
-}
 check_dir(samples_path)
 check_dir(summarised_path)
 
