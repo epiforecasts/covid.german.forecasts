@@ -14,8 +14,8 @@ target_date <- as.character(Sys.Date())
 # Get Observations --------------------------------------------------------
 deaths <- fread(here("data", "daily-incidence-deaths-Germany_Poland.csv"))
 cases <- fread(here("data", "daily-incidence-cases-Germany_Poland.csv"))
-deaths <- deaths[, secondary := value][, value := NULL]
-cases <- cases[, primary := value][, value := NULL]
+deaths <- setnames(deaths, "value", "secondary")
+cases <- setnames(deaths, "value", "primary")
 observations <- merge(cases, deaths, by = c("location", "location_name", "date"))
 observations <- observations[, .(region = as.character(location_name), date = as.Date(date), 
                                  primary, secondary)]
@@ -24,9 +24,9 @@ setorder(observations, region, date)
 
 # Get case forecasts ------------------------------------------------------
 case_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
-                                date = ymd(target_date),
-                                forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
+  get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
+                       date = ymd(target_date),
+                       forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
 
 # Forecast deaths from cases ----------------------------------------------
 # set up parallel options
