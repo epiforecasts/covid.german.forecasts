@@ -15,7 +15,7 @@ target_date <- as.character(Sys.Date())
 deaths <- fread(here("data", "daily-incidence-deaths-Germany_Poland.csv"))
 cases <- fread(here("data", "daily-incidence-cases-Germany_Poland.csv"))
 deaths <- setnames(deaths, "value", "secondary")
-cases <- setnames(deaths, "value", "primary")
+cases <- setnames(cases, "value", "primary")
 observations <- merge(cases, deaths, by = c("location", "location_name", "date"))
 observations <- observations[, .(region = as.character(location_name), date = as.Date(date), 
                                  primary, secondary)]
