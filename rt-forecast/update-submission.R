@@ -15,6 +15,8 @@ death_forecast <- suppressWarnings(
                                 date = lubridate::ymd(target_date),
                                 forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
 
+death_from_cases_forecast <- data.table::fread(here::here("rt-forecast", "data", "samples", "deaths-from-cases",
+                                                          target_date, "samples.csv"))
 # Format forecasts --------------------------------------------------------
 source(here::here("rt-forecast", "functions", "format-forecast.R"))
 
@@ -30,6 +32,12 @@ death_forecast <- format_forecast(death_forecast[, value := cases],
                                   forecast_date = target_date,
                                   submission_date = target_date,
                                   CrI_samples = 0.6,
+                                  target_value = "death")
+
+death_from_cases_forecast <- format_forecast(death_from_cases_forecast, 
+                                  cumulative = data.table::fread(here::here("data", "weekly-cumulative-deaths.csv")),
+                                  forecast_date = target_date,
+                                  submission_date = target_date,
                                   target_value = "death")
 
 # Save forecasts ----------------------------------------------------------
@@ -51,3 +59,6 @@ save_forecast(case_forecast, "Germany", "-case")
 save_forecast(case_forecast, "Poland", "-case")
 save_forecast(death_forecast, "Germany")
 save_forecast(death_forecast, "Poland")
+save_forecast(death_from_cases_forecast, "Germany", "-secondary")
+save_forecast(death_from_cases_forecast, "Poland", "-secondary")
+
