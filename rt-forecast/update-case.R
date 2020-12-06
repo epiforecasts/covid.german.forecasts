@@ -9,15 +9,15 @@ library(lubridate, quietly = TRUE)
 target_date <- as.character(Sys.Date()) 
 
 # Update delays -----------------------------------------------------------
-generation_time <- readRDS(here::here("rt-forecast", "data", "delays", "generation_time.rds"))
-incubation_period <- readRDS(here::here("rt-forecast", "data" ,"delays", "incubation_period.rds"))
-onset_to_report <- readRDS(here::here("rt-forecast", "data", "delays", "onset_to_report.rds"))
+generation_time <- readRDS(here("rt-forecast", "data", "delays", "generation_time.rds"))
+incubation_period <- readRDS(here("rt-forecast", "data" ,"delays", "incubation_period.rds"))
+onset_to_report <- readRDS(here("rt-forecast", "data", "delays", "onset_to_report.rds"))
 
 # Get cases  ---------------------------------------------------------------
-cases <- data.table::fread(file.path("data", "daily-incidence-cases-Germany_Poland.csv"))
+cases <- fread(file.path("data", "daily-incidence-cases-Germany_Poland.csv"))
 cases <- cases[, .(region = as.character(location_name), date = as.Date(date), 
                    confirm = value)]
-cases <- cases[date >= (max(date) - lubridate::weeks(12))]
+cases <- cases[date >= (max(date) - weeks(12))]
 data.table::setorder(cases, region, date)
 
 # Set up parallel execution -----------------------------------------------
@@ -40,9 +40,9 @@ regional_epinow(reported_cases = cases,
                 horizon = 30,
                 output = c("region", "summary", "timing", "samples"),
                 target_date = target_date,
-                target_folder = here::here("rt-forecast", "data", "samples", "cases"), 
-                summary_args = list(summary_dir = here::here("rt-forecast", "data", "summary", 
-                                                             "cases", target_date),
+                target_folder = here("rt-forecast", "data", "samples", "cases"), 
+                summary_args = list(summary_dir = here("rt-forecast", "data", "summary", 
+                                                       "cases", target_date),
                                     all_regions = TRUE),
                 logs = "rt-forecast/logs/cases", verbose = TRUE)
 
