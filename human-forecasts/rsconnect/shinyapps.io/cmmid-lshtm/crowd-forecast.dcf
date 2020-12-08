@@ -5,9 +5,9 @@ account: cmmid-lshtm
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3233319
-bundleId: 3949791
+bundleId: 3960236
 url: https://cmmid-lshtm.shinyapps.io/crowd-forecast/
-when: 1607246995.96819
+when: 1607436975.13518
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: metadata-epioforecasts-EpiExpert.txt|README.md|performance-board|processed-forecast-data|raw-forecast-data
