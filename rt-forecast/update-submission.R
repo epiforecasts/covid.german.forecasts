@@ -2,17 +2,19 @@
 library(data.table)
 library(EpiNow2)
 library(lubridate)
+library(here)
+library(data.table)
 
 # Dates -------------------------------------------------------------------
 target_date <- Sys.Date()
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here::here("rt-forecast", "data", "samples", "cases"),
+  EpiNow2::get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
                                 date = ymd(target_date), forecast = TRUE, 
                                 samples = TRUE)$estimated_reported_cases$samples)
 
 death_forecast <- suppressWarnings(
-  get_regional_results(results_dir = here::here("rt-forecast", "data", "samples", "deaths"),
+  get_regional_results(results_dir = here("rt-forecast", "data", "samples", "deaths"),
                        date = ymd(target_date), forecast = TRUE, 
                        samples = TRUE)$estimated_reported_cases$samples)
 

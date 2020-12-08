@@ -27,6 +27,7 @@ case_forecast <- suppressWarnings(
   get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
                        date = ymd(target_date),
                        forecast = TRUE, samples = TRUE)$estimated_reported_cases$samples)
+case_forecast <- case_forecast[sample <= 1000]
 
 # Forecast deaths from cases ----------------------------------------------
 # set up parallel options
@@ -40,10 +41,12 @@ source_gist("https://gist.github.com/seabbs/4dad3958ca8d83daca8f02b143d152e6")
 forecast <- regional_secondary(observations, case_forecast,
                                delays = delay_opts(list(mean = 2.5, mean_sd = 0.2, 
                                                         sd = 0.47, sd_sd = 0.1, max = 30)),
+                               return_fit = FALSE,
                                secondary = secondary_opts(type = "incidence"),
-                               obs = obs_opts(scale = list(mean = 0.01, sd = 0.0025)),
+                               obs = obs_opts(scale = list(mean = 0.005, sd = 0.0025)),
                                burn_in = as.integer(max(observations$date) - min(observations$date)) - 4*7,
-                               control = list(adapt_delta = 0.95, max_treedepth = 15))
+                               control = list(adapt_delta = 0.95, max_treedepth = 15),
+                               verbose = TRUE)
 
 # Save results to disk ----------------------------------------------------
 source(here("rt-forecast", "functions", "check-dir.R"))
@@ -59,7 +62,7 @@ fwrite(forecast$summarised, file.path(summarised_path, "summary.csv"))
 # save plots 
 walk2(forecast$region, names(forecast$region), function(f, n) {
   walk(1:length(f$plots),
-       ~ ggsave(filename = paste0(n, "-", names(f$plots)[.], ".png"), 
+       ~ suppressMessages(ggsave(filename = paste0(n, "-", names(f$plots)[.], ".png"), 
                 plot = f$plots[[.]], 
-                path = paste0(samples_path, "/")))
+                path = paste0(samples_path, "/"))))
   })
