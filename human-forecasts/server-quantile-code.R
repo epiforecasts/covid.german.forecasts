@@ -114,10 +114,9 @@ observeEvent(event_data("plotly_relayout"),
 output$plot_cases_q <- renderPlotly({
   
   plot <- plot_ly() %>%
-    add_trace(x = tmp_cases()$date,
+    add_trace(x = as.Date(tmp_cases()$date),
               y = tmp_cases()$value, type = "scatter", 
               name = 'observed data',mode = 'lines') %>%
-    layout(xaxis = list(hoverformat = '0f')) %>%
     layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
     layout(title = list(text = paste("Daily cases in", location_input(), sep = " ")))
   

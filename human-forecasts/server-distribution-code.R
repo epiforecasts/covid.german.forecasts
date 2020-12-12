@@ -201,6 +201,54 @@ observeEvent(c(input$propagate_1),
                }
              })
 
+
+# propagate values
+observeEvent(c(input$copy_above_1), 
+             {
+               for (i in 2:2) {
+                 rv$median_latent[i] <- rv$median_latent[1]
+                 rv$width_latent[i] <- rv$width_latent[1] #+ 0.01 * (i - 1)
+                 updateNumericInput(session,
+                                    paste0("median_forecast_", i),
+                                    value = round(rv$median_latent[i], 0))
+                 
+                 updateNumericInput(session,
+                                    paste0("width_", i),
+                                    value = round(rv$width_latent[i], 2))
+               }
+             })
+
+observeEvent(c(input$copy_above_2), 
+             {
+               for (i in 3:3) {
+                 rv$median_latent[i] <- rv$median_latent[2]
+                 rv$width_latent[i] <- rv$width_latent[2] #+ 0.01 * (i - 1)
+                 updateNumericInput(session,
+                                    paste0("median_forecast_", i),
+                                    value = round(rv$median_latent[i], 0))
+                 
+                 updateNumericInput(session,
+                                    paste0("width_", i),
+                                    value = round(rv$width_latent[i], 2))
+               }
+             })
+
+observeEvent(c(input$copy_above_3), 
+             {
+               for (i in 4:4) {
+                 rv$median_latent[i] <- rv$median_latent[3]
+                 rv$width_latent[i] <- rv$width_latent[3] #+ 0.01 * (i - 1)
+                 updateNumericInput(session,
+                                    paste0("median_forecast_", i),
+                                    value = round(rv$median_latent[i], 0))
+                 
+                 updateNumericInput(session,
+                                    paste0("width_", i),
+                                    value = round(rv$width_latent[i], 2))
+               }
+             })
+
+
 observeEvent(c(input$propagate_2), 
              {
                for (i in 3:4) {
@@ -289,10 +337,12 @@ observeEvent(input$width_4,
 output$plot_cases <- renderPlotly({
   
   plot <- plot_ly() %>%
-    add_trace(x = tmp_cases()$date,
+    add_trace(x = as.Date(tmp_cases()$date),
               y = tmp_cases()$value, type = "scatter", 
               name = 'observed data',mode = 'lines') %>%
-    layout(xaxis = list(hoverformat = '0f')) %>%
+    add_trace(x = as.Date(tmp_cases()$date),
+              y = tmp_cases()$moving_average, type = "scatter", 
+              name = 'past-7-day-average',mode = 'lines') %>%
     layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
     layout(title = list(text = paste("Daily cases in", location_input(), sep = " ")))
   
@@ -303,6 +353,61 @@ output$plot_cases <- renderPlotly({
   plot
   
 })
+
+
+output$positivity_rate <- renderUI({
+  
+  src <- "https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&minPopulationFilter=1000000&time=earliest..latest&country=POL~DEU&region=World&casesMetric=true&interval=smoothed&aligned=true&hideControls=true&smoothing=7&pickerMetric=location&pickerSort=asc"
+  pos <- tags$iframe(src=src, height=600, width = "100%")
+  print(pos)
+  pos
+})
+
+
+output$daily_testing <- renderUI({
+  
+  src <- "https://ourworldindata.org/grapher/daily-tests-per-thousand-people-smoothed-7-day?tab=chart&stackMode=absolute&time=earliest..latest&country=DEU~POL&region=World"
+  pos <- tags$iframe(src=src, height=600, width = "100%")
+  print(pos)
+  pos
+})
+
+
+output$cfr <- renderUI({
+  
+  src <- "https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-14..latest&country=POL~DEU&region=World&cfrMetric=true&interval=total&aligned=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc"
+
+  pos <- tags$iframe(src=src, height=600, width = "100%")
+  print(pos)
+  pos
+})
+
+output$cases_deaths <- renderPlotly({
+  
+  plot <- plot_ly() %>%
+    add_trace(x = df_weekly_deaths_cases()$target_end_date,
+              y = df_weekly_deaths_cases()$deaths, type = "scatter",
+              name = 'observed deaths',mode = 'lines+markers') %>%     
+    add_trace(x = df_weekly_deaths_cases()$target_end_date,
+              y = df_weekly_deaths_cases()$cases, type = "scatter",
+              name = 'observed cases',mode = 'lines+markers') %>%   
+    layout(title = paste("Weekly deaths and cases"), list(
+      xanchor = "left")) %>%
+    layout(yaxis = list(hoverformat = '0f', rangemode = "tozero")) %>%
+    layout(legend = list(orientation = 'h')) 
+  
+  if (input$plotscale == "log") {
+    plot <- layout(plot, yaxis = list(type = "log"))
+  }
+  
+  plot
+  
+})
+
+
+
+
+
 
 
 # this needs to go here as the output name needs to be different across the two

@@ -16,7 +16,7 @@ library(shinydisconnect)
 
 # define how long this app should accept forecasts -----------------------------
 app_end_date <- "2021-11-25 12:00:00" # Time is UTC
-is_updated <- FALSE
+is_updated <- TRUE
 submission_date <- as.Date("2020-12-14")
 
 
@@ -45,11 +45,19 @@ observations <- dplyr::bind_rows(deaths_inc,
   # this has to be treated with care depending on when you update the data
   dplyr::filter(epiweek <= max(epiweek))
 
+
+moving_average <- function(x, n = 7){
+  out <- stats::filter(x, rep(1 / n, n), sides = 1)
+  out[is.na(out)] <- 0
+  return(out)
+  }
+
 # daily data for reference plot
 cases_daily_inc <- data.table::fread(here::here("data", "daily-incidence-cases-Germany_Poland.csv")) %>%
   dplyr::mutate(inc = "incident", 
-                type = "cases")
-
+                type = "cases", 
+                moving_average = moving_average(value),
+                date = as.POSIXct(date, format = "%Y-%M-%D"))
 
 
 # create items for the dropdown selection lists of locations and type ----------
@@ -254,6 +262,17 @@ server <- function(input, output, session) {
                     type == type_input(),
                     target_end_date >= max(target_end_date) - input$num_past_obs * 7)
   })
+  
+  # define data.frame for plotting weekly deaths and cases 
+  df_weekly_deaths_cases <- reactive({
+    observations %>%
+      tidyr::pivot_wider(values_from = value, names_from = type) %>%
+      dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
+      dplyr::filter(location_name == location_input(), 
+                    inc == inc_input(),
+                    target_end_date >= max(target_end_date) - input$num_past_obs * 7)
+  })
+  
   
   
   # define the prediction intervals to be shown on the plot
