@@ -162,30 +162,7 @@ data.table::fwrite(forecast_quantiles %>%
 #   dplyr::mutate(number_flag = dplyr::n()) %>%
 #   dplyr::filter(number_flag %% 8 == 0) # 4 * 4 * 23 in total
 
-# also read all EpiNow2 forecasts, give them a board_name 
-folders <- list.files("submissions/rt-forecasts/")
-files <- purrr::map(folders, 
-                    .f = function(folder_name) {
-                      files <- list.files(paste0("submissions/rt-forecasts/", 
-                                                 folder_name))
-                      paste(paste0("submissions/rt-forecasts/", 
-                                   folder_name, "/", 
-                                   files))
-                    }) %>%
-  unlist()
-epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
-  dplyr::mutate(board_name = "EpiNow2", 
-                submission_date = forecast_date,
-                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
-  dplyr::filter(grepl("inc", target), 
-                type == "quantile")
 
-data.table::fwrite(epinow_forecasts, 
-                   "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
-
-# copy data into human forecast performance board app
-file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
-          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
 
 if (median_ensemble) {
   # make median ensemble ---------------------------------------------------------
@@ -298,6 +275,12 @@ forecast_submission %>%
                                        "-Poland-epiforecasts-EpiExpert-case.csv")))
 
 
+
+
+
+
+
+
 # also read all EpiExpert forecasts, give them a board_name 
 folders <- list.files("submissions/human-forecasts/")
 files <- purrr::map(folders, 
@@ -318,6 +301,72 @@ epiexpert_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
 
 data.table::fwrite(epiexpert_forecasts, 
                    "human-forecasts/processed-forecast-data/all-epiexpert-forecasts.csv")
+
+
+
+
+# also read all EpiNow2 forecasts, give them a board_name 
+folders <- list.files("submissions/rt-forecasts/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/rt-forecasts/", 
+                                                 folder_name))
+                      paste(paste0("submissions/rt-forecasts/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiNow2", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epinow_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
+
+# copy data into human forecast performance board app
+file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
+          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
+
+
+
+
+# also read all EpiNow2 secondary forecasts, give them a board_name 
+folders <- list.files("submissions/deaths-from-cases/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/deaths-from-cases/", 
+                                                 folder_name))
+                      paste(paste0("submissions/deaths-from-cases/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiNow2_secondary", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epinow_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epinow2_secondary-forecasts.csv")
+
+# copy data into human forecast performance board app
+file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
+          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
+
+
+
+
+
+
+
+
+
+
 
 
 
