@@ -63,6 +63,6 @@ save_forecast(case_forecast, "Germany", "-case")
 save_forecast(case_forecast, "Poland", "-case")
 save_forecast(death_forecast, "Germany")
 save_forecast(death_forecast, "Poland")
-save_forecast(death_from_cases_forecast, "Germany", "-secondary", deaths_folder)
-save_forecast(death_from_cases_forecast, "Poland", "-secondary", deaths_folder)
+save_forecast(death_from_cases_forecast, "Germany", "_secondary", deaths_folder)
+save_forecast(death_from_cases_forecast, "Poland", "_secondary", deaths_folder)
 
