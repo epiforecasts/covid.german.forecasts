@@ -37,9 +37,7 @@ format_forecast<- function(forecasts,
                                               submission_date = submission_date,
                                               type = "quantile",
                                               location_name = region,
-                                              location = ifelse(region == "Germany", "GM", "PL"),
-                                              horizon = 1 + epiweek - lubridate::epiweek(submission_date))][,
-                                   target := paste0(horizon, " wk ahead inc ", target_value)]
+                                              location = ifelse(region == "Germany", "GM", "PL"))]
   
   # Add point forecasts
   forecasts_point <- forecasts_format[quantile == 0.5]
@@ -49,6 +47,9 @@ format_forecast<- function(forecasts,
   # drop unnecessary columns
   forecasts_format <- forecasts_format[, !c("epiweek", "region")]
   forecasts_format <- forecasts_format[target_end_date > forecast_date]
+  forecasts_format <- forecasts_format[, horizon := 1 + as.numeric(target_end_date - min(target_end_date)) / 7]
+  forecasts_format <- forecasts_format[, target := paste0(horizon, " wk ahead inc ", target_value)]
+  data.table::setorder(forecasts_format, location_name, horizon, quantile)
   
   # cumulative forecast 
   if (!is.null(cumulative)) {
