@@ -150,12 +150,17 @@ forecast_quantiles <- filtered_forecasts %>%
                 target = paste0(horizon, " wk ahead inc ", type), 
                 type = "quantile")
 
-
 # save forecasts in quantile-format
 data.table::fwrite(forecast_quantiles %>%
                      dplyr::mutate(submission_date = submission_date),
                    paste0("human-forecasts/processed-forecast-data/", 
                           submission_date, "-processed-forecasts.csv"))
+
+# # filter out all forecasts where only one of two targets was submitted
+# forecast_quantiles %>%
+#   dplyr::group_by(forecaster_id) %>%
+#   dplyr::mutate(number_flag = dplyr::n()) %>%
+#   dplyr::filter(number_flag %% 8 == 0) # 4 * 4 * 23 in total
 
 # also read all EpiNow2 forecasts, give them a board_name 
 folders <- list.files("submissions/rt-forecasts/")
@@ -291,6 +296,30 @@ forecast_submission %>%
   data.table::fwrite(here::here("submissions", "human-forecasts", submission_date,
                                 paste0(submission_date, 
                                        "-Poland-epiforecasts-EpiExpert-case.csv")))
+
+
+# also read all EpiExpert forecasts, give them a board_name 
+folders <- list.files("submissions/human-forecasts/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/human-forecasts/", 
+                                                 folder_name))
+                      paste(paste0("submissions/human-forecasts/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epiexpert_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiExpert-ensemble", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epiexpert_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epiexpert-forecasts.csv")
+
+
 
 
 
