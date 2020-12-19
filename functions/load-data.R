@@ -18,19 +18,23 @@ download_data <- function(country = "Germany_Poland",
     incident_cases <- data.table::rbindlist(list(
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Cases_Germany.csv"), 
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Incident%20Cases_Poland.csv")
-    ))
+    ), 
+    use.names=TRUE)
     cumulative_cases <- data.table::rbindlist(list(
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Cases_Germany.csv"), 
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Cumulative%20Cases_Poland.csv")
-    ))
+    ), 
+    use.names=TRUE)
     incident_deaths <- data.table::rbindlist(list(
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Deaths_Germany.csv"), 
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Incident%20Deaths_Poland.csv")
-    ))
+    ), 
+    use.names=TRUE)
     cumulative_deaths <- data.table::rbindlist(list(
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv"), 
       readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Cumulative%20Deaths_Poland.csv")
-    ))
+    ), 
+    use.names=TRUE)
   }
   
   # write incident cases and deaths
@@ -117,3 +121,4 @@ get_data <- function(load_from_server = FALSE,
     }
   }
 }
+
