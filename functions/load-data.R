@@ -53,21 +53,31 @@ download_data <- function(country = "Germany_Poland",
 get_data <- function(load_from_server = FALSE, 
                      cumulative = FALSE,
                      cases = TRUE,
+                     national_only = TRUE,
+                     root_dir = "data",
                      country = "Germany_Poland",
                      weekly = TRUE) {
   
+  filter_national <- function(data, national_only) {
+    if (national_only) {
+      return(dplyr::filter(data, location %in% c("GM", "PL", "US")))
+    } else {
+      return(data)
+    }
+  }
+  
   if (load_from_server) {
-    download_data(country = country)
+    download_data(country = country, save_dir = root_dir)
   } else {
-    incident_cases <- data.table::fread(here::here("data", paste0("daily-incidence-cases-", country, ".csv")))
-    incident_deaths <- data.table::fread(here::here("data", paste0("daily-incidence-deaths-", country, ".csv")))
+    incident_cases <- data.table::fread(here::here(root_dir, paste0("daily-incidence-cases-", country, ".csv")))
+    incident_deaths <- data.table::fread(here::here(root_dir, paste0("daily-incidence-deaths-", country, ".csv")))
     
     # cumulative cases are only relevant for daily data. for weekly, they get computed
     # could in principle just omit that and have cumulative computed as well. 
     # leaving it as we actually have ground truth data available
     if (!weekly) {
-      cumulative_cases <- data.table::fread(here::here("data", paste0("daily-cumulative-cases-", country, ".csv")))
-      cumulative_deaths <- data.table::fread(here::here("data", paste0("daily-cumulative-deaths-", country, ".csv")))
+      cumulative_cases <- data.table::fread(here::here(root_dir, paste0("daily-cumulative-cases-", country, ".csv")))
+      cumulative_deaths <- data.table::fread(here::here(root_dir, paste0("daily-cumulative-deaths-", country, ".csv")))
     }
   }
   
@@ -80,6 +90,7 @@ get_data <- function(load_from_server = FALSE,
         dplyr::group_by(location, location_name, epiweek) %>%
         dplyr::summarise(value = sum(value), 
                          target_end_date = max(date))
+      
       if (cumulative) {
         cumulative_cases_weekly <- incident_cases_weekly %>%
           dplyr::mutate(value = cumsum(value))
@@ -109,15 +120,15 @@ get_data <- function(load_from_server = FALSE,
   # if not weekly
   if (cases) {
     if (cumulative) {
-      return(cumulative_cases)
+      return(filter_national(cumulative_cases))
     } else {
-      return(incident_cases)
+      return(filter_national(incident_cases))
     }
   } else {
     if (cumulative) {
-      return(cumulative_deaths)
+      return(filter_national(cumulative_deaths))
     } else {
-      return(incident_deaths)
+      return(filter_national(incident_deaths))
     }
   }
 }
