@@ -68,18 +68,19 @@ get_data <- function(load_from_server = FALSE,
   
   if (load_from_server) {
     download_data(country = country, save_dir = root_dir)
-  } else {
-    incident_cases <- data.table::fread(here::here(root_dir, paste0("daily-incidence-cases-", country, ".csv")))
-    incident_deaths <- data.table::fread(here::here(root_dir, paste0("daily-incidence-deaths-", country, ".csv")))
-    
-    # cumulative cases are only relevant for daily data. for weekly, they get computed
-    # could in principle just omit that and have cumulative computed as well. 
-    # leaving it as we actually have ground truth data available
-    if (!weekly) {
-      cumulative_cases <- data.table::fread(here::here(root_dir, paste0("daily-cumulative-cases-", country, ".csv")))
-      cumulative_deaths <- data.table::fread(here::here(root_dir, paste0("daily-cumulative-deaths-", country, ".csv")))
-    }
+  } 
+  
+  incident_cases <- data.table::fread(here::here(root_dir, paste0("daily-incidence-cases-", country, ".csv")))
+  incident_deaths <- data.table::fread(here::here(root_dir, paste0("daily-incidence-deaths-", country, ".csv")))
+  
+  # cumulative cases are only relevant for daily data. for weekly, they get computed
+  # could in principle just omit that and have cumulative computed as well. 
+  # leaving it as we actually have ground truth data available
+  if (!weekly) {
+    cumulative_cases <- data.table::fread(here::here(root_dir, paste0("daily-cumulative-cases-", country, ".csv")))
+    cumulative_deaths <- data.table::fread(here::here(root_dir, paste0("daily-cumulative-deaths-", country, ".csv")))
   }
+  
   
   if (weekly) {
     # cases
