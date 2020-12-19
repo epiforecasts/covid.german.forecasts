@@ -22,20 +22,20 @@ get_data <- function(load_from_server = FALSE,
     # country not US
     } else if (country == "Germany_Poland") {
       incident_cases <- data.table::rbindlist(list(
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Germany.csv"), 
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Poland.csv")
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Cases_Germany.csv"), 
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Incident%20Cases_Poland.csv")
       ))
       cumulative_cases <- data.table::rbindlist(list(
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Cases_Germany.csv"), 
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Cases_Poland.csv")
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Cases_Germany.csv"), 
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Cumulative%20Cases_Poland.csv")
       ))
       incident_deaths <- data.table::rbindlist(list(
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Deaths_Germany.csv"), 
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Incident%20Deaths_Poland.csv")
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Deaths_Germany.csv"), 
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Incident%20Deaths_Poland.csv")
       ))
       cumulative_deaths <- data.table::rbindlist(list(
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Germany.csv"), 
-        readr::read_csv("https://github.com/KITmetricslab/covid19-forecast-hub-de/raw/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Poland.csv")
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv"), 
+        readr::read_csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/MZ/truth_MZ-Cumulative%20Deaths_Poland.csv")
       ))
     }
     
