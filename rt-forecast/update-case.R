@@ -15,6 +15,7 @@ onset_to_report <- readRDS(here("rt-forecast", "data", "delays", "onset_to_repor
 
 # Get cases  ---------------------------------------------------------------
 cases <- fread(file.path("data", "daily-incidence-cases-Germany_Poland.csv"))
+cases <- cases[location_name %in% c("Germany", "Poland")]
 cases <- cases[, .(region = as.character(location_name), date = as.Date(date), 
                    confirm = value)]
 cases <- cases[date >= (max(date) - weeks(12))]
