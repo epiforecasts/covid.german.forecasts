@@ -13,6 +13,7 @@ target_date <- as.character(Sys.Date())
 
 # Get Observations --------------------------------------------------------
 deaths <- fread(here("data", "daily-incidence-deaths-Germany_Poland.csv"))
+deaths <- deaths[location_name %in% c("Germany", "Poland")]
 cases <- fread(here("data", "daily-incidence-cases-Germany_Poland.csv"))
 cases <- cases[location_name %in% c("Germany", "Poland")]
 deaths <- setnames(deaths, "value", "secondary")
