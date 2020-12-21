@@ -95,9 +95,9 @@ get_data <- function(load_from_server = FALSE,
       if (cumulative) {
         cumulative_cases_weekly <- incident_cases_weekly %>%
           dplyr::mutate(value = cumsum(value))
-        return(cumulative_cases_weekly)
+        return(filter_national(cumulative_cases_weekly))
       } else {
-        return(incident_cases_weekly)
+        return(filter_national(incident_cases_weekly))
       }
       
     # deaths
@@ -111,9 +111,9 @@ get_data <- function(load_from_server = FALSE,
       if (cumulative) {
         cumulative_deaths_weekly <- incident_deaths_weekly %>%
           dplyr::mutate(value = cumsum(value))
-        return(cumulative_deaths_weekly)
+        return(filter_national(cumulative_deaths_weekly))
       } else {
-        return(incident_deaths_weekly)
+        return(filter_national(incident_deaths_weekly))
       }
     }
   }
