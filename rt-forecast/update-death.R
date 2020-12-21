@@ -15,6 +15,7 @@ onset_to_death <- readRDS(here("rt-forecast", "data", "delays", "onset_to_death.
 
 # Get cases  ---------------------------------------------------------------
 deaths <- fread(file.path("data", "daily-incidence-deaths-Germany_Poland.csv"))
+deaths <- deaths[location_name %in% c("Germany", "Poland")]
 deaths <- deaths[, .(region = as.character(location_name), date = as.Date(date), 
                    confirm = value)]
 deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
