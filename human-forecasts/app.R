@@ -15,7 +15,7 @@ library(shinydisconnect)
 # ------------------------------------------------------------------------------
 
 # define how long this app should accept forecasts -----------------------------
-app_end_date <- "2021-11-25 12:00:00" # Time is UTC
+app_end_date <- "2025-11-25 12:00:00" # Time is UTC
 is_updated <- TRUE
 submission_date <- as.Date("2020-12-21")
 
@@ -427,9 +427,11 @@ server <- function(input, output, session) {
                    mismatch <- TRUE
                  }
                  
-                 if (Sys.Date() > app_end_date) {
-                   showNotification("The app does not currently allow submissions. Please wait until next Saturday, 17:00 CET to make new predictions", type = "error")
-                 } else if (mismatch) {
+                 # if (Sys.Date() > app_end_date) {
+                 #   showNotification("The app does not currently allow submissions. Please wait until next Saturday, 17:00 CET to make new predictions", type = "error")
+                 # } 
+                 
+                 if (mismatch) {
                    showNotification("Your forecasts don't match your inputs yet. Please press 'update' for all changes to take effect and submit again.", type = "error")
                  } else {
                    

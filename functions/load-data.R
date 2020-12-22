@@ -58,7 +58,7 @@ get_data <- function(load_from_server = FALSE,
                      country = "Germany_Poland",
                      weekly = TRUE) {
   
-  filter_national <- function(data, national_only) {
+  filter_national <- function(data) {
     if (national_only) {
       return(dplyr::filter(data, location %in% c("GM", "PL", "US")))
     } else {

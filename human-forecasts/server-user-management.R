@@ -34,11 +34,11 @@ observeEvent(credentials()$user_auth,
                identification(credentials()$info)
                removeModal()
                
-               if (Sys.Date() > app_end_date) {
-                 showModal(modalDialog(
-                   "The app does not currently allow new predictions. Wait until next Saturday, 16.00 CET to make submit new forecasts. You can, however, take a tour and play around with the app."
-                 )) 
-               }
+               # if (Sys.Date() > app_end_date) {
+               #   showModal(modalDialog(
+               #     "The app does not currently allow new predictions. Wait until next Saturday, 16.00 CET to make submit new forecasts. You can, however, take a tour and play around with the app."
+               #   )) 
+               # }
                
              } else {
                
