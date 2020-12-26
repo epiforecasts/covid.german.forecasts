@@ -16,7 +16,7 @@ library(shinydisconnect)
 
 # define how long this app should accept forecasts -----------------------------
 app_end_date <- "2025-11-25 12:00:00" # Time is UTC
-is_updated <- FALSE
+is_updated <- TRUE
 submission_date <- as.Date("2020-12-28")
 
 
@@ -47,13 +47,14 @@ observations <- dplyr::bind_rows(deaths_inc,
 
 
 moving_average <- function(x, n = 7){
-  out <- stats::filter(x, rep(1 / n, n), sides = 1)
-  out[is.na(out)] <- 0
+  out <- stats::filter(x, rep((1 / n), n), sides = 1)
+  # out[is.na(out)] <- 0
   return(out)
   }
 
 # daily data for reference plot
 cases_daily_inc <- data.table::fread(here::here("data", "daily-incidence-cases-Germany_Poland.csv")) %>%
+  dplyr::filter(location %in% c("GM", "PL")) %>%
   dplyr::mutate(inc = "incident", 
                 type = "cases", 
                 moving_average = moving_average(value),
