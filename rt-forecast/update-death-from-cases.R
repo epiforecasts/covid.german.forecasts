@@ -41,8 +41,8 @@ source_gist("https://gist.github.com/seabbs/4dad3958ca8d83daca8f02b143d152e6")
 
 # run across Poland and Germany specifying options for estimate_secondary (EpiNow2)
 forecast <- regional_secondary(observations, case_forecast,
-                               delays = delay_opts(list(mean = 2.5, mean_sd = 0.2, 
-                                                        sd = 0.47, sd_sd = 0.1, max = 30)),
+                               delays = delay_opts(list(mean = 2.5, mean_sd = 0.5, 
+                                                        sd = 0.47, sd_sd = 0.2, max = 30)),
                                return_fit = FALSE,
                                secondary = secondary_opts(type = "incidence"),
                                obs = obs_opts(scale = list(mean = 0.01, sd = 0.02)),

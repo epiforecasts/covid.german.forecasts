@@ -21,7 +21,6 @@ death_forecast <- suppressWarnings(
 death_from_cases_forecast <- fread(here("rt-forecast", "data", "samples", "deaths-from-cases",
                                          target_date, "samples.csv"))
 
-
 # Cumulative data ---------------------------------------------------------
 cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))[location_name %in% c("Germany", "Poland")]
 cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))[location_name %in% c("Germany", "Poland")]
@@ -33,14 +32,14 @@ case_forecast <- format_forecast(case_forecast[, value := cases],
                                  cumulative =  cum_cases,
                                  forecast_date = target_date,
                                  submission_date = target_date,
-                                 CrI_samples = 0.6,
+                                 CrI_samples = 0.8,
                                  target_value = "case")
 
 death_forecast <- format_forecast(death_forecast[, value := cases], 
                                   cumulative = cum_deaths,
                                   forecast_date = target_date,
                                   submission_date = target_date,
-                                  CrI_samples = 0.6,
+                                  CrI_samples = 0.8,
                                   target_value = "death")
 
 death_from_cases_forecast <- format_forecast(death_from_cases_forecast, 
