@@ -16,8 +16,8 @@ library(shinydisconnect)
 
 # define how long this app should accept forecasts -----------------------------
 app_end_date <- "2025-11-25 12:00:00" # Time is UTC
-is_updated <- TRUE
-submission_date <- as.Date("2020-12-28")
+is_updated <- FALSE
+submission_date <- as.Date("2021-01-04")
 
 
 # google authentification and connection ---------------------------------------
