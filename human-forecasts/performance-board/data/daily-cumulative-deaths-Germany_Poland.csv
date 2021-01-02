@@ -5286,6 +5286,91 @@ date,location,location_name,value
 2020-12-28,GM14,Sachsen-Anhalt State,515
 2020-12-28,GM15,Free State of Thüringia,836
 2020-12-28,GM16,Berlin State,1149
+2020-12-29,GM,Germany,30978
+2020-12-29,GM01,Baden-Württemberg State,4587
+2020-12-29,GM02,Free State of Bavaria,6398
+2020-12-29,GM03,Free Hanseatic City of Bremen,186
+2020-12-29,GM04,Free Hanseatic City of Hamburg,598
+2020-12-29,GM05,Hesse State,2582
+2020-12-29,GM06,Lower Saxony State,1851
+2020-12-29,GM07,North Rhine-Westphalia State,6227
+2020-12-29,GM08,Rhineland-Palatinate State,1328
+2020-12-29,GM09,Saarland State,412
+2020-12-29,GM10,Schleswig-Holstein State,394
+2020-12-29,GM11,Brandenburg State,814
+2020-12-29,GM12,Mecklenburg-Western Pomerania State,152
+2020-12-29,GM13,Free State of Saxony,2838
+2020-12-29,GM14,Sachsen-Anhalt State,532
+2020-12-29,GM15,Free State of Thüringia,907
+2020-12-29,GM16,Berlin State,1172
+2020-12-30,GM,Germany,32107
+2020-12-30,GM01,Baden-Württemberg State,4695
+2020-12-30,GM02,Free State of Bavaria,6549
+2020-12-30,GM03,Free Hanseatic City of Bremen,191
+2020-12-30,GM04,Free Hanseatic City of Hamburg,614
+2020-12-30,GM05,Hesse State,2711
+2020-12-30,GM06,Lower Saxony State,1908
+2020-12-30,GM07,North Rhine-Westphalia State,6451
+2020-12-30,GM08,Rhineland-Palatinate State,1378
+2020-12-30,GM09,Saarland State,421
+2020-12-30,GM10,Schleswig-Holstein State,411
+2020-12-30,GM11,Brandenburg State,884
+2020-12-30,GM12,Mecklenburg-Western Pomerania State,161
+2020-12-30,GM13,Free State of Saxony,3003
+2020-12-30,GM14,Sachsen-Anhalt State,560
+2020-12-30,GM15,Free State of Thüringia,957
+2020-12-30,GM16,Berlin State,1213
+2020-12-31,GM,Germany,33071
+2020-12-31,GM01,Baden-Württemberg State,4789
+2020-12-31,GM02,Free State of Bavaria,6716
+2020-12-31,GM03,Free Hanseatic City of Bremen,194
+2020-12-31,GM04,Free Hanseatic City of Hamburg,632
+2020-12-31,GM05,Hesse State,2845
+2020-12-31,GM06,Lower Saxony State,1967
+2020-12-31,GM07,North Rhine-Westphalia State,6552
+2020-12-31,GM08,Rhineland-Palatinate State,1428
+2020-12-31,GM09,Saarland State,432
+2020-12-31,GM10,Schleswig-Holstein State,425
+2020-12-31,GM11,Brandenburg State,937
+2020-12-31,GM12,Mecklenburg-Western Pomerania State,171
+2020-12-31,GM13,Free State of Saxony,3139
+2020-12-31,GM14,Sachsen-Anhalt State,602
+2020-12-31,GM15,Free State of Thüringia,995
+2020-12-31,GM16,Berlin State,1247
+2021-01-01,GM,Germany,33624
+2021-01-01,GM01,Baden-Württemberg State,4840
+2021-01-01,GM02,Free State of Bavaria,6765
+2021-01-01,GM03,Free Hanseatic City of Bremen,196
+2021-01-01,GM04,Free Hanseatic City of Hamburg,653
+2021-01-01,GM05,Hesse State,2887
+2021-01-01,GM06,Lower Saxony State,2003
+2021-01-01,GM07,North Rhine-Westphalia State,6631
+2021-01-01,GM08,Rhineland-Palatinate State,1441
+2021-01-01,GM09,Saarland State,433
+2021-01-01,GM10,Schleswig-Holstein State,427
+2021-01-01,GM11,Brandenburg State,976
+2021-01-01,GM12,Mecklenburg-Western Pomerania State,172
+2021-01-01,GM13,Free State of Saxony,3266
+2021-01-01,GM14,Sachsen-Anhalt State,651
+2021-01-01,GM15,Free State of Thüringia,1012
+2021-01-01,GM16,Berlin State,1271
+2021-01-02,GM,Germany,33960
+2021-01-02,GM01,Baden-Württemberg State,4894
+2021-01-02,GM02,Free State of Bavaria,6811
+2021-01-02,GM03,Free Hanseatic City of Bremen,201
+2021-01-02,GM04,Free Hanseatic City of Hamburg,658
+2021-01-02,GM05,Hesse State,2917
+2021-01-02,GM06,Lower Saxony State,2016
+2021-01-02,GM07,North Rhine-Westphalia State,6701
+2021-01-02,GM08,Rhineland-Palatinate State,1459
+2021-01-02,GM09,Saarland State,440
+2021-01-02,GM10,Schleswig-Holstein State,436
+2021-01-02,GM11,Brandenburg State,982
+2021-01-02,GM12,Mecklenburg-Western Pomerania State,173
+2021-01-02,GM13,Free State of Saxony,3302
+2021-01-02,GM14,Sachsen-Anhalt State,666
+2021-01-02,GM15,Free State of Thüringia,1027
+2021-01-02,GM16,Berlin State,1277
 2020-03-05,PL72,Dolnoslaskie,0
 2020-03-05,PL73,Kujawsko-Pomorskie,0
 2020-03-05,PL75,Lubelskie,0
@@ -10386,3 +10471,88 @@ date,location,location_name,value
 2020-12-29,PL86,Wielkopolskie,2760
 2020-12-29,PL87,Zachodniopomorskie,951
 2020-12-29,PL,Poland,27147
+2020-12-30,PL72,Dolnoslaskie,1899
+2020-12-30,PL73,Kujawsko-Pomorskie,1413
+2020-12-30,PL75,Lubelskie,1726
+2020-12-30,PL76,Lubuskie,641
+2020-12-30,PL74,Lodzkie,1817
+2020-12-30,PL77,Malopolskie,2610
+2020-12-30,PL78,Mazowieckie,3262
+2020-12-30,PL79,Opolskie,992
+2020-12-30,PL80,Podkarpackie,1779
+2020-12-30,PL81,Podlaskie,790
+2020-12-30,PL82,Pomorskie,1471
+2020-12-30,PL83,Slaskie,3293
+2020-12-30,PL84,Swietokrzyskie,891
+2020-12-30,PL85,Warminsko-Mazurskie,1115
+2020-12-30,PL86,Wielkopolskie,2795
+2020-12-30,PL87,Zachodniopomorskie,960
+2020-12-30,PL,Poland,27454
+2020-12-31,PL72,Dolnoslaskie,1931
+2020-12-31,PL73,Kujawsko-Pomorskie,1460
+2020-12-31,PL75,Lubelskie,1763
+2020-12-31,PL76,Lubuskie,652
+2020-12-31,PL74,Lodzkie,1853
+2020-12-31,PL77,Malopolskie,2640
+2020-12-31,PL78,Mazowieckie,3342
+2020-12-31,PL79,Opolskie,1020
+2020-12-31,PL80,Podkarpackie,1798
+2020-12-31,PL81,Podlaskie,806
+2020-12-31,PL82,Pomorskie,1516
+2020-12-31,PL83,Slaskie,3358
+2020-12-31,PL84,Swietokrzyskie,911
+2020-12-31,PL85,Warminsko-Mazurskie,1130
+2020-12-31,PL86,Wielkopolskie,2849
+2020-12-31,PL87,Zachodniopomorskie,990
+2020-12-31,PL,Poland,28019
+2021-01-01,PL72,Dolnoslaskie,1954
+2021-01-01,PL73,Kujawsko-Pomorskie,1507
+2021-01-01,PL75,Lubelskie,1793
+2021-01-01,PL76,Lubuskie,667
+2021-01-01,PL74,Lodzkie,1876
+2021-01-01,PL77,Malopolskie,2658
+2021-01-01,PL78,Mazowieckie,3410
+2021-01-01,PL79,Opolskie,1040
+2021-01-01,PL80,Podkarpackie,1815
+2021-01-01,PL81,Podlaskie,834
+2021-01-01,PL82,Pomorskie,1558
+2021-01-01,PL83,Slaskie,3404
+2021-01-01,PL84,Swietokrzyskie,921
+2021-01-01,PL85,Warminsko-Mazurskie,1184
+2021-01-01,PL86,Wielkopolskie,2907
+2021-01-01,PL87,Zachodniopomorskie,1023
+2021-01-01,PL,Poland,28551
+2020-01-02,PL72,Dolnoslaskie,1990
+2020-01-02,PL73,Kujawsko-Pomorskie,1534
+2020-01-02,PL75,Lubelskie,1814
+2020-01-02,PL76,Lubuskie,684
+2020-01-02,PL74,Lodzkie,1901
+2020-01-02,PL77,Malopolskie,2680
+2020-01-02,PL78,Mazowieckie,3462
+2020-01-02,PL79,Opolskie,1055
+2020-01-02,PL80,Podkarpackie,1851
+2020-01-02,PL81,Podlaskie,844
+2020-01-02,PL82,Pomorskie,1582
+2020-01-02,PL83,Slaskie,3434
+2020-01-02,PL84,Swietokrzyskie,929
+2020-01-02,PL85,Warminsko-Mazurskie,1195
+2020-01-02,PL86,Wielkopolskie,2955
+2020-01-02,PL87,Zachodniopomorskie,1041
+2020-01-02,PL,Poland,28951
+2020-01-03,PL72,Dolnoslaskie,2000
+2020-01-03,PL73,Kujawsko-Pomorskie,1551
+2020-01-03,PL75,Lubelskie,1818
+2020-01-03,PL76,Lubuskie,687
+2020-01-03,PL74,Lodzkie,1905
+2020-01-03,PL77,Malopolskie,2680
+2020-01-03,PL78,Mazowieckie,3477
+2020-01-03,PL79,Opolskie,1057
+2020-01-03,PL80,Podkarpackie,1853
+2020-01-03,PL81,Podlaskie,855
+2020-01-03,PL82,Pomorskie,1582
+2020-01-03,PL83,Slaskie,3441
+2020-01-03,PL84,Swietokrzyskie,929
+2020-01-03,PL85,Warminsko-Mazurskie,1195
+2020-01-03,PL86,Wielkopolskie,2979
+2020-01-03,PL87,Zachodniopomorskie,1044
+2020-01-03,PL,Poland,29053
