@@ -371,12 +371,12 @@ file.copy(from = here::here("human-forecasts", "processed-forecast-data"),
 
 
 
-
-
-# empty google sheet
-cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
-names(cols) <- names(forecasts)
-googlesheets4::write_sheet(data = cols,
-                           ss = spread_sheet,
-                           sheet = "predictions")
+# 
+# 
+# # empty google sheet
+# cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
+# names(cols) <- names(forecasts)
+# googlesheets4::write_sheet(data = cols,
+#                            ss = spread_sheet,
+#                            sheet = "predictions")
 

@@ -16,8 +16,8 @@ library(shinydisconnect)
 
 # define how long this app should accept forecasts -----------------------------
 app_end_date <- "2025-11-25 12:00:00" # Time is UTC
-is_updated <- TRUE
-submission_date <- as.Date("2021-01-04")
+is_updated <- FALSE
+submission_date <- as.Date("2021-01-11")
 
 
 # google authentification and connection ---------------------------------------
@@ -44,6 +44,11 @@ observations <- dplyr::bind_rows(deaths_inc,
                                  cases_inc)  %>%
   # this has to be treated with care depending on when you update the data
   dplyr::filter(epiweek <= max(epiweek))
+
+
+# ==============================================================================
+# add some error handling if the last date isn't present.
+# ==============================================================================
 
 
 moving_average <- function(x, n = 7){
