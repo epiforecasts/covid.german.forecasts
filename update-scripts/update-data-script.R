@@ -1,5 +1,5 @@
 # script to update data and store data
-library(magrittr)
+library(magrittr, quietly = TRUE)
 source(here::here("functions", "load-data.R"))
 
 if (!dir.exists(here::here("data"))) {
@@ -40,8 +40,6 @@ if (!dir.exists(here::here("human-forecasts", "data"))) {
 # copy data into human forecast app
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts"), recursive = TRUE)
-
-
 
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts", "performance-board"), recursive = TRUE)

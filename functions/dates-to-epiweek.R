@@ -1,5 +1,5 @@
-library(tibble)
-library(dplyr)
+library(tibble, quietly = TRUE)
+library(dplyr, quietly = TRUE)
 
 dates_to_epiweek <- function(df){
   
