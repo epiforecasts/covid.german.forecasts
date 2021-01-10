@@ -1,4 +1,5 @@
 location,location_name,epiweek,value,target_end_date
+GM,Germany,1,136230,2021-01-09
 GM,Germany,7,2,2020-02-15
 GM,Germany,8,0,2020-02-22
 GM,Germany,9,50,2020-02-29
@@ -46,6 +47,7 @@ GM,Germany,50,146960,2020-12-12
 GM,Germany,51,170722,2020-12-19
 GM,Germany,52,155865,2020-12-26
 GM,Germany,53,128248,2021-01-02
+PL,Poland,1,59735,2021-01-09
 PL,Poland,10,5,2020-03-07
 PL,Poland,11,63,2020-03-14
 PL,Poland,12,357,2020-03-21

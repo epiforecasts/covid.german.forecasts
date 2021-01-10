@@ -36,8 +36,10 @@ format_forecast<- function(forecasts,
   forecasts_format <- weekly_forecasts[, `:=`(forecast_date = forecast_date,
                                               submission_date = submission_date,
                                               type = "quantile",
-                                              location_name = region,
-                                              location = ifelse(region == "Germany", "GM", "PL"))]
+                                              location_name = region)]
+  
+  ## add in location from cumulative
+  forecasts_format <- forecast_format[cumulative[, .(location, location_name)], on = "location"]
   
   # Add point forecasts
   forecasts_point <- forecasts_format[quantile == 0.5]
@@ -53,7 +55,8 @@ format_forecast<- function(forecasts,
   
   # cumulative forecast 
   if (!is.null(cumulative)) {
-    cumulative <- cumulative[, .SD[epiweek == max(epiweek)], by = location]
+    cumulative <- cumulative[target_end_date < forecast_date]
+    cumulative <- cumulative[, .SD[target_end_date == max(target_end_date)], by = location]
     cumulative <- cumulative[, .(location, cum_value = value)]
     forecasts_cum <- data.table::copy(forecasts_format)[cumulative, on = "location"]
     forecasts_cum <- forecasts_cum[order(horizon)][, value := cumsum(value), 

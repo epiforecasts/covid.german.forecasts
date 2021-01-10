@@ -6,12 +6,12 @@ library(here)
 library(data.table)
 
 # Dates -------------------------------------------------------------------
-target_date <- Sys.Date()
+target_date <- Sys.Date() - 6
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
-                                date = ymd(target_date), forecast = TRUE, 
-                                samples = TRUE)$estimated_reported_cases$samples)
+  get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
+                       date = ymd(target_date), forecast = TRUE, 
+                       samples = TRUE)$estimated_reported_cases$samples)
 
 death_forecast <- suppressWarnings(
   get_regional_results(results_dir = here("rt-forecast", "data", "samples", "deaths"),
@@ -22,8 +22,8 @@ death_from_cases_forecast <- fread(here("rt-forecast", "data", "samples", "death
                                          target_date, "samples.csv"))
 
 # Cumulative data ---------------------------------------------------------
-cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))[location_name %in% c("Germany", "Poland")]
-cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))[location_name %in% c("Germany", "Poland")]
+cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))
+cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
   
 # Format forecasts --------------------------------------------------------
 source(here("rt-forecast", "functions", "format-forecast.R"))

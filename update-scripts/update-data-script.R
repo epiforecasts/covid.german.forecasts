@@ -24,8 +24,8 @@ data.table::fwrite(weekly_deaths,
                    here::here("data", "weekly-incident-deaths.csv"))
 
 
-weekly_cases_cum <- get_data(cases = TRUE, cumulative = TRUE)
-weekly_deaths_cum <- get_data(cases = FALSE, cumulative = TRUE)
+weekly_cases_cum <- get_data(cases = TRUE, cumulative = TRUE, national_only = FALSE)
+weekly_deaths_cum <- get_data(cases = FALSE, cumulative = TRUE, national_only = FALSE)
 
 data.table::fwrite(weekly_cases_cum, 
                    here::here("data", "weekly-cumulative-cases.csv"))
