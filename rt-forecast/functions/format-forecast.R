@@ -39,7 +39,8 @@ format_forecast<- function(forecasts,
                                               location_name = region)]
   
   ## add in location from cumulative
-  forecasts_format <- forecast_format[cumulative[, .(location, location_name)], on = "location"]
+  forecasts_format <- merge(forecasts_format, unique(cumulative[, .(location, location_name)]),
+                            by = "location_name", all.x = TRUE)
   
   # Add point forecasts
   forecasts_point <- forecasts_format[quantile == 0.5]
