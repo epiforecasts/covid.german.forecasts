@@ -6,12 +6,12 @@ library(here)
 library(data.table)
 
 # Dates -------------------------------------------------------------------
-target_date <- Sys.Date()
+target_date <- Sys.Date() - 6
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(
-  EpiNow2::get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
-                                date = ymd(target_date), forecast = TRUE, 
-                                samples = TRUE)$estimated_reported_cases$samples)
+  get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
+                       date = ymd(target_date), forecast = TRUE, 
+                       samples = TRUE)$estimated_reported_cases$samples)
 
 death_forecast <- suppressWarnings(
   get_regional_results(results_dir = here("rt-forecast", "data", "samples", "deaths"),
@@ -22,8 +22,8 @@ death_from_cases_forecast <- fread(here("rt-forecast", "data", "samples", "death
                                          target_date, "samples.csv"))
 
 # Cumulative data ---------------------------------------------------------
-cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))[location_name %in% c("Germany", "Poland")]
-cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))[location_name %in% c("Germany", "Poland")]
+cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))
+cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
   
 # Format forecasts --------------------------------------------------------
 source(here("rt-forecast", "functions", "format-forecast.R"))
@@ -59,15 +59,15 @@ check_dir(deaths_folder)
 name_forecast <- function(name, type = ""){
   paste0(target_date, "-", name, "-epiforecasts-EpiNow2", type, ".csv")
 }
-save_forecast <- function(forecast, name, type = "",
+save_forecast <- function(forecast, name, loc, type = "",
                           folder = rt_folder) {
-  fwrite(forecast[location_name == name], file.path(folder, name_forecast(name, type)))
+  fwrite(forecast[grepl(loc, location)], file.path(folder, name_forecast(name, type)))
 }
 
-save_forecast(case_forecast, "Germany", "-case")
-save_forecast(case_forecast, "Poland", "-case")
-save_forecast(death_forecast, "Germany")
-save_forecast(death_forecast, "Poland")
-save_forecast(death_from_cases_forecast, "Germany", "_secondary", deaths_folder)
-save_forecast(death_from_cases_forecast, "Poland", "_secondary", deaths_folder)
+save_forecast(case_forecast, "Germany", "GM", "-case")
+save_forecast(case_forecast, "Poland", "PL", "-case")
+save_forecast(death_forecast, "Germany", "GM")
+save_forecast(death_forecast, "Poland", "PL")
+save_forecast(death_from_cases_forecast, "Germany", "GM", "_secondary", deaths_folder)
+save_forecast(death_from_cases_forecast, "Poland", "PL", "_secondary", deaths_folder)
 

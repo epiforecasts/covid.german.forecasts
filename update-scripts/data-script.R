@@ -1,5 +1,5 @@
 # script to update data and store data
-library(magrittr)
+library(magrittr, quietly = TRUE)
 source(here::here("functions", "load-data.R"))
 
 if (!dir.exists(here::here("data"))) {
@@ -24,8 +24,8 @@ data.table::fwrite(weekly_deaths,
                    here::here("data", "weekly-incident-deaths.csv"))
 
 
-weekly_cases_cum <- get_data(cases = TRUE, cumulative = TRUE)
-weekly_deaths_cum <- get_data(cases = FALSE, cumulative = TRUE)
+weekly_cases_cum <- get_data(cases = TRUE, cumulative = TRUE, national_only = FALSE)
+weekly_deaths_cum <- get_data(cases = FALSE, cumulative = TRUE, national_only = FALSE)
 
 data.table::fwrite(weekly_cases_cum, 
                    here::here("data", "weekly-cumulative-cases.csv"))
@@ -40,8 +40,6 @@ if (!dir.exists(here::here("human-forecasts", "data"))) {
 # copy data into human forecast app
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts"), recursive = TRUE)
-
-
 
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts", "performance-board"), recursive = TRUE)

@@ -12,16 +12,16 @@ library(purrr, quietly = TRUE)
 target_date <- as.character(Sys.Date()) 
 
 # Get Observations --------------------------------------------------------
-deaths <- fread(here("data", "daily-incidence-deaths-Germany_Poland.csv"))
-deaths <- deaths[location_name %in% c("Germany", "Poland")]
-cases <- fread(here("data", "daily-incidence-cases-Germany_Poland.csv"))
-cases <- cases[location_name %in% c("Germany", "Poland")]
+deaths <- fread(here("data", "daily-incidence-deaths.csv"))
+cases <- fread(here("data", "daily-incidence-cases.csv"))
 deaths <- setnames(deaths, "value", "secondary")
 cases <- setnames(cases, "value", "primary")
 observations <- merge(cases, deaths, by = c("location", "location_name", "date"))
 observations <- observations[, .(region = as.character(location_name), date = as.Date(date), 
                                  primary, secondary)]
 observations <- observations[date >= (max(date) - 8*7)][date <= target_date]
+observations <- observations[primary < 0, primary := 0]
+observations <- observations[secondary < 0, secondary := 0]
 setorder(observations, region, date)
 
 # Get case forecasts ------------------------------------------------------

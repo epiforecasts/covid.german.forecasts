@@ -58,7 +58,7 @@ moving_average <- function(x, n = 7){
   }
 
 # daily data for reference plot
-cases_daily_inc <- data.table::fread(here::here("data", "daily-incidence-cases-Germany_Poland.csv")) %>%
+cases_daily_inc <- data.table::fread(here::here("data", "daily-incidence-cases.csv")) %>%
   dplyr::filter(location %in% c("GM", "PL")) %>%
   dplyr::mutate(inc = "incident", 
                 type = "cases", 
