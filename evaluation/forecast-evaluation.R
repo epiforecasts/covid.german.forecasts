@@ -19,7 +19,9 @@ file_paths <- paste0("data/", files[grepl("weekly-incident", files)])
 names(file_paths) <- c("case", "death")
 
 truth_data <- purrr::map_dfr(file_paths, readr::read_csv, .id = "target_type") %>%
-  dplyr::rename(true_value = value)
+  dplyr::rename(true_value = value) %>%
+  dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
+  dplyr::arrange(location, target_type, target_end_date)
 
 intro_text <- c("This our own evaluation of individual forecasts submitted to the 
 EpiExpert model. This model is submitted to the 
