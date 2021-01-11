@@ -1,0 +1,12 @@
+name: rt-crowd-forecast
+title: rt-crowd-forecast
+username:
+account: nikosbosse
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3454515
+bundleId: 4082429
+url: https://nikosbosse.shinyapps.io/rt-crowd-forecast/
+when: 1610377792.47743
+asMultiple: FALSE
+asStatic: FALSE
