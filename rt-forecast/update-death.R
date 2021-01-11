@@ -39,7 +39,7 @@ regional_epinow(reported_cases = deaths,
                                  chains = 4, cores = no_cores), 
                 obs = obs_opts(scale = list(mean = 0.005, sd = 0.0025)),
                 horizon = 30,
-                output = c("region", "summary", "timing", "samples"),
+                output = c("region", "summary", "timing", "samples", "fit"),
                 target_date = target_date,
                 target_folder = here("rt-forecast", "data", "samples", "deaths"), 
                 summary_args = list(
