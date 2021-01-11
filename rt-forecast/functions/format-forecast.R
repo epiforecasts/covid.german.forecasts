@@ -1,7 +1,8 @@
 # Packages ----------------------------------------------------------------
-require(EpiNow2)
-require(data.table)
-require(lubridate)
+library(EpiNow2)
+library(data.table)
+library(lubridate)
+library(here)
 source(here::here("functions/dates-to-epiweek.R"))
  
 format_forecast<- function(forecasts, 
@@ -39,8 +40,8 @@ format_forecast<- function(forecasts,
                                               location_name = region)]
   
   ## add in location from cumulative
-  forecasts_format <- merge(forecasts_format, unique(cumulative[, .(location, location_name)]),
-                            by = "location_name", all.x = TRUE)
+  locations <- unique(data.table::copy(cumulative)[, .(location, location_name)])
+  forecasts_format <- merge(forecasts_format, locations, by = "location_name", all.x = TRUE)
   
   # Add point forecasts
   forecasts_point <- forecasts_format[quantile == 0.5]

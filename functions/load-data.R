@@ -76,10 +76,13 @@ get_data <- function(load_from_server = FALSE,
         dplyr::group_by(location, location_name, epiweek) %>%
         dplyr::summarise(value = sum(value), 
                          target_end_date = max(date),
-                         .groups = "drop_last")
+                         .groups = "drop_last") %>% 
+        ungroup()
       
       if (cumulative) {
         cumulative_cases_weekly <- incident_cases_weekly %>%
+          dplyr::arrange(target_end_date) %>% 
+          dplyr::group_by(location, location_name) %>% 
           dplyr::mutate(value = cumsum(value))
         return(filter_national(cumulative_cases_weekly))
       } else {
@@ -94,9 +97,12 @@ get_data <- function(load_from_server = FALSE,
         dplyr::group_by(location, location_name, epiweek) %>%
         dplyr::summarise(value = sum(value), 
                          target_end_date = max(date),
-                         .groups = "drop_last")
+                         .groups = "drop_last") %>% 
+        ungroup()
       if (cumulative) {
         cumulative_deaths_weekly <- incident_deaths_weekly %>%
+          dplyr::arrange(target_end_date) %>% 
+          dplyr::group_by(location, location_name) %>% 
           dplyr::mutate(value = cumsum(value))
         return(filter_national(cumulative_deaths_weekly))
       } else {
