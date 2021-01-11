@@ -7,3 +7,4 @@ rt-forecast/data/samples
 rt-forecast/logs
 data/*.csv
 human-forecasts/data
+human-forecasts/performance-board/data
