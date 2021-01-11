@@ -6,7 +6,7 @@ library(here)
 library(data.table)
 
 # Dates -------------------------------------------------------------------
-target_date <- Sys.Date() - 6
+target_date <- Sys.Date()
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(
   get_regional_results(results_dir = here("rt-forecast", "data", "samples", "cases"),
