@@ -5507,6 +5507,23 @@ date,location,location_name,value
 2021-01-10,GM14,Sachsen-Anhalt State,35734
 2021-01-10,GM15,Free State of Thüringia,51272
 2021-01-10,GM16,Berlin State,105850
+2021-01-11,GM,Germany,1921024
+2021-01-11,GM01,Baden-Württemberg State,261487
+2021-01-11,GM02,Free State of Bavaria,356922
+2021-01-11,GM03,Free Hanseatic City of Bremen,14365
+2021-01-11,GM04,Free Hanseatic City of Hamburg,40687
+2021-01-11,GM05,Hesse State,150790
+2021-01-11,GM06,Lower Saxony State,120634
+2021-01-11,GM07,North Rhine-Westphalia State,429506
+2021-01-11,GM08,Rhineland-Palatinate State,80449
+2021-01-11,GM09,Saarland State,21900
+2021-01-11,GM10,Schleswig-Holstein State,28624
+2021-01-11,GM11,Brandenburg State,50180
+2021-01-11,GM12,Mecklenburg-Western Pomerania State,14757
+2021-01-11,GM13,Free State of Saxony,155627
+2021-01-11,GM14,Sachsen-Anhalt State,37300
+2021-01-11,GM15,Free State of Thüringia,51606
+2021-01-11,GM16,Berlin State,106190
 2020-03-05,PL72,Dolnoslaskie,0
 2020-03-05,PL73,Kujawsko-Pomorskie,0
 2020-03-05,PL75,Lubelskie,0
@@ -10828,3 +10845,20 @@ date,location,location_name,value
 2021-01-11,PL86,Wielkopolskie,140939
 2021-01-11,PL87,Zachodniopomorskie,69400
 2021-01-11,PL,Poland,1385814
+2021-01-12,PL72,Dolnoslaskie,92896
+2021-01-12,PL73,Kujawsko-Pomorskie,93743
+2021-01-12,PL75,Lubelskie,69523
+2021-01-12,PL76,Lubuskie,33655
+2021-01-12,PL74,Lodzkie,90858
+2021-01-12,PL77,Malopolskie,112132
+2021-01-12,PL78,Mazowieckie,169085
+2021-01-12,PL79,Opolskie,38299
+2021-01-12,PL80,Podkarpackie,62608
+2021-01-12,PL81,Podlaskie,36674
+2021-01-12,PL82,Pomorskie,90731
+2021-01-12,PL83,Slaskie,162541
+2021-01-12,PL84,Swietokrzyskie,36458
+2021-01-12,PL85,Warminsko-Mazurskie,59400
+2021-01-12,PL86,Wielkopolskie,141385
+2021-01-12,PL87,Zachodniopomorskie,69970
+2021-01-12,PL,Poland,1390436
