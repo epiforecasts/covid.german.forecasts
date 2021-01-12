@@ -17,8 +17,6 @@ identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 # - 1 as this is usually updated on a Tuesday
 submission_date <- Sys.Date() - 1
 median_ensemble <- FALSE
-# grid of quantiles to obtain / submit from forecasts
-quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 
 
 # load data from Google Sheets -------------------------------------------------
@@ -27,9 +25,6 @@ ids <- googlesheets4::read_sheet(ss = identification_sheet,
                                  sheet = "ids")
 # load forecasts 
 forecasts <- googlesheets4::read_sheet(ss = spread_sheet)
-
-
-
 
 # obtain raw and filtered forecasts, save raw forecasts-------------------------
 raw_forecasts <- forecasts %>%
@@ -41,7 +36,7 @@ filtered_forecasts <- raw_forecasts %>%
   # interesting question whether or not to include foracast_type here. 
   # if someone reconnecs and then accidentally resubmits under a different
   # condition should that be removed or not? 
-  dplyr::group_by(forecaster_id, region) %>%
+  dplyr::group_by(forecaster_id, region, target_type) %>%
   dplyr::filter(forecast_time == max(forecast_time)) %>%
   dplyr::ungroup() 
 
@@ -124,6 +119,10 @@ draw_samples <- function(distribution,
 
 # draw samples
 forecast_samples <- filtered_forecasts %>%
+  dplyr::rename(location = region) %>%
+  dplyr::mutate(location = ifelse(location == "Germany", "GM", "PL")) %>%
+  dplyr::select(c(forecaster_id, location, target_end_date, submission_date, target_type, distribution, median, width)) %>%
+  dplyr::arrange(forecaster_id, location, target_type, target_end_date) %>%
   dplyr::rowwise() %>%
   dplyr::mutate(value = draw_samples(median = median, 
                                      width = width, 
@@ -134,36 +133,38 @@ forecast_samples <- filtered_forecasts %>%
                 sample = list(1:length(value))) %>%
   tidyr::unnest(cols = c(sample, value)) %>%
   dplyr::ungroup() %>%
-  dplyr::mutate(type = "rt", 
-                target = paste0(horizon, " wk ahead inc ", type), 
-                type = "sample")
+  dplyr::select(forecaster_id, location, target_end_date, submission_date, target_type, sample, value) %>%
+  dplyr::arrange(forecaster_id, location, target_type, target_end_date, sample)
+  
 
+  
+  
 
-
-
-# do linear interpolation between the samples for the week days
-# get the ordering for the samples from the last data point to stitch the 
-# last observation to the first forecast. 
-
-forecast_samples <- forecast_samples %>%
-  dplyr::mutate(horizon = ifelse(horizon == 1, 1, (horizon - 1) * 7)) %>%
-  pull(horizon) %>% unique()
-
-daily_set <- 0
 
 
 # interpolate missing days
 # I'm pretty sure the horizon time indexisng is currently wrong. 
-forecast_samples <- forecast_samples %>%
-  tidyr::uncount(7, .id = "counter") %>%
-  dplyr::mutate(horizon = counter + 7 * (horizon - 1)) %>%
-  dplyr::filter(horizon <= 36) %>%
-  dplyr::mutate(value = ifelse(horizon %in% c(1, 8, 15, 22, 29, 36), 
-                               value, NA)) %>%
-  dplyr::group_by(forecaster_id, region, sample) %>%
+
+
+dates <- unique(forecast_samples$target_end_date)
+date_range <- seq(min(as.Date(min(dates))), max(as.Date(max(dates))), by = 'days')
+submission_date = unique(forecast_samples$submission_date)
+forecaster_ids <- unique(forecast_samples$forecaster_id)
+helper_data <- expand.grid(target_end_date = date_range, 
+                           forecaster_id = forecaster_ids,
+                           location = c("GM", "PL"), 
+                           target_type = c("case", "death"), 
+                           submission_date = submission_date, 
+                           sample = 1:500)
+
+
+forecast_samples_daily <- forecast_samples %>%
+  dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
+  dplyr::full_join(helper_data) %>%
+  dplyr::arrange(forecaster_id, location, target_type, sample, target_end_date) %>%
+  dplyr::group_by(forecaster_id, location, target_type, sample) %>%
   dplyr::mutate(value = zoo::na.approx(value))
-
-
+  
 
 # save forecasts in quantile-format
 data.table::fwrite(forecast_samples %>%
@@ -171,3 +172,18 @@ data.table::fwrite(forecast_samples %>%
                    paste0("rt-crowd-forecast/processed-forecast-data/", 
                           submission_date, "-processed-forecasts.csv"))
 
+
+
+
+# check result if you want
+
+check <- scoringutils::sample_to_quantile(forecast_samples_daily %>%
+                                            dplyr::rename(prediction = value)) %>%
+  dplyr::mutate(target_end_date = as.Date(target_end_date))
+
+scoringutils::plot_predictions(check %>%
+                                 dplyr::mutate(true_value = NA_real_, 
+                                               target_end_date = as.Date(target_end_date,
+                                                                         origin="1970-01-01")), 
+                               x = "target_end_date", 
+                               facet_formula = ~ forecaster_id + location + target_type)
