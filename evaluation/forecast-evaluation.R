@@ -4,15 +4,31 @@ library(magrittr)
 root_dir <- "human-forecasts/processed-forecast-data/"
 file_paths_forecast <- paste0(root_dir, list.files(root_dir))
 
-prediction_data <- purrr::map_dfr(file_paths_forecast, readr::read_csv) %>%
+prediction_data <- purrr::map_dfr(file_paths_forecast, 
+                                  .f = function(x) {
+                                    data <- data.table::fread(x) %>%
+                                      dplyr::mutate(target_end_date = as.Date(target_end_date), 
+                                                    submission_date = as.Date(submission_date), 
+                                                    forecast_date = as.Date(forecast_date))
+                                    }) %>%
   dplyr::mutate(target_type = ifelse(grepl("death", target), "death", "case")) %>%
   dplyr::rename(prediction = value) %>%
-  dplyr::mutate(forecast_date = submission_date) %>%
+  dplyr::mutate(forecast_date = as.Date(submission_date)) %>%
   dplyr::rename(model = board_name) %>%
-  dplyr::filter(type == "quantile") %>%
+  dplyr::filter(type == "quantile", 
+                location_name %in% c("Germany", "Poland")) %>%
   dplyr::select(location, location_name, forecast_date, quantile, prediction, model, target_end_date, horizon, target, target_type)
-  
 
+
+
+# prediction_data$target_end_date %>% unique()
+# 
+# 
+# 
+# d <- prediction_data %>%
+#   dplyr::filter(forecast_date == as.Date("2021-01-04"), 
+#                 location_name == "Poland", 
+#                 model == "EpiExpert-ensemble")
 
 files <- list.files("data/")
 file_paths <- paste0("data/", files[grepl("weekly-incident", files)])
