@@ -9,7 +9,7 @@ options(gargle_oauth_cache = ".secrets")
 drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 gs4_auth(token = drive_token())
 
-spread_sheet <- "1xdJDgZdlN7mYHJ0D0QbTcpiV9h1Dmga4jVoAg5DhaKI"
+spread_sheet <- "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 
@@ -26,31 +26,18 @@ quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 ids <- googlesheets4::read_sheet(ss = identification_sheet, 
                                  sheet = "ids")
 # load forecasts 
-forecasts <- googlesheets4::read_sheet(ss = spread_sheet, 
-                                       sheet = "predictions")
-
-# handle comments made by users ------------------------------------------------
-# extract comments and store separately
-comments <- forecasts %>%
-  dplyr::select(forecaster_id, comments) %>%
-  dplyr::filter(!is.na(comments)) %>%
-  unique()
-
-# append comments to google sheets
-comment_sheet <- "1isJQbE1RLvXYDpaaDADPHObgh8DMsTIHOonu8S1W8zc"
-googlesheets4::sheet_append(ss = comment_sheet,
-                            data = comments)
+forecasts <- googlesheets4::read_sheet(ss = spread_sheet)
 
 # obtain raw and filtered forecasts, save raw forecasts-------------------------
 raw_forecasts <- forecasts %>%
-  dplyr::select(-comments) 
+  dplyr::mutate(location = ifelse(location_name == "Germany", "GM", "PL"))
 
 # use only the latest forecast from a given forecaster
 filtered_forecasts <- raw_forecasts %>%
   # interesting question whether or not to include foracast_type here. 
   # if someone reconnecs and then accidentally resubmits under a different
   # condition should that be removed or not? 
-  dplyr::group_by(forecaster_id, forecast_type, location, inc, type) %>%
+  dplyr::group_by(forecaster_id, location, target_type) %>%
   dplyr::filter(forecast_time == max(forecast_time)) %>%
   dplyr::ungroup()
 
@@ -59,7 +46,7 @@ filtered_forecasts <- raw_forecasts %>%
 # define function to do this for raw and filtered forecasts
 replace_date_and_time <- function(forecasts) {
   forecast_times <- forecasts %>%
-    dplyr::group_by(forecaster_id, location, type, inc) %>%
+    dplyr::group_by(forecaster_id, location, target_type) %>%
     dplyr::summarise(forecast_time = unique(forecast_time)) %>%
     dplyr::ungroup() %>%
     dplyr::arrange(forecaster_id, forecast_time) %>%
@@ -68,8 +55,8 @@ replace_date_and_time <- function(forecasts) {
     dplyr::ungroup()
   
   forecasts <- dplyr::inner_join(forecasts, forecast_times, 
-                                 by = c("forecaster_id", "location", "inc", 
-                                        "type", "forecast_time")) %>%
+                                 by = c("forecaster_id", "location", 
+                                        "target_type", "forecast_time")) %>%
     dplyr::mutate(forecast_week = lubridate::epiweek(forecast_date), 
                   target_end_date = as.Date(target_end_date)) %>%
     dplyr::select(-forecast_time)
@@ -92,49 +79,44 @@ data.table::fwrite(raw_forecasts %>%
 # define function that returns quantiles depending on condition and distribution
 
 calculate_quantiles <- function(quantile_grid, 
-                             median, 
-                             width, 
-                             forecast_type, 
-                             distribution, 
-                             lower_90, 
-                             upper_90) {
+                                median, 
+                                width, 
+                                forecast_type, 
+                                distribution, 
+                                lower_90, 
+                                upper_90) {
   
-  if (forecast_type == "distribution") {
-    if (distribution == "log-normal") {
-      values <- list(exp(qnorm(quantile_grid, 
-                               mean = log(as.numeric(median)),
-                               sd = as.numeric(width))))
-    } else if (distribution == "normal") {
-      values <- list((qnorm(quantile_grid, 
-                            mean = (as.numeric(median)),
-                            sd = as.numeric(width))))
-      
-    } else if (distribution == "cubic-normal") {
-      values <- list((qnorm(quantile_grid, 
-                            mean = (as.numeric(median) ^ (1/3)),
-                            sd = as.numeric(width))) ^ 3)
-      
-    } else if (distribution == "fifth-power-normal") {
-      values <- list((qnorm(quantile_grid, 
-                            mean = (as.numeric(median) ^ (1/5)),
-                            sd = as.numeric(width))) ^ 5)
-      
-    } else if (distribution == "seventh-power-normal") {
-      values <- list((qnorm(quantile_grid, 
-                            mean = (as.numeric(median) ^ (1/7)),
-                            sd = as.numeric(width))) ^ 7)
-    }
+  
+  if (distribution == "log-normal") {
+    values <- list(exp(qnorm(quantile_grid, 
+                             mean = log(as.numeric(median)),
+                             sd = as.numeric(width))))
+  } else if (distribution == "normal") {
+    values <- list((qnorm(quantile_grid, 
+                          mean = (as.numeric(median)),
+                          sd = as.numeric(width))))
     
-  } else if (forecast_type == "quantile_forecast") {
-    # code still needs to be written
-    values <- list(quantile_grid)
+  } else if (distribution == "cubic-normal") {
+    values <- list((qnorm(quantile_grid, 
+                          mean = (as.numeric(median) ^ (1/3)),
+                          sd = as.numeric(width))) ^ 3)
+    
+  } else if (distribution == "fifth-power-normal") {
+    values <- list((qnorm(quantile_grid, 
+                          mean = (as.numeric(median) ^ (1/5)),
+                          sd = as.numeric(width))) ^ 5)
+    
+  } else if (distribution == "seventh-power-normal") {
+    values <- list((qnorm(quantile_grid, 
+                          mean = (as.numeric(median) ^ (1/7)),
+                          sd = as.numeric(width))) ^ 7)
   }
+  
   return(values)
 }
 
 forecast_quantiles <- filtered_forecasts %>%
   # disregard quantile forecasts this week
-  dplyr::filter(forecast_type == "distribution") %>%
   dplyr::rowwise() %>%
   dplyr::mutate(quantile = list(quantile_grid),
                 value = calculate_quantiles(quantile_grid, 
@@ -146,7 +128,7 @@ forecast_quantiles <- filtered_forecasts %>%
                                             upper_90)) %>%
   tidyr::unnest(cols = c(quantile, value)) %>%
   dplyr::ungroup() %>%
-  dplyr::mutate(type = ifelse(type == "cases", "case", "death"), 
+  dplyr::mutate(type = ifelse(target_type == "cases", "case", "death"), 
                 target = paste0(horizon, " wk ahead inc ", type), 
                 type = "quantile")
 
