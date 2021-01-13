@@ -14,12 +14,10 @@ crowd_rt <- fread(here("rt-crowd-forecast", "processed-forecast-data",
 
 # dropped redundant columns and get correct shape
 crowd_rt <- crowd_rt[, .(location, target = paste0(target_type, "s"), 
-                         date = target_end_date, value = round(value, 3))]
-crowd_rt[, sample := 1:.N, by = .(location, date, target)]
+                         date = as.Date(target_end_date), value = round(value, 3))]
 crowd_rt[location %in% "GM", location := "Germany"]
 crowd_rt[location %in% "PL", location := "Poland"]
-crowd_rt[]
-setorder(crowd_rt, location, target, date)
+crowd_rt[, sample := 1:.N, by = .(location, date, target)]
 
 # Get forecast objects ----------------------------------------------------
 load_epinow <- function(target_region, dir, date) { 
@@ -33,4 +31,42 @@ load_epinow <- function(target_region, dir, date) {
   return(out)
 }
 
-crowd_rt
+
+# Simulate cases ----------------------------------------------------------
+simulate_crowd_cases <- function(crowd_rt) {
+  sims <- map(unique(crowd_rt$location), function(loc) {
+    dt <- copy(crowd_rt)[location %in% loc]
+    map(unique(dt$target), function(tar) {
+      message("Simulating cases for ", tar, " in ", loc)
+      # get data for target region
+      dt_tar <- copy(dt)[target %in% tar]
+      dt_tar <- dt_tar[, .(date, sample, value)]
+      
+      # load fit EpiNow2 model object
+      model <- load_epinow(target_region = loc,
+                           dir = here("rt-forecast", "data", "samples", tar),
+                           date = target_date)
+      
+      # extracted estimated Rt and cut to length of forecast
+      est_R <- model$samples[variable == "R"]
+      est_R <- est_R[, .(date = as.Date(date), sample, value)]
+      est_R <- est_R[sample <= max(dt_tar$sample)]
+      future_R <- est_R[date > max(dt_tar$date)]
+      est_R <- est_R[date < min(dt_tar$date)]
+      
+      # join estimates and forecast
+      forecast_rt <- rbindlist(list(est_R, dt_tar, future_R))
+      setorder(forecast_rt, sample, date)
+      
+      sims <- simulate_infections(model, forecast_rt)
+      sims$plot <- plot(sims)
+      return(sims)
+    })
+  })
+}
+
+crowd_cases <- simulate_crowd_cases(crowd_rt)
+
+# Save output -------------------------------------------------------------
+
+
