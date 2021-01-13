@@ -1,4 +1,5 @@
 # Launch the ShinyApp (Do not remove this comment)
+# RT app
 
 # devtools::install_github("epiforecasts/crowdforecastr")
 

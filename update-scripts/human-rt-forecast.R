@@ -15,7 +15,7 @@ identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 # setup ------------------------------------------------------------------------
 # - 1 as this is usually updated on a Tuesday
-submission_date <- Sys.Date() - 1
+submission_date <- Sys.Date() - 2
 median_ensemble <- FALSE
 
 
@@ -150,24 +150,28 @@ dates <- unique(forecast_samples$target_end_date)
 date_range <- seq(min(as.Date(min(dates))), max(as.Date(max(dates))), by = 'days')
 submission_date = unique(forecast_samples$submission_date)
 forecaster_ids <- unique(forecast_samples$forecaster_id)
+n_samples <- max(forecast_samples$sample)
 helper_data <- expand.grid(target_end_date = date_range, 
                            forecaster_id = forecaster_ids,
                            location = c("GM", "PL"), 
                            target_type = c("case", "death"), 
                            submission_date = submission_date, 
-                           sample = 1:500)
+                           sample = 1:n_samples)
 
+# get rid of 
 
 forecast_samples_daily <- forecast_samples %>%
   dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
   dplyr::full_join(helper_data) %>%
   dplyr::arrange(forecaster_id, location, target_type, sample, target_end_date) %>%
   dplyr::group_by(forecaster_id, location, target_type, sample) %>%
+  dplyr::mutate(no_predictions = ifelse(all(is.na(value)), TRUE, FALSE)) %>%
+  dplyr::filter(!no_predictions) %>%
   dplyr::mutate(value = zoo::na.approx(value))
   
 
 # save forecasts in quantile-format
-data.table::fwrite(forecast_samples %>%
+data.table::fwrite(forecast_samples_daily %>%
                      dplyr::mutate(submission_date = submission_date),
                    paste0("rt-crowd-forecast/processed-forecast-data/", 
                           submission_date, "-processed-forecasts.csv"))
@@ -176,14 +180,17 @@ data.table::fwrite(forecast_samples %>%
 
 
 # check result if you want
-
 check <- scoringutils::sample_to_quantile(forecast_samples_daily %>%
                                             dplyr::rename(prediction = value)) %>%
   dplyr::mutate(target_end_date = as.Date(target_end_date))
 
-scoringutils::plot_predictions(check %>%
+plot <- scoringutils::plot_predictions(check %>%
                                  dplyr::mutate(true_value = NA_real_, 
                                                target_end_date = as.Date(target_end_date,
                                                                          origin="1970-01-01")), 
                                x = "target_end_date", 
                                facet_formula = ~ forecaster_id + location + target_type)
+
+
+
+
