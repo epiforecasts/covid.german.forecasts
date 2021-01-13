@@ -6,7 +6,7 @@
 library(crowdforecastr)
 library(magrittr)
 
-options( "golem.app.prod" = TRUE)
+options("golem.app.prod" = TRUE)
 
 # Assume the submission date to be a Monday and the target end dates to be Saturdays
 submission_date <- "2021-01-11" 
