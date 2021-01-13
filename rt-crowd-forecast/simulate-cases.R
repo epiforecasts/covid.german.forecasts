@@ -2,6 +2,7 @@
 library(EpiNow2)
 library(data.table)
 library(here) 
+library(purrr)
 
 # Set forecasting date ----------------------------------------------------
 #target_date <- Sys.Date() -1 
@@ -34,9 +35,11 @@ load_epinow <- function(target_region, dir, date) {
 
 # Simulate cases ----------------------------------------------------------
 simulate_crowd_cases <- function(crowd_rt) {
-  sims <- map(unique(crowd_rt$location), function(loc) {
+  locs <- unique(crowd_rt$location)
+  sims <- map(locs, function(loc) {
     dt <- copy(crowd_rt)[location %in% loc]
-    map(unique(dt$target), function(tar) {
+    tars <- unique(dt$target)
+    sims <- map(tars, function(tar) {
       message("Simulating cases for ", tar, " in ", loc)
       # get data for target region
       dt_tar <- copy(dt)[target %in% tar]
@@ -62,11 +65,45 @@ simulate_crowd_cases <- function(crowd_rt) {
       sims$plot <- plot(sims)
       return(sims)
     })
+    names(sims) <- tars
+    return(sims)
   })
+  names(sims) <- locs
+  return(sims)
 }
 
-crowd_cases <- simulate_crowd_cases(crowd_rt)
-
-# Save output -------------------------------------------------------------
+simulations <- simulate_crowd_cases(crowd_rt)
 
 
+# Extract output ----------------------------------------------------------
+extract_samples <- function(output, target) {
+  samples <- map(names(output), function(loc) {
+    dt <- output[[loc]][[target]]$samples[, region := loc][variable %in% "reported_cases"]
+    dt <- dt[, .(region, date, sample, value)]
+    setorder(dt, region, date, sample) 
+    return(dt)
+    })
+  
+  samples <- rbindlist(samples)
+  return(samples)
+}
+
+crowd_cases <- extract_samples(simulations, "cases")
+crowd_deaths <- extract_samples(simulations, "deaths")
+
+
+# Submission --------------------------------------------------------------
+
+# Cumulative data
+cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))
+cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
+
+# Format forecasts 
+source(here("rt-forecast", "functions", "format-forecast.R"))
+
+case_forecast <- format_forecast(case_forecast[, value := cases], 
+                                 cumulative =  cum_cases,
+                                 forecast_date = target_date,
+                                 submission_date = target_date,
+                                 CrI_samples = 0.8,
+                                 target_value = "case")
