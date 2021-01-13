@@ -87,10 +87,8 @@ extract_samples <- function(output, target) {
   samples <- rbindlist(samples)
   return(samples)
 }
-
 crowd_cases <- extract_samples(simulations, "cases")
 crowd_deaths <- extract_samples(simulations, "deaths")
-
 
 # Submission --------------------------------------------------------------
 
@@ -101,9 +99,32 @@ cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
 # Format forecasts 
 source(here("rt-forecast", "functions", "format-forecast.R"))
 
-case_forecast <- format_forecast(case_forecast[, value := cases], 
-                                 cumulative =  cum_cases,
-                                 forecast_date = target_date,
-                                 submission_date = target_date,
-                                 CrI_samples = 0.8,
-                                 target_value = "case")
+crowd_cases <- format_forecast(crowd_cases, 
+                               cumulative = cum_cases[location_name %in% c("Germany", "Poland")],
+                               forecast_date = target_date,
+                               submission_date = target_date,
+                               target_value = "case")
+
+crowd_deaths <- format_forecast(crowd_deaths, 
+                                cumulative = cum_deaths[location_name %in% c("Germany", "Poland")],
+                                forecast_date = target_date,
+                                submission_date = target_date,
+                                target_value = "death")
+
+# save forecasts
+source(here("rt-forecast", "functions", "check-dir.R"))
+crowd_folder <- here("submissions", "crowd-rt-forecasts", target_date)
+check_dir(crowd_folder)
+
+name_forecast <- function(name, type = ""){
+  paste0(target_date, "-", name, "-epiforecasts-EpiExpert_Rt", type, ".csv")
+}
+save_forecast <- function(forecast, name, loc, type = "",
+                          folder = crowd_folder) {
+  fwrite(forecast[grepl(loc, location)], file.path(folder, name_forecast(name, type)))
+}
+save_forecast(crowd_cases, "Germany", "GM", "-case")
+save_forecast(crowd_cases, "Poland", "PL", "-case")
+save_forecast(crowd_deaths, "Germany", "GM")
+save_forecast(crowd_deaths, "Poland", "PL")
+
