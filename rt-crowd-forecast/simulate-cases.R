@@ -3,6 +3,7 @@ library(EpiNow2)
 library(data.table)
 library(here) 
 library(purrr)
+library(ggplot2)
 
 # Set forecasting date ----------------------------------------------------
 #target_date <- Sys.Date() -1 
@@ -31,7 +32,6 @@ load_epinow <- function(target_region, dir, date) {
   out$observations <- readRDS(file.path(path, "reported_cases.rds"))
   return(out)
 }
-
 
 # Simulate cases ----------------------------------------------------------
 simulate_crowd_cases <- function(crowd_rt) {
@@ -74,8 +74,8 @@ simulate_crowd_cases <- function(crowd_rt) {
 
 simulations <- simulate_crowd_cases(crowd_rt)
 
-
 # Extract output ----------------------------------------------------------
+# extract samples
 extract_samples <- function(output, target) {
   samples <- map(names(output), function(loc) {
     dt <- output[[loc]][[target]]$samples[, region := loc][variable %in% "reported_cases"]
@@ -90,8 +90,20 @@ extract_samples <- function(output, target) {
 crowd_cases <- extract_samples(simulations, "cases")
 crowd_deaths <- extract_samples(simulations, "deaths")
 
-# Submission --------------------------------------------------------------
+# save output
+source(here("rt-forecast", "functions", "check-dir.R"))
+plot_dir <- here("rt-crowd-forecast", "data", "plots", target_date)
+check_dir(plot_dir)
 
+walk(names(simulations), function(loc) {
+  walk(names(simulations[[1]]), function(tar) {
+    ggsave(paste0(loc, "-", tar, ".png"), 
+                  simulations[[loc]][[tar]]$plot,
+           path = plot_dir, height = 9, width = 9)
+  })
+})
+
+# Submission --------------------------------------------------------------
 # Cumulative data
 cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))
 cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
@@ -112,7 +124,6 @@ crowd_deaths <- format_forecast(crowd_deaths,
                                 target_value = "death")
 
 # save forecasts
-source(here("rt-forecast", "functions", "check-dir.R"))
 crowd_folder <- here("submissions", "crowd-rt-forecasts", target_date)
 check_dir(crowd_folder)
 
