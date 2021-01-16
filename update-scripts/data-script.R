@@ -40,7 +40,3 @@ if (!dir.exists(here::here("human-forecasts", "data"))) {
 # copy data into human forecast app
 file.copy(from = here::here("data"), 
           to = here::here("human-forecasts"), recursive = TRUE)
-
-file.copy(from = here::here("data"), 
-          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
-
