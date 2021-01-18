@@ -9,19 +9,17 @@ library(magrittr)
 options("golem.app.prod" = TRUE)
 
 # Assume the submission date to be a Monday and the target end dates to be Saturdays
-submission_date <- "2021-01-11" 
-first_forecast_date <- as.character(as.Date("2021-01-11") - 16)
+submission_date <- "2021-01-18" 
+first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
-
-
-# obs_filt_rt_cases <- data.table::fread("../covid-german-forecasts/rt-forecast/data/summary/cases/2021-01-11/rt.csv") %>%
+# obs_filt_rt_cases <- data.table::fread(paste0("rt-forecast/data/summary/cases/", submission_date, "/rt.csv")) %>%
 #     dplyr::rename(value = median,
 #                   target_end_date = date) %>%
 #   dplyr::mutate(target_type = "case",
 #                 target_end_date = as.Date(target_end_date)) %>%
 #     dplyr::filter(target_end_date <= (as.Date(first_forecast_date) + 7 * 6)) %>%
 #   dplyr::filter(region %in% c("Poland", "Germany"))
-# obs_filt_rt_deaths <- data.table::fread("../covid-german-forecasts/rt-forecast/data/summary/deaths/2021-01-11/rt.csv") %>%
+# obs_filt_rt_deaths <- data.table::fread(paste0("rt-forecast/data/summary/deaths/", submission_date, "/rt.csv")) %>%
 #   dplyr::rename(value = median,
 #                 target_end_date = date) %>%
 #   dplyr::mutate(target_type = "death",
@@ -34,8 +32,12 @@ first_forecast_date <- as.character(as.Date("2021-01-11") - 16)
 #                    "rt-crowd-forecast/external-ressources/observations.csv")
 
 
-obs_filt_rt <- read.csv("external-ressources/observations.csv")
+obs_filt_rt <- read.csv("external-ressources/observations.csv") %>%
+  dplyr::arrange(region, target_type, target_end_date)
 
+obs_filt_rt %>%
+  dplyr::filter(target_type == "case") %>%
+  dplyr::pull(target_end_date)
 
 
 crowdforecastr::run_app(data = obs_filt_rt,
