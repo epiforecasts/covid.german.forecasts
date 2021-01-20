@@ -6,7 +6,7 @@ library(purrr)
 library(ggplot2)
 
 # Set forecasting date ----------------------------------------------------
-target_date <- Sys.Date() -1 
+target_date <- Sys.Date() - 2
 
 # Get Rt forecasts --------------------------------------------------------
 # load
