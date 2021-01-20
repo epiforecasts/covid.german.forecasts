@@ -117,6 +117,15 @@ draw_samples <- function(distribution,
   return(out)
 }
 
+
+n_people <- filtered_forecasts %>%
+  dplyr::group_by(region, target_type) %>%
+  dplyr::summarise(n_ids = length(unique(forecaster_id))) %>%
+  dplyr::pull(n_ids) %>%
+  min()
+
+overall_sample_number <- 1000  
+
 # draw samples
 forecast_samples <- filtered_forecasts %>%
   dplyr::rename(location = region) %>%
@@ -128,7 +137,7 @@ forecast_samples <- filtered_forecasts %>%
                                      width = width, 
                                      distribution = distribution,
                                      n_people = n_people, 
-                                     overall_sample_number = 1000, 
+                                     overall_sample_number = overall_sample_number, 
                                      min_per_person_samples = 50), 
                 sample = list(1:length(value))) %>%
   tidyr::unnest(cols = c(sample, value)) %>%
@@ -136,15 +145,8 @@ forecast_samples <- filtered_forecasts %>%
   dplyr::select(forecaster_id, location, target_end_date, submission_date, target_type, sample, value) %>%
   dplyr::arrange(forecaster_id, location, target_type, target_end_date, sample)
   
-
-  
-  
-
-
-
 # interpolate missing days
 # I'm pretty sure the horizon time indexisng is currently wrong. 
-
 
 dates <- unique(forecast_samples$target_end_date)
 date_range <- seq(min(as.Date(min(dates))), max(as.Date(max(dates))), by = 'days')
@@ -158,8 +160,6 @@ helper_data <- expand.grid(target_end_date = date_range,
                            submission_date = submission_date, 
                            sample = 1:n_samples)
 
-# get rid of 
-
 forecast_samples_daily <- forecast_samples %>%
   dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
   dplyr::full_join(helper_data) %>%
@@ -169,6 +169,39 @@ forecast_samples_daily <- forecast_samples %>%
   dplyr::filter(!no_predictions) %>%
   dplyr::mutate(value = zoo::na.approx(value))
   
+
+
+crowd_rt <- data.table::copy(forecast_samples_daily)
+setDT(crowd_rt)
+
+crowd_rt %>%
+  dplyr::select(-forecaster_id, -sample) %>%
+  dplyr::group_by(location, target_type, target_end_date) %>%
+  tidyr::nest(data = c(value)) %>%
+  dplyr::mutate(data = data[sample(1:200)])
+
+
+  dplyr::summarise(n = dplyr::n()) %>%
+  dplyr::pull(n) %>%
+  unique()
+
+?nest()
+
+crowd_rt <- crowd_rt[, .(location, target = paste0(target_type, "s"),
+                         date = target_end_date, value = round(value, 3))]
+
+crowd_rt$forecaster_id %>% unique()
+
+crowd_rt[, sample := 1:.N, by = .(location, date, target)]
+crowd_rt[location %in% "GM", location := "Germany"]
+crowd_rt[location %in% "PL", location := "Poland"]
+crowd_rt[]
+setorder(crowd_rt, location, target, date)
+
+
+
+
+
 
 # save forecasts in quantile-format
 data.table::fwrite(forecast_samples_daily %>%
@@ -191,6 +224,16 @@ plot <- scoringutils::plot_predictions(check %>%
                                x = "target_end_date", 
                                facet_formula = ~ forecaster_id + location + target_type)
 
+
+plot
+
+
+
+
+
+crowd_rt <- fread(here("rt-crowd-forecast", "processed-forecast-data",
+                       paste0(target_date, "-processed-forecasts.csv")))
+# dropped redundant columns and get correct shape
 
 
 
