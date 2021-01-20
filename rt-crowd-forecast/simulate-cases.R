@@ -6,8 +6,7 @@ library(purrr)
 library(ggplot2)
 
 # Set forecasting date ----------------------------------------------------
-#target_date <- Sys.Date() -1 
-target_date <- "2021-01-11"
+target_date <- Sys.Date() -1 
 
 # Get Rt forecasts --------------------------------------------------------
 # load
@@ -54,11 +53,10 @@ simulate_crowd_cases <- function(crowd_rt) {
       est_R <- model$samples[variable == "R"]
       est_R <- est_R[, .(date = as.Date(date), sample, value)]
       est_R <- est_R[sample <= max(dt_tar$sample)]
-      future_R <- est_R[date > max(dt_tar$date)]
       est_R <- est_R[date < min(dt_tar$date)]
       
       # join estimates and forecast
-      forecast_rt <- rbindlist(list(est_R, dt_tar, future_R))
+      forecast_rt <- rbindlist(list(est_R, dt_tar))
       setorder(forecast_rt, sample, date)
       
       sims <- simulate_infections(model, forecast_rt)
