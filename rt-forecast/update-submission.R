@@ -4,9 +4,10 @@ library(EpiNow2)
 library(lubridate)
 library(here)
 library(data.table)
+library(lubridate)
 
 # Dates -------------------------------------------------------------------
-target_date <- Sys.Date()
+target_date <- floor_date(Sys.Date(), unit = "week", 1)
 
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(

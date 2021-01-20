@@ -4,9 +4,10 @@ library(data.table)
 library(here) 
 library(purrr)
 library(ggplot2)
+library(lubridate)
 
 # Set forecasting date ----------------------------------------------------
-target_date <- Sys.Date() - 1
+target_date <- floor_date(Sys.Date(), unit = "week", 1)
 
 # Get Rt forecasts --------------------------------------------------------
 # load

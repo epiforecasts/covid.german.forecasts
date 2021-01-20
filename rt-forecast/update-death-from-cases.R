@@ -9,7 +9,7 @@ library(ggplot2, quietly = TRUE)
 library(purrr, quietly = TRUE)
 
 # Set target date ---------------------------------------------------------
-target_date <- as.character(Sys.Date()) 
+target_date <- as.character(floor_date(Sys.Date(), unit = "week", 1)) 
 
 # Get Observations --------------------------------------------------------
 deaths <- fread(here("data", "daily-incidence-deaths.csv"))
