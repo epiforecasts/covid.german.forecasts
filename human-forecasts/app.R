@@ -23,9 +23,9 @@ observations <- dplyr::bind_rows(deaths_inc,
   dplyr::arrange(location_name, target_type, target_end_date)
 
 crowdforecastr::run_app(data = observations, 
-                        first_forecast_date = "2021-01-23",
+                        first_forecast_date = "2021-01-30",
                         selection_vars = c("location_name", "target_type"),
                         google_account_mail = "epiforecasts@gmail.com", 
                         forecast_sheet_id = "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI",
                         user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
-                        submission_date = "2021-01-18")
+                        submission_date = "2021-01-25")
