@@ -1,0 +1,2959 @@
+region,date,primary,secondary,mean,sd,median,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90
+Baden-Württemberg State,2020-11-30,1431,13,,,,,,,,,
+Baden-Württemberg State,2020-12-01,1401,61,,,,,,,,,
+Baden-Württemberg State,2020-12-02,2063,49,,,,,,,,,
+Baden-Württemberg State,2020-12-03,3159,58,,,,,,,,,
+Baden-Württemberg State,2020-12-04,3072,36,,,,,,,,,
+Baden-Württemberg State,2020-12-05,3336,59,,,,,,,,,
+Baden-Württemberg State,2020-12-06,2494,29,,,,,,,,,
+Baden-Württemberg State,2020-12-07,1798,15,,,,,,,,,
+Baden-Württemberg State,2020-12-08,1624,76,,,,,,,,,
+Baden-Württemberg State,2020-12-09,2639,72,,,,,,,,,
+Baden-Württemberg State,2020-12-10,4044,59,,,,,,,,,
+Baden-Württemberg State,2020-12-11,4212,64,,,,,,,,,
+Baden-Württemberg State,2020-12-12,3798,60,,,,,,,,,
+Baden-Württemberg State,2020-12-13,3086,47,,,,,,,,,
+Baden-Württemberg State,2020-12-14,2197,25,,,,,,,,,
+Baden-Württemberg State,2020-12-15,2177,99,,,,,,,,,
+Baden-Württemberg State,2020-12-16,3294,104,,,,,,,,,
+Baden-Württemberg State,2020-12-17,645,12,,,,,,,,,
+Baden-Württemberg State,2020-12-18,7756,155,,,,,,,,,
+Baden-Württemberg State,2020-12-19,4284,97,,,,,,,,,
+Baden-Württemberg State,2020-12-20,3463,47,,,,,,,,,
+Baden-Württemberg State,2020-12-21,2361,30,,,,,,,,,
+Baden-Württemberg State,2020-12-22,2245,132,,,,,,,,,
+Baden-Württemberg State,2020-12-23,2998,166,,,,,,,,,
+Baden-Württemberg State,2020-12-24,4390,64,,,,,,,,,
+Baden-Württemberg State,2020-12-25,3500,42,,,,,,,,,
+Baden-Württemberg State,2020-12-26,1951,27,,,,,,,,,
+Baden-Württemberg State,2020-12-27,1588,38,,,,,,,,,
+Baden-Württemberg State,2020-12-28,1136,48,,,,,,,,,
+Baden-Württemberg State,2020-12-29,1657,101,,,,,,,,,
+Baden-Württemberg State,2020-12-30,2812,108,,,,,,,,,
+Baden-Württemberg State,2020-12-31,3495,94,,,,,,,,,
+Baden-Württemberg State,2021-01-01,2895,51,,,,,,,,,
+Baden-Württemberg State,2021-01-02,1856,54,,,,,,,,,
+Baden-Württemberg State,2021-01-03,1170,31,,,,,,,,,
+Baden-Württemberg State,2021-01-04,1016,22,,,,,,,,,
+Baden-Württemberg State,2021-01-05,1510,105,,,,,,,,,
+Baden-Württemberg State,2021-01-06,2957,128,,,,,,,,,
+Baden-Württemberg State,2021-01-07,1278,27,,,,,,,,,
+Baden-Württemberg State,2021-01-08,3977,130,,,,,,,,,
+Baden-Württemberg State,2021-01-09,2751,127,,,,,,,,,
+Baden-Württemberg State,2021-01-10,2598,66,,,,,,,,,
+Baden-Württemberg State,2021-01-11,1486,45,,,,,,,,,
+Baden-Württemberg State,2021-01-12,1022,90,,,,,,,,,
+Baden-Württemberg State,2021-01-13,2226,93,,,,,,,,,
+Baden-Württemberg State,2021-01-14,2979,116,,,,,,,,,
+Baden-Württemberg State,2021-01-15,2322,104,,,,,,,,,
+Baden-Württemberg State,2021-01-16,1940,72,,,,,,,,,
+Baden-Württemberg State,2021-01-17,820,21,,,,,,,,,
+Baden-Württemberg State,2021-01-18,2033,40,,,,,,,,,
+Baden-Württemberg State,2021-01-19,613,108,,,,,,,,,
+Baden-Württemberg State,2021-01-20,1684,105,,,,,,,,,
+Baden-Württemberg State,2021-01-21,2353,95,,,,,,,,,
+Baden-Württemberg State,2021-01-22,1914,95,,,,,,,,,
+Baden-Württemberg State,2021-01-23,1527,71,,,,,,,,,
+Baden-Württemberg State,2021-01-24,1487,33,,,,,,,,,
+Baden-Württemberg State,2021-01-25,964.5,,32,19.4,28,8,18,24,32,41,70
+Baden-Württemberg State,2021-01-26,831,,83.9,49.6,74,25,51,65,86,106.2,175.1
+Baden-Württemberg State,2021-01-27,1471.5,,87.2,54.1,74,27,51.8,65,85,107,185
+Baden-Württemberg State,2021-01-28,1561,,64.5,36.7,58,18,39,50,66,82,131
+Baden-Württemberg State,2021-01-29,1816.5,,87.6,52.1,78,27,55,68,87,109,181
+Baden-Württemberg State,2021-01-30,1431.5,,70,41.8,62.5,20,41.8,53,73,92,144
+Baden-Württemberg State,2021-01-31,1085.5,,35.2,22.4,31,9.9,20,26,35,44,78
+Baden-Württemberg State,2021-02-01,812.5,,27.6,16.5,24,7,16,21,29,36,60
+Baden-Württemberg State,2021-02-02,703,,72.9,44.1,65,21,43,56,75,91,149
+Baden-Württemberg State,2021-02-03,1246.5,,78.8,47.7,71,25,47,60,78,98,168
+Baden-Württemberg State,2021-02-04,1383,,59.6,39.5,50,17,34,44,58,75,136
+Baden-Württemberg State,2021-02-05,1513,,78.4,48.5,68,22.9,46,59,77,99,173
+Baden-Württemberg State,2021-02-06,1234.5,,66.3,42,57,20,39,50,65.4,80,146
+Baden-Württemberg State,2021-02-07,962,,30.7,20.2,27,8,17,23,31,38,69
+Baden-Württemberg State,2021-02-08,699.5,,24.8,18.2,21,6.9,13,18,25,31,56.1
+Baden-Württemberg State,2021-02-09,583.5,,64.3,45.5,54,14,35,46,63,83,140
+Baden-Württemberg State,2021-02-10,1052,,69.1,51.5,58,17,35,48,67,88,162
+Baden-Württemberg State,2021-02-11,1120,,51.5,47.8,43,13,28,38,51,64,112
+Baden-Württemberg State,2021-02-12,1316,,72,65.6,58,18,39,50,68,89,164
+Baden-Württemberg State,2021-02-13,1073.5,,58.9,57.3,46,12,28,38,55,74,138
+Baden-Württemberg State,2021-02-14,816,,28.1,25.4,22,6,13,18,27,36,65
+Baden-Württemberg State,2021-02-15,572.5,,22.8,22.6,18,4,11,15,21,29,54
+Baden-Württemberg State,2021-02-16,492.5,,61.8,101.9,48,11,28,39,55,72.2,149
+Baden-Württemberg State,2021-02-17,902.5,,63.6,64.6,48,12,31,42,58,79,150.1
+Baden-Württemberg State,2021-02-18,949.5,,51.8,78.3,37,9,23,31,44,62,122
+Baden-Württemberg State,2021-02-19,1088.5,,72.3,137,50,13,30.8,42,59,82,164.1
+Baden-Württemberg State,2021-02-20,876.5,,57.4,98.3,40,8,22,32,49,67,142
+Baden-Württemberg State,2021-02-21,665.5,,28.2,52.3,19,4,11,15,23,32,73
+Baden-Württemberg State,2021-02-22,498,,23.8,43.8,16,3,9,12,19,27,59
+Baden-Württemberg State,2021-02-23,421.5,,64.7,135.3,42,8,23,36,51,71,163
+Baden-Württemberg State,2021-02-24,735,,73.6,265.1,43,8,24,35,54,74,181
+Berlin State,2020-11-30,1156,14,,,,,,,,,
+Berlin State,2020-12-01,925,12,,,,,,,,,
+Berlin State,2020-12-02,1161,29,,,,,,,,,
+Berlin State,2020-12-03,958,24,,,,,,,,,
+Berlin State,2020-12-04,1244,23,,,,,,,,,
+Berlin State,2020-12-05,1260,16,,,,,,,,,
+Berlin State,2020-12-06,1319,22,,,,,,,,,
+Berlin State,2020-12-07,355,4,,,,,,,,,
+Berlin State,2020-12-08,640,16,,,,,,,,,
+Berlin State,2020-12-09,1348,33,,,,,,,,,
+Berlin State,2020-12-10,1122,17,,,,,,,,,
+Berlin State,2020-12-11,1652,19,,,,,,,,,
+Berlin State,2020-12-12,1004,22,,,,,,,,,
+Berlin State,2020-12-13,1040,23,,,,,,,,,
+Berlin State,2020-12-14,548,8,,,,,,,,,
+Berlin State,2020-12-15,1011,25,,,,,,,,,
+Berlin State,2020-12-16,1129,53,,,,,,,,,
+Berlin State,2020-12-17,1317,30,,,,,,,,,
+Berlin State,2020-12-18,1444,30,,,,,,,,,
+Berlin State,2020-12-19,1547,26,,,,,,,,,
+Berlin State,2020-12-20,1320,16,,,,,,,,,
+Berlin State,2020-12-21,320,5,,,,,,,,,
+Berlin State,2020-12-22,1145,18,,,,,,,,,
+Berlin State,2020-12-23,1490,42,,,,,,,,,
+Berlin State,2020-12-24,1597,39,,,,,,,,,
+Berlin State,2020-12-25,952,11,,,,,,,,,
+Berlin State,2020-12-26,278,2,,,,,,,,,
+Berlin State,2020-12-27,635,10,,,,,,,,,
+Berlin State,2020-12-28,815,21,,,,,,,,,
+Berlin State,2020-12-29,646,23,,,,,,,,,
+Berlin State,2020-12-30,1287,41,,,,,,,,,
+Berlin State,2020-12-31,1059,34,,,,,,,,,
+Berlin State,2021-01-01,642,24,,,,,,,,,
+Berlin State,2021-01-02,207,6,,,,,,,,,
+Berlin State,2021-01-03,460,8,,,,,,,,,
+Berlin State,2021-01-04,657,20,,,,,,,,,
+Berlin State,2021-01-05,771,22,,,,,,,,,
+Berlin State,2021-01-06,1235,63,,,,,,,,,
+Berlin State,2021-01-07,1310,55,,,,,,,,,
+Berlin State,2021-01-08,1569,42,,,,,,,,,
+Berlin State,2021-01-09,1479,60,,,,,,,,,
+Berlin State,2021-01-10,732,13,,,,,,,,,
+Berlin State,2021-01-11,340,5,,,,,,,,,
+Berlin State,2021-01-12,1036,26,,,,,,,,,
+Berlin State,2021-01-13,1069,44,,,,,,,,,
+Berlin State,2021-01-14,1274,76,,,,,,,,,
+Berlin State,2021-01-15,1171,44,,,,,,,,,
+Berlin State,2021-01-16,990,45,,,,,,,,,
+Berlin State,2021-01-17,532,23,,,,,,,,,
+Berlin State,2021-01-18,249,10,,,,,,,,,
+Berlin State,2021-01-19,544,27,,,,,,,,,
+Berlin State,2021-01-20,820,58,,,,,,,,,
+Berlin State,2021-01-21,731,39,,,,,,,,,
+Berlin State,2021-01-22,900,39,,,,,,,,,
+Berlin State,2021-01-23,613,25,,,,,,,,,
+Berlin State,2021-01-24,463,18,,,,,,,,,
+Berlin State,2021-01-25,296.5,,11.3,6,10,3.9,7,9,12,14,23
+Berlin State,2021-01-26,524,,23.4,11.1,22,8,15,20,25,29,44
+Berlin State,2021-01-27,779,,48.2,22.6,45,21,32,40,50,59,86
+Berlin State,2021-01-28,698.5,,49.7,22.2,47,19,34.8,42,52,61,89
+Berlin State,2021-01-29,718,,36.2,16.3,34,14,25,30,37,45,65
+Berlin State,2021-01-30,589,,36.1,17.2,34,13,25,30,37,45,67
+Berlin State,2021-01-31,439,,16.6,9,15,5,11,13,17,21,31
+Berlin State,2021-02-01,262,,10.3,5.8,10,3,6,8,11,13.2,20
+Berlin State,2021-02-02,447,,21.3,10.7,20,7,14,18,22,27,41
+Berlin State,2021-02-03,664,,41.9,18.1,39,16,29,36,44,53,74
+Berlin State,2021-02-04,604,,44.6,21,41,17,30,37,46,56,80
+Berlin State,2021-02-05,627,,33.2,15.2,30,13,23,28,34,41,62
+Berlin State,2021-02-06,514,,33.4,16.4,31,11.9,22,27,35,42,63
+Berlin State,2021-02-07,385,,14.3,7.7,13,4,9,11,15,19,28
+Berlin State,2021-02-08,220.5,,8.8,5.4,8,2,5,7,9,11,18
+Berlin State,2021-02-09,387.5,,18.1,9.1,17,6,12,15,19,23,35
+Berlin State,2021-02-10,567,,36.9,18.6,34,13,24,31,38,45,70
+Berlin State,2021-02-11,524.5,,37.4,17.4,35,14,25,31,39,47,71
+Berlin State,2021-02-12,524,,27.9,13.5,26,9,18,23,30,35.2,53
+Berlin State,2021-02-13,445,,28.4,14.6,27,9,18.8,24,30,36,54
+Berlin State,2021-02-14,339.5,,12.4,7.3,11,3,7,10,13,16,27
+Berlin State,2021-02-15,185,,7.3,4.7,6,2,4,5,7,9,16
+Berlin State,2021-02-16,325.5,,15.9,9.2,14,5,9,13,16.4,20,32
+Berlin State,2021-02-17,494.5,,32.4,17.8,29,11,20,26,33,41,62
+Berlin State,2021-02-18,434.5,,33.3,19.5,30,9,20,25.6,35,44,69
+Berlin State,2021-02-19,454.5,,24.5,16.8,21,7,15,19,24.4,31,49
+Berlin State,2021-02-20,382,,24.7,14,22,7,14,19,26,32,51
+Berlin State,2021-02-21,290,,11.2,7.8,10,2,6,8,11,15,25
+Berlin State,2021-02-22,163.5,,6.5,4.7,6,1,3,5,7,9,15
+Berlin State,2021-02-23,284,,14.5,10.9,12,3,7,10,14,19,34
+Berlin State,2021-02-24,427,,29,20.4,25,7,15,21,29,37,63
+Brandenburg State,2020-11-30,252,3,,,,,,,,,
+Brandenburg State,2020-12-01,382,7,,,,,,,,,
+Brandenburg State,2020-12-02,483,15,,,,,,,,,
+Brandenburg State,2020-12-03,656,21,,,,,,,,,
+Brandenburg State,2020-12-04,862,25,,,,,,,,,
+Brandenburg State,2020-12-05,646,10,,,,,,,,,
+Brandenburg State,2020-12-06,437,4,,,,,,,,,
+Brandenburg State,2020-12-07,227,2,,,,,,,,,
+Brandenburg State,2020-12-08,308,1,,,,,,,,,
+Brandenburg State,2020-12-09,632,13,,,,,,,,,
+Brandenburg State,2020-12-10,519,9,,,,,,,,,
+Brandenburg State,2020-12-11,1018,20,,,,,,,,,
+Brandenburg State,2020-12-12,908,13,,,,,,,,,
+Brandenburg State,2020-12-13,616,4,,,,,,,,,
+Brandenburg State,2020-12-14,518,3,,,,,,,,,
+Brandenburg State,2020-12-15,507,16,,,,,,,,,
+Brandenburg State,2020-12-16,596,40,,,,,,,,,
+Brandenburg State,2020-12-17,1160,65,,,,,,,,,
+Brandenburg State,2020-12-18,877,18,,,,,,,,,
+Brandenburg State,2020-12-19,1132,12,,,,,,,,,
+Brandenburg State,2020-12-20,651,12,,,,,,,,,
+Brandenburg State,2020-12-21,504,11,,,,,,,,,
+Brandenburg State,2020-12-22,1082,36,,,,,,,,,
+Brandenburg State,2020-12-23,656,20,,,,,,,,,
+Brandenburg State,2020-12-24,1163,39,,,,,,,,,
+Brandenburg State,2020-12-25,593,10,,,,,,,,,
+Brandenburg State,2020-12-26,341,8,,,,,,,,,
+Brandenburg State,2020-12-27,581,10,,,,,,,,,
+Brandenburg State,2020-12-28,342,7,,,,,,,,,
+Brandenburg State,2020-12-29,683,26,,,,,,,,,
+Brandenburg State,2020-12-30,1807,70,,,,,,,,,
+Brandenburg State,2020-12-31,1614,53,,,,,,,,,
+Brandenburg State,2021-01-01,1033,39,,,,,,,,,
+Brandenburg State,2021-01-02,110,6,,,,,,,,,
+Brandenburg State,2021-01-03,329,11,,,,,,,,,
+Brandenburg State,2021-01-04,174,15,,,,,,,,,
+Brandenburg State,2021-01-05,276,7,,,,,,,,,
+Brandenburg State,2021-01-06,1393,68,,,,,,,,,
+Brandenburg State,2021-01-07,1164,60,,,,,,,,,
+Brandenburg State,2021-01-08,2631,78,,,,,,,,,
+Brandenburg State,2021-01-09,1180,60,,,,,,,,,
+Brandenburg State,2021-01-10,0,0,,,,,,,,,
+Brandenburg State,2021-01-11,649,5,,,,,,,,,
+Brandenburg State,2021-01-12,1341,49,,,,,,,,,
+Brandenburg State,2021-01-13,764,26,,,,,,,,,
+Brandenburg State,2021-01-14,1248,108,,,,,,,,,
+Brandenburg State,2021-01-15,1869,58,,,,,,,,,
+Brandenburg State,2021-01-16,634,22,,,,,,,,,
+Brandenburg State,2021-01-17,800,46,,,,,,,,,
+Brandenburg State,2021-01-18,428,10,,,,,,,,,
+Brandenburg State,2021-01-19,1382,62,,,,,,,,,
+Brandenburg State,2021-01-20,839,71,,,,,,,,,
+Brandenburg State,2021-01-21,1340,67,,,,,,,,,
+Brandenburg State,2021-01-22,1172,44,,,,,,,,,
+Brandenburg State,2021-01-23,816,47,,,,,,,,,
+Brandenburg State,2021-01-24,255,12,,,,,,,,,
+Brandenburg State,2021-01-25,549,,18.2,30.8,11,1,5,9,15,21,52
+Brandenburg State,2021-01-26,843.5,,45.6,45.7,32,3,15,25,41,60.2,136
+Brandenburg State,2021-01-27,858,,58.5,58.4,43,4.9,22,32.6,54,78,164
+Brandenburg State,2021-01-28,1190,,75.2,65.3,57,6,27,44,76,101.2,208
+Brandenburg State,2021-01-29,1301.5,,61.7,56.3,45,5.9,22,34.6,59,82,176
+Brandenburg State,2021-01-30,964,,48.5,47.9,37,4,17,28,46,63,132
+Brandenburg State,2021-01-31,693.5,,23.3,25.7,16,1,7,12,20,29,72
+Brandenburg State,2021-02-01,539,,16.7,21.7,11,1,5,8,14,21,49
+Brandenburg State,2021-02-02,850,,44,41.7,33,3,16,25,42,60,125
+Brandenburg State,2021-02-03,873,,59.6,59.5,41,5,20,33,53,80,173
+Brandenburg State,2021-02-04,1200.5,,74.5,74.2,54,6,27,42,68,100,204
+Brandenburg State,2021-02-05,1281.5,,64.1,68.8,44,4.9,20,36,57,87,180
+Brandenburg State,2021-02-06,965.5,,51.6,55,35,3,16,28,46,67.2,160.1
+Brandenburg State,2021-02-07,676,,25.9,29.3,16,2,8,13,21,33,80
+Brandenburg State,2021-02-08,548,,17.2,21.9,11,1,5,8,15,21,54
+Brandenburg State,2021-02-09,866.5,,46,45.7,33,3,15,25,42,61,128
+Brandenburg State,2021-02-10,913,,60.7,62.2,43,5,21,33,54,78.2,173
+Brandenburg State,2021-02-11,1190.5,,77.6,76.2,56.5,5.9,28,44,70,101,225
+Brandenburg State,2021-02-12,1339.5,,70.1,71.9,49,4,23,36.6,64,94,201.1
+Brandenburg State,2021-02-13,942,,54.1,59.2,37,3.9,16,28,47,72,167
+Brandenburg State,2021-02-14,697,,24.4,28.8,16,1,7,12,21,30,78
+Brandenburg State,2021-02-15,556,,18.3,23.2,11,1,5,8,14,23,60.1
+Brandenburg State,2021-02-16,836,,47.4,52.2,31,4,15,23,40.4,61,145
+Brandenburg State,2021-02-17,895.5,,64.9,81.2,41.5,3,18,32,54,84,190
+Brandenburg State,2021-02-18,1249,,84,98.6,57,5,26,44,72,102.2,250
+Brandenburg State,2021-02-19,1359,,70.3,79.7,46,4,21,35,61,91,211.1
+Brandenburg State,2021-02-20,946,,55.8,65.3,37,3,16,28,47,69.2,177
+Brandenburg State,2021-02-21,676.5,,28.1,35.4,18,1,8,13,23,34,91
+Brandenburg State,2021-02-22,570,,19.4,25.5,11.5,0,4.8,8,15.4,24,62
+Brandenburg State,2021-02-23,863.5,,50.5,63.9,32,2,14,23,42,63,169.1
+Brandenburg State,2021-02-24,855,,66.6,75.8,42,4,19,32,55,88,210.1
+Dolnoslaskie,2020-11-30,781,11,,,,,,,,,
+Dolnoslaskie,2020-12-01,445,5,,,,,,,,,
+Dolnoslaskie,2020-12-02,717,57,,,,,,,,,
+Dolnoslaskie,2020-12-03,844,54,,,,,,,,,
+Dolnoslaskie,2020-12-04,844,41,,,,,,,,,
+Dolnoslaskie,2020-12-05,828,42,,,,,,,,,
+Dolnoslaskie,2020-12-06,920,22,,,,,,,,,
+Dolnoslaskie,2020-12-07,476,8,,,,,,,,,
+Dolnoslaskie,2020-12-08,287,2,,,,,,,,,
+Dolnoslaskie,2020-12-09,566,37,,,,,,,,,
+Dolnoslaskie,2020-12-10,813,50,,,,,,,,,
+Dolnoslaskie,2020-12-11,985,24,,,,,,,,,
+Dolnoslaskie,2020-12-12,797,49,,,,,,,,,
+Dolnoslaskie,2020-12-13,698,34,,,,,,,,,
+Dolnoslaskie,2020-12-14,498,1,,,,,,,,,
+Dolnoslaskie,2020-12-15,258,0,,,,,,,,,
+Dolnoslaskie,2020-12-16,519,30,,,,,,,,,
+Dolnoslaskie,2020-12-17,629,40,,,,,,,,,
+Dolnoslaskie,2020-12-18,681,27,,,,,,,,,
+Dolnoslaskie,2020-12-19,691,32,,,,,,,,,
+Dolnoslaskie,2020-12-20,593,24,,,,,,,,,
+Dolnoslaskie,2020-12-21,486,8,,,,,,,,,
+Dolnoslaskie,2020-12-22,206,5,,,,,,,,,
+Dolnoslaskie,2020-12-23,409,20,,,,,,,,,
+Dolnoslaskie,2020-12-24,588,36,,,,,,,,,
+Dolnoslaskie,2020-12-25,742,26,,,,,,,,,
+Dolnoslaskie,2020-12-26,474,10,,,,,,,,,
+Dolnoslaskie,2020-12-27,219,0,,,,,,,,,
+Dolnoslaskie,2020-12-28,153,0,,,,,,,,,
+Dolnoslaskie,2020-12-29,109,0,,,,,,,,,
+Dolnoslaskie,2020-12-30,405,29,,,,,,,,,
+Dolnoslaskie,2020-12-31,674,32,,,,,,,,,
+Dolnoslaskie,2021-01-01,804,23,,,,,,,,,
+Dolnoslaskie,2021-01-02,647,36,,,,,,,,,
+Dolnoslaskie,2021-01-03,344,10,,,,,,,,,
+Dolnoslaskie,2021-01-04,246,0,,,,,,,,,
+Dolnoslaskie,2021-01-05,115,0,,,,,,,,,
+Dolnoslaskie,2021-01-06,481,25,,,,,,,,,
+Dolnoslaskie,2021-01-07,599,44,,,,,,,,,
+Dolnoslaskie,2021-01-08,627,4,,,,,,,,,
+Dolnoslaskie,2021-01-09,461,13,,,,,,,,,
+Dolnoslaskie,2021-01-10,514,22,,,,,,,,,
+Dolnoslaskie,2021-01-11,459,4,,,,,,,,,
+Dolnoslaskie,2021-01-12,227,0,,,,,,,,,
+Dolnoslaskie,2021-01-13,339,33,,,,,,,,,
+Dolnoslaskie,2021-01-14,452,26,,,,,,,,,
+Dolnoslaskie,2021-01-15,463,16,,,,,,,,,
+Dolnoslaskie,2021-01-16,477,19,,,,,,,,,
+Dolnoslaskie,2021-01-17,378,9,,,,,,,,,
+Dolnoslaskie,2021-01-18,302,1,,,,,,,,,
+Dolnoslaskie,2021-01-19,156,0,,,,,,,,,
+Dolnoslaskie,2021-01-20,311,10,,,,,,,,,
+Dolnoslaskie,2021-01-21,336,25,,,,,,,,,
+Dolnoslaskie,2021-01-22,567,11,,,,,,,,,
+Dolnoslaskie,2021-01-23,366,17,,,,,,,,,
+Dolnoslaskie,2021-01-24,414,15,,,,,,,,,
+Dolnoslaskie,2021-01-25,251,2,,,,,,,,,
+Dolnoslaskie,2021-01-26,162,,0.4,1,0,0,0,0,0,0,2
+Dolnoslaskie,2021-01-27,300,,18.7,13.2,16,4,10,13,18,24,43
+Dolnoslaskie,2021-01-28,368.5,,24.4,17.4,21,4,12,17,25,32,58
+Dolnoslaskie,2021-01-29,400,,10,7.6,8,1,5,7,10,13,23
+Dolnoslaskie,2021-01-30,356.5,,14.2,10.1,12,2.9,8,10,14,19,35
+Dolnoslaskie,2021-01-31,318,,13.7,10.3,12,2,7,10,14,18,31
+Dolnoslaskie,2021-02-01,214,,1.8,2.1,1,0,0,1,2,3,6
+Dolnoslaskie,2021-02-02,144,,0.4,1,0,0,0,0,0,0,2
+Dolnoslaskie,2021-02-03,260,,17.4,13.5,15,3,9,12,18,23,40
+Dolnoslaskie,2021-02-04,316,,21.9,15.7,19,4,11,15,22,29,51
+Dolnoslaskie,2021-02-05,346.5,,8.9,7.2,7,1,4,6,9,12,22
+Dolnoslaskie,2021-02-06,302.5,,13,9.8,11,2,6,9,13,17,31
+Dolnoslaskie,2021-02-07,284.5,,12.8,11.2,11,2,6,9,12,16,31
+Dolnoslaskie,2021-02-08,185,,1.8,2.1,1,0,0,1,2,3,5
+Dolnoslaskie,2021-02-09,124,,0.3,0.7,0,0,0,0,0,0,2
+Dolnoslaskie,2021-02-10,220.5,,16.2,13.2,13,2.9,8,11,15,21,42
+Dolnoslaskie,2021-02-11,275.5,,21.2,21.3,17,3,9,14,20,27,51
+Dolnoslaskie,2021-02-12,294.5,,8.5,8.7,7,1,3,5,8,11,22
+Dolnoslaskie,2021-02-13,270.5,,13.5,15.2,10,1,5,8,12,17,38
+Dolnoslaskie,2021-02-14,238.5,,12.3,12.8,9,1,5,7,11,15,34
+Dolnoslaskie,2021-02-15,165,,1.9,3,1,0,0,1,2,2,6
+Dolnoslaskie,2021-02-16,109.5,,0.3,1,0,0,0,0,0,0,2
+Dolnoslaskie,2021-02-17,192,,18.4,34.2,11,1,6,9,14,20,51
+Dolnoslaskie,2021-02-18,236,,24.2,49.6,14,2,7,11,18,25,71
+Dolnoslaskie,2021-02-19,268.5,,9.4,19,6,0,3,4,7,10,26
+Dolnoslaskie,2021-02-20,241.5,,16.8,59.5,8,1,4,6,11,15.2,46
+Dolnoslaskie,2021-02-21,216,,15.8,47.8,8,1,4,6,10.4,16,44
+Dolnoslaskie,2021-02-22,142,,2.2,5.3,1,0,0,1,1,2,7
+Dolnoslaskie,2021-02-23,97,,0.5,3.7,0,0,0,0,0,0,2
+Dolnoslaskie,2021-02-24,176,,28.8,117.5,10,1,5,8,13,20,86.1
+Free Hanseatic City of Bremen,2020-11-30,37,2,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-01,185,5,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-02,159,2,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-03,172,4,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-04,74,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-05,133,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-06,129,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-07,57,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-08,41,2,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-09,114,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-10,211,5,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-11,182,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-12,122,0,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-13,173,4,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-14,53,4,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-15,22,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-16,129,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-17,221,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-18,146,2,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-19,135,2,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-20,90,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-21,142,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-22,43,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-23,123,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-24,255,2,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-25,79,0,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-26,35,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-27,31,4,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-28,40,1,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-29,54,3,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-30,152,5,,,,,,,,,
+Free Hanseatic City of Bremen,2020-12-31,148,3,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-01,122,2,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-02,22,5,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-03,10,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-04,34,2,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-05,56,4,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-06,112,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-07,154,0,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-08,108,4,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-09,80,6,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-10,66,3,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-11,42,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-12,18,2,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-13,86,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-14,160,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-15,70,0,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-16,97,3,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-17,104,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-18,43,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-19,17,5,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-20,67,2,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-21,124,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-22,97,8,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-23,78,2,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-24,76,1,,,,,,,,,
+Free Hanseatic City of Bremen,2021-01-25,35,,1.4,1.9,1,0,0,0,1,2,5
+Free Hanseatic City of Bremen,2021-01-26,34,,3.1,3.5,2,0,1,2,3,4,9
+Free Hanseatic City of Bremen,2021-01-27,70,,1.6,2.3,1,0,0,1,1,2,6
+Free Hanseatic City of Bremen,2021-01-28,104,,1,1.6,0,0,0,0,1,1,4
+Free Hanseatic City of Bremen,2021-01-29,69,,3.2,3.1,2,0,1,2,3,4,8
+Free Hanseatic City of Bremen,2021-01-30,59,,3.1,3,2,0,1,2,3,4,9
+Free Hanseatic City of Bremen,2021-01-31,53,,1.7,2.3,1,0,0,1,2,2,5
+Free Hanseatic City of Bremen,2021-02-01,33,,1.5,1.8,1,0,0,1,1,2,5
+Free Hanseatic City of Bremen,2021-02-02,32,,3,3.3,2,0,1,2,3,4,9
+Free Hanseatic City of Bremen,2021-02-03,63,,1.5,2.3,1,0,0,1,1,2,6
+Free Hanseatic City of Bremen,2021-02-04,100,,1,1.5,0,0,0,0,1,1,4
+Free Hanseatic City of Bremen,2021-02-05,63,,3.2,3.7,2,0,1,2,3,4,10
+Free Hanseatic City of Bremen,2021-02-06,58,,2.9,3,2,0,1,2,3,4,9
+Free Hanseatic City of Bremen,2021-02-07,49,,1.7,2.1,1,0,0,1,1,2,6
+Free Hanseatic City of Bremen,2021-02-08,30,,1.4,1.9,1,0,0,0,1,2,5
+Free Hanseatic City of Bremen,2021-02-09,30,,3,3.5,2,0,1,2,3,4,9
+Free Hanseatic City of Bremen,2021-02-10,59,,1.5,2.2,1,0,0,1,1,2,5
+Free Hanseatic City of Bremen,2021-02-11,92.5,,0.9,1.4,0,0,0,0,1,1,4
+Free Hanseatic City of Bremen,2021-02-12,56,,3,3.4,2,0,1,1,3,4,10
+Free Hanseatic City of Bremen,2021-02-13,54,,3,3.5,2,0,1,1,3,4,9
+Free Hanseatic City of Bremen,2021-02-14,45,,1.6,2.3,1,0,0,1,1,2,6
+Free Hanseatic City of Bremen,2021-02-15,29,,1.4,3.3,1,0,0,0,1,2,5
+Free Hanseatic City of Bremen,2021-02-16,28,,2.8,3.5,2,0,1,1,2,4,9
+Free Hanseatic City of Bremen,2021-02-17,55.5,,1.4,2.1,1,0,0,0,1,2,5
+Free Hanseatic City of Bremen,2021-02-18,85,,0.8,1.5,0,0,0,0,1,1,3
+Free Hanseatic City of Bremen,2021-02-19,56,,3.4,4.8,2,0,1,2,3,4,10
+Free Hanseatic City of Bremen,2021-02-20,49,,3,3.6,2,0,1,1,3,4,9
+Free Hanseatic City of Bremen,2021-02-21,41,,1.7,3,1,0,0,1,1,2,6
+Free Hanseatic City of Bremen,2021-02-22,27,,1.4,2.3,1,0,0,0,1,2,5
+Free Hanseatic City of Bremen,2021-02-23,26,,2.8,4.6,2,0,1,1,2,3,9
+Free Hanseatic City of Bremen,2021-02-24,52,,1.4,2.3,1,0,0,0,1,2,5
+Free Hanseatic City of Hamburg,2020-11-30,103,0,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-01,150,1,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-02,288,12,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-03,326,2,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-04,306,17,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-05,497,3,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-06,347,12,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-07,231,4,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-08,231,2,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-09,282,10,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-10,333,8,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-11,506,15,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-12,418,4,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-13,515,16,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-14,273,0,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-15,303,3,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-16,279,10,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-17,569,9,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-18,485,14,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-19,547,14,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-20,525,17,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-21,309,2,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-22,301,2,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-23,582,12,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-24,562,10,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-25,584,9,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-26,359,4,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-27,297,2,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-28,221,3,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-29,153,9,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-30,463,16,,,,,,,,,
+Free Hanseatic City of Hamburg,2020-12-31,470,18,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-01,568,21,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-02,308,5,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-03,242,3,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-04,0,0,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-05,344,10,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-06,696,24,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-07,579,30,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-08,433,38,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-09,536,29,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-10,353,25,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-11,211,3,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-12,273,0,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-13,390,31,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-14,396,14,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-15,324,17,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-16,279,13,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-17,378,9,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-18,87,2,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-19,263,11,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-20,251,18,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-21,285,15,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-22,306,12,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-23,330,14,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-24,204,11,,,,,,,,,
+Free Hanseatic City of Hamburg,2021-01-25,129.5,,2.2,3.1,1,0,0,1,2,3,7
+Free Hanseatic City of Hamburg,2021-01-26,138,,6.9,6.3,5,1,3,4,7,9,19
+Free Hanseatic City of Hamburg,2021-01-27,217,,19.5,16.6,15,2,8,12,18.4,26,51
+Free Hanseatic City of Hamburg,2021-01-28,209.5,,16.1,13.1,13,2,7,11,16,21,40
+Free Hanseatic City of Hamburg,2021-01-29,249.5,,17.4,15,14,2,7,11,17,23,44
+Free Hanseatic City of Hamburg,2021-01-30,193,,16,14.5,13,2,7,10,15,21,41
+Free Hanseatic City of Hamburg,2021-01-31,172,,12.4,11.6,9,1,5,8,12,17,34
+Free Hanseatic City of Hamburg,2021-02-01,94,,1.9,2.5,1,0,0,1,2,3,7
+Free Hanseatic City of Hamburg,2021-02-02,101,,5.8,5.4,4,0,2,3,6,8,15
+Free Hanseatic City of Hamburg,2021-02-03,154,,16.2,13.4,13,2,7,10,15,22,43
+Free Hanseatic City of Hamburg,2021-02-04,152,,13.9,12.4,11,2,6,9,13.4,19,35
+Free Hanseatic City of Hamburg,2021-02-05,183,,13.7,12.2,11,2,6,9,13,18,34
+Free Hanseatic City of Hamburg,2021-02-06,140.5,,11.8,11,9,1,5,7,11,16,31
+Free Hanseatic City of Hamburg,2021-02-07,133.5,,9.8,9.3,7,1,4,6,9,13,25
+Free Hanseatic City of Hamburg,2021-02-08,70,,1.5,2.1,1,0,0,1,1,2,5
+Free Hanseatic City of Hamburg,2021-02-09,74,,4.6,4.7,3,0,2,3,4,6,13
+Free Hanseatic City of Hamburg,2021-02-10,114,,12.5,11.3,10,1,5,8,12,17,35
+Free Hanseatic City of Hamburg,2021-02-11,108.5,,10.6,9.5,8,1,4,7,10,14,29
+Free Hanseatic City of Hamburg,2021-02-12,130,,11.4,10.6,9,1,4,7,11,15,28
+Free Hanseatic City of Hamburg,2021-02-13,100,,9.6,9.8,7,1,4,5,8.4,12,28
+Free Hanseatic City of Hamburg,2021-02-14,94,,7.4,7.3,6,0,2,4,7,10,20
+Free Hanseatic City of Hamburg,2021-02-15,50,,1.3,2,1,0,0,0,1,2,5
+Free Hanseatic City of Hamburg,2021-02-16,54,,3.6,4.4,3,0,1,2,3,5,11
+Free Hanseatic City of Hamburg,2021-02-17,83,,10.7,11.4,8,0,4,6,10,14,29
+Free Hanseatic City of Hamburg,2021-02-18,81,,8.2,8.4,6,0,3,5,8,11,22
+Free Hanseatic City of Hamburg,2021-02-19,95.5,,8.9,9.8,6,0,3,5,8,12,27
+Free Hanseatic City of Hamburg,2021-02-20,79,,8.6,11.8,6,0,2,4,8,11,25
+Free Hanseatic City of Hamburg,2021-02-21,67,,6.7,8.9,4,0,2,3,5,8,21
+Free Hanseatic City of Hamburg,2021-02-22,38,,1,1.6,0,0,0,0,1,1,4
+Free Hanseatic City of Hamburg,2021-02-23,38,,3.2,5,2,0,1,1,2,4,11
+Free Hanseatic City of Hamburg,2021-02-24,62,,8.6,12,6,0,2,4,7,10,26
+Free State of Bavaria,2020-11-30,1948,16,,,,,,,,,
+Free State of Bavaria,2020-12-01,2523,61,,,,,,,,,
+Free State of Bavaria,2020-12-02,3626,108,,,,,,,,,
+Free State of Bavaria,2020-12-03,4641,87,,,,,,,,,
+Free State of Bavaria,2020-12-04,4411,99,,,,,,,,,
+Free State of Bavaria,2020-12-05,3997,93,,,,,,,,,
+Free State of Bavaria,2020-12-06,3318,40,,,,,,,,,
+Free State of Bavaria,2020-12-07,2221,36,,,,,,,,,
+Free State of Bavaria,2020-12-08,2718,86,,,,,,,,,
+Free State of Bavaria,2020-12-09,3828,107,,,,,,,,,
+Free State of Bavaria,2020-12-10,5355,103,,,,,,,,,
+Free State of Bavaria,2020-12-11,4882,102,,,,,,,,,
+Free State of Bavaria,2020-12-12,4390,89,,,,,,,,,
+Free State of Bavaria,2020-12-13,3834,36,,,,,,,,,
+Free State of Bavaria,2020-12-14,2890,47,,,,,,,,,
+Free State of Bavaria,2020-12-15,1513,41,,,,,,,,,
+Free State of Bavaria,2020-12-16,6532,227,,,,,,,,,
+Free State of Bavaria,2020-12-17,5045,146,,,,,,,,,
+Free State of Bavaria,2020-12-18,5123,174,,,,,,,,,
+Free State of Bavaria,2020-12-19,5283,83,,,,,,,,,
+Free State of Bavaria,2020-12-20,3918,89,,,,,,,,,
+Free State of Bavaria,2020-12-21,2553,37,,,,,,,,,
+Free State of Bavaria,2020-12-22,2975,110,,,,,,,,,
+Free State of Bavaria,2020-12-23,3762,164,,,,,,,,,
+Free State of Bavaria,2020-12-24,5384,103,,,,,,,,,
+Free State of Bavaria,2020-12-25,3985,45,,,,,,,,,
+Free State of Bavaria,2020-12-26,2785,36,,,,,,,,,
+Free State of Bavaria,2020-12-27,2440,63,,,,,,,,,
+Free State of Bavaria,2020-12-28,1881,52,,,,,,,,,
+Free State of Bavaria,2020-12-29,1962,133,,,,,,,,,
+Free State of Bavaria,2020-12-30,3405,151,,,,,,,,,
+Free State of Bavaria,2020-12-31,6598,167,,,,,,,,,
+Free State of Bavaria,2021-01-01,3703,49,,,,,,,,,
+Free State of Bavaria,2021-01-02,2215,46,,,,,,,,,
+Free State of Bavaria,2021-01-03,1764,57,,,,,,,,,
+Free State of Bavaria,2021-01-04,1948,57,,,,,,,,,
+Free State of Bavaria,2021-01-05,2528,238,,,,,,,,,
+Free State of Bavaria,2021-01-06,1691,97,,,,,,,,,
+Free State of Bavaria,2021-01-07,3494,164,,,,,,,,,
+Free State of Bavaria,2021-01-08,5863,232,,,,,,,,,
+Free State of Bavaria,2021-01-09,3472,130,,,,,,,,,
+Free State of Bavaria,2021-01-10,2879,89,,,,,,,,,
+Free State of Bavaria,2021-01-11,2428,38,,,,,,,,,
+Free State of Bavaria,2021-01-12,1882,140,,,,,,,,,
+Free State of Bavaria,2021-01-13,2778,163,,,,,,,,,
+Free State of Bavaria,2021-01-14,5027,183,,,,,,,,,
+Free State of Bavaria,2021-01-15,3063,114,,,,,,,,,
+Free State of Bavaria,2021-01-16,3024,126,,,,,,,,,
+Free State of Bavaria,2021-01-17,2172,51,,,,,,,,,
+Free State of Bavaria,2021-01-18,269,7,,,,,,,,,
+Free State of Bavaria,2021-01-19,2781,232,,,,,,,,,
+Free State of Bavaria,2021-01-20,2377,177,,,,,,,,,
+Free State of Bavaria,2021-01-21,2812,176,,,,,,,,,
+Free State of Bavaria,2021-01-22,2677,138,,,,,,,,,
+Free State of Bavaria,2021-01-23,2079,163,,,,,,,,,
+Free State of Bavaria,2021-01-24,2135,59,,,,,,,,,
+Free State of Bavaria,2021-01-25,1352.5,,31.9,19.8,28,9,19,24,32,40,66
+Free State of Bavaria,2021-01-26,1522.5,,171.6,90,156,55,111,137,178,220,339
+Free State of Bavaria,2021-01-27,2062,,127,72.5,114,37,78,99,127.4,160,259
+Free State of Bavaria,2021-01-28,2750.5,,147.7,86.7,132,46,89,115,150,186,299
+Free State of Bavaria,2021-01-29,2436,,135.4,78,120.5,39,83,105,137,172,275.1
+Free State of Bavaria,2021-01-30,2128,,114.4,61.8,104,37,72,91.6,119,145,222
+Free State of Bavaria,2021-01-31,1634,,56.1,32.1,51,15,35,44,57,70,116
+Free State of Bavaria,2021-02-01,1177,,27.7,17.7,24,7,16,21,27,35,61
+Free State of Bavaria,2021-02-02,1343,,148,84.7,134,45,90,114,150,190,310.1
+Free State of Bavaria,2021-02-03,1753,,106.5,59.9,95,30,64,84,109,140,217
+Free State of Bavaria,2021-02-04,2420.5,,127.6,71.6,115,40,78.8,100,129,159,267
+Free State of Bavaria,2021-02-05,2133,,117.6,64.5,105,37,72.8,92,122,147.2,237
+Free State of Bavaria,2021-02-06,1806.5,,104,58.5,94,33,63,81,105,132,217
+Free State of Bavaria,2021-02-07,1492.5,,50.1,30.9,44,14,29,38,50,63,107
+Free State of Bavaria,2021-02-08,1008.5,,23.8,14.7,21,6,14,18,24,31,50
+Free State of Bavaria,2021-02-09,1130,,128.6,69.3,116.5,38.9,78,101.6,131,163,260
+Free State of Bavaria,2021-02-10,1526,,92.9,54.1,82,24.9,54,71.6,96,120,194
+Free State of Bavaria,2021-02-11,2069.5,,112.6,68.3,99,31,66,83,114,145,245.3
+Free State of Bavaria,2021-02-12,1846.5,,102.6,60.8,92,29,62.8,79,106,130,211
+Free State of Bavaria,2021-02-13,1553,,89,53.3,78,26.9,52,68,90,113,181
+Free State of Bavaria,2021-02-14,1257,,43.4,29,37,12,24,31,43,54,94
+Free State of Bavaria,2021-02-15,882,,21.9,20.4,18,5,11,15,21,27,51
+Free State of Bavaria,2021-02-16,995.5,,111.5,67.1,98.5,29.9,65,84,114,142,234
+Free State of Bavaria,2021-02-17,1318.5,,84.3,57.1,74.5,19.9,45,62.6,86.4,107,189
+Free State of Bavaria,2021-02-18,1870,,102,68.8,88,26,56,75,102,130,216
+Free State of Bavaria,2021-02-19,1582,,93.1,62.3,81.5,23,50.8,70,94,117,209.1
+Free State of Bavaria,2021-02-20,1357,,82.7,63,69.5,20,43,59,82,104,185.1
+Free State of Bavaria,2021-02-21,1074,,39.9,28,33,10,22,29,39,50,91
+Free State of Bavaria,2021-02-22,772,,19.6,15.3,15,4,10,13,19,25,50
+Free State of Bavaria,2021-02-23,859.5,,105,80.6,89,27.9,58,77,103,131,232
+Free State of Bavaria,2021-02-24,1175,,77.8,59.3,64,16,39,53,75,100,182
+Free State of Saxony,2020-11-30,1470,40,,,,,,,,,
+Free State of Saxony,2020-12-01,1763,43,,,,,,,,,
+Free State of Saxony,2020-12-02,1857,45,,,,,,,,,
+Free State of Saxony,2020-12-03,2025,73,,,,,,,,,
+Free State of Saxony,2020-12-04,2616,59,,,,,,,,,
+Free State of Saxony,2020-12-05,2295,82,,,,,,,,,
+Free State of Saxony,2020-12-06,2414,55,,,,,,,,,
+Free State of Saxony,2020-12-07,1924,13,,,,,,,,,
+Free State of Saxony,2020-12-08,1468,15,,,,,,,,,
+Free State of Saxony,2020-12-09,2131,74,,,,,,,,,
+Free State of Saxony,2020-12-10,2128,47,,,,,,,,,
+Free State of Saxony,2020-12-11,2809,77,,,,,,,,,
+Free State of Saxony,2020-12-12,3522,86,,,,,,,,,
+Free State of Saxony,2020-12-13,2019,61,,,,,,,,,
+Free State of Saxony,2020-12-14,2562,50,,,,,,,,,
+Free State of Saxony,2020-12-15,0,0,,,,,,,,,
+Free State of Saxony,2020-12-16,5603,153,,,,,,,,,
+Free State of Saxony,2020-12-17,3207,68,,,,,,,,,
+Free State of Saxony,2020-12-18,3261,90,,,,,,,,,
+Free State of Saxony,2020-12-19,3316,119,,,,,,,,,
+Free State of Saxony,2020-12-20,2551,84,,,,,,,,,
+Free State of Saxony,2020-12-21,2270,36,,,,,,,,,
+Free State of Saxony,2020-12-22,2180,63,,,,,,,,,
+Free State of Saxony,2020-12-23,2728,94,,,,,,,,,
+Free State of Saxony,2020-12-24,3877,153,,,,,,,,,
+Free State of Saxony,2020-12-25,3971,96,,,,,,,,,
+Free State of Saxony,2020-12-26,1290,24,,,,,,,,,
+Free State of Saxony,2020-12-27,1390,24,,,,,,,,,
+Free State of Saxony,2020-12-28,1739,27,,,,,,,,,
+Free State of Saxony,2020-12-29,2232,105,,,,,,,,,
+Free State of Saxony,2020-12-30,2364,165,,,,,,,,,
+Free State of Saxony,2020-12-31,3571,136,,,,,,,,,
+Free State of Saxony,2021-01-01,3041,127,,,,,,,,,
+Free State of Saxony,2021-01-02,1634,36,,,,,,,,,
+Free State of Saxony,2021-01-03,1301,51,,,,,,,,,
+Free State of Saxony,2021-01-04,1368,25,,,,,,,,,
+Free State of Saxony,2021-01-05,1302,34,,,,,,,,,
+Free State of Saxony,2021-01-06,2120,90,,,,,,,,,
+Free State of Saxony,2021-01-07,3536,124,,,,,,,,,
+Free State of Saxony,2021-01-08,3049,188,,,,,,,,,
+Free State of Saxony,2021-01-09,2752,167,,,,,,,,,
+Free State of Saxony,2021-01-10,2061,83,,,,,,,,,
+Free State of Saxony,2021-01-11,1107,66,,,,,,,,,
+Free State of Saxony,2021-01-12,1050,66,,,,,,,,,
+Free State of Saxony,2021-01-13,1947,127,,,,,,,,,
+Free State of Saxony,2021-01-14,2728,260,,,,,,,,,
+Free State of Saxony,2021-01-15,2117,211,,,,,,,,,
+Free State of Saxony,2021-01-16,1823,188,,,,,,,,,
+Free State of Saxony,2021-01-17,1280,97,,,,,,,,,
+Free State of Saxony,2021-01-18,421,25,,,,,,,,,
+Free State of Saxony,2021-01-19,692,52,,,,,,,,,
+Free State of Saxony,2021-01-20,1258,151,,,,,,,,,
+Free State of Saxony,2021-01-21,1841,126,,,,,,,,,
+Free State of Saxony,2021-01-22,1094,84,,,,,,,,,
+Free State of Saxony,2021-01-23,1394,153,,,,,,,,,
+Free State of Saxony,2021-01-24,914,52,,,,,,,,,
+Free State of Saxony,2021-01-25,700,,32,17.3,29,10,20,25,33,41,66
+Free State of Saxony,2021-01-26,656,,43.1,25,38,14,27,34,43,54,89
+Free State of Saxony,2021-01-27,861,,95.2,48.1,87,32,60,75,100,120,181
+Free State of Saxony,2021-01-28,1054,,123.2,65.4,110,44,77,97,124,156,240
+Free State of Saxony,2021-01-29,950.5,,118,65.9,104,38,72,92,121,150,233.1
+Free State of Saxony,2021-01-30,834,,116.7,57.5,108,43,75,93.6,121,148,227
+Free State of Saxony,2021-01-31,618.5,,56.1,31.7,50,18,34,45,58,71.2,113
+Free State of Saxony,2021-02-01,492,,26.8,15.1,24,8,16,20,27,34,57
+Free State of Saxony,2021-02-02,447,,34.8,20,31,11,21,27,35,44,70
+Free State of Saxony,2021-02-03,592,,78.9,43.8,71,23.9,48,61,83,103,159
+Free State of Saxony,2021-02-04,706,,105.3,62.9,92,30.9,61,80,108,138.2,219
+Free State of Saxony,2021-02-05,664.5,,96.1,51.9,88,28,58.8,76.6,100,124,195
+Free State of Saxony,2021-02-06,579,,97.9,50.9,90,33,60,77,102.4,126,194
+Free State of Saxony,2021-02-07,429,,45.3,26.7,40,12,26,35,47,59,97
+Free State of Saxony,2021-02-08,332,,21.1,13.5,19,5,12,16,22,27,46
+Free State of Saxony,2021-02-09,311,,24.9,15,22,7,15,19,25,32,52
+Free State of Saxony,2021-02-10,404,,59.2,35.2,52,16,35,45,60,76,128
+Free State of Saxony,2021-02-11,506.5,,73.8,46.4,64,19,44,57,77,95,147.1
+Free State of Saxony,2021-02-12,475,,68.2,40.3,62,19,40,53,69,86,142
+Free State of Saxony,2021-02-13,392.5,,69,41.5,61,18,41.8,53,71,89,139
+Free State of Saxony,2021-02-14,295.5,,31.1,20.3,28,7.9,17,23,32,40,66
+Free State of Saxony,2021-02-15,235.5,,14.1,9.5,12,3,8,10,14,18,30
+Free State of Saxony,2021-02-16,210,,17.8,13.3,15,4,9,13,18,23,39
+Free State of Saxony,2021-02-17,284,,42.9,33.6,36,10,22,31,44,56,91.1
+Free State of Saxony,2021-02-18,343,,53.5,36.2,46,13,29,39,55,68.2,113
+Free State of Saxony,2021-02-19,325,,52.2,39.4,45,12,27,37,53,68,113
+Free State of Saxony,2021-02-20,274.5,,50.5,43.3,44,10,26.8,36.6,51,64.2,109.1
+Free State of Saxony,2021-02-21,198,,24.9,22.5,21,4,12.8,18,25,32,56
+Free State of Saxony,2021-02-22,163,,11.1,9.9,9,1,5,8,11,14,27
+Free State of Saxony,2021-02-23,150,,14.3,16.7,11,2,6,9,13,18,34
+Free State of Saxony,2021-02-24,194,,32.2,37.9,25,5,13,20,30.4,40,78
+Free State of Thüringia,2020-11-30,312,1,,,,,,,,,
+Free State of Thüringia,2020-12-01,390,13,,,,,,,,,
+Free State of Thüringia,2020-12-02,471,18,,,,,,,,,
+Free State of Thüringia,2020-12-03,570,16,,,,,,,,,
+Free State of Thüringia,2020-12-04,1034,11,,,,,,,,,
+Free State of Thüringia,2020-12-05,652,9,,,,,,,,,
+Free State of Thüringia,2020-12-06,374,2,,,,,,,,,
+Free State of Thüringia,2020-12-07,490,8,,,,,,,,,
+Free State of Thüringia,2020-12-08,459,28,,,,,,,,,
+Free State of Thüringia,2020-12-09,583,15,,,,,,,,,
+Free State of Thüringia,2020-12-10,836,12,,,,,,,,,
+Free State of Thüringia,2020-12-11,961,18,,,,,,,,,
+Free State of Thüringia,2020-12-12,993,11,,,,,,,,,
+Free State of Thüringia,2020-12-13,861,25,,,,,,,,,
+Free State of Thüringia,2020-12-14,487,0,,,,,,,,,
+Free State of Thüringia,2020-12-15,777,25,,,,,,,,,
+Free State of Thüringia,2020-12-16,798,24,,,,,,,,,
+Free State of Thüringia,2020-12-17,1277,33,,,,,,,,,
+Free State of Thüringia,2020-12-18,1266,29,,,,,,,,,
+Free State of Thüringia,2020-12-19,1066,41,,,,,,,,,
+Free State of Thüringia,2020-12-20,837,13,,,,,,,,,
+Free State of Thüringia,2020-12-21,572,4,,,,,,,,,
+Free State of Thüringia,2020-12-22,867,45,,,,,,,,,
+Free State of Thüringia,2020-12-23,1300,29,,,,,,,,,
+Free State of Thüringia,2020-12-24,1349,34,,,,,,,,,
+Free State of Thüringia,2020-12-25,1056,14,,,,,,,,,
+Free State of Thüringia,2020-12-26,817,14,,,,,,,,,
+Free State of Thüringia,2020-12-27,599,9,,,,,,,,,
+Free State of Thüringia,2020-12-28,364,8,,,,,,,,,
+Free State of Thüringia,2020-12-29,543,71,,,,,,,,,
+Free State of Thüringia,2020-12-30,1011,50,,,,,,,,,
+Free State of Thüringia,2020-12-31,1376,38,,,,,,,,,
+Free State of Thüringia,2021-01-01,1244,17,,,,,,,,,
+Free State of Thüringia,2021-01-02,597,15,,,,,,,,,
+Free State of Thüringia,2021-01-03,491,3,,,,,,,,,
+Free State of Thüringia,2021-01-04,330,24,,,,,,,,,
+Free State of Thüringia,2021-01-05,416,56,,,,,,,,,
+Free State of Thüringia,2021-01-06,1173,58,,,,,,,,,
+Free State of Thüringia,2021-01-07,1291,48,,,,,,,,,
+Free State of Thüringia,2021-01-08,1469,41,,,,,,,,,
+Free State of Thüringia,2021-01-09,1257,41,,,,,,,,,
+Free State of Thüringia,2021-01-10,970,24,,,,,,,,,
+Free State of Thüringia,2021-01-11,334,32,,,,,,,,,
+Free State of Thüringia,2021-01-12,709,55,,,,,,,,,
+Free State of Thüringia,2021-01-13,1217,59,,,,,,,,,
+Free State of Thüringia,2021-01-14,1104,37,,,,,,,,,
+Free State of Thüringia,2021-01-15,1005,51,,,,,,,,,
+Free State of Thüringia,2021-01-16,898,55,,,,,,,,,
+Free State of Thüringia,2021-01-17,717,22,,,,,,,,,
+Free State of Thüringia,2021-01-18,338,6,,,,,,,,,
+Free State of Thüringia,2021-01-19,432,37,,,,,,,,,
+Free State of Thüringia,2021-01-20,787,57,,,,,,,,,
+Free State of Thüringia,2021-01-21,931,75,,,,,,,,,
+Free State of Thüringia,2021-01-22,873,65,,,,,,,,,
+Free State of Thüringia,2021-01-23,673,28,,,,,,,,,
+Free State of Thüringia,2021-01-24,608,12,,,,,,,,,
+Free State of Thüringia,2021-01-25,326,,21.5,12.3,19,6,13,16,22,28,45
+Free State of Thüringia,2021-01-26,466,,48.2,26.4,44,17,31,38,49,58,100
+Free State of Thüringia,2021-01-27,662,,54.3,27.4,50,19,36,44,56,67.2,106
+Free State of Thüringia,2021-01-28,794.5,,51,26.3,46,17,34,41,53,63,97
+Free State of Thüringia,2021-01-29,738.5,,47.5,22.9,44.5,17,32,39,49,59,90
+Free State of Thüringia,2021-01-30,658.5,,35.8,19.3,33,11,23,29,37,46,70
+Free State of Thüringia,2021-01-31,450,,18.7,11,17,5,11,15,19,23,40
+Free State of Thüringia,2021-02-01,275,,18.9,10.5,17,6,12,15,20,25,38
+Free State of Thüringia,2021-02-02,387.5,,42.5,23.9,38,13,27,34,43,52.2,84
+Free State of Thüringia,2021-02-03,556,,46.7,23.5,44,15,30,38,49,58,90
+Free State of Thüringia,2021-02-04,656,,44.7,23.8,41,14,28,36,46,56,90
+Free State of Thüringia,2021-02-05,639,,41.3,22.7,38.5,12,26,33,43,52,78
+Free State of Thüringia,2021-02-06,563,,30.8,16.6,28,10,19,24,32,39,61
+Free State of Thüringia,2021-02-07,376,,16.3,10.5,14,4,9,12,16,20,37
+Free State of Thüringia,2021-02-08,224,,16.5,9.6,15,5,10,13,17,21,34
+Free State of Thüringia,2021-02-09,331,,36.8,20.8,33,10,22,28.6,38,47,76
+Free State of Thüringia,2021-02-10,466,,39.9,21.2,36,12,25,32,41,51,80
+Free State of Thüringia,2021-02-11,547.5,,37.6,20.7,35,11,22,30,39,49,76
+Free State of Thüringia,2021-02-12,513.5,,34.9,20,31,10,21,27,36,45,72
+Free State of Thüringia,2021-02-13,466,,26.1,15.1,24,7,16,21,27,33,55
+Free State of Thüringia,2021-02-14,322.5,,13.9,9.5,12,3,7,10,14,18,32
+Free State of Thüringia,2021-02-15,189.5,,14.3,9.8,13,3,8,11,14,18,33
+Free State of Thüringia,2021-02-16,275,,31.7,21.3,27.5,7,17,23,32,41,75
+Free State of Thüringia,2021-02-17,399.5,,34.9,21.2,31,9,20,27,36,46,72
+Free State of Thüringia,2021-02-18,454,,32.2,20.7,28,7,18,23,33,42,71
+Free State of Thüringia,2021-02-19,440.5,,31.1,21,27,7,17,22,32,40.2,71
+Free State of Thüringia,2021-02-20,393,,23.2,16.3,20,5,12,17,24,30,54
+Free State of Thüringia,2021-02-21,263.5,,12.1,9,10,2,6,8,12,16,29
+Free State of Thüringia,2021-02-22,159.5,,12.6,9.7,10,2,6,9,12,16,31
+Free State of Thüringia,2021-02-23,233.5,,28.4,21.9,23,5,14,19,27,36,72
+Free State of Thüringia,2021-02-24,333.5,,31,23.8,26,6,15,21,30,40,74
+Germany,2020-11-30,11169,125,,,,,,,,,
+Germany,2020-12-01,13604,388,,,,,,,,,
+Germany,2020-12-02,17270,487,,,,,,,,,
+Germany,2020-12-03,22046,479,,,,,,,,,
+Germany,2020-12-04,23449,432,,,,,,,,,
+Germany,2020-12-05,23318,483,,,,,,,,,
+Germany,2020-12-06,17767,255,,,,,,,,,
+Germany,2020-12-07,12332,147,,,,,,,,,
+Germany,2020-12-08,14054,423,,,,,,,,,
+Germany,2020-12-09,20815,590,,,,,,,,,
+Germany,2020-12-10,23679,440,,,,,,,,,
+Germany,2020-12-11,29875,598,,,,,,,,,
+Germany,2020-12-12,28438,496,,,,,,,,,
+Germany,2020-12-13,20200,321,,,,,,,,,
+Germany,2020-12-14,16362,188,,,,,,,,,
+Germany,2020-12-15,14432,500,,,,,,,,,
+Germany,2020-12-16,27728,952,,,,,,,,,
+Germany,2020-12-17,26923,698,,,,,,,,,
+Germany,2020-12-18,33777,813,,,,,,,,,
+Germany,2020-12-19,31300,702,,,,,,,,,
+Germany,2020-12-20,22771,409,,,,,,,,,
+Germany,2020-12-21,16643,226,,,,,,,,,
+Germany,2020-12-22,19528,731,,,,,,,,,
+Germany,2020-12-23,24740,962,,,,,,,,,
+Germany,2020-12-24,32195,802,,,,,,,,,
+Germany,2020-12-25,25533,412,,,,,,,,,
+Germany,2020-12-26,14455,240,,,,,,,,,
+Germany,2020-12-27,13755,356,,,,,,,,,
+Germany,2020-12-28,10976,348,,,,,,,,,
+Germany,2020-12-29,12892,852,,,,,,,,,
+Germany,2020-12-30,22459,1129,,,,,,,,,
+Germany,2020-12-31,32552,964,,,,,,,,,
+Germany,2021-01-01,22924,553,,,,,,,,,
+Germany,2021-01-02,12690,336,,,,,,,,,
+Germany,2021-01-03,10315,312,,,,,,,,,
+Germany,2021-01-04,9847,302,,,,,,,,,
+Germany,2021-01-05,11897,944,,,,,,,,,
+Germany,2021-01-06,21237,1019,,,,,,,,,
+Germany,2021-01-07,26391,1070,,,,,,,,,
+Germany,2021-01-08,31849,1188,,,,,,,,,
+Germany,2021-01-09,24694,1083,,,,,,,,,
+Germany,2021-01-10,16946,465,,,,,,,,,
+Germany,2021-01-11,12497,343,,,,,,,,,
+Germany,2021-01-12,12802,891,,,,,,,,,
+Germany,2021-01-13,19600,1060,,,,,,,,,
+Germany,2021-01-14,25164,1244,,,,,,,,,
+Germany,2021-01-15,22368,1113,,,,,,,,,
+Germany,2021-01-16,18678,980,,,,,,,,,
+Germany,2021-01-17,13882,445,,,,,,,,,
+Germany,2021-01-18,7141,214,,,,,,,,,
+Germany,2021-01-19,11369,989,,,,,,,,,
+Germany,2021-01-20,15974,1148,,,,,,,,,
+Germany,2021-01-21,20398,1013,,,,,,,,,
+Germany,2021-01-22,17862,859,,,,,,,,,
+Germany,2021-01-23,16417,879,,,,,,,,,
+Germany,2021-01-24,12257,349,,,,,,,,,
+Germany,2021-01-25,8249,,245.7,45.8,242.5,178,216,232,252,272,323
+Germany,2021-01-26,9564.5,,810.8,145.9,801,594.9,718,772,835,893,1048.3
+Germany,2021-01-27,13382.5,,928.7,166.6,917,691,812,882.6,956,1027.5,1212
+Germany,2021-01-28,16102.5,,955.4,166.9,944,702,847.8,907,985,1055,1236
+Germany,2021-01-29,15838.5,,886.9,162.5,877,638.9,776.5,841,916.4,984.2,1170.1
+Germany,2021-01-30,13625.5,,825,157.3,811,582,720,779,856,917.5,1093.1
+Germany,2021-01-31,9675,,354.8,73.3,350,253.9,306,331,368,395,471.1
+Germany,2021-02-01,7008.5,,224.6,46.9,222,153.9,194,212,231,250,303
+Germany,2021-02-02,8028,,737.7,151.8,732,513,635.8,690,767,835.2,999
+Germany,2021-02-03,11154,,849.8,183.1,847,577,714,795.6,888,965,1179.1
+Germany,2021-02-04,13557,,865.5,187.6,855,573,737,809,901.4,975.2,1188.1
+Germany,2021-02-05,13182.5,,814.8,201.1,805.5,530.8,688,762.6,843.4,916,1125
+Germany,2021-02-06,11095,,750.8,205.7,735.5,473,625.8,691.6,779.4,849.2,1055.1
+Germany,2021-02-07,8198.5,,319.4,101,308,189.9,263,289,327,362,459.1
+Germany,2021-02-08,5868,,200.6,72.2,193,117,164,182,206,225,291
+Germany,2021-02-09,6674,,650.5,257.3,622,371,516.8,589,664,730.2,961.2
+Germany,2021-02-10,9310,,745.1,334.8,711,427.9,588,659,761,835,1073.4
+Germany,2021-02-11,11365.5,,767.1,403.4,717,405,589.5,669.6,770,856,1129.2
+Germany,2021-02-12,11088,,726.1,505,666,373,543.8,619,713.4,811,1124
+Germany,2021-02-13,9407.5,,675.5,478.2,617.5,329.8,504.8,576.6,660,736,1037.2
+Germany,2021-02-14,6637.5,,286.3,232.5,255.5,133,203,235,277.4,309,468.2
+Germany,2021-02-15,4857,,187,207.5,161,80,126,148,174,198,306.1
+Germany,2021-02-16,5434,,610.5,683.3,523.5,252.7,411.8,481,563,646.2,982.5
+Germany,2021-02-17,7881.5,,735.6,1042.4,600.5,272.8,467,553.6,654.4,766.2,1244.1
+Germany,2021-02-18,9469,,757.4,1201.2,604.5,266.8,464.2,547.6,663,765.2,1247.2
+Germany,2021-02-19,9170,,721.2,1207.1,562.5,235.9,424,503.6,610,722.5,1190.1
+Germany,2021-02-20,7848.5,,711.9,1527,517,200.8,379.8,464,569.8,680,1200.5
+Germany,2021-02-21,5551.5,,304.9,604.5,219,77.9,155.8,193,245,292.5,569.6
+Germany,2021-02-22,4002.5,,206.9,566.9,136,50,95,117,153,189.2,368.2
+Germany,2021-02-23,4638,,666.6,1633.5,430,157.8,301,380,487,596,1202.2
+Germany,2021-02-24,6334,,762.9,1881.2,474.5,162.9,338,423.6,540.8,683,1413.5
+Hesse State,2020-11-30,513,8,,,,,,,,,
+Hesse State,2020-12-01,1286,50,,,,,,,,,
+Hesse State,2020-12-02,1368,40,,,,,,,,,
+Hesse State,2020-12-03,1520,34,,,,,,,,,
+Hesse State,2020-12-04,1859,39,,,,,,,,,
+Hesse State,2020-12-05,1612,30,,,,,,,,,
+Hesse State,2020-12-06,1517,19,,,,,,,,,
+Hesse State,2020-12-07,683,18,,,,,,,,,
+Hesse State,2020-12-08,1262,51,,,,,,,,,
+Hesse State,2020-12-09,1661,49,,,,,,,,,
+Hesse State,2020-12-10,1340,23,,,,,,,,,
+Hesse State,2020-12-11,1917,58,,,,,,,,,
+Hesse State,2020-12-12,3117,57,,,,,,,,,
+Hesse State,2020-12-13,1427,33,,,,,,,,,
+Hesse State,2020-12-14,955,6,,,,,,,,,
+Hesse State,2020-12-15,1418,79,,,,,,,,,
+Hesse State,2020-12-16,1699,72,,,,,,,,,
+Hesse State,2020-12-17,2565,58,,,,,,,,,
+Hesse State,2020-12-18,1475,40,,,,,,,,,
+Hesse State,2020-12-19,3224,81,,,,,,,,,
+Hesse State,2020-12-20,2019,36,,,,,,,,,
+Hesse State,2020-12-21,1246,26,,,,,,,,,
+Hesse State,2020-12-22,676,53,,,,,,,,,
+Hesse State,2020-12-23,2411,96,,,,,,,,,
+Hesse State,2020-12-24,1165,35,,,,,,,,,
+Hesse State,2020-12-25,2992,65,,,,,,,,,
+Hesse State,2020-12-26,903,27,,,,,,,,,
+Hesse State,2020-12-27,1325,61,,,,,,,,,
+Hesse State,2020-12-28,370,27,,,,,,,,,
+Hesse State,2020-12-29,400,71,,,,,,,,,
+Hesse State,2020-12-30,1271,129,,,,,,,,,
+Hesse State,2020-12-31,3102,134,,,,,,,,,
+Hesse State,2021-01-01,1802,42,,,,,,,,,
+Hesse State,2021-01-02,989,30,,,,,,,,,
+Hesse State,2021-01-03,597,45,,,,,,,,,
+Hesse State,2021-01-04,406,29,,,,,,,,,
+Hesse State,2021-01-05,641,104,,,,,,,,,
+Hesse State,2021-01-06,1913,116,,,,,,,,,
+Hesse State,2021-01-07,2084,67,,,,,,,,,
+Hesse State,2021-01-08,2003,71,,,,,,,,,
+Hesse State,2021-01-09,1851,112,,,,,,,,,
+Hesse State,2021-01-10,1366,22,,,,,,,,,
+Hesse State,2021-01-11,561,30,,,,,,,,,
+Hesse State,2021-01-12,503,75,,,,,,,,,
+Hesse State,2021-01-13,1551,128,,,,,,,,,
+Hesse State,2021-01-14,1656,64,,,,,,,,,
+Hesse State,2021-01-15,1627,63,,,,,,,,,
+Hesse State,2021-01-16,1128,64,,,,,,,,,
+Hesse State,2021-01-17,1289,29,,,,,,,,,
+Hesse State,2021-01-18,424,28,,,,,,,,,
+Hesse State,2021-01-19,441,108,,,,,,,,,
+Hesse State,2021-01-20,1329,118,,,,,,,,,
+Hesse State,2021-01-21,1583,67,,,,,,,,,
+Hesse State,2021-01-22,1532,61,,,,,,,,,
+Hesse State,2021-01-23,1091,44,,,,,,,,,
+Hesse State,2021-01-24,929,26,,,,,,,,,
+Hesse State,2021-01-25,491,,24.5,8.4,24,12,19,22,26,30,39
+Hesse State,2021-01-26,652,,80.4,25,78,45,63.8,73,84,94,124
+Hesse State,2021-01-27,1055,,100.3,29.2,98,55,82,92,105,118,151
+Hesse State,2021-01-28,1238,,57.5,19.1,55,30,45,51,60,68,92
+Hesse State,2021-01-29,1227.5,,55.4,16.9,54,32,44,50,58,65,84
+Hesse State,2021-01-30,1084,,60.5,18.5,58,34.9,47,54,63,71,93
+Hesse State,2021-01-31,875.5,,22,8.2,21,11,16,19,23,27,36
+Hesse State,2021-02-01,452,,23,8.4,22,11,17,20,24,28,38
+Hesse State,2021-02-02,581,,73.8,23.3,73,39.9,58,67,78,87,114
+Hesse State,2021-02-03,967.5,,94.8,27,94,53,77,87,99,111.2,141
+Hesse State,2021-02-04,1137,,51.8,17.4,50,27,40,46,54,62,82
+Hesse State,2021-02-05,1141.5,,51.4,17.2,49,27,40,46,54,61,83
+Hesse State,2021-02-06,993,,55.6,19.9,53,29,42,49,57,66,91
+Hesse State,2021-02-07,820,,20.5,8,20,10,15,18,22,25,35
+Hesse State,2021-02-08,405.5,,20.7,8.3,20,9,15,18,22,25,35
+Hesse State,2021-02-09,540.5,,67.1,23.5,64,34,51,59,69,81,111
+Hesse State,2021-02-10,877,,84.3,31.2,80,43.9,64,74,87,99,139
+Hesse State,2021-02-11,1069.5,,48.9,19.7,46,24,36,42,50,59,82
+Hesse State,2021-02-12,1013,,47.8,18.6,45.5,23,35,41,50,58,80
+Hesse State,2021-02-13,883,,53.4,23.1,50,25,38,46,55,63,93
+Hesse State,2021-02-14,738,,19.2,9.3,18,7,13,16,20,24,35
+Hesse State,2021-02-15,367.5,,19.3,10,18,8,12,16,20,23,35
+Hesse State,2021-02-16,486,,63.8,32.2,58,27,44,52,65,76,116
+Hesse State,2021-02-17,816.5,,82,39.8,77,36.9,58,69,84,98,139
+Hesse State,2021-02-18,952,,47,24.4,42,18,32,39,47,55,92
+Hesse State,2021-02-19,945.5,,44.5,24.4,40,19,30,35,44,53,83
+Hesse State,2021-02-20,846,,49.4,28.5,43.5,20,33,39,49.4,59,94
+Hesse State,2021-02-21,683,,18.3,11,16,6,12,14,18,22,35
+Hesse State,2021-02-22,331.5,,19.2,13,17,6,12,15,19,23,39
+Hesse State,2021-02-23,449.5,,62.3,43.3,54,24,40,48,59.4,72,123
+Hesse State,2021-02-24,736,,79.7,63.8,69,28.9,51,62,76,90,156
+Kujawsko-Pomorskie,2020-11-30,623,14,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-01,297,4,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-02,1214,40,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-03,1240,32,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-04,1354,27,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-05,1081,12,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-06,1091,14,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-07,718,11,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-08,351,6,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-09,690,19,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-10,1101,28,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-11,1404,35,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-12,1002,52,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-13,1083,47,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-14,756,18,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-15,531,9,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-16,750,28,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-17,1181,45,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-18,1138,45,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-19,1050,27,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-20,1114,32,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-21,788,13,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-22,480,4,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-23,768,32,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-24,1204,57,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-25,1311,39,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-26,767,27,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-27,472,11,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-28,326,6,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-29,302,6,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-30,720,27,,,,,,,,,
+Kujawsko-Pomorskie,2020-12-31,1106,47,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-01,1517,47,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-02,967,27,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-03,471,17,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-04,673,9,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-05,484,2,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-06,913,28,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-07,1300,42,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-08,1078,18,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-09,1034,39,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-10,886,59,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-11,923,17,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-12,388,6,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-13,526,25,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-14,910,44,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-15,993,44,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-16,712,24,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-17,653,33,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-18,658,16,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-19,201,3,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-20,438,25,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-21,534,36,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-22,729,44,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-23,613,22,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-24,644,28,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-25,447,11,,,,,,,,,
+Kujawsko-Pomorskie,2021-01-26,294.5,,3.5,2.8,3,0,2,2,4,5,9
+Kujawsko-Pomorskie,2021-01-27,407,,22,11.6,20,8,14,18,22,27,42
+Kujawsko-Pomorskie,2021-01-28,581,,32,15,30,12,22,26,33,39,58
+Kujawsko-Pomorskie,2021-01-29,619,,29.1,15.4,26,11,20,24,30,36,53
+Kujawsko-Pomorskie,2021-01-30,549.5,,22.6,11.4,21,8,15,18,23,28,43
+Kujawsko-Pomorskie,2021-01-31,454,,30.5,14.6,29,10,20,25,32,38,58
+Kujawsko-Pomorskie,2021-02-01,409,,10.2,5.5,9,3,6,8,11,13,20
+Kujawsko-Pomorskie,2021-02-02,253.5,,3.1,2.2,3,0,1,2,3,4,7
+Kujawsko-Pomorskie,2021-02-03,329.5,,19.4,10.2,17,7,13,16,20,24,39
+Kujawsko-Pomorskie,2021-02-04,474,,27.3,13.2,25,10,19,22,28,34,52
+Kujawsko-Pomorskie,2021-02-05,528.5,,25.3,14.1,23,8,17,20,26,31,49
+Kujawsko-Pomorskie,2021-02-06,461,,19.1,9.9,18,6,12,15,20,24,37
+Kujawsko-Pomorskie,2021-02-07,397,,26.5,13.8,24,9,17,21,27,34,51
+Kujawsko-Pomorskie,2021-02-08,358.5,,9.2,5.7,8,2,5,7,9,12,19
+Kujawsko-Pomorskie,2021-02-09,223,,2.6,2.2,2,0,1,2,3,4,7
+Kujawsko-Pomorskie,2021-02-10,293,,15.7,8.4,14,5,10,12,16,20,30
+Kujawsko-Pomorskie,2021-02-11,414,,23.7,12.6,22,7,15,19,25,30,48
+Kujawsko-Pomorskie,2021-02-12,447.5,,21.6,12.3,19,6,13,17,22,27,44
+Kujawsko-Pomorskie,2021-02-13,393,,17,10.4,15,5,10,13,17,21,35
+Kujawsko-Pomorskie,2021-02-14,343,,23.1,15.4,20,7,14,17.6,23,28,48
+Kujawsko-Pomorskie,2021-02-15,302,,8,5.6,7,2,4,6,8,11,18
+Kujawsko-Pomorskie,2021-02-16,188.5,,2.3,2.2,2,0,1,1,2,3,7
+Kujawsko-Pomorskie,2021-02-17,240.5,,14.7,11.1,13,3,8,11,15,18,32
+Kujawsko-Pomorskie,2021-02-18,351.5,,21.8,15.4,19,5,12,17,22,28,45
+Kujawsko-Pomorskie,2021-02-19,376,,19.6,18.2,17,4.9,10.8,14,19,25,41
+Kujawsko-Pomorskie,2021-02-20,340,,14.9,12.9,13,3,8,11,15,19,31
+Kujawsko-Pomorskie,2021-02-21,291.5,,21.2,24.2,18,4.9,11,15,21,26.2,45
+Kujawsko-Pomorskie,2021-02-22,251,,7.2,7.2,6,1,3,5,7,9,16
+Kujawsko-Pomorskie,2021-02-23,156,,2.2,2.9,2,0,1,1,2,3,6
+Kujawsko-Pomorskie,2021-02-24,216,,13.1,12.8,11,2,6,9,12,16,30
+Lodzkie,2020-11-30,838,37,,,,,,,,,
+Lodzkie,2020-12-01,375,10,,,,,,,,,
+Lodzkie,2020-12-02,615,21,,,,,,,,,
+Lodzkie,2020-12-03,1013,31,,,,,,,,,
+Lodzkie,2020-12-04,889,41,,,,,,,,,
+Lodzkie,2020-12-05,915,48,,,,,,,,,
+Lodzkie,2020-12-06,897,44,,,,,,,,,
+Lodzkie,2020-12-07,561,7,,,,,,,,,
+Lodzkie,2020-12-08,238,8,,,,,,,,,
+Lodzkie,2020-12-09,563,35,,,,,,,,,
+Lodzkie,2020-12-10,821,64,,,,,,,,,
+Lodzkie,2020-12-11,863,67,,,,,,,,,
+Lodzkie,2020-12-12,838,41,,,,,,,,,
+Lodzkie,2020-12-13,695,35,,,,,,,,,
+Lodzkie,2020-12-14,572,1,,,,,,,,,
+Lodzkie,2020-12-15,190,0,,,,,,,,,
+Lodzkie,2020-12-16,446,26,,,,,,,,,
+Lodzkie,2020-12-17,943,68,,,,,,,,,
+Lodzkie,2020-12-18,767,27,,,,,,,,,
+Lodzkie,2020-12-19,656,34,,,,,,,,,
+Lodzkie,2020-12-20,762,32,,,,,,,,,
+Lodzkie,2020-12-21,447,9,,,,,,,,,
+Lodzkie,2020-12-22,265,2,,,,,,,,,
+Lodzkie,2020-12-23,453,22,,,,,,,,,
+Lodzkie,2020-12-24,859,25,,,,,,,,,
+Lodzkie,2020-12-25,945,51,,,,,,,,,
+Lodzkie,2020-12-26,739,10,,,,,,,,,
+Lodzkie,2020-12-27,280,0,,,,,,,,,
+Lodzkie,2020-12-28,199,2,,,,,,,,,
+Lodzkie,2020-12-29,199,0,,,,,,,,,
+Lodzkie,2020-12-30,671,16,,,,,,,,,
+Lodzkie,2020-12-31,801,36,,,,,,,,,
+Lodzkie,2021-01-01,703,23,,,,,,,,,
+Lodzkie,2021-01-02,704,25,,,,,,,,,
+Lodzkie,2021-01-03,604,4,,,,,,,,,
+Lodzkie,2021-01-04,292,0,,,,,,,,,
+Lodzkie,2021-01-05,287,0,,,,,,,,,
+Lodzkie,2021-01-06,487,21,,,,,,,,,
+Lodzkie,2021-01-07,1058,125,,,,,,,,,
+Lodzkie,2021-01-08,627,29,,,,,,,,,
+Lodzkie,2021-01-09,546,50,,,,,,,,,
+Lodzkie,2021-01-10,702,29,,,,,,,,,
+Lodzkie,2021-01-11,573,7,,,,,,,,,
+Lodzkie,2021-01-12,218,2,,,,,,,,,
+Lodzkie,2021-01-13,285,28,,,,,,,,,
+Lodzkie,2021-01-14,567,43,,,,,,,,,
+Lodzkie,2021-01-15,554,35,,,,,,,,,
+Lodzkie,2021-01-16,495,37,,,,,,,,,
+Lodzkie,2021-01-17,416,34,,,,,,,,,
+Lodzkie,2021-01-18,351,5,,,,,,,,,
+Lodzkie,2021-01-19,98,2,,,,,,,,,
+Lodzkie,2021-01-20,275,28,,,,,,,,,
+Lodzkie,2021-01-21,393,41,,,,,,,,,
+Lodzkie,2021-01-22,410,44,,,,,,,,,
+Lodzkie,2021-01-23,351,23,,,,,,,,,
+Lodzkie,2021-01-24,348,26,,,,,,,,,
+Lodzkie,2021-01-25,283,4,,,,,,,,,
+Lodzkie,2021-01-26,149.5,,1.7,2.1,1,0,0,1,1,2,6
+Lodzkie,2021-01-27,217,,20.5,14.5,17,4,11,15,20,27,47
+Lodzkie,2021-01-28,335.5,,45.4,28,40,9,25,34.6,46.4,59,97
+Lodzkie,2021-01-29,298.5,,26.7,17.8,23,6,14,19,27,34,59
+Lodzkie,2021-01-30,281,,26.1,17.7,22,6,14,19,26,34,59
+Lodzkie,2021-01-31,243,,21.9,13.7,20,4,12,17,22,29,49
+Lodzkie,2021-02-01,197,,3.3,3.2,3,0,1,2,3,4,9
+Lodzkie,2021-02-02,113,,1.4,1.8,1,0,0,1,1,2,5
+Lodzkie,2021-02-03,168,,16.6,12.2,14,3,8,12,17,21.2,39
+Lodzkie,2021-02-04,246,,35.9,22.9,32,8,20,27.6,37,45.2,76
+Lodzkie,2021-02-05,232.5,,21.7,15.6,18,4,11,16,21,28,52
+Lodzkie,2021-02-06,216,,20.7,14.4,18.5,4,11,16,21,27,45
+Lodzkie,2021-02-07,189,,17.1,11,15,3,9,13,18,22.2,38
+Lodzkie,2021-02-08,148,,2.6,2.5,2,0,1,2,3,4,8
+Lodzkie,2021-02-09,85,,1.2,1.7,1,0,0,0,1,2,4
+Lodzkie,2021-02-10,125,,13.2,10.1,11,3,6,9,13,17,32
+Lodzkie,2021-02-11,189,,27.6,18.6,23,5,15,20,27,37,62
+Lodzkie,2021-02-12,177,,16.8,13.2,14,3,8,12,17,22,39
+Lodzkie,2021-02-13,166,,16.6,13,13,3,8,11,16.4,22,40
+Lodzkie,2021-02-14,143,,13.6,11.1,11,2,7,9,13.4,18,32
+Lodzkie,2021-02-15,113,,2.2,2.7,2,0,1,1,2,3,6
+Lodzkie,2021-02-16,65,,0.9,1.5,0,0,0,0,1,1,3
+Lodzkie,2021-02-17,96,,10.8,11.9,9,1,5,7,10,14,27
+Lodzkie,2021-02-18,147,,22.8,19.2,18,3,10.8,15,22,30,54
+Lodzkie,2021-02-19,133.5,,13.6,11.6,11,2,6,9,13,18,33
+Lodzkie,2021-02-20,124,,13.5,11.9,11,1,6,9,13,18,32
+Lodzkie,2021-02-21,106,,11.2,10.9,9,1,4,7,11,15,29
+Lodzkie,2021-02-22,87,,1.9,3.5,1,0,0,1,2,2,6
+Lodzkie,2021-02-23,50,,0.7,1.6,0,0,0,0,0.4,1,3
+Lodzkie,2021-02-24,75,,9,15.8,6,0,3,5,8,11,23
+Lower Saxony State,2020-11-30,408,2,,,,,,,,,
+Lower Saxony State,2020-12-01,321,7,,,,,,,,,
+Lower Saxony State,2020-12-02,948,25,,,,,,,,,
+Lower Saxony State,2020-12-03,1014,23,,,,,,,,,
+Lower Saxony State,2020-12-04,1186,21,,,,,,,,,
+Lower Saxony State,2020-12-05,1561,28,,,,,,,,,
+Lower Saxony State,2020-12-06,738,5,,,,,,,,,
+Lower Saxony State,2020-12-07,708,5,,,,,,,,,
+Lower Saxony State,2020-12-08,555,11,,,,,,,,,
+Lower Saxony State,2020-12-09,891,22,,,,,,,,,
+Lower Saxony State,2020-12-10,1707,54,,,,,,,,,
+Lower Saxony State,2020-12-11,1427,27,,,,,,,,,
+Lower Saxony State,2020-12-12,1614,23,,,,,,,,,
+Lower Saxony State,2020-12-13,836,16,,,,,,,,,
+Lower Saxony State,2020-12-14,958,8,,,,,,,,,
+Lower Saxony State,2020-12-15,616,27,,,,,,,,,
+Lower Saxony State,2020-12-16,923,28,,,,,,,,,
+Lower Saxony State,2020-12-17,1630,41,,,,,,,,,
+Lower Saxony State,2020-12-18,2290,53,,,,,,,,,
+Lower Saxony State,2020-12-19,1585,29,,,,,,,,,
+Lower Saxony State,2020-12-20,1038,31,,,,,,,,,
+Lower Saxony State,2020-12-21,1185,12,,,,,,,,,
+Lower Saxony State,2020-12-22,1236,36,,,,,,,,,
+Lower Saxony State,2020-12-23,727,18,,,,,,,,,
+Lower Saxony State,2020-12-24,2275,51,,,,,,,,,
+Lower Saxony State,2020-12-25,1109,11,,,,,,,,,
+Lower Saxony State,2020-12-26,1534,10,,,,,,,,,
+Lower Saxony State,2020-12-27,973,14,,,,,,,,,
+Lower Saxony State,2020-12-28,394,14,,,,,,,,,
+Lower Saxony State,2020-12-29,506,49,,,,,,,,,
+Lower Saxony State,2020-12-30,1018,57,,,,,,,,,
+Lower Saxony State,2020-12-31,2021,59,,,,,,,,,
+Lower Saxony State,2021-01-01,1818,36,,,,,,,,,
+Lower Saxony State,2021-01-02,1203,13,,,,,,,,,
+Lower Saxony State,2021-01-03,461,12,,,,,,,,,
+Lower Saxony State,2021-01-04,506,13,,,,,,,,,
+Lower Saxony State,2021-01-05,676,60,,,,,,,,,
+Lower Saxony State,2021-01-06,713,21,,,,,,,,,
+Lower Saxony State,2021-01-07,2116,84,,,,,,,,,
+Lower Saxony State,2021-01-08,2150,52,,,,,,,,,
+Lower Saxony State,2021-01-09,1873,55,,,,,,,,,
+Lower Saxony State,2021-01-10,1228,16,,,,,,,,,
+Lower Saxony State,2021-01-11,1101,11,,,,,,,,,
+Lower Saxony State,2021-01-12,469,46,,,,,,,,,
+Lower Saxony State,2021-01-13,1328,56,,,,,,,,,
+Lower Saxony State,2021-01-14,1596,51,,,,,,,,,
+Lower Saxony State,2021-01-15,1156,38,,,,,,,,,
+Lower Saxony State,2021-01-16,1932,73,,,,,,,,,
+Lower Saxony State,2021-01-17,900,24,,,,,,,,,
+Lower Saxony State,2021-01-18,811,6,,,,,,,,,
+Lower Saxony State,2021-01-19,740,51,,,,,,,,,
+Lower Saxony State,2021-01-20,901,83,,,,,,,,,
+Lower Saxony State,2021-01-21,1628,61,,,,,,,,,
+Lower Saxony State,2021-01-22,1322,71,,,,,,,,,
+Lower Saxony State,2021-01-23,1510,45,,,,,,,,,
+Lower Saxony State,2021-01-24,838,19,,,,,,,,,
+Lower Saxony State,2021-01-25,725,,11.5,9,10,3,6,8.6,12,15,25
+Lower Saxony State,2021-01-26,685.5,,52,26.7,47,19,33,42,53,65,103
+Lower Saxony State,2021-01-27,899.5,,54.9,29.3,49,19.9,34,43,56,69,112
+Lower Saxony State,2021-01-28,1484.5,,65.4,32.7,60,23,44,53,68,82,122
+Lower Saxony State,2021-01-29,1408.5,,52.9,27.3,49,18,33,43,55,66,105
+Lower Saxony State,2021-01-30,1509.5,,56.8,28.8,51,21,37,45.6,59,72,105
+Lower Saxony State,2021-01-31,848,,20.4,10.8,19,6,13,16,21,26,40
+Lower Saxony State,2021-02-01,705,,11.2,7.3,10,2,6,8,11,14,25
+Lower Saxony State,2021-02-02,682.5,,51.1,27.6,45,17,33,40,52,63.2,104
+Lower Saxony State,2021-02-03,868,,52.3,28.9,46,17,33,40,53,66,106.1
+Lower Saxony State,2021-02-04,1431,,64.1,31.9,58,24,42.8,51,66,80,127.1
+Lower Saxony State,2021-02-05,1411.5,,53.2,27.5,49,19,34,42,55,67.2,103
+Lower Saxony State,2021-02-06,1441,,57.3,28.8,51,20,37,46,59,72,109.1
+Lower Saxony State,2021-02-07,845.5,,20.3,12.2,18,6,12,16,21,25,42
+Lower Saxony State,2021-02-08,679,,10.6,7.5,9,2,6,8,10.4,14,23
+Lower Saxony State,2021-02-09,684,,50.7,28.1,46,16,31,40,52,63,103
+Lower Saxony State,2021-02-10,864,,51.4,29.3,45,17,31,39,52,65,102
+Lower Saxony State,2021-02-11,1412.5,,61,32.7,55,20,39,49,64,76,121
+Lower Saxony State,2021-02-12,1356,,51.8,27.8,47,18,32,41,54,66,103
+Lower Saxony State,2021-02-13,1386.5,,57.7,32.3,51,18.9,35.8,44.6,58,73,119
+Lower Saxony State,2021-02-14,812,,20.8,13.5,18,6,12,15,20,26,42
+Lower Saxony State,2021-02-15,691,,11.2,9,9,3,6,8,11,14,25
+Lower Saxony State,2021-02-16,665,,50,31.4,44,15,30,39,51,63,102
+Lower Saxony State,2021-02-17,862,,53.1,33.2,48,15,30,39,54,66,115.1
+Lower Saxony State,2021-02-18,1431.5,,63,41.7,54,17,36,47,62,78.2,132.1
+Lower Saxony State,2021-02-19,1340.5,,53.7,34.5,47,15,31,40,54,69,110
+Lower Saxony State,2021-02-20,1429,,58,43.7,49,14.9,32,42,57,72,131
+Lower Saxony State,2021-02-21,804.5,,20.4,15.1,17,4,11,15,20,25,48
+Lower Saxony State,2021-02-22,659,,10.8,8.6,9,2,5,8,11,14,25
+Lower Saxony State,2021-02-23,650,,51,40,43,13,27,36,51,64,118
+Lower Saxony State,2021-02-24,819.5,,55.5,41.4,46.5,12,29,39,54,70,125
+Lubelskie,2020-11-30,616,25,,,,,,,,,
+Lubelskie,2020-12-01,285,13,,,,,,,,,
+Lubelskie,2020-12-02,547,36,,,,,,,,,
+Lubelskie,2020-12-03,759,49,,,,,,,,,
+Lubelskie,2020-12-04,793,44,,,,,,,,,
+Lubelskie,2020-12-05,713,34,,,,,,,,,
+Lubelskie,2020-12-06,728,48,,,,,,,,,
+Lubelskie,2020-12-07,353,15,,,,,,,,,
+Lubelskie,2020-12-08,177,7,,,,,,,,,
+Lubelskie,2020-12-09,416,17,,,,,,,,,
+Lubelskie,2020-12-10,728,37,,,,,,,,,
+Lubelskie,2020-12-11,618,33,,,,,,,,,
+Lubelskie,2020-12-12,639,15,,,,,,,,,
+Lubelskie,2020-12-13,745,23,,,,,,,,,
+Lubelskie,2020-12-14,378,14,,,,,,,,,
+Lubelskie,2020-12-15,179,11,,,,,,,,,
+Lubelskie,2020-12-16,437,14,,,,,,,,,
+Lubelskie,2020-12-17,641,37,,,,,,,,,
+Lubelskie,2020-12-18,699,22,,,,,,,,,
+Lubelskie,2020-12-19,534,21,,,,,,,,,
+Lubelskie,2020-12-20,650,29,,,,,,,,,
+Lubelskie,2020-12-21,299,20,,,,,,,,,
+Lubelskie,2020-12-22,245,0,,,,,,,,,
+Lubelskie,2020-12-23,524,27,,,,,,,,,
+Lubelskie,2020-12-24,569,25,,,,,,,,,
+Lubelskie,2020-12-25,598,33,,,,,,,,,
+Lubelskie,2020-12-26,357,29,,,,,,,,,
+Lubelskie,2020-12-27,268,8,,,,,,,,,
+Lubelskie,2020-12-28,103,7,,,,,,,,,
+Lubelskie,2020-12-29,126,3,,,,,,,,,
+Lubelskie,2020-12-30,490,30,,,,,,,,,
+Lubelskie,2020-12-31,609,37,,,,,,,,,
+Lubelskie,2021-01-01,564,30,,,,,,,,,
+Lubelskie,2021-01-02,388,21,,,,,,,,,
+Lubelskie,2021-01-03,280,4,,,,,,,,,
+Lubelskie,2021-01-04,207,2,,,,,,,,,
+Lubelskie,2021-01-05,142,1,,,,,,,,,
+Lubelskie,2021-01-06,447,42,,,,,,,,,
+Lubelskie,2021-01-07,658,28,,,,,,,,,
+Lubelskie,2021-01-08,331,4,,,,,,,,,
+Lubelskie,2021-01-09,403,30,,,,,,,,,
+Lubelskie,2021-01-10,512,32,,,,,,,,,
+Lubelskie,2021-01-11,381,16,,,,,,,,,
+Lubelskie,2021-01-12,138,5,,,,,,,,,
+Lubelskie,2021-01-13,344,24,,,,,,,,,
+Lubelskie,2021-01-14,493,21,,,,,,,,,
+Lubelskie,2021-01-15,403,38,,,,,,,,,
+Lubelskie,2021-01-16,355,25,,,,,,,,,
+Lubelskie,2021-01-17,358,27,,,,,,,,,
+Lubelskie,2021-01-18,318,10,,,,,,,,,
+Lubelskie,2021-01-19,86,9,,,,,,,,,
+Lubelskie,2021-01-20,266,38,,,,,,,,,
+Lubelskie,2021-01-21,357,32,,,,,,,,,
+Lubelskie,2021-01-22,323,24,,,,,,,,,
+Lubelskie,2021-01-23,311,22,,,,,,,,,
+Lubelskie,2021-01-24,378,16,,,,,,,,,
+Lubelskie,2021-01-25,234,15,,,,,,,,,
+Lubelskie,2021-01-26,148,,5.9,5.8,5,0,2,4,6,8,17
+Lubelskie,2021-01-27,261,,25.7,19.6,21,4,12,17,26,34,63
+Lubelskie,2021-01-28,336,,21.8,17.5,18,3,10,14,21,29,52
+Lubelskie,2021-01-29,295.5,,18.4,14.4,15,3,8,12,18,24,48
+Lubelskie,2021-01-30,251,,20.7,16.1,17,3,10,14,20.4,27,49
+Lubelskie,2021-01-31,302,,20.6,16.4,17,3,9,13,20,28,51
+Lubelskie,2021-02-01,214,,9.6,7.8,8,1,4,6,10,13,24
+Lubelskie,2021-02-02,136,,5.3,5.4,4,0,2,3,5,7,14
+Lubelskie,2021-02-03,233,,23.6,18.1,19,4,11,16,24,31,58
+Lubelskie,2021-02-04,304,,19.6,16.6,15,2,8,12,19,26,53
+Lubelskie,2021-02-05,266.5,,16.8,14,13,2,7,11,16,22,44
+Lubelskie,2021-02-06,227,,18.3,15.4,14,2,8,12,18,24,47
+Lubelskie,2021-02-07,273.5,,18.1,15.5,14,2,8,11,17,24,45
+Lubelskie,2021-02-08,194,,9.1,9.6,7,1,4,6,9,12,23
+Lubelskie,2021-02-09,123,,4.7,4.5,4,0,1,3,5,6,13
+Lubelskie,2021-02-10,212,,20.8,16.4,17,3,9,14,21,28,52
+Lubelskie,2021-02-11,272,,18.1,16.1,15,3,7,12,17,23,43
+Lubelskie,2021-02-12,244,,15.2,14.8,12,2,6,10,15,20,38
+Lubelskie,2021-02-13,213,,16.8,15.3,13,2,7,11,16,22,44
+Lubelskie,2021-02-14,258,,18,32.2,14,2,7,11,16,22,44
+Lubelskie,2021-02-15,171,,8.2,7.7,6,1,3,5,8,11,22
+Lubelskie,2021-02-16,109,,4.7,7,3,0,1,2,4,6,13
+Lubelskie,2021-02-17,196,,21,48.8,15,2,9,12,19,25.2,49
+Lubelskie,2021-02-18,251,,20.5,122.7,13,2,7,10,16,22,46
+Lubelskie,2021-02-19,218,,15.1,36.3,11,1,6,9,13,18,38
+Lubelskie,2021-02-20,179.5,,16.5,26.4,12,1,6,9,15,20,42
+Lubelskie,2021-02-21,225,,19.1,86.1,13,1,6,10,15,22,44
+Lubelskie,2021-02-22,158,,8.8,25.4,6,1,3,4,7,10,23
+Lubelskie,2021-02-23,97.5,,5.2,23.1,3,0,1,2,4,6,14
+Lubelskie,2021-02-24,166,,20.3,58.2,14,2,8,11,18,24,48
+Lubuskie,2020-11-30,373,6,,,,,,,,,
+Lubuskie,2020-12-01,259,0,,,,,,,,,
+Lubuskie,2020-12-02,187,4,,,,,,,,,
+Lubuskie,2020-12-03,387,8,,,,,,,,,
+Lubuskie,2020-12-04,358,12,,,,,,,,,
+Lubuskie,2020-12-05,482,15,,,,,,,,,
+Lubuskie,2020-12-06,339,16,,,,,,,,,
+Lubuskie,2020-12-07,325,0,,,,,,,,,
+Lubuskie,2020-12-08,163,0,,,,,,,,,
+Lubuskie,2020-12-09,174,15,,,,,,,,,
+Lubuskie,2020-12-10,349,16,,,,,,,,,
+Lubuskie,2020-12-11,467,17,,,,,,,,,
+Lubuskie,2020-12-12,447,18,,,,,,,,,
+Lubuskie,2020-12-13,373,12,,,,,,,,,
+Lubuskie,2020-12-14,300,0,,,,,,,,,
+Lubuskie,2020-12-15,207,7,,,,,,,,,
+Lubuskie,2020-12-16,150,17,,,,,,,,,
+Lubuskie,2020-12-17,323,29,,,,,,,,,
+Lubuskie,2020-12-18,320,21,,,,,,,,,
+Lubuskie,2020-12-19,427,27,,,,,,,,,
+Lubuskie,2020-12-20,407,19,,,,,,,,,
+Lubuskie,2020-12-21,320,1,,,,,,,,,
+Lubuskie,2020-12-22,168,0,,,,,,,,,
+Lubuskie,2020-12-23,141,5,,,,,,,,,
+Lubuskie,2020-12-24,365,3,,,,,,,,,
+Lubuskie,2020-12-25,402,9,,,,,,,,,
+Lubuskie,2020-12-26,351,1,,,,,,,,,
+Lubuskie,2020-12-27,111,0,,,,,,,,,
+Lubuskie,2020-12-28,65,0,,,,,,,,,
+Lubuskie,2020-12-29,49,0,,,,,,,,,
+Lubuskie,2020-12-30,208,1,,,,,,,,,
+Lubuskie,2020-12-31,349,11,,,,,,,,,
+Lubuskie,2021-01-01,493,15,,,,,,,,,
+Lubuskie,2021-01-02,343,17,,,,,,,,,
+Lubuskie,2021-01-03,113,3,,,,,,,,,
+Lubuskie,2021-01-04,169,0,,,,,,,,,
+Lubuskie,2021-01-05,96,1,,,,,,,,,
+Lubuskie,2021-01-06,93,13,,,,,,,,,
+Lubuskie,2021-01-07,368,11,,,,,,,,,
+Lubuskie,2021-01-08,379,4,,,,,,,,,
+Lubuskie,2021-01-09,233,11,,,,,,,,,
+Lubuskie,2021-01-10,293,7,,,,,,,,,
+Lubuskie,2021-01-11,261,6,,,,,,,,,
+Lubuskie,2021-01-12,190,5,,,,,,,,,
+Lubuskie,2021-01-13,89,5,,,,,,,,,
+Lubuskie,2021-01-14,243,13,,,,,,,,,
+Lubuskie,2021-01-15,288,8,,,,,,,,,
+Lubuskie,2021-01-16,218,26,,,,,,,,,
+Lubuskie,2021-01-17,178,24,,,,,,,,,
+Lubuskie,2021-01-18,247,5,,,,,,,,,
+Lubuskie,2021-01-19,99,0,,,,,,,,,
+Lubuskie,2021-01-20,85,9,,,,,,,,,
+Lubuskie,2021-01-21,201,19,,,,,,,,,
+Lubuskie,2021-01-22,217,23,,,,,,,,,
+Lubuskie,2021-01-23,208,6,,,,,,,,,
+Lubuskie,2021-01-24,166,8,,,,,,,,,
+Lubuskie,2021-01-25,145,4,,,,,,,,,
+Lubuskie,2021-01-26,102,,2.4,3,2,0,0,1,2,3,8
+Lubuskie,2021-01-27,89,,7.5,7.3,6,0,2,4,7,10,22
+Lubuskie,2021-01-28,180,,11.8,11.2,9,1,4,7,11,16,34
+Lubuskie,2021-01-29,195,,9.8,9.4,7,1,4,6,9,13,27
+Lubuskie,2021-01-30,175,,11,10.9,8,1,4,6,10,14,31
+Lubuskie,2021-01-31,148,,10.6,11.1,7,1,4,6,10,14,29
+Lubuskie,2021-02-01,129,,3.6,4.2,2,0,1,2,3,5,11
+Lubuskie,2021-02-02,90,,2.1,2.6,1,0,0,1,2,3,7
+Lubuskie,2021-02-03,79,,6.3,6.4,5,0,2,3,6,9,17
+Lubuskie,2021-02-04,156,,9.5,9.1,7,0,3,5,9,13,26
+Lubuskie,2021-02-05,168,,8.8,8.3,6,0,3,5,8,12,26
+Lubuskie,2021-02-06,153,,9,8.8,7,0,3,5,8,12,26
+Lubuskie,2021-02-07,131,,8.8,9,6,0,3,5,8,12,25
+Lubuskie,2021-02-08,112,,3.4,4,2,0,1,2,3,5,11
+Lubuskie,2021-02-09,79.5,,1.8,2.2,1,0,0,1,2,2,6
+Lubuskie,2021-02-10,70,,5.9,6,4,0,2,3,5,8,18
+Lubuskie,2021-02-11,139,,8.7,8.6,6,0,3,5,8,12,26
+Lubuskie,2021-02-12,150,,7.4,7.3,5,0,3,4,7,10,22
+Lubuskie,2021-02-13,131.5,,8.3,8.4,6,0,3,5,8,11,23
+Lubuskie,2021-02-14,111,,7.8,7.3,6,0,3,4,7,11,22
+Lubuskie,2021-02-15,100,,2.9,3.3,2,0,1,1,3,4,10
+Lubuskie,2021-02-16,70,,1.6,2.1,1,0,0,1,1,2,6
+Lubuskie,2021-02-17,60,,5.4,6.2,4,0,2,3,5,7,17
+Lubuskie,2021-02-18,120,,7.9,8.6,6,0,2,5,7,10,23
+Lubuskie,2021-02-19,136,,6.4,6.2,5,0,2,4,6,9,19
+Lubuskie,2021-02-20,118,,7.4,8.4,5,0,2,4,6,9,22
+Lubuskie,2021-02-21,97,,7.4,8.5,5,0,2,4,7,10,23
+Lubuskie,2021-02-22,87,,2.5,3.5,1,0,0,1,2,3,9
+Lubuskie,2021-02-23,63,,1.5,2.4,1,0,0,0,1,2,6
+Lubuskie,2021-02-24,54.5,,4.8,5.5,3,0,1,2,4,6,15
+Malopolskie,2020-11-30,440,9,,,,,,,,,
+Malopolskie,2020-12-01,280,2,,,,,,,,,
+Malopolskie,2020-12-02,486,67,,,,,,,,,
+Malopolskie,2020-12-03,823,42,,,,,,,,,
+Malopolskie,2020-12-04,646,50,,,,,,,,,
+Malopolskie,2020-12-05,599,41,,,,,,,,,
+Malopolskie,2020-12-06,548,35,,,,,,,,,
+Malopolskie,2020-12-07,380,12,,,,,,,,,
+Malopolskie,2020-12-08,214,0,,,,,,,,,
+Malopolskie,2020-12-09,1072,50,,,,,,,,,
+Malopolskie,2020-12-10,564,40,,,,,,,,,
+Malopolskie,2020-12-11,488,27,,,,,,,,,
+Malopolskie,2020-12-12,472,27,,,,,,,,,
+Malopolskie,2020-12-13,404,22,,,,,,,,,
+Malopolskie,2020-12-14,310,19,,,,,,,,,
+Malopolskie,2020-12-15,143,0,,,,,,,,,
+Malopolskie,2020-12-16,232,27,,,,,,,,,
+Malopolskie,2020-12-17,538,25,,,,,,,,,
+Malopolskie,2020-12-18,351,32,,,,,,,,,
+Malopolskie,2020-12-19,399,21,,,,,,,,,
+Malopolskie,2020-12-20,391,22,,,,,,,,,
+Malopolskie,2020-12-21,310,1,,,,,,,,,
+Malopolskie,2020-12-22,207,3,,,,,,,,,
+Malopolskie,2020-12-23,196,25,,,,,,,,,
+Malopolskie,2020-12-24,528,18,,,,,,,,,
+Malopolskie,2020-12-25,409,29,,,,,,,,,
+Malopolskie,2020-12-26,210,8,,,,,,,,,
+Malopolskie,2020-12-27,169,1,,,,,,,,,
+Malopolskie,2020-12-28,115,2,,,,,,,,,
+Malopolskie,2020-12-29,190,1,,,,,,,,,
+Malopolskie,2020-12-30,251,19,,,,,,,,,
+Malopolskie,2020-12-31,541,30,,,,,,,,,
+Malopolskie,2021-01-01,387,18,,,,,,,,,
+Malopolskie,2021-01-02,388,22,,,,,,,,,
+Malopolskie,2021-01-03,281,0,,,,,,,,,
+Malopolskie,2021-01-04,200,2,,,,,,,,,
+Malopolskie,2021-01-05,194,0,,,,,,,,,
+Malopolskie,2021-01-06,233,23,,,,,,,,,
+Malopolskie,2021-01-07,625,23,,,,,,,,,
+Malopolskie,2021-01-08,453,2,,,,,,,,,
+Malopolskie,2021-01-09,352,10,,,,,,,,,
+Malopolskie,2021-01-10,418,13,,,,,,,,,
+Malopolskie,2021-01-11,260,2,,,,,,,,,
+Malopolskie,2021-01-12,233,1,,,,,,,,,
+Malopolskie,2021-01-13,236,26,,,,,,,,,
+Malopolskie,2021-01-14,383,35,,,,,,,,,
+Malopolskie,2021-01-15,337,12,,,,,,,,,
+Malopolskie,2021-01-16,321,16,,,,,,,,,
+Malopolskie,2021-01-17,293,14,,,,,,,,,
+Malopolskie,2021-01-18,225,7,,,,,,,,,
+Malopolskie,2021-01-19,306,0,,,,,,,,,
+Malopolskie,2021-01-20,234,19,,,,,,,,,
+Malopolskie,2021-01-21,280,18,,,,,,,,,
+Malopolskie,2021-01-22,315,13,,,,,,,,,
+Malopolskie,2021-01-23,270,10,,,,,,,,,
+Malopolskie,2021-01-24,250,23,,,,,,,,,
+Malopolskie,2021-01-25,219,6,,,,,,,,,
+Malopolskie,2021-01-26,174,,0.6,1,0,0,0,0,0,1,2
+Malopolskie,2021-01-27,214,,19.1,12.2,17,4,11,14,20,25,42
+Malopolskie,2021-01-28,301,,20.6,12.2,18,5,12,16,21,27,43
+Malopolskie,2021-01-29,238,,8.2,5.7,7,2,4,6,8,11,18
+Malopolskie,2021-01-30,236.5,,11.4,7.5,10,2,6,8,12,15,25
+Malopolskie,2021-01-31,216.5,,15.1,10.2,13,3,8,11,15,19,35
+Malopolskie,2021-02-01,164,,4.1,3.5,3,0,2,3,4,6,10
+Malopolskie,2021-02-02,138,,0.6,1,0,0,0,0,0,1,2
+Malopolskie,2021-02-03,175.5,,17.4,10.9,16,4,10,14,18,23,36
+Malopolskie,2021-02-04,240.5,,18.8,12.1,17,3,11,14,20,25,41
+Malopolskie,2021-02-05,199,,7.9,6.9,6,1,3,5,8,10,20
+Malopolskie,2021-02-06,189,,9.9,6.9,8,2,5,7,10,13,24
+Malopolskie,2021-02-07,171,,12.8,9.3,11,3,7,9,13,16,31
+Malopolskie,2021-02-08,131.5,,3.8,3.5,3,0,1,2,4,5,11
+Malopolskie,2021-02-09,113.5,,0.6,1.1,0,0,0,0,0,1,2
+Malopolskie,2021-02-10,143,,16.1,15.7,13,3,7,10,15,21,39
+Malopolskie,2021-02-11,195,,17.3,15.6,14,3,8,11,16,22,45
+Malopolskie,2021-02-12,162,,7.1,8.1,5,1,2,4,6,9,19
+Malopolskie,2021-02-13,149,,9.9,18.4,7,1,4,6,8,11,26
+Malopolskie,2021-02-14,145.5,,12.9,17.2,9,2,5,7,11,17,33
+Malopolskie,2021-02-15,102,,3.7,6,2,0,1,2,3,4,11
+Malopolskie,2021-02-16,95,,0.6,1.4,0,0,0,0,0,1,2
+Malopolskie,2021-02-17,109,,20,156.8,10,1,5,8,13,18,41
+Malopolskie,2021-02-18,158,,22.5,151,12,2,6,9,15,21,48
+Malopolskie,2021-02-19,128.5,,7.9,25,4,0,2,3,6,8,20
+Malopolskie,2021-02-20,117,,11.6,56.7,6,0,3,4,7,11,29
+Malopolskie,2021-02-21,109,,16,82.5,7,0,3,6,9,14,40
+Malopolskie,2021-02-22,82,,5,29.9,2,0,1,1,3,4,13
+Malopolskie,2021-02-23,75,,0.8,5.5,0,0,0,0,0,1,3
+Malopolskie,2021-02-24,91,,28.1,214.4,9,0,4,6,11,17,62
+Mazowieckie,2020-11-30,1413,57,,,,,,,,,
+Mazowieckie,2020-12-01,659,15,,,,,,,,,
+Mazowieckie,2020-12-02,765,16,,,,,,,,,
+Mazowieckie,2020-12-03,1626,71,,,,,,,,,
+Mazowieckie,2020-12-04,1780,75,,,,,,,,,
+Mazowieckie,2020-12-05,1643,85,,,,,,,,,
+Mazowieckie,2020-12-06,1574,45,,,,,,,,,
+Mazowieckie,2020-12-07,1170,23,,,,,,,,,
+Mazowieckie,2020-12-08,609,18,,,,,,,,,
+Mazowieckie,2020-12-09,960,38,,,,,,,,,
+Mazowieckie,2020-12-10,1496,41,,,,,,,,,
+Mazowieckie,2020-12-11,1701,48,,,,,,,,,
+Mazowieckie,2020-12-12,1722,58,,,,,,,,,
+Mazowieckie,2020-12-13,1522,75,,,,,,,,,
+Mazowieckie,2020-12-14,1280,24,,,,,,,,,
+Mazowieckie,2020-12-15,715,12,,,,,,,,,
+Mazowieckie,2020-12-16,768,23,,,,,,,,,
+Mazowieckie,2020-12-17,1461,66,,,,,,,,,
+Mazowieckie,2020-12-18,1318,61,,,,,,,,,
+Mazowieckie,2020-12-19,1422,46,,,,,,,,,
+Mazowieckie,2020-12-20,1383,47,,,,,,,,,
+Mazowieckie,2020-12-21,1105,17,,,,,,,,,
+Mazowieckie,2020-12-22,630,10,,,,,,,,,
+Mazowieckie,2020-12-23,884,29,,,,,,,,,
+Mazowieckie,2020-12-24,1509,48,,,,,,,,,
+Mazowieckie,2020-12-25,1824,53,,,,,,,,,
+Mazowieckie,2020-12-26,1166,22,,,,,,,,,
+Mazowieckie,2020-12-27,741,19,,,,,,,,,
+Mazowieckie,2020-12-28,532,8,,,,,,,,,
+Mazowieckie,2020-12-29,409,5,,,,,,,,,
+Mazowieckie,2020-12-30,957,25,,,,,,,,,
+Mazowieckie,2020-12-31,1600,80,,,,,,,,,
+Mazowieckie,2021-01-01,1739,68,,,,,,,,,
+Mazowieckie,2021-01-02,1453,52,,,,,,,,,
+Mazowieckie,2021-01-03,1046,15,,,,,,,,,
+Mazowieckie,2021-01-04,903,2,,,,,,,,,
+Mazowieckie,2021-01-05,746,1,,,,,,,,,
+Mazowieckie,2021-01-06,824,27,,,,,,,,,
+Mazowieckie,2021-01-07,1686,39,,,,,,,,,
+Mazowieckie,2021-01-08,1469,24,,,,,,,,,
+Mazowieckie,2021-01-09,1216,29,,,,,,,,,
+Mazowieckie,2021-01-10,1333,44,,,,,,,,,
+Mazowieckie,2021-01-11,1305,40,,,,,,,,,
+Mazowieckie,2021-01-12,627,9,,,,,,,,,
+Mazowieckie,2021-01-13,695,26,,,,,,,,,
+Mazowieckie,2021-01-14,1069,50,,,,,,,,,
+Mazowieckie,2021-01-15,1231,41,,,,,,,,,
+Mazowieckie,2021-01-16,946,56,,,,,,,,,
+Mazowieckie,2021-01-17,1040,43,,,,,,,,,
+Mazowieckie,2021-01-18,816,13,,,,,,,,,
+Mazowieckie,2021-01-19,475,11,,,,,,,,,
+Mazowieckie,2021-01-20,683,20,,,,,,,,,
+Mazowieckie,2021-01-21,890,49,,,,,,,,,
+Mazowieckie,2021-01-22,874,63,,,,,,,,,
+Mazowieckie,2021-01-23,856,64,,,,,,,,,
+Mazowieckie,2021-01-24,936,43,,,,,,,,,
+Mazowieckie,2021-01-25,687,14,,,,,,,,,
+Mazowieckie,2021-01-26,483.5,,8,9.4,6,1,3,5,7,10,22
+Mazowieckie,2021-01-27,541,,23.2,19.4,19,3,11,16,22,30,59
+Mazowieckie,2021-01-28,813,,40.2,32.2,32,6,19,26.6,38,51,101
+Mazowieckie,2021-01-29,816.5,,38.4,32.6,31,5,17,25,37,49,97
+Mazowieckie,2021-01-30,752,,42.8,33.6,36,6,20,30,42.4,54,108
+Mazowieckie,2021-01-31,724,,35.4,29.3,28,6,17,24,34,44,88
+Mazowieckie,2021-02-01,568,,16.1,14.2,12,2,7,10,15,20,41
+Mazowieckie,2021-02-02,399.5,,6.5,6.1,5,0,2,4,6,9,18
+Mazowieckie,2021-02-03,449.5,,21.1,18.6,16.5,3,9,13,20,28,55
+Mazowieckie,2021-02-04,690.5,,34.2,27.7,27.5,6,16,22,33,44,87
+Mazowieckie,2021-02-05,693.5,,32,25.1,27,5,15,21,31,41,78
+Mazowieckie,2021-02-06,628.5,,34.7,27.1,28,6,16,23,33,46,85
+Mazowieckie,2021-02-07,616,,33.4,27.8,28,5,15,23,33,43,80
+Mazowieckie,2021-02-08,484.5,,13.6,13.1,11,2,6,8,13,18,34
+Mazowieckie,2021-02-09,335,,6,5.8,4,0,2,3,6,8,17
+Mazowieckie,2021-02-10,385.5,,18.4,16.3,14,2,8,12,17,24,48
+Mazowieckie,2021-02-11,577,,30.4,25.1,25,5,13,20,30,40,77
+Mazowieckie,2021-02-12,587,,27.6,24.2,22,4,12,17,27,37,68
+Mazowieckie,2021-02-13,521.5,,30.6,26.3,24,4,14,20,29,40,78
+Mazowieckie,2021-02-14,521.5,,27.5,24.3,21,4,11,17,26,36,74
+Mazowieckie,2021-02-15,392.5,,11.7,10.6,9,1,4,7,11,15,31
+Mazowieckie,2021-02-16,281,,4.9,5,4,0,2,3,5,6,14
+Mazowieckie,2021-02-17,328.5,,15.8,17.3,11,1,6,9,14.4,19,44
+Mazowieckie,2021-02-18,490,,26.5,24.4,20,4,11,16,24,33,73
+Mazowieckie,2021-02-19,497.5,,24.5,24.2,19,3,10,15,23,31,63
+Mazowieckie,2021-02-20,449.5,,26.3,24.3,20,3,11,16.6,24,34,68
+Mazowieckie,2021-02-21,439.5,,24.6,24.5,18,3,10,14,22,32,70
+Mazowieckie,2021-02-22,354,,10,10,7,1,4,6,9,13,29
+Mazowieckie,2021-02-23,245.5,,4.6,5.7,3,0,1,2,4,6,14
+Mazowieckie,2021-02-24,282,,13.4,12.8,9,1,5,7,12,18,37
+Mecklenburg-Western Pomerania State,2020-11-30,42,0,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-01,45,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-02,121,1,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-03,150,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-04,180,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-05,159,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-06,82,1,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-07,95,1,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-08,53,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-09,223,8,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-10,293,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-11,246,6,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-12,273,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-13,199,0,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-14,163,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-15,83,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-16,281,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-17,343,7,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-18,288,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-19,221,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-20,216,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-21,132,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-22,103,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-23,311,6,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-24,322,7,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-25,149,0,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-26,160,5,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-27,98,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-28,116,1,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-29,113,9,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-30,455,9,,,,,,,,,
+Mecklenburg-Western Pomerania State,2020-12-31,374,10,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-01,171,1,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-02,194,1,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-03,92,4,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-04,108,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-05,176,10,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-06,487,11,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-07,476,15,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-08,330,11,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-09,398,9,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-10,238,4,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-11,90,3,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-12,125,12,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-13,434,6,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-14,368,8,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-15,305,14,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-16,372,14,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-17,253,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-18,128,10,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-19,160,2,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-20,268,14,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-21,383,16,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-22,273,4,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-23,282,11,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-24,241,8,,,,,,,,,
+Mecklenburg-Western Pomerania State,2021-01-25,128.5,,6.5,7.1,5,0,3,4,6,8,16
+Mecklenburg-Western Pomerania State,2021-01-26,110,,10.3,8.5,8,1,5,7,10,14,25
+Mecklenburg-Western Pomerania State,2021-01-27,374,,11.8,9.5,10,2,6,8,12,15.2,29
+Mecklenburg-Western Pomerania State,2021-01-28,371,,14.1,10.4,12,2,7,10,14,19,33
+Mecklenburg-Western Pomerania State,2021-01-29,314,,11.2,8.3,10,2,6,8,11,14,28
+Mecklenburg-Western Pomerania State,2021-01-30,299,,12.8,10.9,10,2,6,8,12,16,33
+Mecklenburg-Western Pomerania State,2021-01-31,207,,6.1,5.9,4.5,0,2,4,6,8,17
+Mecklenburg-Western Pomerania State,2021-02-01,127,,6.3,5.5,5,0,3,4,6,8,16
+Mecklenburg-Western Pomerania State,2021-02-02,113,,10.4,8.6,9,1,5,7,10,13,26
+Mecklenburg-Western Pomerania State,2021-02-03,358,,12.1,9.2,10,2,6,8,12,16,29
+Mecklenburg-Western Pomerania State,2021-02-04,385,,14.9,11.8,13,2,7,10,15,19,37
+Mecklenburg-Western Pomerania State,2021-02-05,327,,11.3,9.5,9,2,5,7,11,14.2,29
+Mecklenburg-Western Pomerania State,2021-02-06,297,,13.1,11.1,10,2,6,8,12,18,34
+Mecklenburg-Western Pomerania State,2021-02-07,214.5,,6,6,5,0,2,4,6,8,16
+Mecklenburg-Western Pomerania State,2021-02-08,125,,7,11.2,5,0,2.8,4,7,9,18
+Mecklenburg-Western Pomerania State,2021-02-09,108,,11.1,10.8,8,2,5,7,10,14,29
+Mecklenburg-Western Pomerania State,2021-02-10,355,,13.1,18.7,10,1,5,8,12,17,33
+Mecklenburg-Western Pomerania State,2021-02-11,384,,16.8,46.7,12,2,7,10,15,20,38
+Mecklenburg-Western Pomerania State,2021-02-12,330,,12.1,13.6,9,1,5,8,11,15,30
+Mecklenburg-Western Pomerania State,2021-02-13,302,,15.9,80.2,10,2,5.8,8,12,17,34
+Mecklenburg-Western Pomerania State,2021-02-14,213,,7.5,28.8,5,0,2,4,6,9,18
+Mecklenburg-Western Pomerania State,2021-02-15,121.5,,7.8,22.1,5,0,3,4,6,9,20
+Mecklenburg-Western Pomerania State,2021-02-16,109,,12.6,37.6,8,1,4,6,10,14,30
+Mecklenburg-Western Pomerania State,2021-02-17,350,,24.2,326.4,10,1,5,8,13,17,37
+Mecklenburg-Western Pomerania State,2021-02-18,375,,24.2,227.5,12,1,6,9,15,20,47
+Mecklenburg-Western Pomerania State,2021-02-19,324,,21.8,264.1,9,1,5,7,11,16,38
+Mecklenburg-Western Pomerania State,2021-02-20,290,,23.8,254.7,10,1,5,8,13,18,39
+Mecklenburg-Western Pomerania State,2021-02-21,206.5,,14.9,229.7,4,0,2,3,6,9,19
+Mecklenburg-Western Pomerania State,2021-02-22,126,,19.6,369.9,5,0,2,4,7,9,23
+Mecklenburg-Western Pomerania State,2021-02-23,109,,103.5,2758.7,8,1,4,6,10,15,40
+Mecklenburg-Western Pomerania State,2021-02-24,352.5,,71.4,1716.3,9,1,4,7,12,18,41
+North Rhine-Westphalia State,2020-11-30,2256,17,,,,,,,,,
+North Rhine-Westphalia State,2020-12-01,3069,80,,,,,,,,,
+North Rhine-Westphalia State,2020-12-02,3354,106,,,,,,,,,
+North Rhine-Westphalia State,2020-12-03,4957,100,,,,,,,,,
+North Rhine-Westphalia State,2020-12-04,4671,72,,,,,,,,,
+North Rhine-Westphalia State,2020-12-05,4795,99,,,,,,,,,
+North Rhine-Westphalia State,2020-12-06,3324,32,,,,,,,,,
+North Rhine-Westphalia State,2020-12-07,2363,30,,,,,,,,,
+North Rhine-Westphalia State,2020-12-08,3489,110,,,,,,,,,
+North Rhine-Westphalia State,2020-12-09,4072,103,,,,,,,,,
+North Rhine-Westphalia State,2020-12-10,3691,59,,,,,,,,,
+North Rhine-Westphalia State,2020-12-11,7033,120,,,,,,,,,
+North Rhine-Westphalia State,2020-12-12,5468,76,,,,,,,,,
+North Rhine-Westphalia State,2020-12-13,4005,33,,,,,,,,,
+North Rhine-Westphalia State,2020-12-14,3029,34,,,,,,,,,
+North Rhine-Westphalia State,2020-12-15,4085,126,,,,,,,,,
+North Rhine-Westphalia State,2020-12-16,4630,171,,,,,,,,,
+North Rhine-Westphalia State,2020-12-17,6003,141,,,,,,,,,
+North Rhine-Westphalia State,2020-12-18,6492,148,,,,,,,,,
+North Rhine-Westphalia State,2020-12-19,6010,102,,,,,,,,,
+North Rhine-Westphalia State,2020-12-20,4277,32,,,,,,,,,
+North Rhine-Westphalia State,2020-12-21,3256,36,,,,,,,,,
+North Rhine-Westphalia State,2020-12-22,4579,180,,,,,,,,,
+North Rhine-Westphalia State,2020-12-23,5132,183,,,,,,,,,
+North Rhine-Westphalia State,2020-12-24,6628,170,,,,,,,,,
+North Rhine-Westphalia State,2020-12-25,4240,57,,,,,,,,,
+North Rhine-Westphalia State,2020-12-26,2416,53,,,,,,,,,
+North Rhine-Westphalia State,2020-12-27,2391,76,,,,,,,,,
+North Rhine-Westphalia State,2020-12-28,2382,102,,,,,,,,,
+North Rhine-Westphalia State,2020-12-29,2521,161,,,,,,,,,
+North Rhine-Westphalia State,2020-12-30,4429,224,,,,,,,,,
+North Rhine-Westphalia State,2020-12-31,5748,101,,,,,,,,,
+North Rhine-Westphalia State,2021-01-01,3695,79,,,,,,,,,
+North Rhine-Westphalia State,2021-01-02,1798,70,,,,,,,,,
+North Rhine-Westphalia State,2021-01-03,1916,50,,,,,,,,,
+North Rhine-Westphalia State,2021-01-04,1925,69,,,,,,,,,
+North Rhine-Westphalia State,2021-01-05,1969,190,,,,,,,,,
+North Rhine-Westphalia State,2021-01-06,4510,236,,,,,,,,,
+North Rhine-Westphalia State,2021-01-07,6043,261,,,,,,,,,
+North Rhine-Westphalia State,2021-01-08,5149,199,,,,,,,,,
+North Rhine-Westphalia State,2021-01-09,4302,160,,,,,,,,,
+North Rhine-Westphalia State,2021-01-10,3218,76,,,,,,,,,
+North Rhine-Westphalia State,2021-01-11,1796,36,,,,,,,,,
+North Rhine-Westphalia State,2021-01-12,2301,203,,,,,,,,,
+North Rhine-Westphalia State,2021-01-13,3657,221,,,,,,,,,
+North Rhine-Westphalia State,2021-01-14,4145,183,,,,,,,,,
+North Rhine-Westphalia State,2021-01-15,4550,253,,,,,,,,,
+North Rhine-Westphalia State,2021-01-16,3334,195,,,,,,,,,
+North Rhine-Westphalia State,2021-01-17,3228,58,,,,,,,,,
+North Rhine-Westphalia State,2021-01-18,1177,32,,,,,,,,,
+North Rhine-Westphalia State,2021-01-19,1678,183,,,,,,,,,
+North Rhine-Westphalia State,2021-01-20,3279,167,,,,,,,,,
+North Rhine-Westphalia State,2021-01-21,3854,162,,,,,,,,,
+North Rhine-Westphalia State,2021-01-22,3430,138,,,,,,,,,
+North Rhine-Westphalia State,2021-01-23,3332,122,,,,,,,,,
+North Rhine-Westphalia State,2021-01-24,2611,46,,,,,,,,,
+North Rhine-Westphalia State,2021-01-25,1661,,39.2,13.3,37,21,31,35,41,46,64
+North Rhine-Westphalia State,2021-01-26,2286.5,,163,48.5,159,92,131,147,168,189,250
+North Rhine-Westphalia State,2021-01-27,2880.5,,174.1,51.1,169,101.9,139,158,180,201,267
+North Rhine-Westphalia State,2021-01-28,3531,,172.9,53.8,169,99,139,156,180,198,262
+North Rhine-Westphalia State,2021-01-29,3457,,169.1,48.8,163,100.9,136.8,152,174,195,261
+North Rhine-Westphalia State,2021-01-30,2873,,135.8,40.1,133.5,78.9,108,123,141,157,203
+North Rhine-Westphalia State,2021-01-31,2145,,52.5,16.2,51,29,42,47,55,61,82
+North Rhine-Westphalia State,2021-02-01,1602.5,,37.9,13,36,20,29,33,39,45,63
+North Rhine-Westphalia State,2021-02-02,2103,,157.7,46.3,153,93,126,143,165,183,240
+North Rhine-Westphalia State,2021-02-03,2677,,167.5,48,162,102.9,132,151,174,195,255
+North Rhine-Westphalia State,2021-02-04,3275.5,,166.7,55.3,160,93.9,132,149,170,192,254
+North Rhine-Westphalia State,2021-02-05,3255.5,,162.3,50.7,157,94.9,129,145,167,188,254
+North Rhine-Westphalia State,2021-02-06,2724,,129.4,39.9,124,72,104,116.6,134,150,199
+North Rhine-Westphalia State,2021-02-07,1999,,50.2,17.4,48,26,38,44,52,59,83
+North Rhine-Westphalia State,2021-02-08,1510.5,,34.8,13.1,33,18,26,30,36,42,57
+North Rhine-Westphalia State,2021-02-09,1985.5,,142.2,47.1,137,77,112,127,147,166,226
+North Rhine-Westphalia State,2021-02-10,2527,,154,55.8,145,84,117,135,156.4,179,252.1
+North Rhine-Westphalia State,2021-02-11,3013.5,,151,59.9,140,80,115,130,152,175,252
+North Rhine-Westphalia State,2021-02-12,3051.5,,151.3,64,141,77.9,114,131,154,175,253
+North Rhine-Westphalia State,2021-02-13,2529.5,,122.5,55.9,113,59,90,104.6,123,142,213
+North Rhine-Westphalia State,2021-02-14,1888.5,,47.4,25.8,43,21.9,34,40,47.4,55,81
+North Rhine-Westphalia State,2021-02-15,1383.5,,34.5,22.9,31,14,24,28,35,40,61
+North Rhine-Westphalia State,2021-02-16,1873.5,,141.3,79.5,128,65,102,117,139,161.2,243.1
+North Rhine-Westphalia State,2021-02-17,2359,,151.1,105.1,135.5,65.9,105,124,149,172,273
+North Rhine-Westphalia State,2021-02-18,2914,,150.6,113.3,131,66,101.8,120,143,169,276
+North Rhine-Westphalia State,2021-02-19,2770.5,,151.6,146.8,131,62,98,117,144,171,288
+North Rhine-Westphalia State,2021-02-20,2380,,129.1,165.7,106,48,81,96,120,141,237
+North Rhine-Westphalia State,2021-02-21,1760,,50.4,60.6,41,18,30,36,47,57,98
+North Rhine-Westphalia State,2021-02-22,1323,,36.7,64.4,29,10,21,25,33,41,75
+North Rhine-Westphalia State,2021-02-23,1767.5,,149,199.1,118,46,86,105,131.4,164,314
+North Rhine-Westphalia State,2021-02-24,2249,,168.2,307.1,129,49,89,114,145.4,181.2,337
+Opolskie,2020-11-30,432,3,,,,,,,,,
+Opolskie,2020-12-01,198,0,,,,,,,,,
+Opolskie,2020-12-02,361,20,,,,,,,,,
+Opolskie,2020-12-03,257,39,,,,,,,,,
+Opolskie,2020-12-04,469,27,,,,,,,,,
+Opolskie,2020-12-05,449,14,,,,,,,,,
+Opolskie,2020-12-06,359,23,,,,,,,,,
+Opolskie,2020-12-07,307,8,,,,,,,,,
+Opolskie,2020-12-08,195,1,,,,,,,,,
+Opolskie,2020-12-09,140,18,,,,,,,,,
+Opolskie,2020-12-10,224,19,,,,,,,,,
+Opolskie,2020-12-11,493,14,,,,,,,,,
+Opolskie,2020-12-12,337,13,,,,,,,,,
+Opolskie,2020-12-13,315,8,,,,,,,,,
+Opolskie,2020-12-14,133,0,,,,,,,,,
+Opolskie,2020-12-15,176,1,,,,,,,,,
+Opolskie,2020-12-16,129,17,,,,,,,,,
+Opolskie,2020-12-17,247,20,,,,,,,,,
+Opolskie,2020-12-18,251,15,,,,,,,,,
+Opolskie,2020-12-19,250,13,,,,,,,,,
+Opolskie,2020-12-20,222,14,,,,,,,,,
+Opolskie,2020-12-21,173,1,,,,,,,,,
+Opolskie,2020-12-22,138,2,,,,,,,,,
+Opolskie,2020-12-23,93,19,,,,,,,,,
+Opolskie,2020-12-24,250,15,,,,,,,,,
+Opolskie,2020-12-25,281,12,,,,,,,,,
+Opolskie,2020-12-26,258,2,,,,,,,,,
+Opolskie,2020-12-27,97,1,,,,,,,,,
+Opolskie,2020-12-28,99,1,,,,,,,,,
+Opolskie,2020-12-29,49,0,,,,,,,,,
+Opolskie,2020-12-30,120,6,,,,,,,,,
+Opolskie,2020-12-31,206,28,,,,,,,,,
+Opolskie,2021-01-01,347,20,,,,,,,,,
+Opolskie,2021-01-02,179,15,,,,,,,,,
+Opolskie,2021-01-03,182,2,,,,,,,,,
+Opolskie,2021-01-04,100,0,,,,,,,,,
+Opolskie,2021-01-05,84,0,,,,,,,,,
+Opolskie,2021-01-06,93,12,,,,,,,,,
+Opolskie,2021-01-07,222,15,,,,,,,,,
+Opolskie,2021-01-08,326,5,,,,,,,,,
+Opolskie,2021-01-09,96,9,,,,,,,,,
+Opolskie,2021-01-10,195,8,,,,,,,,,
+Opolskie,2021-01-11,181,0,,,,,,,,,
+Opolskie,2021-01-12,127,1,,,,,,,,,
+Opolskie,2021-01-13,116,8,,,,,,,,,
+Opolskie,2021-01-14,172,3,,,,,,,,,
+Opolskie,2021-01-15,235,3,,,,,,,,,
+Opolskie,2021-01-16,214,6,,,,,,,,,
+Opolskie,2021-01-17,222,3,,,,,,,,,
+Opolskie,2021-01-18,99,1,,,,,,,,,
+Opolskie,2021-01-19,125,0,,,,,,,,,
+Opolskie,2021-01-20,95,10,,,,,,,,,
+Opolskie,2021-01-21,138,4,,,,,,,,,
+Opolskie,2021-01-22,143,7,,,,,,,,,
+Opolskie,2021-01-23,113,6,,,,,,,,,
+Opolskie,2021-01-24,95,6,,,,,,,,,
+Opolskie,2021-01-25,104,0,,,,,,,,,
+Opolskie,2021-01-26,69,,0.7,1.1,0,0,0,0,1,1,3
+Opolskie,2021-01-27,71,,8.7,7,7,1,4,6,9,11,21
+Opolskie,2021-01-28,99,,6.7,5.8,5,1,3,4,7,9,17
+Opolskie,2021-01-29,117,,4.6,4.4,4,0,2,3,4,6,12
+Opolskie,2021-01-30,93,,6,5.2,5,0,2,4,6,8,16
+Opolskie,2021-01-31,81,,4.8,4.3,4,0,2,3,5,7,13
+Opolskie,2021-02-01,62,,0.5,0.8,0,0,0,0,0,1,2
+Opolskie,2021-02-02,46,,0.6,1,0,0,0,0,0,1,2
+Opolskie,2021-02-03,48,,7.3,5.9,6,0.9,3,5,7.4,10,18
+Opolskie,2021-02-04,65.5,,5.2,4.5,4,0,2,3,5,7,13
+Opolskie,2021-02-05,77,,3.8,3.7,3,0,1,2,4,5,11
+Opolskie,2021-02-06,62,,4.7,4.2,4,0,2,3,5,6,12
+Opolskie,2021-02-07,54,,3.8,3.5,3,0,1,2,4,5,10
+Opolskie,2021-02-08,39,,0.3,0.7,0,0,0,0,0,0,2
+Opolskie,2021-02-09,30,,0.4,0.8,0,0,0,0,0,1,2
+Opolskie,2021-02-10,30.5,,5.3,4.6,4,0,2,3,5,7,14
+Opolskie,2021-02-11,42,,3.7,3.3,3,0,1,2,4,5,10
+Opolskie,2021-02-12,52,,2.7,2.8,2,0,1,1,2,4,8
+Opolskie,2021-02-13,39,,3.6,3.5,3,0,1,2,4,5,11
+Opolskie,2021-02-14,34.5,,2.8,3,2,0,1,2,3,4,8
+Opolskie,2021-02-15,26,,0.2,0.6,0,0,0,0,0,0,1
+Opolskie,2021-02-16,19,,0.3,0.7,0,0,0,0,0,0,2
+Opolskie,2021-02-17,20,,4.3,4.7,3,0,1,2,4,6,13
+Opolskie,2021-02-18,27.5,,2.8,2.9,2,0,1,1,3,4,8
+Opolskie,2021-02-19,32,,2,2.4,1,0,0,1,2,3,6
+Opolskie,2021-02-20,26,,2.7,3.1,2,0,1,1,3,4,8
+Opolskie,2021-02-21,22,,2.2,2.7,2,0,1,1,2,3,6
+Opolskie,2021-02-22,17,,0.2,0.5,0,0,0,0,0,0,1
+Opolskie,2021-02-23,13,,0.3,0.8,0,0,0,0,0,0,1
+Opolskie,2021-02-24,13,,3.1,4,2,0,1,1,2,4,11
+Podkarpackie,2020-11-30,339,28,,,,,,,,,
+Podkarpackie,2020-12-01,201,7,,,,,,,,,
+Podkarpackie,2020-12-02,346,20,,,,,,,,,
+Podkarpackie,2020-12-03,518,31,,,,,,,,,
+Podkarpackie,2020-12-04,413,29,,,,,,,,,
+Podkarpackie,2020-12-05,324,29,,,,,,,,,
+Podkarpackie,2020-12-06,255,31,,,,,,,,,
+Podkarpackie,2020-12-07,184,14,,,,,,,,,
+Podkarpackie,2020-12-08,155,3,,,,,,,,,
+Podkarpackie,2020-12-09,204,21,,,,,,,,,
+Podkarpackie,2020-12-10,253,33,,,,,,,,,
+Podkarpackie,2020-12-11,406,33,,,,,,,,,
+Podkarpackie,2020-12-12,260,36,,,,,,,,,
+Podkarpackie,2020-12-13,525,23,,,,,,,,,
+Podkarpackie,2020-12-14,204,5,,,,,,,,,
+Podkarpackie,2020-12-15,180,3,,,,,,,,,
+Podkarpackie,2020-12-16,306,7,,,,,,,,,
+Podkarpackie,2020-12-17,322,31,,,,,,,,,
+Podkarpackie,2020-12-18,288,16,,,,,,,,,
+Podkarpackie,2020-12-19,168,29,,,,,,,,,
+Podkarpackie,2020-12-20,366,13,,,,,,,,,
+Podkarpackie,2020-12-21,142,10,,,,,,,,,
+Podkarpackie,2020-12-22,132,5,,,,,,,,,
+Podkarpackie,2020-12-23,225,11,,,,,,,,,
+Podkarpackie,2020-12-24,219,21,,,,,,,,,
+Podkarpackie,2020-12-25,288,20,,,,,,,,,
+Podkarpackie,2020-12-26,212,18,,,,,,,,,
+Podkarpackie,2020-12-27,132,1,,,,,,,,,
+Podkarpackie,2020-12-28,68,1,,,,,,,,,
+Podkarpackie,2020-12-29,76,0,,,,,,,,,
+Podkarpackie,2020-12-30,85,8,,,,,,,,,
+Podkarpackie,2020-12-31,279,19,,,,,,,,,
+Podkarpackie,2021-01-01,284,17,,,,,,,,,
+Podkarpackie,2021-01-02,261,36,,,,,,,,,
+Podkarpackie,2021-01-03,217,2,,,,,,,,,
+Podkarpackie,2021-01-04,118,6,,,,,,,,,
+Podkarpackie,2021-01-05,116,2,,,,,,,,,
+Podkarpackie,2021-01-06,270,18,,,,,,,,,
+Podkarpackie,2021-01-07,654,24,,,,,,,,,
+Podkarpackie,2021-01-08,570,7,,,,,,,,,
+Podkarpackie,2021-01-09,490,8,,,,,,,,,
+Podkarpackie,2021-01-10,291,11,,,,,,,,,
+Podkarpackie,2021-01-11,214,7,,,,,,,,,
+Podkarpackie,2021-01-12,159,3,,,,,,,,,
+Podkarpackie,2021-01-13,108,24,,,,,,,,,
+Podkarpackie,2021-01-14,235,13,,,,,,,,,
+Podkarpackie,2021-01-15,233,17,,,,,,,,,
+Podkarpackie,2021-01-16,232,17,,,,,,,,,
+Podkarpackie,2021-01-17,194,15,,,,,,,,,
+Podkarpackie,2021-01-18,177,12,,,,,,,,,
+Podkarpackie,2021-01-19,83,4,,,,,,,,,
+Podkarpackie,2021-01-20,188,4,,,,,,,,,
+Podkarpackie,2021-01-21,192,14,,,,,,,,,
+Podkarpackie,2021-01-22,216,15,,,,,,,,,
+Podkarpackie,2021-01-23,175,20,,,,,,,,,
+Podkarpackie,2021-01-24,159,8,,,,,,,,,
+Podkarpackie,2021-01-25,191,3,,,,,,,,,
+Podkarpackie,2021-01-26,96.5,,3.3,3.1,3,0,1,2,3,5,9
+Podkarpackie,2021-01-27,127,,13.5,9.4,11,2,7,9,14,18,31
+Podkarpackie,2021-01-28,182,,14.8,9.6,13,3,8,11,15,20,32
+Podkarpackie,2021-01-29,196.5,,10.6,7.7,9,2,5,7,10.4,14,25
+Podkarpackie,2021-01-30,167,,12.1,8.5,10,2,6,9,12.4,16,28
+Podkarpackie,2021-01-31,164,,9.3,7,8,1,4,7,9,12,22
+Podkarpackie,2021-02-01,120,,5.9,4.8,5,1,3,4,6,8,14
+Podkarpackie,2021-02-02,85,,3,3,2,0,1,2,3,4,8
+Podkarpackie,2021-02-03,110,,12.9,10.8,11,2,6.8,9,13,16,29
+Podkarpackie,2021-02-04,153,,14.9,16.2,12,2,7,10,14,18,36
+Podkarpackie,2021-02-05,162,,12,14.4,9,1,5,7,11,15,30
+Podkarpackie,2021-02-06,143,,14,24.5,9,2,5,8,11,16,34
+Podkarpackie,2021-02-07,151,,12,33.2,7,1,4,6,9,12.2,27
+Podkarpackie,2021-02-08,97,,9.2,32.2,5,0,2,4,6,9,21
+Podkarpackie,2021-02-09,74,,4.9,18.7,2,0,1,2,3,4,14
+Podkarpackie,2021-02-10,99.5,,26.9,168.6,9,1,5,7,11,15.2,52
+Podkarpackie,2021-02-11,132,,44.2,335.4,10,2,5,8,13,18.2,83.2
+Podkarpackie,2021-02-12,141,,37.5,299.2,7,1,3,5.6,9,14,75
+Podkarpackie,2021-02-13,125,,78.4,869.6,8,1,4,7,10,17,98.1
+Podkarpackie,2021-02-14,120,,102.5,1397.7,6,1,3,4.6,8,13,106.1
+Podkarpackie,2021-02-15,83.5,,65.5,705.6,4,0,2,3,5,9,98.1
+Podkarpackie,2021-02-16,64,,64.5,842.8,2,0,0,1,3,5,53
+Podkarpackie,2021-02-17,76,,505.1,7647.7,8,1,4,6,11,18.2,286.1
+Podkarpackie,2021-02-18,108,,921.2,12046.5,8,1,4,6,12,22,353.9
+Podkarpackie,2021-02-19,121.5,,721.2,9755.5,7,0,3,5,9,17,298
+Podkarpackie,2021-02-20,101,,1005.7,14372.5,7,0,3,5,10,19,453.2
+Podkarpackie,2021-02-21,108.5,,1528.4,21930.6,5,0,2,4,8,15,542.8
+Podkarpackie,2021-02-22,72,,2501,43613.9,3,0,1,2,5,11,427.5
+Podkarpackie,2021-02-23,55,,1598.7,26826.9,1.5,0,0,1,2,6,287.1
+Podkarpackie,2021-02-24,69,,7965.2,128837.5,7,0,2,4,10,24,1388
+Podlaskie,2020-11-30,307,11,,,,,,,,,
+Podlaskie,2020-12-01,118,2,,,,,,,,,
+Podlaskie,2020-12-02,216,5,,,,,,,,,
+Podlaskie,2020-12-03,393,5,,,,,,,,,
+Podlaskie,2020-12-04,356,26,,,,,,,,,
+Podlaskie,2020-12-05,373,11,,,,,,,,,
+Podlaskie,2020-12-06,287,24,,,,,,,,,
+Podlaskie,2020-12-07,223,24,,,,,,,,,
+Podlaskie,2020-12-08,155,5,,,,,,,,,
+Podlaskie,2020-12-09,193,2,,,,,,,,,
+Podlaskie,2020-12-10,360,12,,,,,,,,,
+Podlaskie,2020-12-11,364,5,,,,,,,,,
+Podlaskie,2020-12-12,308,40,,,,,,,,,
+Podlaskie,2020-12-13,356,13,,,,,,,,,
+Podlaskie,2020-12-14,231,8,,,,,,,,,
+Podlaskie,2020-12-15,78,0,,,,,,,,,
+Podlaskie,2020-12-16,169,5,,,,,,,,,
+Podlaskie,2020-12-17,370,29,,,,,,,,,
+Podlaskie,2020-12-18,230,10,,,,,,,,,
+Podlaskie,2020-12-19,266,12,,,,,,,,,
+Podlaskie,2020-12-20,341,9,,,,,,,,,
+Podlaskie,2020-12-21,178,9,,,,,,,,,
+Podlaskie,2020-12-22,100,1,,,,,,,,,
+Podlaskie,2020-12-23,172,4,,,,,,,,,
+Podlaskie,2020-12-24,326,7,,,,,,,,,
+Podlaskie,2020-12-25,325,9,,,,,,,,,
+Podlaskie,2020-12-26,242,6,,,,,,,,,
+Podlaskie,2020-12-27,115,2,,,,,,,,,
+Podlaskie,2020-12-28,93,1,,,,,,,,,
+Podlaskie,2020-12-29,70,1,,,,,,,,,
+Podlaskie,2020-12-30,203,6,,,,,,,,,
+Podlaskie,2020-12-31,426,16,,,,,,,,,
+Podlaskie,2021-01-01,356,28,,,,,,,,,
+Podlaskie,2021-01-02,307,10,,,,,,,,,
+Podlaskie,2021-01-03,173,11,,,,,,,,,
+Podlaskie,2021-01-04,171,0,,,,,,,,,
+Podlaskie,2021-01-05,80,3,,,,,,,,,
+Podlaskie,2021-01-06,189,7,,,,,,,,,
+Podlaskie,2021-01-07,477,15,,,,,,,,,
+Podlaskie,2021-01-08,272,6,,,,,,,,,
+Podlaskie,2021-01-09,293,6,,,,,,,,,
+Podlaskie,2021-01-10,298,17,,,,,,,,,
+Podlaskie,2021-01-11,239,8,,,,,,,,,
+Podlaskie,2021-01-12,75,0,,,,,,,,,
+Podlaskie,2021-01-13,143,2,,,,,,,,,
+Podlaskie,2021-01-14,333,26,,,,,,,,,
+Podlaskie,2021-01-15,291,6,,,,,,,,,
+Podlaskie,2021-01-16,277,7,,,,,,,,,
+Podlaskie,2021-01-17,210,4,,,,,,,,,
+Podlaskie,2021-01-18,121,2,,,,,,,,,
+Podlaskie,2021-01-19,69,0,,,,,,,,,
+Podlaskie,2021-01-20,126,3,,,,,,,,,
+Podlaskie,2021-01-21,329,19,,,,,,,,,
+Podlaskie,2021-01-22,226,3,,,,,,,,,
+Podlaskie,2021-01-23,229,10,,,,,,,,,
+Podlaskie,2021-01-24,218,13,,,,,,,,,
+Podlaskie,2021-01-25,161,9,,,,,,,,,
+Podlaskie,2021-01-26,91,,1.5,1.8,1,0,0,1,1,2,5
+Podlaskie,2021-01-27,123.5,,4.4,4.3,3,0,1,2,4,6,13
+Podlaskie,2021-01-28,226,,15.6,13.2,12.5,1,6.8,10,15,21,40
+Podlaskie,2021-01-29,203,,5.6,5.6,4,0,2,3,5,8,16
+Podlaskie,2021-01-30,186,,7.2,6.5,6,0,3,4,7,10,20
+Podlaskie,2021-01-31,181,,10.4,10.1,8,1,4,6,10,14,27
+Podlaskie,2021-02-01,148,,4.9,4.6,4,0,2,3,5,7,14
+Podlaskie,2021-02-02,81,,1.4,1.9,1,0,0,0,1,2,5
+Podlaskie,2021-02-03,111,,3.9,3.9,3,0,1,2,4,6,11
+Podlaskie,2021-02-04,202.5,,14,12.1,11,1,5,9,14,19,37
+Podlaskie,2021-02-05,183,,5.1,5.6,4,0,1,3,5,7,15
+Podlaskie,2021-02-06,168,,6.8,6,5,0,3,4,7,9,19
+Podlaskie,2021-02-07,161,,9.4,9,7,1,4,6,8.4,12,26
+Podlaskie,2021-02-08,134.5,,4.5,4.7,3,0,1,2,4,6,12
+Podlaskie,2021-02-09,71,,1.4,1.9,1,0,0,0,1,2,5
+Podlaskie,2021-02-10,103.5,,3.9,4.4,3,0,1,2,3,5,13
+Podlaskie,2021-02-11,182,,12.8,11.1,10,1,5,8,12,17.2,34
+Podlaskie,2021-02-12,163,,4.5,5.2,3,0,1,2,4,6,14
+Podlaskie,2021-02-13,147,,6.1,6.1,4,0,2,3,6,8,17
+Podlaskie,2021-02-14,142,,8.9,10.4,6,0,3,5,8,11,24
+Podlaskie,2021-02-15,118.5,,4,4.6,3,0,1,2,4,5,12
+Podlaskie,2021-02-16,65,,1.4,2.1,1,0,0,0,1,2,5
+Podlaskie,2021-02-17,90,,3.6,4.7,2,0,1,2,3,5,12
+Podlaskie,2021-02-18,158,,12.3,14.8,9,1,4,7,11,16,34
+Podlaskie,2021-02-19,147.5,,4.6,7.3,2,0,1,2,3.4,5.2,14
+Podlaskie,2021-02-20,133.5,,6.3,12.1,4,0,2,3,5,8,18
+Podlaskie,2021-02-21,130,,9,13.3,5,0,2,4,7,11,29
+Podlaskie,2021-02-22,108,,3.9,5,2,0,1,2,3,5,12
+Podlaskie,2021-02-23,57,,1.2,2.1,1,0,0,0,1,2,5
+Podlaskie,2021-02-24,82,,4.2,9.9,2,0,1,1,3,5,14
+Poland,2020-11-30,11483,283,,,,,,,,,
+Poland,2020-12-01,5733,121,,,,,,,,,
+Poland,2020-12-02,9105,449,,,,,,,,,
+Poland,2020-12-03,13855,609,,,,,,,,,
+Poland,2020-12-04,14838,620,,,,,,,,,
+Poland,2020-12-05,13239,531,,,,,,,,,
+Poland,2020-12-06,12430,502,,,,,,,,,
+Poland,2020-12-07,9176,228,,,,,,,,,
+Poland,2020-12-08,4423,92,,,,,,,,,
+Poland,2020-12-09,8312,411,,,,,,,,,
+Poland,2020-12-10,12168,568,,,,,,,,,
+Poland,2020-12-11,13749,470,,,,,,,,,
+Poland,2020-12-12,13110,544,,,,,,,,,
+Poland,2020-12-13,11497,502,,,,,,,,,
+Poland,2020-12-14,8977,188,,,,,,,,,
+Poland,2020-12-15,4896,96,,,,,,,,,
+Poland,2020-12-16,6907,349,,,,,,,,,
+Poland,2020-12-17,12454,605,,,,,,,,,
+Poland,2020-12-18,11953,431,,,,,,,,,
+Poland,2020-12-19,11013,426,,,,,,,,,
+Poland,2020-12-20,11267,483,,,,,,,,,
+Poland,2020-12-21,8594,143,,,,,,,,,
+Poland,2020-12-22,4633,77,,,,,,,,,
+Poland,2020-12-23,7192,309,,,,,,,,,
+Poland,2020-12-24,12361,472,,,,,,,,,
+Poland,2020-12-25,13115,497,,,,,,,,,
+Poland,2020-12-26,9077,240,,,,,,,,,
+Poland,2020-12-27,5048,69,,,,,,,,,
+Poland,2020-12-28,3678,57,,,,,,,,,
+Poland,2020-12-29,3211,29,,,,,,,,,
+Poland,2020-12-30,7914,307,,,,,,,,,
+Poland,2020-12-31,12955,565,,,,,,,,,
+Poland,2021-01-01,13397,532,,,,,,,,,
+Poland,2021-01-02,11008,400,,,,,,,,,
+Poland,2021-01-03,6945,102,,,,,,,,,
+Poland,2021-01-04,5739,61,,,,,,,,,
+Poland,2021-01-05,4432,42,,,,,,,,,
+Poland,2021-01-06,7624,341,,,,,,,,,
+Poland,2021-01-07,14151,553,,,,,,,,,
+Poland,2021-01-08,12054,186,,,,,,,,,
+Poland,2021-01-09,8790,332,,,,,,,,,
+Poland,2021-01-10,10548,438,,,,,,,,,
+Poland,2021-01-11,9410,177,,,,,,,,,
+Poland,2021-01-12,4622,75,,,,,,,,,
+Poland,2021-01-13,5569,326,,,,,,,,,
+Poland,2021-01-14,9053,481,,,,,,,,,
+Poland,2021-01-15,9436,381,,,,,,,,,
+Poland,2021-01-16,7795,386,,,,,,,,,
+Poland,2021-01-17,7412,369,,,,,,,,,
+Poland,2021-01-18,6055,142,,,,,,,,,
+Poland,2021-01-19,3271,52,,,,,,,,,
+Poland,2021-01-20,4835,291,,,,,,,,,
+Poland,2021-01-21,6919,443,,,,,,,,,
+Poland,2021-01-22,7152,419,,,,,,,,,
+Poland,2021-01-23,6640,346,,,,,,,,,
+Poland,2021-01-24,6322,346,,,,,,,,,
+Poland,2021-01-25,4683,110,,,,,,,,,
+Poland,2021-01-26,2946,,51.1,24.3,47,21,34,42,52,62,97
+Poland,2021-01-27,4407,,267.4,110.1,250.5,123.9,190,225,277.4,326.5,459
+Poland,2021-01-28,5760.5,,397.7,162.3,370.5,185.9,285.8,335,417.4,488.2,689.5
+Poland,2021-01-29,5811,,263.2,116.6,246,121,184,220,270,318.2,459
+Poland,2021-01-30,5019.5,,285.3,125.9,268,126,206,245,295,339,500
+Poland,2021-01-31,4577.5,,301.5,112.6,288,151,225,261,313,353,506.1
+Poland,2021-02-01,3503,,95.1,38.3,91,40,69,83,99,116,163
+Poland,2021-02-02,2266.5,,42,19.8,39,17,28,35,43,52,77
+Poland,2021-02-03,3415.5,,227.6,98.9,212,103.9,162,193,233.4,273.2,401
+Poland,2021-02-04,4409,,327.1,143.6,299.5,144.9,227.8,271,333.4,404,590.1
+Poland,2021-02-05,4350.5,,222.6,99.4,208,102.9,154,187,231,265,395.1
+Poland,2021-02-06,3902.5,,235.1,113.2,219.5,95,154,191,246,283.2,436
+Poland,2021-02-07,3548,,249.2,111,228,105,171,208,256,307,462
+Poland,2021-02-08,2689.5,,77.6,37.9,73,29.9,52,63.6,81,95,141
+Poland,2021-02-09,1739,,36,18.4,33,12,23,29,37,44.2,70
+Poland,2021-02-10,2655.5,,183.8,95,168,71,120,147.6,189,229,353
+Poland,2021-02-11,3294.5,,267.1,132.6,244,95,174,216,275,334.2,514
+Poland,2021-02-12,3383,,176.9,89,161,65.9,118,143,179,220,336
+Poland,2021-02-13,2938.5,,192.7,114,169,67,122.8,151,192.4,239.2,387
+Poland,2021-02-14,2668,,203.4,111.1,181.5,71,125.8,160,204.4,253,413.1
+Poland,2021-02-15,2104,,63.4,37.3,57,21,39,50,65,80,128
+Poland,2021-02-16,1369,,28.9,20.3,25,8,16,21,28,36,64
+Poland,2021-02-17,1959,,160.6,195,133,46,87,115,151.4,190.2,343
+Poland,2021-02-18,2620.5,,219.3,153.6,190,63,125,159,217,271,474
+Poland,2021-02-19,2649,,151.1,121.9,124,39.9,81,103.6,145,189,315.1
+Poland,2021-02-20,2224.5,,165.9,166.2,138.5,40,83,115.6,158,197,351.1
+Poland,2021-02-21,2019,,168.4,155.8,136,44,85,113,159,198,379.2
+Poland,2021-02-22,1561,,56.5,60.1,43,13,28,36,53,69,131.1
+Poland,2021-02-23,1030,,24.7,30.6,18,4,11,15,22,31,56
+Poland,2021-02-24,1545.5,,135.1,186,101.5,24,61.8,84,125,160,337
+Pomorskie,2020-11-30,978,19,,,,,,,,,
+Pomorskie,2020-12-01,441,3,,,,,,,,,
+Pomorskie,2020-12-02,443,57,,,,,,,,,
+Pomorskie,2020-12-03,1060,46,,,,,,,,,
+Pomorskie,2020-12-04,1226,25,,,,,,,,,
+Pomorskie,2020-12-05,813,20,,,,,,,,,
+Pomorskie,2020-12-06,969,45,,,,,,,,,
+Pomorskie,2020-12-07,874,19,,,,,,,,,
+Pomorskie,2020-12-08,335,7,,,,,,,,,
+Pomorskie,2020-12-09,515,23,,,,,,,,,
+Pomorskie,2020-12-10,933,33,,,,,,,,,
+Pomorskie,2020-12-11,887,19,,,,,,,,,
+Pomorskie,2020-12-12,1147,22,,,,,,,,,
+Pomorskie,2020-12-13,752,32,,,,,,,,,
+Pomorskie,2020-12-14,1003,3,,,,,,,,,
+Pomorskie,2020-12-15,460,4,,,,,,,,,
+Pomorskie,2020-12-16,495,29,,,,,,,,,
+Pomorskie,2020-12-17,868,28,,,,,,,,,
+Pomorskie,2020-12-18,951,22,,,,,,,,,
+Pomorskie,2020-12-19,951,23,,,,,,,,,
+Pomorskie,2020-12-20,1040,30,,,,,,,,,
+Pomorskie,2020-12-21,817,3,,,,,,,,,
+Pomorskie,2020-12-22,549,2,,,,,,,,,
+Pomorskie,2020-12-23,697,12,,,,,,,,,
+Pomorskie,2020-12-24,968,30,,,,,,,,,
+Pomorskie,2020-12-25,1107,18,,,,,,,,,
+Pomorskie,2020-12-26,666,10,,,,,,,,,
+Pomorskie,2020-12-27,487,0,,,,,,,,,
+Pomorskie,2020-12-28,536,4,,,,,,,,,
+Pomorskie,2020-12-29,404,2,,,,,,,,,
+Pomorskie,2020-12-30,483,23,,,,,,,,,
+Pomorskie,2020-12-31,1101,45,,,,,,,,,
+Pomorskie,2021-01-01,1288,42,,,,,,,,,
+Pomorskie,2021-01-02,1027,24,,,,,,,,,
+Pomorskie,2021-01-03,787,0,,,,,,,,,
+Pomorskie,2021-01-04,705,4,,,,,,,,,
+Pomorskie,2021-01-05,623,2,,,,,,,,,
+Pomorskie,2021-01-06,534,39,,,,,,,,,
+Pomorskie,2021-01-07,1148,31,,,,,,,,,
+Pomorskie,2021-01-08,1003,10,,,,,,,,,
+Pomorskie,2021-01-09,987,28,,,,,,,,,
+Pomorskie,2021-01-10,977,27,,,,,,,,,
+Pomorskie,2021-01-11,1010,24,,,,,,,,,
+Pomorskie,2021-01-12,509,22,,,,,,,,,
+Pomorskie,2021-01-13,583,25,,,,,,,,,
+Pomorskie,2021-01-14,729,32,,,,,,,,,
+Pomorskie,2021-01-15,878,16,,,,,,,,,
+Pomorskie,2021-01-16,740,17,,,,,,,,,
+Pomorskie,2021-01-17,741,24,,,,,,,,,
+Pomorskie,2021-01-18,603,1,,,,,,,,,
+Pomorskie,2021-01-19,468,1,,,,,,,,,
+Pomorskie,2021-01-20,411,22,,,,,,,,,
+Pomorskie,2021-01-21,582,44,,,,,,,,,
+Pomorskie,2021-01-22,740,31,,,,,,,,,
+Pomorskie,2021-01-23,770,22,,,,,,,,,
+Pomorskie,2021-01-24,513,44,,,,,,,,,
+Pomorskie,2021-01-25,461,4,,,,,,,,,
+Pomorskie,2021-01-26,328.5,,10.4,13.3,7,0,3,5,9,14,30
+Pomorskie,2021-01-27,355.5,,27.3,26.1,19,3,10.8,15,25,36,76
+Pomorskie,2021-01-28,507.5,,32.2,32.6,22,2.9,11,18,29,42.2,92
+Pomorskie,2021-01-29,505,,19.3,18.6,14,2,7,11,18,25,58
+Pomorskie,2021-01-30,470,,21.8,23.6,15,2,7,12,20,28,66
+Pomorskie,2021-01-31,426,,28.6,27.2,21,2,11,17,27,38,76
+Pomorskie,2021-02-01,367,,8.4,10.6,6,0,3,4,7,11,26
+Pomorskie,2021-02-02,242,,8.5,9.6,6,0,2,4,7,11,26
+Pomorskie,2021-02-03,261,,23.1,24,17,2,9,14,20.4,29,64
+Pomorskie,2021-02-04,370.5,,27.8,30.3,19,2,10,16,25,35,79.1
+Pomorskie,2021-02-05,380,,15.5,17.2,11,1,5,8,14,20,44
+Pomorskie,2021-02-06,354,,17.4,17.5,12,1,6,9,16,23,51
+Pomorskie,2021-02-07,310.5,,22.2,27.2,15,2,7,11,20,29,63
+Pomorskie,2021-02-08,269,,7.1,8.1,5,0,2,4,6,9,21
+Pomorskie,2021-02-09,179,,7,9.6,4,0,2,3,6,9,22
+Pomorskie,2021-02-10,191.5,,18.3,19.4,13,1,6,10,16,24,51
+Pomorskie,2021-02-11,283,,21.5,23.2,15,1,6.8,11,19,29,62
+Pomorskie,2021-02-12,274.5,,13,14.4,8,1,4,7,11,17,39
+Pomorskie,2021-02-13,258,,13.6,15.6,10,1,4,7,12,17,40
+Pomorskie,2021-02-14,228.5,,16.5,17.3,12,1,5,9,15,22,48
+Pomorskie,2021-02-15,200,,5.5,6.7,4,0,1,3,5,7,17
+Pomorskie,2021-02-16,130,,5.2,6.4,3,0,1,2,4,7,17
+Pomorskie,2021-02-17,140.5,,14.7,15.7,10,1,4,7,13,19,46
+Pomorskie,2021-02-18,197.5,,16.6,20.6,10,1,5,8,15,22,51
+Pomorskie,2021-02-19,202.5,,9.7,11.5,6,0,3,5,8,13,31
+Pomorskie,2021-02-20,189.5,,10.5,11.5,7,0,3,5,9,13,34
+Pomorskie,2021-02-21,168,,14.3,18.3,9,0,4,7,12,18,44
+Pomorskie,2021-02-22,146,,4.4,5.7,3,0,1,2,4,6,15
+Pomorskie,2021-02-23,94,,4.2,6.3,2,0,1,2,3,5,14
+Pomorskie,2021-02-24,103.5,,12,16.2,7,0,3,6,10,14,38
+Rhineland-Palatinate State,2020-11-30,582,2,,,,,,,,,
+Rhineland-Palatinate State,2020-12-01,753,29,,,,,,,,,
+Rhineland-Palatinate State,2020-12-02,798,26,,,,,,,,,
+Rhineland-Palatinate State,2020-12-03,924,20,,,,,,,,,
+Rhineland-Palatinate State,2020-12-04,1047,16,,,,,,,,,
+Rhineland-Palatinate State,2020-12-05,1120,36,,,,,,,,,
+Rhineland-Palatinate State,2020-12-06,519,22,,,,,,,,,
+Rhineland-Palatinate State,2020-12-07,717,8,,,,,,,,,
+Rhineland-Palatinate State,2020-12-08,266,7,,,,,,,,,
+Rhineland-Palatinate State,2020-12-09,1423,55,,,,,,,,,
+Rhineland-Palatinate State,2020-12-10,964,23,,,,,,,,,
+Rhineland-Palatinate State,2020-12-11,1318,46,,,,,,,,,
+Rhineland-Palatinate State,2020-12-12,1502,32,,,,,,,,,
+Rhineland-Palatinate State,2020-12-13,567,9,,,,,,,,,
+Rhineland-Palatinate State,2020-12-14,809,9,,,,,,,,,
+Rhineland-Palatinate State,2020-12-15,1117,33,,,,,,,,,
+Rhineland-Palatinate State,2020-12-16,817,48,,,,,,,,,
+Rhineland-Palatinate State,2020-12-17,1370,43,,,,,,,,,
+Rhineland-Palatinate State,2020-12-18,1112,21,,,,,,,,,
+Rhineland-Palatinate State,2020-12-19,1241,41,,,,,,,,,
+Rhineland-Palatinate State,2020-12-20,618,15,,,,,,,,,
+Rhineland-Palatinate State,2020-12-21,966,6,,,,,,,,,
+Rhineland-Palatinate State,2020-12-22,1054,28,,,,,,,,,
+Rhineland-Palatinate State,2020-12-23,833,47,,,,,,,,,
+Rhineland-Palatinate State,2020-12-24,1272,61,,,,,,,,,
+Rhineland-Palatinate State,2020-12-25,801,15,,,,,,,,,
+Rhineland-Palatinate State,2020-12-26,567,16,,,,,,,,,
+Rhineland-Palatinate State,2020-12-27,645,28,,,,,,,,,
+Rhineland-Palatinate State,2020-12-28,439,15,,,,,,,,,
+Rhineland-Palatinate State,2020-12-29,827,56,,,,,,,,,
+Rhineland-Palatinate State,2020-12-30,725,50,,,,,,,,,
+Rhineland-Palatinate State,2020-12-31,1244,50,,,,,,,,,
+Rhineland-Palatinate State,2021-01-01,792,13,,,,,,,,,
+Rhineland-Palatinate State,2021-01-02,760,18,,,,,,,,,
+Rhineland-Palatinate State,2021-01-03,370,7,,,,,,,,,
+Rhineland-Palatinate State,2021-01-04,520,10,,,,,,,,,
+Rhineland-Palatinate State,2021-01-05,527,55,,,,,,,,,
+Rhineland-Palatinate State,2021-01-06,923,51,,,,,,,,,
+Rhineland-Palatinate State,2021-01-07,1106,50,,,,,,,,,
+Rhineland-Palatinate State,2021-01-08,1096,54,,,,,,,,,
+Rhineland-Palatinate State,2021-01-09,1165,54,,,,,,,,,
+Rhineland-Palatinate State,2021-01-10,587,22,,,,,,,,,
+Rhineland-Palatinate State,2021-01-11,610,18,,,,,,,,,
+Rhineland-Palatinate State,2021-01-12,590,58,,,,,,,,,
+Rhineland-Palatinate State,2021-01-13,698,32,,,,,,,,,
+Rhineland-Palatinate State,2021-01-14,735,49,,,,,,,,,
+Rhineland-Palatinate State,2021-01-15,1004,58,,,,,,,,,
+Rhineland-Palatinate State,2021-01-16,753,58,,,,,,,,,
+Rhineland-Palatinate State,2021-01-17,410,13,,,,,,,,,
+Rhineland-Palatinate State,2021-01-18,2,0,,,,,,,,,
+Rhineland-Palatinate State,2021-01-19,918,56,,,,,,,,,
+Rhineland-Palatinate State,2021-01-20,565,41,,,,,,,,,
+Rhineland-Palatinate State,2021-01-21,916,42,,,,,,,,,
+Rhineland-Palatinate State,2021-01-22,815,29,,,,,,,,,
+Rhineland-Palatinate State,2021-01-23,757,47,,,,,,,,,
+Rhineland-Palatinate State,2021-01-24,365,16,,,,,,,,,
+Rhineland-Palatinate State,2021-01-25,399,,8.8,5.2,8,2,5,7,9,11,19
+Rhineland-Palatinate State,2021-01-26,557,,48.4,24.6,44,18,33,40,49,58,93
+Rhineland-Palatinate State,2021-01-27,565,,36.8,17.5,34,13,25,31,38.4,45,69
+Rhineland-Palatinate State,2021-01-28,672,,40.7,19.9,38,13,28,34,43,50,75
+Rhineland-Palatinate State,2021-01-29,701,,41.2,18.9,39,15.9,29,35,43,50,75
+Rhineland-Palatinate State,2021-01-30,662.5,,45.6,21.5,43,15.9,31.8,39,47,55,81
+Rhineland-Palatinate State,2021-01-31,336,,15.5,8.6,14,4,9.8,12,16,20,31
+Rhineland-Palatinate State,2021-02-01,366,,8,5.4,7,2,5,6,8,10,17
+Rhineland-Palatinate State,2021-02-02,515,,45.3,21.9,43,16,31,38,47,55,84
+Rhineland-Palatinate State,2021-02-03,490,,33.2,16.7,31,11.9,22,28,35,42,62
+Rhineland-Palatinate State,2021-02-04,645.5,,39,19,36,15,27,33,40,48,72
+Rhineland-Palatinate State,2021-02-05,611.5,,38.3,19.7,35,12,25,31,40,47,75
+Rhineland-Palatinate State,2021-02-06,606,,42.3,20.9,39,15,28,35,44,52,78
+Rhineland-Palatinate State,2021-02-07,304,,13.7,7.7,12,3.9,8.8,11,14,17,27
+Rhineland-Palatinate State,2021-02-08,336,,7.3,4.7,6,2,4,6,7,9.2,16
+Rhineland-Palatinate State,2021-02-09,491.5,,40.2,18.9,38,14,27.8,34,42,50,74
+Rhineland-Palatinate State,2021-02-10,459.5,,30.2,16.5,27,9,20,24.6,31,38,58
+Rhineland-Palatinate State,2021-02-11,585.5,,34.7,18.5,32,12,23,28,36,43,65
+Rhineland-Palatinate State,2021-02-12,559,,35.6,19.2,33,11,23,29,36,43,72
+Rhineland-Palatinate State,2021-02-13,538,,38.5,20.5,36,12,24,32,40,48,78
+Rhineland-Palatinate State,2021-02-14,268,,13.4,8.9,12,3,8,10,14,17,28
+Rhineland-Palatinate State,2021-02-15,312,,6.9,4.9,6,1,4,5,7,9,16
+Rhineland-Palatinate State,2021-02-16,429,,38.7,24.2,35,11.9,24,30.6,39,47.2,80
+Rhineland-Palatinate State,2021-02-17,433.5,,29.9,19.2,26,8.9,18,23,31,37,63
+Rhineland-Palatinate State,2021-02-18,543.5,,32.9,20.8,29,9,20,26,33,41,65
+Rhineland-Palatinate State,2021-02-19,526.5,,32.3,20.2,29,9,19,24,33,41,66
+Rhineland-Palatinate State,2021-02-20,502,,37.4,23.6,33,11,23,29,38,46,79
+Rhineland-Palatinate State,2021-02-21,255.5,,12.9,9.6,11,3,6,9,13,17,30
+Rhineland-Palatinate State,2021-02-22,278,,6.8,5.7,6,1,3,5,7,9,16
+Rhineland-Palatinate State,2021-02-23,409.5,,37.8,30,32,9,20,28,37,47,79
+Rhineland-Palatinate State,2021-02-24,380,,28.1,21.3,24,7,15.8,20,28,35,61.1
+Saarland State,2020-11-30,187,1,,,,,,,,,
+Saarland State,2020-12-01,141,3,,,,,,,,,
+Saarland State,2020-12-02,70,3,,,,,,,,,
+Saarland State,2020-12-03,180,4,,,,,,,,,
+Saarland State,2020-12-04,148,0,,,,,,,,,
+Saarland State,2020-12-05,431,6,,,,,,,,,
+Saarland State,2020-12-06,244,3,,,,,,,,,
+Saarland State,2020-12-07,0,0,,,,,,,,,
+Saarland State,2020-12-08,286,5,,,,,,,,,
+Saarland State,2020-12-09,239,10,,,,,,,,,
+Saarland State,2020-12-10,231,1,,,,,,,,,
+Saarland State,2020-12-11,535,7,,,,,,,,,
+Saarland State,2020-12-12,282,2,,,,,,,,,
+Saarland State,2020-12-13,128,5,,,,,,,,,
+Saarland State,2020-12-14,408,6,,,,,,,,,
+Saarland State,2020-12-15,102,6,,,,,,,,,
+Saarland State,2020-12-16,61,0,,,,,,,,,
+Saarland State,2020-12-17,364,12,,,,,,,,,
+Saarland State,2020-12-18,591,13,,,,,,,,,
+Saarland State,2020-12-19,244,11,,,,,,,,,
+Saarland State,2020-12-20,162,3,,,,,,,,,
+Saarland State,2020-12-21,212,8,,,,,,,,,
+Saarland State,2020-12-22,245,9,,,,,,,,,
+Saarland State,2020-12-23,207,8,,,,,,,,,
+Saarland State,2020-12-24,365,10,,,,,,,,,
+Saarland State,2020-12-25,389,12,,,,,,,,,
+Saarland State,2020-12-26,184,7,,,,,,,,,
+Saarland State,2020-12-27,28,0,,,,,,,,,
+Saarland State,2020-12-28,172,6,,,,,,,,,
+Saarland State,2020-12-29,19,0,,,,,,,,,
+Saarland State,2020-12-30,198,9,,,,,,,,,
+Saarland State,2020-12-31,340,11,,,,,,,,,
+Saarland State,2021-01-01,121,1,,,,,,,,,
+Saarland State,2021-01-02,111,7,,,,,,,,,
+Saarland State,2021-01-03,30,1,,,,,,,,,
+Saarland State,2021-01-04,58,4,,,,,,,,,
+Saarland State,2021-01-05,73,10,,,,,,,,,
+Saarland State,2021-01-06,225,12,,,,,,,,,
+Saarland State,2021-01-07,308,16,,,,,,,,,
+Saarland State,2021-01-08,516,14,,,,,,,,,
+Saarland State,2021-01-09,321,32,,,,,,,,,
+Saarland State,2021-01-10,226,11,,,,,,,,,
+Saarland State,2021-01-11,32,3,,,,,,,,,
+Saarland State,2021-01-12,242,12,,,,,,,,,
+Saarland State,2021-01-13,137,11,,,,,,,,,
+Saarland State,2021-01-14,263,22,,,,,,,,,
+Saarland State,2021-01-15,200,11,,,,,,,,,
+Saarland State,2021-01-16,197,7,,,,,,,,,
+Saarland State,2021-01-17,193,2,,,,,,,,,
+Saarland State,2021-01-18,14,3,,,,,,,,,
+Saarland State,2021-01-19,58,17,,,,,,,,,
+Saarland State,2021-01-20,216,4,,,,,,,,,
+Saarland State,2021-01-21,208,13,,,,,,,,,
+Saarland State,2021-01-22,245,9,,,,,,,,,
+Saarland State,2021-01-23,195,27,,,,,,,,,
+Saarland State,2021-01-24,181,5,,,,,,,,,
+Saarland State,2021-01-25,110,,3.5,3.2,3,0,1,2,3,5,9
+Saarland State,2021-01-26,111,,11.1,7.5,10,2,6,8,11,15,24
+Saarland State,2021-01-27,130,,8,6.1,7,1,4,5,8,11,19
+Saarland State,2021-01-28,181.5,,14,9.7,12,2,7,10,14,18,33
+Saarland State,2021-01-29,216.5,,10.1,7.2,9,2,5,7,10,13,23
+Saarland State,2021-01-30,172.5,,16.8,10.9,15,3,9,13,17,22,36
+Saarland State,2021-01-31,119.5,,5.7,4.3,5,0.9,3,4,6,8,13
+Saarland State,2021-02-01,109,,3.3,3.1,3,0,1,2,3,4,9
+Saarland State,2021-02-02,104.5,,11.2,8.4,9,2,5,8,11,15,26
+Saarland State,2021-02-03,129,,7.9,6.3,7,1,4,5,8,10,20
+Saarland State,2021-02-04,178,,14.1,9.8,12,3,8,11,14,18,31
+Saarland State,2021-02-05,200,,10.2,8,8,2,5,7,10,13,24
+Saarland State,2021-02-06,162,,17.6,12.7,15,4,10,13,18,23,38
+Saarland State,2021-02-07,111,,5.8,4.6,5,1,3,4,6,8,14
+Saarland State,2021-02-08,103,,3.1,3.2,2,0,1,2,3,4,9
+Saarland State,2021-02-09,103,,10.5,8.2,9,2,5,7,10,13,25
+Saarland State,2021-02-10,120,,7.4,5.6,6,1,4,5,8,10,18
+Saarland State,2021-02-11,162.5,,12.8,9.6,11,2,6,9,13,17,30
+Saarland State,2021-02-12,196,,9.3,7.7,8,1,4,6,9,12,23
+Saarland State,2021-02-13,158,,16.4,12.3,14,3,8.8,11.6,16,21,38
+Saarland State,2021-02-14,111,,5.8,5.4,5,0,2,4,6,8,14
+Saarland State,2021-02-15,98,,3.3,3.9,2,0,1,2,3,4,9
+Saarland State,2021-02-16,100,,10.3,10.2,8,1,5,7,10,13,25
+Saarland State,2021-02-17,113,,8.1,8.2,6,1,4,5,8,10,20
+Saarland State,2021-02-18,162,,14.1,16.5,11,2,6,9,13,18,35
+Saarland State,2021-02-19,175.5,,9.9,12.8,7,1,4,6,9,12,25
+Saarland State,2021-02-20,147,,18.2,21.1,14,3,8,12,16,22,42
+Saarland State,2021-02-21,104,,6.9,16.6,5,0,3,4,6,8,17
+Saarland State,2021-02-22,95,,3.4,4.8,2,0,1,2,3,4,11
+Saarland State,2021-02-23,94,,12.6,38.2,8,1,5,7,10,13,28
+Saarland State,2021-02-24,104.5,,9.6,40.3,6,1,3,5,7,10,21
+Sachsen-Anhalt State,2020-11-30,401,2,,,,,,,,,
+Sachsen-Anhalt State,2020-12-01,189,11,,,,,,,,,
+Sachsen-Anhalt State,2020-12-02,260,5,,,,,,,,,
+Sachsen-Anhalt State,2020-12-03,554,9,,,,,,,,,
+Sachsen-Anhalt State,2020-12-04,484,4,,,,,,,,,
+Sachsen-Anhalt State,2020-12-05,514,8,,,,,,,,,
+Sachsen-Anhalt State,2020-12-06,276,6,,,,,,,,,
+Sachsen-Anhalt State,2020-12-07,309,1,,,,,,,,,
+Sachsen-Anhalt State,2020-12-08,471,6,,,,,,,,,
+Sachsen-Anhalt State,2020-12-09,436,14,,,,,,,,,
+Sachsen-Anhalt State,2020-12-10,607,13,,,,,,,,,
+Sachsen-Anhalt State,2020-12-11,648,9,,,,,,,,,
+Sachsen-Anhalt State,2020-12-12,616,12,,,,,,,,,
+Sachsen-Anhalt State,2020-12-13,449,8,,,,,,,,,
+Sachsen-Anhalt State,2020-12-14,372,3,,,,,,,,,
+Sachsen-Anhalt State,2020-12-15,461,15,,,,,,,,,
+Sachsen-Anhalt State,2020-12-16,471,13,,,,,,,,,
+Sachsen-Anhalt State,2020-12-17,700,16,,,,,,,,,
+Sachsen-Anhalt State,2020-12-18,699,20,,,,,,,,,
+Sachsen-Anhalt State,2020-12-19,1012,38,,,,,,,,,
+Sachsen-Anhalt State,2020-12-20,653,8,,,,,,,,,
+Sachsen-Anhalt State,2020-12-21,458,8,,,,,,,,,
+Sachsen-Anhalt State,2020-12-22,586,7,,,,,,,,,
+Sachsen-Anhalt State,2020-12-23,685,59,,,,,,,,,
+Sachsen-Anhalt State,2020-12-24,888,20,,,,,,,,,
+Sachsen-Anhalt State,2020-12-25,827,22,,,,,,,,,
+Sachsen-Anhalt State,2020-12-26,605,2,,,,,,,,,
+Sachsen-Anhalt State,2020-12-27,495,7,,,,,,,,,
+Sachsen-Anhalt State,2020-12-28,374,6,,,,,,,,,
+Sachsen-Anhalt State,2020-12-29,316,17,,,,,,,,,
+Sachsen-Anhalt State,2020-12-30,562,28,,,,,,,,,
+Sachsen-Anhalt State,2020-12-31,884,42,,,,,,,,,
+Sachsen-Anhalt State,2021-01-01,935,49,,,,,,,,,
+Sachsen-Anhalt State,2021-01-02,573,15,,,,,,,,,
+Sachsen-Anhalt State,2021-01-03,789,21,,,,,,,,,
+Sachsen-Anhalt State,2021-01-04,586,7,,,,,,,,,
+Sachsen-Anhalt State,2021-01-05,397,10,,,,,,,,,
+Sachsen-Anhalt State,2021-01-06,539,21,,,,,,,,,
+Sachsen-Anhalt State,2021-01-07,910,52,,,,,,,,,
+Sachsen-Anhalt State,2021-01-08,1042,28,,,,,,,,,
+Sachsen-Anhalt State,2021-01-09,763,27,,,,,,,,,
+Sachsen-Anhalt State,2021-01-10,0,0,,,,,,,,,
+Sachsen-Anhalt State,2021-01-11,1566,38,,,,,,,,,
+Sachsen-Anhalt State,2021-01-12,1020,42,,,,,,,,,
+Sachsen-Anhalt State,2021-01-13,913,37,,,,,,,,,
+Sachsen-Anhalt State,2021-01-14,1001,57,,,,,,,,,
+Sachsen-Anhalt State,2021-01-15,1160,62,,,,,,,,,
+Sachsen-Anhalt State,2021-01-16,855,21,,,,,,,,,
+Sachsen-Anhalt State,2021-01-17,431,44,,,,,,,,,
+Sachsen-Anhalt State,2021-01-18,502,33,,,,,,,,,
+Sachsen-Anhalt State,2021-01-19,430,15,,,,,,,,,
+Sachsen-Anhalt State,2021-01-20,882,66,,,,,,,,,
+Sachsen-Anhalt State,2021-01-21,954,42,,,,,,,,,
+Sachsen-Anhalt State,2021-01-22,689,44,,,,,,,,,
+Sachsen-Anhalt State,2021-01-23,1315,64,,,,,,,,,
+Sachsen-Anhalt State,2021-01-24,473,28,,,,,,,,,
+Sachsen-Anhalt State,2021-01-25,648,,31.3,29,23,3,12,19,30,40.2,84
+Sachsen-Anhalt State,2021-01-26,608,,29.6,30.2,21,2,10,17,28,39,83
+Sachsen-Anhalt State,2021-01-27,678,,44.1,42,31,4,16,25,39.4,59,127
+Sachsen-Anhalt State,2021-01-28,992.5,,51.2,46.7,39,5,19.8,31,48,68,144
+Sachsen-Anhalt State,2021-01-29,957,,45.9,42.3,35,4,17,27,42,59,123
+Sachsen-Anhalt State,2021-01-30,942.5,,40.3,37.4,30,4.9,16,23,37,55,109
+Sachsen-Anhalt State,2021-01-31,565,,27.7,27.8,20,2,10,16,25,37,79
+Sachsen-Anhalt State,2021-02-01,619.5,,32,32.1,24,3,12,19,30,42,82
+Sachsen-Anhalt State,2021-02-02,592,,28.2,26.3,21,2,11,17,27,37,76.1
+Sachsen-Anhalt State,2021-02-03,646,,45,42.7,34,4,17,26,43,60,121
+Sachsen-Anhalt State,2021-02-04,996,,53.1,45.9,41,5,21,32,50,75,141.1
+Sachsen-Anhalt State,2021-02-05,907,,47.8,45.6,34,4,18,28,44,64,135
+Sachsen-Anhalt State,2021-02-06,921.5,,40.7,37.5,30,4,15,23,37,54,119
+Sachsen-Anhalt State,2021-02-07,532,,27.9,27.6,19,2,10,15,26,36,82
+Sachsen-Anhalt State,2021-02-08,601.5,,32.8,35.1,22,3,11,17,28,42,95
+Sachsen-Anhalt State,2021-02-09,581,,30.9,32.1,22,3,10,16,27,39.2,95
+Sachsen-Anhalt State,2021-02-10,647.5,,46.6,47.9,34,5,16.8,27,42,59,132
+Sachsen-Anhalt State,2021-02-11,912.5,,53.1,54.1,38,5,19,30,48,71,146
+Sachsen-Anhalt State,2021-02-12,877.5,,48,51.3,32,4,16,26,41,64,140
+Sachsen-Anhalt State,2021-02-13,866,,40,40.3,26.5,3.9,14,21,35,53,118
+Sachsen-Anhalt State,2021-02-14,517,,27.8,28.3,19,2,9,15,25,38,87
+Sachsen-Anhalt State,2021-02-15,585,,31.4,35.7,21,3,10,16,27,40,89
+Sachsen-Anhalt State,2021-02-16,555,,31.2,34.2,21,2,9,16,28,41,99
+Sachsen-Anhalt State,2021-02-17,598,,46.7,49.6,31,3,15,24,41,59,141
+Sachsen-Anhalt State,2021-02-18,903.5,,54.6,55.3,39,5,18,31,49,71,160
+Sachsen-Anhalt State,2021-02-19,846.5,,46.8,51.2,31,3,14,24,40,60,150
+Sachsen-Anhalt State,2021-02-20,826.5,,41,48.6,28,3,13,21,35,53,115.2
+Sachsen-Anhalt State,2021-02-21,492.5,,27.9,32.4,19,2,8,15,25,36.2,84
+Sachsen-Anhalt State,2021-02-22,567.5,,34.2,44,21,2,10,16,27,43,110
+Sachsen-Anhalt State,2021-02-23,569,,30.2,33.2,20,2,9,14.6,26,40,91.1
+Sachsen-Anhalt State,2021-02-24,588.5,,50.3,99.1,30,3,13,23,40,60,150.2
+Schleswig-Holstein State,2020-11-30,71,4,,,,,,,,,
+Schleswig-Holstein State,2020-12-01,81,2,,,,,,,,,
+Schleswig-Holstein State,2020-12-02,243,3,,,,,,,,,
+Schleswig-Holstein State,2020-12-03,240,1,,,,,,,,,
+Schleswig-Holstein State,2020-12-04,255,4,,,,,,,,,
+Schleswig-Holstein State,2020-12-05,310,1,,,,,,,,,
+Schleswig-Holstein State,2020-12-06,235,0,,,,,,,,,
+Schleswig-Holstein State,2020-12-07,154,1,,,,,,,,,
+Schleswig-Holstein State,2020-12-08,183,4,,,,,,,,,
+Schleswig-Holstein State,2020-12-09,313,2,,,,,,,,,
+Schleswig-Holstein State,2020-12-10,298,5,,,,,,,,,
+Schleswig-Holstein State,2020-12-11,529,7,,,,,,,,,
+Schleswig-Holstein State,2020-12-12,411,7,,,,,,,,,
+Schleswig-Holstein State,2020-12-13,445,1,,,,,,,,,
+Schleswig-Holstein State,2020-12-14,140,2,,,,,,,,,
+Schleswig-Holstein State,2020-12-15,241,2,,,,,,,,,
+Schleswig-Holstein State,2020-12-16,486,6,,,,,,,,,
+Schleswig-Holstein State,2020-12-17,507,14,,,,,,,,,
+Schleswig-Holstein State,2020-12-18,472,4,,,,,,,,,
+Schleswig-Holstein State,2020-12-19,453,3,,,,,,,,,
+Schleswig-Holstein State,2020-12-20,433,2,,,,,,,,,
+Schleswig-Holstein State,2020-12-21,157,0,,,,,,,,,
+Schleswig-Holstein State,2020-12-22,211,9,,,,,,,,,
+Schleswig-Holstein State,2020-12-23,795,15,,,,,,,,,
+Schleswig-Holstein State,2020-12-24,703,4,,,,,,,,,
+Schleswig-Holstein State,2020-12-25,306,3,,,,,,,,,
+Schleswig-Holstein State,2020-12-26,230,4,,,,,,,,,
+Schleswig-Holstein State,2020-12-27,239,7,,,,,,,,,
+Schleswig-Holstein State,2020-12-28,191,10,,,,,,,,,
+Schleswig-Holstein State,2020-12-29,260,18,,,,,,,,,
+Schleswig-Holstein State,2020-12-30,500,17,,,,,,,,,
+Schleswig-Holstein State,2020-12-31,508,14,,,,,,,,,
+Schleswig-Holstein State,2021-01-01,342,2,,,,,,,,,
+Schleswig-Holstein State,2021-01-02,113,9,,,,,,,,,
+Schleswig-Holstein State,2021-01-03,293,7,,,,,,,,,
+Schleswig-Holstein State,2021-01-04,211,3,,,,,,,,,
+Schleswig-Holstein State,2021-01-05,235,29,,,,,,,,,
+Schleswig-Holstein State,2021-01-06,550,22,,,,,,,,,
+Schleswig-Holstein State,2021-01-07,542,17,,,,,,,,,
+Schleswig-Holstein State,2021-01-08,464,6,,,,,,,,,
+Schleswig-Holstein State,2021-01-09,514,14,,,,,,,,,
+Schleswig-Holstein State,2021-01-10,424,11,,,,,,,,,
+Schleswig-Holstein State,2021-01-11,144,9,,,,,,,,,
+Schleswig-Holstein State,2021-01-12,221,15,,,,,,,,,
+Schleswig-Holstein State,2021-01-13,405,25,,,,,,,,,
+Schleswig-Holstein State,2021-01-14,484,15,,,,,,,,,
+Schleswig-Holstein State,2021-01-15,425,15,,,,,,,,,
+Schleswig-Holstein State,2021-01-16,422,24,,,,,,,,,
+Schleswig-Holstein State,2021-01-17,375,3,,,,,,,,,
+Schleswig-Holstein State,2021-01-18,215,1,,,,,,,,,
+Schleswig-Holstein State,2021-01-19,220,23,,,,,,,,,
+Schleswig-Holstein State,2021-01-20,451,16,,,,,,,,,
+Schleswig-Holstein State,2021-01-21,455,16,,,,,,,,,
+Schleswig-Holstein State,2021-01-22,523,18,,,,,,,,,
+Schleswig-Holstein State,2021-01-23,425,16,,,,,,,,,
+Schleswig-Holstein State,2021-01-24,477,3,,,,,,,,,
+Schleswig-Holstein State,2021-01-25,236.5,,5.5,5.2,4,1,2,4,5,7,14
+Schleswig-Holstein State,2021-01-26,268.5,,22.5,14,20,5.9,13,17,23,29,49
+Schleswig-Holstein State,2021-01-27,566,,21.1,14,19,5,12,16,21,27,47
+Schleswig-Holstein State,2021-01-28,558.5,,17,10.2,15,4,10,13,18,22,37
+Schleswig-Holstein State,2021-01-29,537,,14.7,9.8,13,3,8,11,15,19,32
+Schleswig-Holstein State,2021-01-30,500,,19.3,11.8,17,5,11,15,20,25,40
+Schleswig-Holstein State,2021-01-31,454.5,,7,5,6,1,4,5,7,9,16
+Schleswig-Holstein State,2021-02-01,271,,5.8,5.1,5,1,3,4,6,7,14
+Schleswig-Holstein State,2021-02-02,315,,25,16.5,21,6,14,19,25,31,55
+Schleswig-Holstein State,2021-02-03,652.5,,23.3,15.3,20,5,13,17,23,30,50
+Schleswig-Holstein State,2021-02-04,641,,19.5,13.7,16,4,10,14,19,25,43
+Schleswig-Holstein State,2021-02-05,603.5,,16.8,12,14,4,9,12,17,21,38
+Schleswig-Holstein State,2021-02-06,584,,22.6,15.9,19,5,13,16,22,28.2,50
+Schleswig-Holstein State,2021-02-07,514,,8.1,6.9,7,1,4,5,8,11,20
+Schleswig-Holstein State,2021-02-08,308,,7,6.9,5,1,3,4,7,9,19
+Schleswig-Holstein State,2021-02-09,359.5,,28.5,22.1,23,6,15,20,27,35.2,69
+Schleswig-Holstein State,2021-02-10,754,,28.2,23.6,23,5,15,19,27,35,65
+Schleswig-Holstein State,2021-02-11,752.5,,24.9,28.3,19,5,11,15,22,30,63
+Schleswig-Holstein State,2021-02-12,687.5,,19.7,19.1,15,4,9,12,18,24,49
+Schleswig-Holstein State,2021-02-13,700.5,,28.1,26.5,21,5,13,18,25,34,71
+Schleswig-Holstein State,2021-02-14,606.5,,10.8,13.9,8,1,4,6,10,13,29
+Schleswig-Holstein State,2021-02-15,360,,9.4,15.9,6,1,3,5,7,11,26
+Schleswig-Holstein State,2021-02-16,406,,41.2,58.7,28,7,16,23,34,47,110
+Schleswig-Holstein State,2021-02-17,846.5,,39.7,51.6,26,6,15,22,33,46,110
+Schleswig-Holstein State,2021-02-18,843.5,,35.2,66.1,21,4,11,17,25,37,104
+Schleswig-Holstein State,2021-02-19,784,,30.5,53.1,17,3,9,14,22,32.2,88.3
+Schleswig-Holstein State,2021-02-20,773,,43.2,77.7,25,5,14,21,32,46,127.2
+Schleswig-Holstein State,2021-02-21,713,,15.7,28.4,9,1,4,7,11,16,50
+Schleswig-Holstein State,2021-02-22,413,,14,34,7,1,4,6,10,13,40
+Schleswig-Holstein State,2021-02-23,471,,64.8,161.1,30,5,16,24,39,56,193
+Schleswig-Holstein State,2021-02-24,985,,76.8,369.6,30,5,16,25,38,60,199.1
+Slaskie,2020-11-30,977,19,,,,,,,,,
+Slaskie,2020-12-01,421,18,,,,,,,,,
+Slaskie,2020-12-02,1084,39,,,,,,,,,
+Slaskie,2020-12-03,1494,65,,,,,,,,,
+Slaskie,2020-12-04,1531,71,,,,,,,,,
+Slaskie,2020-12-05,1355,66,,,,,,,,,
+Slaskie,2020-12-06,1283,51,,,,,,,,,
+Slaskie,2020-12-07,908,23,,,,,,,,,
+Slaskie,2020-12-08,265,10,,,,,,,,,
+Slaskie,2020-12-09,852,64,,,,,,,,,
+Slaskie,2020-12-10,1465,64,,,,,,,,,
+Slaskie,2020-12-11,1251,47,,,,,,,,,
+Slaskie,2020-12-12,1080,68,,,,,,,,,
+Slaskie,2020-12-13,993,62,,,,,,,,,
+Slaskie,2020-12-14,668,17,,,,,,,,,
+Slaskie,2020-12-15,272,3,,,,,,,,,
+Slaskie,2020-12-16,608,45,,,,,,,,,
+Slaskie,2020-12-17,1340,48,,,,,,,,,
+Slaskie,2020-12-18,964,27,,,,,,,,,
+Slaskie,2020-12-19,918,46,,,,,,,,,
+Slaskie,2020-12-20,803,55,,,,,,,,,
+Slaskie,2020-12-21,694,17,,,,,,,,,
+Slaskie,2020-12-22,240,2,,,,,,,,,
+Slaskie,2020-12-23,719,20,,,,,,,,,
+Slaskie,2020-12-24,1269,44,,,,,,,,,
+Slaskie,2020-12-25,1003,42,,,,,,,,,
+Slaskie,2020-12-26,695,21,,,,,,,,,
+Slaskie,2020-12-27,285,2,,,,,,,,,
+Slaskie,2020-12-28,279,3,,,,,,,,,
+Slaskie,2020-12-29,224,4,,,,,,,,,
+Slaskie,2020-12-30,823,38,,,,,,,,,
+Slaskie,2020-12-31,1299,65,,,,,,,,,
+Slaskie,2021-01-01,1046,46,,,,,,,,,
+Slaskie,2021-01-02,885,30,,,,,,,,,
+Slaskie,2021-01-03,431,7,,,,,,,,,
+Slaskie,2021-01-04,288,6,,,,,,,,,
+Slaskie,2021-01-05,282,1,,,,,,,,,
+Slaskie,2021-01-06,740,27,,,,,,,,,
+Slaskie,2021-01-07,1391,54,,,,,,,,,
+Slaskie,2021-01-08,855,15,,,,,,,,,
+Slaskie,2021-01-09,548,25,,,,,,,,,
+Slaskie,2021-01-10,836,38,,,,,,,,,
+Slaskie,2021-01-11,676,9,,,,,,,,,
+Slaskie,2021-01-12,233,3,,,,,,,,,
+Slaskie,2021-01-13,522,41,,,,,,,,,
+Slaskie,2021-01-14,818,37,,,,,,,,,
+Slaskie,2021-01-15,727,19,,,,,,,,,
+Slaskie,2021-01-16,601,42,,,,,,,,,
+Slaskie,2021-01-17,608,33,,,,,,,,,
+Slaskie,2021-01-18,408,6,,,,,,,,,
+Slaskie,2021-01-19,311,4,,,,,,,,,
+Slaskie,2021-01-20,368,31,,,,,,,,,
+Slaskie,2021-01-21,649,35,,,,,,,,,
+Slaskie,2021-01-22,489,27,,,,,,,,,
+Slaskie,2021-01-23,488,33,,,,,,,,,
+Slaskie,2021-01-24,529,30,,,,,,,,,
+Slaskie,2021-01-25,352,7,,,,,,,,,
+Slaskie,2021-01-26,204,,2.6,2,2,0,1,2,3,4,6
+Slaskie,2021-01-27,344,,27.3,11.3,26,11,20,24,29,33,47
+Slaskie,2021-01-28,526.5,,34,14,32,15,25,29,36,41,59
+Slaskie,2021-01-29,481.5,,15.9,7.6,15,6,11,13,17,20,29
+Slaskie,2021-01-30,381,,26.4,10.4,25,12,19,23,28,32,44
+Slaskie,2021-01-31,348.5,,26.1,11.2,25,11,18,22,27,32,45
+Slaskie,2021-02-01,263.5,,5.4,3.2,5,1,3,4,6,7,11
+Slaskie,2021-02-02,158,,2.2,1.9,2,0,1,1,2,3,6
+Slaskie,2021-02-03,272,,23.9,10.7,22,10,17,20,25,29,43
+Slaskie,2021-02-04,422,,29.4,12.3,28,12,21,25,31,36,51
+Slaskie,2021-02-05,365,,14.1,7,13,5,9,12,15,18,27
+Slaskie,2021-02-06,298,,22.7,10.8,21,9,16,19,23,28,42
+Slaskie,2021-02-07,270.5,,22.7,13.5,20,8,15,18,23,28,44
+Slaskie,2021-02-08,207,,5,4.6,4,1,2,4,5,6,11
+Slaskie,2021-02-09,127,,2,2.6,2,0,1,1,2,3,6
+Slaskie,2021-02-10,207.5,,22.4,32.6,18,7,12,15,20,25,45
+Slaskie,2021-02-11,300.5,,28.8,69.8,22,8,15,19,25,31,57
+Slaskie,2021-02-12,288.5,,14.9,43.1,10,3,7,9,12,15,30
+Slaskie,2021-02-13,229,,28.2,164,17,5,11,15,19,25,49
+Slaskie,2021-02-14,209.5,,31.4,263.3,16,5,10,14,19,25,54
+Slaskie,2021-02-15,156,,7.4,63,3,0,2,3,4,6,13
+Slaskie,2021-02-16,93,,3.6,35.3,1,0,0,1,2,3,6
+Slaskie,2021-02-17,167,,76.5,1550.6,15,3,9,12,18,24,57
+Slaskie,2021-02-18,248.5,,168.6,4207.7,17,4,10,14,21,28,75.1
+Slaskie,2021-02-19,212.5,,93.6,2336.3,8,1,5,7,10,14,43
+Slaskie,2021-02-20,174,,259.9,7067.9,14,2,8,11,16,22.2,73
+Slaskie,2021-02-21,156.5,,461.4,13235.4,12,2,7,10,16,23,89.1
+Slaskie,2021-02-22,123,,150.5,4214.5,2,0,1,2,3,5,19
+Slaskie,2021-02-23,76,,48.6,1307.6,1,0,0,1,1,2,8
+Slaskie,2021-02-24,119.5,,1241.8,37246.6,11,1,5,9,14,21,96.2
+Swietokrzyskie,2020-11-30,270,10,,,,,,,,,
+Swietokrzyskie,2020-12-01,192,2,,,,,,,,,
+Swietokrzyskie,2020-12-02,264,6,,,,,,,,,
+Swietokrzyskie,2020-12-03,276,25,,,,,,,,,
+Swietokrzyskie,2020-12-04,353,16,,,,,,,,,
+Swietokrzyskie,2020-12-05,252,19,,,,,,,,,
+Swietokrzyskie,2020-12-06,209,22,,,,,,,,,
+Swietokrzyskie,2020-12-07,187,11,,,,,,,,,
+Swietokrzyskie,2020-12-08,69,7,,,,,,,,,
+Swietokrzyskie,2020-12-09,182,8,,,,,,,,,
+Swietokrzyskie,2020-12-10,178,18,,,,,,,,,
+Swietokrzyskie,2020-12-11,215,14,,,,,,,,,
+Swietokrzyskie,2020-12-12,218,9,,,,,,,,,
+Swietokrzyskie,2020-12-13,183,15,,,,,,,,,
+Swietokrzyskie,2020-12-14,132,1,,,,,,,,,
+Swietokrzyskie,2020-12-15,108,0,,,,,,,,,
+Swietokrzyskie,2020-12-16,174,8,,,,,,,,,
+Swietokrzyskie,2020-12-17,181,11,,,,,,,,,
+Swietokrzyskie,2020-12-18,231,11,,,,,,,,,
+Swietokrzyskie,2020-12-19,180,14,,,,,,,,,
+Swietokrzyskie,2020-12-20,164,16,,,,,,,,,
+Swietokrzyskie,2020-12-21,129,1,,,,,,,,,
+Swietokrzyskie,2020-12-22,65,6,,,,,,,,,
+Swietokrzyskie,2020-12-23,153,15,,,,,,,,,
+Swietokrzyskie,2020-12-24,162,25,,,,,,,,,
+Swietokrzyskie,2020-12-25,166,13,,,,,,,,,
+Swietokrzyskie,2020-12-26,89,5,,,,,,,,,
+Swietokrzyskie,2020-12-27,82,4,,,,,,,,,
+Swietokrzyskie,2020-12-28,51,0,,,,,,,,,
+Swietokrzyskie,2020-12-29,55,0,,,,,,,,,
+Swietokrzyskie,2020-12-30,129,2,,,,,,,,,
+Swietokrzyskie,2020-12-31,159,20,,,,,,,,,
+Swietokrzyskie,2021-01-01,193,10,,,,,,,,,
+Swietokrzyskie,2021-01-02,192,8,,,,,,,,,
+Swietokrzyskie,2021-01-03,98,0,,,,,,,,,
+Swietokrzyskie,2021-01-04,77,0,,,,,,,,,
+Swietokrzyskie,2021-01-05,59,1,,,,,,,,,
+Swietokrzyskie,2021-01-06,88,3,,,,,,,,,
+Swietokrzyskie,2021-01-07,218,12,,,,,,,,,
+Swietokrzyskie,2021-01-08,181,3,,,,,,,,,
+Swietokrzyskie,2021-01-09,89,3,,,,,,,,,
+Swietokrzyskie,2021-01-10,154,13,,,,,,,,,
+Swietokrzyskie,2021-01-11,151,1,,,,,,,,,
+Swietokrzyskie,2021-01-12,97,0,,,,,,,,,
+Swietokrzyskie,2021-01-13,108,11,,,,,,,,,
+Swietokrzyskie,2021-01-14,131,12,,,,,,,,,
+Swietokrzyskie,2021-01-15,164,4,,,,,,,,,
+Swietokrzyskie,2021-01-16,127,9,,,,,,,,,
+Swietokrzyskie,2021-01-17,120,2,,,,,,,,,
+Swietokrzyskie,2021-01-18,125,1,,,,,,,,,
+Swietokrzyskie,2021-01-19,73,0,,,,,,,,,
+Swietokrzyskie,2021-01-20,77,4,,,,,,,,,
+Swietokrzyskie,2021-01-21,125,13,,,,,,,,,
+Swietokrzyskie,2021-01-22,147,26,,,,,,,,,
+Swietokrzyskie,2021-01-23,125,8,,,,,,,,,
+Swietokrzyskie,2021-01-24,90,15,,,,,,,,,
+Swietokrzyskie,2021-01-25,81,1,,,,,,,,,
+Swietokrzyskie,2021-01-26,54,,0.8,1.6,0,0,0,0,0.4,1,3
+Swietokrzyskie,2021-01-27,77,,6.3,7.3,4,0,2,3,6,8,19
+Swietokrzyskie,2021-01-28,90,,9.8,9.8,7,0,3,5,9,13,29
+Swietokrzyskie,2021-01-29,109,,8.7,8.3,7,0,3,5,8,12,24
+Swietokrzyskie,2021-01-30,87,,5.7,5.8,4,0,2,3,5,8,17
+Swietokrzyskie,2021-01-31,80,,7.5,7.7,6,0,2,4,7,10,21
+Swietokrzyskie,2021-02-01,54,,1,1.6,0,0,0,0,1,1,4
+Swietokrzyskie,2021-02-02,40,,0.7,1.3,0,0,0,0,0,1,3
+Swietokrzyskie,2021-02-03,58,,5.2,5.8,3,0,1,3,5,7,16
+Swietokrzyskie,2021-02-04,65,,7.6,8,5,0,2,4,7,10,23
+Swietokrzyskie,2021-02-05,76,,7.4,7.7,5,0,2,4,6,10,23
+Swietokrzyskie,2021-02-06,63.5,,4.8,5.5,3,0,1,2,4,6,14
+Swietokrzyskie,2021-02-07,59,,6.4,6.9,4,0,2,3,6,9,20
+Swietokrzyskie,2021-02-08,38.5,,0.9,1.4,0,0,0,0,1,1,3
+Swietokrzyskie,2021-02-09,28,,0.7,1.4,0,0,0,0,0,1,3
+Swietokrzyskie,2021-02-10,42,,4.6,5.4,3,0,1,2,4,6,15
+Swietokrzyskie,2021-02-11,48,,7.1,8.3,5,0,2,3,6,10,23
+Swietokrzyskie,2021-02-12,55,,6.5,7.2,4,0,2,3,6,9,20
+Swietokrzyskie,2021-02-13,45,,4.4,5.7,3,0,1,2,4,6,15
+Swietokrzyskie,2021-02-14,41,,5.7,7.2,4,0,1,3,5,8,18
+Swietokrzyskie,2021-02-15,28,,0.8,1.7,0,0,0,0,1,1,3
+Swietokrzyskie,2021-02-16,20,,0.6,1.5,0,0,0,0,0,1,3
+Swietokrzyskie,2021-02-17,29,,4.1,8.3,2,0,1,1,3,5,15
+Swietokrzyskie,2021-02-18,33,,6.7,11.8,4,0,1,2,5,7,24
+Swietokrzyskie,2021-02-19,39,,5.8,10.8,3,0,1,2,4,6,20
+Swietokrzyskie,2021-02-20,33,,4.5,8.6,2,0,1,1,3,5,17
+Swietokrzyskie,2021-02-21,29,,5.7,11.6,2,0,1,2,4,6,21
+Swietokrzyskie,2021-02-22,21,,0.9,3.6,0,0,0,0,0,1,3
+Swietokrzyskie,2021-02-23,14,,0.8,4.2,0,0,0,0,0,1,3
+Swietokrzyskie,2021-02-24,20.5,,4.9,27.2,1,0,0,1,2,4,16
+Warminsko-Mazurskie,2020-11-30,618,7,,,,,,,,,
+Warminsko-Mazurskie,2020-12-01,327,9,,,,,,,,,
+Warminsko-Mazurskie,2020-12-02,534,36,,,,,,,,,
+Warminsko-Mazurskie,2020-12-03,785,31,,,,,,,,,
+Warminsko-Mazurskie,2020-12-04,1058,49,,,,,,,,,
+Warminsko-Mazurskie,2020-12-05,964,27,,,,,,,,,
+Warminsko-Mazurskie,2020-12-06,762,18,,,,,,,,,
+Warminsko-Mazurskie,2020-12-07,692,11,,,,,,,,,
+Warminsko-Mazurskie,2020-12-08,217,4,,,,,,,,,
+Warminsko-Mazurskie,2020-12-09,528,27,,,,,,,,,
+Warminsko-Mazurskie,2020-12-10,651,21,,,,,,,,,
+Warminsko-Mazurskie,2020-12-11,897,30,,,,,,,,,
+Warminsko-Mazurskie,2020-12-12,1198,17,,,,,,,,,
+Warminsko-Mazurskie,2020-12-13,736,26,,,,,,,,,
+Warminsko-Mazurskie,2020-12-14,646,30,,,,,,,,,
+Warminsko-Mazurskie,2020-12-15,275,1,,,,,,,,,
+Warminsko-Mazurskie,2020-12-16,572,23,,,,,,,,,
+Warminsko-Mazurskie,2020-12-17,815,31,,,,,,,,,
+Warminsko-Mazurskie,2020-12-18,935,27,,,,,,,,,
+Warminsko-Mazurskie,2020-12-19,827,19,,,,,,,,,
+Warminsko-Mazurskie,2020-12-20,707,36,,,,,,,,,
+Warminsko-Mazurskie,2020-12-21,612,1,,,,,,,,,
+Warminsko-Mazurskie,2020-12-22,171,1,,,,,,,,,
+Warminsko-Mazurskie,2020-12-23,578,20,,,,,,,,,
+Warminsko-Mazurskie,2020-12-24,981,32,,,,,,,,,
+Warminsko-Mazurskie,2020-12-25,839,33,,,,,,,,,
+Warminsko-Mazurskie,2020-12-26,607,0,,,,,,,,,
+Warminsko-Mazurskie,2020-12-27,315,1,,,,,,,,,
+Warminsko-Mazurskie,2020-12-28,188,1,,,,,,,,,
+Warminsko-Mazurskie,2020-12-29,136,0,,,,,,,,,
+Warminsko-Mazurskie,2020-12-30,765,33,,,,,,,,,
+Warminsko-Mazurskie,2020-12-31,988,15,,,,,,,,,
+Warminsko-Mazurskie,2021-01-01,1061,54,,,,,,,,,
+Warminsko-Mazurskie,2021-01-02,825,11,,,,,,,,,
+Warminsko-Mazurskie,2021-01-03,321,0,,,,,,,,,
+Warminsko-Mazurskie,2021-01-04,376,5,,,,,,,,,
+Warminsko-Mazurskie,2021-01-05,139,8,,,,,,,,,
+Warminsko-Mazurskie,2021-01-06,601,30,,,,,,,,,
+Warminsko-Mazurskie,2021-01-07,1082,15,,,,,,,,,
+Warminsko-Mazurskie,2021-01-08,709,10,,,,,,,,,
+Warminsko-Mazurskie,2021-01-09,486,26,,,,,,,,,
+Warminsko-Mazurskie,2021-01-10,928,27,,,,,,,,,
+Warminsko-Mazurskie,2021-01-11,515,0,,,,,,,,,
+Warminsko-Mazurskie,2021-01-12,210,3,,,,,,,,,
+Warminsko-Mazurskie,2021-01-13,483,23,,,,,,,,,
+Warminsko-Mazurskie,2021-01-14,626,19,,,,,,,,,
+Warminsko-Mazurskie,2021-01-15,690,29,,,,,,,,,
+Warminsko-Mazurskie,2021-01-16,420,21,,,,,,,,,
+Warminsko-Mazurskie,2021-01-17,547,28,,,,,,,,,
+Warminsko-Mazurskie,2021-01-18,287,2,,,,,,,,,
+Warminsko-Mazurskie,2021-01-19,108,0,,,,,,,,,
+Warminsko-Mazurskie,2021-01-20,354,27,,,,,,,,,
+Warminsko-Mazurskie,2021-01-21,549,23,,,,,,,,,
+Warminsko-Mazurskie,2021-01-22,415,26,,,,,,,,,
+Warminsko-Mazurskie,2021-01-23,476,27,,,,,,,,,
+Warminsko-Mazurskie,2021-01-24,361,27,,,,,,,,,
+Warminsko-Mazurskie,2021-01-25,170,1,,,,,,,,,
+Warminsko-Mazurskie,2021-01-26,171,,3.5,3.3,3,0,1,2,3,5,10
+Warminsko-Mazurskie,2021-01-27,259,,21.6,13.2,19,5,13,16,22,28,46
+Warminsko-Mazurskie,2021-01-28,365,,16.5,10.4,15,4,9,12,17,21,34
+Warminsko-Mazurskie,2021-01-29,399,,18.3,11.2,16,4,11,14,19,23,39
+Warminsko-Mazurskie,2021-01-30,339.5,,18.7,12.2,16,5,11,14,19,24,40
+Warminsko-Mazurskie,2021-01-31,291,,20.5,12.4,18,5,12,16,21,26,45
+Warminsko-Mazurskie,2021-02-01,205,,1.8,1.8,1,0,0,1,2,3,5
+Warminsko-Mazurskie,2021-02-02,137,,3,2.7,2,0,1,2,3,4,8
+Warminsko-Mazurskie,2021-02-03,213,,17.2,11,15,4,10,14,18,22,35
+Warminsko-Mazurskie,2021-02-04,291,,13.2,9.2,12,3,7,10,14,17,29
+Warminsko-Mazurskie,2021-02-05,312,,15,9.6,13,3,8,11,15,19,33
+Warminsko-Mazurskie,2021-02-06,273,,15.9,10.6,14,3,9,12,16,21,34
+Warminsko-Mazurskie,2021-02-07,241,,17.2,11.2,15,4,10,13,18,22,36
+Warminsko-Mazurskie,2021-02-08,169.5,,1.5,1.6,1,0,0,1,1,2,5
+Warminsko-Mazurskie,2021-02-09,115,,2.4,2.2,2,0,1,1,2,3,7
+Warminsko-Mazurskie,2021-02-10,173,,14.2,9.3,12,3,8,11,14,19,31
+Warminsko-Mazurskie,2021-02-11,242.5,,11.2,8,9.5,2,6,8,11,14.2,25
+Warminsko-Mazurskie,2021-02-12,245,,12,8.7,10,2,7,9,12,15,27
+Warminsko-Mazurskie,2021-02-13,224,,13.1,9.2,11,2,7,9.6,13,17,30
+Warminsko-Mazurskie,2021-02-14,200,,14.7,10.4,13,2.9,8,11,15,19,32
+Warminsko-Mazurskie,2021-02-15,140.5,,1.2,1.4,1,0,0,1,1,2,4
+Warminsko-Mazurskie,2021-02-16,92,,1.9,1.8,1,0,1,1,2,3,5
+Warminsko-Mazurskie,2021-02-17,145,,12.3,9.7,10,2,6,9,12,16,28
+Warminsko-Mazurskie,2021-02-18,199.5,,9.4,7.3,8,1,5,6,9,12,23
+Warminsko-Mazurskie,2021-02-19,202.5,,10.6,9.2,9,1,5,7,11,14,25
+Warminsko-Mazurskie,2021-02-20,186,,10.6,8.7,9,1.9,5,7,11,14,27
+Warminsko-Mazurskie,2021-02-21,160,,12.3,9.8,10,1,6,8,12,16,30
+Warminsko-Mazurskie,2021-02-22,119,,1,1.3,1,0,0,0,1,2,4
+Warminsko-Mazurskie,2021-02-23,74,,1.7,1.9,1,0,0,1,2,2,6
+Warminsko-Mazurskie,2021-02-24,114,,10.9,9.4,9,1,5,7,11,14,26
+Wielkopolskie,2020-11-30,1574,21,,,,,,,,,
+Wielkopolskie,2020-12-01,532,30,,,,,,,,,
+Wielkopolskie,2020-12-02,796,17,,,,,,,,,
+Wielkopolskie,2020-12-03,1577,56,,,,,,,,,
+Wielkopolskie,2020-12-04,1755,61,,,,,,,,,
+Wielkopolskie,2020-12-05,1380,40,,,,,,,,,
+Wielkopolskie,2020-12-06,1195,44,,,,,,,,,
+Wielkopolskie,2020-12-07,1096,26,,,,,,,,,
+Wielkopolskie,2020-12-08,424,13,,,,,,,,,
+Wielkopolskie,2020-12-09,580,21,,,,,,,,,
+Wielkopolskie,2020-12-10,1213,57,,,,,,,,,
+Wielkopolskie,2020-12-11,1672,49,,,,,,,,,
+Wielkopolskie,2020-12-12,1411,49,,,,,,,,,
+Wielkopolskie,2020-12-13,1032,58,,,,,,,,,
+Wielkopolskie,2020-12-14,1132,31,,,,,,,,,
+Wielkopolskie,2020-12-15,392,43,,,,,,,,,
+Wielkopolskie,2020-12-16,639,46,,,,,,,,,
+Wielkopolskie,2020-12-17,1373,73,,,,,,,,,
+Wielkopolskie,2020-12-18,1555,51,,,,,,,,,
+Wielkopolskie,2020-12-19,1148,33,,,,,,,,,
+Wielkopolskie,2020-12-20,1197,79,,,,,,,,,
+Wielkopolskie,2020-12-21,1151,24,,,,,,,,,
+Wielkopolskie,2020-12-22,302,32,,,,,,,,,
+Wielkopolskie,2020-12-23,574,24,,,,,,,,,
+Wielkopolskie,2020-12-24,1391,67,,,,,,,,,
+Wielkopolskie,2020-12-25,1605,82,,,,,,,,,
+Wielkopolskie,2020-12-26,1045,44,,,,,,,,,
+Wielkopolskie,2020-12-27,518,15,,,,,,,,,
+Wielkopolskie,2020-12-28,387,18,,,,,,,,,
+Wielkopolskie,2020-12-29,309,7,,,,,,,,,
+Wielkopolskie,2020-12-30,647,35,,,,,,,,,
+Wielkopolskie,2020-12-31,1585,54,,,,,,,,,
+Wielkopolskie,2021-01-01,1469,58,,,,,,,,,
+Wielkopolskie,2021-01-02,1249,48,,,,,,,,,
+Wielkopolskie,2021-01-03,915,24,,,,,,,,,
+Wielkopolskie,2021-01-04,495,21,,,,,,,,,
+Wielkopolskie,2021-01-05,317,17,,,,,,,,,
+Wielkopolskie,2021-01-06,802,18,,,,,,,,,
+Wielkopolskie,2021-01-07,1488,45,,,,,,,,,
+Wielkopolskie,2021-01-08,1609,27,,,,,,,,,
+Wielkopolskie,2021-01-09,774,30,,,,,,,,,
+Wielkopolskie,2021-01-10,1151,54,,,,,,,,,
+Wielkopolskie,2021-01-11,1106,23,,,,,,,,,
+Wielkopolskie,2021-01-12,446,10,,,,,,,,,
+Wielkopolskie,2021-01-13,483,16,,,,,,,,,
+Wielkopolskie,2021-01-14,1014,65,,,,,,,,,
+Wielkopolskie,2021-01-15,1058,65,,,,,,,,,
+Wielkopolskie,2021-01-16,768,38,,,,,,,,,
+Wielkopolskie,2021-01-17,696,45,,,,,,,,,
+Wielkopolskie,2021-01-18,828,40,,,,,,,,,
+Wielkopolskie,2021-01-19,224,17,,,,,,,,,
+Wielkopolskie,2021-01-20,413,27,,,,,,,,,
+Wielkopolskie,2021-01-21,683,50,,,,,,,,,
+Wielkopolskie,2021-01-22,740,36,,,,,,,,,
+Wielkopolskie,2021-01-23,672,37,,,,,,,,,
+Wielkopolskie,2021-01-24,600,30,,,,,,,,,
+Wielkopolskie,2021-01-25,509,23,,,,,,,,,
+Wielkopolskie,2021-01-26,272,,12.6,6,12,4,8,10,13,16,24
+Wielkopolskie,2021-01-27,351.5,,17.5,9.3,16,6,11,14,18,22,34
+Wielkopolskie,2021-01-28,600,,41.1,17.6,39,17,29,35,43,50,73
+Wielkopolskie,2021-01-29,644,,32.3,14.8,30,13,22,27,34,40,58
+Wielkopolskie,2021-01-30,497.5,,26.9,12.3,25,11,19,23,28,33,49
+Wielkopolskie,2021-01-31,452.5,,31.5,13.8,29,13,22,27,32,38,56
+Wielkopolskie,2021-02-01,381,,19.1,9.5,18,8,13,16,20,23,35
+Wielkopolskie,2021-02-02,224,,10,5.2,9,3,6,8,11,13,19
+Wielkopolskie,2021-02-03,276,,14.2,7.5,13,5,9,11,15,18,29
+Wielkopolskie,2021-02-04,478,,34,16.1,32,13,23,28,35,41,62
+Wielkopolskie,2021-02-05,525,,27.2,13.9,25,10,18,22,28,33,52
+Wielkopolskie,2021-02-06,395,,22.3,11.2,21,8,14,18,23,28,44
+Wielkopolskie,2021-02-07,365,,26.2,12.8,24,9.9,18,22,27,32,49
+Wielkopolskie,2021-02-08,312,,16.1,8.4,15,5,10,13,17,20,31
+Wielkopolskie,2021-02-09,169,,8.4,5.1,7,2,5,6,9,11,18
+Wielkopolskie,2021-02-10,231.5,,11.8,7.3,10,3,7,9,12,15,27
+Wielkopolskie,2021-02-11,374.5,,27.7,14.8,25,9,17,22,28.4,35,53
+Wielkopolskie,2021-02-12,406,,22.3,12.5,20,7,14,17.6,23,29,42
+Wielkopolskie,2021-02-13,314,,18.8,11.3,16,5,11,14,19,24,41
+Wielkopolskie,2021-02-14,291,,22,13.9,19,6,13,16,22,28,46
+Wielkopolskie,2021-02-15,249.5,,13.3,8.8,12,3,7,10,14,17,29
+Wielkopolskie,2021-02-16,137.5,,7.3,5.8,6,1,3,5,7,9,18
+Wielkopolskie,2021-02-17,180,,10.1,7.6,8,1.9,5,7,10,13,23
+Wielkopolskie,2021-02-18,310.5,,23.8,21.7,20,5,12.8,17,24,30,52
+Wielkopolskie,2021-02-19,316.5,,19.6,16.6,16,4,10,13,19,25,45
+Wielkopolskie,2021-02-20,252,,16.3,20.7,13,3,7,11,16,21,37
+Wielkopolskie,2021-02-21,235.5,,19.5,19.9,16,4,9,13,19,25,44
+Wielkopolskie,2021-02-22,203.5,,12,11.6,9,2,5,7,11,15,30
+Wielkopolskie,2021-02-23,108.5,,6.7,11.5,5,0,2,4,6,9,17
+Wielkopolskie,2021-02-24,137,,9,10.4,6.5,1,3,5,8,12,24
+Zachodniopomorskie,2020-11-30,780,6,,,,,,,,,
+Zachodniopomorskie,2020-12-01,599,1,,,,,,,,,
+Zachodniopomorskie,2020-12-02,461,8,,,,,,,,,
+Zachodniopomorskie,2020-12-03,751,24,,,,,,,,,
+Zachodniopomorskie,2020-12-04,939,26,,,,,,,,,
+Zachodniopomorskie,2020-12-05,999,28,,,,,,,,,
+Zachodniopomorskie,2020-12-06,974,20,,,,,,,,,
+Zachodniopomorskie,2020-12-07,674,16,,,,,,,,,
+Zachodniopomorskie,2020-12-08,529,1,,,,,,,,,
+Zachodniopomorskie,2020-12-09,486,16,,,,,,,,,
+Zachodniopomorskie,2020-12-10,932,35,,,,,,,,,
+Zachodniopomorskie,2020-12-11,956,8,,,,,,,,,
+Zachodniopomorskie,2020-12-12,1110,30,,,,,,,,,
+Zachodniopomorskie,2020-12-13,973,17,,,,,,,,,
+Zachodniopomorskie,2020-12-14,593,16,,,,,,,,,
+Zachodniopomorskie,2020-12-15,561,2,,,,,,,,,
+Zachodniopomorskie,2020-12-16,328,4,,,,,,,,,
+Zachodniopomorskie,2020-12-17,1064,24,,,,,,,,,
+Zachodniopomorskie,2020-12-18,1124,17,,,,,,,,,
+Zachodniopomorskie,2020-12-19,956,29,,,,,,,,,
+Zachodniopomorskie,2020-12-20,974,26,,,,,,,,,
+Zachodniopomorskie,2020-12-21,773,8,,,,,,,,,
+Zachodniopomorskie,2020-12-22,561,2,,,,,,,,,
+Zachodniopomorskie,2020-12-23,391,24,,,,,,,,,
+Zachodniopomorskie,2020-12-24,989,19,,,,,,,,,
+Zachodniopomorskie,2020-12-25,1005,28,,,,,,,,,
+Zachodniopomorskie,2020-12-26,990,27,,,,,,,,,
+Zachodniopomorskie,2020-12-27,557,4,,,,,,,,,
+Zachodniopomorskie,2020-12-28,270,3,,,,,,,,,
+Zachodniopomorskie,2020-12-29,282,0,,,,,,,,,
+Zachodniopomorskie,2020-12-30,713,9,,,,,,,,,
+Zachodniopomorskie,2020-12-31,996,30,,,,,,,,,
+Zachodniopomorskie,2021-01-01,900,33,,,,,,,,,
+Zachodniopomorskie,2021-01-02,951,18,,,,,,,,,
+Zachodniopomorskie,2021-01-03,538,3,,,,,,,,,
+Zachodniopomorskie,2021-01-04,518,4,,,,,,,,,
+Zachodniopomorskie,2021-01-05,436,3,,,,,,,,,
+Zachodniopomorskie,2021-01-06,569,8,,,,,,,,,
+Zachodniopomorskie,2021-01-07,921,30,,,,,,,,,
+Zachodniopomorskie,2021-01-08,1324,18,,,,,,,,,
+Zachodniopomorskie,2021-01-09,554,15,,,,,,,,,
+Zachodniopomorskie,2021-01-10,843,37,,,,,,,,,
+Zachodniopomorskie,2021-01-11,936,13,,,,,,,,,
+Zachodniopomorskie,2021-01-12,570,5,,,,,,,,,
+Zachodniopomorskie,2021-01-13,400,9,,,,,,,,,
+Zachodniopomorskie,2021-01-14,700,42,,,,,,,,,
+Zachodniopomorskie,2021-01-15,788,28,,,,,,,,,
+Zachodniopomorskie,2021-01-16,749,26,,,,,,,,,
+Zachodniopomorskie,2021-01-17,629,31,,,,,,,,,
+Zachodniopomorskie,2021-01-18,324,20,,,,,,,,,
+Zachodniopomorskie,2021-01-19,292,1,,,,,,,,,
+Zachodniopomorskie,2021-01-20,392,14,,,,,,,,,
+Zachodniopomorskie,2021-01-21,550,21,,,,,,,,,
+Zachodniopomorskie,2021-01-22,469,26,,,,,,,,,
+Zachodniopomorskie,2021-01-23,504,19,,,,,,,,,
+Zachodniopomorskie,2021-01-24,477,14,,,,,,,,,
+Zachodniopomorskie,2021-01-25,259,6,,,,,,,,,
+Zachodniopomorskie,2021-01-26,263,,2.8,2.6,2,0,1,2,3,4,7
+Zachodniopomorskie,2021-01-27,222,,8.4,6.1,7,2,5,6,8,11,20
+Zachodniopomorskie,2021-01-28,351,,22.7,13.9,20,6,13,17,23,29,49
+Zachodniopomorskie,2021-01-29,351,,17.8,10.6,16,5,10,14,18,23,38
+Zachodniopomorskie,2021-01-30,322,,14.6,9.4,13,4,8,11,15,18,32
+Zachodniopomorskie,2021-01-31,276.5,,19.3,13.9,16,5,11,14,19,24,43
+Zachodniopomorskie,2021-02-01,207,,7.2,4.9,6,1,4,5,7,10,16
+Zachodniopomorskie,2021-02-02,170.5,,2.1,2,2,0,1,1,2,3,6
+Zachodniopomorskie,2021-02-03,146,,6.3,4.7,5,1,3,4,6,8,15
+Zachodniopomorskie,2021-02-04,225,,17.3,13,14,3,9,12,17,22,40
+Zachodniopomorskie,2021-02-05,227.5,,13.3,8.9,12,3,7,10,13,17,29
+Zachodniopomorskie,2021-02-06,212,,10.9,7.7,9,2,6,8,11,14,25
+Zachodniopomorskie,2021-02-07,185,,13.6,10.5,11,2,7,10,13,17,32
+Zachodniopomorskie,2021-02-08,132,,5.3,4.5,4,1,2,3,5,7,14
+Zachodniopomorskie,2021-02-09,110.5,,1.6,1.9,1,0,0,1,1,2,5
+Zachodniopomorskie,2021-02-10,94,,4.5,4,4,0,2,3,4,6,12
+Zachodniopomorskie,2021-02-11,145.5,,11.7,9.4,10,2,6,8,12,15,28
+Zachodniopomorskie,2021-02-12,154.5,,8.9,6.8,7,1,4,6,9,12,21
+Zachodniopomorskie,2021-02-13,139,,7.6,6.5,6,1,3,5,7,10,19
+Zachodniopomorskie,2021-02-14,116,,10,8.3,8,1,4,6,10,13,25
+Zachodniopomorskie,2021-02-15,87.5,,3.9,3.6,3,0,1,2,4,5,11
+Zachodniopomorskie,2021-02-16,74,,1.1,1.5,1,0,0,0,1,2,4
+Zachodniopomorskie,2021-02-17,60,,3.4,3.5,2,0,1,2,3,5,10
+Zachodniopomorskie,2021-02-18,95,,8.8,8.5,7,1,3,5,8,12,23
+Zachodniopomorskie,2021-02-19,96.5,,6.7,6.4,5,0,3,4,6,9,19
+Zachodniopomorskie,2021-02-20,89,,5.5,6.2,4,0,2,3,5,7,16
+Zachodniopomorskie,2021-02-21,79,,7.3,8.4,5,0,2,4,7,10,20
+Zachodniopomorskie,2021-02-22,53,,2.9,3.9,2,0,1,1,3,4,9
+Zachodniopomorskie,2021-02-23,46,,0.8,1.4,0,0,0,0,1,1,3
+Zachodniopomorskie,2021-02-24,40,,2.6,3.7,1.5,0,0,1,2,3.2,9
