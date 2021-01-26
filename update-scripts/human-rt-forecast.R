@@ -170,33 +170,33 @@ forecast_samples_daily <- forecast_samples %>%
   dplyr::mutate(value = zoo::na.approx(value))
   
 
-
-crowd_rt <- data.table::copy(forecast_samples_daily)
-setDT(crowd_rt)
-
-crowd_rt %>%
-  dplyr::select(-forecaster_id, -sample) %>%
-  dplyr::group_by(location, target_type, target_end_date) %>%
-  tidyr::nest(data = c(value)) %>%
-  dplyr::mutate(data = data[sample(1:200)])
-
-
-  dplyr::summarise(n = dplyr::n()) %>%
-  dplyr::pull(n) %>%
-  unique()
-
-?nest()
-
-crowd_rt <- crowd_rt[, .(location, target = paste0(target_type, "s"),
-                         date = target_end_date, value = round(value, 3))]
-
-crowd_rt$forecaster_id %>% unique()
-
-crowd_rt[, sample := 1:.N, by = .(location, date, target)]
-crowd_rt[location %in% "GM", location := "Germany"]
-crowd_rt[location %in% "PL", location := "Poland"]
-crowd_rt[]
-setorder(crowd_rt, location, target, date)
+# provisional code to think about extracting samples differently
+# crowd_rt <- data.table::copy(forecast_samples_daily)
+# setDT(crowd_rt)
+# 
+# crowd_rt %>%
+#   dplyr::select(-forecaster_id, -sample) %>%
+#   dplyr::group_by(location, target_type, target_end_date) %>%
+#   tidyr::nest(data = c(value)) %>%
+#   dplyr::mutate(data = data[sample(1:200)])
+# 
+# 
+#   dplyr::summarise(n = dplyr::n()) %>%
+#   dplyr::pull(n) %>%
+#   unique()
+# 
+# ?nest()
+# 
+# crowd_rt <- crowd_rt[, .(location, target = paste0(target_type, "s"),
+#                          date = target_end_date, value = round(value, 3))]
+# 
+# crowd_rt$forecaster_id %>% unique()
+# 
+# crowd_rt[, sample := 1:.N, by = .(location, date, target)]
+# crowd_rt[location %in% "GM", location := "Germany"]
+# crowd_rt[location %in% "PL", location := "Poland"]
+# crowd_rt[]
+# setorder(crowd_rt, location, target, date)
 
 
 
@@ -229,10 +229,10 @@ plot
 
 
 
-
-
-crowd_rt <- fread(here("rt-crowd-forecast", "processed-forecast-data",
-                       paste0(target_date, "-processed-forecasts.csv")))
+# 
+# 
+# crowd_rt <- fread(here("rt-crowd-forecast", "processed-forecast-data",
+#                        paste0(target_date, "-processed-forecasts.csv")))
 # dropped redundant columns and get correct shape
 
 
