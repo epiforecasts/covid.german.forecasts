@@ -308,10 +308,6 @@ epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
 data.table::fwrite(epinow_forecasts, 
                    "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
 
-# copy data into human forecast performance board app
-file.copy(from = here::here("human-forecasts", "processed-forecast-data"), 
-          to = here::here("human-forecasts", "performance-board"), recursive = TRUE)
-
 
 
 

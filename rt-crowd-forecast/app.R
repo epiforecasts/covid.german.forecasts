@@ -36,7 +36,7 @@ if (dir.exists("rt-forecast")) {
                      "rt-crowd-forecast/external-ressources/observations.csv")
   
 } else {
-  obs_filt_rt <- read.csv("external-ressources/observations.csv") 
+  obs_filt_rt <- read.csv("external-ressources/observations.csv")
 }
 
 crowdforecastr::run_app(data = obs_filt_rt,
@@ -46,6 +46,8 @@ crowdforecastr::run_app(data = obs_filt_rt,
                         horizons = 7,
                         horizon_interval = 7,
                         google_account_mail = "epiforecasts@gmail.com", 
+                        force_increasing_uncertainty = FALSE,
+                        default_distribution = "normal",
                         forecast_sheet_id = "1g4OBCcDGHn_li01R8xbZ4PFNKQmV-SHSXFlv2Qv79Ks",
                         user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
                         path_past_forecasts = "external_ressources/processed-forecast-data/")
