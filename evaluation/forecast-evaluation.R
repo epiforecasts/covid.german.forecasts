@@ -1,6 +1,106 @@
-# load data --------------------------------------------------------------------
-
+# packages ---------------------------------------------------------------------
 library(magrittr)
+
+
+# read in the EpiExpert ensemble forecast and EpiNow2 models
+folders <- list.files("submissions/human-forecasts/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/human-forecasts/", 
+                                                 folder_name))
+                      paste(paste0("submissions/human-forecasts/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epiexpert_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiExpert-ensemble", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epiexpert_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epiexpert-forecasts.csv")
+
+
+
+
+# also read all EpiNow2 forecasts, give them a board_name 
+folders <- list.files("submissions/rt-forecasts/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/rt-forecasts/", 
+                                                 folder_name))
+                      paste(paste0("submissions/rt-forecasts/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiNow2", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epinow_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
+
+
+
+
+
+# also read all EpiNow2 secondary forecasts, give them a board_name 
+folders <- list.files("submissions/deaths-from-cases/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/deaths-from-cases/", 
+                                                 folder_name))
+                      paste(paste0("submissions/deaths-from-cases/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "EpiNow2_secondary", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epinow_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-epinow2_secondary-forecasts.csv")
+
+
+
+# also read all EpiNow2 Rt crowd forecasts, give them a board_name 
+folders <- list.files("submissions/crowd-rt-forecasts/")
+files <- purrr::map(folders, 
+                    .f = function(folder_name) {
+                      files <- list.files(paste0("submissions/crowd-rt-forecasts/", 
+                                                 folder_name))
+                      paste(paste0("submissions/crowd-rt-forecasts/", 
+                                   folder_name, "/", 
+                                   files))
+                    }) %>%
+  unlist()
+epinow__crowd_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
+  dplyr::mutate(board_name = "Crowd-Rt-Forecast", 
+                submission_date = forecast_date,
+                horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
+  dplyr::filter(grepl("inc", target), 
+                type == "quantile")
+
+data.table::fwrite(epinow__crowd_forecasts, 
+                   "human-forecasts/processed-forecast-data/all-crowd-rt-forecasts.csv")
+
+
+
+
+
+
+# load data --------------------------------------------------------------------
 root_dir <- "human-forecasts/processed-forecast-data/"
 file_paths_forecast <- paste0(root_dir, list.files(root_dir))
 

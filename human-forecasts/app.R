@@ -5,16 +5,27 @@
 library(magrittr)
 library(crowdforecastr)
 
-# devtools::install_github("epiforecasts/crowdforecastr")
+# load submission date from data if on server
+if (!dir.exists("human-forecasts")) {
+  submission_date <- readRDS("data/submission_date.RDS")
+} else {
+  submision_date <- as.Date("2020-02-01")
+}
 
+# set first forecast date to the Saturday after that
+first_forecast_date <- submission_date + 5
+
+# load deaths
 deaths_inc <- data.table::fread("data/weekly-incident-deaths.csv") %>%
   dplyr::mutate(inc = "incident",
                 type = "deaths")
 
+# load cases
 cases_inc <- data.table::fread("data/weekly-incident-cases.csv") %>%
   dplyr::mutate(inc = "incident",
                 type = "cases")
 
+# bind together and sort according to date
 observations <- dplyr::bind_rows(deaths_inc,
                                  cases_inc)  %>%
   # this has to be treated with care depending on when you update the data
@@ -22,10 +33,13 @@ observations <- dplyr::bind_rows(deaths_inc,
   dplyr::rename(target_type = type) %>%
   dplyr::arrange(location_name, target_type, target_end_date)
 
+# run app
 crowdforecastr::run_app(data = observations, 
-                        first_forecast_date = "2021-01-30",
+                        first_forecast_date = as.character(first_forecast_date),
                         selection_vars = c("location_name", "target_type"),
                         google_account_mail = "epiforecasts@gmail.com",
                         forecast_sheet_id = "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI",
                         user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
-                        submission_date = "2021-01-25")
+                        submission_date = as.character(submission_date))
+
+
