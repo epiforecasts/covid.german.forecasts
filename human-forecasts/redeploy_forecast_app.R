@@ -12,12 +12,12 @@ next_monday <- function(date){
 
 # if today is not Monday, set submission date to the next Monday
 if (weekdays(Sys.Date()) != "Monday") {
-  submisison_date <- next_monday(Sys.Date())
+  submission_date <- next_monday(Sys.Date())
 } else {
   submission_date <- Sys.Date()
 }
 
-saveRDS(submisison_date, "human-forecasts/data/submission_date.RDS")
+saveRDS(submission_date, "human-forecasts/data/submission_date.RDS")
 
 
 
