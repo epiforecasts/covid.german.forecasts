@@ -27,7 +27,6 @@ Imports:
     lubridate
 Suggests:
     covidregionaldata,
-    crowdforecastr,
     EpiNow2,
     here,
     future,
