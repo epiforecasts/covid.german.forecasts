@@ -1,11 +1,21 @@
-# Packages ----------------------------------------------------------------
-library(EpiNow2)
-library(data.table)
-library(lubridate)
-library(here)
-source(here::here("functions/dates-to-epiweek.R"))
- 
+#' Format Forecasts
+#'
+#' @param forecasts A data frame of forecasts containing the following variables:
+#' `date`, `value`, `region`, and `sample`.
+#' @param locations A data frame data dictionary linking locations with location names.
+#' Must contain: `location` and `location_name`
+#' @param cumulative A data frame but defaults to NULL. Previous cumulative case 
+#' counts. Must contain: `target_end_date`, `location`, and `value`.
+#' @param forecast_date A date indicating when the forecast took place.
+#' @param submission_date A date indicating the target submission date.
+#' @param CrI_samples A fraction of the posterior samples to include. Defaults to 1.
+#' Can be helpful for models that have more uncertainty than is reasonable.
+#' @param target_value Character string indicating the target value name.
+#' @return A data frame
+#' @export
+#' @importFrom data.table rbindlist setorder setcolorder := .N .SD
 format_forecast<- function(forecasts, 
+                           locations,
                            cumulative = NULL,
                            forecast_date = NULL, 
                            submission_date = NULL,
@@ -40,20 +50,19 @@ format_forecast<- function(forecasts,
                                               location_name = region)]
   
   ## add in location from cumulative
-  locations <- unique(data.table::copy(cumulative)[, .(location, location_name)])
-  forecasts_format <- merge(forecasts_format, locations, by = "location_name", all.x = TRUE)
+  forecasts_format <- merge(forecasts_format, locations[, .(location, location_name)], by = "location_name", all.x = TRUE)
   
   # Add point forecasts
   forecasts_point <- forecasts_format[quantile == 0.5]
   forecasts_point <- forecasts_point[, `:=` (type = "point", quantile = NA)]
-  forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_point))
+  forecasts_format <- rbindlist(list(forecasts_format, forecasts_point))
   
   # drop unnecessary columns
   forecasts_format <- forecasts_format[, !c("epiweek", "region")]
   forecasts_format <- forecasts_format[target_end_date > forecast_date]
   forecasts_format <- forecasts_format[, horizon := 1 + as.numeric(target_end_date - min(target_end_date)) / 7]
   forecasts_format <- forecasts_format[, target := paste0(horizon, " wk ahead inc ", target_value)]
-  data.table::setorder(forecasts_format, location_name, horizon, quantile)
+  setorder(forecasts_format, location_name, horizon, quantile)
   
   # cumulative forecast 
   if (!is.null(cumulative)) {
@@ -65,15 +74,15 @@ format_forecast<- function(forecasts,
                                                 by = .(location, type, quantile)]
     forecasts_cum <- forecasts_cum[, value := value + cum_value][, cum_value := NULL]
     forecasts_cum <- forecasts_cum[, target := paste0(horizon, " wk ahead cum ", target_value)]
-    forecasts_format <- data.table::rbindlist(list(forecasts_format, forecasts_cum))
+    forecasts_format <- rbindlist(list(forecasts_format, forecasts_cum))
   }
   
-  data.table::setorder(forecasts_format, location, target, horizon)
+  setorder(forecasts_format, location, target, horizon)
   # Set column order
-  forecasts_format <- data.table::setcolorder(forecasts_format,
-                                              c("location", "location_name", "type", 
-                                                "quantile", "horizon", "value", "target_end_date",
-                                                "forecast_date", "target"))
+  forecasts_format <- setcolorder(forecasts_format,
+                                  c("location", "location_name", "type", "quantile", 
+                                    "horizon", "value", "target_end_date","forecast_date",
+                                    "target"))
   
   forecasts_format <- forecasts_format[, c("horizon", "submission_date") := NULL]
   return(forecasts_format)

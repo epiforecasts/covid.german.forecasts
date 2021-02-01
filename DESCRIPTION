@@ -1,10 +1,11 @@
-Package: covidgermanforecast
+Package: covid.german.forecasts
 Type: Package
-Title: Forecasting Covid-19 related metrics for the German Forecast Hub.
+Title: Forecasting Covid-19 related metrics for the German/Poland Forecast Hub
 Version: 0.1.0
 Authors@R: c(
   person("Nikos", "Bosse", 
-           role = c("aut", "cre")),
+          role = c("aut", "cre"),
+         email = "nikos.bosse@lshtm.ac.uk"),
   person(given = "Sam Abbott",
          role = c("aut"),
          email = "sam.abbott@lshtm.ac.uk",
@@ -14,23 +15,28 @@ Authors@R: c(
   person("Sebastian", "Funk", 
          email = "sebastian.funk@lshtm.ac.uk", 
          role = c("aut")))
-Description:  Forecasting Covid-19 related metrics for the German forecast hub.
+Description: Forecasting Covid-19 related metrics for the German/Poland forecast hub.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  covidregionaldata,
-  data.table,
-  dplyr,
-  EpiNow2 (>= 1.2.1),
-  future,
-  here,
-  tibble
+    magrittr,
+    data.table,
+    dplyr,
+    tibble, 
+    lubridate
+Suggests:
+    covidregionaldata,
+    crowdforecastr,
+    EpiNow2,
+    here,
+    future,
+    stringr
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Biarch: true
 Depends: 
   R (>= 3.4.0)
