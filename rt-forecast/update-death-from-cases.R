@@ -1,4 +1,5 @@
 # Packages -----------------------------------------------------------------
+library(covid.german.forecasts)
 library(EpiNow2, quietly = TRUE)
 library(data.table, quietly = TRUE)
 library(here, quietly = TRUE)
@@ -12,8 +13,8 @@ library(purrr, quietly = TRUE)
 target_date <- as.character(floor_date(Sys.Date(), unit = "week", 1)) 
 
 # Get Observations --------------------------------------------------------
-deaths <- fread(here("data", "daily-incidence-deaths.csv"))
-cases <- fread(here("data", "daily-incidence-cases.csv"))
+deaths <- fread(here("data-raw", "daily-incidence-deaths.csv"))
+cases <- fread(here("data-raw", "daily-incidence-cases.csv"))
 deaths <- setnames(deaths, "value", "secondary")
 cases <- setnames(cases, "value", "primary")
 observations <- merge(cases, deaths, by = c("location", "location_name", "date"))
@@ -51,7 +52,6 @@ forecast <- regional_secondary(observations, case_forecast,
                                verbose = TRUE)
 
 # Save results to disk ----------------------------------------------------
-source(here("rt-forecast", "functions", "check-dir.R"))
 samples_path <- here("rt-forecast", "data", "samples", "deaths-from-cases", target_date)
 summarised_path <- here("rt-forecast", "data", "summary", "deaths-from-cases", target_date)
 check_dir(samples_path)

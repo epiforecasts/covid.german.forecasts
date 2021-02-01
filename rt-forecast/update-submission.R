@@ -1,10 +1,9 @@
 # Package -----------------------------------------------------------------
+library(covid.german.forecasts)
 library(data.table)
 library(EpiNow2)
 library(lubridate)
 library(here)
-library(data.table)
-library(lubridate)
 
 # Dates -------------------------------------------------------------------
 target_date <- floor_date(Sys.Date(), unit = "week", 1)
@@ -24,13 +23,12 @@ death_from_cases_forecast <- fread(here("rt-forecast", "data", "samples", "death
                                          target_date, "samples.csv"))
 
 # Cumulative data ---------------------------------------------------------
-cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))
-cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
+cum_cases <- fread(here("data-raw", "weekly-cumulative-cases.csv"))
+cum_deaths <- fread(here("data-raw", "weekly-cumulative-deaths.csv"))
   
 # Format forecasts --------------------------------------------------------
-source(here("rt-forecast", "functions", "format-forecast.R"))
-
 case_forecast <- format_forecast(case_forecast[, value := cases], 
+                                 locations = locations,
                                  cumulative =  cum_cases,
                                  forecast_date = target_date,
                                  submission_date = target_date,
@@ -38,6 +36,7 @@ case_forecast <- format_forecast(case_forecast[, value := cases],
                                  target_value = "case")
 
 death_forecast <- format_forecast(death_forecast[, value := cases], 
+                                  locations = locations,
                                   cumulative = cum_deaths,
                                   forecast_date = target_date,
                                   submission_date = target_date,
@@ -45,13 +44,13 @@ death_forecast <- format_forecast(death_forecast[, value := cases],
                                   target_value = "death")
 
 death_from_cases_forecast <- format_forecast(death_from_cases_forecast, 
-                                  cumulative = cum_deaths,
-                                  forecast_date = target_date,
-                                  submission_date = target_date,
-                                  target_value = "death")
+                                             locations = locations,
+                                             cumulative = cum_deaths,
+                                             forecast_date = target_date,
+                                             submission_date = target_date,
+                                             target_value = "death")
 
 # Save forecasts ----------------------------------------------------------
-source(here("rt-forecast", "functions", "check-dir.R"))
 rt_folder <- here("submissions", "rt-forecasts", target_date)
 deaths_folder <- here("submissions", "deaths-from-cases", target_date)
 

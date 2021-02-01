@@ -1,3 +1,12 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^docs$
+^evaluation$
+^human-forecasts$
+^rt-crowd-forecast$
+^rt-forecast$
+^submissions$
+^\.github$
+^data-raw$
+^Dockerfile$
 ^\.secrets$

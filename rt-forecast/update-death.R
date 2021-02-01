@@ -1,4 +1,5 @@
 # Packages -----------------------------------------------------------------
+library(covid.german.forecasts)
 library(EpiNow2, quietly = TRUE)
 library(data.table, quietly = TRUE)
 library(future, quietly = TRUE)
@@ -14,7 +15,7 @@ incubation_period <- readRDS(here("rt-forecast", "data", "delays", "incubation_p
 onset_to_death <- readRDS(here("rt-forecast", "data", "delays", "onset_to_death.rds"))
 
 # Get cases  ---------------------------------------------------------------
-deaths <- fread(file.path("data", "daily-incidence-deaths.csv"))
+deaths <- fread(file.path("data-raw", "daily-incidence-deaths.csv"))
 deaths <- deaths[, .(region = as.character(location_name), date = as.Date(date), 
                    confirm = value)]
 deaths <- deaths[confirm < 0, confirm := 0]
@@ -29,8 +30,15 @@ no_cores <- setup_future(deaths)
 rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
                         future = "latest"), deaths)
 # add population adjustment for each country
-rt$Germany$pop <- 80000000
-rt$Poland$pop <- 40000000
+loc_names <- names(rt)
+rt <- lapply(loc_names,  function(loc) {
+  rt_loc <- rt[[loc]]
+  rt_loc$pop <- locations[location_name %in% loc, ]$population
+  return(rt_loc)
+})
+names(rt) <- loc_names
+
+
 regional_epinow(reported_cases = deaths,
                 generation_time = generation_time, 
                 delays = delay_opts(incubation_period, onset_to_death),

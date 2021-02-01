@@ -1,7 +1,7 @@
 #!bin/bash
 
 # Update the input data
-Rscript update-scripts/data-script.R
+Rscript data-raw/update.R
 
 # Update cases forecast
 Rscript rt-forecast/update-case.R
