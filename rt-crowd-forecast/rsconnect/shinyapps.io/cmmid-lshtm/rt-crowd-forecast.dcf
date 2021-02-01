@@ -5,9 +5,6 @@ account: cmmid-lshtm
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3468994
-bundleId: 4145038
+bundleId: 4167928
 url: https://cmmid-lshtm.shinyapps.io/rt-crowd-forecast/
-when: 1611670398.65545
-asMultiple: FALSE
-asStatic: FALSE
-ignoredFiles: simulate-cases.R|processed-forecast-data/2021-01-11-processed-forecasts.csv|processed-forecast-data/2021-01-18-processed-forecasts.csv|raw-forecast-data/2021-01-10-raw-forecasts.csv|raw-forecast-data/2021-01-11-raw-forecasts.csv|raw-forecast-data/2021-01-17-raw-forecasts.csv|raw-forecast-data/2021-01-18-raw-forecasts.csv
+when: 1612200858.94534
