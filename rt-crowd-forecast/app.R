@@ -8,11 +8,17 @@ library(magrittr)
 
 options("golem.app.prod" = TRUE)
 
-# Assume the submission date to be a Monday and the target end dates to be Saturdays
-submission_date <- "2021-01-25" 
+
+# load submission date from data if on server
+if (!dir.exists("rt-crowd-forecast/")) {
+  submission_date <- readRDS("data/submission_date.RDS")
+} else {
+  submision_date <- as.Date("2020-02-01")
+}
+
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
-# run on local machine to load the latest data. will be skipped on the siny server
+# run on local machine to load the latest data. will be skipped on the shiny server
 if (dir.exists("rt-forecast")) {
   obs_filt_rt_cases <- data.table::fread(paste0("rt-forecast/data/summary/cases/", submission_date, "/rt.csv")) %>%
       dplyr::rename(value = median,
@@ -36,7 +42,7 @@ if (dir.exists("rt-forecast")) {
                      "rt-crowd-forecast/external-ressources/observations.csv")
   
 } else {
-  obs_filt_rt <- read.csv("external-ressources/observations.csv")
+  obs_filt_rt <- read.csv("data/observations.csv")
 }
 
 crowdforecastr::run_app(data = obs_filt_rt,
