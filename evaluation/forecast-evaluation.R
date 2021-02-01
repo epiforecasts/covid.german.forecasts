@@ -1,7 +1,6 @@
 # packages ---------------------------------------------------------------------
 library(magrittr)
 
-
 # read in the EpiExpert ensemble forecast and EpiNow2 models
 folders <- list.files("submissions/human-forecasts/")
 files <- purrr::map(folders, 
