@@ -1,5 +1,5 @@
 # reinstall crowdforecastr from github if necessary
-devtools::install_github("epiforecasts/crowdforecastr", force = FALSE)
+devtools::install_github("epiforecasts/crowdforecastr", force = FALSE, upgrade = "always")
 
 # helper function to determine the correct forecast date
 next_monday <- function(date){
