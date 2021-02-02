@@ -1,3 +1,4 @@
+library(covid.german.forecasts)
 library(googledrive)
 library(googlesheets4)
 library(dplyr)
