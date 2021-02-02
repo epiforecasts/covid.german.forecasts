@@ -2,32 +2,20 @@
 source("data-raw/update.R")
 
 # copy data into app
-file.copy(c("data-raw/weekly-incident-cases.csv", 
-            "data-raw/weekly-incident-deaths.csv"),
-          to = "human-forecasts/data/", overwrite = TRUE)
-
-# reinstall crowdforecastr from github if necessary
-devtools::install_github("epiforecasts/crowdforecastr", force = FALSE, upgrade = "always")
-
-# helper function to determine the correct forecast date
-next_monday <- function(date){
-  nm <- rep(NA, length(date))
-  for(i in seq_along(date)){
-    nm[i] <- date[i] + (0:6)[weekdays(date[i] + (0:6)) == "Monday"]
-  }
-  return(as.Date(nm, origin = "1970-01-01"))
-}
+file.copy(c(here::here("data-raw", "weekly-incident-cases.csv"), 
+            here::here("data-raw", "weekly-incident-deaths.csv")),
+          to = here::here("human-forecasts", "data"), overwrite = TRUE)
 
 # if today is not Monday, set submission date to the next Monday
 if (weekdays(Sys.Date()) != "Monday") {
-  submission_date <- next_monday(Sys.Date())
+  submission_date <- floor_date(Sys.Date(), unit = "week", 1) + 7
 } else {
   submission_date <- Sys.Date()
 }
 
-saveRDS(submission_date, "human-forecasts/data/submission_date.RDS")
+saveRDS(submission_date, here::here("human-forecasts", "data", "submission_date.RDS"))
 
-rsconnect::deployApp(appDir = "human-forecasts/", 
+rsconnect::deployApp(appDir = here::here("human-forecasts"), 
                      appName = "crowd-forecast",
                      account = "cmmid-lshtm", 
                      forceUpdate = TRUE,

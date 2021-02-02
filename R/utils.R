@@ -86,7 +86,7 @@ globalVariables(
 #' @param number_of_attempts numeric, how often shall we try?
 #' @return outcome of the expression to be evaluated
 #' @export
-#' @importFrom attempt attempt
+#' @importFrom attempt attempt is_try_error
 
 try_and_wait <- function(expr, 
                          time_to_wait = 120, 

@@ -7,7 +7,7 @@ library(crowdforecastr)
 
 # load submission date from data if on server
 if (!dir.exists("human-forecasts")) {
-  submission_date <- readRDS("data/submission_date.RDS")
+  submission_date <- readRDS(here::here("data", "submission_date.RDS"))
 } else {
   submision_date <- as.Date("2020-02-01")
 }
@@ -16,13 +16,13 @@ if (!dir.exists("human-forecasts")) {
 first_forecast_date <- submission_date + 5
 
 # load deaths
-deaths_inc <- data.table::fread("data/weekly-incident-deaths.csv") %>%
+deaths_inc <- data.table::fread(here::here("data", "weekly-incident-deaths.csv")) %>%
   dplyr::mutate(inc = "incident",
                 type = "deaths") %>%
   dplyr::filter(location %in% c("GM", "PL"))
 
 # load cases
-cases_inc <- data.table::fread("data/weekly-incident-cases.csv") %>%
+cases_inc <- data.table::fread(here::here("data", "weekly-incident-cases.csv")) %>%
   dplyr::mutate(inc = "incident",
                 type = "cases") %>%
   dplyr::filter(location %in% c("GM", "PL"))

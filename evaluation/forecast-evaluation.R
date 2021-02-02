@@ -2,12 +2,12 @@
 library(magrittr)
 
 # read in the EpiExpert ensemble forecast and EpiNow2 models
-folders <- list.files("submissions/human-forecasts/")
+folders <- list.files(here::here("submissions", "human-forecasts"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0("submissions/human-forecasts/", 
+                      files <- list.files(paste0(here::here("submissions", "human-forecasts"), 
                                                  folder_name))
-                      paste(paste0("submissions/human-forecasts/", 
+                      paste(paste0(here::here("submissions", "human-forecasts"), 
                                    folder_name, "/", 
                                    files))
                     }) %>%
@@ -20,18 +20,18 @@ epiexpert_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epiexpert_forecasts, 
-                   "human-forecasts/processed-forecast-data/all-epiexpert-forecasts.csv")
+                   here::here("human-forecasts", "processed-forecast-data", "all-epiexpert-forecasts.csv"))
 
 
 
 
 # also read all EpiNow2 forecasts, give them a board_name 
-folders <- list.files("submissions/rt-forecasts/")
+folders <- list.files(here::here("submissions", "rt-forecasts/"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0("submissions/rt-forecasts/", 
+                      files <- list.files(paste0(here::here("submissions", "rt-forecasts/"), 
                                                  folder_name))
-                      paste(paste0("submissions/rt-forecasts/", 
+                      paste(paste0(here::here("submissions", "rt-forecasts/"), 
                                    folder_name, "/", 
                                    files))
                     }) %>%
@@ -44,19 +44,19 @@ epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epinow_forecasts, 
-                   "human-forecasts/processed-forecast-data/all-epinow2-forecasts.csv")
+                   here::here("human-forecasts", "processed-forecast-data", "all-epinow2-forecasts.csv"))
 
 
 
 
 
 # also read all EpiNow2 secondary forecasts, give them a board_name 
-folders <- list.files("submissions/deaths-from-cases/")
+folders <- list.files(here::here("submissions", "deaths-from-cases/"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0("submissions/deaths-from-cases/", 
+                      files <- list.files(paste0(here::here("submissions", "deaths-from-cases/"), 
                                                  folder_name))
-                      paste(paste0("submissions/deaths-from-cases/", 
+                      paste(paste0(here::here("submissions", "deaths-from-cases/"), 
                                    folder_name, "/", 
                                    files))
                     }) %>%
@@ -69,17 +69,17 @@ epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epinow_forecasts, 
-                   "human-forecasts/processed-forecast-data/all-epinow2_secondary-forecasts.csv")
+                   here::here("human-forecasts", "processed-forecast-data", "all-epinow2_secondary-forecasts.csv"))
 
 
 
 # also read all EpiNow2 Rt crowd forecasts, give them a board_name 
-folders <- list.files("submissions/crowd-rt-forecasts/")
+folders <- list.files(here::here("submissions", "crowd-rt-forecasts/"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0("submissions/crowd-rt-forecasts/", 
+                      files <- list.files(paste0(here::here("submissions", "crowd-rt-forecasts/"), 
                                                  folder_name))
-                      paste(paste0("submissions/crowd-rt-forecasts/", 
+                      paste(paste0(here::here("submissions", "crowd-rt-forecasts/"), 
                                    folder_name, "/", 
                                    files))
                     }) %>%
@@ -92,15 +92,11 @@ epinow__crowd_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epinow__crowd_forecasts, 
-                   "human-forecasts/processed-forecast-data/all-crowd-rt-forecasts.csv")
-
-
-
-
+                   here::here("human-forecasts", "processed-forecast-data", "all-crowd-rt-forecasts.csv"))
 
 
 # load data --------------------------------------------------------------------
-root_dir <- "human-forecasts/processed-forecast-data/"
+root_dir <- here::here("human-forecasts", "processed-forecast-data")
 file_paths_forecast <- paste0(root_dir, list.files(root_dir))
 
 prediction_data <- purrr::map_dfr(file_paths_forecast, 

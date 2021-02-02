@@ -3,6 +3,7 @@ library(googledrive)
 library(googlesheets4)
 library(dplyr)
 library(purrr)
+library(data.table)
 
 
 # Google sheets authentification -----------------------------------------------
@@ -15,7 +16,7 @@ identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 # setup ------------------------------------------------------------------------
 # - 1 as this is usually updated on a Tuesday
-submission_date <- Sys.Date() - 1
+submission_date <-floor_date(Sys.Date(), unit = "week", 1)
 median_ensemble <- FALSE
 
 
@@ -85,7 +86,7 @@ filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 # write raw forecasts
 data.table::fwrite(raw_forecasts %>%
                      dplyr::select(-board_name),
-                   paste0("rt-crowd-forecast/raw-forecast-data/", 
+                   here::here("rt-crowd-forecast", "raw-forecast-data/", 
                           submission_date, "-raw-forecasts.csv"))
 
 # draw samples from the distributions ------------------------------------------
@@ -186,7 +187,7 @@ forecast_samples_daily <- forecast_samples %>%
 # save forecasts in quantile-format
 data.table::fwrite(forecast_samples_daily %>%
                      dplyr::mutate(submission_date = submission_date),
-                   paste0("rt-crowd-forecast/processed-forecast-data/", 
+                   here::here("rt-crowd-forecast", "processed-forecast-data", 
                           submission_date, "-processed-forecasts.csv"))
 
 # check results and plot
@@ -200,7 +201,7 @@ plot <- scoringutils::plot_predictions(check %>%
                                                                                  origin="1970-01-01")), 
                                        x = "target_end_date", 
                                        facet_formula = ~ forecaster_id + location + target_type)
-ggplot2::ggsave(paste0("rt-crowd-forecast/plots/", submission_date, "rt-forecasts.png"))
+ggplot2::ggsave(here::here("rt-crowd-forecast", "plots", paste0(submission_date, "/rt-forecasts.png")))
 
 
 

@@ -3,6 +3,7 @@ library(googledrive)
 library(googlesheets4)
 library(dplyr)
 library(purrr)
+library(data.table)
 
 
 # Google sheets authentification -----------------------------------------------
@@ -16,7 +17,7 @@ identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 # setup ------------------------------------------------------------------------
 # - 1 as this is usually updated on a Tuesday
-submission_date <- Sys.Date() - 1
+submission_date <- floor_date(Sys.Date(), unit = "week", 1)
 median_ensemble <- FALSE
 # grid of quantiles to obtain / submit from forecasts
 quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
@@ -87,8 +88,8 @@ filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 # write raw forecasts
 data.table::fwrite(raw_forecasts %>%
                      dplyr::select(-board_name),
-                   paste0("human-forecasts/raw-forecast-data/", 
-                          submission_date, "-raw-forecasts.csv"))
+                   here::here("human-forecasts", "raw-forecast-data/", 
+                              submission_date, "-raw-forecasts.csv"))
 
 
 # obtain quantiles from forecasts ----------------------------------------------
@@ -151,8 +152,8 @@ forecast_quantiles <- filtered_forecasts %>%
 # save forecasts in quantile-format
 data.table::fwrite(forecast_quantiles %>%
                      dplyr::mutate(submission_date = submission_date),
-                   paste0("human-forecasts/processed-forecast-data/", 
-                          submission_date, "-processed-forecasts.csv"))
+                   here::here("human-forecasts", "processed-forecast-data", 
+                              submission_date, "-processed-forecasts.csv"))
 
 # omit forecasters who haven't forecasted at least two targets
 forecasters_to_omit <- forecast_quantiles %>%
@@ -211,13 +212,13 @@ first_forecast_date <- forecasts %>%
   unique() %>%
   min(na.rm = TRUE)
 
-deaths <- data.table::fread("data-raw/weekly-cumulative-deaths.csv") %>%
+deaths <- data.table::fread(here::here("data-raw", "weekly-cumulative-deaths.csv")) %>%
   dplyr::filter(location %in% c("GM", "PL")) %>%
   dplyr::group_by(location) %>%
   dplyr::filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
   dplyr::mutate(case = "death")
 
-cases <- data.table::fread("data-raw/weekly-cumulative-cases.csv") %>%
+cases <- data.table::fread(here::here("data-raw", "weekly-cumulative-cases.csv")) %>%
   dplyr::filter(location %in% c("GM", "PL")) %>%
   dplyr::group_by(location) %>%
   dplyr::filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
@@ -244,11 +245,7 @@ forecast_submission <- dplyr::bind_rows(forecast_inc, forecast_cum) %>%
 
 
 # write submission files -------------------------------------------------------
-if (!dir.exists(here::here("submissions", "human-forecasts", submission_date))) {
-  dir.create(here::here("submissions", "human-forecasts", submission_date))
-}
-
-
+check_dir(here::here("submissions", "human-forecasts", submission_date))
 
 forecast_submission %>%
   dplyr::filter(location_name %in% "Germany", 
