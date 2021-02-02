@@ -34,7 +34,7 @@ Suggests:
     stringr
 Remotes:
   epiforecasts/EpiNow2,
-  epiforecasts/covidregionaldata
+  epiforecasts/covidregionaldata,
   epiforecasts/scoringutils@dev
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
