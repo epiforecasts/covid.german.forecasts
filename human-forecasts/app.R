@@ -18,12 +18,14 @@ first_forecast_date <- submission_date + 5
 # load deaths
 deaths_inc <- data.table::fread("data/weekly-incident-deaths.csv") %>%
   dplyr::mutate(inc = "incident",
-                type = "deaths")
+                type = "deaths") %>%
+  dplyr::filter(location %in% c("GM", "PL"))
 
 # load cases
 cases_inc <- data.table::fread("data/weekly-incident-cases.csv") %>%
   dplyr::mutate(inc = "incident",
-                type = "cases")
+                type = "cases") %>%
+  dplyr::filter(location %in% c("GM", "PL"))
 
 # bind together and sort according to date
 observations <- dplyr::bind_rows(deaths_inc,

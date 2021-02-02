@@ -210,15 +210,14 @@ first_forecast_date <- forecasts %>%
   unique() %>%
   min(na.rm = TRUE)
 
-# add latest deaths and cases
-source(here::here("functions", "load-data.R"))
-
-deaths <- get_data(cumulative = TRUE, weekly = TRUE, cases = FALSE) %>%
+deaths <- data.table::fread("data-raw/weekly-cumulative-deaths.csv") %>%
+  dplyr::filter(location %in% c("GM", "PL")) %>%
   dplyr::group_by(location) %>%
   dplyr::filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
   dplyr::mutate(case = "death")
 
-cases <- get_data(cumulative = TRUE, weekly = TRUE, cases = TRUE) %>%
+cases <- data.table::fread("data-raw/weekly-cumulative-cases.csv") %>%
+  dplyr::filter(location %in% c("GM", "PL")) %>%
   dplyr::group_by(location) %>%
   dplyr::filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
   dplyr::mutate(case = "case")
