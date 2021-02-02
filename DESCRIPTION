@@ -25,7 +25,13 @@ Imports:
     dplyr,
     tibble,
     lubridate,
-    attempt
+    attempt,
+    scoringutils,
+    crowdforecastr,
+    rsconnect,
+    googledrive,
+    googlesheets4,
+    purrr
 Suggests:
     covidregionaldata,
     EpiNow2,
@@ -35,7 +41,8 @@ Suggests:
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
-  epiforecasts/scoringutils@dev
+  epiforecasts/scoringutils@dev,
+  epiforecasts/crowdforecastr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Biarch: true
