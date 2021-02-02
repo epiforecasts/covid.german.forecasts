@@ -1,7 +1,6 @@
 # packages ---------------------------------------------------------------------
 library(magrittr)
 
-
 # read in the EpiExpert ensemble forecast and EpiNow2 models
 folders <- list.files("submissions/human-forecasts/")
 files <- purrr::map(folders, 
@@ -120,18 +119,8 @@ prediction_data <- purrr::map_dfr(file_paths_forecast,
   dplyr::select(location, location_name, forecast_date, quantile, prediction, model, target_end_date, horizon, target, target_type)
 
 
-
-# prediction_data$target_end_date %>% unique()
-# 
-# 
-# 
-# d <- prediction_data %>%
-#   dplyr::filter(forecast_date == as.Date("2021-01-04"), 
-#                 location_name == "Poland", 
-#                 model == "EpiExpert-ensemble")
-
-files <- list.files("data/")
-file_paths <- paste0("data/", files[grepl("weekly-incident", files)])
+files <- list.files("data-raw/")
+file_paths <- paste0("data-raw/", files[grepl("weekly-incident", files)])
 names(file_paths) <- c("case", "death")
 
 truth_data <- purrr::map_dfr(file_paths, readr::read_csv, .id = "target_type") %>%

@@ -23,8 +23,9 @@ Imports:
     magrittr,
     data.table,
     dplyr,
-    tibble, 
-    lubridate
+    tibble,
+    lubridate,
+    attempt
 Suggests:
     covidregionaldata,
     EpiNow2,
@@ -34,6 +35,7 @@ Suggests:
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata
+  epiforecasts/scoringutils@dev
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Biarch: true

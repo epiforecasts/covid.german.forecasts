@@ -1,5 +1,13 @@
+# update data
+source("data-raw/update.R")
+
+# copy data into app
+file.copy(c("data-raw/weekly-incident-cases.csv", 
+            "data-raw/weekly-incident-deaths.csv"),
+          to = "human-forecasts/data/", overwrite = TRUE)
+
 # reinstall crowdforecastr from github if necessary
-devtools::install_github("epiforecasts/crowdforecastr", force = FALSE)
+devtools::install_github("epiforecasts/crowdforecastr", force = FALSE, upgrade = "always")
 
 # helper function to determine the correct forecast date
 next_monday <- function(date){
@@ -18,8 +26,6 @@ if (weekdays(Sys.Date()) != "Monday") {
 }
 
 saveRDS(submission_date, "human-forecasts/data/submission_date.RDS")
-
-
 
 rsconnect::deployApp(appDir = "human-forecasts/", 
                      appName = "crowd-forecast",
