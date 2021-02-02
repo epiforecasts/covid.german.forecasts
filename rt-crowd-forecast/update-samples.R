@@ -20,23 +20,27 @@ median_ensemble <- FALSE
 
 # load data from Google Sheets -------------------------------------------------
 # load identification
-ids <- googlesheets4::read_sheet(ss = identification_sheet, 
-                                 sheet = "ids")
+ids <- try_and_wait(googlesheets4::read_sheet(ss = identification_sheet, 
+                                              sheet = "ids"))
+  
 # load forecasts 
-forecasts <- googlesheets4::read_sheet(ss = spread_sheet)
+forecasts <- try_and_wait(googlesheets4::read_sheet(ss = spread_sheet))
 
-# add forecasts to backup sheet
-googlesheets4::sheet_append(ss = spread_sheet, 
-                            sheet = "oldforecasts", 
-                            data = forecasts)
 
-# delete data from sheet
-cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
-names(cols) <- names(forecasts)
-googlesheets4::write_sheet(data = cols,
-                           ss = spread_sheet,
-                           sheet = "predictions")
-
+delete_data <- FALSE
+if (delete_data) {
+  # add forecasts to backup sheet
+  try_and_wait(googlesheets4::sheet_append(ss = spread_sheet, 
+                                           sheet = "oldforecasts", 
+                                           data = forecasts))
+  
+  # delete data from sheet
+  cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
+  names(cols) <- names(forecasts)
+  try_and_wait(googlesheets4::write_sheet(data = cols,
+                                          ss = spread_sheet,
+                                          sheet = "predictions"))
+}
 
 # obtain raw and filtered forecasts, save raw forecasts-------------------------
 raw_forecasts <- forecasts %>%

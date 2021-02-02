@@ -23,8 +23,9 @@ Imports:
     magrittr,
     data.table,
     dplyr,
-    tibble, 
-    lubridate
+    tibble,
+    lubridate,
+    attempt
 Suggests:
     covidregionaldata,
     EpiNow2,
