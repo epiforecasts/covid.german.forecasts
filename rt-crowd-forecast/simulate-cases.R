@@ -1,4 +1,5 @@
 # Packages ----------------------------------------------------------------
+library(covid.german.forecast)
 library(EpiNow2)
 library(data.table)
 library(here) 
@@ -90,7 +91,6 @@ crowd_cases <- extract_samples(simulations, "cases")
 crowd_deaths <- extract_samples(simulations, "deaths")
 
 # save output
-source(here("rt-forecast", "functions", "check-dir.R"))
 plot_dir <- here("rt-crowd-forecast", "data", "plots", target_date)
 check_dir(plot_dir)
 
@@ -104,11 +104,8 @@ walk(names(simulations), function(loc) {
 
 # Submission --------------------------------------------------------------
 # Cumulative data
-cum_cases <- fread(here("data", "weekly-cumulative-cases.csv"))
-cum_deaths <- fread(here("data", "weekly-cumulative-deaths.csv"))
-
-# Format forecasts 
-source(here("rt-forecast", "functions", "format-forecast.R"))
+cum_cases <- fread(here("data-raw", "weekly-cumulative-cases.csv"))
+cum_deaths <- fread(here("data-raw", "weekly-cumulative-deaths.csv"))
 
 crowd_cases <- format_forecast(crowd_cases, 
                                cumulative = cum_cases[location_name %in% c("Germany", "Poland")],

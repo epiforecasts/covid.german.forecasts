@@ -25,19 +25,19 @@ Imports:
     dplyr,
     tibble,
     lubridate,
-    attempt,
-    scoringutils,
-    crowdforecastr,
-    rsconnect,
-    googledrive,
-    googlesheets4,
-    purrr
+    attempt
 Suggests:
     covidregionaldata,
     EpiNow2,
     here,
     future,
-    stringr
+    stringr,
+    purrr,
+    scoringutils,
+    crowdforecastr,
+    rsconnect,
+    googledrive,
+    googlesheets4
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,

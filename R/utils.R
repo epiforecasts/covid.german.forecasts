@@ -70,15 +70,6 @@ make_cumulative <- function(inc) {
     group_by(location, location_name) %>% 
     mutate(value = cumsum(value))
 }
-
-
-globalVariables(
-  c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",
-    "locations", "n", "quantile", "region", "target", "target_end_date", "type", "value", 
-    "."
-  )
-)
-
 #' Attempt to Execute an Expression and Retry After Failure
 #' #'
 #' @param expr an expression that shell be executed
@@ -91,17 +82,25 @@ globalVariables(
 try_and_wait <- function(expr, 
                          time_to_wait = 120, 
                          number_of_attempts = 10) {
-  out <- attempt::attempt(expr)
+  out <- attempt(expr)
   attempt_number <- 1
-  while (attempt::is_try_error(out)){
+  while (is_try_error(out)){
     if (attempt_number > number_of_attempts) {
       stop("Failed - sorry!")
     }
     warning(paste("Attempt number", attempt_number, "failed, I'll wait and retry"))
     
     Sys.sleep(time_to_wait)
-    out <- attempt::attempt(expr)
+    out <- attempt(expr)
     attempt_number <- attempt_number + 1
   } 
   return(out)
 }
+
+
+globalVariables(
+  c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",
+    "locations", "n", "quantile", "region", "target", "target_end_date", "type", "value", 
+    "."
+  )
+)
