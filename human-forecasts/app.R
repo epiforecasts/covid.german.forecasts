@@ -24,20 +24,18 @@ deaths_inc <- get_truth_data(dir = here("data-raw"), range = "weekly", target = 
 cases_inc <- get_truth_data(dir = here("data-raw"), range = "weekly", locs = c("GM", "PL"))
 
 # bind together and sort according to date
-observations <- dplyr::bind_rows(deaths_inc,
-                                 cases_inc)  %>%
-  # this has to be treated with care depending on when you update the data
-  dplyr::filter(epiweek <= max(epiweek)) %>%
-  dplyr::rename(target_type = type) %>%
-  dplyr::arrange(location_name, target_type, target_end_date)
+observations <- rbindlist(list(deaths_inc, cases_inc))
+observations <- observations[epiweek <= max(epiweek)]
+setnames(observations, "type", "target_type")
+setorder(observations, target_type, target_end_date)
 
 # run app
-crowdforecastr::run_app(data = observations, 
-                        first_forecast_date = as.character(first_forecast_date),
-                        selection_vars = c("location_name", "target_type"),
-                        google_account_mail = "epiforecasts@gmail.com",
-                        forecast_sheet_id = "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI",
-                        user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
-                        submission_date = as.character(submission_date))
+run_app(data = observations, 
+        first_forecast_date = as.character(first_forecast_date),
+        selection_vars = c("location_name", "target_type"),
+        google_account_mail = "epiforecasts@gmail.com",
+        forecast_sheet_id = "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI",
+        user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
+        submission_date = as.character(submission_date))
 
 
