@@ -84,7 +84,8 @@ simulations <- simulate_crowd_cases(crowd_rt)
 # extract samples
 extract_samples <- function(output, target) {
   samples <- map(names(output), function(loc) {
-    dt <- output[[loc]][[target]]$samples[, region := loc][variable %in% "reported_cases"]
+    dt <- output[[loc]][[target]]$samples[, region := loc]
+    dt <- dt[variable %in% "reported_cases"]
     dt <- dt[, .(region, date, sample, value)]
     setorder(dt, region, date, sample)
     return(dt)
@@ -108,6 +109,8 @@ walk(names(simulations), function(loc) {
     )
   })
 })
+# Simulate deaths --------------------------------------------------------------
+
 
 # Submission --------------------------------------------------------------
 # Cumulative data
