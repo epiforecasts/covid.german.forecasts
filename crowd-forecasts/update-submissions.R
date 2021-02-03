@@ -6,7 +6,6 @@ library(purrr)
 library(data.table)
 library(lubridate)
 
-
 # Google sheets authentification -----------------------------------------------
 options(gargle_oauth_cache = ".secrets")
 drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
@@ -15,14 +14,12 @@ gs4_auth(token = drive_token())
 spread_sheet <- "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
-
 # setup ------------------------------------------------------------------------
 # - 1 as this is usually updated on a Tuesday
 submission_date <- latest_weekday()
 median_ensemble <- FALSE
 # grid of quantiles to obtain / submit from forecasts
 quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
-
 
 # load data from Google Sheets -------------------------------------------------
 # load identification
@@ -54,7 +51,6 @@ filtered_forecasts <- raw_forecasts %>%
   filter(forecast_time == max(forecast_time)) %>%
   ungroup()
 
-
 # replace forecast duration with exact data about forecast date and time
 # define function to do this for raw and filtered forecasts
 replace_date_and_time <- function(forecasts) {
@@ -82,10 +78,8 @@ filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 fwrite(raw_forecasts %>% select(-board_name),
        here("crowd-forecasts", "raw-forecast-data", submission_date, "-raw-forecasts.csv"))
 
-
 # obtain quantiles from forecasts ----------------------------------------------
 # define function that returns quantiles depending on condition and distribution
-
 calculate_quantiles <- function(quantile_grid, median, width, forecast_type, distribution, lower_90, upper_90) {
   
   if (distribution == "log-normal") {
