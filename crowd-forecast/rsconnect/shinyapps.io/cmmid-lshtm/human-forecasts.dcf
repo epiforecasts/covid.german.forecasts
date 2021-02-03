@@ -1,12 +1,12 @@
-name: human-forecasts
-title: human-forecasts
+name: crowd-forecast
+title: crowd-forecast
 username:
 account: cmmid-lshtm
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2981427
 bundleId: 3860859
-url: https://cmmid-lshtm.shinyapps.io/human-forecasts/
+url: https://cmmid-lshtm.shinyapps.io/crowd-forecast/
 when: 1605380863.44106
 asMultiple: FALSE
 asStatic: FALSE

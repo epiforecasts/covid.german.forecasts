@@ -1,14 +1,13 @@
 # Launch the ShinyApp (Do not remove this comment)
 # To deploy, run: rsconnect::deployApp()
 # Or use the blue button on top of this file
-
 library(covid.german.forecasts)
 library(data.table)
 library(here)
 library(crowdforecastr)
 
 # load submission date from data if on server
-if (!dir.exists("human-forecasts")) {
+if (!dir.exists("crowd-forecast")) {
   submission_date <- readRDS(here("data", "submission_date.rds"))
 } else {
   submision_date <- latest_weekday() + 7
@@ -17,10 +16,8 @@ if (!dir.exists("human-forecasts")) {
 # set first forecast date to the Saturday after that
 first_forecast_date <- submission_date + 5
 
- # load deaths
+# load observations
 deaths_inc <- get_truth_data(dir = here("data-raw"), range = "weekly", target = "deaths", locs = c("GM", "PL"))
-
-# load cases
 cases_inc <- get_truth_data(dir = here("data-raw"), range = "weekly", locs = c("GM", "PL"))
 
 # bind together and sort according to date
@@ -37,5 +34,3 @@ run_app(data = observations,
         forecast_sheet_id = "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI",
         user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
         submission_date = as.character(submission_date))
-
-

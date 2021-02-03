@@ -2,7 +2,7 @@
 ^\.Rproj\.user$
 ^docs$
 ^evaluation$
-^human-forecasts$
+^crowd-forecast$
 ^rt-crowd-forecast$
 ^rt-forecast$
 ^submissions$

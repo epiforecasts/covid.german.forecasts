@@ -1,5 +1,10 @@
 # packages ---------------------------------------------------------------------
-library(magrittr)
+library(purrr)
+library(dplyr)
+library(here)
+library(readr)
+library(scoringutils) 
+library(data.table)
 
 # read in the EpiExpert ensemble forecast and EpiNow2 models
 folders <- list.files(here::here("submissions", "human-forecasts"))
@@ -93,7 +98,7 @@ prediction_data <- purrr::map_dfr(file_paths_forecast,
                                       dplyr::mutate(target_end_date = as.Date(target_end_date), 
                                                     submission_date = as.Date(submission_date), 
                                                     forecast_date = as.Date(forecast_date))
-                                    }) %>%
+                                  }) %>%
   dplyr::mutate(target_type = ifelse(grepl("death", target), "death", "case")) %>%
   dplyr::rename(prediction = value) %>%
   dplyr::mutate(forecast_date = as.Date(submission_date)) %>%

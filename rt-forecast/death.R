@@ -16,8 +16,7 @@ onset_to_death <- readRDS(here("rt-forecast", "data", "delays", "onset_to_death.
 
 # Get cases  ---------------------------------------------------------------
 deaths <- fread(file.path("data-raw", "daily-incidence-deaths.csv"))
-deaths <- deaths[, .(region = as.character(location_name), date = as.Date(date), 
-                   confirm = value)]
+deaths <- deaths[, .(region = as.character(location_name), date = as.Date(date), confirm = value)]
 deaths <- deaths[confirm < 0, confirm := 0]
 deaths <- deaths[date >= (max(date) - lubridate::weeks(12))]
 setorder(deaths, region, date)
@@ -27,8 +26,7 @@ no_cores <- setup_future(deaths)
 
 # Run Rt estimation -------------------------------------------------------
 # default Rt settings
-rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
-                        future = "latest"), deaths)
+rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), future = "latest"), deaths)
 # add population adjustment for each country
 loc_names <- names(rt)
 rt <- lapply(loc_names,  function(loc) {
@@ -37,7 +35,6 @@ rt <- lapply(loc_names,  function(loc) {
   return(rt_loc)
 })
 names(rt) <- loc_names
-
 
 regional_epinow(reported_cases = deaths,
                 generation_time = generation_time, 

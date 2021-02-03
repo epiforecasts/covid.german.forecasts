@@ -8,10 +8,9 @@ library(ggplot2)
 library(lubridate)
 
 # Set forecasting date ----------------------------------------------------
-target_date <- floor_date(Sys.Date(), unit = "week", 1)
+target_date <- latest_weekday()
 
 # Get Rt forecasts --------------------------------------------------------
-# load
 crowd_rt <- fread(here("rt-crowd-forecast", "processed-forecast-data", 
                        paste0(target_date, "-processed-forecasts.csv")))
 

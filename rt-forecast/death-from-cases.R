@@ -18,8 +18,7 @@ cases <- fread(here("data-raw", "daily-incidence-cases.csv"))
 deaths <- setnames(deaths, "value", "secondary")
 cases <- setnames(cases, "value", "primary")
 observations <- merge(cases, deaths, by = c("location", "location_name", "date"))
-observations <- observations[, .(region = as.character(location_name), date = as.Date(date), 
-                                 primary, secondary)]
+observations <- observations[, .(region = as.character(location_name), date = as.Date(date), primary, secondary)]
 observations <- observations[date >= (max(date) - 8*7)][date <= target_date]
 observations <- observations[primary < 0, primary := 0]
 observations <- observations[secondary < 0, secondary := 0]
