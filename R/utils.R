@@ -147,6 +147,7 @@ get_truth_data <- function(dir, range = "daily", type = "incident",
 #' @param folder Character string indicating the target folder.
 #' @param model Character string indicating the model name.
 #' @export
+#' @return NULL
 #' @importFrom data.table fwrite
 save_forecast <- function(forecast, loc_name, loc, type = "",
                           date, folder, model) {
@@ -154,7 +155,8 @@ save_forecast <- function(forecast, loc_name, loc, type = "",
     forecast[grepl(loc, location)], 
     file.path(folder, paste0(target_date, "-", loc_name, model, type, ".csv"))
     )
-}
+    return(invisible(NULL))
+  }
 
 globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",

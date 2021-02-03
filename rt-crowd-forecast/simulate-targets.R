@@ -31,7 +31,11 @@ crowd_rt[, sample := 1:.N, by = .(location, date, target)]
 crowd_rt <- crowd_rt[target %in% "cases"]
 
 # Simulate cases ----------------------------------------------------------
-simulations <- simulate_crowd_cases(crowd_rt)
+simulations <- simulate_crowd_cases(
+  crowd_rt,
+  model_dir = here("rt-forecast", "data", "samples"),
+  target_date = target_date
+)
 
 # Extract output ----------------------------------------------------------
 crowd_cases <- extract_samples(simulations, "cases")

@@ -20,19 +20,19 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
+    EpiNow2,
     magrittr,
     data.table,
     dplyr,
     tibble,
     lubridate,
-    attempt
+    attempt,
+    purrr
 Suggests:
     covidregionaldata,
-    EpiNow2,
     here,
     future,
     stringr,
-    purrr,
     scoringutils,
     crowdforecastr,
     rsconnect,
