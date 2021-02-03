@@ -136,6 +136,25 @@ get_truth_data <- function(dir, range = "daily", type = "incident",
   }
   return(dt)
 }
+#' Save a Forecast
+#'
+#' @param forecast A dataframe containing a forecast as produced by
+#'  `format_forecast`.
+#' @param loc_name Character string indicating the location name.
+#' @param loc Character vecetor, indicates target regions.
+#' @param type Character string default to "". Indicates the target type.
+#' @param date A character string or Date indicating the date of forecast.
+#' @param folder Character string indicating the target folder.
+#' @param model Character string indicating the model name.
+#' @export
+#' @importFrom data.table fwrite
+save_forecast <- function(forecast, loc_name, loc, type = "",
+                          date, folder, model) {
+  fwrite(
+    forecast[grepl(loc, location)], 
+    file.path(folder, paste0(target_date, "-", loc_name, model, type, ".csv"))
+    )
+}
 
 globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",

@@ -40,7 +40,8 @@ Suggests:
     googlesheets4,
     ggplot2,
     tidyr,
-    readr
+    readr,
+    devtools
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
