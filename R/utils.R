@@ -115,7 +115,7 @@ latest_weekday <- function(date = Sys.Date(), day = 1, char = FALSE){
   return(weekday)
 }
 #' Get Local Truth Data
-#' 
+#'
 #' @param dir A character string indicating the path to the target data folder.
 #' @param range A character string indicating the range
 #'  of the data. Supported options are "daily" or "weekly".

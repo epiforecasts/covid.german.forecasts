@@ -12,26 +12,8 @@ library(purrr, quietly = TRUE)
 # Set target date ---------------------------------------------------------
 target_date <- latest_weekday(char = TRUE)
 
-# Get Observations --------------------------------------------------------
-deaths <- fread(here("data-raw", "daily-incidence-deaths.csv"))
-cases <- fread(here("data-raw", "daily-incidence-cases.csv"))
-deaths <- setnames(deaths, "value", "secondary")
-cases <- setnames(cases, "value", "primary")
-observations <- merge(
-  cases, deaths,
-  by = c("location", "location_name", "date")
-)
-observations <- observations[
-  ,
-  .(
-    region = as.character(location_name),
-    date = as.Date(date), primary, secondary
-  )
-]
-observations <- observations[date >= (max(date) - 8 * 7)][date <= target_date]
-observations <- observations[primary < 0, primary := 0]
-observations <- observations[secondary < 0, secondary := 0]
-setorder(observations, region, date)
+# Get observations --------------------------------------------------------
+observations <- get_observations(dir = here("data-raw"), target_date)
 
 # Get case forecasts ------------------------------------------------------
 case_forecast <- suppressWarnings(
@@ -61,7 +43,7 @@ forecast <- regional_secondary(
   return_fit = FALSE,
   secondary = secondary_opts(type = "incidence"),
   obs = obs_opts(scale = list(mean = 0.01, sd = 0.02)),
-  burn_in = as.integer(max(observations$date) - min(observations$date)) - 3 * 7,
+  burn_in = as.integer(max(obs$date) - min(obs$date)) - 3 * 7,
   control = list(adapt_delta = 0.95, max_treedepth = 15),
   verbose = TRUE
 )
@@ -83,7 +65,7 @@ fwrite(forecast$summarised, file.path(summarised_path, "summary.csv"))
 # save plots
 walk2(forecast$region, names(forecast$region), function(f, n) {
   walk(
-    1:length(f$plots),
+    seq_len(length(f$plots)),
     ~ suppressMessages(ggsave(
       filename = paste0(n, "-", names(f$plots)[.], ".png"),
       plot = f$plots[[.]],

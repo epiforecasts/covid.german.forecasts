@@ -9,13 +9,14 @@ get_truth_data(dir, range = "daily", type = "incident", target = "cases", locs)
 \arguments{
 \item{dir}{A character string indicating the path to the target data folder.}
 
-\item{range}{A character string indicating the range of the data. Supported options are "daily"
-or "weekly".}
+\item{range}{A character string indicating the range
+of the data. Supported options are "daily" or "weekly".}
 
-\item{type}{A character string indicating the type of data to load. Supports either "incident" or
-"cumulative'.}
+\item{type}{A character string indicating the type of data
+to load. Supports either "incident" or "cumulative'.}
 
-\item{target}{A character string indicating the target type. Supports either "cases" or "deaths".}
+\item{target}{A character string indicating the target type.
+Supports either "cases" or "deaths".}
 
 \item{locs}{A character vector of target locations to filter for (by code).}
 }
