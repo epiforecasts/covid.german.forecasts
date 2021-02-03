@@ -14,7 +14,7 @@ saveRDS(submission_date,
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
 # copy Rt data into app
-obs_filt_rt_cases <- 
+obs_filt_rt_cases <-
   fread(
     here("rt-forecast", "data", "summary", "cases", submission_date, "rt.csv")
     ) %>%
@@ -23,7 +23,7 @@ obs_filt_rt_cases <-
   filter(target_end_date <= (as.Date(first_forecast_date) + 7 * 6)) %>%
   filter(region %in% c("Poland", "Germany"))
 
-obs_filt_rt_deaths <- 
+obs_filt_rt_deaths <-
   fread(
     here("rt-forecast", "data", "summary", "deaths", submission_date, "rt.csv")
     ) %>%
