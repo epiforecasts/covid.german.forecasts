@@ -15,7 +15,7 @@ if (weekdays(Sys.Date()) != "Monday") {
   submission_date <- Sys.Date()
 }
 
-saveRDS(submission_date, here("human-forecasts", "data", "submission_date.RDS"))
+saveRDS(submission_date, here("human-forecasts", "data", "submission_date.rds"))
 
 deployApp(appDir = here("human-forecasts"),
           appName = "crowd-forecast",

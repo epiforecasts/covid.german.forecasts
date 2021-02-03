@@ -9,7 +9,7 @@ library(crowdforecastr)
 
 # load submission date from data if on server
 if (!dir.exists("human-forecasts")) {
-  submission_date <- readRDS(here("data", "submission_date.RDS"))
+  submission_date <- readRDS(here("data", "submission_date.rds"))
 } else {
   submision_date <- latest_weekday() + 7
 }
