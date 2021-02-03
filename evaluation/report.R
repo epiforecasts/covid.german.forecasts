@@ -8,10 +8,10 @@ library(data.table)
 
 # code needs a refactor and lots of copy and paste leading to it being hard to interpret. 
 # read in the EpiExpert ensemble forecast and EpiNow2 models
-folders <- list.files(here("submissions", "crowd-forecasts"))
+folders <- list.files(here("submissions", "crowd-forecast"))
 files <- map(folders, .f = function(folder_name) {
-                      files <- list.files(paste0(here("submissions", "crowd-forecasts"), folder_name))
-                      paste(paste0(here("submissions", "crowd-forecasts"), folder_name, "/", files))
+                      files <- list.files(paste0(here("submissions", "crowd-forecast"), folder_name))
+                      paste(paste0(here("submissions", "crowd-forecast"), folder_name, "/", files))
                     }) %>%
   unlist()
 epiexpert_forecasts <- map_dfr(files, read_csv) %>%
@@ -19,7 +19,7 @@ epiexpert_forecasts <- map_dfr(files, read_csv) %>%
          horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
   filter(grepl("inc", target), type == "quantile")
 
-fwrite(epiexpert_forecasts, here("crowd-forecasts", "processed-forecast-data", "all-epiexpert-forecasts.csv"))
+fwrite(epiexpert_forecasts, here("crowd-forecast", "processed-forecast-data", "all-epiexpert-forecasts.csv"))
 
 # also read all EpiNow2 forecasts, give them a board_name - repeat suggest replace
 folders <- list.files(here("submissions", "rt-forecasts/"))
@@ -33,7 +33,7 @@ epinow_forecasts <- map_dfr(files, readr::read_csv) %>%
         horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
   filter(grepl("inc", target), type == "quantile")
 
-fwrite(epinow_forecasts, here("crowd-forecasts", "processed-forecast-data", "all-epinow2-forecasts.csv"))
+fwrite(epinow_forecasts, here("crowd-forecast", "processed-forecast-data", "all-epinow2-forecasts.csv"))
 
 # also read all EpiNow2 secondary forecasts, give them a board_name 
 folders <- list.files(here("submissions", "deaths-from-cases/"))
@@ -47,7 +47,7 @@ epinow_forecasts <- map_dfr(files, read_csv) %>%
          horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
  filter(grepl("inc", target), type == "quantile")
 
-fwrite(epinow_forecasts, here("crowd-forecasts", "processed-forecast-data", "all-epinow2_secondary-forecasts.csv"))
+fwrite(epinow_forecasts, here("crowd-forecast", "processed-forecast-data", "all-epinow2_secondary-forecasts.csv"))
 
 # also read all EpiNow2 Rt crowd forecasts, give them a board_name 
 folders <- list.files(here("submissions", "crowd-rt-forecasts/"))
@@ -62,10 +62,10 @@ epinow__crowd_forecasts <- map_dfr(files, read_csv) %>%
   horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
   filter(grepl("inc", target), type == "quantile")
 
-fwrite(epinow__crowd_forecasts, here("crowd-forecasts", "processed-forecast-data", "all-crowd-rt-forecasts.csv"))
+fwrite(epinow__crowd_forecasts, here("crowd-forecast", "processed-forecast-data", "all-crowd-rt-forecasts.csv"))
 
 # load data --------------------------------------------------------------------
-root_dir <- here("crowd-forecasts", "processed-forecast-data")
+root_dir <- here("crowd-forecast", "processed-forecast-data")
 file_paths_forecast <- paste0(root_dir, list.files(root_dir))
 
 prediction_data <- map_dfr(file_paths_forecast, 
