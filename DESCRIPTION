@@ -37,7 +37,10 @@ Suggests:
     crowdforecastr,
     rsconnect,
     googledrive,
-    googlesheets4
+    googlesheets4,
+    ggplot2,
+    tidyr,
+    readr
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
