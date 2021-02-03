@@ -5,11 +5,8 @@ library(magrittr)
 folders <- list.files(here::here("submissions", "human-forecasts"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0(here::here("submissions", "human-forecasts"), 
-                                                 folder_name))
-                      paste(paste0(here::here("submissions", "human-forecasts"), 
-                                   folder_name, "/", 
-                                   files))
+                      files <- list.files(here::here("submissions", "human-forecasts", folder_name))
+                      paste(here::here("submissions", "human-forecasts", folder_name, files))
                     }) %>%
   unlist()
 epiexpert_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
@@ -29,11 +26,8 @@ data.table::fwrite(epiexpert_forecasts,
 folders <- list.files(here::here("submissions", "rt-forecasts/"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0(here::here("submissions", "rt-forecasts/"), 
-                                                 folder_name))
-                      paste(paste0(here::here("submissions", "rt-forecasts/"), 
-                                   folder_name, "/", 
-                                   files))
+                      files <- list.files(here::here("submissions", "rt-forecasts/", folder_name))
+                      paste(here::here("submissions", "rt-forecasts/", folder_name, files))
                     }) %>%
   unlist()
 epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
@@ -54,11 +48,8 @@ data.table::fwrite(epinow_forecasts,
 folders <- list.files(here::here("submissions", "deaths-from-cases/"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0(here::here("submissions", "deaths-from-cases/"), 
-                                                 folder_name))
-                      paste(paste0(here::here("submissions", "deaths-from-cases/"), 
-                                   folder_name, "/", 
-                                   files))
+                      files <- list.files(here::here("submissions", "deaths-from-cases/", folder_name))
+                      paste(here::here("submissions", "deaths-from-cases/", folder_name, files))
                     }) %>%
   unlist()
 epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
@@ -77,11 +68,8 @@ data.table::fwrite(epinow_forecasts,
 folders <- list.files(here::here("submissions", "crowd-rt-forecasts/"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0(here::here("submissions", "crowd-rt-forecasts/"), 
-                                                 folder_name))
-                      paste(paste0(here::here("submissions", "crowd-rt-forecasts/"), 
-                                   folder_name, "/", 
-                                   files))
+                      files <- list.files(here::here("submissions", "crowd-rt-forecasts/", folder_name))
+                      paste(here::here("submissions", "crowd-rt-forecasts/", folder_name, files))
                     }) %>%
   unlist()
 epinow__crowd_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
@@ -97,7 +85,7 @@ data.table::fwrite(epinow__crowd_forecasts,
 
 # load data --------------------------------------------------------------------
 root_dir <- here::here("human-forecasts", "processed-forecast-data")
-file_paths_forecast <- paste0(root_dir, list.files(root_dir))
+file_paths_forecast <- here::here(root_dir, list.files(root_dir))
 
 prediction_data <- purrr::map_dfr(file_paths_forecast, 
                                   .f = function(x) {
