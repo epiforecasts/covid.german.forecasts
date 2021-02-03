@@ -19,25 +19,25 @@ check_dir <- function(dir) {
 #' @importFrom tibble tibble
 #' @importFrom lubridate epiweek
 dates_to_epiweek <- function(df){
-  
+
   seq <- tibble(date = unique(df$date),
                 epiweek = epiweek(date),
                  day = weekdays(date))
-  
+
   epiweek_end_date <- seq %>%
     filter(day == "Saturday")
-  
+
   epiweek_complete <- seq %>%
     group_by(epiweek) %>%
     count() %>%
     filter(n == 7) %>%
     left_join(epiweek_end_date, by = "epiweek")
-  
+ 
   df_dated <- df %>%
     mutate(epiweek = epiweek(date),
            epiweek_end = date %in% epiweek_end_date$date,
            epiweek_full = epiweek %in% epiweek_complete$epiweek)
-  
+
   return(df_dated)
 }
 #' Make Incidence data weekly
@@ -66,8 +66,8 @@ make_weekly <- function(inc) {
 #' @importFrom dplyr arrange group_by mutate
 make_cumulative <- function(inc) {
   inc_cum <- inc %>%
-    arrange(target_end_date) %>% 
-    group_by(location, location_name) %>% 
+    arrange(target_end_date) %>%
+    group_by(location, location_name) %>%
     mutate(value = cumsum(value))
 }
 #' Attempt to Execute an Expression and Retry After Failure
@@ -78,8 +78,8 @@ make_cumulative <- function(inc) {
 #' @return outcome of the expression to be evaluated
 #' @export
 #' @importFrom attempt attempt is_try_error
-try_and_wait <- function(expr, 
-                         time_to_wait = 120, 
+try_and_wait <- function(expr,
+                         time_to_wait = 120,
                          number_of_attempts = 10) {
   out <- attempt(expr)
   attempt_number <- 1
@@ -87,20 +87,24 @@ try_and_wait <- function(expr,
     if (attempt_number > number_of_attempts) {
       stop("Failed - sorry!")
     }
-    warning(paste("Attempt number", attempt_number, "failed, I'll wait and retry"))
-    
+    warning(
+      paste("Attempt number", attempt_number, "failed, I'll wait and retry")
+      )
     Sys.sleep(time_to_wait)
     out <- attempt(expr)
     attempt_number <- attempt_number + 1
-  } 
+  }
   return(out)
 }
 #' Find the Latest Target Weekday
-#' 
+#'
 #' @param date A date, by default the current system date.
-#' @param day Numeric, defaults to 1 (Monday). Day of the week to find. See ?floor_date for documentation.
-#' @param char Logical, defaults to `TRUE`. Should the date be returned as a character string
-#' @return A date or character string identifying the latest target day of the week
+#' @param day Numeric, defaults to 1 (Monday). Day of the
+#'  week to find. See ?floor_date for documentation.
+#' @param char Logical, defaults to `TRUE`. Should the date be
+#'  returned as a character string
+#' @return A date or character string identifying
+#'  the latest target day of the week
 #' @export
 #' @importFrom lubridate floor_date
 latest_weekday <- function(date = Sys.Date(), day = 1, char = FALSE){
@@ -113,16 +117,18 @@ latest_weekday <- function(date = Sys.Date(), day = 1, char = FALSE){
 #' Get Local Truth Data
 #' 
 #' @param dir A character string indicating the path to the target data folder.
-#' @param range A character string indicating the range of the data. Supported options are "daily"
-#' or "weekly".
-#' @param type A character string indicating the type of data to load. Supports either "incident" or 
-#' "cumulative'.
-#' @param target A character string indicating the target type. Supports either "cases" or "deaths".
-#' @param locs A character vector of target locations to filter for (by code). 
+#' @param range A character string indicating the range
+#'  of the data. Supported options are "daily" or "weekly".
+#' @param type A character string indicating the type of data
+#'  to load. Supports either "incident" or "cumulative'.
+#' @param target A character string indicating the target type.
+#'  Supports either "cases" or "deaths".
+#' @param locs A character vector of target locations to filter for (by code).
 #' @return A data table of required truth data.
 #' @export
 #' @importFrom data.table fread :=
-get_truth_data <- function(dir, range = "daily", type = "incident", target = "cases", locs) {
+get_truth_data <- function(dir, range = "daily", type = "incident",
+                           target = "cases", locs) {
   dt <- fread(paste0(dir, "/", range, "-", type, "-", target, ".csv"))
   dt[, `:=`(inc = type, type = target)]
   if (!missing(locs)) {
@@ -133,7 +139,7 @@ get_truth_data <- function(dir, range = "daily", type = "incident", target = "ca
 
 globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",
-    "locations", "n", "quantile", "region", "target", "target_end_date", "type", "value", 
-    "."
+    "locations", "n", "quantile", "region", "target", "target_end_date",
+    "type", "value", "."
   )
 )

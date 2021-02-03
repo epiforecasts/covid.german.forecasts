@@ -11,9 +11,9 @@ library(lubridate)
 target_date <- latest_weekday()
 
 # Get Rt forecasts --------------------------------------------------------
-crowd_rt <- fread(here(
-  "rt-crowd-forecast", "processed-forecast-data",
-  paste0(target_date, "-processed-forecasts.csv")
+crowd_rt <- fread(
+  here("rt-crowd-forecast", "processed-forecast-data",
+       paste0(target_date, "-processed-forecasts.csv")
 ))
 
 # dropped redundant columns and get correct shape
