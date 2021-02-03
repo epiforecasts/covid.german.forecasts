@@ -161,6 +161,6 @@ save_forecast <- function(forecast, loc_name, loc, type = "",
 globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",
     "locations", "n", "quantile", "region", "target", "target_end_date",
-    "type", "value", "."
+    "type", "value", ".", "primary", "secondary", "target_date", "variable"
   )
 )
