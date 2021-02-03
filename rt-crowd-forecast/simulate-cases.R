@@ -1,5 +1,5 @@
 # Packages ----------------------------------------------------------------
-library(covid.german.forecast)
+library(covid.german.forecasts)
 library(EpiNow2)
 library(data.table)
 library(here) 
@@ -107,13 +107,15 @@ walk(names(simulations), function(loc) {
 cum_cases <- fread(here("data-raw", "weekly-cumulative-cases.csv"))
 cum_deaths <- fread(here("data-raw", "weekly-cumulative-deaths.csv"))
 
-crowd_cases <- format_forecast(crowd_cases, 
+crowd_cases <- format_forecast(crowd_cases,
+                               locations = locations, 
                                cumulative = cum_cases[location_name %in% c("Germany", "Poland")],
                                forecast_date = target_date,
                                submission_date = target_date,
                                target_value = "case")
 
 crowd_deaths <- format_forecast(crowd_deaths, 
+                                locations = locations,
                                 cumulative = cum_deaths[location_name %in% c("Germany", "Poland")],
                                 forecast_date = target_date,
                                 submission_date = target_date,
@@ -134,4 +136,3 @@ save_forecast(crowd_cases, "Germany", "GM", "-case")
 save_forecast(crowd_cases, "Poland", "PL", "-case")
 save_forecast(crowd_deaths, "Germany", "GM")
 save_forecast(crowd_deaths, "Poland", "PL")
-
