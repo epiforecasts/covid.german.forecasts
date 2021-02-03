@@ -16,18 +16,16 @@ onset_to_report <- readRDS(here("rt-forecast", "data", "delays", "onset_to_repor
 
 # Get cases  ---------------------------------------------------------------
 cases <- fread(file.path("data-raw", "daily-incidence-cases.csv"))
-cases <- cases[, .(region = as.character(location_name), date = as.Date(date), 
-                   confirm = value)]
+cases <- cases[, .(region = as.character(location_name), date = as.Date(date), confirm = value)]
 cases <- cases[confirm < 0, confirm := 0]
 cases <- cases[date >= (max(date) - weeks(12))]
-data.table::setorder(cases, region, date)
+setorder(cases, region, date)
 
 # Set up parallel execution -----------------------------------------------
 no_cores <- setup_future(cases)
 
 # Run Rt estimation -------------------------------------------------------
-rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), 
-                        future = "latest"), cases)
+rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), future = "latest"), cases)
 # add population adjustment for each country
 loc_names <- names(rt)
 rt <- lapply(loc_names,  function(loc) {
