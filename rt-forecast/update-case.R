@@ -7,7 +7,7 @@ library(here, quietly = TRUE)
 library(lubridate, quietly = TRUE)
 
 # Set target date ---------------------------------------------------------
-target_date <- as.character(floor_date(Sys.Date(), unit = "week", 1)) 
+target_date <- latest_weekday(char = TRUE) 
 
 # Update delays -----------------------------------------------------------
 generation_time <- readRDS(here("rt-forecast", "data", "delays", "generation_time.rds"))

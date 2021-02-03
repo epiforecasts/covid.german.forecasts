@@ -6,7 +6,7 @@
 \usage{
 format_forecast(
   forecasts,
-  location,
+  locations,
   cumulative = NULL,
   forecast_date = NULL,
   submission_date = NULL,
@@ -18,7 +18,7 @@ format_forecast(
 \item{forecasts}{A data frame of forecasts containing the following variables:
 \code{date}, \code{value}, \code{region}, and \code{sample}.}
 
-\item{location}{A data frame data dictionary linking locations with location names.
+\item{locations}{A data frame data dictionary linking locations with location names.
 Must contain: \code{location} and \code{location_name}}
 
 \item{cumulative}{A data frame but defaults to NULL. Previous cumulative case

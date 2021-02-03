@@ -78,7 +78,6 @@ make_cumulative <- function(inc) {
 #' @return outcome of the expression to be evaluated
 #' @export
 #' @importFrom attempt attempt is_try_error
-
 try_and_wait <- function(expr, 
                          time_to_wait = 120, 
                          number_of_attempts = 10) {
@@ -96,7 +95,41 @@ try_and_wait <- function(expr,
   } 
   return(out)
 }
-
+#' Find the Latest Target Weekday
+#' 
+#' @param date A date, by default the current system date.
+#' @param day Numeric, defaults to 1 (Monday). Day of the week to find. See ?floor_date for documentation.
+#' @param char Logical, defaults to `TRUE`. Should the date be returned as a character string
+#' @return A date or character string identifying the latest target day of the week
+#' @export
+#' @importFrom lubridate floor_date
+latest_weekday <- function(date = Sys.Date(), day = 1, char = FALSE){
+  weekday <- floor_date(date, unit = "week", day)
+  if (char) {
+    weekday <- as.character(weekday)
+  }
+  return(weekday)
+}
+#' Get Local Truth Data
+#' 
+#' @param dir A character string indicating the path to the target data folder.
+#' @param range A character string indicating the range of the data. Supported options are "daily"
+#' or "weekly".
+#' @param type A character string indicating the type of data to load. Supports either "incident" or 
+#' "cumulative'.
+#' @param target A character string indicating the target type. Supports either "cases" or "deaths".
+#' @param locs A character vector of target locations to filter for (by code). 
+#' @return A data table of required truth data.
+#' @export
+#' @importFrom data.table fread :=
+get_truth_data <- function(dir, range = "daily", type = "incident", target = "cases", locs) {
+  dt <- fread(paste0(dir, "/", range, "-", type, "-", target, ".csv"))
+  dt[, `:=`(inc = type, type = target)]
+  if (!missing(locs)) {
+    dt <- dt[location %in% locs]
+  }
+  return(dt)
+}
 
 globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",

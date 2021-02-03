@@ -6,7 +6,7 @@ library(lubridate)
 library(here)
 
 # Dates -------------------------------------------------------------------
-target_date <- floor_date(Sys.Date(), unit = "week", 1)
+target_date <- latest_weekday(char = TRUE)
 
 # Get forecasts -----------------------------------------------------------
 case_forecast <- suppressWarnings(

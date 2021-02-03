@@ -2,30 +2,26 @@
 # To deploy, run: rsconnect::deployApp()
 # Or use the blue button on top of this file
 
-library(magrittr)
+library(covid.german.forecasts)
+library(data.table)
+library(here)
 library(crowdforecastr)
 
 # load submission date from data if on server
 if (!dir.exists("human-forecasts")) {
-  submission_date <- readRDS(here::here("data", "submission_date.RDS"))
+  submission_date <- readRDS(here("data", "submission_date.RDS"))
 } else {
-  submision_date <- as.Date("2020-02-01")
+  submision_date <- latest_weekday() + 7
 }
 
 # set first forecast date to the Saturday after that
 first_forecast_date <- submission_date + 5
 
-# load deaths
-deaths_inc <- data.table::fread(here::here("data", "weekly-incident-deaths.csv")) %>%
-  dplyr::mutate(inc = "incident",
-                type = "deaths") %>%
-  dplyr::filter(location %in% c("GM", "PL"))
+ # load deaths
+deaths_inc <- get_truth_data(dir = here("data-raw"), range = "weekly", target = "deaths", locs = c("GM", "PL"))
 
 # load cases
-cases_inc <- data.table::fread(here::here("data", "weekly-incident-cases.csv")) %>%
-  dplyr::mutate(inc = "incident",
-                type = "cases") %>%
-  dplyr::filter(location %in% c("GM", "PL"))
+cases_inc <- get_truth_data(dir = here("data-raw"), range = "weekly", locs = c("GM", "PL"))
 
 # bind together and sort according to date
 observations <- dplyr::bind_rows(deaths_inc,
