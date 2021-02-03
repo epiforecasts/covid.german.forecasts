@@ -9,6 +9,7 @@ library(lubridate)
 library(zoo)
 library(scoringutils)
 library(ggplot2)
+library(here)
 
 # Google sheets authentification -----------------------------------------------
 options(gargle_oauth_cache = ".secrets")
@@ -23,9 +24,7 @@ submission_date <- latest_weekday()
 median_ensemble <- FALSE
 
 # load data from Google Sheets -------------------------------------------------
-# load identification
 ids <- try_and_wait(read_sheet(ss = identification_sheet, sheet = "ids"))
-# load forecasts 
 forecasts <- try_and_wait(read_sheet(ss = spread_sheet))
 
 delete_data <- FALSE
@@ -93,17 +92,13 @@ draw_samples <- function(distribution, median, width, n_people, overall_sample_n
     values <- exp(rnorm(num_samples, mean = log(as.numeric(median)), sd = as.numeric(width)))
   } else if (distribution == "normal") {
     values <- rnorm(num_samples, mean = (as.numeric(median)), sd = as.numeric(width))
-    
   } else if (distribution == "cubic-normal") {
     values <- (rnorm(num_samples, mean = (as.numeric(median) ^ (1/3)), sd = as.numeric(width))) ^ 3
-    
   } else if (distribution == "fifth-power-normal") {
     values <- (rnorm(num_samples, mean = (as.numeric(median) ^ (1/5)), sd = as.numeric(width))) ^ 5
-    
   } else if (distribution == "seventh-power-normal") {
     values <- (rnorm(num_samples, mean = (as.numeric(median) ^ (1/7)), sd = as.numeric(width))) ^ 7
   }
-
   out <- list(sort(values))
   return(out)
 }
@@ -132,7 +127,7 @@ forecast_samples <- filtered_forecasts %>%
   arrange(forecaster_id, location, target_type, target_end_date, sample)
 
 # interpolate missing days
-# I'm pretty sure the horizon time indexisng is currently wrong. 
+# I'm pretty sure the horizon time indexing is currently wrong. 
 dates <- unique(forecast_samples$target_end_date)
 date_range <- seq(min(as.Date(min(dates))), max(as.Date(max(dates))), by = 'days')
 submission_date = unique(forecast_samples$submission_date)
@@ -165,6 +160,3 @@ check <- sample_to_quantile(forecast_samples_daily %>% rename(prediction = value
 plot <- plot_predictions(check %>% mutate(true_value = NA_real_, target_end_date = as.Date(target_end_date, origin="1970-01-01")), 
                          x = "target_end_date", facet_formula = ~ forecaster_id + location + target_type)
 ggsave(here("rt-crowd-forecast", "plots", paste0(submission_date, "-rt.png")))
-
-
-
