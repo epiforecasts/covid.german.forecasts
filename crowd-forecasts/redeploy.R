@@ -6,7 +6,7 @@ source(here("data-raw", "update.R"))
 
 # copy data into app
 file.copy(c(here("data-raw", "weekly-incident-cases.csv"), here("data-raw", "weekly-incident-deaths.csv")),
-          to = here("human-forecasts", "data"), overwrite = TRUE)
+          to = here("crowd-forecasts", "data"), overwrite = TRUE)
 
 # if today is not Monday, set submission date to the next Monday
 if (weekdays(Sys.Date()) != "Monday") {
@@ -15,9 +15,9 @@ if (weekdays(Sys.Date()) != "Monday") {
   submission_date <- Sys.Date()
 }
 
-saveRDS(submission_date, here("human-forecasts", "data", "submission_date.rds"))
+saveRDS(submission_date, here("crowd-forecasts", "data", "submission_date.rds"))
 
-deployApp(appDir = here("human-forecasts"),
+deployApp(appDir = here("crowd-forecasts"),
           appName = "crowd-forecast",
           account = "cmmid-lshtm", 
           forceUpdate = TRUE,

@@ -2,12 +2,12 @@
 library(magrittr)
 
 # read in the EpiExpert ensemble forecast and EpiNow2 models
-folders <- list.files(here::here("submissions", "human-forecasts"))
+folders <- list.files(here::here("submissions", "crowd-forecasts"))
 files <- purrr::map(folders, 
                     .f = function(folder_name) {
-                      files <- list.files(paste0(here::here("submissions", "human-forecasts"), 
+                      files <- list.files(paste0(here::here("submissions", "crowd-forecasts"), 
                                                  folder_name))
-                      paste(paste0(here::here("submissions", "human-forecasts"), 
+                      paste(paste0(here::here("submissions", "crowd-forecasts"), 
                                    folder_name, "/", 
                                    files))
                     }) %>%
@@ -20,7 +20,7 @@ epiexpert_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epiexpert_forecasts, 
-                   here::here("human-forecasts", "processed-forecast-data", "all-epiexpert-forecasts.csv"))
+                   here::here("crowd-forecasts", "processed-forecast-data", "all-epiexpert-forecasts.csv"))
 
 
 
@@ -44,7 +44,7 @@ epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epinow_forecasts, 
-                   here::here("human-forecasts", "processed-forecast-data", "all-epinow2-forecasts.csv"))
+                   here::here("crowd-forecasts", "processed-forecast-data", "all-epinow2-forecasts.csv"))
 
 
 
@@ -69,7 +69,7 @@ epinow_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epinow_forecasts, 
-                   here::here("human-forecasts", "processed-forecast-data", "all-epinow2_secondary-forecasts.csv"))
+                   here::here("crowd-forecasts", "processed-forecast-data", "all-epinow2_secondary-forecasts.csv"))
 
 
 
@@ -92,11 +92,11 @@ epinow__crowd_forecasts <- purrr::map_dfr(files, readr::read_csv) %>%
                 type == "quantile")
 
 data.table::fwrite(epinow__crowd_forecasts, 
-                   here::here("human-forecasts", "processed-forecast-data", "all-crowd-rt-forecasts.csv"))
+                   here::here("crowd-forecasts", "processed-forecast-data", "all-crowd-rt-forecasts.csv"))
 
 
 # load data --------------------------------------------------------------------
-root_dir <- here::here("human-forecasts", "processed-forecast-data")
+root_dir <- here::here("crowd-forecasts", "processed-forecast-data")
 file_paths_forecast <- paste0(root_dir, list.files(root_dir))
 
 prediction_data <- purrr::map_dfr(file_paths_forecast, 
