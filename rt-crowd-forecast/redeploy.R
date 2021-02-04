@@ -38,7 +38,7 @@ obs_filt_rt <- bind_rows(obs_filt_rt_cases, obs_filt_rt_deaths) %>%
 
 fwrite(obs_filt_rt, here("rt-crowd-forecast", "data", "observations.csv"))
 
-rsconnect::deployApp(
+deployApp(
   appDir = here("rt-crowd-forecast"),
   appName = "rt-crowd-forecast",
   account = "cmmid-lshtm",
