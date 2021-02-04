@@ -19,36 +19,22 @@ first_forecast_date <- as.character(as.Date(submission_date) - 16)
 # Run on local machine to load the latest data.
 # Will be skipped on the shiny server
 if (dir.exists("rt-forecast")) {
-  obs_filt_rt_cases <- fread(
+  obs <- fread(
     paste0("rt-forecast/data/summary/cases/", submission_date, "/rt.csv")
     ) %>%
     rename(value = median, target_end_date = date) %>%
     mutate(target_type = "case", target_end_date = as.Date(target_end_date)) %>%
     filter(target_end_date <= (as.Date(first_forecast_date) + 7 * 6)) %>%
-    filter(region %in% c("Poland", "Germany"))
-
-  obs_filt_rt_deaths <- 
-    fread(
-      paste0("rt-forecast/data/summary/deaths/", submission_date, "/rt.csv")
-      ) %>%
-    rename(value = median, target_end_date = date) %>%
-    mutate(
-      target_type = "death", target_end_date = as.Date(target_end_date)
-      ) %>%
-    filter(target_end_date <= (as.Date(first_forecast_date) + 7 * 6)) %>%
-    filter(region %in% c("Poland", "Germany"))
-
-  obs_filt_rt <- bind_rows(obs_filt_rt_cases, obs_filt_rt_deaths) %>%
-    arrange(region, target_type, target_end_date) %>%
+    filter(region %in% c("Poland", "Germany")) %>%
     arrange(region, target_type, target_end_date)
 
-  fwrite(obs_filt_rt, "rt-crowd-forecast/external-ressources/observations.csv")
+  fwrite(obs, "rt-crowd-forecast/external-ressources/observations.csv")
 } else {
-  obs_filt_rt <- read.csv("data/observations.csv")
+  obs <- read.csv("data/observations.csv")
 }
 
 run_app(
-  data = obs_filt_rt,
+  data = obs,
   selection_vars = c("region", "target_type"),
   first_forecast_date = first_forecast_date,
   submission_date = submission_date,
