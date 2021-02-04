@@ -2,15 +2,13 @@ library(covid.german.forecasts)
 library(data.table)
 library(dplyr)
 library(rsconnect)
+library(here)
 
-# if today is not Monday, set submission date to the next Monday
-if (weekdays(Sys.Date()) != "Monday") {
-  submission_date <- latest_weekday() + 7
-} else {
-  submission_date <- Sys.Date()
-}
+# if today is not Monday, set submission date to last monday
+submission_date <- latest_weekday()
+
 saveRDS(submission_date,
-        here("rt-crowd-forecast", "data", "submission_date.RDS"))
+        here("rt-crowd-forecast", "data", "submission_date.rds"))
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
 # copy Rt data into app

@@ -12,7 +12,7 @@ options("golem.app.prod" = TRUE)
 if (!dir.exists("rt-crowd-forecast")) {
   submission_date <- readRDS("data/submission_date.rds")
 } else {
-  submision_date <- latest_weekday() + 7
+  submission_date <- latest_weekday()
 }
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
