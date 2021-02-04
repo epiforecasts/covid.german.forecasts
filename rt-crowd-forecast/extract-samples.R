@@ -194,6 +194,7 @@ plot <- plot_predictions(
   x = "target_end_date",
   facet_formula = ~ forecaster_id + location + target_type
   )
-ggsave(
-  here("rt-crowd-forecast", "data", "plots", submission_date, "rt.png")
-  )
+
+plot_dir <- here("rt-crowd-forecast", "data", "plots", submission_date)
+check_dir(plot_dir)
+ggsave(file.path(plot_dir, "rt.png"))
