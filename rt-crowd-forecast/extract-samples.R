@@ -197,6 +197,4 @@ plot <- plot_predictions(
 
 plot_dir <- here("rt-crowd-forecast", "data", "plots", submission_date)
 check_dir(plot_dir)
-ggsave(
-  file.path(plot_dir, "rt.png")
-  )
+ggsave(file.path(plot_dir, "rt.png"))
