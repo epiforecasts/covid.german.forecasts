@@ -9,12 +9,15 @@ latest_weekday(date = Sys.Date(), day = 1, char = FALSE)
 \arguments{
 \item{date}{A date, by default the current system date.}
 
-\item{day}{Numeric, defaults to 1 (Monday). Day of the week to find. See ?floor_date for documentation.}
+\item{day}{Numeric, defaults to 1 (Monday). Day of the
+week to find. See ?floor_date for documentation.}
 
-\item{char}{Logical, defaults to \code{TRUE}. Should the date be returned as a character string}
+\item{char}{Logical, defaults to \code{TRUE}. Should the date be
+returned as a character string}
 }
 \value{
-A date or character string identifying the latest target day of the week
+A date or character string identifying
+the latest target day of the week
 }
 \description{
 Find the Latest Target Weekday

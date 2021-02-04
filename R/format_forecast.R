@@ -1,15 +1,17 @@
 #' Format Forecasts
 #'
-#' @param forecasts A data frame of forecasts containing the following variables:
-#' `date`, `value`, `region`, and `sample`.
-#' @param locations A data frame data dictionary linking locations with location names.
-#' Must contain: `location` and `location_name`
-#' @param cumulative A data frame but defaults to NULL. Previous cumulative case 
-#' counts. Must contain: `target_end_date`, `location`, and `value`.
+#' @param forecasts A data frame of forecasts containing
+#'  the following variables: `date`, `value`, `region`, and `sample`.
+#' @param locations A data frame data dictionary linking locations 
+#' with location names. Must contain: `location` and `location_name`
+#' @param cumulative A data frame but defaults to NULL.
+#' Previous cumulative case counts. Must contain: `target_end_date`,
+#'  `location`, and `value`.
 #' @param forecast_date A date indicating when the forecast took place.
 #' @param submission_date A date indicating the target submission date.
-#' @param CrI_samples A fraction of the posterior samples to include. Defaults to 1.
-#' Can be helpful for models that have more uncertainty than is reasonable.
+#' @param CrI_samples A fraction of the posterior samples to include.
+#'  Defaults to 1. Can be helpful for models that have more uncertainty
+#'  than is reasonable.
 #' @param target_value Character string indicating the target value name.
 #' @return A data frame
 #' @export
