@@ -10,7 +10,7 @@ library(crowdforecastr)
 if (!dir.exists("crowd-forecast")) {
   submission_date <- readRDS(here("data", "submission_date.rds"))
 } else {
-  submision_date <- latest_weekday() + 7
+  submission_date <- latest_weekday() + 7
 }
 
 # set first forecast date to the Saturday after that
