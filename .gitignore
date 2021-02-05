@@ -6,6 +6,5 @@
 rt-forecast/data/samples
 rt-forecast/logs
 data-raw/*.csv
-crowd-forecast/data
-crowd-forecast/performance-board/data
+crowd-forecast/data-raw
 Rplots.pdf
