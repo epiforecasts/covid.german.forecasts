@@ -5,6 +5,7 @@ library(data.table)
 library(dplyr)
 library(crowdforecastr)
 library(magrittr)
+library(rstantools)
 
 options("golem.app.prod" = TRUE)
 
