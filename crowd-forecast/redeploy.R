@@ -21,6 +21,12 @@ saveRDS(
   submission_date, here("crowd-forecast", "data-raw", "submission_date.rds")
   )
 
+setAccountInfo(
+  name = "cmmid-lshtm",
+  token = readRDS(here(".secrets", "shiny_token.rds")),
+  secret = readRDS(here(".secrets", "shiny_secret.rds"))
+)
+
 deployApp(appDir = here("crowd-forecast"),
           appName = "crowd-forecast",
           account = "cmmid-lshtm", 

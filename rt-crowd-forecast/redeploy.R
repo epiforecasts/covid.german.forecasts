@@ -24,6 +24,12 @@ obs <-
 
 fwrite(obs, here("rt-crowd-forecast", "data", "observations.csv"))
 
+setAccountInfo(
+  name = "cmmid-lshtm",
+  token = readRDS(here(".secrets", "shiny_token.rds")),
+  secret = readRDS(here(".secrets", "shiny_secret.rds"))
+)
+
 deployApp(
   appDir = here("rt-crowd-forecast"),
   appName = "rt-crowd-forecast",
