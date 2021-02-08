@@ -6,6 +6,8 @@ library(readr)
 library(scoringutils) 
 library(data.table)
 
+devtools::install_github("epiforecasts/scoringutils", ref = "dev")
+
 # helper function to read in all past submissions from a model, bind them together
 # to one file and copy them into the crowd forecast app folder 
 # having them in one place allows to easily include other models in the 
