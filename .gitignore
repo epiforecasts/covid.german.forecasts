@@ -8,3 +8,4 @@ rt-forecast/logs
 data-raw/*.csv
 crowd-forecast/data-raw
 Rplots.pdf
+crowd-forecast/data/
