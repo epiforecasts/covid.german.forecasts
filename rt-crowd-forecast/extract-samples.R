@@ -84,8 +84,8 @@ filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 
 # write raw forecasts
 fwrite(raw_forecasts %>% select(-board_name),
-       here("rt-crowd-forecast", "raw-forecast-data/",
-            submission_date, "-raw-forecasts.csv"))
+       here("rt-crowd-forecast", "raw-forecast-data",
+            paste0(submission_date, "-raw-forecasts.csv")))
 
 # draw samples from the distributions ------------------------------------------
 n_people <- filtered_forecasts$forecaster_id %>%
@@ -180,7 +180,7 @@ forecast_samples_daily <- forecast_samples %>%
 # save forecasts in quantile-format
 fwrite(forecast_samples_daily %>% mutate(submission_date = submission_date),
        here("rt-crowd-forecast", "processed-forecast-data",
-            submission_date, "-processed-forecasts.csv"))
+            paste0(submission_date, "-processed-forecasts.csv")))
 
 # check results and plot
 check <- forecast_samples_daily %>%
