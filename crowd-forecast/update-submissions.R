@@ -24,18 +24,23 @@ quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 # load data from Google Sheets -------------------------------------------------
 # load identification
 ids <- try_and_wait(read_sheet(ss = identification_sheet, sheet = "ids"))
-# load forecasts 
+# load forecasts
 forecasts <- try_and_wait(read_sheet(ss = spread_sheet))
 
 delete_data <- FALSE
 if (delete_data) {
   # add forecasts to backup sheet
-  try_and_wait(sheet_append(ss = spread_sheet, sheet = "oldforecasts", data = forecasts))
-  
+  try_and_wait(
+    sheet_append(
+      ss = spread_sheet, sheet = "oldforecasts", data = forecasts
+      ))
   # delete data from sheet
   cols <- data.frame(matrix(ncol = ncol(forecasts), nrow = 0))
   names(cols) <- names(forecasts)
-  try_and_wait(write_sheet(data = cols, ss = spread_sheet, sheet = "predictions"))
+  try_and_wait(
+    write_sheet(
+    data = cols, ss = spread_sheet, sheet = "predictions"
+    ))
 }
 
 # obtain raw and filtered forecasts, save raw forecasts-------------------------
@@ -60,7 +65,7 @@ replace_date_and_time <- function(forecasts) {
     ungroup() %>%
     arrange(forecaster_id, forecast_time) %>%
     group_by(forecaster_id) %>%
-    dmutate(forecast_duration = c(NA, diff(forecast_time))) %>%
+    mutate(forecast_duration = c(NA, diff(forecast_time))) %>%
     ungroup()
 
   forecasts <- inner_join(
@@ -184,7 +189,7 @@ get_truth_data(dir = here("data-raw"), range = "weekly",
   filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
   rename(case = type)
 
-cases <- 
+cases <-
 get_truth_data(dir = here("data-raw"), range = "weekly",
                type = "cumulative", target = "cases", 
                locs = c("GM", "PL")) %>%
