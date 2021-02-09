@@ -6,8 +6,6 @@ library(readr)
 library(scoringutils)
 library(data.table)
 
-devtools::install_github("epiforecasts/scoringutils", ref = "dev")
-
 # helper function to read in all past submissions from a model, bind them together
 # to one file and copy them into the crowd forecast app folder 
 # having them in one place allows to easily include other models in the 
@@ -24,7 +22,7 @@ load_and_copy_forecasts <- function(root_dir,
     unlist()
 
   forecasts <- suppressMessages(map_dfr(files, read_csv) %>%
-    mutate(board_name = new_board_name, 
+    mutate(board_name = new_board_name,
            submission_date = forecast_date,
            horizon = as.numeric(gsub("([0-9]+).*$", "\\1", target))) %>%
     filter(grepl("inc", target),
@@ -68,10 +66,10 @@ load_and_copy_forecasts(
 root_dir <- here("crowd-forecast", "processed-forecast-data")
 file_paths_forecast <- here(root_dir, list.files(root_dir))
 
-prediction_data <- map_dfr(file_paths_forecast, 
+prediction_data <- map_dfr(file_paths_forecast,
 .f = function(x) {
   data <- fread(x) %>%
-  mutate(target_end_date = as.Date(target_end_date), 
+  mutate(target_end_date = as.Date(target_end_date),
   submission_date = as.Date(submission_date),
   forecast_date = as.Date(forecast_date))
   }) %>%
