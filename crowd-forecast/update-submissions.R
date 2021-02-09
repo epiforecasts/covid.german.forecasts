@@ -55,7 +55,7 @@ filtered_forecasts <- raw_forecasts %>%
   # if someone reconnecs and then accidentally resubmits under a different
   # condition should that be removed or not? 
   group_by(forecaster_id, location, target_type) %>%
-  filter(forecast_time == max(forecast_time)) %>%
+  dplyr::filter(forecast_time == max(forecast_time)) %>%
   ungroup()
 
 # replace forecast duration with exact data about forecast date and time
@@ -140,38 +140,39 @@ forecasters_to_omit <- forecast_quantiles %>%
   unique() %>%
   group_by(forecaster_id) %>%
   mutate(n = n(), flag = n >= 2) %>%
-  filter(!flag) %>%
+  dplyr::filter(!flag) %>%
   pull(forecaster_id) %>%
   unique()
   
 forecast_quantiles <- forecast_quantiles %>%
-  filter(!(forecaster_id %in% forecasters_to_omit))
+  dplyr::filter(!(forecaster_id %in% forecasters_to_omit))
   
 if (median_ensemble) {
   # make median ensemble
   forecast_inc <- forecast_quantiles %>%
     mutate(target_end_date = as.Date(target_end_date)) %>%
-    group_by(location, location_name, target, type,
+    group_by(location, location_name, target, target_type,
      quantile, horizon, target_end_date) %>%
     summarise(value = median(value)) %>%
     ungroup() %>%
-    select(target, target_end_date, location, type,
+    select(target, target_end_date, location, target_type, type,
      quantile, value, location_name)
 } else {
   # make mean ensemble
   forecast_inc <- forecast_quantiles %>%
-    mutate(target_end_date = as.Date(target_end_date)) %>%
-    group_by(location, location_name, target, type,
+    mutate(target_end_date = as.Date(target_end_date), 
+           type = "quantile") %>%
+    group_by(location, location_name, target, target_type, type,
      quantile, horizon, target_end_date) %>%
     summarise(value = mean(value)) %>%
     ungroup() %>%
-    select(target, target_end_date, location, 
-    type, quantile, value, location_name)
+    select(target, target_end_date, location, type,
+    target_type, quantile, value, location_name)
 }
 # add point forecast
   forecast_inc <- bind_rows(forecast_inc, 
     forecast_inc %>%
-      filter(quantile == 0.5) %>%
+      dplyr::filter(quantile == 0.5) %>%
       mutate(type = "point",
       quantile = NA))
 
@@ -188,7 +189,7 @@ get_truth_data(dir = here("data-raw"), range = "weekly",
                type = "cumulative", target = "deaths", 
                locs = c("GM", "PL")) %>%
   group_by(location) %>%
-  filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
+  dplyr::filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
   rename(case = type)
 
 cases <-
@@ -196,7 +197,7 @@ get_truth_data(dir = here("data-raw"), range = "weekly",
                type = "cumulative", target = "cases", 
                locs = c("GM", "PL")) %>%
   group_by(location) %>%
-  filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
+  dplyr::filter(target_end_date == as.Date(first_forecast_date - 7)) %>%
   rename(case = type)
 
 last_obs <- bind_rows(deaths, cases) %>%
@@ -205,7 +206,7 @@ last_obs <- bind_rows(deaths, cases) %>%
 
 # make cumulative
 forecast_cum <- forecast_inc %>%
-  mutate(case = ifelse(grepl("case", target), "case", "death")) %>%
+  mutate(case = ifelse(grepl("case", target), "cases", "deaths")) %>%
   group_by(location, quantile, case) %>%
   mutate(value = cumsum(value),
                 target = gsub("inc", "cum", target)) %>%
@@ -213,7 +214,7 @@ forecast_cum <- forecast_inc %>%
   # add last observed value
   inner_join(last_obs) %>%
   mutate(value = value + last_value) %>%
-  select(-last_value, -case)
+  select(-last_value, -case, -target_type)
 
 forecast_submission <- bind_rows(forecast_inc, forecast_cum) %>%
   mutate(forecast_date = submission_date)
@@ -222,25 +223,26 @@ forecast_submission <- bind_rows(forecast_inc, forecast_cum) %>%
 check_dir(here("submissions", "crowd-forecasts", submission_date))
 
 forecast_submission %>%
-  filter(location_name %in% "Germany", 
+  dplyr::filter(location_name %in% "Germany", 
                 grepl("death", target)) %>%
   fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Germany-epiforecasts-EpiExpert.csv")))
 
 forecast_submission %>%
-  filter(location_name %in% "Germany", 
+  dplyr::filter(location_name %in% "Germany", 
                 grepl("case", target)) %>%
   fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Germany-epiforecasts-EpiExpert-case.csv")))
 
 forecast_submission %>%
-  filter(location_name %in% "Poland", 
+  dplyr::filter(location_name %in% "Poland", 
                 grepl("death", target)) %>%
   fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Poland-epiforecasts-EpiExpert.csv")))
 
 forecast_submission %>%
-  filter(location_name %in% "Poland", 
+  dplyr::filter(location_name %in% "Poland", 
                 grepl("case", target)) %>%
   fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Poland-epiforecasts-EpiExpert-case.csv")))
+
