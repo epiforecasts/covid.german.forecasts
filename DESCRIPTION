@@ -41,7 +41,8 @@ Suggests:
     ggplot2,
     tidyr,
     readr,
-    devtools
+    devtools,
+    ggbump
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
