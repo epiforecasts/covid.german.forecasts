@@ -6,9 +6,10 @@ library(rsconnect)
 source(here("data-raw", "update.R"))
 
 # copy data into app
-file.copy(c(here("data-raw", "weekly-incident-cases.csv"),
+file.copy(from = c(here("data-raw", "weekly-incident-cases.csv"),
             here("data-raw", "weekly-incident-deaths.csv")),
-          to = here("crowd-forecast", "data-raw"), overwrite = TRUE)
+          to = here("crowd-forecast", "data"),
+          overwrite = TRUE)
 
 # if today is not Monday, set submission date to the next Monday
 if (weekdays(Sys.Date()) != "Monday") {
