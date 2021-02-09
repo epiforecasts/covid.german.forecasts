@@ -132,7 +132,7 @@ forecast_quantiles <- filtered_forecasts %>%
 # save forecasts in quantile-format
 fwrite(forecast_quantiles %>% mutate(submission_date = submission_date),
        here("crowd-forecast", "processed-forecast-data",
-       paste0(submission_date, "-processed-forecasts.csv"))
+       paste0(submission_date, "-processed-forecasts.csv")))
 
 # omit forecasters who haven't forecasted at least two targets
 forecasters_to_omit <- forecast_quantiles %>%
@@ -219,28 +219,28 @@ forecast_submission <- bind_rows(forecast_inc, forecast_cum) %>%
   mutate(forecast_date = submission_date)
 
 # write submission files -------------------------------------------------------
-check_dir(here("submissions", "crowd-forecast", submission_date))
+check_dir(here("submissions", "crowd-forecasts", submission_date))
 
 forecast_submission %>%
   filter(location_name %in% "Germany", 
                 grepl("death", target)) %>%
-  fwrite(here("submissions", "crowd-forecast", submission_date, 
+  fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Germany-epiforecasts-EpiExpert.csv")))
 
 forecast_submission %>%
   filter(location_name %in% "Germany", 
                 grepl("case", target)) %>%
-  fwrite(here("submissions", "crowd-forecast", submission_date, 
+  fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Germany-epiforecasts-EpiExpert-case.csv")))
 
 forecast_submission %>%
   filter(location_name %in% "Poland", 
                 grepl("death", target)) %>%
-  fwrite(here("submissions", "crowd-forecast", submission_date, 
+  fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Poland-epiforecasts-EpiExpert.csv")))
 
 forecast_submission %>%
   filter(location_name %in% "Poland", 
                 grepl("case", target)) %>%
-  fwrite(here("submissions", "crowd-forecast", submission_date, 
+  fwrite(here("submissions", "crowd-forecasts", submission_date, 
          paste0(submission_date, "-Poland-epiforecasts-EpiExpert-case.csv")))

@@ -6,7 +6,7 @@ library(rsconnect)
 source(here("data-raw", "update.R"))
 
 # copy data into app
-check_dir("crowd-forecast", "data-raw")
+check_dir(here("crowd-forecast", "data-raw"))
 file.copy(from = c(here("data-raw", "weekly-incident-cases.csv"),
             here("data-raw", "weekly-incident-deaths.csv")),
           to = here("crowd-forecast", "data-raw"),
