@@ -1,0 +1,15 @@
+
+
+```{r wis-component-plot, results = 'asis', fig.width=10}
+scores <- scoringutils::eval_forecasts(data,
+                                       summarise_by = c("model", "location_name", "target_type"), 
+                                       compute_relative_skill = FALSE)
+plot <- scoringutils::wis_components(scores, 
+                                     facet_wrap_or_grid = "grid",
+                                     relative_contributions = TRUE,
+                                     facet_formula = . ~ target_type + location_name) + 
+  ggplot2::coord_flip() + 
+  ggplot2::theme(legend.position = "bottom")
+
+print(plot)
+```

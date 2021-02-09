@@ -1,0 +1,32 @@
+```{r prediction-plots, echo = FALSE, results='asis', fig.width = 10, fig.height=20}
+
+for (forecast_date in forecast_dates) {
+  cat(paste0("\n\n## ", forecast_date), "{.tabset}\n\n")
+  for (target_type in target_types) {
+    cat("\n\n###", target_type, "\n\n")
+    
+    filter_both <- list(paste0("target_type %in% '", target_type, "'"))
+    filter_truth <- list(paste0("target_end_date > '", as.Date(forecast_date) - 7 * 10, "'"), 
+                         paste0("target_end_date <= '", as.Date(forecast_date) + 7 * 4, "'"))
+    filter_forecasts <- list(paste0("forecast_date == '", as.Date(forecast_date), "'"))
+    
+    
+    plot <- scoringutils::plot_predictions(data,
+                                           x = "target_end_date",
+                                           filter_both = filter_both,
+                                           filter_truth = filter_truth,
+                                           filter_forecasts = filter_forecasts,
+                                           facet_wrap_or_grid = "grid",
+                                           facet_formula = model ~ location_name,
+                                           allow_truth_without_pred = FALSE,
+                                           scales = "free") +
+      ggplot2::ggtitle(paste0("Predictions for incident ", target_type,  "s")) + 
+      ggplot2::theme(legend.position = "bottom")
+    
+    print(plot)
+  }
+}
+
+
+
+```
