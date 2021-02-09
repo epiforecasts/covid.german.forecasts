@@ -7,8 +7,9 @@ library(here)
 # if today is not Monday, set submission date to last monday
 submission_date <- latest_weekday()
 
+check_dir(here("rt-crowd-forecast", "data-raw"))
 saveRDS(submission_date,
-        here("rt-crowd-forecast", "data", "submission_date.rds"))
+        here("rt-crowd-forecast", "data-raw", "submission_date.rds"))
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
 # copy Rt data into app

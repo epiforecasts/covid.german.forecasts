@@ -5,6 +5,8 @@ library(dplyr)
 library(purrr)
 library(data.table)
 library(lubridate)
+library(here)
+library(tidyr)
 
 # Google sheets authentification -----------------------------------------------
 options(gargle_oauth_cache = ".secrets")
@@ -81,16 +83,16 @@ replace_date_and_time <- function(forecasts) {
 raw_forecasts <- replace_date_and_time(raw_forecasts)
 filtered_forecasts <- replace_date_and_time(filtered_forecasts)
 
+check_dir(here("crowd-forecast", "raw-forecast-data"))
 # write raw forecasts
 fwrite(raw_forecasts %>% select(-board_name),
-       here("crowd-forecast", "raw-forecast-data", 
-            submission_date, "-raw-forecasts.csv"))
+       here("crowd-forecast", "raw-forecast-data",
+            paste0(submission_date, "-raw-forecasts.csv")))
 
 # obtain quantiles from forecasts ----------------------------------------------
 # define function that returns quantiles depending on condition and distribution
 calculate_quantiles <- function(quantile_grid, median, width, forecast_type, 
                                 distribution, lower_90, upper_90) {
-  
   if (distribution == "log-normal") {
     values <- list(exp(qnorm(
       quantile_grid, mean = log(as.numeric(median)), sd = as.numeric(width)
@@ -129,8 +131,8 @@ forecast_quantiles <- filtered_forecasts %>%
 
 # save forecasts in quantile-format
 fwrite(forecast_quantiles %>% mutate(submission_date = submission_date),
-       here("crowd-forecast", "processed-forecast-data", 
-       submission_date, "-processed-forecasts.csv"))
+       here("crowd-forecast", "processed-forecast-data",
+       paste0(submission_date, "-processed-forecasts.csv"))
 
 # omit forecasters who haven't forecasted at least two targets
 forecasters_to_omit <- forecast_quantiles %>%
@@ -170,7 +172,7 @@ if (median_ensemble) {
   forecast_inc <- bind_rows(forecast_inc, 
     forecast_inc %>%
       filter(quantile == 0.5) %>%
-      mutate(type = "point", 
+      mutate(type = "point",
       quantile = NA))
 
 # add cumulative forecasts -----------------------------------------------------
