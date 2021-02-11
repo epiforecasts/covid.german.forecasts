@@ -1,7 +1,7 @@
 
     
     
-```{r ranking-time, results = 'asis', fig.width=10, fig.height=9}
+```{r ranking-time, results = 'asis', fig.width=12, fig.height=10}
 scores <- scoringutils::eval_forecasts(data,
                                          summarise_by = c("model", 
                                                           "location_name", 
@@ -10,18 +10,21 @@ scores <- scoringutils::eval_forecasts(data,
                                        compute_relative_skill = FALSE)
 
 ranked_scores <- scores %>%
-    dplyr::mutate(forecast_date = as.Date(forecast_date)) %>%
-    dplyr::group_by(forecast_date, location_name, target_type) %>%
-    dplyr::mutate(rank = rank(interval_score, ties.method = "average",
-                              na.last = NA)) %>%
-    dplyr::ungroup()
+  dplyr::mutate(forecast_date = as.Date(forecast_date)) %>%
+  dplyr::group_by(forecast_date, location_name, target_type) %>%
+  dplyr::mutate(num_forecasts = dplyr::n(), 
+                unstandardised_rank = rank(interval_score, ties.method = "average",
+                                           na.last = NA), 
+                rank = round((1 - (unstandardised_rank - 1) / (num_forecasts - 1)) * 100)) %>%
+  dplyr::ungroup()
 
 
 plot <- score_heatmap(ranked_scores, metric = "rank", 
                       x = "forecast_date",
                       facet_wrap_or_grid = "grid",
                       facet_formula = location_name ~ target_type) + 
-  ggplot2::theme(legend.position = "bottom")
+  ggplot2::theme(legend.position = "bottom") +
+    ggplot2::scale_fill_gradient(high = "white", low = "coral")
 
 print(plot)
 

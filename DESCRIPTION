@@ -42,7 +42,10 @@ Suggests:
     tidyr,
     readr,
     devtools,
-    ggbump
+    ggbump, 
+    rmarkdown, 
+    knitr, 
+    DT
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,

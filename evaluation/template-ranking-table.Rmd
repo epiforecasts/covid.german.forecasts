@@ -1,5 +1,5 @@
 ```{r, echo = FALSE}
-  filter <- function(data, filter_list) {
+  filter_df <- function(data, filter_list) {
     if (!is.list(filter_list) || is.null(filter_list) || length(filter_list) == 0) {
       return(data)
     }
@@ -17,7 +17,12 @@
 cat("\n\n##", tabtitle, "\n\n")
 
 table <- eval_forecasts(data, summarise_by = summarise_by)
-table <- filter(table, filter_list)
+table <- filter_df(table, filter_list)
+
+if ("horizon" %in% colnames(table)) {
+  table[, horizon := paste("horizon", horizon)]
+}
+
 
 htmltools::tagList(
    table %>%

@@ -150,7 +150,7 @@ This is a visualisation of all forecasts made so far.
 ```{r forecast-vis, include = FALSE}
 
 locations <- c("Germany", "Poland")
-forecast_dates <- as.character(unique(data$forecast_date[!is.na(data$forecast_date)]))
+forecast_dates <- rev(as.character(unique(data$forecast_date[!is.na(data$forecast_date)])))
 target_types <- c("case", "death")
 
 out <- NULL
@@ -163,7 +163,7 @@ out = c(out, knit_child(here::here("evaluation", "template-plot-forecasts.Rmd"))
 
 # Performance over time
 
-This table gives the rank of every forecaster among all forecasters for a given target and forecast date (1 is the best). Ranks are determined based on the weighted interval scores.
+This table shows (100 - the forecaster percentile rank) among all forecasters for a given target and forecast date. What happens is basically this: Every forecaster gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores.
 
 ```{r ranking-over-time, include = FALSE}
 out <- NULL
