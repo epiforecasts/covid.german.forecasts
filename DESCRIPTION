@@ -49,7 +49,7 @@ Suggests:
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
-  epiforecasts/scoringutils@dev,
+  epiforecasts/scoringutils@improve_plots,
   epiforecasts/crowdforecastr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
