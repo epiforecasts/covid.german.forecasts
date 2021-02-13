@@ -1,0 +1,11 @@
+---
+output:
+  html_document
+title: "Test for individual forecaster"
+# toc: true
+# toc_float: true
+# toc_collapsed: true
+# toc_depth: 3
+---
+
+# Test
