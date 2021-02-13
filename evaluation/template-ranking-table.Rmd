@@ -13,11 +13,12 @@
 ```
 
 
-```{r, results = 'asis'}
+```{r rank-table, results = 'asis'}
 cat("\n\n##", tabtitle, "\n\n")
 
-table <- eval_forecasts(data, summarise_by = summarise_by)
-table <- filter_df(table, filter_list)
+df <- filter_df(data, filter_list)
+table <- eval_forecasts(df, summarise_by = summarise_by)
+
 
 if ("horizon" %in% colnames(table)) {
   table[, horizon := paste("horizon", horizon)]

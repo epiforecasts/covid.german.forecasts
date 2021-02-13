@@ -13,13 +13,23 @@ ranked_scores <- scores %>%
   dplyr::mutate(forecast_date = as.Date(forecast_date)) %>%
   dplyr::group_by(forecast_date, location_name, target_type) %>%
   dplyr::mutate(num_forecasts = dplyr::n(), 
-                unstandardised_rank = rank(interval_score, ties.method = "average",
+                rank = rank(interval_score, ties.method = "average",
                                            na.last = NA), 
-                rank = round((1 - (unstandardised_rank - 1) / (num_forecasts - 1)) * 100)) %>%
+                standard_rank = round((1 - (rank - 1) / (num_forecasts - 1)) * 100)) %>%
   dplyr::ungroup()
 
-
+cat("\n\n ## model rank")
 plot <- score_heatmap(ranked_scores, metric = "rank", 
+                      x = "forecast_date",
+                      facet_wrap_or_grid = "grid",
+                      facet_formula = location_name ~ target_type) + 
+  ggplot2::theme(legend.position = "bottom") +
+    ggplot2::scale_fill_gradient(low = "white", high = "coral")
+
+print(plot)
+
+cat("\n\n ## standardised model rank")
+plot <- score_heatmap(ranked_scores, metric = "standard_rank", 
                       x = "forecast_date",
                       facet_wrap_or_grid = "grid",
                       facet_formula = location_name ~ target_type) + 
@@ -27,5 +37,6 @@ plot <- score_heatmap(ranked_scores, metric = "rank",
     ggplot2::scale_fill_gradient(high = "white", low = "coral")
 
 print(plot)
+
 
 ```

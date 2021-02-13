@@ -9,6 +9,7 @@ title: "EpiExpert Crowd-Forecasting Performance Board"
 ---
 
 ```{r setup, include=FALSE}
+library(covid.german.forecasts)
 library(scoringutils)
 library(dplyr)
 library(DT)
@@ -81,7 +82,7 @@ data <- scoringutils::merge_pred_and_obs(prediction_data, truth_data,
 
 # Forecaster ranking {.tabset}
 
-Here is an overall ranking of all forecasters. The ranking is made according to relative skill. Relative skill is calculated by looking at all pairwise comparisons between forecasters in terms of the weighted interval score (WIS). See below for a more detailed explanation of the scoring metrics used. 
+Here is an overall ranking of all forecasters. The ranking is made according to relative skill. Relative skill is calculated by looking at all pairwise comparisons between forecasters in terms of the weighted interval score (WIS). See below for a more detailed explanation of the scoring metrics used. 'Overall' shows the complete ranking, 'latest' only spans the last 5-6 weeks of data. 'Detailed' represents the full data set that you can download for your own analysis. 
 
 ```{r ranking, include = FALSE}
 out <- NULL
@@ -89,6 +90,12 @@ out <- NULL
 tabtitle = "overall"
 summarise_by = c("model")
 filter_list = list()
+out = c(out, knit_child(here::here("evaluation", "template-ranking-table.Rmd")))
+
+tabtitle = "latest"
+summarise_by = c("model")
+cut_off <- covid.german.forecasts::latest_weekday(Sys.Date()) - 5 * 7
+filter_list = list(paste0("forecast_date >= '", cut_off, "'"))
 out = c(out, knit_child(here::here("evaluation", "template-ranking-table.Rmd")))
 
 tabtitle = "Cases"
@@ -161,9 +168,9 @@ out = c(out, knit_child(here::here("evaluation", "template-plot-forecasts.Rmd"))
 
 <br>
 
-# Performance over time
+# Performance over time {.tabset}
 
-This table shows (100 - the forecaster percentile rank) among all forecasters for a given target and forecast date. What happens is basically this: Every forecaster gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores.
+This table shows you either your rank among all forecasters or the standardised rank. The standardised rank is computed as (100 - the forecaster percentile rank) among all forecasters for a given target and forecast date. What happens is basically this: Every forecaster gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores.
 
 ```{r ranking-over-time, include = FALSE}
 out <- NULL

@@ -1,0 +1,214 @@
+---
+  output: 
+    blastula::blastula_email
+  title: "Crowd Forecast Updates"
+  fig_caption: false
+---
+
+```{r echo=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+
+library(here)
+library(scoringutils)
+library(dplyr)
+library(data.table)
+library(covid.german.forecasts)
+library(kableExtra)
+```
+
+
+```{r load-data, echo=FALSE, message = FALSE, warning = FALSE}
+# load all data ----------------------------------------------------------------
+root_dir <- here::here("crowd-forecast", "processed-forecast-data")
+file_paths_forecast <- here::here(root_dir, list.files(root_dir))
+
+prediction_data <- purrr::map_dfr(file_paths_forecast, 
+                                  .f = function(x) {
+                                    data <- data.table::fread(x) %>%
+                                      dplyr::mutate(target_end_date = as.Date(target_end_date), 
+                                                    submission_date = as.Date(submission_date), 
+                                                    forecast_date = as.Date(forecast_date))
+                                  }) %>%
+  dplyr::mutate(target_type = ifelse(grepl("death", target), "death", "case")) %>%
+  dplyr::rename(prediction = value) %>%
+  dplyr::mutate(forecast_date = as.Date(submission_date)) %>%
+  dplyr::rename(model = board_name) %>%
+  dplyr::filter(type == "quantile", 
+                location_name %in% c("Germany", "Poland")) %>%
+  dplyr::select(location, location_name, forecast_date, quantile, prediction, model, target_end_date, horizon, target, target_type)
+
+# filter forecasters such that only those are kept that have submitted forecasts
+# in the last four weeks
+keep_fc <- prediction_data %>%
+  dplyr::filter(forecast_date > (Sys.Date() - 4 * 7)) %>%
+  dplyr::pull(model) %>%
+  unique()
+
+prediction_data <- dplyr::filter(prediction_data, 
+                                 model %in% keep_fc)
+
+files <- list.files(here::here("data-raw"))
+file_paths <- here::here("data-raw", files[grepl("weekly-incident", files)])
+names(file_paths) <- c("case", "death")
+
+truth_data <- purrr::map_dfr(file_paths, readr::read_csv, .id = "target_type") %>%
+  dplyr::rename(true_value = value) %>%
+  dplyr::mutate(target_end_date = as.Date(target_end_date)) %>%
+  dplyr::arrange(location, target_type, target_end_date) %>%
+  dplyr::filter(location_name %in% c("Germany", "Poland"))
+
+
+data <- scoringutils::merge_pred_and_obs(prediction_data, truth_data, 
+                                         join = "full")
+
+```
+
+
+### Dear `r name`,
+
+Good to have you as a forecaster! You're receiving this message because you gave us your email address when you registered for the [Epiforecasts Crowd Forecast App](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). 
+
+It has been a long time, but finally we managed to get this email newsletter running! From now on you will receive a weekly email with
+
+- announcements and other information
+- a reminder to submit a forecast
+- some information about last weeks forecast and your performance
+
+If you don't want to receive future emails simply write me a quick message. We're working on a way that allows you to unsubscribe from within the app, but that is work in progress. Baby steps, but we're getting there. 
+
+If you want to lean more about this project, have a look at our [github repo](https://github.com/epiforecasts/covid.german.forecasts). If you want to learn more about the German and Polish Forecast Hub, where we submit the forecasts to, have a look [here](https://kitmetricslab.github.io/forecasthub/forecast). 
+
+<br>
+
+### Reminder for the weekly forecasts
+
+We **update our data every Saturday at 6.30pm CET**. You can then make a forecast until **2pm CET (1pm UK time) on Tuesday** using our [forecast app](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). We would be very happy to have a forecast from you this week!
+
+
+<br>
+
+### Forecast and Performance overview
+
+But now, let's have a look at last weeks forecasts and performance!
+
+In the following we put together a short overview for you. You can find more detailed information on our performance board [here](https://epiforecasts.io/covid.german.forecasts). 
+
+*Here are the latest EpiExpert ensemble forecasts and next to them your own forecasts
+if you have submitted any.*
+
+```{r plot-forecasts, echo=FALSE, out.width="49%", fig.show="hold", fig.cap = "Plot of the forecasts"}
+
+forecast_date <- covid.german.forecasts::latest_weekday(Sys.Date())
+
+filter_truth <- list('target_end_date >= Sys.Date() - 14 * 7')
+models <- c("anonymous_Human", "EpiExpert-ensemble")
+filter_forecasts <- list("model %in% 'EpiExpert-ensemble'", 
+                         paste0("forecast_date == '", forecast_date, "'"))
+
+plot_predictions(data = data, 
+                 x = "target_end_date",
+                 filter_truth = filter_truth, 
+                 filter_forecasts = filter_forecasts,
+                 facet_formula = target_type ~ location_name, 
+                 facet_wrap_or_grid = "grid") + 
+  ggplot2::labs(x = "Date", title = "Ensemble Forecasts") + 
+  ggplot2::theme(legend.position = "bottom")
+
+
+forecast_date <- covid.german.forecasts::latest_weekday(Sys.Date())
+
+filter_truth <- list('target_end_date >= Sys.Date() - 14 * 7')
+filter_forecasts <- list(paste0("model %in% '", board_name, "'"), 
+                         paste0("forecast_date == '", forecast_date, "'"))
+
+p <- plot_predictions(data = data, 
+                 x = "target_end_date",
+                 filter_truth = filter_truth, 
+                 filter_forecasts = filter_forecasts,
+                 facet_formula = target_type ~ location_name, 
+                 facet_wrap_or_grid = "grid") 
+if (!is.null(p)) {
+  p <- p + 
+  ggplot2::labs(x = "Date", title = "Your Forecasts") + 
+  ggplot2::theme(legend.position = "bottom")
+  print(p)
+}
+
+
+```
+
+<br>
+
+*Here is the list with the current top 5 forecasters (based on the last 5 weeks): *
+
+```{r rank-table, echo=FALSE, fig.align="center"}
+cut_off <- covid.german.forecasts::latest_weekday(Sys.Date()) - 5 * 7
+df <- data %>%
+  filter(forecast_date >= cut_off)
+  
+table <- eval_forecasts(data, summarise_by = c("model"), 
+                        compute_relative_skill = TRUE)
+
+table %>%
+    arrange(relative_skill) %>%
+    dplyr::select(-scaled_rel_skill) %>%
+    mutate_if(is.numeric, round, 2) %>%
+    dplyr::rename(wis = interval_score,
+                  underpred = underprediction,
+                  overpred = overprediction,
+                  cvrage_dev = coverage_deviation,
+                  rel_skill = relative_skill) %>%
+  select(model, rel_skill) %>%
+  head(5) %>%
+  knitr::kable(format = "html") %>% 
+  kable_styling(bootstrap_options = "striped", full_width = F)
+
+
+
+```
+
+<br>
+
+*And here is a plot with the rank by date and target of all active forecasters over time:*
+
+```{r rank-over-time, echo=FALSE, fig.align = "center", fig.width=10, fig.height=8, out.width="80%", fig.cap = "Ranking over time"}
+scores <- scoringutils::eval_forecasts(data,
+                                         summarise_by = c("model", 
+                                                          "location_name", 
+                                                          "target_type",
+                                                          "forecast_date"), 
+                                       compute_relative_skill = FALSE)
+
+ranked_scores <- scores %>%
+  dplyr::mutate(forecast_date = as.Date(forecast_date)) %>%
+  dplyr::group_by(forecast_date, location_name, target_type) %>%
+  dplyr::mutate(num_forecasts = dplyr::n(), 
+                rank = rank(interval_score, ties.method = "average",
+                                           na.last = NA), 
+                standard_rank = round((1 - (rank - 1) / (num_forecasts - 1)) * 100)) %>%
+  dplyr::ungroup()
+
+plot <- score_heatmap(ranked_scores, metric = "rank", 
+                      x = "forecast_date",
+                      facet_wrap_or_grid = "grid",
+                      facet_formula = location_name ~ target_type) + 
+  ggplot2::theme(legend.position = "bottom") +
+    ggplot2::scale_fill_gradient(low = "white", high = "coral")
+
+print(plot)
+```
+
+<br>
+
+If you have any questions or feedback, please don't hesitate to reach out. You can drop us an email or submit an issue to our [github repo](https://github.com/epiforecasts/covid.german.forecasts)
+
+Thank you very much for your support and participation. We very much appreciate it!
+
+Best wishes, 
+
+Nikos for the Epiforecasts team
+
