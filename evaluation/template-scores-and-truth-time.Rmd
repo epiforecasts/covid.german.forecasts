@@ -1,0 +1,47 @@
+```{r scores-and-truth1, results = 'asis', fig.width=10, fig.height = 5}
+
+library(ggplot2)
+library(dplyr)
+library(scoringutils)
+
+
+scores <- eval_forecasts(data, 
+                         summarise_by = c("model", "target_type", 
+                                          "location_name", "forecast_date"), 
+                         compute_relative_skill = FALSE)
+
+p1 <- data %>%
+  select(target_end_date, true_value, location_name, target_type) %>%
+  filter(target_end_date > "2020-10-12", 
+         !is.na(true_value)) %>%
+  unique() %>%
+  ggplot(aes(x = target_end_date, y = true_value)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") + 
+  theme(legend.position = "bottom") + 
+  labs(y = "true observed values", x = "date", title = "Observed data")
+
+cat("\n\n")
+print(p1)
+cat("\n\n")
+```
+
+
+```{r scores-and-truth2, results = 'asis', fig.width=10, fig.height = 7}
+
+p2 <- scores %>%
+  ggplot(aes(x = forecast_date, y = interval_score, colour = model)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") + 
+  theme(legend.position = "bottom") +
+  labs(y = "weighted interval score", x = "date", title = "Forecaster Scores")
+  
+
+cat("\n\n")
+print(p2)
+cat("\n\n")
+```

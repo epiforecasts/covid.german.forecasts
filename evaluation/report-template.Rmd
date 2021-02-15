@@ -11,6 +11,7 @@ title: "EpiExpert Crowd-Forecasting Performance Board"
 ```{r setup, include=FALSE}
 library(covid.german.forecasts)
 library(scoringutils)
+library(ggplot2)
 library(dplyr)
 library(DT)
 library(knitr)
@@ -168,7 +169,20 @@ out = c(out, knit_child(here::here("evaluation", "template-plot-forecasts.Rmd"))
 
 <br>
 
-# Performance over time {.tabset}
+# Performance and observations over time
+
+Here you can see a visualisation of forecaster scores together next to the true observed values: 
+
+```{r forecast-and-scores, include = FALSE}
+out <- NULL
+out = c(out, knit_child(here::here("evaluation", "template-scores-and-truth-time.Rmd")))
+```
+
+`r paste(knit(text = out), collapse = '\n\n')`
+
+<br>
+
+# Ranks over time {.tabset}
 
 This table shows you either your rank among all forecasters or the standardised rank. The standardised rank is computed as (100 - the forecaster percentile rank) among all forecasters for a given target and forecast date. What happens is basically this: Every forecaster gets assigned a rank (1 is the best and the worst equals the number of available forecasts for that date). This rank is then transformed to a scale from 1 to 100 such that 100 is best and 0 is worst. Ranks are determined based on the weighted interval scores.
 

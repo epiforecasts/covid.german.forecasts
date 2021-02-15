@@ -13,7 +13,7 @@
 ```
 
 
-```{r rank-table, results = 'asis'}
+```{r, results = 'asis'}
 cat("\n\n##", tabtitle, "\n\n")
 
 df <- filter_df(data, filter_list)
