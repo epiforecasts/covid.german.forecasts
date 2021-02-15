@@ -18,25 +18,29 @@ check_dir <- function(dir) {
 #' @importFrom dplyr filter group_by count left_join mutate
 #' @importFrom tibble tibble
 #' @importFrom lubridate epiweek
+#' @importFrom tidyr unnest
 dates_to_epiweek <- function(df){
 
   seq <- tibble(date = unique(df$date),
                 epiweek = epiweek(date),
+                year = epiyear(date),
                  day = weekdays(date))
 
   epiweek_end_date <- seq %>%
     filter(day == "Saturday")
 
   epiweek_complete <- seq %>%
-    group_by(epiweek) %>%
+    group_by(epiweek, year) %>%
     count() %>%
     filter(n == 7) %>%
-    left_join(epiweek_end_date, by = "epiweek")
+    left_join(epiweek_end_date, by = c("epiweek", "year")) %>%
+    mutate(date = list(date - 0:6)) %>%
+    unnest(cols = c(date))
  
   df_dated <- df %>%
     mutate(epiweek = epiweek(date),
            epiweek_end = date %in% epiweek_end_date$date,
-           epiweek_full = epiweek %in% epiweek_complete$epiweek)
+           epiweek_full = date %in% epiweek_complete$date)
 
   return(df_dated)
 }

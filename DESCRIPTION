@@ -27,7 +27,8 @@ Imports:
     tibble,
     lubridate,
     attempt,
-    purrr
+    purrr,
+    tidyr
 Suggests:
     covidregionaldata,
     here,
@@ -39,12 +40,11 @@ Suggests:
     googledrive,
     googlesheets4,
     ggplot2,
-    tidyr,
     readr,
     devtools,
-    ggbump, 
-    rmarkdown, 
-    knitr, 
+    ggbump,
+    rmarkdown,
+    knitr,
     DT
 Remotes:
   epiforecasts/EpiNow2,
