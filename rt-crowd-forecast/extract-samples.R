@@ -28,7 +28,7 @@ median_ensemble <- FALSE
 ids <- try_and_wait(read_sheet(ss = identification_sheet, sheet = "ids"))
 forecasts <- try_and_wait(read_sheet(ss = spread_sheet))
 
-delete_data <- FALSE
+delete_data <- TRUE
 if (delete_data) {
   # add forecasts to backup sheet
   try_and_wait(sheet_append(ss = spread_sheet, sheet = "oldforecasts",

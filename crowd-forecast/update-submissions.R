@@ -17,7 +17,6 @@ spread_sheet <- "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 # setup ------------------------------------------------------------------------
-# - 1 as this is usually updated on a Tuesday
 submission_date <- latest_weekday()
 median_ensemble <- FALSE
 # grid of quantiles to obtain / submit from forecasts
@@ -29,7 +28,7 @@ ids <- try_and_wait(read_sheet(ss = identification_sheet, sheet = "ids"))
 # load forecasts
 forecasts <- try_and_wait(read_sheet(ss = spread_sheet))
 
-delete_data <- FALSE
+delete_data <- TRUE
 if (delete_data) {
   # add forecasts to backup sheet
   try_and_wait(
