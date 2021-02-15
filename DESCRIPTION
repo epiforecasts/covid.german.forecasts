@@ -46,7 +46,8 @@ Suggests:
     rmarkdown,
     knitr,
     DT,
-    blastula
+    blastula,
+    keyring
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
