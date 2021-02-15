@@ -8,7 +8,7 @@ library(data.table)
 # set up email credential if not present
 if (!file.exists(here::here(".secrets", "epiforecasts-email-creds"))) {
   create_smtp_creds_file(
-    file = here(".secrets", "epiforecasts-email-creds"), 
+    file = here(".secrets", "epiforecasts-email-creds"),
     user = "epiforecasts@gmail.com",
     provider = "gmail"
   )
