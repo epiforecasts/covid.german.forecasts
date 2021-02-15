@@ -5,7 +5,7 @@
   fig_caption: false
 ---
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE, 
@@ -100,12 +100,16 @@ In the following we put together a short overview for you. You can find more det
 *Here are the latest EpiExpert ensemble forecasts and next to them your own forecasts
 if you have submitted any.*
 
-```{r plot-forecasts, echo=FALSE, out.width="49%", fig.show="hold", fig.cap = "Plot of the forecasts"}
+```{r plot-forecasts, echo=FALSE, out.width="49%", fig.show="hold"}
 
-forecast_date <- covid.german.forecasts::latest_weekday(Sys.Date())
+if (weekdays(Sys.Date()) == "Monday") {
+  forecast_date <- covid.german.forecasts::latest_weekday(Sys.Date() - 7)
+} else {
+  forecast_date <- covid.german.forecasts::latest_weekday(Sys.Date())
+}
+
 
 filter_truth <- list('target_end_date >= Sys.Date() - 14 * 7')
-models <- c("anonymous_Human", "EpiExpert-ensemble")
 filter_forecasts <- list("model %in% 'EpiExpert-ensemble'", 
                          paste0("forecast_date == '", forecast_date, "'"))
 
@@ -117,9 +121,6 @@ plot_predictions(data = data,
                  facet_wrap_or_grid = "grid") + 
   ggplot2::labs(x = "Date", title = "Ensemble Forecasts") + 
   ggplot2::theme(legend.position = "bottom")
-
-
-forecast_date <- covid.german.forecasts::latest_weekday(Sys.Date())
 
 filter_truth <- list('target_end_date >= Sys.Date() - 14 * 7')
 filter_forecasts <- list(paste0("model %in% '", board_name, "'"), 
@@ -175,7 +176,7 @@ table %>%
 
 *And here is a plot with the rank by date and target of all active forecasters over time:*
 
-```{r rank-over-time, echo=FALSE, fig.align = "center", fig.width=10, fig.height=8, out.width="80%", fig.cap = "Ranking over time"}
+```{r rank-over-time, echo=FALSE, fig.align = "center", fig.width=10, fig.height=8, out.width="80%"}
 scores <- scoringutils::eval_forecasts(data,
                                          summarise_by = c("model", 
                                                           "location_name", 

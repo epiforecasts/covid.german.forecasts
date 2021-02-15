@@ -5,25 +5,31 @@ library(googlesheets4)
 library(covid.german.forecasts)
 library(data.table)
 
+# set up email credential if not present
+if (!file.exists(here::here(".secrets", "epiforecasts-email-creds"))) {
+  create_smtp_creds_file(
+    file = here(".secrets", "epiforecasts-email-creds"), 
+    user = "epiforecasts@gmail.com",
+    provider = "gmail"
+  )
+}
+
 # Google sheets authentification -----------------------------------------------
 options(gargle_oauth_cache = ".secrets")
 drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
 gs4_auth(token = drive_token())
 
-spread_sheet <- "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
 ids <- try_and_wait(read_sheet(ss = identification_sheet, sheet = "ids"))
 
-
+# filter participant data
 participant_data <- ids %>%
   dplyr::filter(!is.na(email)) %>%
   dplyr::select(name, username, email, forecaster_id, board_name) %>%
   dplyr::mutate(name = ifelse(is.na(name), username, name))
 
-participant_data <- participant_data %>% 
-  dplyr::filter(name %in% c("Habakuk"))
-
+# iterate over rows and send an email
 for (i in 1:nrow(participant_data)) {
   
   temp_data <- as.data.table(participant_data)[i]
@@ -37,22 +43,6 @@ for (i in 1:nrow(participant_data)) {
   
   # send email
   smtp_send(email, to = mail_address, from = "epiforecasts@gmail.com", 
-            credentials = creds_key(id = "epiforecasts@gmail.com"), 
+            credentials = creds_file(here(".secrets", "epiforecasts-email-creds")), 
             subject = paste("EpiForecasts Crowd Forecast Update -", Sys.Date()))
 }
-
-
-
-
-
-create_smtp_creds_key(
-  id = "epiforecasts@gmail.com",
-  user = "epiforecasts@gmail.com",
-  provider = "gmail",
-  overwrite = FALSE, 
-  use_ssl = TRUE
-)
-
-
-
-
