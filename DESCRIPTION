@@ -45,7 +45,8 @@ Suggests:
     ggbump,
     rmarkdown,
     knitr,
-    DT
+    DT,
+    blastula
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
