@@ -8,7 +8,7 @@ library(data.table)
 # set up email credential if not present
 if (!file.exists(here::here(".secrets", "epiforecasts-email-creds"))) {
   create_smtp_creds_file(
-    file = here(".secrets", "epiforecasts-email-creds"), 
+    file = here(".secrets", "epiforecasts-email-creds"),
     user = "epiforecasts@gmail.com",
     provider = "gmail"
   )
@@ -30,19 +30,24 @@ participant_data <- ids %>%
   dplyr::mutate(name = ifelse(is.na(name), username, name))
 
 # iterate over rows and send an email
-for (i in 1:nrow(participant_data)) {
-  
+for (i in seq_len(nrow(participant_data))) {
+
   temp_data <- as.data.table(participant_data)[i]
 
   name <- temp_data[["name"]]
   board_name <- temp_data[["board_name"]]
   mail_address <- temp_data[["email"]]
-  
+
   # render email
-  email <- render_email(here("crowd-forecast", "email-templates", "email-template.Rmd"))
-  
+  email <- render_email(
+    here("crowd-forecast", "email-templates", "email-template.Rmd")
+    )
+
   # send email
-  smtp_send(email, to = mail_address, from = "epiforecasts@gmail.com", 
-            credentials = creds_file(here(".secrets", "epiforecasts-email-creds")), 
-            subject = paste("EpiForecasts Crowd Forecast Update -", Sys.Date()))
+  smtp_send(
+    email,
+    to = mail_address, from = "epiforecasts@gmail.com",
+    credentials = creds_file(here(".secrets", "epiforecasts-email-creds")),
+    subject = paste("EpiForecasts Crowd Forecast Update -", Sys.Date())
+    )
 }

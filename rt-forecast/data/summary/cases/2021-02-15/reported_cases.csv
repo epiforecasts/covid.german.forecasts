@@ -83,6 +83,7 @@ Baden-Wurttemberg,2021-02-11,1223
 Baden-Wurttemberg,2021-02-12,924
 Baden-Wurttemberg,2021-02-13,767
 Baden-Wurttemberg,2021-02-14,791
+Baden-Wurttemberg,2021-02-15,369
 Bavaria,2020-11-23,2188
 Bavaria,2020-11-24,2614
 Bavaria,2020-11-25,3006
@@ -167,6 +168,7 @@ Bavaria,2021-02-11,1510
 Bavaria,2021-02-12,1670
 Bavaria,2021-02-13,1188
 Bavaria,2021-02-14,828
+Bavaria,2021-02-15,767
 Berlin,2020-11-23,436
 Berlin,2020-11-24,805
 Berlin,2020-11-25,1615
@@ -251,6 +253,7 @@ Berlin,2021-02-11,457
 Berlin,2021-02-12,485
 Berlin,2021-02-13,384
 Berlin,2021-02-14,193
+Berlin,2021-02-15,71
 Brandenburg,2020-11-23,358
 Brandenburg,2020-11-24,194
 Brandenburg,2020-11-25,449
@@ -335,6 +338,7 @@ Brandenburg,2021-02-11,536
 Brandenburg,2021-02-12,374
 Brandenburg,2021-02-13,284
 Brandenburg,2021-02-14,234
+Brandenburg,2021-02-15,154
 Bremen,2020-11-23,72
 Bremen,2020-11-24,23
 Bremen,2020-11-25,142
@@ -419,6 +423,7 @@ Bremen,2021-02-11,99
 Bremen,2021-02-12,80
 Bremen,2021-02-13,61
 Bremen,2021-02-14,51
+Bremen,2021-02-15,64
 Dolnośląskie,2020-11-23,1005
 Dolnośląskie,2020-11-24,1035
 Dolnośląskie,2020-11-25,1035
@@ -588,6 +593,7 @@ Germany,2021-02-11,10237
 Germany,2021-02-12,9860
 Germany,2021-02-13,8354
 Germany,2021-02-14,6114
+Germany,2021-02-15,4426
 Hamburg,2020-11-23,171
 Hamburg,2020-11-24,237
 Hamburg,2020-11-25,392
@@ -672,6 +678,7 @@ Hamburg,2021-02-11,220
 Hamburg,2021-02-12,193
 Hamburg,2021-02-13,228
 Hamburg,2021-02-14,179
+Hamburg,2021-02-15,118
 Hesse,2020-11-23,552
 Hesse,2020-11-24,1556
 Hesse,2020-11-25,1363
@@ -756,6 +763,7 @@ Hesse,2021-02-11,792
 Hesse,2021-02-12,687
 Hesse,2021-02-13,583
 Hesse,2021-02-14,394
+Hesse,2021-02-15,259
 Kujawsko-Pomorskie,2020-11-23,1000
 Kujawsko-Pomorskie,2020-11-24,931
 Kujawsko-Pomorskie,2020-11-25,521
@@ -925,6 +933,7 @@ Lower Saxony,2021-02-11,1083
 Lower Saxony,2021-02-12,1139
 Lower Saxony,2021-02-13,885
 Lower Saxony,2021-02-14,733
+Lower Saxony,2021-02-15,464
 Lubelskie,2020-11-23,900
 Lubelskie,2020-11-24,795
 Lubelskie,2020-11-25,670
@@ -1349,6 +1358,7 @@ Mecklenburg-Vorpommern,2021-02-11,205
 Mecklenburg-Vorpommern,2021-02-12,167
 Mecklenburg-Vorpommern,2021-02-13,179
 Mecklenburg-Vorpommern,2021-02-14,169
+Mecklenburg-Vorpommern,2021-02-15,64
 North Rhine-Westphalia,2020-11-23,2044
 North Rhine-Westphalia,2020-11-24,3786
 North Rhine-Westphalia,2020-11-25,4156
@@ -1433,6 +1443,7 @@ North Rhine-Westphalia,2021-02-11,1884
 North Rhine-Westphalia,2021-02-12,1881
 North Rhine-Westphalia,2021-02-13,1672
 North Rhine-Westphalia,2021-02-14,1291
+North Rhine-Westphalia,2021-02-15,1028
 Opolskie,2020-11-23,563
 Opolskie,2020-11-24,493
 Opolskie,2020-11-25,512
@@ -1942,6 +1953,7 @@ Rhineland-Palatinate,2021-02-11,390
 Rhineland-Palatinate,2021-02-12,380
 Rhineland-Palatinate,2021-02-13,380
 Rhineland-Palatinate,2021-02-14,119
+Rhineland-Palatinate,2021-02-15,232
 Saarland,2020-11-23,40
 Saarland,2020-11-24,176
 Saarland,2020-11-25,125
@@ -2026,6 +2038,7 @@ Saarland,2021-02-11,98
 Saarland,2021-02-12,99
 Saarland,2021-02-13,233
 Saarland,2021-02-14,79
+Saarland,2021-02-15,15
 Saxony,2020-11-23,1370
 Saxony,2020-11-24,960
 Saxony,2020-11-25,1355
@@ -2110,6 +2123,7 @@ Saxony,2021-02-11,796
 Saxony,2021-02-12,520
 Saxony,2021-02-13,541
 Saxony,2021-02-14,256
+Saxony,2021-02-15,285
 Saxony-Anhalt,2020-11-23,239
 Saxony-Anhalt,2020-11-24,301
 Saxony-Anhalt,2020-11-25,85
@@ -2194,6 +2208,7 @@ Saxony-Anhalt,2021-02-11,287
 Saxony-Anhalt,2021-02-12,338
 Saxony-Anhalt,2021-02-13,344
 Saxony-Anhalt,2021-02-14,326
+Saxony-Anhalt,2021-02-15,219
 Schleswig-Holstein,2020-11-23,121
 Schleswig-Holstein,2020-11-24,144
 Schleswig-Holstein,2020-11-25,251
@@ -2278,6 +2293,7 @@ Schleswig-Holstein,2021-02-11,334
 Schleswig-Holstein,2021-02-12,366
 Schleswig-Holstein,2021-02-13,207
 Schleswig-Holstein,2021-02-14,188
+Schleswig-Holstein,2021-02-15,122
 Thuringia,2020-11-23,192
 Thuringia,2020-11-24,429
 Thuringia,2020-11-25,452
@@ -2362,6 +2378,7 @@ Thuringia,2021-02-11,323
 Thuringia,2021-02-12,557
 Thuringia,2021-02-13,418
 Thuringia,2021-02-14,283
+Thuringia,2021-02-15,195
 Warmińsko-Mazurskie,2020-11-23,890
 Warmińsko-Mazurskie,2020-11-24,864
 Warmińsko-Mazurskie,2020-11-25,473
