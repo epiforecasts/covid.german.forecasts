@@ -216,7 +216,8 @@ forecast_cum <- forecast_inc %>%
   select(-last_value, -case, -target_type)
 
 forecast_submission <- bind_rows(forecast_inc, forecast_cum) %>%
-  mutate(forecast_date = submission_date)
+  mutate(forecast_date = submission_date) %>%
+  select(-target_type)
 
 # write submission files -------------------------------------------------------
 check_dir(here("submissions", "crowd-forecasts", submission_date))
