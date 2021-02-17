@@ -1,19 +1,19 @@
 # Launch the ShinyApp (Do not remove this comment)
 # RT app
-library(covid.german.forecasts)
 library(data.table)
 library(dplyr)
 library(crowdforecastr)
 library(magrittr)
 library(rstantools)
+library(lubridate)
 
 options("golem.app.prod" = TRUE)
 
 # load submission date from data if on server
 if (!dir.exists("rt-crowd-forecast")) {
-  submission_date <- readRDS("data/submission_date.rds")
+  submission_date <- readRDS("data-raw/submission_date.rds")
 } else {
-  submission_date <- latest_weekday()
+  submission_date <- floor_date(Sys.Date(), unit = "week", day)
 }
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
@@ -31,7 +31,7 @@ if (dir.exists("rt-forecast")) {
 
   fwrite(obs, "rt-crowd-forecast/external-ressources/observations.csv")
 } else {
-  obs <- read.csv("data/observations.csv")
+  obs <- read.csv("data-raw/observations.csv")
 }
 
 run_app(

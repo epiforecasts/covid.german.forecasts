@@ -23,7 +23,7 @@ obs <-
   filter(region %in% c("Poland", "Germany")) %>%
   arrange(region, target_type, target_end_date)
 
-fwrite(obs, here("rt-crowd-forecast", "data", "observations.csv"))
+fwrite(obs, here("rt-crowd-forecast", "data-raw", "observations.csv"))
 
 setAccountInfo(
   name = "cmmid-lshtm",
@@ -36,5 +36,5 @@ deployApp(
   appName = "rt-crowd-forecast",
   account = "cmmid-lshtm",
   forceUpdate = TRUE,
-  appFiles = c("data", "app.R", ".secrets")
+  appFiles = c("data-raw", "app.R", ".secrets")
 )
