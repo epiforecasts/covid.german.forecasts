@@ -51,7 +51,7 @@ filtered_forecasts <- raw_forecasts %>%
   # interesting question whether or not to include foracast_type here.
   # if someone reconnecs and then accidentally resubmits under a different
   # condition should that be removed or not?
-  group_by(forecaster_id, region, target_type) %>%
+  group_by(forecaster_id, region) %>%
   filter(forecast_time == max(forecast_time)) %>%
   ungroup()
 
@@ -124,7 +124,7 @@ draw_samples <- function(distribution, median, width, n_people,
 }
 
 n_people <- filtered_forecasts %>%
-  group_by(region, target_type) %>%
+  group_by(region) %>%
   summarise(n_ids = length(unique(forecaster_id))) %>%
   pull(n_ids) %>%
   min()
@@ -136,8 +136,8 @@ forecast_samples <- filtered_forecasts %>%
   rename(location = region) %>%
   mutate(location = ifelse(location == "Germany", "GM", "PL")) %>%
   select(forecaster_id, location, target_end_date, submission_date,
-         target_type, distribution, median, width) %>%
-  arrange(forecaster_id, location, target_type, target_end_date) %>%
+         distribution, median, width) %>%
+  arrange(forecaster_id, location, target_end_date) %>%
   rowwise() %>%
   mutate(
     value = draw_samples(median = median, width = width,
@@ -150,8 +150,8 @@ forecast_samples <- filtered_forecasts %>%
   unnest(cols = c(sample, value)) %>%
   ungroup() %>%
   select(forecaster_id, location, target_end_date, submission_date,
-         target_type, sample, value) %>%
-  arrange(forecaster_id, location, target_type, target_end_date, sample)
+         sample, value) %>%
+  arrange(forecaster_id, location, target_end_date, sample)
 
 # interpolate missing days
 # I'm pretty sure the horizon time indexing is currently wrong.
@@ -164,15 +164,14 @@ n_samples <- max(forecast_samples$sample)
 helper_data <- expand.grid(target_end_date = date_range,
                            forecaster_id = forecaster_ids,
                            location = c("GM", "PL"),
-                           target_type = c("case", "death"),
                            submission_date = submission_date,
                            sample = 1:n_samples)
 
 forecast_samples_daily <- forecast_samples %>%
   mutate(target_end_date = as.Date(target_end_date)) %>%
   full_join(helper_data) %>%
-  arrange(forecaster_id, location, target_type, sample, target_end_date) %>%
-  group_by(forecaster_id, location, target_type, sample) %>%
+  arrange(forecaster_id, location, sample, target_end_date) %>%
+  group_by(forecaster_id, location, sample) %>%
   mutate(no_predictions = ifelse(all(is.na(value)), TRUE, FALSE)) %>%
   filter(!no_predictions) %>%
   mutate(value = na.approx(value))
@@ -192,7 +191,7 @@ plot <- plot_predictions(
   check %>% mutate(true_value = NA_real_,
   target_end_date = as.Date(target_end_date, origin = "1970-01-01")),
   x = "target_end_date",
-  facet_formula = ~ forecaster_id + location + target_type
+  facet_formula = ~ forecaster_id + location
   )
 
 plot_dir <- here("rt-crowd-forecast", "data", "plots", submission_date)

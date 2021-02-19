@@ -36,7 +36,7 @@ if (dir.exists("rt-forecast")) {
 
 run_app(
   data = obs,
-  selection_vars = c("region", "target_type"),
+  selection_vars = c("region"),
   first_forecast_date = first_forecast_date,
   submission_date = submission_date,
   horizons = 7,

@@ -21,14 +21,13 @@ crowd_rt <- fread(
 
 # dropped redundant columns and get correct shape
 crowd_rt <- crowd_rt[, .(location,
-  target = paste0(target_type, "s"),
   date = as.Date(target_end_date),
   value = round(value, 3)
 )]
 crowd_rt[location %in% "GM", location := "Germany"]
 crowd_rt[location %in% "PL", location := "Poland"]
-crowd_rt[, sample := 1:.N, by = .(location, date, target)]
-crowd_rt <- crowd_rt[target %in% "cases"]
+crowd_rt[, sample := 1:.N, by = .(location, date)]
+crowd_rt[, target := "cases"]
 
 # Simulate cases ----------------------------------------------------------
 simulations <- simulate_crowd_cases(
