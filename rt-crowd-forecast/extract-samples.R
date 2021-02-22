@@ -177,7 +177,9 @@ forecast_samples_daily <- forecast_samples %>%
   mutate(value = na.approx(value))
 
 # save forecasts in quantile-format
-fwrite(forecast_samples_daily %>% mutate(submission_date = submission_date),
+fwrite(forecast_samples_daily %>% 
+         mutate(submission_date = submission_date, 
+                target_type = "case"),
        here("rt-crowd-forecast", "processed-forecast-data",
             paste0(submission_date, "-processed-forecasts.csv")))
 

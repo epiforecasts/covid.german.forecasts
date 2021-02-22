@@ -34,7 +34,7 @@ dates_to_epiweek <- function(df){
     count() %>%
     filter(n == 7) %>%
     left_join(epiweek_end_date, by = c("epiweek", "year")) %>%
-    mutate(date = list(date - 0:6)) %>%
+    mutate(date = list(as.Date(date) - 0:6)) %>%
     unnest(cols = c(date))
  
   df_dated <- df %>%
