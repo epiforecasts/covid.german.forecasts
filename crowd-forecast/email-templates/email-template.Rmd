@@ -70,15 +70,7 @@ data <- scoringutils::merge_pred_and_obs(prediction_data, truth_data,
 
 ### Dear `r name`,
 
-Good to have you as a forecaster! You're receiving this message because you gave us your email address when you registered for the [Epiforecasts Crowd Forecast App](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). 
-
-It has been a long time, but finally we managed to get this email newsletter running! From now on you will receive a weekly email with
-
-- announcements and other information
-- a reminder to submit a forecast
-- some information about last weeks forecast and your performance
-
-If you don't want to receive future emails simply write me a quick message. We're working on a way that allows you to unsubscribe from within the app, but that is work in progress. Baby steps, but we're getting there. 
+Good to have you as a forecaster! Here is this weeks reminder and an update about what has happened lately. You're receiving this message because you gave us your email address when you registered for the [Epiforecasts Crowd Forecast App](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). 
 
 If you want to lean more about this project, have a look at our [github repo](https://github.com/epiforecasts/covid.german.forecasts). If you want to learn more about the German and Polish Forecast Hub, where we submit the forecasts to, have a look [here](https://kitmetricslab.github.io/forecasthub/forecast). 
 
@@ -205,7 +197,13 @@ print(plot)
 
 <br>
 
-If you have any questions or feedback, please don't hesitate to reach out. You can drop us an email or submit an issue to our [github repo](https://github.com/epiforecasts/covid.german.forecasts)
+### Quota issues
+
+One last thing. As you may have experienced, we sometimes experience issues when too many people try to log in at the same time. We are using Google drive to store and load the forecasts and are getting an error that says "Quoata exceeded". Usually, this shouldn't happen at our usage level. We made a Stackoverflow question about it [here](https://stackoverflow.com/questions/66186332/googlesheets-quota-limit-issues-possible-failure-to-use-api-key). In case you have thoughts on that or know people who might, please reach out!
+
+<br>
+
+If you have any further questions or feedback, please don't hesitate to reach out. You can drop us an email or submit an issue to our [github repo](https://github.com/epiforecasts/covid.german.forecasts)
 
 Thank you very much for your support and participation. We very much appreciate it!
 
@@ -213,3 +211,6 @@ Best wishes,
 
 Nikos for the Epiforecasts team
 
+<br>
+
+PS: If you don't want to receive future emails simply write me a quick message. We're working on a way that allows you to unsubscribe from within the app, but that is work in progress. Baby steps, but we're getting there. 
