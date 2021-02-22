@@ -29,6 +29,9 @@ participant_data <- ids %>%
   dplyr::select(name, username, email, forecaster_id, board_name) %>%
   dplyr::mutate(name = ifelse(is.na(name), username, name))
 
+# update data (probably needs to happen only on local machine)
+source(here("data-raw", "update.R"))
+
 # iterate over rows and send an email
 for (i in seq_len(nrow(participant_data))) {
 
