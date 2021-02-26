@@ -15,11 +15,11 @@ google_auth(
 of the Google service account. If a service account is presented it will
 be used and the other arguments will be ignored}
 
+\item{email}{alternatively, provide the email address to an authorised
+account}
+
 \item{cache_folder}{path to the folder where secrets for the email address
 provided are stored.}
-
-\item{enail}{alternatively, provide the email address to an authorised
-account}
 }
 \description{
 Authentificate for Google Sheets

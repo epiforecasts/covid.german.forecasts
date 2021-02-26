@@ -28,17 +28,17 @@ Imports:
     lubridate,
     attempt,
     purrr,
-    tidyr
+    tidyr, 
+    googledrive,
+    googlesheets4,
+    here
 Suggests:
     covidregionaldata,
-    here,
     future,
     stringr,
     scoringutils,
     crowdforecastr,
     rsconnect,
-    googledrive,
-    googlesheets4,
     ggplot2,
     readr,
     devtools,
@@ -51,7 +51,9 @@ Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata,
   epiforecasts/scoringutils@improve_plots,
-  epiforecasts/crowdforecastr
+  epiforecasts/crowdforecastr,
+  tidyverse/googlesheets4,
+  tidyverse/googledrive
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Biarch: true
