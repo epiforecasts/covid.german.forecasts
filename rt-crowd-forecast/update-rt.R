@@ -3,7 +3,7 @@ library(here)
 library(covid.german.forecasts)
 locations <- c("Germany", "Poland")
 
-date <- latest_weekday(Sys.Date())
+date <- latest_weekday()
 
 for (location in locations) {
 
@@ -13,7 +13,7 @@ for (location in locations) {
                      location)
   check_dir(target_dir)
   for (file_name in file_names) {
-    file.copy(from = here::here("rt-forecast", "data", "samples", "cases", 
+    file.copy(from = here("rt-forecast", "data", "samples", "cases", 
                                 location, date, file_name), 
               to = here(target_dir, file_name))
   }

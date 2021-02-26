@@ -165,6 +165,40 @@ save_forecast <- function(forecast, loc_name, loc, type = "",
 globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",
     "locations", "n", "quantile", "region", "target", "target_end_date",
-    "type", "value", ".", "primary", "secondary", "target_date", "variable"
+    "type", "value", ".", "primary", "secondary", "target_date", "variable", 
+    "epiyear", "year"
   )
 )
+
+#' Authentificate for Google Sheets
+#'
+#' @param service_account the path to a JSON file that has all the information
+#' of the Google service account. If a service account is presented it will 
+#' be used and the other arguments will be ignored
+#' @param email alternatively, provide the email address to an authorised 
+#' account
+#' @param cache_folder path to the folder where secrets for the email address
+#' provided are stored. 
+#' @importFrom here here
+#' @importFrom googledrive drive_auth drive_token
+#' @importFrom googlesheets4 gs4_auth
+#' @export
+#' @return NULL
+google_auth <- function(service_account = "default", 
+                        email = "epiforecasts@gmail.com", 
+                        cache_folder = ".secrets") {
+  
+  if (service_account == "default") {
+    service_account <- here(".secrets", "crowd-forecast-app-c98ca2164f6c-service-account-token.json")
+  }
+  # if service account is present, use that. Else try authentification via email
+  if (file.exists(service_account)) {
+    gs4_auth(path = service_account)
+  } else {
+    options(gargle_oauth_cache = cache_folder)
+    drive_auth(cache = cache_folder, email = email)
+    gs4_auth(token = drive_token())
+  }
+  return(invisible(NULL))
+}
+

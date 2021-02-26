@@ -41,6 +41,7 @@ run_app(
   submission_date = submission_date,
   horizons = 7,
   horizon_interval = 7,
+  path_service_account_json = ".secrets/crowd-forecast-app-c98ca2164f6c-service-account-token.json",
   google_account_mail = "epiforecasts@gmail.com",
   force_increasing_uncertainty = FALSE,
   default_distribution = "normal",

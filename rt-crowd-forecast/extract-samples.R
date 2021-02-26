@@ -13,9 +13,8 @@ library(ggplot2)
 library(here)
 
 # Google sheets authentification -----------------------------------------------
-options(gargle_oauth_cache = ".secrets")
-drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
-gs4_auth(token = drive_token())
+google_auth()
+
 spread_sheet <- "1g4OBCcDGHn_li01R8xbZ4PFNKQmV-SHSXFlv2Qv79Ks"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 

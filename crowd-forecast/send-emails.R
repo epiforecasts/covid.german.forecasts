@@ -6,7 +6,7 @@ library(covid.german.forecasts)
 library(data.table)
 
 # set up email credential if not present
-if (!file.exists(here::here(".secrets", "epiforecasts-email-creds"))) {
+if (!file.exists(here(".secrets", "epiforecasts-email-creds"))) {
   create_smtp_creds_file(
     file = here(".secrets", "epiforecasts-email-creds"),
     user = "epiforecasts@gmail.com",
@@ -15,9 +15,7 @@ if (!file.exists(here::here(".secrets", "epiforecasts-email-creds"))) {
 }
 
 # Google sheets authentification -----------------------------------------------
-options(gargle_oauth_cache = ".secrets")
-drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
-gs4_auth(token = drive_token())
+google_auth()
 
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 

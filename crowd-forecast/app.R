@@ -31,6 +31,7 @@ setorder(observations, target_type, target_end_date)
 run_app(data = observations, 
         first_forecast_date = as.character(first_forecast_date),
         selection_vars = c("location_name", "target_type"),
+        path_service_account_json = ".secrets/crowd-forecast-app-c98ca2164f6c-service-account-token.json",
         google_account_mail = "epiforecasts@gmail.com",
         forecast_sheet_id = "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI",
         user_data_sheet_id = "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ", 
