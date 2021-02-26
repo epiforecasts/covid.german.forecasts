@@ -169,8 +169,6 @@ globalVariables(
   )
 )
 
-
-
 #' Authentificate for Google Sheets
 #'
 #' @param service_account the path to a JSON file that has all the information
