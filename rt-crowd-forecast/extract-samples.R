@@ -13,8 +13,7 @@ library(ggplot2)
 library(here)
 
 # Google sheets authentification -----------------------------------------------
-# use service account if possible
-google_auth(service_account = "default")
+google_auth()
 
 spread_sheet <- "1g4OBCcDGHn_li01R8xbZ4PFNKQmV-SHSXFlv2Qv79Ks"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"

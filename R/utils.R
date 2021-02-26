@@ -199,5 +199,6 @@ google_auth <- function(service_account = "default",
     drive_auth(cache = cache_folder, email = email)
     gs4_auth(token = drive_token())
   }
+  return(invisible(NULL))
 }
 
