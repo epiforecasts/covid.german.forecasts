@@ -179,6 +179,8 @@ globalVariables(
 #' @param cache_folder path to the folder where secrets for the email address
 #' provided are stored. 
 #' @importFrom here here
+#' @importFrom googledrive drive_auth
+#' @importFrom googlesheets4 gs4_auth
 #' @export
 #' @return NULL
 google_auth <- function(service_account = "default", 
