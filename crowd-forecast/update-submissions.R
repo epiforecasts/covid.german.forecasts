@@ -10,15 +10,7 @@ library(tidyr)
 
 # Google sheets authentification -----------------------------------------------
 # use service account if possible
-path_json <- here::here(".secrets", "crowd-forecast-app-c98ca2164f6c-service-account-token.json")
-if (file.exists(path_json)) {
-  gs4_auth(path = path_json)
-} else {
-  options(gargle_oauth_cache = ".secrets")
-  drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
-  gs4_auth(token = drive_token())
-}
-
+google_auth(service_account = "default")
 
 spread_sheet <- "1nOy3BfHoIKCHD4dfOtJaz4QMxbuhmEvsWzsrSMx_grI"
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
