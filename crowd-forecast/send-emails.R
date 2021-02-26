@@ -15,9 +15,15 @@ if (!file.exists(here::here(".secrets", "epiforecasts-email-creds"))) {
 }
 
 # Google sheets authentification -----------------------------------------------
-options(gargle_oauth_cache = ".secrets")
-drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
-gs4_auth(token = drive_token())
+# use service account if possible
+path_json <- here::here(".secrets", "crowd-forecast-app-c98ca2164f6c-service-account-token.json")
+if (file.exists(path_json)) {
+  gs4_auth(path = path_json)
+} else {
+  options(gargle_oauth_cache = ".secrets")
+  drive_auth(cache = ".secrets", email = "epiforecasts@gmail.com")
+  gs4_auth(token = drive_token())
+}
 
 identification_sheet <- "1GJ5BNcN1UfAlZSkYwgr1-AxgsVA2wtwQ9bRwZ64ZXRQ"
 
