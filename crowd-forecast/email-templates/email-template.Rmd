@@ -76,6 +76,18 @@ If you want to lean more about this project, have a look at our [github repo](ht
 
 <br>
 
+### The European Forecast Hub
+
+On March 8th, the [European Forecast Hub](https://covid19forecasthub.eu/) will launch. Our crowd forecast app will therefore be expanded to include a set of 32 countries. If you like you can stick to forecasting Germany and Poland, but more observations will be available. We'll send more detailed information around next week. 
+
+<br>
+
+### Introduction video
+
+To help new forecasters get used to the user interface, we created a [short video](https://www.youtube.com/watch?v=NzZkNxXFgm8) that explains how to make a forecast. If you like, check it out. 
+
+<br>
+
 ### Reminder for the weekly forecasts
 
 We **update our data every Saturday at 6.30pm CET**. You can then make a forecast until **2pm CET (1pm UK time) on Tuesday** using our [forecast app](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). We would be very happy to have a forecast from you this week!
@@ -197,12 +209,6 @@ print(plot)
 
 <br>
 
-### Quota issues
-
-One last thing. As you may have experienced, we sometimes experience issues when too many people try to log in at the same time. We are using Google drive to store and load the forecasts and are getting an error that says "Quoata exceeded". Usually, this shouldn't happen at our usage level. We made a Stackoverflow question about it [here](https://stackoverflow.com/questions/66186332/googlesheets-quota-limit-issues-possible-failure-to-use-api-key). In case you have thoughts on that or know people who might, please reach out!
-
-<br>
-
 If you have any further questions or feedback, please don't hesitate to reach out. You can drop us an email or submit an issue to our [github repo](https://github.com/epiforecasts/covid.german.forecasts)
 
 Thank you very much for your support and participation. We very much appreciate it!
@@ -214,3 +220,5 @@ Nikos for the Epiforecasts team
 <br>
 
 PS: If you don't want to receive future emails simply write me a quick message. We're working on a way that allows you to unsubscribe from within the app, but that is work in progress. Baby steps, but we're getting there. 
+
+PPS: We solved our quota issues. Thank you very much for your helpful comments last week!
