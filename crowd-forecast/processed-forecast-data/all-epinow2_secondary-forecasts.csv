@@ -22999,3 +22999,1659 @@ PL87,Zachodniopomorskie,quantile,0.9,199.1,2021-03-20,2021-02-22,4 wk ahead inc 
 PL87,Zachodniopomorskie,quantile,0.95,251.4,2021-03-20,2021-02-22,4 wk ahead inc death,EpiNow2_secondary,2021-02-22,4
 PL87,Zachodniopomorskie,quantile,0.975,333.225,2021-03-20,2021-02-22,4 wk ahead inc death,EpiNow2_secondary,2021-02-22,4
 PL87,Zachodniopomorskie,quantile,0.99,484.22,2021-03-20,2021-02-22,4 wk ahead inc death,EpiNow2_secondary,2021-02-22,4
+GM,Germany,quantile,0.01,1688.93,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.025,1755.925,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.05,1814.95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.1,1885,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.15,1938,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.2,1969.8,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.25,1995.75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.3,2027,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.35,2057,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.4,2085,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.45,2121,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.5,2149,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.55,2190,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.6,2217.4,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.65,2249,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.7,2281.6,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.75,2315,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.8,2370.6,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.85,2425.3,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.9,2488,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.95,2581.15,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.975,2659.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.99,2750.07,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM,Germany,quantile,0.01,1448,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.025,1547,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.05,1623.95,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.1,1741.7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.15,1833,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.2,1910,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.25,1972.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.3,2028.4,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.35,2069,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.4,2121.6,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.45,2177,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.5,2233.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.55,2286,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.6,2332.8,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.65,2381.7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.7,2439.2,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.75,2518.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.8,2608.2,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.85,2690.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.9,2822.2,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.95,3063.1,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.975,3324.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.99,3779.47,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM,Germany,quantile,0.01,1484.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.025,1567.8,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.05,1670.85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.1,1839.6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.15,1923,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.2,2008.8,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.25,2092,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.3,2166.7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.35,2238,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.4,2333.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.45,2408.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.5,2498.5,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.55,2611.7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.6,2722.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.65,2810.35,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.7,2938.9,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.75,3105.25,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.8,3328,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.85,3647.3,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.9,4080.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.95,4844.55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.975,5608.475,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.99,7811.63,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM,Germany,quantile,0.01,1272.59,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.025,1460.85,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.05,1600,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.1,1810.8,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.15,1961.7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.2,2088.8,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.25,2213.25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.3,2328.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.35,2468.65,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.4,2628.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.45,2799.85,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.5,2943.5,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.55,3089.8,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.6,3263,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.65,3486,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.7,3751.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.75,4104,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.8,4529,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.85,5316,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.9,6494.70000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.95,9426.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.975,12368.25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM,Germany,quantile,0.99,22473.18,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.01,85,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.025,93.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.05,103,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.1,113,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.15,120,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.2,126,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.25,132,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.3,137,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.35,141,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.4,147,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.45,151,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.5,156,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.55,161,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.6,165,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.65,170,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.7,174,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.75,181,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.8,187.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.85,197,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.9,209.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.95,232.05,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.975,251,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.99,275.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM01,Baden-Wurttemberg,quantile,0.01,81.99,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.025,93,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.05,100,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.1,112,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.15,121,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.2,127,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.25,131.75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.3,137,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.35,144,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.4,150,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.45,155,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.5,160,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.55,165,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.6,171,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.65,178,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.7,185,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.75,195,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.8,205,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.85,218,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.9,234.1,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.95,268.1,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.975,293.025,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.99,337.07,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM01,Baden-Wurttemberg,quantile,0.01,76.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.025,82.975,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.05,91,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.1,103,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.15,111,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.2,119.8,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.25,126,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.3,130,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.35,136,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.4,143,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.45,149.55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.5,156,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.55,162,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.6,172.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.65,180.35,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.7,190,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.75,206,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.8,226,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.85,249,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.9,287,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.95,342.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.975,434.025,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.99,542.06,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM01,Baden-Wurttemberg,quantile,0.01,64.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.025,72,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.05,80,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.1,89,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.15,96,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.2,104,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.25,113,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.3,119,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.35,126,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.4,131,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.45,141,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.5,150,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.55,160,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.6,172,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.65,186,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.7,205.3,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.75,224,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.8,257.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.85,305.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.9,397.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.95,538.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.975,769,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM01,Baden-Wurttemberg,quantile,0.99,1139.82,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.01,201.99,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.025,210,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.05,223,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.1,242,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.15,253,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.2,264,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.25,270.75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.3,277,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.35,283,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.4,291,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.45,297,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.5,303,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.55,311,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.6,317,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.65,325,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.7,334,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.75,343.25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.8,353.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.85,365,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.9,383,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.95,412,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.975,442.025,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.99,483.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM02,Bavaria,quantile,0.01,185,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.025,206.975,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.05,217.95,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.1,233.9,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.15,246,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.2,255.8,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.25,263,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.3,273,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.35,281,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.4,286.6,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.45,295,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.5,302.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.55,311,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.6,319,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.65,329,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.7,338,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.75,349,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.8,360,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.85,377,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.9,401,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.95,437.1,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.975,487.025,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.99,540.04,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM02,Bavaria,quantile,0.01,174,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.025,189.975,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.05,201,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.1,218,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.15,230,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.2,240,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.25,248.75,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.3,258,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.35,268,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.4,277,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.45,285,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.5,296,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.55,307,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.6,320,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.65,332,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.7,352,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.75,369,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.8,394,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.85,423.45,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.9,459,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.95,543.1,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.975,633.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.99,801.31,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM02,Bavaria,quantile,0.01,142,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.025,155.975,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.05,167.95,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.1,188,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.15,202,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.2,214,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.25,225,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.3,237,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.35,251,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.4,265,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.45,276,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.5,290,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.55,306.45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.6,329,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.65,349,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.7,372.3,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.75,403.5,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.8,448,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.85,511,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.9,592.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.95,732,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.975,1053.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM02,Bavaria,quantile,0.99,1703.36,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.01,5,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.025,6,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.05,8,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.1,9,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.15,11,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.2,12,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.25,12,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.3,13,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.35,14,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.4,15,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.45,16,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.5,16,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.55,17,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.6,18,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.65,19,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.7,20,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.75,22,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.8,23,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.85,25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.9,28,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.95,32.05,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.975,36,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.99,42.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM03,Bremen,quantile,0.01,5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.025,7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.05,8,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.1,10,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.15,12,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.2,13,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.25,14,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.3,15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.35,16,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.4,18,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.45,19,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.5,20,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.55,21,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.6,22,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.65,24,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.7,25,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.75,27,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.8,30,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.85,33,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.9,36,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.95,41,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.975,49.025,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.99,62,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM03,Bremen,quantile,0.01,5,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.025,7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.05,9,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.1,11,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.15,13,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.2,14,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.25,15,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.3,17,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.35,18,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.4,19,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.45,21,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.5,22,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.55,23,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.6,25,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.65,26,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.7,28,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.75,30,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.8,32,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.85,35,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.9,40,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.95,49,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.975,58.025,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.99,78.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM03,Bremen,quantile,0.01,5,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.025,6,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.05,8,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.1,11,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.15,12,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.2,14,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.25,15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.3,17,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.35,18,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.4,20,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.45,22,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.5,23,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.55,25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.6,27,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.65,29,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.7,31,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.75,33,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.8,36,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.85,41,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.9,48.1000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.95,67,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.975,87,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM03,Bremen,quantile,0.99,150.02,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.01,20,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.025,22.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.05,25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.1,28,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.15,30,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.2,32,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.25,33,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.3,35,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.35,36,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.4,38,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.45,39,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.5,40,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.55,42,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.6,43,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.65,45,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.7,47,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.75,50,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.8,52,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.85,55,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.9,59,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.95,65,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.975,72,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.99,86.03,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM04,Hamburg,quantile,0.01,17,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.025,20,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.05,22,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.1,26,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.15,29,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.2,31,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.25,33,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.3,35,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.35,36,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.4,38,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.45,40,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.5,42,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.55,43.4500000000001,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.6,45,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.65,48,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.7,50,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.75,53,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.8,56,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.85,59,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.9,64,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.95,74,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.975,87,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.99,103.06,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM04,Hamburg,quantile,0.01,14,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.025,18,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.05,22,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.1,25.9,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.15,28,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.2,30,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.25,32,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.3,34,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.35,35,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.4,37,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.45,40,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.5,42,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.55,44,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.6,47,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.65,50,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.7,52,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.75,55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.8,60,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.85,65.1500000000001,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.9,75.1000000000001,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.95,92,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.975,116.075,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.99,137.07,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM04,Hamburg,quantile,0.01,12,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.025,15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.05,18,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.1,22,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.15,25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.2,28,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.25,30,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.3,32,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.35,34,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.4,36,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.45,39,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.5,41,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.55,44.45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.6,47,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.65,50,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.7,53,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.75,57.2500000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.8,63.2000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.85,73,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.9,85.1000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.95,113.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.975,149.075,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM04,Hamburg,quantile,0.99,257.33,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.01,95.98,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.025,107.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.05,116,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.1,123,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.15,130.85,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.2,135.8,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.25,140,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.3,145,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.35,148.65,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.4,153,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.45,157,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.5,160,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.55,163,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.6,167,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.65,171,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.7,175,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.75,181.25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.8,187,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.85,195,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.9,205,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.95,221,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.975,236.025,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.99,257.02,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM05,Hesse,quantile,0.01,93,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.025,102,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.05,109.95,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.1,120,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.15,127,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.2,132,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.25,137,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.3,141,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.35,146.65,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.4,152,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.45,156,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.5,160,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.55,165,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.6,169,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.65,174,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.7,180,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.75,187,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.8,196,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.85,205,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.9,220,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.95,243.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.975,274.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.99,306,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM05,Hesse,quantile,0.01,87.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.025,95,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.05,106,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.1,117,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.15,124,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.2,129,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.25,134,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.3,140,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.35,144.65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.4,150,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.45,154,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.5,162,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.55,168,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.6,175,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.65,182,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.7,191,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.75,198,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.8,211.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.85,233.15,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.9,260,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.95,322.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.975,389,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.99,489.08,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM05,Hesse,quantile,0.01,74.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.025,84.975,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.05,91,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.1,104,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.15,111.85,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.2,119,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.25,125,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.3,132,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.35,139,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.4,146.6,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.45,152,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.5,159,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.55,169.45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.6,177,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.65,189,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.7,204,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.75,229,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.8,253.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.85,291.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.9,354.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.95,479.25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.975,625.575,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM05,Hesse,quantile,0.99,893.32,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.01,108,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.025,122,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.05,138,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.1,154,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.15,165,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.2,173,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.25,181.75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.3,190.7,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.35,196,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.4,201.6,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.45,209,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.5,217,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.55,224,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.6,230,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.65,236,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.7,245.3,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.75,255,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.8,266,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.85,282,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.9,300,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.95,333,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.975,369,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.99,402.07,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM06,Lower Saxony,quantile,0.01,109,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.025,125.975,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.05,141,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.1,161,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.15,168,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.2,180,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.25,188,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.3,195,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.35,201,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.4,208,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.45,216,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.5,224.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.55,234,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.6,242,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.65,250,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.7,262,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.75,272,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.8,285,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.85,304,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.9,327,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.95,366.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.975,405.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.99,446.01,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM06,Lower Saxony,quantile,0.01,112,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.025,119,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.05,135,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.1,155,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.15,166,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.2,175,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.25,186.75,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.3,195,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.35,205,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.4,213,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.45,221,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.5,229,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.55,240,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.6,248.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.65,260,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.7,273,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.75,286,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.8,307,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.85,327,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.9,354,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.95,409.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.975,484.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.99,585.19,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM06,Lower Saxony,quantile,0.01,95.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.025,113.975,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.05,130.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.1,150.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.15,161.85,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.2,176,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.25,185,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.3,197,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.35,205,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.4,213,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.45,224,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.5,235,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.55,245,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.6,255,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.65,266.35,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.7,288.3,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.75,308.25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.8,328,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.85,356,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.9,402.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.95,500.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.975,678.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM06,Lower Saxony,quantile,0.99,949.909999999999,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.01,234.97,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.025,253.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.05,274,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.1,301.9,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.15,320,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.2,338,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.25,352,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.3,361,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.35,370,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.4,378,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.45,390,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.5,399,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.55,411,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.6,425,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.65,436.35,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.7,451,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.75,468,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.8,483,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.85,505.15,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.9,544.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.95,588,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.975,651,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.99,719.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM07,North Rhine-Westphalia,quantile,0.01,222.98,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.025,246.975,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.05,266,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.1,291.9,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.15,311,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.2,329.8,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.25,346,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.3,361.7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.35,376,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.4,387,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.45,403,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.5,414,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.55,428,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.6,440,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.65,456,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.7,473,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.75,488,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.8,517,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.85,539.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.9,577,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.95,664.35,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.975,726.2,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.99,936.35,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM07,North Rhine-Westphalia,quantile,0.01,215.97,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.025,243.975,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.05,261.9,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.1,287,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.15,305.85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.2,328.6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.25,344.75,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.3,356,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.35,370,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.4,384.6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.45,399.55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.5,414,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.55,429,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.6,449.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.65,474,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.7,494.3,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.75,527,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.8,567,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.85,613.15,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.9,686.1,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.95,846.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.975,1013.275,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.99,1464.33,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM07,North Rhine-Westphalia,quantile,0.01,188.85,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.025,217.975,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.05,239,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.1,264.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.15,288,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.2,308,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.25,324,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.3,340.7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.35,357.65,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.4,379,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.45,396,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.5,417.5,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.55,439,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.6,465.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.65,491,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.7,536.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.75,585.25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.8,629.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.85,709.45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.9,853.300000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.95,1249.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.975,1697.825,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM07,North Rhine-Westphalia,quantile,0.99,3018.19,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.01,46.98,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.025,54.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.05,60,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.1,68,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.15,72,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.2,75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.25,78,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.3,81,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.35,84,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.4,86,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.45,88,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.5,91,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.55,93,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.6,96,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.65,99,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.7,101,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.75,105,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.8,108,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.85,114,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.9,121,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.95,130,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.975,137.025,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.99,155.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM08,Rhineland-Palatinate,quantile,0.01,42,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.025,47,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.05,52,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.1,59,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.15,63,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.2,67,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.25,70,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.3,72.7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.35,75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.4,77,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.45,79,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.5,82,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.55,84,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.6,89,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.65,92,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.7,96,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.75,99,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.8,104,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.85,110,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.9,117,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.95,129,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.975,146,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.99,171.03,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM08,Rhineland-Palatinate,quantile,0.01,34.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.025,41.975,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.05,45,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.1,51,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.15,55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.2,59,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.25,62,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.3,64,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.35,67,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.4,70,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.45,73,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.5,75,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.55,78,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.6,80,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.65,84,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.7,88,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.75,92.2500000000001,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.8,99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.85,107,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.9,117.1,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.95,140.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.975,190,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.99,273.29,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM08,Rhineland-Palatinate,quantile,0.01,28,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.025,31.975,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.05,36,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.1,41,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.15,45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.2,48,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.25,51,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.3,54,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.35,57,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.4,60,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.45,62,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.5,65,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.55,69,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.6,72,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.65,76,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.7,79,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.75,85,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.8,91,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.85,100.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.9,121,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.95,163,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.975,260.025,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM08,Rhineland-Palatinate,quantile,0.99,500.31,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.01,7,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.025,8,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.05,10,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.1,12,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.15,13,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.2,15,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.25,16,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.3,17,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.35,18,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.4,20,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.45,20,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.5,22,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.55,23,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.6,24,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.65,25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.7,27,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.75,29,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.8,30,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.85,33,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.9,37,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.95,44,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.975,48.05,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.99,56.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM09,Saarland,quantile,0.01,5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.025,7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.05,8,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.1,11,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.15,12,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.2,13,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.25,15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.3,16,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.35,18,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.4,19,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.45,20,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.5,22,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.55,23,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.6,25,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.65,26,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.7,28,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.75,30,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.8,32,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.85,35,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.9,41,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.95,49,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.975,59,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.99,72.01,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM09,Saarland,quantile,0.01,4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.025,6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.05,8,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.1,10,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.15,12,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.2,13,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.25,15,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.3,16,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.35,17,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.4,18,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.45,20,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.5,21,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.55,23,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.6,24,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.65,26,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.7,29,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.75,31,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.8,34.2000000000001,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.85,40,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.9,47,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.95,61,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.975,87,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.99,158.04,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM09,Saarland,quantile,0.01,4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.025,6,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.05,7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.1,9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.15,11,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.2,12,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.25,14,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.3,15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.35,17,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.4,18,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.45,20,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.5,21,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.55,23,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.6,25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.65,27,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.7,29.3000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.75,33,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.8,38,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.85,44,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.9,54.1000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.95,93,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.975,156.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM09,Saarland,quantile,0.99,243.01,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.01,36,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.025,41,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.05,45,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.1,50,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.15,53,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.2,55,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.25,57,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.3,60,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.35,62,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.4,64,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.45,66,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.5,67,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.55,69,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.6,70,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.65,72,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.7,74,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.75,76,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.8,79.2000000000001,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.85,83,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.9,87,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.95,95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.975,102,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.99,113.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM10,Schleswig-Holstein,quantile,0.01,35,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.025,39,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.05,43,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.1,47,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.15,50,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.2,53,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.25,55,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.3,57,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.35,58,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.4,60,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.45,61,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.5,63,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.55,64,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.6,66,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.65,68,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.7,70,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.75,72,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.8,75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.85,78,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.9,83,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.95,92,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.975,99,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.99,107,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM10,Schleswig-Holstein,quantile,0.01,30.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.025,35,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.05,38,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.1,41.9,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.15,45,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.2,47,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.25,49,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.3,51.7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.35,53,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.4,55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.45,57,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.5,59,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.55,62,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.6,63,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.65,66,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.7,68,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.75,70,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.8,74,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.85,79,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.9,85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.95,95,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.975,108,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.99,124,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM10,Schleswig-Holstein,quantile,0.01,22,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.025,29,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.05,32,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.1,36,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.15,40,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.2,43,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.25,45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.3,47,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.35,49,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.4,51,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.45,54,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.5,56,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.55,58,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.6,61,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.65,63,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.7,66,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.75,70,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.8,74.2000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.85,81,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.9,89.1000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.95,106,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.975,129.025,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM10,Schleswig-Holstein,quantile,0.99,172.08,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.01,32,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.025,37,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.05,42,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.1,48,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.15,51,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.2,54,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.25,57,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.3,59,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.35,61,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.4,63,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.45,65,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.5,67,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.55,69,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.6,71,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.65,74,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.7,76,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.75,80,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.8,84,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.85,88,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.9,95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.95,104,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.975,114,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.99,123.02,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM11,Brandenburg,quantile,0.01,29.98,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.025,33,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.05,36,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.1,41,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.15,45,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.2,48,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.25,51,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.3,53,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.35,56,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.4,58,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.45,60,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.5,63,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.55,65,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.6,68,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.65,71.3500000000001,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.7,75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.75,79,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.8,84,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.85,92,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.9,103.1,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.95,127,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.975,146.025,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.99,186.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM11,Brandenburg,quantile,0.01,21,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.025,26,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.05,31,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.1,36,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.15,40,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.2,43,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.25,46,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.3,49,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.35,52,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.4,55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.45,58,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.5,61,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.55,65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.6,70,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.65,75,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.7,82.3000000000001,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.75,90.2500000000001,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.8,102,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.85,116.15,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.9,141,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.95,190.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.975,264.025,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.99,395.03,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM11,Brandenburg,quantile,0.01,15.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.025,19,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.05,24,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.1,29.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.15,34,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.2,37,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.25,41,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.3,45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.35,49,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.4,54,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.45,60,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.5,67,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.55,74,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.6,81.4000000000001,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.65,92,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.7,101,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.75,120,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.8,138.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.85,166.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.9,241.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.95,405,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.975,671.35,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM11,Brandenburg,quantile,0.99,1013.02,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.01,29,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.025,32,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.05,34,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.1,38,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.15,41,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.2,43,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.25,45,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.3,46,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.35,48,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.4,49,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.45,51,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.5,52,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.55,54,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.6,55,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.65,57,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.7,59,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.75,61,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.8,63,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.85,65,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.9,69,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.95,76,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.975,83,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.99,91,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM12,Mecklenburg-Vorpommern,quantile,0.01,26.99,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.025,30,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.05,34,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.1,38,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.15,41,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.2,44,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.25,45,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.3,48,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.35,49,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.4,50,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.45,52,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.5,54,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.55,55,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.6,57,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.65,59,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.7,62,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.75,65,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.8,68,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.85,72,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.9,77,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.95,88,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.975,96,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.99,115,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM12,Mecklenburg-Vorpommern,quantile,0.01,25.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.025,32,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.05,35.95,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.1,39,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.15,42,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.2,45,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.25,47.75,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.3,49.7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.35,52,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.4,54,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.45,57,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.5,59,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.55,62,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.6,65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.65,68,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.7,71,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.75,77,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.8,82,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.85,89,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.9,101,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.95,125,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.975,157.075,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.99,198.07,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM12,Mecklenburg-Vorpommern,quantile,0.01,22.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.025,28,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.05,32,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.1,39,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.15,43,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.2,47,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.25,50,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.3,53,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.35,56,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.4,59,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.45,63,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.5,66,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.55,69,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.6,75,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.65,80,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.7,87,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.75,96,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.8,105,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.85,123,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.9,150.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.95,198.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.975,274.025,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM12,Mecklenburg-Vorpommern,quantile,0.99,395.01,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.01,121.99,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.025,138,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.05,151.95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.1,166,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.15,176,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.2,184,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.25,191.75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.3,201,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.35,210,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.4,217,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.45,223,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.5,231.5,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.55,239,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.6,247.4,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.65,254,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.7,261,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.75,271,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.8,285,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.85,301,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.9,319,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.95,352.1,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.975,380.125,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.99,420.04,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM13,Saxony,quantile,0.01,80,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.025,99.975,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.05,111,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.1,126,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.15,137,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.2,146,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.25,159.75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.3,169.7,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.35,179.65,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.4,191.6,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.45,202.55,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.5,211,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.55,221,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.6,231,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.65,241.35,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.7,260,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.75,273.25,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.8,290.2,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.85,307.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.9,335,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.95,371.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.975,431.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.99,508.01,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM13,Saxony,quantile,0.01,91.97,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.025,105.95,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.05,120,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.1,138.9,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.15,155,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.2,167,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.25,179,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.3,192,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.35,203.65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.4,213,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.45,226.55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.5,238,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.55,252.45,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.6,272,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.65,294.35,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.7,315,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.75,348.25,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.8,377.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.85,411,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.9,473,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.95,611.25,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.975,734.075,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.99,990.26,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM13,Saxony,quantile,0.01,95.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.025,116,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.05,131.95,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.1,155,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.15,170,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.2,188,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.25,204,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.3,215.7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.35,232,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.4,248,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.45,270.55,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.5,289,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.55,309,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.6,336,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.65,368,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.7,405.3,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.75,439.5,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.8,507,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.85,599,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.9,732.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.95,1029.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.975,1474.7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM13,Saxony,quantile,0.99,2420.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.01,53,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.025,57,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.05,63,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.1,68,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.15,72,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.2,75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.25,79,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.3,83,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.35,86,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.4,89,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.45,92,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.5,95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.55,98,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.6,102,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.65,105,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.7,109,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.75,113.25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.8,117,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.85,124,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.9,133,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.95,144,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.975,165.075,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.99,190.02,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM14,Saxony-Anhalt,quantile,0.01,38,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.025,44.975,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.05,50,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.1,58,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.15,63,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.2,68,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.25,71,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.3,75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.35,79,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.4,82,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.45,85,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.5,88,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.55,93.45,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.6,97,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.65,101,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.7,107,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.75,112.25,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.8,118,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.85,127,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.9,139,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.95,162.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.975,185.025,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.99,210.05,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM14,Saxony-Anhalt,quantile,0.01,40,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.025,47,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.05,53,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.1,59,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.15,65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.2,70,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.25,74,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.3,78,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.35,81,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.4,85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.45,89,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.5,94,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.55,99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.6,103.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.65,111,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.7,117.3,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.75,124,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.8,135.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.85,151,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.9,171,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.95,206.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.975,286,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.99,389,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM14,Saxony-Anhalt,quantile,0.01,32,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.025,38,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.05,46,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.1,55,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.15,61,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.2,66,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.25,71,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.3,77,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.35,82,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.4,89,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.45,95,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.5,102,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.55,109,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.6,119,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.65,129,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.7,143,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.75,159,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.8,180,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.85,206,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.9,247,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.95,351.45,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.975,523,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM14,Saxony-Anhalt,quantile,0.99,770.21,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.01,73,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.025,77.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.05,85,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.1,93,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.15,99,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.2,105,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.25,109,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.3,112,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.35,116,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.4,120,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.45,123,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.5,127,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.55,131,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.6,136,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.65,141,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.7,145,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.75,151,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.8,157,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.85,164,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.9,176,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.95,192.05,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.975,204,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.99,215,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM15,Thuringia,quantile,0.01,57.98,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.025,66,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.05,75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.1,85,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.15,95,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.2,100,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.25,105.75,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.3,110,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.35,115,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.4,120,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.45,124,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.5,129,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.55,133,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.6,138,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.65,143,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.7,149,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.75,156,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.8,164,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.85,171.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.9,187,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.95,217,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.975,260,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.99,297.06,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM15,Thuringia,quantile,0.01,65.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.025,76,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.05,83,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.1,92,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.15,99.85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.2,106,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.25,112,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.3,117,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.35,122,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.4,128,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.45,133,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.5,139,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.55,145,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.6,152,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.65,159,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.7,167,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.75,179,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.8,191,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.85,203,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.9,231,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.95,269.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.975,329.175,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.99,462.05,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM15,Thuringia,quantile,0.01,58,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.025,70.975,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.05,78,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.1,92,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.15,100,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.2,107,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.25,112,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.3,119,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.35,127,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.4,135,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.45,144,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.5,153.5,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.55,162,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.6,173,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.65,183.35,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.7,195.3,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.75,216.25,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.8,235.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.85,262.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.9,303.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.95,372.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.975,497.175,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM15,Thuringia,quantile,0.99,975.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.01,48,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.025,52.975,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.05,59,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.1,64,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.15,69,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.2,72,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.25,75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.3,77,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.35,79,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.4,82,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.45,84,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.5,87,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.55,90,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.6,93,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.65,95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.7,98,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.75,101.25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.8,106,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.85,111,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.9,117,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.95,129,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.975,138.025,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.99,153.01,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+GM16,Berlin,quantile,0.01,47.99,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.025,54,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.05,59,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.1,66.9,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.15,71.85,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.2,76,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.25,80,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.3,83,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.35,88,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.4,91,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.45,94,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.5,98,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.55,101,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.6,105,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.65,110,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.7,114,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.75,119,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.8,125,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.85,135,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.9,150,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.95,188,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.975,221.025,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.99,276.15,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+GM16,Berlin,quantile,0.01,50.99,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.025,58,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.05,62,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.1,69,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.15,74,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.2,81,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.25,85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.3,90,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.35,94,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.4,100.6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.45,107,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.5,112,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.55,119,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.6,127,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.65,134,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.7,145,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.75,157.25,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.8,173,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.85,193.3,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.9,242,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.95,334.1,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.975,579.15,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.99,966.339999999999,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+GM16,Berlin,quantile,0.01,45.99,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.025,53,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.05,59,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.1,70,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.15,79,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.2,86,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.25,95,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.3,103,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.35,109,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.4,117,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.45,126.55,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.5,137,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.55,151,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.6,164,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.65,178.35,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.7,194,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.75,224,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.8,264.2,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.85,319.6,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.9,454,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.95,755.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.975,1333.3,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+GM16,Berlin,quantile,0.99,3022.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.01,1369.99,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.025,1450.95,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.05,1520.85,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.1,1576,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.15,1627,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.2,1661,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.25,1692.75,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.3,1722.7,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.35,1747.65,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.4,1769.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.45,1795.55,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.5,1824,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.55,1850,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.6,1884.4,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.65,1917.35,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.7,1943.3,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.75,1983.25,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.8,2027.2,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.85,2081.3,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.9,2152.3,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.95,2270.5,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.975,2394.125,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.99,2559.33,2021-03-06,2021-03-01,1 wk ahead inc death,EpiNow2_secondary,2021-03-01,1
+PL,Poland,quantile,0.01,1567.93,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.025,1695.85,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.05,1805.85,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.1,1942,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.15,2032,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.2,2101.8,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.25,2164.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.3,2216.1,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.35,2267,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.4,2322,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.45,2375.55,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.5,2430.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.55,2490.45,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.6,2553,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.65,2614,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.7,2684.9,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.75,2762,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.8,2837.4,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.85,2957,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.9,3123.5,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.95,3393.55,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.975,3634.45,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.99,3855.43,2021-03-13,2021-03-01,2 wk ahead inc death,EpiNow2_secondary,2021-03-01,2
+PL,Poland,quantile,0.01,2074.65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.025,2220.575,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.05,2391.85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.1,2593.7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.15,2734.85,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.2,2853.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.25,2966.5,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.3,3093.7,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.35,3199.65,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.4,3324.2,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.45,3422.55,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.5,3526,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.55,3641.8,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.6,3737.4,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.65,3903,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.7,4065.3,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.75,4272.25,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.8,4508.6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.85,4818,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.9,5218.6,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.95,6117.1,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.975,6841.775,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.99,8014.13,2021-03-20,2021-03-01,3 wk ahead inc death,EpiNow2_secondary,2021-03-01,3
+PL,Poland,quantile,0.01,2381.76,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.025,2689.275,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.05,2964.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.1,3336.7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.15,3565.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.2,3811,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.25,4080,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.3,4306.7,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.35,4527.15,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.4,4765.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.45,5013.55,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.5,5303,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.55,5612.75,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.6,5915.8,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.65,6289.05,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.7,6663.4,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.75,7175.75,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.8,7749.6,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.85,8383.1,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.9,9619,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.95,11987.9,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.975,13860.625,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4
+PL,Poland,quantile,0.99,16960.34,2021-03-27,2021-03-01,4 wk ahead inc death,EpiNow2_secondary,2021-03-01,4

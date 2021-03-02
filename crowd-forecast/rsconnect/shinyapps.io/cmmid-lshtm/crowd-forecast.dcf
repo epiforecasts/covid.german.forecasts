@@ -5,6 +5,6 @@ account: cmmid-lshtm
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3233319
-bundleId: 4279272
+bundleId: 4290275
 url: https://cmmid-lshtm.shinyapps.io/crowd-forecast/
-when: 1614446000.78953
+when: 1614690111.96309
