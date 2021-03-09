@@ -44,6 +44,7 @@ if (delete_data) {
 
 # obtain raw and filtered forecasts, save raw forecasts-------------------------
 raw_forecasts <- forecasts %>%
+  dplyr::filter(location_name %in% c("Germany", "Poland")) %>%
   mutate(location = ifelse(location_name == "Germany", "GM", "PL"))
 
 # use only the latest forecast from a given forecaster
