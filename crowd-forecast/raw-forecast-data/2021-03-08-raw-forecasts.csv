@@ -1,0 +1,5 @@
+forecaster_id,forecast_date,expert,leaderboard,distribution,median,width,horizon,target_end_date,submission_date,location_name,target_type,location,forecast_duration,forecast_week
+375244,2021-03-09T00:00:00Z,FALSE,anonymous,log-normal,16864.48,0.064,1,2021-03-13,2021-03-08T00:00:00Z,Austria,cases,PL,,10
+375244,2021-03-09T00:00:00Z,FALSE,anonymous,log-normal,18165.95,0.12,2,2021-03-20,2021-03-08T00:00:00Z,Austria,cases,PL,,10
+375244,2021-03-09T00:00:00Z,FALSE,anonymous,log-normal,18165.95,0.13,3,2021-03-27,2021-03-08T00:00:00Z,Austria,cases,PL,,10
+375244,2021-03-09T00:00:00Z,FALSE,anonymous,log-normal,18800,0.15,4,2021-04-03,2021-03-08T00:00:00Z,Austria,cases,PL,,10
