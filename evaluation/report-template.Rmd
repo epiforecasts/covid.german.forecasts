@@ -24,13 +24,14 @@ knitr::opts_chunk$set(echo = FALSE,
 
 This is our evaluation of forecasting models and individual forecasters who have contributed forecasts of Covid-19 case and death numbers in Germany and Poland. These forecasts were submitted to the 
 [German and Polish Forecast Hub](https://github.com/KITmetricslab/covid19-forecast-hub-de)
-each week.
-
+each week. Currently, we submit an unweighted mean ensemble to the Forecast Hub, but this will likely be changed in the future. We will transition to submitting forecasts to the [European Forecast Hub](https://github.com/epiforecasts/covid19-forecast-hub-europe) in the future. 
 The evaluations are our own and not authorised by the German Forecast Hub team. We cannot rule out mistakes 
 and the analyses are subject to change. 
 
 If you have questions or want to give feedback, please create an issue on our 
 [github repository](https://github.com/epiforecasts/covid.german.forecasts)
+
+You can register to become a forecaster [here](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). 
 
 ```{r load-data}
 # load all data ----------------------------------------------------------------
