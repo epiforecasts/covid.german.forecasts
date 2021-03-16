@@ -13,7 +13,7 @@ options("golem.app.prod" = TRUE)
 if (!dir.exists("rt-crowd-forecast")) {
   submission_date <- readRDS("data-raw/submission_date.rds")
 } else {
-  submission_date <- floor_date(Sys.Date(), unit = "week", day)
+  submission_date <- floor_date(Sys.Date(), unit = "week", week_start = 1)
 }
 first_forecast_date <- as.character(as.Date(submission_date) - 16)
 
@@ -23,11 +23,11 @@ if (dir.exists("rt-forecast")) {
   obs <- fread(
     paste0("rt-forecast/data/summary/cases/", submission_date, "/rt.csv")
     ) %>%
-    rename(value = median, target_end_date = date) %>%
+    rename(value = median, target_end_date = date, location_name = region) %>%
     mutate(target_type = "case", target_end_date = as.Date(target_end_date)) %>%
     filter(target_end_date <= (as.Date(first_forecast_date) + 7 * 6)) %>%
-    filter(region %in% c("Poland", "Germany")) %>%
-    arrange(region, target_type, target_end_date)
+    filter(location_name %in% c("Poland", "Germany")) %>%
+    arrange(location_name, target_type, target_end_date)
 
   fwrite(obs, "rt-crowd-forecast/external-ressources/observations.csv")
 } else {
@@ -36,13 +36,12 @@ if (dir.exists("rt-forecast")) {
 
 run_app(
   data = obs,
-  selection_vars = c("region"),
+  selection_vars = c("location_name"),
   first_forecast_date = first_forecast_date,
   submission_date = submission_date,
   horizons = 7,
   horizon_interval = 7,
   path_service_account_json = ".secrets/crowd-forecast-app-c98ca2164f6c-service-account-token.json",
-  google_account_mail = "epiforecasts@gmail.com",
   force_increasing_uncertainty = FALSE,
   default_distribution = "normal",
   forecast_sheet_id = "1g4OBCcDGHn_li01R8xbZ4PFNKQmV-SHSXFlv2Qv79Ks",
