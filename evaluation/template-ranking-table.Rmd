@@ -17,7 +17,8 @@
 cat("\n\n##", tabtitle, "\n\n")
 
 df <- filter_df(data, filter_list)
-table <- eval_forecasts(df, summarise_by = summarise_by)
+table <- eval_forecasts(df, summarise_by = summarise_by, 
+                        compute_relative_skill = TRUE)
 
 
 if ("horizon" %in% colnames(table)) {
