@@ -1,19 +1,20 @@
-# Comparing human and computer forecasts of Covid-19 case and death forecasts in Germany and Poland
-
-> [name=sam]
-> Nikos can you read my comments and responses to your comments then clean the comments out of the draft? Lets move to using the higlight comments available in the viewer tool.
+# Evaluating crowd sourced forecasts of Covid-19 against epidemiological model forecasts in Germany and Poland
 
 *Nikos Bosse\*, Sam Abbott\*, and Sebastian Funk*
 
-*\* contributed unequally*
+*\* contributed unequally*\*\*
+
+\*\* *did they?*
 
 Target journal: elife
+
 Target completion of first draft: 26/03/2021
+
 Target preprint date: 14/04/2021
 
 ## Abstract
 
-**Background**
+**Background** 
 
 **Methods**
 
@@ -35,7 +36,9 @@ In this work, we evaluate two constrasting forecasting approaches that simplify 
 
 ### Data sources
 
-Data on test positive cases and deaths linked to Covid-19 were provided by the organisers of the German and Polish Forecast Hub [CITATION]. For the first half of the evaluation period (XX to XX) data came from the [ECDC](https://www.ecdc.europa.eu/en/covid-19/data). When the ECDC stopped providing daily data updates, the data source was switched to numbers provided by the Robert Koch Institute (RKI) [CITATION] for German data and XX for Polish data. The data is subject to reporting artifacts (such as a retrospective case reporting in Poland on the 24th November [CITATION]), and changes in reporting and testing regimes. 
+Data on test positive cases and deaths linked to Covid-19 were provided by the organisers of the German and Polish forecast hub (P/L hub) (cite German/Poland hub). For the first half of the evaluation period (XX to XX) these data were sourced from the European Centre for Disease Control(ECDC) (cite ECDC data) with data then being sourced frok the Robert Koch Institute (RKI) for the remainder of the submission period. These data are subject to reporting artefacts (such as a retrospective case reporting in Poland on the 24th November (cite artefacts)), changes in reporting over time and variation in testing regimes.
+
+Linelist data used to inform the delay from symptom onset to test postive case report or death in the model based forecasts was sourced from (cite public linelist) with data available up to June (check exact date). Population data at the national and state level in Germany and Poland used in the model based forecasts was sourced from (source for population data). 
  
 ### Forecasts
 
@@ -61,43 +64,17 @@ These were a renewal equation based model that estimates the effective reproduct
 
 #### Crowd forecast
 
-##### General outline
-
-The [`EpiExpert`](https://cmmid-lshtm.shinyapps.io/crowd-forecast/) model is an ensemble of crowd opinion.
-
-> [name=sam] I would suggest describing the model without a random name and then saying here after (and in official submissions) as `EpiExpert`.
-
-##### Contributors
-
-Participants were recruited mostly within the Centre of Mathematical Modeling of Infectious Diseases within the London School of Hygiene and Tropical Medicine, but participants were also invited personnaly or via social media to submit predictions. Recruiting participants was one of the major challenges of this crowd-forecasting effort. In the beginning we often only had about three respondents, the average number of participants was X. 
-> [name=nikosbosse] 
-> - Maybe we want to actually have a figure that shows the number of participants over time? scoringutils has one :)
-> - maybe we just omit the expert and non-expert thing here?  
-
-> [name=sam] Yes but I would put it in the SI. No discussion of challenges in the methods that is for discussion. Number of respondents etc to results. 
+Crowd forecasts were formed as an ensemble of crowd opinion. Participants were recruited mostly within the Centre of Mathematical Modeling of Infectious Diseases within the London School of Hygiene and Tropical Medicine, but participants were also invited personally or via social media to submit predictions. 
 
 ##### Collection
 
-Participants were asked to make forecasts using a [shiny application](https://cmmid-lshtm.shinyapps.io/crowd-forecast/). In the application they could select a predictive distribution (the default was log-normal) and adjust the median and the width of the uncertainty by either dragging points or providing numerical values. The baseline shown was a repetition of the last known observation with some constant uncertainty around it based on changes observed in the data in the previous four weeks. After noticing some forecasters keeping the uncertainty constant, we forced participants to increase uncertainty with increasing forecast horizon. Users could toggle between a logarithmic and linear view and could access some additional information provided by [ourworldindata](https://ourworldindata.org) such as information about case fatality rates or the number of tests performed. 
+Participants were asked to make forecasts using a web application (https://cmmid-lshtm.shinyapps.io/crowd-forecast/) built using the shiny R package (cite shiny) and available in the `crowdforecaster` R package (cite crowdforecaster). In the application they could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with some constant uncertainty around it based on changes observed in the data in the previous four weeks. We required that participants submitted forecasts with uncertainty that increased over time. Our interface also allowed users to view the observed data, and their forecasts, using a log scale and presented additional contextual COVID-19 data sourced from our world in data (cite ourworldindata). These data included notifications of both test positive COVID-19 cases and COVID-19 linked deaths, case fatality rates and the number of COVID-19 tests though the availability of this data evolved over the study period. 
+
 
 ##### Processing
 
-- we only kept the latest forecast if someone submitted multiple times
-- we removed information about the exact time of the forecast
-- We used the predictive distribution to obtain a set of 23 quantiles. 
+Forecasts were downloaded, cleaned and processed every week for submission. If a forecaster had submitted multiple predictions for a single target, only the latest submission was kept. Some personal information (like the exact time of the forecast) was removed. Information on the chosen distribution as well as the parameters for median and width were used to obtain a set of 23 quantiles from that distribution. Forecasts from all eligible forecasters were then aggregated using an unweighted quantile-wise mean. In the beginning, inclusion was decided based on the authors' ad-hoc assessment of the validitiy of the forecast submission. Almost all forecasts were kept if they weren't clearly a result of someone experimenting with the app. From XX we based inclusion on the criterion that a forecaster submitted forecasts for at least two targets. 
 
-> [name=nikosbosse]
-> In the beginning we hadn't really thought about inclusion criteria so I sometimes randomly kicked people out who looked like nut jobs? I guess we just agree I was a bad scientist and don't speak of this again? 
-
-> [name=sam] Ad-hoc inclusion criteria based on the authors assessment of the validitiy of the forecast submission (and discuss as limitation + further work).
-> 
-##### Ensembling 
-
-Forecasts were aggregated using a quantile-wise mean of all eligible forecasts. Forecasts were deemed eligible if at least two targets were predicted. 
-> [name=nikosbosse] could also think about comparing other ensemble techniques, but I guess it is a good idea to stick to what we have submitted for now? 
-> Maybe a reference to a source why we have used a mean ensemble?
-
-> [name=sam] I think I would put this in the further work and evaluted later? Then give a citation and justification for our choice here.
 
 ### Forecast submission
 
@@ -111,11 +88,12 @@ Forecasts are available here:
 
 
 ### Statistical analysis
+Forecasts were analysed by visual inspection as well formal model evaluation. Forecast submissions were visualised by forecast time horizon and compared to the ensemble of all forecasts from the German and Polish Forecast Hub. To evaluate model performance more formally we used the weighted interval score (wis) [@bracherEvaluatingEpidemicForecasts2021], as well as empirical coverage of the 50% and 90% prediction intervals. In order to obtain a model ranking, relative skill was assessed based on pairwise comparisons between all possible combinations of models. Scores were calculated using the `scoringutils` package [@scoringutils] in R. Dates with known reporting issues were excluded a priori from the evaluation. 
 
-- Forecast submissions were visualised by forecast time horizon and visually compared to the german/poland hub ensemble
-- Forecasts were assessed using CRPRS, relative skill (i.e pairwise), .... (@nikosbosse) dates with known reporting issues were excludede a priori (and discuss this being a limitation of computational models in discussion)
-- Summarised forecast scores are presented across different horions (focus on weeks 1 and 2 like German hub). Discuss outperformance at 4 week horizon with all 1 and 2 weeks repeated in the SI. Discuss performance in relation to the German/Poland hub ensemble.
-- Split forecast time period into different states (stable/unstable?) and report short term model performance. Pull out intervention dates in germany/poland which models did well/badly around these (we need to know the intervention dates to do this).
+- Summarised forecast scores are presented across different horions (focus on weeks 1 and 2 like German hub). 
+- Discuss outperformance at 4 week horizon with all 1 and 2 weeks repeated in the SI. Discuss performance in relation to the German/Poland hub ensemble.
+- Split forecast time period into different states (stable/unstable?) and report short term model performance. 
+- Pull out intervention dates in germany/poland which models did well/badly around these (we need to know the intervention dates to do this).
 
 ## Results
 
@@ -162,7 +140,7 @@ Forecasts are available here:
 
 - S: This work has robustly assessed the performance of both crowd and model based forecasts made in real-time over a period of X weeks and submitted to an independent research group for evaluation against other methods. 
 - S: We used proper scoring rules to evaluate our forecasts and considered a range of features in the observed data that may have impacted forecast performance. 
-- S: M
+- S: We used forecasts made in real-time for our evaluation rather than retrospective forecasts. This is important for two reasons. Firstly, notification data is subject to reporting artefacts (such as retrospective updates), changes in testing policy, and variation in reporting policy. Secondly, as our forecasts were registered with an independent research group we could not tune or alter our results inadvertantly post submission. This means that our findings reflect realistic real-time performance without any introducted bias. 
 - W: The sample size of expert forecasters was limited.
 
 **Strengths and weaknesses in the context of the literature**
@@ -172,10 +150,7 @@ Forecasts are available here:
 - Compare to US hub work (they had lots more data and many more models however there data source was very challenging and their models were all essentially black boxes to one degree or another making drawing conclusions difficult).
 - Compare to Germany hub work (similar as above + different focus). Mention prespecified which is good.
 - Compare to other model comparison efforts that don't include crowd forecasting.
-- Compare to other crowd forecasting efforts (@nikosbosse (you mean like Metaculus etc?))).
-
-> [name=Sam]
-> Yes any example you fancy that is vaguely on topic. The obvious ones that occur to me are the Delphi influenza project and the various binary prediction projects. Please delete once read and clean up your comment ;)
+- Compare to other crowd forecasting efforts. Examples to include: Delphi (as most comparable) and then binary prediction projects.
 
 **Future work**
 
