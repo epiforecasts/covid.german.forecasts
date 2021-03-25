@@ -1,0 +1,213 @@
+---
+title: "Analysis paper"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(covid.german.forecasts)
+library(here)
+library(magrittr)
+library(scoringutils)
+library(knitr)
+library(kableExtra)
+library(data.table)
+library(ggplot2)
+
+# load and set up data
+cases <- combined_data[target_type == "case" & 
+                         as.Date(forecast_date) %in% forecast_dates$cases]
+deaths <- combined_data[target_type == "death" & 
+                         as.Date(forecast_date) %in% forecast_dates$deaths]
+data <- rbindlist(list(cases, deaths))
+```
+
+## Figure with 2 week ahead forecasts and scores
+
+-[x] create plots
+-[x] combine plots into one
+-[ ] shade dates that are excluded in scores
+-[ ] maybe add density plot on the y axis
+-[ ] maybe use mean scores ratio instead of WIS for plot with score over time
+
+### Forecasts vs. truth data
+```{r}
+df <- combined_data[as.Date(forecast_date) %in% forecast_dates$unfiltered &
+                      grepl("2", target) & 
+                      quantile %in% c(0.025, 0.25, 0.75, 0.975)]
+             
+df <- dcast(df, ... ~ quantile, value.var = "prediction")
+
+df %>%
+  ggplot(aes(y = true_value, x = target_end_date)) + 
+  geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
+                 size = 1.5,
+                 alpha = 0.4,
+                 position = position_dodge(width = 3)) + 
+  geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = model), 
+                 size = 1.5,
+                 alpha = 0.8,
+                 position = position_dodge(width = 3)) + 
+  labs(y = "value", x = "date") + 
+  geom_point() + 
+  geom_line() + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") + 
+  theme(legend.position = "bottom")
+
+ggsave(here("analysis", "plots", "truth-and-2-wk-ahead.png"))
+
+```
+
+
+### plot with interval score
+
+```{r}
+# plot with scores over time ---------------------------------------------------
+scores_target_forecastdate <- eval_forecasts(
+  data = data[grepl("2", target)],
+  summarise_by = c("model", "location_name", "target_type", "forecast_date"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)
+
+scores_target_forecastdate  %>%
+  ggplot(aes(x = as.Date(forecast_date), y = interval_score, colour = model)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") +
+  theme(legend.position = "bottom") +
+  labs(y = "weighted interval score", x = "date") 
+
+ggsave(here("analysis", "plots", "wis-over-time.png"))
+```
+
+### same plot with mean score ratio
+not sure why there is a whole in the plot...
+```{r}
+scores_target_forecastdate  %>%
+  ggplot(aes(x = as.Date(forecast_date), y = scaled_rel_skill, colour = model)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") +
+  theme(legend.position = "bottom") +
+  labs(y = "mean score ratio", x = "date") 
+```
+
+---
+
+## Summary table with scores
+-[] create summary table for scores visualised before
+-[] exclude Christmas period
+-[] use whole period for cases
+-[] use only period for which we have all models for deaths
+-[] also add 50% and 90% coverage in table
+
+
+```{r}
+# create helper function to make table
+make_score_table <- function(scores) {
+  scores <- as.data.table(scores)
+  setnames(scores, 
+           old = c("target_type", "interval_score", "aem", "relative_skill", "scaled_rel_skill"), 
+           new = c("target", "WIS", "absolute error", "rel. skill", "scaled rel. skill"))
+  
+  table <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")][
+    order(target, `scaled rel. skill`)
+  ] %>%
+    kable(format = "markdown")
+  return(table)
+}
+```
+
+
+### 2 weeks ahead
+```{r }
+# scores by target type for 2 week ahead forecasts
+eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) %>%
+  make_score_table()
+```
+
+### 4 weeks ahead
+```{r }
+# scores by target type for 4 week ahead forecasts
+eval_forecasts(
+  data[grepl("4", target)], 
+  summarise_by = c("model", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) %>%
+  make_score_table()
+
+```
+
+
+---
+
+## Look more closely at relative skill
+
+---
+
+## Analyse distribution of model rankings
+- one possibility would be to take the ridge plot from Cramer et al from the Hub
+
+---
+
+## Look at WIS contributions
+```{r}
+scores_target <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "target_type"), 
+  compute_relative_skill = TRUE
+) 
+
+wis_components(scores_target, 
+               facet_formula = ~ target_type, 
+               scales = "free_x", 
+               x_text_angle = 0) + 
+  theme(legend.position = "bottom") + 
+  coord_flip() + 
+  labs(title = "Components of the weighted interval score for 2-week ahead forecasts", 
+       x = NULL)
+
+ggsave(here("analysis", "plots", "wis-components.png"))
+```
+
+---
+
+## Look more closely at interventions and change points
+
+---
+
+## Look at the effect of data exclusions
+- look at first period, second period etc
+```{r, eval = FALSE}
+scores <- list()
+# scores for restricted data set
+scores_full <- eval_forecasts(data, 
+                              summarise_by = c("model", "target_type", "target"), 
+                              compute_relative_skill = TRUE, 
+                              baseline = "Baseline")
+
+scores[["full"]] <- 
+  scores_full[, .(model, target_type, scaled_rel_skill, interval_score, target,
+                  scenario = "full")]
+
+res <- rbindlist(scores)
+res %>%
+  ggplot(aes(x = scenario, y = scaled_rel_skill, color = model, group = model)) + 
+  geom_point() + 
+  facet_wrap( ~ target, scales = "free", ncol = 2) + 
+  theme(legend.position = "bottom")
+```
+
+---
+
+## Look more closely at calibration and sharpness

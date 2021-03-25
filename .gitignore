@@ -10,4 +10,5 @@ crowd-forecast/data-raw
 Rplots.pdf
 crowd-forecast/data/
 rt-crowd-forecast/data-raw
-analysis/epiforecasts-*
+data-raw/epiforecasts-*
+data-raw/KIT*

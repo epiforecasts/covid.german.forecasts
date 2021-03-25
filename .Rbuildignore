@@ -11,3 +11,4 @@
 ^Dockerfile$
 ^\.secrets$
 ^Rplots\.pdf$
+^analysis

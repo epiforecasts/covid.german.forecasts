@@ -50,7 +50,7 @@ dates_to_epiweek <- function(df){
 #' `epiweek`.
 #' @return A data frame grouped by week.
 #' @export
-#' @importFrom dplyr filter group_by summarise ungroup
+#' @importFrom dplyr filter group_by summarise ungroup select
 make_weekly <- function(inc) {
   inc_weekly <- inc %>%
     dates_to_epiweek() %>% 

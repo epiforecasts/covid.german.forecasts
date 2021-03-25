@@ -5,3 +5,27 @@
 ##' @name locations
 ##' @docType data
 "locations"
+
+##' Truth data used for the paper 
+##'
+##' @name locations
+##' @docType data
+"truth_data"
+
+##' Forecast data used for the paper 
+##'
+##' @name locations
+##' @docType data
+"prediction_data"
+
+##' Combined forecast and truth data used for the paper 
+##'
+##' @name locations
+##' @docType data
+"combined_data"
+
+##' Forecast dates used for the paper 
+##'
+##' @name locations
+##' @docType data
+"forecast_dates"

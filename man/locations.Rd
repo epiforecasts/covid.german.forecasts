@@ -3,12 +3,32 @@
 \docType{data}
 \name{locations}
 \alias{locations}
+\alias{truth_data}
+\alias{prediction_data}
+\alias{combined_data}
+\alias{forecast_dates}
 \title{Location and Population Look Up for Germany and Poland}
 \format{
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 230 rows and 4 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 46736 rows and 9 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 42642 rows and 10 columns.
+
+An object of class \code{list} of length 6.
 }
 \usage{
 locations
+
+truth_data
+
+prediction_data
+
+combined_data
+
+forecast_dates
 }
 \description{
 Downloaded from https://github.com/KITmetricslab/covid19-forecast-hub-de
