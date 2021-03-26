@@ -24,11 +24,11 @@ data <- rbindlist(list(cases, deaths))
 
 ## Figure with 2 week ahead forecasts and scores
 
--[x] create plots
--[x] combine plots into one
--[ ] shade dates that are excluded in scores
--[ ] maybe add density plot on the y axis
--[ ] maybe use mean scores ratio instead of WIS for plot with score over time
+- [x] create plots
+- [x] combine plots into one
+- [ ] shade dates that are excluded in scores
+- [ ] maybe add density plot on the y axis
+- [ ] maybe use mean scores ratio instead of WIS for plot with score over time
 
 ### Forecasts vs. truth data
 ```{r}
@@ -58,7 +58,10 @@ df %>%
 ggsave(here("analysis", "plots", "truth-and-2-wk-ahead.png"))
 
 ```
-
+**What we learn from this plot**
+- severe overshooting for Renewal model
+- need to increase value for position dodge
+- reporting artifacts around christmas
 
 ### plot with interval score
 
@@ -83,8 +86,17 @@ scores_target_forecastdate  %>%
 ggsave(here("analysis", "plots", "wis-over-time.png"))
 ```
 
+**What we learn from this plot**
+- all models perform terribly around Christmas
+- the effect is much stronger in Germany than in Poland
+- these artifacts around Christmas hit Renewal hardest
+- in Germany scores are high in the beginning and the end, but it doesn't seem to correlate perfectly with the absolute value of the number of weekly cases
+
+**Further things we could look at**
+- maybe look at correlation between the number of weekly cases and the score?
+- look at scores for rising and falling parts of the epidemic separately
+
 ### same plot with mean score ratio
-not sure why there is a whole in the plot...
 ```{r}
 scores_target_forecastdate  %>%
   ggplot(aes(x = as.Date(forecast_date), y = scaled_rel_skill, colour = model)) + 
@@ -95,6 +107,13 @@ scores_target_forecastdate  %>%
   theme(legend.position = "bottom") +
   labs(y = "mean score ratio", x = "date") 
 ```
+
+**What we learn from this plot**
+- There is a gap in the plot where there shouldn't be a gap. Nikos is a bad Padawan and needs to look at this again. Need to think a minute about what we actually see here. It is not exactly the WIS of one model over the WIS of the baseline, but something slightly different
+- In German cases there are two spikes that I think would be interesting to look at
+- death forecasts look quite a lot messier than case forecasts
+
+
 
 ---
 
