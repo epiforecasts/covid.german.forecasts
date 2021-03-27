@@ -58,7 +58,9 @@ df %>%
 ggsave(here("analysis", "plots", "truth-and-2-wk-ahead.png"))
 
 ```
+
 **What we learn from this plot**
+
 - severe overshooting for Renewal model
 - need to increase value for position dodge
 - reporting artifacts around christmas
@@ -86,13 +88,16 @@ scores_target_forecastdate  %>%
 ggsave(here("analysis", "plots", "wis-over-time.png"))
 ```
 
+
 **What we learn from this plot**
+
 - all models perform terribly around Christmas
 - the effect is much stronger in Germany than in Poland
 - these artifacts around Christmas hit Renewal hardest
 - in Germany scores are high in the beginning and the end, but it doesn't seem to correlate perfectly with the absolute value of the number of weekly cases
 
 **Further things we could look at**
+
 - maybe look at correlation between the number of weekly cases and the score?
 - look at scores for rising and falling parts of the epidemic separately
 
@@ -108,7 +113,9 @@ scores_target_forecastdate  %>%
   labs(y = "mean score ratio", x = "date") 
 ```
 
+
 **What we learn from this plot**
+
 - There is a gap in the plot where there shouldn't be a gap. Nikos is a bad Padawan and needs to look at this again. Need to think a minute about what we actually see here. It is not exactly the WIS of one model over the WIS of the baseline, but something slightly different
 - In German cases there are two spikes that I think would be interesting to look at
 - death forecasts look quite a lot messier than case forecasts
@@ -118,11 +125,12 @@ scores_target_forecastdate  %>%
 ---
 
 ## Summary table with scores
--[] create summary table for scores visualised before
--[] exclude Christmas period
--[] use whole period for cases
--[] use only period for which we have all models for deaths
--[] also add 50% and 90% coverage in table
+
+- [x] create summary table for scores visualised before
+- [x] exclude Christmas period
+- [x] use whole period for cases
+- [x] use only period for which we have all models for deaths
+- [] also add 50% and 90% coverage in table
 
 
 ```{r}
@@ -175,7 +183,48 @@ eval_forecasts(
 ---
 
 ## Analyse distribution of model rankings
+
 - one possibility would be to take the ridge plot from Cramer et al from the Hub
+- decide on whether to use rank or standardised rank
+
+```{r }
+# scores by target type for 4 week ahead forecasts
+scores <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "target_type", "location_name", "forecast_date")
+) 
+
+ranked_scores <- scores %>%
+  dplyr::mutate(forecast_date = as.Date(forecast_date)) %>%
+  dplyr::group_by(forecast_date, location_name, target_type) %>%
+  dplyr::mutate(num_forecasts = dplyr::n(), 
+                rank = rank(interval_score, ties.method = "average",
+                                           na.last = NA), 
+                standard_rank = round((1 - (rank - 1) / (num_forecasts - 1)) * 100)) %>%
+  dplyr::ungroup()
+
+library(ggridges)
+ggplot(ranked_scores, aes(y = model, x = standard_rank, 
+                          group = model, fill = model)) + 
+  ggridges::geom_density_ridges()
+
+ggplot(ranked_scores, aes(y = model, x = standard_rank, 
+                          group = model, fill = model)) + 
+  ggridges::geom_density_ridges() + 
+  facet_wrap(~ target_type)
+
+ggplot(ranked_scores, aes(y = model, x = standard_rank, 
+                          group = model, fill = model)) + 
+  ggridges::geom_density_ridges() + 
+  facet_wrap(location_name ~ target_type)
+
+```
+
+
+**what we learn from this plot**
+
+- bimodal distribution is interesting
+- maybe a ridge plot is not a good way of analysing this as values go from -50 to 150 on the plot? In reality, they should be between 0 and 100. Is there an option to adapt this? 
 
 ---
 
@@ -197,15 +246,35 @@ wis_components(scores_target,
        x = NULL)
 
 ggsave(here("analysis", "plots", "wis-components.png"))
+
+scores_target <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "location_name", "target_type"), 
+  compute_relative_skill = TRUE
+) 
+
+wis_components(scores_target, 
+               facet_formula = location_name ~ target_type, 
+               facet_wrap_or_grid = "grid",
+               scales = "free_x", 
+               x_text_angle = 0) + 
+  theme(legend.position = "bottom") + 
+  coord_flip() + 
+  labs(title = "Components of the weighted interval score for 2-week ahead forecasts", 
+       x = NULL) 
+  
 ```
 
 ---
 
 ## Look more closely at interventions and change points
 
+- one interesting point Johannes brought up is that scoring predictions aroud change points may not even be such a good idea. The reason is that if you have a modle that always predicts a change point, theat model will do very well according to this metric even if it doesn't add much value. For example, we would expect the baseline model to do very well according to this change point metric
+
 ---
 
 ## Look at the effect of data exclusions
+
 - look at first period, second period etc
 ```{r, eval = FALSE}
 scores <- list()
@@ -230,3 +299,30 @@ res %>%
 ---
 
 ## Look more closely at calibration and sharpness
+
+```{r, eval = FALSE}
+scores_target <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "target_type", "range", "quantile"), 
+  compute_relative_skill = TRUE
+) 
+
+interval_coverage(scores_target, 
+                  facet_formula = ~ target_type)
+
+scores_target <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "location_name", "target_type", "range", "quantile"), 
+  compute_relative_skill = TRUE
+) 
+
+interval_coverage(scores_target, 
+                  facet_formula = location_name ~ target_type, 
+                  facet_wrap_or_grid = "grid")
+
+```
+
+**What we learn from this plot**
+
+- models are widely overconfident in their predictive ability
+- more overconfidence with cases than deaths
