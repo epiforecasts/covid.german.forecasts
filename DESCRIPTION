@@ -28,10 +28,11 @@ Imports:
     lubridate,
     attempt,
     purrr,
-    tidyr, 
+    tidyr,
     googledrive,
     googlesheets4,
-    here
+    here,
+    grates
 Suggests:
     covidregionaldata,
     future,
