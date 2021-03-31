@@ -15,21 +15,23 @@ format_forecast(
 )
 }
 \arguments{
-\item{forecasts}{A data frame of forecasts containing the following variables:
-\code{date}, \code{value}, \code{region}, and \code{sample}.}
+\item{forecasts}{A data frame of forecasts containing
+the following variables: \code{date}, \code{value}, \code{region}, and \code{sample}.}
 
-\item{locations}{A data frame data dictionary linking locations with location names.
-Must contain: \code{location} and \code{location_name}}
+\item{locations}{A data frame data dictionary linking locations
+with location names. Must contain: \code{location} and \code{location_name}}
 
-\item{cumulative}{A data frame but defaults to NULL. Previous cumulative case
-counts. Must contain: \code{target_end_date}, \code{location}, and \code{value}.}
+\item{cumulative}{A data frame but defaults to NULL.
+Previous cumulative case counts. Must contain: \code{target_end_date},
+\code{location}, and \code{value}.}
 
 \item{forecast_date}{A date indicating when the forecast took place.}
 
 \item{submission_date}{A date indicating the target submission date.}
 
-\item{CrI_samples}{A fraction of the posterior samples to include. Defaults to 1.
-Can be helpful for models that have more uncertainty than is reasonable.}
+\item{CrI_samples}{A fraction of the posterior samples to include.
+Defaults to 1. Can be helpful for models that have more uncertainty
+than is reasonable.}
 
 \item{target_value}{Character string indicating the target value name.}
 }
