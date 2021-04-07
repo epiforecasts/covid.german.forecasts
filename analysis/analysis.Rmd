@@ -157,30 +157,52 @@ make_score_table <- function(scores) {
 ### 2 weeks ahead
 ```{r }
 # scores by target type for 2 week ahead forecasts
+
+coverage <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "target_type", "range"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)[range %in% c(50, 90), 
+                   .(model, target_type, coverage, range)] %>%
+  dcast(formula = ... ~ range, value.var = "coverage")
+setnames(coverage, old = c("50", "90"), new = c("coverage 50%", "coverage 90%"))
+
 eval_forecasts(
   data[grepl("2", target)], 
   summarise_by = c("model", "target_type"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 ) %>%
+  merge(coverage, all.x = TRUE, by = c("model", "target_type")) %>%
   make_score_table()
 ```
 
 ### 4 weeks ahead
 ```{r }
 # scores by target type for 4 week ahead forecasts
+coverage <- eval_forecasts(
+  data[grepl("4", target)], 
+  summarise_by = c("model", "target_type", "range"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)[range %in% c(50, 90), 
+                   .(model, target_type, coverage, range)] %>%
+  dcast(formula = ... ~ range, value.var = "coverage")
+setnames(coverage, old = c("50", "90"), new = c("coverage 50%", "coverage 90%"))
+
 eval_forecasts(
   data[grepl("4", target)], 
   summarise_by = c("model", "target_type"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 ) %>%
+  merge(coverage, all.x = TRUE, by = c("model", "target_type")) %>%
   make_score_table()
 
 ```
 
 **To do**
-- [] also add 50% and 90% coverage in table
 - [] make a final decision (and document it somewhere) about how we want to exclude the Christmas period. Right now we are excluding forecast dates, but do not restrict target end dates in any way. 
 
 **Further things to look at**
@@ -321,7 +343,7 @@ res %>%
 scores_target <- eval_forecasts(
   data[grepl("2", target)], 
   summarise_by = c("model", "target_type", "range", "quantile"), 
-  compute_relative_skill = TRUE
+  compute_relative_skill = FALSE
 ) 
 
 interval_coverage(scores_target, 
@@ -330,7 +352,7 @@ interval_coverage(scores_target,
 scores_target <- eval_forecasts(
   data[grepl("2", target)], 
   summarise_by = c("model", "location_name", "target_type", "range", "quantile"), 
-  compute_relative_skill = TRUE
+  compute_relative_skill = FALSE
 ) 
 
 interval_coverage(scores_target, 
@@ -343,6 +365,106 @@ interval_coverage(scores_target,
 
 - models are widely overconfident in their predictive ability
 - more overconfidence with cases than deaths
+
+---
+
+## Look at scores based on log predictions and log truth values
+```{r, eval = TRUE}
+
+log_data <- copy(data)[, `:=`(true_value = log(true_value), 
+                              prediction = log(prediction))]
+  
+```
+
+### Table 2 weeks ahead
+```{r, eval = TRUE}
+log_scores_target_2 <- eval_forecasts(
+  log_data[grepl("2", target)], 
+  summarise_by = c("model", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) 
+
+log_scores_target_2 %>%
+  make_score_table()
+```
+
+
+### Table 2 weeks ahead
+```{r, eval = TRUE}
+log_scores_target_4 <- eval_forecasts(
+  log_data[grepl("4", target)], 
+  summarise_by = c("model", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) 
+
+log_scores_target_4 %>%
+  make_score_table()
+```
+
+
+**What we learn**
+- results and rankings change if we look at scores of log values
+- this makes sense as presumably outliers aren't punished so harshly (inconsistent? models with large outliers are treated more leniently)
+
+### scores for logged values over time
+```{r, eval = TRUE}
+log_scores_target_forecast_date_2 <- eval_forecasts(
+  log_data[grepl("2", target)], 
+  summarise_by = c("model", "target_type", "forecast_date", "location_name"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) 
+
+rel_skill_time_2 <- log_scores_target_forecast_date_2  %>%
+  ggplot(aes(x = as.Date(forecast_date), y = scaled_rel_skill, colour = model)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") +
+  theme(legend.position = "bottom") +
+  labs(y = "relative skill", x = "date") 
+
+rel_skill_time_2
+```
+
+**what we learn**
+- nothing? 
+- it looks slightly different, but similar and also similarly confusing
+
+### WIS components for scores of logged values
+```{r, eval = TRUE}
+log_scores_target_location_2 <- eval_forecasts(
+  log_data[grepl("2", target)], 
+  summarise_by = c("model", "target_type", "location_name"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) 
+
+wis_components(log_scores_target_location_2, 
+               facet_formula = location_name ~ target_type, 
+               facet_wrap_or_grid = "grid",
+               scales = "free_x", 
+               x_text_angle = 0) + 
+  theme(legend.position = "bottom") + 
+  coord_flip() + 
+  labs(title = "Components of the weighted interval score for 2-week ahead forecasts", 
+       x = NULL) 
+```
+**what we learn**
+
+- the Renewal model benefits from this scoring scheme (except for Polish deaths)
+- interesting (confusing?) that the Baseline model is now the worst model for Polish cases. What's the mechanism behind that? is it just bad on average, but has no outliers?
+
+**To do**
+
+- at least for me (Nikos): get an intuition for what actually changes when you look at scores of logged predictions and what does it imply. What kind of model benefits from one or the other evaluation scheme? 
+
+Thoughts about what changes when you look at logged predictions
+
+- models with outliers benefit
+- do models lose out that aren't great, but have no outliers? 
 
 
 ## Further interesting things
