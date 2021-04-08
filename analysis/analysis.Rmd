@@ -46,7 +46,7 @@ epi_classification <- function(actual_value, first_diff, threshold = 0.05) {
 
 truth[, first_diff := c(NA, diff(true_value)), 
       by = c("location_name", "target_type")]
-truth[, epi_class := epi_classification(true_value, first_diff), 
+truth[, epi_class := epi_classification(true_value, shift(first_diff, -1)), 
       by = c("location_name", "target_type")]
 truth[, shift_date := shift(target_end_date, -1), 
       by = c("location_name", "target_type")]
@@ -54,7 +54,7 @@ truth[, shift_date := shift(target_end_date, -1),
 #       by = c("location_name", "target_type")]
 
 ggplot(truth, aes(x = target_end_date)) + 
-  geom_rect(aes(xmin = target_end_date, xmax = shift_date, ymin = -Inf, ymax = Inf, fill = factor(epi_class)), alpha = 0.2) +
+  geom_rect(aes(xmin = target_end_date, xmax = shift_date, ymin = -Inf, ymax = Inf, fill = epi_class), alpha = 0.2) +
   geom_line(aes(y = true_value, color = "truth")) + 
   geom_line(aes(y = first_diff, color = "first diff")) +
   labs(y = "value", x = "date") + 
@@ -246,6 +246,7 @@ eval_forecasts(
 ```
 
 **To do**
+
 - [] make a final decision (and document it somewhere) about how we want to exclude the Christmas period. Right now we are excluding forecast dates, but do not restrict target end dates in any way. 
 
 **Further things to look at**
@@ -295,6 +296,24 @@ ggplot(ranked_scores, aes(y = model, x = rank,
 
 ```
 
+### Model rankings in terms of scaled relative skill 
+
+```{r }
+# scores by target type for 4 week ahead forecasts
+scores <- eval_forecasts(
+  data[grepl("2", target)], 
+  summarise_by = c("model", "target_type", "location_name", "forecast_date"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)[model != "Baseline"] 
+
+ggplot(scores, aes(y = model, x = (scaled_rel_skill), 
+                          group = model, fill = model)) + 
+  ggridges::geom_density_ridges() + 
+  geom_vline(aes(xintercept = 1), alpha = 0.4) + 
+  facet_wrap(location_name ~ target_type, scales = "free_x")
+
+```
 
 **what we learn from this plot**
 
