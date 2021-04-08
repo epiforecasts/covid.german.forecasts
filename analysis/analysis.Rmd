@@ -36,7 +36,7 @@ df <- combined_data[as.Date(forecast_date) %in% forecast_dates$unfiltered &
 df <- dcast(df, ... ~ quantile, value.var = "prediction")
 
 truth_vs_forecast_2 <- df %>%
-  ggplot(aes(y = true_value, x = target_end_date)) + 
+  ggplot(aes(y = true_value, x = target_end_date, colour = model, fill = model)) + 
   geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
                  size = 1.5,
                  alpha = 0.4,
@@ -83,7 +83,7 @@ ggsave(here("analysis", "plots", "wis-over-time.png"),
 ```{r}
 ### same plot with mean score ratio
 rel_skill_time_2 <- scores_target_forecastdate  %>%
-  ggplot(aes(x = as.Date(forecast_date), y = scaled_rel_skill, colour = model)) + 
+  ggplot(aes(x = as.Date(forecast_date), y = scaled_rel_skill, fill = model, colour = model)) + 
   geom_line() + 
   geom_point() + 
   theme_light() + 
@@ -95,9 +95,10 @@ ggsave(here("analysis", "plots", "wis-over-time.png"),
        plot = rel_skill_time_2)
 ```
 
-```{r fig.height=10, fig.width=20}
+```{r fig.height=16, fig.width=8}
 # glue two plots together
-truth_vs_forecast_2 + rel_skill_time_2
+truth_vs_forecast_2 / rel_skill_time_2 + 
+  plot_layout(guides = "collect") & theme(legend.position = 'bottom') 
 ggsave(here("analysis", "plots", "figure-forecasts-2.png"))
 ```
 
@@ -261,6 +262,10 @@ ggplot(ranked_scores, aes(y = model, x = rank,
 **To do**
 
 - [ ] make plot nicer
+- [ ] maybe make this with relative skill instead
+- [ ] finish this todo list
+- [ ] maybe a density plot instead of a ridge plot? 
+
 
 
 
@@ -303,6 +308,10 @@ wis_components(scores_target,
        x = NULL) 
   
 ```
+
+**Todo**
+
+- [ ] have the second plot stratified by epidemic period
 
 ---
 
@@ -365,6 +374,13 @@ interval_coverage(scores_target,
 
 - models are widely overconfident in their predictive ability
 - more overconfidence with cases than deaths
+
+
+**Todo**
+
+- maybe make tihs a PIT plot
+- stratify by period
+
 
 ---
 
