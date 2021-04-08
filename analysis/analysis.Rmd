@@ -24,6 +24,48 @@ deaths <- combined_data[target_type == "death" &
 data <- rbindlist(list(cases, deaths))
 ```
 
+## Visualisation of data
+
+
+```{r fig.height=10, fig.width=15}
+df <- combined_data[as.Date(forecast_date) %in% forecast_dates$unfiltered &
+                      grepl("2", target) & 
+                      quantile %in% c(0.025, 0.25, 0.75, 0.975)]
+             
+truth <- dcast(df, ... ~ quantile, value.var = "prediction")[
+  , .(location_name, target_end_date, target_type, true_value)] %>%
+  unique()
+
+truth <- truth[order(location_name, target_type, target_end_date)]
+
+epi_classification <- function(actual_value, first_diff, threshold = 0.05) {
+  out <- ifelse(first_diff > 0, "rising", "falling")
+  out[abs(first_diff) < 0.05 * actual_value] <- "stable"
+  return(out)
+}
+
+truth[, first_diff := c(NA, diff(true_value)), 
+      by = c("location_name", "target_type")]
+truth[, epi_class := epi_classification(true_value, first_diff), 
+      by = c("location_name", "target_type")]
+truth[, shift_date := shift(target_end_date, -1), 
+      by = c("location_name", "target_type")]
+# truth[, second_diff := c(NA, diff(first_diff)), 
+#       by = c("location_name", "target_type")]
+
+ggplot(truth, aes(x = target_end_date)) + 
+  geom_rect(aes(xmin = target_end_date, xmax = shift_date, ymin = -Inf, ymax = Inf, fill = factor(epi_class)), alpha = 0.2) +
+  geom_line(aes(y = true_value, color = "truth")) + 
+  geom_line(aes(y = first_diff, color = "first diff")) +
+  labs(y = "value", x = "date") + 
+  theme_light() + 
+  facet_grid(target_type ~ location_name, scales = "free") + 
+  theme(legend.position = "bottom")
+
+```
+
+
+
 ## Visualisation of forecasts and scores
 
 This includes all available dates for the forecast plot. For the score plot it includes the full set for cases, and a restricted set for deaths. The restricted set is all forecasts from "2020-12-07" on to make sure that we have a full set of forecasts for deaths. The plot also includes the Christmas period - it probably makes sense to gray that out. 
