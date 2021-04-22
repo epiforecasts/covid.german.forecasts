@@ -11,13 +11,13 @@
 \format{
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 230 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 242 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 48576 rows and 9 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 52440 rows and 9 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 44478 rows and 10 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 49170 rows and 10 columns.
 
-An object of class \code{list} of length 6.
+An object of class \code{list} of length 7.
 }
 \usage{
 locations

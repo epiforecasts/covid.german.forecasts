@@ -137,4 +137,7 @@ forecast_dates[["second_period"]] <-
 forecast_dates[["deaths"]] <- 
   forecast_dates$cases[as.Date(forecast_dates$cases) >= "2020-12-07"]
 
+forecast_dates[["christmas"]] <- 
+  seq.Date(as.Date("2020-12-19"), as.Date("2021-01-07"), "week")
+
 usethis::use_data(forecast_dates, overwrite = TRUE)
