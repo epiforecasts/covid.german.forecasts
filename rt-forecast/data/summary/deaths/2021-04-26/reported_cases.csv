@@ -1,5 +1,4 @@
 region,date,confirm
-Baden-Wurttemberg,2021-02-02,118
 Baden-Wurttemberg,2021-02-03,46
 Baden-Wurttemberg,2021-02-04,48
 Baden-Wurttemberg,2021-02-05,66
@@ -83,7 +82,7 @@ Baden-Wurttemberg,2021-04-23,14
 Baden-Wurttemberg,2021-04-24,41
 Baden-Wurttemberg,2021-04-25,10
 Baden-Wurttemberg,2021-04-26,15
-Bavaria,2021-02-02,102
+Baden-Wurttemberg,2021-04-27,30
 Bavaria,2021-02-03,271
 Bavaria,2021-02-04,128
 Bavaria,2021-02-05,128
@@ -167,7 +166,7 @@ Bavaria,2021-04-23,51
 Bavaria,2021-04-24,40
 Bavaria,2021-04-25,11
 Bavaria,2021-04-26,7
-Berlin,2021-02-02,17
+Bavaria,2021-04-27,55
 Berlin,2021-02-03,33
 Berlin,2021-02-04,48
 Berlin,2021-02-05,44
@@ -251,7 +250,7 @@ Berlin,2021-04-23,6
 Berlin,2021-04-24,5
 Berlin,2021-04-25,7
 Berlin,2021-04-26,1
-Brandenburg,2021-02-02,70
+Berlin,2021-04-27,5
 Brandenburg,2021-02-03,88
 Brandenburg,2021-02-04,58
 Brandenburg,2021-02-05,32
@@ -335,7 +334,7 @@ Brandenburg,2021-04-23,9
 Brandenburg,2021-04-24,5
 Brandenburg,2021-04-25,5
 Brandenburg,2021-04-26,2
-Bremen,2021-02-02,5
+Brandenburg,2021-04-27,14
 Bremen,2021-02-03,5
 Bremen,2021-02-04,5
 Bremen,2021-02-05,2
@@ -419,7 +418,7 @@ Bremen,2021-04-23,0
 Bremen,2021-04-24,1
 Bremen,2021-04-25,0
 Bremen,2021-04-26,2
-Dolnośląskie,2021-02-02,0
+Bremen,2021-04-27,1
 Dolnośląskie,2021-02-03,23
 Dolnośląskie,2021-02-04,25
 Dolnośląskie,2021-02-05,7
@@ -504,7 +503,7 @@ Dolnośląskie,2021-04-24,37
 Dolnośląskie,2021-04-25,33
 Dolnośląskie,2021-04-26,12
 Dolnośląskie,2021-04-27,4
-Germany,2021-02-02,861
+Dolnośląskie,2021-04-28,33
 Germany,2021-02-03,975
 Germany,2021-02-04,786
 Germany,2021-02-05,855
@@ -588,7 +587,7 @@ Germany,2021-04-23,265
 Germany,2021-04-24,286
 Germany,2021-04-25,120
 Germany,2021-04-26,60
-Hamburg,2021-02-02,1
+Germany,2021-04-27,344
 Hamburg,2021-02-03,0
 Hamburg,2021-02-04,23
 Hamburg,2021-02-05,23
@@ -672,7 +671,7 @@ Hamburg,2021-04-23,5
 Hamburg,2021-04-24,9
 Hamburg,2021-04-25,5
 Hamburg,2021-04-26,0
-Hesse,2021-02-02,84
+Hamburg,2021-04-27,6
 Hesse,2021-02-03,63
 Hesse,2021-02-04,61
 Hesse,2021-02-05,64
@@ -756,7 +755,7 @@ Hesse,2021-04-23,24
 Hesse,2021-04-24,18
 Hesse,2021-04-25,9
 Hesse,2021-04-26,12
-Kujawsko-Pomorskie,2021-02-02,3
+Hesse,2021-04-27,48
 Kujawsko-Pomorskie,2021-02-03,22
 Kujawsko-Pomorskie,2021-02-04,19
 Kujawsko-Pomorskie,2021-02-05,52
@@ -841,7 +840,7 @@ Kujawsko-Pomorskie,2021-04-24,22
 Kujawsko-Pomorskie,2021-04-25,21
 Kujawsko-Pomorskie,2021-04-26,1
 Kujawsko-Pomorskie,2021-04-27,5
-Lower Saxony,2021-02-02,39
+Kujawsko-Pomorskie,2021-04-28,41
 Lower Saxony,2021-02-03,38
 Lower Saxony,2021-02-04,50
 Lower Saxony,2021-02-05,97
@@ -925,7 +924,7 @@ Lower Saxony,2021-04-23,25
 Lower Saxony,2021-04-24,15
 Lower Saxony,2021-04-25,15
 Lower Saxony,2021-04-26,1
-Lubelskie,2021-02-02,3
+Lower Saxony,2021-04-27,17
 Lubelskie,2021-02-03,19
 Lubelskie,2021-02-04,24
 Lubelskie,2021-02-05,44
@@ -1010,7 +1009,7 @@ Lubelskie,2021-04-24,24
 Lubelskie,2021-04-25,30
 Lubelskie,2021-04-26,1
 Lubelskie,2021-04-27,0
-Lubuskie,2021-02-02,0
+Lubelskie,2021-04-28,27
 Lubuskie,2021-02-03,2
 Lubuskie,2021-02-04,13
 Lubuskie,2021-02-05,16
@@ -1095,7 +1094,7 @@ Lubuskie,2021-04-24,23
 Lubuskie,2021-04-25,12
 Lubuskie,2021-04-26,3
 Lubuskie,2021-04-27,0
-Mazowieckie,2021-02-02,22
+Lubuskie,2021-04-28,7
 Mazowieckie,2021-02-03,44
 Mazowieckie,2021-02-04,93
 Mazowieckie,2021-02-05,91
@@ -1180,7 +1179,7 @@ Mazowieckie,2021-04-24,80
 Mazowieckie,2021-04-25,50
 Mazowieckie,2021-04-26,33
 Mazowieckie,2021-04-27,0
-Małopolskie,2021-02-02,0
+Mazowieckie,2021-04-28,34
 Małopolskie,2021-02-03,20
 Małopolskie,2021-02-04,28
 Małopolskie,2021-02-05,8
@@ -1265,7 +1264,7 @@ Małopolskie,2021-04-24,42
 Małopolskie,2021-04-25,34
 Małopolskie,2021-04-26,4
 Małopolskie,2021-04-27,6
-Mecklenburg-Vorpommern,2021-02-02,23
+Małopolskie,2021-04-28,61
 Mecklenburg-Vorpommern,2021-02-03,6
 Mecklenburg-Vorpommern,2021-02-04,26
 Mecklenburg-Vorpommern,2021-02-05,14
@@ -1349,7 +1348,7 @@ Mecklenburg-Vorpommern,2021-04-23,6
 Mecklenburg-Vorpommern,2021-04-24,6
 Mecklenburg-Vorpommern,2021-04-25,2
 Mecklenburg-Vorpommern,2021-04-26,3
-North Rhine-Westphalia,2021-02-02,149
+Mecklenburg-Vorpommern,2021-04-27,9
 North Rhine-Westphalia,2021-02-03,176
 North Rhine-Westphalia,2021-02-04,110
 North Rhine-Westphalia,2021-02-05,127
@@ -1433,7 +1432,7 @@ North Rhine-Westphalia,2021-04-23,43
 North Rhine-Westphalia,2021-04-24,42
 North Rhine-Westphalia,2021-04-25,17
 North Rhine-Westphalia,2021-04-26,6
-Opolskie,2021-02-02,0
+North Rhine-Westphalia,2021-04-27,63
 Opolskie,2021-02-03,8
 Opolskie,2021-02-04,6
 Opolskie,2021-02-05,8
@@ -1518,7 +1517,7 @@ Opolskie,2021-04-24,10
 Opolskie,2021-04-25,6
 Opolskie,2021-04-26,3
 Opolskie,2021-04-27,1
-Podkarpackie,2021-02-02,0
+Opolskie,2021-04-28,11
 Podkarpackie,2021-02-03,10
 Podkarpackie,2021-02-04,15
 Podkarpackie,2021-02-05,20
@@ -1603,7 +1602,7 @@ Podkarpackie,2021-04-24,30
 Podkarpackie,2021-04-25,31
 Podkarpackie,2021-04-26,19
 Podkarpackie,2021-04-27,1
-Podlaskie,2021-02-02,1
+Podkarpackie,2021-04-28,35
 Podlaskie,2021-02-03,2
 Podlaskie,2021-02-04,10
 Podlaskie,2021-02-05,16
@@ -1688,7 +1687,7 @@ Podlaskie,2021-04-24,6
 Podlaskie,2021-04-25,11
 Podlaskie,2021-04-26,10
 Podlaskie,2021-04-27,0
-Poland,2021-02-02,42
+Podlaskie,2021-04-28,12
 Poland,2021-02-03,253
 Poland,2021-02-04,421
 Poland,2021-02-05,444
@@ -1773,7 +1772,7 @@ Poland,2021-04-24,539
 Poland,2021-04-25,513
 Poland,2021-04-26,193
 Poland,2021-04-27,22
-Pomorskie,2021-02-02,0
+Poland,2021-04-28,460
 Pomorskie,2021-02-03,32
 Pomorskie,2021-02-04,20
 Pomorskie,2021-02-05,38
@@ -1858,7 +1857,7 @@ Pomorskie,2021-04-24,25
 Pomorskie,2021-04-25,28
 Pomorskie,2021-04-26,3
 Pomorskie,2021-04-27,0
-Rhineland-Palatinate,2021-02-02,42
+Pomorskie,2021-04-28,21
 Rhineland-Palatinate,2021-02-03,45
 Rhineland-Palatinate,2021-02-04,30
 Rhineland-Palatinate,2021-02-05,37
@@ -1942,7 +1941,7 @@ Rhineland-Palatinate,2021-04-23,15
 Rhineland-Palatinate,2021-04-24,9
 Rhineland-Palatinate,2021-04-25,1
 Rhineland-Palatinate,2021-04-26,1
-Saarland,2021-02-02,6
+Rhineland-Palatinate,2021-04-27,13
 Saarland,2021-02-03,9
 Saarland,2021-02-04,8
 Saarland,2021-02-05,6
@@ -2026,7 +2025,7 @@ Saarland,2021-04-23,1
 Saarland,2021-04-24,1
 Saarland,2021-04-25,1
 Saarland,2021-04-26,0
-Saxony,2021-02-02,78
+Saarland,2021-04-27,5
 Saxony,2021-02-03,102
 Saxony,2021-02-04,91
 Saxony,2021-02-05,99
@@ -2110,7 +2109,7 @@ Saxony,2021-04-23,33
 Saxony,2021-04-24,46
 Saxony,2021-04-25,24
 Saxony,2021-04-26,7
-Saxony-Anhalt,2021-02-02,61
+Saxony,2021-04-27,50
 Saxony-Anhalt,2021-02-03,36
 Saxony-Anhalt,2021-02-04,51
 Saxony-Anhalt,2021-02-05,62
@@ -2194,7 +2193,7 @@ Saxony-Anhalt,2021-04-23,14
 Saxony-Anhalt,2021-04-24,13
 Saxony-Anhalt,2021-04-25,8
 Saxony-Anhalt,2021-04-26,2
-Schleswig-Holstein,2021-02-02,29
+Saxony-Anhalt,2021-04-27,12
 Schleswig-Holstein,2021-02-03,27
 Schleswig-Holstein,2021-02-04,23
 Schleswig-Holstein,2021-02-05,18
@@ -2278,7 +2277,7 @@ Schleswig-Holstein,2021-04-23,6
 Schleswig-Holstein,2021-04-24,1
 Schleswig-Holstein,2021-04-25,0
 Schleswig-Holstein,2021-04-26,1
-Thuringia,2021-02-02,37
+Schleswig-Holstein,2021-04-27,5
 Thuringia,2021-02-03,30
 Thuringia,2021-02-04,26
 Thuringia,2021-02-05,36
@@ -2362,7 +2361,7 @@ Thuringia,2021-04-23,13
 Thuringia,2021-04-24,34
 Thuringia,2021-04-25,5
 Thuringia,2021-04-26,0
-Warmińsko-Mazurskie,2021-02-02,0
+Thuringia,2021-04-27,11
 Warmińsko-Mazurskie,2021-02-03,11
 Warmińsko-Mazurskie,2021-02-04,11
 Warmińsko-Mazurskie,2021-02-05,10
@@ -2447,7 +2446,7 @@ Warmińsko-Mazurskie,2021-04-24,13
 Warmińsko-Mazurskie,2021-04-25,15
 Warmińsko-Mazurskie,2021-04-26,0
 Warmińsko-Mazurskie,2021-04-27,0
-Wielkopolskie,2021-02-02,5
+Warmińsko-Mazurskie,2021-04-28,14
 Wielkopolskie,2021-02-03,9
 Wielkopolskie,2021-02-04,34
 Wielkopolskie,2021-02-05,42
@@ -2532,7 +2531,7 @@ Wielkopolskie,2021-04-24,42
 Wielkopolskie,2021-04-25,45
 Wielkopolskie,2021-04-26,36
 Wielkopolskie,2021-04-27,4
-Zachodniopomorskie,2021-02-02,3
+Wielkopolskie,2021-04-28,15
 Zachodniopomorskie,2021-02-03,14
 Zachodniopomorskie,2021-02-04,28
 Zachodniopomorskie,2021-02-05,21
@@ -2617,7 +2616,7 @@ Zachodniopomorskie,2021-04-24,26
 Zachodniopomorskie,2021-04-25,26
 Zachodniopomorskie,2021-04-26,19
 Zachodniopomorskie,2021-04-27,0
-Łódzkie,2021-02-02,0
+Zachodniopomorskie,2021-04-28,15
 Łódzkie,2021-02-03,18
 Łódzkie,2021-02-04,53
 Łódzkie,2021-02-05,28
@@ -2702,7 +2701,7 @@ Zachodniopomorskie,2021-04-27,0
 Łódzkie,2021-04-25,31
 Łódzkie,2021-04-26,19
 Łódzkie,2021-04-27,1
-Śląskie,2021-02-02,5
+Łódzkie,2021-04-28,29
 Śląskie,2021-02-03,18
 Śląskie,2021-02-04,33
 Śląskie,2021-02-05,26
@@ -2787,7 +2786,7 @@ Zachodniopomorskie,2021-04-27,0
 Śląskie,2021-04-25,133
 Śląskie,2021-04-26,27
 Śląskie,2021-04-27,0
-Świętokrzyskie,2021-02-02,0
+Śląskie,2021-04-28,76
 Świętokrzyskie,2021-02-03,1
 Świętokrzyskie,2021-02-04,9
 Świętokrzyskie,2021-02-05,17
@@ -2872,3 +2871,4 @@ Zachodniopomorskie,2021-04-27,0
 Świętokrzyskie,2021-04-25,7
 Świętokrzyskie,2021-04-26,3
 Świętokrzyskie,2021-04-27,0
+Świętokrzyskie,2021-04-28,29
