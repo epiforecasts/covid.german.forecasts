@@ -83,6 +83,19 @@ epitrend[, true_value := NULL]
 - [ ] look more closely into the stratification: do we want the current thing or do we want something else that has the outcome in it as well? One thing I thought was have another category: inflection or no inflection and also score that?
 - [ ] Talk to Johannes about whether we want to score log forecasts and log truth values instead. I for now removed that part for the following reasons: I currently don't have a good feeling for what it does. I'm somewhat hesitant that establishing a completely new way of scoring forecasts could be beyond the scope of this paper. Very happy to switch to it entirely if we agree it is the better metric, but not sure we are at that point yet. 
 
+## Visualsiation of daily data
+
+```{r}
+dailytruth_data %>%
+  dplyr::filter(target_end_date >= min(forecast_dates$full_hub_period), 
+                target_end_date <= max(forecast_dates$full_hub_period)) %>%
+  ggplot(aes(y = true_value, x = target_end_date)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_grid(target_type ~ location_name, scales = "free")
+
+ggsave(here("analysis", "plots", "daily_truth.png"))
+```
 
 ## Visualisation of 2 week ahead forecasts and scores
 
@@ -223,7 +236,7 @@ make_score_table <- function(scores) {
     as.list(rep(NA, ncol(scores))), 
     scores[5:9]
   )) %>%
-    kable(format = "markdown") %>%
+    kable() %>% #format = "markdown"
     kable_styling(bootstrap_options = "striped")
   return(table)
 }
@@ -243,14 +256,18 @@ coverage <- eval_forecasts(
                    .(model, target_type, coverage, range)] %>%
   dcast(formula = ... ~ range, value.var = "coverage")
 
-eval_forecasts(
+table <- eval_forecasts(
   data[grepl("2", target)], 
   summarise_by = c("model", "target_type"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 ) %>%
   merge(coverage, all.x = TRUE, by = c("model", "target_type")) %>%
-  make_score_table()
+  make_score_table() 
+
+
+save_kable(table, file = here("analysis", "plots", "table_scores_2_ahead.png"))
+
 ```
 
 *Table 1: Scores for 2 week ahead forecasts (excluding the 21st and 28th of December 2020, cut to three significant digits and rounded). Skill is the scaled relative skill, a measure of relative performance with respect to the baseline model. Sharpness, overprediction and underprediction together some up to the weighted interval score (WIS). Bias (between -1 and 1) represents the general average tendency of a model to over- or underpredict. 50% and 90%-coverage are the percentage of observed values that fell within the 50% and 90% prediction intervals of a model.*

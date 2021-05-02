@@ -88,6 +88,7 @@ usethis::use_data(prediction_data, overwrite = TRUE)
 # update truth data ------------------------------------------------------------
 source(here("data-raw", "update.R"))
 
+# weekly truth data
 weekly_cases <- fread(here("data-raw", "weekly-incident-cases.csv"))
 weekly_cases[, target_type := "case"]
 weekly_deaths <- fread(here("data-raw", "weekly-incident-deaths.csv"))
@@ -99,6 +100,20 @@ truth_data <- truth[, `:=` (location = NULL, epiweek = NULL,
 setnames(truth_data, old = "value", new = "true_value")
 
 usethis::use_data(truth_data, overwrite = TRUE)
+
+# daily truth data
+daily_cases <- fread(here("data-raw", "daily-incidence-cases.csv"))
+daily_cases[, target_type := "case"]
+daily_deaths <- fread(here("data-raw", "daily-incidence-deaths.csv"))
+daily_deaths[, target_type := "death"]
+dailytruth <- rbindlist(list(daily_cases, daily_deaths)) 
+dailytruth <- dailytruth[location_name %in% c("Germany", "Poland")]
+dailytruth_data <- dailytruth[, `:=` (location = NULL,
+                                      target_end_date = as.Date(date))]
+setnames(dailytruth_data, old = "value", new = "true_value")
+
+usethis::use_data(dailytruth_data, overwrite = TRUE)
+
 
 # combine data -----------------------------------------------------------------
 combined_data <- merge_pred_and_obs(

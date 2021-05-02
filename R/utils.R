@@ -170,7 +170,7 @@ globalVariables(
   c("cum_value", "day", "epiweek_full", "horizon", "location", "location_name",
     "locations", "n", "quantile", "region", "target", "target_end_date",
     "type", "value", ".", "primary", "secondary", "target_date", "variable", 
-    "epiyear", "year"
+    "epiyear", "year", "year_week"
   )
 )
 

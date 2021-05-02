@@ -12,6 +12,12 @@
 ##' @docType data
 "truth_data"
 
+##' Daily truth data used for the paper 
+##'
+##' @name locations
+##' @docType data
+"dailytruth_data"
+
 ##' Forecast data used for the paper 
 ##'
 ##' @name locations
