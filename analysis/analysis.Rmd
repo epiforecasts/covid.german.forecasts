@@ -17,6 +17,7 @@ library(ggplot2)
 library(ggridges)
 library(RColorBrewer)
 library(patchwork)
+library(stringr)
 ```
 
 ```{r helper-functions}
@@ -104,7 +105,7 @@ ggsave(here("analysis", "plots", "daily_truth.png"))
 df <- combined_data[as.Date(forecast_date) %in% forecast_dates$unfiltered &
                       grepl("2", target) & 
                       quantile %in% c(0.025, 0.25, 0.75, 0.975)]
-df[, location_target := paste0(target_type, "s", " in ", location_name)]
+df[, location_target := str_to_title(paste0(target_type, "s", " in ", location_name))]
              
 df <- dcast(df, ... ~ quantile, value.var = "prediction")
 
@@ -176,9 +177,13 @@ ggsave(here("analysis", "plots", "rel-skill-over-time.png"),
 
 ```{r fig.height=10, fig.width=15}
 # glue two plots together
-truth_vs_forecast_2 | rel_skill_time_2 + 
+truth_vs_forecast_2 | rel_skill_time_2 +
   plot_layout(guides = "collect") & 
+  plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
+
+# for some reason the A / B annotation doesn't work here
+
 ggsave(here("analysis", "plots", "figure-forecasts-2.png"))
 ```
 *Figure 1. Left: Visualisation of 2 week ahead forecasts against the true observed values. The shape indicates whether there has been a monotonic increase or decrease over the last two weeks, or an unclear trend. Forecasts made during the Christmas period (from 2020-12-19 until 2021-01-02) are grayed out. Right: Corresponding scaled relative skill scores for the forecasts shown on the left. Scaled relative skill scores can be thought of as 'improvement over the baseline model' (see Methods for details).*
@@ -297,7 +302,7 @@ p <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
                           group = model, fill = model)) + 
   ggridges::geom_density_ridges() + 
   geom_vline(aes(xintercept = 1), alpha = 0.4) + 
-  scale_fill_brewer(palette = "Accent") + 
+  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
   facet_wrap( ~ location_target) + 
   theme(legend.position = "bottom") + 
@@ -308,12 +313,23 @@ p <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
 
 ```{r}
 # scores for different phases of the epidemic
-scores[, target_phase := paste0(target_type, "s - ", classification, " phase")]
+scores[, target_phase := str_to_title(paste0(target_type, "s - ", 
+                                             classification, " phase"))]
+scores[, target_phase := factor(target_phase, 
+                                levels = str_to_title(c("Cases - decreasing phase", 
+                                                        "Cases - unclear phase", 
+                                                        "Cases - increasing phase", 
+                                                        "Deaths - decreasing phase", 
+                                                        "Deaths - unclear phase", 
+                                                        "Deaths - increasing phase")))]
+
+scores[, .(target_count = .N), by = c("target_phase")]
+
 p_phases <- ggplot(scores, aes(y = model, x = scaled_rel_skill, 
                           group = model, fill = model)) + 
-  ggridges::geom_density_ridges() + 
+  ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
   geom_vline(aes(xintercept = 1), alpha = 0.4) + 
-  scale_fill_brewer(palette = "Accent") + 
+  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
   facet_wrap( ~ target_phase) + 
   theme(legend.position = "bottom") + 
@@ -327,6 +343,7 @@ p_phases <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
 
 p / p_phases + 
   plot_layout(guides = "collect") & 
+  plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
 ```
@@ -366,6 +383,30 @@ ggsave(here("analysis", "plots", "wis-components.png"))
 ```
 
 *Figure 3. Relative contributions of sharpness, overprediction and underprediction to the weighted interval scores. Models overpredict in a decreasing phase and underpredict in a decreasing phase. So far so obvious. Somehow adding inflection points would be really cool - maybe stratify according to "decreasing, but inflection afterwards etc.?". Apparently the baseline model is really good in an unclear phase, just much too uncertain?.* 
+
+---
+
+```{r, eval = TRUE}
+scores <- eval_forecasts(
+  data[, horizon := substring(target, 1, 1)], 
+  summarise_by = c("model", "target_type", "location_name", "horizon"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)
+
+scores %>%
+  ggplot(aes(y = interval_score, x = horizon, color = model, 
+             group = model)) + 
+  geom_point() + 
+  geom_line() + 
+  theme(panel.background = element_rect(fill = "#e1f0fe")) +
+  scale_color_brewer(palette = "Accent") + 
+  scale_y_log10() + 
+  facet_grid(target_type ~ location_name, scales = "free") + 
+  theme(legend.position = "bottom")
+
+```
+
 
 ---
 
