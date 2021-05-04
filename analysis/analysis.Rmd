@@ -423,12 +423,12 @@ scores_full %>%
   ggplot(aes(y = interval_score, x = horizon, 
              fill = model, color = model)) +
   geom_boxplot(outlier.shape = 21, coef = 1.5, 
-               width=0.5, alpha = 0.1, 
+               width=0.5, alpha = 1, 
                position = position_dodge2(width = 0.5)) + 
-  geom_line(data = means, 
-            aes(group = model, y = meanval, color = model), 
-            position = position_dodge2(width = 0.5), 
-            size = 2) +
+  # geom_line(data = means, 
+  #           aes(group = model, y = meanval, color = model), 
+  #           position = position_dodge2(width = 0.5), 
+  #           size = 2) +
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
   scale_color_brewer(palette = "Accent") + 
   geom_point(data = means, 

@@ -4,6 +4,7 @@
 \name{locations}
 \alias{locations}
 \alias{truth_data}
+\alias{dailytruth_data}
 \alias{prediction_data}
 \alias{combined_data}
 \alias{forecast_dates}
@@ -12,6 +13,8 @@
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 242 rows and 4 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 1708 rows and 5 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 52440 rows and 9 columns.
 
@@ -23,6 +26,8 @@ An object of class \code{list} of length 7.
 locations
 
 truth_data
+
+dailytruth_data
 
 prediction_data
 
