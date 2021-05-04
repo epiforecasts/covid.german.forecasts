@@ -407,6 +407,52 @@ scores %>%
 
 ```
 
+```{r, eval = TRUE}
+scores_full <- eval_forecasts(
+  data[, horizon := substring(target, 1, 1)], 
+  summarise_by = c("model", "location_target", "horizon", "forecast_date"), 
+  compute_relative_skill = FALSE, 
+  baseline = "Baseline"
+)
+
+means <- scores_full[, .(meanval = mean(interval_score), 
+                         medianval = median(interval_score)), 
+                     by =c("model", "location_target", "horizon")]
+
+scores_full %>%
+  ggplot(aes(y = interval_score, x = horizon, 
+             fill = model, color = model)) +
+  geom_boxplot(outlier.shape = 21, coef = 1.5, 
+               width=0.5, alpha = 0.1, 
+               position = position_dodge2(width = 0.5)) + 
+  geom_line(data = means, 
+            aes(group = model, y = meanval, color = model), 
+            position = position_dodge2(width = 0.5), 
+            size = 2) +
+  theme(panel.background = element_rect(fill = "#e1f0fe")) +
+  scale_color_brewer(palette = "Accent") + 
+  geom_point(data = means, 
+             mapping = aes(y = meanval, fill = model),
+             color = "black",
+             # fill = "red",
+             shape = 21,
+             size = 2,
+             position = position_dodge2(width = 0.5)) + 
+    geom_point(data = means, 
+             mapping = aes(y = medianval, fill = model),
+             color = "black",
+             # fill = "red",
+             shape = 22,
+             size = 2,
+             position = position_dodge2(width = 0.5)) + 
+  scale_fill_brewer(palette = "Accent") + 
+  scale_y_log10() + 
+  facet_wrap( ~ location_target, scales = "free") + 
+  theme(legend.position = "bottom")
+
+ggsave("plots/scores_horizons.png")
+
+```
 
 ---
 
