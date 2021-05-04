@@ -6,6 +6,7 @@
 \alias{truth_data}
 \alias{dailytruth_data}
 \alias{prediction_data}
+\alias{crowdforecast_data}
 \alias{combined_data}
 \alias{forecast_dates}
 \title{Location and Population Look Up for Germany and Poland}
@@ -17,6 +18,8 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 242 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 1708 rows and 5 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 52440 rows and 9 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 73508 rows and 10 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 49170 rows and 10 columns.
 
@@ -30,6 +33,8 @@ truth_data
 dailytruth_data
 
 prediction_data
+
+crowdforecast_data
 
 combined_data
 

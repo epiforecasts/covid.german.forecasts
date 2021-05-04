@@ -156,3 +156,47 @@ forecast_dates[["christmas"]] <-
   seq.Date(as.Date("2020-12-19"), as.Date("2021-01-07"), "week")
 
 usethis::use_data(forecast_dates, overwrite = TRUE)
+
+
+
+
+
+
+# check number of available forecasters
+root_dir <- here::here("crowd-forecast", "processed-forecast-data")
+file_paths_forecast <- here::here(root_dir, list.files(root_dir))
+
+crowdforecast_data <- purrr::map_dfr(file_paths_forecast, 
+                                  .f = function(x) {
+                                    data <- data.table::fread(x) %>%
+                                      dplyr::mutate(target_end_date = as.Date(target_end_date), 
+                                                    submission_date = as.Date(submission_date), 
+                                                    forecast_date = as.Date(forecast_date))
+                                  }) %>%
+  dplyr::mutate(target_type = ifelse(grepl("death", target), "death", "case")) %>%
+  dplyr::rename(prediction = value) %>%
+  dplyr::mutate(forecast_date = as.Date(submission_date)) %>%
+  dplyr::rename(model = board_name) %>%
+  dplyr::filter(type == "quantile", 
+                location_name %in% c("Germany", "Poland")) %>%
+  dplyr::select(location, location_name, forecast_date, quantile, prediction, model, target_end_date, horizon, target, target_type)
+
+usethis::use_data(crowdforecast_data, overwrite = TRUE)
+
+dt <- prediction_data[!(model %in% c("Crowd-Rt-Forecast",
+                               "EpiNow2_secondary", 
+                               "EpiExpert-ensemble", 
+                               "EpiNow2")), 
+                .(`number of forecasters` = length(unique(model))), , 
+                by = c("forecast_date", "location_name", "target_type")
+][order(forecast_date)][
+  !is.na(forecast_date)]
+
+
+dt[, .(sd = sd(`number of forecasters`), 
+                             mean = mean(`number of forecasters`), 
+                             min  = min(`number of forecasters`), 
+                             max = max(`number of forecasters`), 
+                             median = median(`number of forecasters`)), 
+   by = c("location_name", "target_type")] 
+

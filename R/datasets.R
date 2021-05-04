@@ -24,6 +24,12 @@
 ##' @docType data
 "prediction_data"
 
+##' Crowd forecast data used for the paper 
+##'
+##' @name locations
+##' @docType data
+"crowdforecast_data"
+
 ##' Combined forecast and truth data used for the paper 
 ##'
 ##' @name locations

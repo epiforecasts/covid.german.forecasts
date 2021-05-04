@@ -97,6 +97,80 @@ dailytruth_data %>%
 
 ggsave(here("analysis", "plots", "daily_truth.png"))
 ```
+## Number of expert forecasters
+
+```{r num-forecasters, results = 'asis'}
+dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
+                                        "EpiNow2_secondary", 
+                                        "EpiExpert-ensemble", 
+                                        "EpiNow2")), 
+                         .(`number of forecasters` = length(unique(model))), , 
+                         by = c("forecast_date", "location_name", "target_type")
+][order(forecast_date)][
+  !is.na(forecast_date)]
+
+
+dt[, .(sd = sd(`number of forecasters`), 
+                             mean = mean(`number of forecasters`), 
+                             min  = min(`number of forecasters`), 
+                             max = max(`number of forecasters`), 
+                             median = median(`number of forecasters`)), 
+   by = c("location_name", "target_type")] 
+
+
+
+```
+```{r, results = 'asis'}
+dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
+                                        "EpiNow2_secondary", 
+                                        "EpiExpert-ensemble", 
+                                        "EpiNow2")) & forecast_date %in% forecast_dates$unfiltered]
+
+num_fc <- dt[, .(n_forecasts = length(unique(forecast_date))),
+             by = c("model")][order(n_forecasts)]
+
+num_fc %>%
+  ggplot(aes(x = n_forecasts)) + 
+  geom_bar() + 
+  theme_light() + 
+  labs(x = "Number of available submissions", 
+       y = "Number of forecasters") 
+
+ggsave("plots/crowdforecast_regularity.png")
+
+```
+
+## Number of expert forecasters
+
+```{r, results = 'asis'}
+
+dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
+                                        "EpiNow2_secondary", 
+                                        "EpiNow2")) & forecast_date %in% forecast_dates$unfiltered]
+
+crowddata <- merge_pred_and_obs(dt, truth_data)
+
+scores <- eval_forecasts(
+  data = crowddata[grepl("2", target)],
+  summarise_by = c("model", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "EpiExpert-ensemble"
+)
+
+plot_df <- merge(num_fc, scores, by = "model")
+
+plot_df %>%
+  ggplot(aes(y = scaled_rel_skill, x = n_forecasts)) + 
+  geom_point() + 
+  theme_light() + 
+  facet_wrap(~ target_type) + 
+  labs(y = "Scaled relative skill", x = "Number of available submissions") + 
+  geom_smooth(method='lm', formula= y~x)
+
+ggsave("plots/skill-vs-forecast-freq.png")
+
+
+```
 
 ## Visualisation of 2 week ahead forecasts and scores
 
