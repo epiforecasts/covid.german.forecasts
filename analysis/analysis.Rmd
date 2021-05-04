@@ -346,6 +346,8 @@ p / p_phases +
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
+ggsave("plots/distribution_scores.png")
+
 ```
 
 *Figure 2. Top: Distribution of the scaled relative skill scores for the different model and forecast targets. The vertical black line represents the baseline model. Models beat the baseline more easily for death forecasts. The renewal model had by far the most variance in terms of its performance, while the crowd forecasting model seems most consistent. Bottom: Distribution of scaled relative skill in different phases of the epidemic. The epidemic was classified as 'increasing', if the forecast point and the two data points before form a monotonically rising line, 'decreasing' if numbers were falling and 'unclear' otherwise. This plot seems like a lot of noise to me, but unsure.*
