@@ -9,6 +9,9 @@
 \alias{crowdforecast_data}
 \alias{combined_data}
 \alias{forecast_dates}
+\alias{filtered_data}
+\alias{unfiltered_data}
+\alias{epitrend}
 \title{Location and Population Look Up for Germany and Poland}
 \format{
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
@@ -23,7 +26,13 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 7350
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 49170 rows and 10 columns.
 
-An object of class \code{list} of length 7.
+An object of class \code{list} of length 4.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 26496 rows and 14 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 33304 rows and 14 columns.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 242 rows and 6 columns.
 }
 \usage{
 locations
@@ -39,6 +48,12 @@ crowdforecast_data
 combined_data
 
 forecast_dates
+
+filtered_data
+
+unfiltered_data
+
+epitrend
 }
 \description{
 Downloaded from https://github.com/KITmetricslab/covid19-forecast-hub-de

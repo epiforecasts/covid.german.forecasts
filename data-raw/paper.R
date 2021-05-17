@@ -115,7 +115,7 @@ setnames(dailytruth_data, old = "value", new = "true_value")
 usethis::use_data(dailytruth_data, overwrite = TRUE)
 
 
-# combine data -----------------------------------------------------------------
+# combine raw data and store ---------------------------------------------------
 combined_data <- merge_pred_and_obs(
   prediction_data, 
   truth_data, 
@@ -126,43 +126,150 @@ combined_data <- merge_pred_and_obs(
 
 usethis::use_data(combined_data, overwrite = TRUE)
 
-# define different date periods ------------------------------------------------
+
+
+# ==============================================================================
+# -------------------- filter data and perform stratification ------------------
+# ==============================================================================
+
+# define different date periods relevant for the paper--------------------------
 forecast_dates <- list()
 
+# all unfiltered dates
 forecast_dates[["unfiltered"]] <- c(
   seq.Date(from = as.Date("2020-10-12"), to = as.Date("2021-03-01"), "week") 
 )
 
+# all dates relevant to the hubs
 forecast_dates[["full_hub_period"]] <- c(
   seq.Date(from = as.Date("2020-10-12"), to = as.Date("2020-12-14"), "week"), 
   seq.Date(from = as.Date("2021-01-11"), to = as.Date("2021-03-01"), "week") 
 )
   
-forecast_dates[["cases"]] <- 
-  forecast_dates$unfiltered[
-    !(forecast_dates$unfiltered %in% c("2020-12-21", "2020-12-28"))
-  ]
-
+# first period in the Hub paper
 forecast_dates[["first_period"]] <- 
   forecast_dates$cases[as.Date(forecast_dates$cases) <= "2020-12-19"]
 
+# second period in the hub paper
 forecast_dates[["second_period"]] <- 
   forecast_dates$cases[as.Date(forecast_dates$cases) >= "2021-01-04"]
 
-forecast_dates[["deaths"]] <- 
-  forecast_dates$cases[as.Date(forecast_dates$cases) >= "2020-12-07"]
-
+# christmas period
 forecast_dates[["christmas"]] <- 
   seq.Date(as.Date("2020-12-19"), as.Date("2021-01-07"), "week")
 
+# dates not scored for death forecasts
+forecast_dates[["death_not_scored"]] <- 
+  forecast_dates$unfiltered[as.Date(forecast_dates$unfiltered) < "2020-12-14"]
+
+# forecast_dates[["cases"]] <- 
+#   forecast_dates$unfiltered[
+#     !(forecast_dates$unfiltered %in% c("2020-12-21", "2020-12-28"))
+#   ]
+# 
+# forecast_dates[["deaths"]] <- 
+#   forecast_dates$cases[as.Date(forecast_dates$cases) >= "2020-12-14"]
+
 usethis::use_data(forecast_dates, overwrite = TRUE)
 
+# classify epidemic into rising and falling ------------------------------------
+# classify epidemic according to whether, on a given forecast date, the two
+# weeks before that have seen monotonic rise, decline, or an unclear trend
+classify_epidemic <- function(data, cutoff = 0.05, growth_cutoff = 2) {
+  dt <- as.data.table(data)
+  
+  # calculate differences and set differences smaller than 
+  # a certain cutoff to zero
+  dt[, diff_1 := c(NA, diff(true_value, 1)), 
+     by = c("location_name", "target_type")]
+  dt[abs(diff_1) < (cutoff * true_value), diff_1 := 0]
+  dt[, diff_prev := c(shift(diff_1, 1)), 
+     by = c("location_name", "target_type")]
+  
+  # assign a label depending on observed differences
+  dt[, c("classification", "speed") := "unclear"]
+  dt[(diff_1 >= 0 & diff_prev >= 0), 
+     classification := "increasing"]
+  dt[(diff_1 <= 0 & diff_prev <= 0 ), 
+     classification := "decreasing"]
+  dt[(diff_1 == 0 & diff_prev == 0), 
+     classification := "unclear"]
+  dt[(classification == "increasing") & 
+       diff_1 > growth_cutoff * diff_prev, 
+     speed := "accelerating"]
+  dt[(classification == "increasing") & 
+       diff_1 < 1/growth_cutoff * diff_prev, 
+     speed := "decelerating"]
+  dt[(classification == "decreasing") & 
+       abs(diff_1) > growth_cutoff * abs(diff_prev), 
+     speed := "accelerating"]
+  dt[(classification == "decreasing") & 
+       abs(diff_1) < 1/growth_cutoff * abs(diff_prev), 
+     speed := "decelerating"]
+  
+  dt[, c("diff_1", "diff_prev") := NULL]
+  return(dt)
+}
+
+# obtain classification
+epitrend <- classify_epidemic(truth_data)
+epitrend[, forecast_date := as.character(target_end_date + 2)]
+epitrend[, true_value := NULL]
+
+usethis::use_data(epitrend, overwrite = TRUE)
+
+# save unfiltered data and filtered data ---------------------------------------
+# save unfiltered data
+unfiltered_data <- combined_data[forecast_date %in% 
+                                   as.character(forecast_dates$unfiltered)]
+
+unfiltered_data[, horizon := substring(target, 1, 1)]
+
+unfiltered_data[
+  , location_target := paste0(str_to_sentence(target_type), 
+                              "s", " in ", location_name)
+]
+
+# add classification (as of the forecast date)
+# to get this as of target end date, keep the target_end_date column in epitrend
+# and remove the forecast_date and merge by target_end_date instead
+unfiltered_data <- merge(
+  unfiltered_data, 
+  copy(epitrend)[, target_end_date := NULL], 
+  by = c("location_name", "target_type", "forecast_date")
+)
+
+usethis::use_data(unfiltered_data, overwrite = TRUE)
+
+
+# load and set up data
+filtered_cases <- unfiltered_data[
+  target_type == "case" & 
+    !(as.Date(forecast_date) %in% forecast_dates$christmas)
+]
+
+filtered_deaths <- unfiltered_data[
+  target_type == "death" & 
+    !(as.Date(forecast_date) %in% forecast_dates$christmas) &
+    !(as.Date(forecast_date) %in% forecast_dates$death_not_scored)
+]
+
+filtered_data <- rbindlist(list(filtered_cases, filtered_deaths))
+
+usethis::use_data(filtered_data, overwrite = TRUE)
 
 
 
 
 
-# check number of available forecasters
+
+
+
+
+
+# additional analysis for individual forecasters -------------------------------
+
+# store prediction data for individual forecasters
 root_dir <- here::here("crowd-forecast", "processed-forecast-data")
 file_paths_forecast <- here::here(root_dir, list.files(root_dir))
 
@@ -183,6 +290,8 @@ crowdforecast_data <- purrr::map_dfr(file_paths_forecast,
 
 usethis::use_data(crowdforecast_data, overwrite = TRUE)
 
+
+# check number of available forecasters
 dt <- prediction_data[!(model %in% c("Crowd-Rt-Forecast",
                                "EpiNow2_secondary", 
                                "EpiExpert-ensemble", 

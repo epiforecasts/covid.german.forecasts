@@ -41,3 +41,21 @@
 ##' @name locations
 ##' @docType data
 "forecast_dates"
+
+##' Pre-filtered data used for the paper
+##'
+##' @name locations
+##' @docType data
+"filtered_data"
+
+##' Unfiltered version of the data used for the paper
+##'
+##' @name locations
+##' @docType data
+"unfiltered_data"
+
+##' Classification of the epidemic into falling, rising etc
+##'
+##' @name locations
+##' @docType data
+"epitrend"
