@@ -420,9 +420,12 @@ tbl_plt <- grid.arrange(tableGrob(table_dfs[[1]]),
              tableGrob(table_dfs[[4]]), 
              tableGrob(table_dfs[[5]]), 
              tableGrob(table_dfs[[6]]), 
-             nrow = 2)
+             nrow = 2) 
 
-print(tbl_plt)
+tbl_plt <- ggplotify::as.ggplot(tbl_plt)
+
+tbl_plt
+
 ggsave("plots/distribution_scores_table.png")
 
 
