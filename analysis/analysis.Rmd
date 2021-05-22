@@ -407,7 +407,7 @@ pl <- (p_combined + p) / p_phases +
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
-print(pl)
+pl
 ggsave("plots/distribution_scores.png")
 
 
