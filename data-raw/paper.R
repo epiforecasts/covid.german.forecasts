@@ -239,6 +239,17 @@ unfiltered_data <- merge(
   by = c("location_name", "target_type", "forecast_date")
 )
 
+
+unfiltered_data[, target_phase := str_to_title(paste0(target_type, "s - ", 
+                                                      classification, " phase"))]
+unfiltered_data[, target_phase := factor(target_phase, 
+                                         levels = str_to_title(c("Cases - decreasing phase", 
+                                                                 "Cases - unclear phase", 
+                                                                 "Cases - increasing phase", 
+                                                                 "Deaths - decreasing phase", 
+                                                                 "Deaths - unclear phase", 
+                                                                 "Deaths - increasing phase")))]
+
 usethis::use_data(unfiltered_data, overwrite = TRUE)
 
 

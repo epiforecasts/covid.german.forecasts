@@ -204,11 +204,12 @@ make_score_table <- function(scores) {
            old = c("model", "target_type", "interval_score", "aem", 
                    "relative_skill", "scaled_rel_skill", "sharpness", 
                    "underprediction", "overprediction", "bias", 
-                   "50", "90"), 
+                   "50", "90", "location_target", "target_phase"), 
            new = c("Model", "Target", "WIS", "Abs. error", 
                    "rel. skill", "Skill", "Sharpness", 
                    "Underpred.", "Overpred.", "Bias", 
-                   "50%-Cov.", "90%-Cov."))
+                   "50%-Cov.", "90%-Cov.", "Target", "Target"), 
+           skip_absent = TRUE)
   
   scores <- scores[, lapply(.SD, FUN = function(x) {
     if (is.numeric(x)) {
@@ -344,19 +345,87 @@ p_phases <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
 
 
 ```{r fig.height=10, fig.width=15}
-scores %>%
-  gridExtra::tableGrob(theme = theme_minimal(), rows = NULL)
+
+coverage_tables <- eval_forecasts(
+  filtered_data[grepl("2", target)], 
+  summarise_by = c("model", "target_phase", "classification", "range"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)[range %in% c(50, 90), 
+                   .(model, target_phase, coverage, classification, range)] %>%
+  dcast(formula = ... ~ range, value.var = "coverage")
+
+scores_tables <- eval_forecasts(
+  filtered_data[grepl("2", target)], 
+  summarise_by = c("model", "target_phase", "classification"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)
+
+tbl <- scores_tables %>%
+  merge(coverage_tables, all.x = TRUE, by = c("modellocation_target", "target_phase", "classification")) 
+
+tables <- list()
+table_dfs <- list()
+targets <- unique(tbl$target_phase)
+
+for (tar in targets) {
+  tables[[tar]] <- make_score_table(tbl[target_phase == tar])
+}
+
+for (tar in targets) {
+  table_dfs[[tar]] <- tbl[target_phase == tar, 
+                          .("Model" = model, 
+                            # "Target" = target_phase,
+                            "WIS" = interval_score,
+                            # "Rel. skill" = scaled_rel_skill, 
+                            "Sharpn." = sharpness, 
+                            "Underp.." = underprediction, 
+                            "Overp." = overprediction)#, 
+                            # "Bias" = bias,
+                            # "50%-Cov." = `50`, 
+                            # "90%-Cov." = `90`)
+                          ]
+  table_dfs[[tar]] <- table_dfs[[tar]][, lapply(.SD, FUN = function(x) {
+    if (is.numeric(x)) {
+      return(round(signif(x, 3), 2))
+    } else {
+      return(x)
+    }
+  })]
+}
+
+
+
 ```
 
 
 ```{r fig.height=10, fig.width=15}
 
-(p_combined + p) / p_phases + 
+pl <- (p_combined + p) / p_phases + 
   plot_layout(guides = "collect") & 
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
+print(pl)
 ggsave("plots/distribution_scores.png")
+
+
+# make plots with tables
+library(gridExtra)
+
+tbl_plt <- grid.arrange(tableGrob(table_dfs[[1]]), 
+             tableGrob(table_dfs[[2]]), 
+             tableGrob(table_dfs[[3]]), 
+             tableGrob(table_dfs[[4]]), 
+             tableGrob(table_dfs[[5]]), 
+             tableGrob(table_dfs[[6]]), 
+             nrow = 2)
+
+print(tbl_plt)
+ggsave("plots/distribution_scores_table.png")
+
+
 
 ```
 
