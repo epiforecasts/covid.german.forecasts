@@ -277,10 +277,11 @@ save_kable(table, file = here("analysis", "plots", "table_scores_2_ahead.png"))
 scores <- eval_forecasts(
   filtered_data[grepl("2", target)], 
   summarise_by = c("model", "target_type", "location_name", "forecast_date", 
+                   "target_phase",
                    "location_target", "classification"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
-)[model != "Baseline"] 
+) 
 
 # scores[, forecast_date := as.character(forecast_date)]
 # scores <-  merge(scores, epitrend, 
@@ -290,39 +291,62 @@ scores <- eval_forecasts(
 
 ```{r}
 scores[, target_type := paste0(str_to_title(target_type), "s overall")]
-p_combined <- ggplot(scores, aes(y = model, x = scaled_rel_skill, 
-                          group = model, fill = model)) + 
+
+# look at variance to check
+scores[, .(sd = sd(scaled_rel_skill)), by = c("model")]
+
+distribution_plot <- function(df, x = "scaled_rel_skill") {
+  df %>%
+  ggplot(aes_string(y = "model", x = x, 
+                          group = "model", fill = "model")) + 
   ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
   geom_vline(aes(xintercept = 1), alpha = 0.4) + 
   scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  facet_wrap( ~ target_type, ncol = 1) + 
   theme(legend.position = "bottom") + 
   labs(y = "Scaled relative skill") + 
   scale_x_log10(labels = scales::number_format(accuracy = 0.1), 
                 limits = c(0.015, 50))
+}
 
-
-p <- ggplot(scores, aes(y = model, x = scaled_rel_skill, 
-                          group = model, fill = model)) + 
+distribution_plot_wis <- function(df, x = "interval_score") {
+  df %>%
+  ggplot(aes_string(y = "model", x = x, 
+                          group = "model", fill = "model")) + 
   ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
-  geom_vline(aes(xintercept = 1), alpha = 0.4) + 
-  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
+  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  facet_wrap( ~ location_target) + 
   theme(legend.position = "bottom") + 
   labs(y = "Scaled relative skill") + 
-  scale_x_log10(labels = scales::number_format(accuracy = 0.1), 
-                limits = c(0.015, 50)) + 
+  scale_x_log10(labels = scales::number_format(accuracy = 1))
+}
+
+p_combined <- distribution_plot(df = scores[model != "Baseline"]) + 
+  facet_wrap(~ target_type, ncol = 1)
+
+p_combined_wis <- distribution_plot_wis(df = scores, 
+                                        x = "interval_score") +
+  facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
+
+
+p <- distribution_plot(df = scores[model != "Baseline"]) + 
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(), 
-        axis.ticks.y = element_blank())
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2)
+
+p_wis <- distribution_plot_wis(df = scores) + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2, scale = "free_x")
+
+
+
 ```
 
 ```{r}
 # scores for different phases of the epidemic
-scores[, target_phase := str_to_title(paste0(target_type, "s - ", 
-                                             classification, " phase"))]
 scores[, target_phase := factor(target_phase, 
                                 levels = str_to_title(c("Cases - decreasing phase", 
                                                         "Cases - unclear phase", 
@@ -333,17 +357,13 @@ scores[, target_phase := factor(target_phase,
 
 scores[, .(target_count = .N), by = c("target_phase")]
 
-p_phases <- ggplot(scores, aes(y = model, x = scaled_rel_skill, 
-                          group = model, fill = model)) + 
-  ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
-  geom_vline(aes(xintercept = 1), alpha = 0.4) + 
-  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
-  theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  facet_wrap( ~ target_phase) + 
-  theme(legend.position = "bottom") + 
-  labs(y = "Scaled relative skill") + 
-  scale_x_log10(labels = scales::number_format(accuracy = 0.1), 
-                limits = c(0.015, 50))
+p_phases <- distribution_plot(df = scores[model != "Baseline"]) + 
+  facet_wrap( ~ target_phase)
+
+p_phases_wis <- distribution_plot_wis(df = scores) + 
+  facet_wrap( ~ target_phase, scales = "free_x")
+  
+
 ```
 
 ```{r fig.height=10, fig.width=15}
@@ -357,40 +377,14 @@ pl
 ggsave("plots/distribution_scores.png")
 
 
-# make plots with tables
-library(gridExtra)
 
-tbl_plt <- grid.arrange(tableGrob(table_dfs[[1]]), 
-             tableGrob(table_dfs[[2]]), 
-             tableGrob(table_dfs[[3]]), 
-             tableGrob(table_dfs[[4]]), 
-             tableGrob(table_dfs[[5]]), 
-             tableGrob(table_dfs[[6]]), 
-             nrow = 2) 
+pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis + 
+  plot_layout(guides = "collect") & 
+  plot_annotation(tag_levels = 'A') &
+  theme(legend.position = 'bottom') 
 
-tbl_plt <- ggplotify::as.ggplot(tbl_plt)
-
-tbl_plt
-
-ggsave("plots/distribution_scores_table.png")
-
-
-tbl[, 
-    .("Model" = model, 
-      "Target" = target_phase,
-      "WIS" = interval_score,
-      # "Rel. skill" = scaled_rel_skill, 
-      "Sharpn." = sharpness, 
-      "Underp.." = underprediction, 
-      "Overp." = overprediction)#, 
-    # "Bias" = bias,
-    # "50%-Cov." = `50`, 
-    # "90%-Cov." = `90`)
-] %>%
-  gt(rowname_col = "Model", 
-     groupname_col = "Target") 
-
-
+pl_wis
+ggsave("plots/distribution_scores_wis.png")
 
 ```
 
@@ -447,6 +441,40 @@ for (tar in targets) {
                             # "90%-Cov." = `90`)
                           ]
 }
+
+
+# make plots with tables
+library(gridExtra)
+
+tbl_plt <- grid.arrange(tableGrob(table_dfs[[1]]), 
+             tableGrob(table_dfs[[2]]), 
+             tableGrob(table_dfs[[3]]), 
+             tableGrob(table_dfs[[4]]), 
+             tableGrob(table_dfs[[5]]), 
+             tableGrob(table_dfs[[6]]), 
+             nrow = 2) 
+
+tbl_plt <- ggplotify::as.ggplot(tbl_plt)
+
+tbl_plt
+
+ggsave("plots/distribution_scores_table.png")
+
+
+tbl[, 
+    .("Model" = model, 
+      "Target" = target_phase,
+      "WIS" = interval_score,
+      # "Rel. skill" = scaled_rel_skill, 
+      "Sharpn." = sharpness, 
+      "Underp.." = underprediction, 
+      "Overp." = overprediction)#, 
+    # "Bias" = bias,
+    # "50%-Cov." = `50`, 
+    # "90%-Cov." = `90`)
+] %>%
+  gt(rowname_col = "Model", 
+     groupname_col = "Target") 
 
 
 
