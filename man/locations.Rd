@@ -16,23 +16,23 @@
 \format{
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 242 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 262 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 1708 rows and 5 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 1834 rows and 5 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 52440 rows and 9 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 73508 rows and 10 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 49170 rows and 10 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 52486 rows and 10 columns.
 
 An object of class \code{list} of length 4.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 26496 rows and 14 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 26496 rows and 15 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 33304 rows and 14 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 33304 rows and 15 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 242 rows and 6 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 262 rows and 6 columns.
 }
 \usage{
 locations

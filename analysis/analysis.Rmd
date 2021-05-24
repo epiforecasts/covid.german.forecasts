@@ -289,10 +289,10 @@ scores <- eval_forecasts(
 ```
 
 ```{r}
-
+scores[, target_type := paste0(str_to_title(target_type), "s overall")]
 p_combined <- ggplot(scores, aes(y = model, x = scaled_rel_skill, 
                           group = model, fill = model)) + 
-  ggridges::geom_density_ridges() + 
+  ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
   geom_vline(aes(xintercept = 1), alpha = 0.4) + 
   scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
@@ -305,7 +305,7 @@ p_combined <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
 
 p <- ggplot(scores, aes(y = model, x = scaled_rel_skill, 
                           group = model, fill = model)) + 
-  ggridges::geom_density_ridges() + 
+  ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
   geom_vline(aes(xintercept = 1), alpha = 0.4) + 
   scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
@@ -313,7 +313,10 @@ p <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
   theme(legend.position = "bottom") + 
   labs(y = "Scaled relative skill") + 
   scale_x_log10(labels = scales::number_format(accuracy = 0.1), 
-                limits = c(0.015, 50))
+                limits = c(0.015, 50)) + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank())
 ```
 
 ```{r}
@@ -343,67 +346,9 @@ p_phases <- ggplot(scores, aes(y = model, x = scaled_rel_skill,
                 limits = c(0.015, 50))
 ```
 
-
 ```{r fig.height=10, fig.width=15}
 
-coverage_tables <- eval_forecasts(
-  filtered_data[grepl("2", target)], 
-  summarise_by = c("model", "target_phase", "classification", "range"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
-)[range %in% c(50, 90), 
-                   .(model, target_phase, coverage, classification, range)] %>%
-  dcast(formula = ... ~ range, value.var = "coverage")
-
-scores_tables <- eval_forecasts(
-  filtered_data[grepl("2", target)], 
-  summarise_by = c("model", "target_phase", "classification"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
-)
-
-tbl <- scores_tables %>%
-  merge(coverage_tables, all.x = TRUE, by = c("modellocation_target", "target_phase", "classification")) 
-
- tbl <- tbl[, lapply(.SD, FUN = function(x) {
-    if (is.numeric(x)) {
-      return(round(signif(x, 3), 2))
-    } else {
-      return(x)
-    }
-  })]
-
-tables <- list()
-table_dfs <- list()
-targets <- unique(tbl$target_phase)
-
-for (tar in targets) {
-  tables[[tar]] <- make_score_table(tbl[target_phase == tar])
-}
-
-for (tar in targets) {
-  table_dfs[[tar]] <- tbl[target_phase == tar, 
-                          .("Model" = model, 
-                            # "Target" = target_phase,
-                            "WIS" = interval_score,
-                            # "Rel. skill" = scaled_rel_skill, 
-                            "Sharpn." = sharpness, 
-                            "Underp.." = underprediction, 
-                            "Overp." = overprediction)#, 
-                            # "Bias" = bias,
-                            # "50%-Cov." = `50`, 
-                            # "90%-Cov." = `90`)
-                          ]
-}
-
-
-
-```
-
-
-```{r fig.height=10, fig.width=15}
-
-pl <- (p_combined + p) / p_phases + 
+pl <- wrap_plots(p_combined, p, widths = c(1, 2)) / p_phases + 
   plot_layout(guides = "collect") & 
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
@@ -450,6 +395,62 @@ tbl[,
 ```
 
 *Figure 2. Top: Distribution of the scaled relative skill scores for the different model and forecast targets. The vertical black line represents the baseline model. Models beat the baseline more easily for death forecasts. The renewal model had by far the most variance in terms of its performance, while the crowd forecasting model seems most consistent. Bottom: Distribution of scaled relative skill in different phases of the epidemic. The epidemic was classified as 'increasing', if the forecast point and the two data points before form a monotonically rising line, 'decreasing' if numbers were falling and 'unclear' otherwise. This plot seems like a lot of noise to me, but unsure.*
+
+```{r fig.height=10, fig.width=15}
+
+coverage_tables <- eval_forecasts(
+  filtered_data[grepl("2", target)], 
+  summarise_by = c("model", "target_phase", "classification", "range"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)[range %in% c(50, 90), 
+                   .(model, target_phase, coverage, classification, range)] %>%
+  dcast(formula = ... ~ range, value.var = "coverage")
+
+scores_tables <- eval_forecasts(
+  filtered_data[grepl("2", target)], 
+  summarise_by = c("model", "target_phase", "classification"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+)
+
+tbl <- scores_tables %>%
+  merge(coverage_tables, all.x = TRUE, by = c("model", "target_phase", "classification")) 
+
+ tbl <- tbl[, lapply(.SD, FUN = function(x) {
+    if (is.numeric(x)) {
+      return(round(signif(x, 3), 2))
+    } else {
+      return(x)
+    }
+  })]
+
+tables <- list()
+table_dfs <- list()
+targets <- unique(tbl$target_phase)
+
+for (tar in targets) {
+  tables[[tar]] <- make_score_table(tbl[target_phase == tar])
+}
+
+for (tar in targets) {
+  table_dfs[[tar]] <- tbl[target_phase == tar, 
+                          .("Model" = model, 
+                            # "Target" = target_phase,
+                            "WIS" = interval_score,
+                            # "Rel. skill" = scaled_rel_skill, 
+                            "Sharpn." = sharpness, 
+                            "Underp.." = underprediction, 
+                            "Overp." = overprediction)#, 
+                            # "Bias" = bias,
+                            # "50%-Cov." = `50`, 
+                            # "90%-Cov." = `90`)
+                          ]
+}
+
+
+
+```
 
 ------------------------------------------------------------------------
 
