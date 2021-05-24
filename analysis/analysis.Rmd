@@ -70,10 +70,10 @@ truth_and_obs_plot <- function(df) {
   labs(y = "value", x = "date") + 
   geom_point(aes(shape = classification)) + 
   geom_line() + 
-  geom_rect(aes(xmin = min(forecast_dates$christmas) + 14, # 2wk ahead forecast
-                xmax = max(forecast_dates$christmas) + 14,
-                ymin = -Inf,
-                ymax = Inf), fill = "lightgrey", alpha = 0.002) +
+  # geom_rect(aes(xmin = min(forecast_dates$christmas) + 14, # 2wk ahead forecast
+  #               xmax = max(forecast_dates$christmas) + 14,
+  #               ymin = -Inf,
+  #               ymax = Inf), fill = "lightgrey", alpha = 0.002) +
   theme_light() + 
   facet_wrap(~ location_target, scales = "free", ncol = 2) + 
   theme(legend.position = "bottom") + 
@@ -95,10 +95,10 @@ truth_vs_forecast_2_deaths <- df %>%
   dplyr::filter(target_type == "death") %>%
   truth_and_obs_plot()  + 
   scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
-  geom_rect(aes(xmin = min(forecast_dates$full_hub_period) + 14,
+  annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
                 xmax = max(forecast_dates$death_not_scored) + 14,
                 ymin = 0,
-                ymax = Inf), fill = "lightgrey", alpha = 0.002)
+                ymax = Inf, fill = "grey10", alpha = 0.1)
 
 ggsave(here("analysis", "plots", "truth-and-2-wk-ahead_deaths.png"), 
        plot = truth_vs_forecast_2_deaths)
@@ -128,10 +128,10 @@ scores_over_time_plot <- function(scores) {
   facet_wrap( ~ location_target, ncol = 2, scales = "free_y") +
   theme(legend.position = "bottom") +
   labs(y = "relative skill", x = "date") + 
-  geom_rect(aes(xmin = min(forecast_dates$christmas) + 14,
-                xmax = max(forecast_dates$christmas) + 14,
-                ymin = 0,
-                ymax = Inf), fill = "lightgrey", alpha = 0.002) +
+  # geom_rect(aes(xmin = min(forecast_dates$christmas) + 14,
+  #               xmax = max(forecast_dates$christmas) + 14,
+  #               ymin = 0,
+  #               ymax = Inf), fill = "lightgrey", alpha = 0.002) +
   theme(panel.background = element_rect(fill = "#e1f0fe")) +
   scale_y_log10() + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
@@ -152,10 +152,10 @@ rel_skill_time_2_deaths <- scores_target_forecastdate %>%
   dplyr::filter(target_type == "death") %>%
   scores_over_time_plot() + 
   scale_color_brewer(palette = "Accent") + 
-  geom_rect(aes(xmin = min(forecast_dates$full_hub_period) + 14,
+  annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
                 xmax = max(forecast_dates$death_not_scored) + 14,
                 ymin = 0,
-                ymax = Inf), fill = "lightgrey", alpha = 0.002)
+                ymax = Inf, fill = "grey10", alpha = 0.1)
 
 ggsave(here("analysis", "plots", "rel-skill-over-time-deaths.png"), 
        plot = rel_skill_time_2_deaths)
@@ -365,6 +365,14 @@ scores_tables <- eval_forecasts(
 tbl <- scores_tables %>%
   merge(coverage_tables, all.x = TRUE, by = c("modellocation_target", "target_phase", "classification")) 
 
+ tbl <- tbl[, lapply(.SD, FUN = function(x) {
+    if (is.numeric(x)) {
+      return(round(signif(x, 3), 2))
+    } else {
+      return(x)
+    }
+  })]
+
 tables <- list()
 table_dfs <- list()
 targets <- unique(tbl$target_phase)
@@ -386,13 +394,6 @@ for (tar in targets) {
                             # "50%-Cov." = `50`, 
                             # "90%-Cov." = `90`)
                           ]
-  table_dfs[[tar]] <- table_dfs[[tar]][, lapply(.SD, FUN = function(x) {
-    if (is.numeric(x)) {
-      return(round(signif(x, 3), 2))
-    } else {
-      return(x)
-    }
-  })]
 }
 
 
@@ -427,6 +428,22 @@ tbl_plt <- ggplotify::as.ggplot(tbl_plt)
 tbl_plt
 
 ggsave("plots/distribution_scores_table.png")
+
+
+tbl[, 
+    .("Model" = model, 
+      "Target" = target_phase,
+      "WIS" = interval_score,
+      # "Rel. skill" = scaled_rel_skill, 
+      "Sharpn." = sharpness, 
+      "Underp.." = underprediction, 
+      "Overp." = overprediction)#, 
+    # "Bias" = bias,
+    # "50%-Cov." = `50`, 
+    # "90%-Cov." = `90`)
+] %>%
+  gt(rowname_col = "Model", 
+     groupname_col = "Target") 
 
 
 
