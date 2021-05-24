@@ -328,6 +328,10 @@ p_combined_wis <- distribution_plot_wis(df = scores,
                                         x = "interval_score") +
   facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
 
+p_combined_ae <- distribution_plot_wis(df = scores, 
+                                        x = "aem") +
+  facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
+
 
 p <- distribution_plot(df = scores[model != "Baseline"]) + 
   theme(axis.title.y=element_blank(),
@@ -336,6 +340,12 @@ p <- distribution_plot(df = scores[model != "Baseline"]) +
   facet_wrap(~ location_target, ncol = 2)
 
 p_wis <- distribution_plot_wis(df = scores) + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2, scale = "free_x")
+
+p_ae <- distribution_plot_wis(df = scores, x = "aem") + 
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(), 
         axis.ticks.y = element_blank()) + 
@@ -362,6 +372,9 @@ p_phases <- distribution_plot(df = scores[model != "Baseline"]) +
 
 p_phases_wis <- distribution_plot_wis(df = scores) + 
   facet_wrap( ~ target_phase, scales = "free_x")
+
+p_phases_ae <- distribution_plot_wis(df = scores, x = "aem") + 
+  facet_wrap( ~ target_phase, scales = "free_x")
   
 
 ```
@@ -385,6 +398,14 @@ pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis +
 
 pl_wis
 ggsave("plots/distribution_scores_wis.png")
+
+pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
+  plot_layout(guides = "collect") & 
+  plot_annotation(tag_levels = 'A') &
+  theme(legend.position = 'bottom') 
+
+pl_ae
+ggsave("plots/distribution_scores_ae.png")
 
 ```
 
