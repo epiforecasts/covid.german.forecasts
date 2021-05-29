@@ -1,16 +1,15 @@
+---
+title: Evaluating crowd sourced forecasts of Covid-19 against epidemiological model forecasts in Germany and Poland
+output: html_document
+bibliography: references.bib  
+---
+
 # Evaluating crowd sourced forecasts of Covid-19 against epidemiological model forecasts in Germany and Poland
 
-*Nikos Bosse\*, Sam Abbott\*, and Sebastian Funk*
-
-*\* contributed unequally*\*\*
-
-\*\* *did they?*
+*Nikos Bosse, Sam Abbott, and Sebastian Funk*
 
 Target journal: elife
 
-Target completion of first draft: 26/03/2021
-
-Target preprint date: 14/04/2021
 
 ## Abstract
 
