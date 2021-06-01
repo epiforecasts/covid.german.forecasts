@@ -46,7 +46,7 @@ ggsave(here("analysis", "plots", "daily_truth.png"))
 
 ### Plots that visualise truth vs. predictions
 
-```{r truth-vs-forecasts, fig.height=10, fig.width=15}
+```{r truth-vs-forecasts, fig.height=12, fig.width=15}
 # create helper function for the plot ------------------------------------------
 truth_and_pred_plot <- function(df) {
   p <- df %>%
@@ -55,7 +55,7 @@ truth_and_pred_plot <- function(df) {
                  size = 1.5,
                  alpha = 1,
                  position = position_dodge(width = 6)) + 
-  labs(y = "value", x = "date") + 
+  labs(y = "value", x = "Date") + 
   geom_point(aes(shape = classification)) + 
   geom_line() + 
   theme_light() + 
