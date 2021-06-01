@@ -242,7 +242,8 @@ for (horizon in horizons) {
 ```{r}
 # create helper function to make table
 make_score_table <- function(scores, 
-                             group = TRUE) {
+                             group = TRUE, 
+                             full_width = TRUE) {
   # copy data, change names, round column values and reduce to sign. digits
   scores <- as.data.table(scores)
   setnames(scores, 
@@ -279,7 +280,8 @@ make_score_table <- function(scores,
   table <- scores[,!c("Target")] %>%
     kable(format = "html", col.names = c(" ", names(scores)[-(1:2)])) %>% #format = "markdown"
     collapse_rows(columns = 1) %>%
-    kable_styling(bootstrap_options = "striped") %>%
+    kable_styling(bootstrap_options = "striped", 
+                  full_width = full_width) %>%
     column_spec(1, background = "white")
   
   if (group) {
@@ -330,7 +332,7 @@ save_kable(table, file = here("analysis", "plots", "table_scores_4_ahead.png"))
 
 ### Tables for different phases of the epidemic
 
-```{r fig.height=10, fig.width=15}
+```{r fig.height=10, fig.width=5}
 
 coverage <- eval_forecasts(
   filtered_data, 
@@ -367,7 +369,8 @@ for (tar in targets) {
                    underprediction, overprediction)]
     
     tables[[name]] <- make_score_table(tmp_df, 
-                                       group = FALSE) %>%
+                                       group = FALSE, 
+                                       full_width = FALSE) %>%
       pack_rows(tar, 1, nrow(tmp_df), indent = FALSE)
     
     save_kable(tables[[name]],
