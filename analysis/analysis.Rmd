@@ -270,8 +270,10 @@ make_score_table <- function(scores,
     scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
   }
 
-  setcolorder(scores, 
-              neworder = c("Target", "Horizon", "Model", "WIS"))
+  if ("WIS" %in% names(scores)) {
+    setcolorder(scores, 
+                neworder = c("Target", "Horizon", "Model", "WIS"))  
+  }
   
   scores <- scores[order(Target, Horizon)]
   scores[, Horizon := paste(Horizon, "wk ahead")]
@@ -299,7 +301,7 @@ make_score_table <- function(scores,
 ```
 
 ### Create tables
-
+ 
 ```{r }
 # create scores ----------------------------------------------------------------
 # calculate coverage independently and merge with other scores
@@ -331,6 +333,37 @@ save_kable(table, file = here("analysis", "plots", "table_scores_4_ahead.png"))
 ```
 
 *Table 1: Scores for 2 week ahead forecasts (excluding the 21st and 28th of December 2020, cut to three significant digits and rounded). Skill is the scaled relative skill, a measure of relative performance with respect to the baseline model. Sharpness, overprediction and underprediction together some up to the weighted interval score (WIS). Bias (between -1 and 1) represents the general average tendency of a model to over- or underpredict. 50% and 90%-coverage are the percentage of observed values that fell within the 50% and 90% prediction intervals of a model.*
+
+
+```{r}
+# calculate median and sd of the WIS -------------------------------------------
+
+df <- eval_forecasts(
+  filtered_data, 
+  metric = "interval_score",
+  summarise_by = c("model", "horizon", "target_type"), 
+  sd = TRUE, 
+  quantile = 0.5
+) 
+
+
+df <- df[, .(model, horizon, target_type, 
+             `WIS - mean` = interval_score, 
+             `WIS - median` = interval_score_0.5, 
+             `WIS - sd` = interval_score_sd)] %>%
+    dcast(... ~ ., value.var = c("WIS - mean", "WIS - median", "WIS - sd"))
+
+setcolorder(df, c("target_type", "horizon", "model"))
+
+
+table <- df[order(target_type, horizon, model)] %>%
+  make_score_table()
+
+save_kable(table, 
+           file = here("analysis", "plots", "table-wis-sd-median.png"))
+
+```
+
 
 ```{r}
 # calculate percentage differences in performance ------------------------------
