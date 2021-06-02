@@ -266,7 +266,9 @@ make_score_table <- function(scores,
   })]
   
   # remove some cols, change column order, sort table and rename horizon
-  scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
+  if (all(c("coverage_deviation", "rel. skill") %in% names(scores))) {
+    scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
+  }
 
   setcolorder(scores, 
               neworder = c("Target", "Horizon", "Model", "WIS"))
@@ -305,7 +307,7 @@ coverage <- eval_forecasts(
   filtered_data, 
   summarise_by = c("horizon", "model", "target_type", "range"), 
   compute_relative_skill = TRUE, 
-  baseline = "Baseline"
+  baseline = "Baseline",
 )[range %in% c(50, 90), 
                    .(model, target_type, coverage, range, horizon)] %>%
   dcast(formula = ... ~ range, value.var = "coverage")
@@ -330,6 +332,27 @@ save_kable(table, file = here("analysis", "plots", "table_scores_4_ahead.png"))
 
 *Table 1: Scores for 2 week ahead forecasts (excluding the 21st and 28th of December 2020, cut to three significant digits and rounded). Skill is the scaled relative skill, a measure of relative performance with respect to the baseline model. Sharpness, overprediction and underprediction together some up to the weighted interval score (WIS). Bias (between -1 and 1) represents the general average tendency of a model to over- or underpredict. 50% and 90%-coverage are the percentage of observed values that fell within the 50% and 90% prediction intervals of a model.*
 
+```{r}
+# calculate percentage differences in performance ------------------------------
+
+df <- eval_forecasts(
+  filtered_data, 
+  summarise_by = c("model", "horizon", "target_type")
+)
+
+
+
+df <- df %>%
+  merge(df[model == "Hub-ensemble", 
+           .(horizon, target_type, base_score = interval_score)])
+df[, rel_score := (interval_score / base_score) * 100 - 100]
+df[, diff_score := interval_score - base_score]
+df[, .(horizon, target_type, model, rel_score, diff_score)][order(target_type, horizon)]
+
+
+```
+
+
 ### Tables for different phases of the epidemic
 
 ```{r fig.height=10, fig.width=5}
@@ -337,8 +360,6 @@ save_kable(table, file = here("analysis", "plots", "table_scores_4_ahead.png"))
 coverage <- eval_forecasts(
   filtered_data, 
   summarise_by = c("horizon", "model", "target_type", "target_phase", "range"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
 )[range %in% c(50, 90), 
                    .(model, target_type, coverage, range, target_phase, horizon)] %>%
   dcast(formula = ... ~ range, value.var = "coverage")
@@ -346,12 +367,11 @@ coverage <- eval_forecasts(
 df <- eval_forecasts(
   filtered_data, 
   summarise_by = c("model", "horizon", "target_type", "target_phase"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
+  metrics = c("interval_score", "coverage_deviation"),
+  sd = TRUE, 
+  quantiles = 0.5
 ) %>%
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_phase", "target_type")) 
-
-
 
 tables <- list()
 table_dfs <- list()
@@ -364,9 +384,10 @@ for (tar in targets) {
     
     tmp_df <- df[target_phase == tar & horizon == i, 
                  .(model, interval_score, sharpness,
-                   target_phase, horizon,
-                   coverage_deviation, relative_skill,  
-                   underprediction, overprediction)]
+                   target_phase, horizon, 
+                   underprediction, overprediction, 
+                   `WIS - median` = interval_score_0.5, 
+                   `WIS - sd` = interval_score_sd)]
     
     tables[[name]] <- make_score_table(tmp_df, 
                                        group = FALSE, 
@@ -399,6 +420,8 @@ scores <- eval_forecasts(
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 ) 
+
+scores[, .(sd = sd(interval_score)), by = c("model", "target_type")]
 
 # scores[, forecast_date := as.character(forecast_date)]
 # scores <-  merge(scores, epitrend, 
