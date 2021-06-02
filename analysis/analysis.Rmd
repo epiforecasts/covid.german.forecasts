@@ -18,6 +18,7 @@ library(ggridges)
 library(RColorBrewer)
 library(patchwork)
 library(stringr)
+
 ```
 
 ## Todo
@@ -55,7 +56,6 @@ truth_and_pred_plot <- function(df) {
                  size = 1.5,
                  alpha = 1,
                  position = position_dodge(width = 6)) + 
-  labs(y = "value", x = "Date") + 
   geom_point(aes(shape = classification)) + 
   geom_line() + 
   theme_light() + 
@@ -76,7 +76,8 @@ truth_and_pred_plot <- function(df) {
 # - add trend classification by target_end_date 
 #   (and remove classification by forecast_date that is already present)
 
-df <- unfiltered_data[quantile %in% c(0.025, 0.25, 0.75, 0.975)] %>%
+df <- unfiltered_data[model %in% regular_models &
+                        quantile %in% c(0.025, 0.25, 0.75, 0.975)] %>%
   dcast(... ~ quantile, value.var = "prediction")
 df <- merge(
   df[, c("classification", "speed") := NULL], 
@@ -90,10 +91,11 @@ df <- merge(
 for (horizon in 1:4) {
   # plot for cases
   truth_vs_forecast_cases <- df[grepl(horizon, target)] %>%
-  dplyr::filter(target_type == "case") %>%
-  truth_and_pred_plot() + 
-  scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[2:5])
-
+    dplyr::filter(target_type == "case") %>%
+    truth_and_pred_plot() + 
+    scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[-2]) + 
+    labs(y = "Cases", x = "")
+    
   filename <- here("analysis", "plots", 
                    paste0("truth-and-", horizon, "-wk-ahead_cases"))
   ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_cases)
@@ -109,7 +111,8 @@ for (horizon in 1:4) {
   annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
                 xmax = max(forecast_dates$death_not_scored) + 14,
                 ymin = 0,
-                ymax = Inf, fill = "grey10", alpha = 0.1)
+                ymax = Inf, fill = "grey10", alpha = 0.1) + 
+    labs(y = "Deaths", x = "")
   
   filename <- here("analysis", "plots", 
                    paste0("truth-and-", horizon, "-wk-ahead_deaths"))
@@ -130,7 +133,7 @@ summarise_by <- c("model", "horizon", "location_name", "target_type",
                    "forecast_date", "target_end_date", "location_target", 
                    "classification")
 scores_target_forecastdate <- eval_forecasts(
-  data = unfiltered_data,
+  data = unfiltered_data[model %in% regular_models],
   summarise_by = summarise_by
 )
 
@@ -149,7 +152,6 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   theme_light() + 
   facet_wrap( ~ location_target, ncol = 2, scales = "free_y") +
   theme(legend.position = "bottom") +
-  labs(y = "WIS relative to baseline", x = "Date") + 
   # geom_rect(aes(xmin = min(forecast_dates$christmas) + 14,
   #               xmax = max(forecast_dates$christmas) + 14,
   #               ymin = 0,
@@ -165,7 +167,8 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
 for (i in 1:4) {
   scores_over_time_case <- pairwise[horizon == i & target_type == "case"] %>%
     scores_over_time_plot() + 
-    scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) 
+    scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[-2]) + 
+    labs(y = "WIS rel. to baseline", x = "")
   
   ggsave(here("analysis", "plots", paste0("score-over-time-cases-", i, ".png")), 
          plot = scores_over_time_case)
@@ -179,7 +182,8 @@ for (i in 1:4) {
     annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
              xmax = max(forecast_dates$death_not_scored) + 14,
              ymin = 0,
-             ymax = Inf, fill = "grey10", alpha = 0.1)
+             ymax = Inf, fill = "grey10", alpha = 0.1) + 
+    labs(y = "WIS rel. to baseline", x = "Date")
   
   ggsave(here("analysis", "plots", paste0("score-over-time-deaths-", i, ".png")), 
          plot = scores_over_time_deaths)
@@ -192,8 +196,7 @@ for (i in 1:4) {
 
 ### Combine the two plots
 
-```{r fig.height=10, fig.width=15}
-
+```{r fig.height=15, fig.width=10}
 horizons <- 1:4
 
 for (horizon in horizons) {
@@ -218,20 +221,11 @@ for (horizon in horizons) {
     plot_annotation(tag_levels = 'A') &
     theme(legend.position = 'bottom') 
   
-  ggsave(here("analysis", "plots", paste0("figure-forecasts-", horizon, ".png")))
+  ggsave(here("analysis", "plots", paste0("figure-forecasts-", horizon, ".png")), width = 10, height = 12)
 }
 
 
 ```
-
-*Figure 1. A and C: Visualisation of 2 week ahead forecasts against the true observed values. The shape indicates whether there has been a monotonic increase or decrease over the last two weeks, or an unclear trend. Forecasts made during the Christmas period (from 2020-12-19 until 2021-01-02) are grayed out. B and D: Corresponding scaled relative skill scores for the forecasts shown on the left. Scaled relative skill scores can be thought of as 'improvement over the baseline model' (see Methods for details).*
-
-**What we learn from this plot**
-
--   severe overshooting for Renewal model
--   all models are terrible around Christmas
--   the artifacts around Christmas hit Renewal hardest
--   the Christmas effect is much stronger in Germany than in Poland
 
 **Todo** - [ ] maybe remove baseline from relative skill plot - [ ] maybe rearrange plots - [ ] make plots nicer (legend, maybe point size on the left / remove either points or lines)
 
@@ -306,16 +300,14 @@ make_score_table <- function(scores,
 # create scores ----------------------------------------------------------------
 # calculate coverage independently and merge with other scores
 coverage <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("horizon", "model", "target_type", "range"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline",
 )[range %in% c(50, 90), 
                    .(model, target_type, coverage, range, horizon)] %>%
   dcast(formula = ... ~ range, value.var = "coverage")
 
 df <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
@@ -332,14 +324,73 @@ save_kable(table, file = here("analysis", "plots", "table_scores_4_ahead.png"))
 
 ```
 
-*Table 1: Scores for 2 week ahead forecasts (excluding the 21st and 28th of December 2020, cut to three significant digits and rounded). Skill is the scaled relative skill, a measure of relative performance with respect to the baseline model. Sharpness, overprediction and underprediction together some up to the weighted interval score (WIS). Bias (between -1 and 1) represents the general average tendency of a model to over- or underpredict. 50% and 90%-coverage are the percentage of observed values that fell within the 50% and 90% prediction intervals of a model.*
+### Create table for all median ensembles
+
+```{r }
+# create scores ----------------------------------------------------------------
+# calculate coverage independently and merge with other scores
+coverage <- eval_forecasts(
+  filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]], 
+  summarise_by = c("horizon", "model", "target_type", "range"), 
+)[range %in% c(50, 90), 
+                   .(model, target_type, coverage, range, horizon)] %>%
+  dcast(formula = ... ~ range, value.var = "coverage")
+
+df <- eval_forecasts(
+  filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]], 
+  summarise_by = c("model", "horizon", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) %>%
+  merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
+
+# tables for 1-2 weeks ahead and 3-4 weeks ahdead
+table <- make_score_table(df[horizon <= 2]) 
+save_kable(table, file = here("analysis", "plots", "table_median-ensemble_scores_2_ahead.png"))
+
+table <- make_score_table(df[horizon > 2]) 
+save_kable(table, file = here("analysis", "plots", "table_median-ensemble_scores_4_ahead.png"))
+
+
+```
+
+
+### Create table for all mean ensembles
+
+```{r }
+# create scores ----------------------------------------------------------------
+# calculate coverage independently and merge with other scores
+coverage <- eval_forecasts(
+  filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]], 
+  summarise_by = c("horizon", "model", "target_type", "range"), 
+)[range %in% c(50, 90), 
+                   .(model, target_type, coverage, range, horizon)] %>%
+  dcast(formula = ... ~ range, value.var = "coverage")
+
+df <- eval_forecasts(
+  filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]], 
+  summarise_by = c("model", "horizon", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Baseline"
+) %>%
+  merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
+
+# tables for 1-2 weeks ahead and 3-4 weeks ahdead
+table <- make_score_table(df[horizon <= 2]) 
+save_kable(table, file = here("analysis", "plots", "table_mean-ensemble_scores_2_ahead.png"))
+
+table <- make_score_table(df[horizon > 2]) 
+save_kable(table, file = here("analysis", "plots", "table_mean-ensemble_scores_4_ahead.png"))
+
+
+```
 
 
 ```{r}
 # calculate median and sd of the WIS -------------------------------------------
 
 df <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   metric = "interval_score",
   summarise_by = c("model", "horizon", "target_type"), 
   sd = TRUE, 
@@ -369,7 +420,7 @@ save_kable(table,
 # calculate percentage differences in performance ------------------------------
 
 df <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "horizon", "target_type")
 )
 
@@ -391,14 +442,14 @@ df[, .(horizon, target_type, model, rel_score, diff_score)][order(target_type, h
 ```{r fig.height=10, fig.width=5}
 
 coverage <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("horizon", "model", "target_type", "target_phase", "range"), 
 )[range %in% c(50, 90), 
                    .(model, target_type, coverage, range, target_phase, horizon)] %>%
   dcast(formula = ... ~ range, value.var = "coverage")
 
 df <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "horizon", "target_type", "target_phase"), 
   metrics = c("interval_score", "coverage_deviation"),
   sd = TRUE, 
@@ -446,23 +497,16 @@ for (tar in targets) {
 
 ```{r}
 scores <- eval_forecasts(
-  filtered_data[grepl("2", target)], 
+  filtered_data[(model %in% regular_models) & grepl("2", target)], 
   summarise_by = c("model", "target_type", "location_name", "forecast_date", 
                    "target_phase",
-                   "location_target", "classification"), 
+                   "location_target", "classification"),
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 ) 
 
 scores[, .(sd = sd(interval_score)), by = c("model", "target_type")]
 
-# scores[, forecast_date := as.character(forecast_date)]
-# scores <-  merge(scores, epitrend, 
-#             by = c("forecast_date", "location_name", "target_type"))
-
-```
-
-```{r}
 scores[, target_type := paste0(str_to_title(target_type), "s overall")]
 
 # look at variance to check

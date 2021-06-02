@@ -20,17 +20,17 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 262 
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 1834 rows and 5 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 52440 rows and 9 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 80040 rows and 9 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 73508 rows and 10 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 52486 rows and 10 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 80086 rows and 10 columns.
 
 An object of class \code{list} of length 4.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 26496 rows and 15 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 44712 rows and 15 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 33304 rows and 15 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 56488 rows and 15 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 262 rows and 6 columns.
 }

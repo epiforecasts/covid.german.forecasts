@@ -2,6 +2,7 @@ library(here)
 library(magrittr)
 library(stringr)
 library(data.table)
+library(scoringutils)
 
 # ==============================================================================
 # ------------------------------ update data -----------------------------------
@@ -25,10 +26,7 @@ file_paths <- purrr::map(folders,
                            return(out)}) %>%
   unlist()
 file_paths <- file_paths[grepl(".csv", file_paths)]
-file_paths <- file_paths[!(
-  grepl("EpiExpert_Rt", file_paths) |
-    grepl("mean_ensemble", file_paths)
-)]
+file_paths <- file_paths[!(grepl("EpiExpert_Rt", file_paths))]
   
 # load all past forecasts ------------------------------------------------------
 # ceate a helper function to get model name from a file path
@@ -65,7 +63,9 @@ change_model_name <- function(names, old_name, new_name) {
 
 change_names <- list(
   c("KITCOVIDhub-median_ensemble", 
-    "Hub-ensemble"), 
+    "Hub-ensemble-all"), 
+  c("KITCOVIDhub-mean_ensemble", 
+    "Hub-ensemble-mean-all"), 
   c("KIT-baseline", 
     "Baseline"),
   c("epiforecasts-EpiExpert", 
@@ -73,7 +73,19 @@ change_names <- list(
   c("epiforecasts-EpiNow2", 
     "Renewal"), 
   c("epiforecasts-EpiNow2_secondary", 
-    "Convolution")
+    "Convolution"), 
+  c("KITCOVIDhub-median_ensemble_exclude_both", 
+    "Hub-ensemble"), 
+  c("KITCOVIDhub-median_ensemble_exclude_EpiExpert", 
+    "Hub-ensemble-without-crowd"), 
+  c("KITCOVIDhub-median_ensemble_exclude_EpiNow2", 
+    "Hub-ensemble-without-renewal"), 
+  c("KITCOVIDhub-mean_ensemble_exclude_both", 
+    "Hub-ensemble-mean"), 
+  c("KITCOVIDhub-mean_ensemble_exclude_EpiExpert", 
+    "Hub-ensemble-mean-without-crowd"), 
+  c("KITCOVIDhub-mean_ensemble_exclude_EpiNow2", 
+    "Hub-ensemble-mean-without-renewal")
 )
 
 purrr::walk(change_names, 
@@ -84,6 +96,15 @@ purrr::walk(change_names,
             })
 
 usethis::use_data(prediction_data, overwrite = TRUE)
+
+
+# store names of regular models and ensemble models ----------------------------
+regular_models <- c("Renewal", "Baseline", "Hub-ensemble", "Crowd forecast", "Convolution")
+usethis::use_data(regular_models, overwrite = TRUE)
+
+ensemble_models <- unique(prediction_data$model)
+ensemble_models <- ensemble_models[grepl("ensemble", ensemble_models)]
+usethis::use_data(ensemble_models, overwrite = TRUE)
 
 # update truth data ------------------------------------------------------------
 source(here("data-raw", "update.R"))
@@ -251,7 +272,6 @@ unfiltered_data[, target_phase := factor(target_phase,
                                                                  "Deaths - increasing phase")))]
 
 usethis::use_data(unfiltered_data, overwrite = TRUE)
-
 
 # load and set up data
 filtered_cases <- unfiltered_data[
