@@ -59,3 +59,15 @@
 ##' @name locations
 ##' @docType data
 "epitrend"
+
+##' Names of all ensemble models
+##'
+##' @name locations
+##' @docType data
+"ensemble_models"
+
+##' Names of all regular models
+##'
+##' @name locations
+##' @docType data
+"regular_models"
