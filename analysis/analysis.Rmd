@@ -470,7 +470,6 @@ df[, .(horizon, target_type, model, rel_score, scaled_rel_skill, diff_score)][or
 
 ```
 
-
 ### Tables for different phases of the epidemic
 
 ```{r fig.height=10, fig.width=5}
@@ -549,36 +548,31 @@ for (tar in targets) {
 
 #### Number of members in the ensemble
 ```{r}
-ens <- ensemble_members[, .("GM_inc_case" = sum(GM_inc_case), 
-                     "PL_inc_case" = sum(PL_inc_case), 
-                     "GM_inc_death" = sum(GM_inc_death), 
-                     "PL_inc_death" = sum(PL_inc_death)), 
-                 by = "Date"] %>%
-  melt(id.vars = "Date") 
+ens <- ensemble_members %>%
+  melt(id.vars = c("Date", "model"))
 
-ens[, .(mean = mean(value), 
-       median = median(value)), by = "variable"]
 
-p <- ens %>%
+epinow2_included <- ens[model == "epiforecasts-EpiNow2", "epinow" := value]
+crowd_included <- ens[model == "epiforecasts-EpiExpert", "crowd" := value]
+
+
+
+p <- ens[, .(value = sum(value), 
+             epinow = sum(epinow, na.rm = TRUE), 
+             crowd = sum(crowd, na.rm = TRUE)), by = c("variable", "Date")] %>%
   ggplot(aes(y = value, x = Date, color = variable)) + 
-  geom_line()
+  geom_point()
 
 ggsave(here("analysis", "plots", "ensemble-members.png"), 
        plot = p)
-  
   
 
 ```
 
 
-
-
-
-
+### Comparing ensembles with and without a model
 
 ```{r}
-
-models_plot <- c("Crowd forecast", "Hub-ensemble-with-crowd", "Hub-ensemble")
 
 comparison_ensembles <- function(models_to_plot) {
   df <- unfiltered_data[model %in% models_to_plot &
@@ -603,8 +597,20 @@ comparison_ensembles <- function(models_to_plot) {
   return(p)
 }
 
-comparison_ensembles(models_plot)
+models_plot <- c("Crowd forecast", "Hub-ensemble-with-crowd", "Hub-ensemble")
+p <- comparison_ensembles(models_plot)
+ggsave(here("analysis", "plots", "ensemble-with-and-without-crowd.png"), 
+       plot = p)
 
+models_plot <- c("Renewal", "Hub-ensemble-with-renewal", "Hub-ensemble")
+p <- comparison_ensembles(models_plot)
+ggsave(here("analysis", "plots", "ensemble-with-and-without-renewal.png"), 
+       plot = p)
+
+models_plot <- c("Renewal", "Crowd forecast", "Hub-ensemble-all", "Hub-ensemble")
+p <- comparison_ensembles(models_plot)
+ggsave(here("analysis", "plots", "ensemble-with-and-without-both.png"), 
+       plot = p)
 
 ```
 

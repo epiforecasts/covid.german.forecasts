@@ -12,3 +12,4 @@ crowd-forecast/data/
 rt-crowd-forecast/data-raw
 data-raw/epiforecasts-*
 data-raw/KIT*
+data-raw/models_included

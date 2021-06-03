@@ -14,19 +14,20 @@
 \alias{epitrend}
 \alias{ensemble_models}
 \alias{regular_models}
+\alias{ensemble_members}
 \title{Location and Population Look Up for Germany and Poland}
 \format{
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 262 rows and 4 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 266 rows and 4 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 1834 rows and 5 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 1882 rows and 5 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 116656 rows and 9 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 73508 rows and 10 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 116702 rows and 10 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 116706 rows and 10 columns.
 
 An object of class \code{list} of length 4.
 
@@ -34,11 +35,13 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 6900
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 87400 rows and 15 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 262 rows and 6 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 266 rows and 6 columns.
 
 An object of class \code{character} of length 8.
 
 An object of class \code{character} of length 5.
+
+An object of class \code{data.table} (inherits from \code{data.frame}) with 273 rows and 6 columns.
 }
 \usage{
 locations
@@ -64,6 +67,8 @@ epitrend
 ensemble_models
 
 regular_models
+
+ensemble_members
 }
 \description{
 Downloaded from https://github.com/KITmetricslab/covid19-forecast-hub-de
