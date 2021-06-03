@@ -71,3 +71,9 @@
 ##' @name locations
 ##' @docType data
 "regular_models"
+
+##' Models included in the official hub ensemble
+##'
+##' @name locations
+##' @docType data
+"ensemble_members"

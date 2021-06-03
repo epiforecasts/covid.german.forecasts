@@ -547,6 +547,35 @@ for (tar in targets) {
 
 ### Look at ensemble forecasts
 
+#### Number of members in the ensemble
+```{r}
+ens <- ensemble_members[, .("GM_inc_case" = sum(GM_inc_case), 
+                     "PL_inc_case" = sum(PL_inc_case), 
+                     "GM_inc_death" = sum(GM_inc_death), 
+                     "PL_inc_death" = sum(PL_inc_death)), 
+                 by = "Date"] %>%
+  melt(id.vars = "Date") 
+
+ens[, .(mean = mean(value), 
+       median = median(value)), by = "variable"]
+
+p <- ens %>%
+  ggplot(aes(y = value, x = Date, color = variable)) + 
+  geom_line()
+
+ggsave(here("analysis", "plots", "ensemble-members.png"), 
+       plot = p)
+  
+  
+
+```
+
+
+
+
+
+
+
 ```{r}
 
 models_plot <- c("Crowd forecast", "Hub-ensemble-with-crowd", "Hub-ensemble")

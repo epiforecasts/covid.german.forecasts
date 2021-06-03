@@ -11,5 +11,6 @@ svn checkout https://github.com/KITmetricslab/covid19-forecast-hub-de/trunk/data
 svn checkout https://github.com/KITmetricslab/covid19-forecast-hub-de/trunk/data-processed/epiforecasts-EpiNow2_secondary
 svn checkout https://github.com/KITmetricslab/covid19-forecast-hub-de/trunk/data-processed/KITCOVIDhub-median_ensemble
 svn checkout https://github.com/KITmetricslab/covid19-forecast-hub-de/trunk/data-processed/KIT-baseline
+svn checkout https://github.com/KITmetricslab/covid19-forecast-hub-de/trunk/code/ensemble/included_models
 cd ..
 

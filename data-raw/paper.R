@@ -148,6 +148,29 @@ combined_data <- merge_pred_and_obs(
 usethis::use_data(combined_data, overwrite = TRUE)
 
 
+# update data about the number of ensembles included in the Hub ----------------
+root_dir <- here("data-raw", "included_models")
+filenames <- list.files(root_dir)
+get_date <- function(filename) {
+  date <- substr(filename, 17, 26)
+  return(as.Date(date))
+}
+dates <- get_date(filenames)
+filenames <- filenames[dates >= "2020-10-12" & dates <= "2021-03-01"]
+
+ensemble_members <- purrr::map_dfr(filenames, 
+                                   .f = function(x) {
+                                     dt <- fread(here(root_dir, x))
+                                     dt[, Date := get_date(x)]
+                                     return(dt)
+                                   })
+
+del_cols <- names(ensemble_members)[grepl("XX", names(ensemble_members)) | 
+                                      grepl("cum", names(ensemble_members))]
+ensemble_members[, (del_cols) := NULL]
+
+usethis::use_data(ensemble_members, overwrite = TRUE)
+
 
 # ==============================================================================
 # -------------------- filter data and perform stratification ------------------
