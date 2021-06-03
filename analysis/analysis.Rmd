@@ -246,7 +246,7 @@ make_score_table <- function(scores,
                    "underprediction", "overprediction", "bias", 
                    "50", "90", "location_target", "target_phase"), 
            new = c("Horizon", "Model", "Target", "WIS", "Abs. error", 
-                   "rel. skill", "Skill", "Sharpness", 
+                   "rel. skill", "WIS - rel.", "Sharpness", 
                    "Underpred.", "Overpred.", "Bias", 
                    "50%-Cov.", "90%-Cov.", "Target", "Target"), 
            skip_absent = TRUE)
