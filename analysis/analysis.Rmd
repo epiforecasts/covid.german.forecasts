@@ -265,8 +265,9 @@ make_score_table <- function(scores,
   }
 
   if ("WIS" %in% names(scores)) {
+    wis <- names(scores)[grepl("WIS", names(scores))]
     setcolorder(scores, 
-                neworder = c("Target", "Horizon", "Model", "WIS"))  
+                neworder = c("Target", "Horizon", "Model", wis))  
   }
   
   scores <- scores[order(Target, Horizon)]
@@ -310,9 +311,19 @@ df <- eval_forecasts(
   filtered_data[model %in% regular_models], 
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = TRUE, 
-  baseline = "Baseline"
+  baseline = "Baseline", 
+  sd = TRUE, 
+  quantiles = 0.5
 ) %>%
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
+
+del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
+                        !(grepl("interval", names(df)))]
+df[, (del_cols) := NULL]
+
+setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
+         new = c("WIS - median", 
+                 "WIS - sd"))
 
 # tables for 1-2 weeks ahead and 3-4 weeks ahdead
 table <- make_score_table(df[horizon <= 2]) 
@@ -340,9 +351,18 @@ df <- eval_forecasts(
   filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]], 
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = TRUE, 
-  baseline = "Baseline"
+  baseline = "Baseline", 
+  sd = TRUE, 
+  quantiles = 0.5,
 ) %>%
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
+del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
+                        !(grepl("interval", names(df)))]
+df[, (del_cols) := NULL]
+
+setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
+         new = c("WIS - median", 
+                 "WIS - sd"))
 
 # tables for 1-2 weeks ahead and 3-4 weeks ahdead
 table <- make_score_table(df[horizon <= 2]) 
@@ -371,9 +391,18 @@ df <- eval_forecasts(
   filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]], 
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = TRUE, 
-  baseline = "Baseline"
+  baseline = "Baseline", 
+  sd = TRUE, 
+  quantiles = 0.5,
 ) %>%
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
+del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
+                        !(grepl("interval", names(df)))]
+df[, (del_cols) := NULL]
+
+setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
+         new = c("WIS - median", 
+                 "WIS - sd")) 
 
 # tables for 1-2 weeks ahead and 3-4 weeks ahdead
 table <- make_score_table(df[horizon <= 2]) 
@@ -668,7 +697,7 @@ pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis +
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
-ggsave("plots/distribution_scores_wis.png", pl_wis, height = 9)
+ggsave("plots/distribution_scores_wis.png", pl_wis, height = 10, width = 9)
 
 pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
   plot_layout(guides = "collect") & 
