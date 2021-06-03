@@ -264,14 +264,17 @@ make_score_table <- function(scores,
     scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
   }
 
-  if ("WIS" %in% names(scores)) {
+  if (all(c("WIS", "Horizon") %in% names(scores))) {
     wis <- names(scores)[grepl("WIS", names(scores))]
     setcolorder(scores, 
                 neworder = c("Target", "Horizon", "Model", wis))  
   }
   
-  scores <- scores[order(Target, Horizon)]
-  scores[, Horizon := paste(Horizon, "wk ahead")]
+  if ("Horizon" %in% names(scores)) {
+    scores <- scores[order(Target, Horizon)]
+    scores[, Horizon := paste(Horizon, "wk ahead")]
+  }
+
   
   # calculate where to group rows
   case_rows <- nrow(scores[Target == "case"])
@@ -488,9 +491,33 @@ df <- eval_forecasts(
 ) %>%
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_phase", "target_type")) 
 
+del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
+                        !(grepl("interval", names(df)))]
+df[, (del_cols) := NULL]
+
+setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
+         new = c("WIS - median", 
+                 "WIS - sd"))
+
 tables <- list()
 table_dfs <- list()
 targets <- unique(df$target_phase)
+
+# for horizon <= 2
+labels <- df[horizon <= 2][order(target_phase, horizon)]$target_phase
+table <- make_score_table(df[horizon <= 2, !"target_type"], group = FALSE) %>%
+  pack_rows(index = table(labels), indent = FALSE)
+save_kable(table, 
+           file = here("analysis", "plots", "table-phases-2.png"))
+
+# for horizon > 2
+labels <- df[horizon > 2][order(target_phase, horizon)]$target_phase
+table <- make_score_table(df[horizon > 2, !"target_type"], group = FALSE) %>%
+  pack_rows(index = table(labels), indent = FALSE)
+save_kable(table, 
+           file = here("analysis", "plots", "table-phases-4.png"))
+
+
 
 horizons = 2
 for (tar in targets) {
@@ -597,7 +624,7 @@ distribution_plot_wis <- function(df, x = "interval_score") {
     geom_density_ridges(aes(fill = model), 
                         quantile_lines = TRUE, quantiles = 0.5, 
                         rel_min_height = 0.005, 
-                        scale = 0.95, 
+                        scale = 0.9, 
                         jittered_points = TRUE, 
                         position = position_points_jitter(width = 0.05, height = 0),
                         point_size = 1.5, 
@@ -609,7 +636,7 @@ distribution_plot_wis <- function(df, x = "interval_score") {
                         quantile_fun=function(x,...) mean(x), 
                         linetype = "dotted", 
                         alpha = 0, 
-                        scale = 0.95, 
+                        scale = 0.9, 
                         rel_min_height = 0.01) +
     scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
     # scale_color_manual(aesthetics = "point_color", 
@@ -667,7 +694,7 @@ scores[, target_phase := factor(target_phase,
                                                         "Deaths - unclear phase", 
                                                         "Deaths - increasing phase")))]
 
-scores[, .(target_count = .N), by = c("target_phase")]
+scores[, .(target_count = .N), by = c("target_phase", "model")]
 
 p_phases <- distribution_plot(df = scores[model != "Baseline"]) + 
   facet_wrap( ~ target_phase)
@@ -677,6 +704,8 @@ p_phases_wis <- distribution_plot_wis(df = scores) +
 
 p_phases_ae <- distribution_plot_wis(df = scores, x = "aem") + 
   facet_wrap( ~ target_phase, scales = "free_x")
+
+scores[, .(n = .N), by = "target_phase"]
   
 
 ```
@@ -697,7 +726,7 @@ pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis +
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
-ggsave("plots/distribution_scores_wis.png", pl_wis, height = 10, width = 9)
+ggsave("plots/distribution_scores_wis.png", pl_wis, height = 11, width = 9)
 
 pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
   plot_layout(guides = "collect") & 
@@ -714,7 +743,7 @@ ggsave("plots/distribution_scores_ae.png", pl_ae, height = 9)
 
 coverage_tables <- eval_forecasts(
   filtered_data[grepl("2", target)], 
-  summarise_by = c("model", "target_phase", "classification", "range"), 
+  summarise_by = c("model", "target_phase", "classification", "range", "horizon"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 )[range %in% c(50, 90), 
@@ -723,7 +752,7 @@ coverage_tables <- eval_forecasts(
 
 scores_tables <- eval_forecasts(
   filtered_data[grepl("2", target)], 
-  summarise_by = c("model", "target_phase", "classification"), 
+  summarise_by = c("model", "target_phase", "classification", "horizon"), 
   compute_relative_skill = TRUE, 
   baseline = "Baseline"
 )
