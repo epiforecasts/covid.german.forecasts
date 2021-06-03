@@ -77,15 +77,15 @@ change_names <- list(
   c("KITCOVIDhub-median_ensemble_exclude_both", 
     "Hub-ensemble"), 
   c("KITCOVIDhub-median_ensemble_exclude_EpiExpert", 
-    "Hub-ensemble-without-crowd"), 
+    "Hub-ensemble-with-renewal"), 
   c("KITCOVIDhub-median_ensemble_exclude_EpiNow2", 
-    "Hub-ensemble-without-renewal"), 
+    "Hub-ensemble-with-crowd"), 
   c("KITCOVIDhub-mean_ensemble_exclude_both", 
     "Hub-ensemble-mean"), 
   c("KITCOVIDhub-mean_ensemble_exclude_EpiExpert", 
-    "Hub-ensemble-mean-without-crowd"), 
+    "Hub-ensemble-mean-with-renewal"), 
   c("KITCOVIDhub-mean_ensemble_exclude_EpiNow2", 
-    "Hub-ensemble-mean-without-renewal")
+    "Hub-ensemble-mean-with-crowd")
 )
 
 purrr::walk(change_names, 

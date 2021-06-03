@@ -421,7 +421,9 @@ save_kable(table,
 
 df <- eval_forecasts(
   filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "horizon", "target_type")
+  summarise_by = c("model", "horizon", "target_type"), 
+  compute_relative_skill = TRUE, 
+  baseline = "Hub-ensemble"
 )
 
 
@@ -431,7 +433,7 @@ df <- df %>%
            .(horizon, target_type, base_score = interval_score)])
 df[, rel_score := (interval_score / base_score) * 100 - 100]
 df[, diff_score := interval_score - base_score]
-df[, .(horizon, target_type, model, rel_score, diff_score)][order(target_type, horizon)]
+df[, .(horizon, target_type, model, rel_score, scaled_rel_skill, diff_score)][order(target_type, horizon)]
 
 
 ```
@@ -487,7 +489,39 @@ for (tar in targets) {
 ```
 
 
+### Look at ensemble forecasts
 
+```{r}
+
+models_plot <- c("Crowd forecast", "Hub-ensemble-with-crowd", "Hub-ensemble")
+
+comparison_ensembles <- function(models_to_plot) {
+  df <- unfiltered_data[model %in% models_to_plot &
+                          quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
+    dcast(... ~ quantile, value.var = "prediction")
+  df <- merge(
+    df[, c("classification", "speed") := NULL], 
+    copy(epitrend)[, forecast_date := NULL], 
+    by = c("target_end_date", "location_name", "target_type")
+  )
+  
+  p <- df[grepl(2, target)] %>%
+    ggplot(aes(y = `0.5`, x = target_end_date, color = model)) +
+    geom_line() + 
+    theme_light() + 
+    facet_wrap(~ location_target, scales = "free", ncol = 2) + 
+    theme(legend.position = "bottom") + 
+    theme(panel.background = element_rect(fill = "#e1f0fe")) + 
+    scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
+                            max(forecast_dates$full_hub_period)))
+  
+  return(p)
+}
+
+comparison_ensembles(models_plot)
+
+
+```
 
 
 
@@ -514,28 +548,49 @@ scores[, .(sd = sd(scaled_rel_skill)), by = c("model")]
 
 distribution_plot <- function(df, x = "scaled_rel_skill") {
   df %>%
-  ggplot(aes_string(y = "model", x = x, 
-                          group = "model", fill = "model")) + 
-  ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
-  geom_vline(aes(xintercept = 1), alpha = 0.4) + 
-  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
-  theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  theme(legend.position = "bottom") + 
-  labs(y = "Scaled relative skill") + 
-  scale_x_log10(labels = scales::number_format(accuracy = 0.1), 
-                limits = c(0.015, 50))
+    ggplot(aes_string(y = "model", x = x, 
+                      group = "model")) + 
+    geom_density_ridges(aes(fill = model), 
+                                  quantile_lines = TRUE, quantiles = 0.5, 
+                                  rel_min_height = 0.01) + 
+    geom_vline(aes(xintercept = 1), alpha = 0.4) + 
+    scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
+    theme(panel.background = element_rect(fill = "#e1f0fe")) +
+    theme(legend.position = "bottom") + 
+    labs(y = "Scaled relative skill") + 
+    scale_x_log10(labels = scales::number_format(accuracy = 0.1))
 }
 
 distribution_plot_wis <- function(df, x = "interval_score") {
   df %>%
-  ggplot(aes_string(y = "model", x = x, 
-                          group = "model", fill = "model")) + 
-  ggridges::geom_density_ridges(quantile_lines = TRUE, quantiles = 0.5) + 
-  scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
-  theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  theme(legend.position = "bottom") + 
-  labs(y = "Scaled relative skill") + 
-  scale_x_log10(labels = scales::number_format(accuracy = 1))
+    ggplot(aes_string(y = "model", x = x, 
+                      group = "model", fill = "model")) + 
+    geom_density_ridges(aes(fill = model), 
+                        quantile_lines = TRUE, quantiles = 0.5, 
+                        rel_min_height = 0.005, 
+                        scale = 0.95, 
+                        jittered_points = TRUE, 
+                        position = position_points_jitter(width = 0.05, height = 0),
+                        point_size = 1.5, 
+                        point_shape = 21,
+                        #point_shape = '|',
+                        point_alpha = 1, 
+                        alpha = 0.7) + 
+    geom_density_ridges(quantile_lines=TRUE,
+                        quantile_fun=function(x,...) mean(x), 
+                        linetype = "dotted", 
+                        alpha = 0, 
+                        scale = 0.95, 
+                        rel_min_height = 0.01) +
+    scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
+    # scale_color_manual(aesthetics = "point_color", 
+    #                    values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
+    theme(panel.background = element_rect(fill = "#e1f0fe")) +
+    theme(legend.position = "bottom") + 
+    labs(y = "Model", x = "Weighted interval score") + 
+  scale_x_continuous(labels = scales::label_number(suffix = "k", 
+                                                   scale = 1e-3, 
+                                                   accuracy = NULL))
 }
 
 p_combined <- distribution_plot(df = scores[model != "Baseline"]) + 
@@ -543,7 +598,8 @@ p_combined <- distribution_plot(df = scores[model != "Baseline"]) +
 
 p_combined_wis <- distribution_plot_wis(df = scores, 
                                         x = "interval_score") +
-  facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
+  facet_wrap(~ target_type, ncol = 1, scales = "free") + 
+  theme(plot.margin=unit(c(0,0.4,0,0),"cm")) 
 
 p_combined_ae <- distribution_plot_wis(df = scores, 
                                         x = "aem") +
@@ -560,13 +616,13 @@ p_wis <- distribution_plot_wis(df = scores) +
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(), 
         axis.ticks.y = element_blank()) + 
-  facet_wrap(~ location_target, ncol = 2, scale = "free_x")
+  facet_wrap(~ location_target, ncol = 2, scale = "free")
 
 p_ae <- distribution_plot_wis(df = scores, x = "aem") + 
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(), 
         axis.ticks.y = element_blank()) + 
-  facet_wrap(~ location_target, ncol = 2, scale = "free_x")
+  facet_wrap(~ location_target, ncol = 2, scale = "free")
 
 
 
@@ -588,7 +644,7 @@ p_phases <- distribution_plot(df = scores[model != "Baseline"]) +
   facet_wrap( ~ target_phase)
 
 p_phases_wis <- distribution_plot_wis(df = scores) + 
-  facet_wrap( ~ target_phase, scales = "free_x")
+  facet_wrap( ~ target_phase, scales = "free_x") 
 
 p_phases_ae <- distribution_plot_wis(df = scores, x = "aem") + 
   facet_wrap( ~ target_phase, scales = "free_x")
@@ -603,8 +659,7 @@ pl <- wrap_plots(p_combined, p, widths = c(1, 2)) / p_phases +
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
-pl
-ggsave("plots/distribution_scores.png")
+ggsave("plots/distribution_scores.png", plot = pl, height = 9)
 
 
 
@@ -613,16 +668,14 @@ pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis +
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
-pl_wis
-ggsave("plots/distribution_scores_wis.png")
+ggsave("plots/distribution_scores_wis.png", pl_wis, height = 9)
 
 pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
   plot_layout(guides = "collect") & 
   plot_annotation(tag_levels = 'A') &
   theme(legend.position = 'bottom') 
 
-pl_ae
-ggsave("plots/distribution_scores_ae.png")
+ggsave("plots/distribution_scores_ae.png", pl_ae, height = 9)
 
 ```
 
