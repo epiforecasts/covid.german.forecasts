@@ -227,7 +227,6 @@ for (horizon in horizons) {
 
 ```
 
-**Todo** - [ ] maybe remove baseline from relative skill plot - [ ] maybe rearrange plots - [ ] make plots nicer (legend, maybe point size on the left / remove either points or lines)
 
 ------------------------------------------------------------------------
 
@@ -453,10 +452,8 @@ save_kable(table,
 # calculate percentage differences in performance ------------------------------
 
 df <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "horizon", "target_type"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Hub-ensemble"
+  filtered_data, 
+  summarise_by = c("model", "horizon", "target_type")
 )
 
 
@@ -466,7 +463,7 @@ df <- df %>%
            .(horizon, target_type, base_score = interval_score)])
 df[, rel_score := (interval_score / base_score) * 100 - 100]
 df[, diff_score := interval_score - base_score]
-df[, .(horizon, target_type, model, rel_score, scaled_rel_skill, diff_score)][order(target_type, horizon)]
+df[, .(horizon, target_type, model, rel_score, diff_score)][order(target_type, horizon)]
 
 
 ```
@@ -518,29 +515,29 @@ save_kable(table,
            file = here("analysis", "plots", "table-phases-4.png"))
 
 
-
-horizons = 2
-for (tar in targets) {
-  for (i in horizons) {
-    name <- paste0(tar, "-", i)
-    
-    tmp_df <- df[target_phase == tar & horizon == i, 
-                 .(model, interval_score, sharpness,
-                   target_phase, horizon, 
-                   underprediction, overprediction, 
-                   `WIS - median` = interval_score_0.5, 
-                   `WIS - sd` = interval_score_sd)]
-    
-    tables[[name]] <- make_score_table(tmp_df, 
-                                       group = FALSE, 
-                                       full_width = FALSE) %>%
-      pack_rows(tar, 1, nrow(tmp_df), indent = FALSE)
-    
-    save_kable(tables[[name]],
-               file = here("analysis", "plots",
-                           paste0("table-", gsub(" ", "", name), ".png")))
-  }
-}
+# 
+# horizons = 2
+# for (tar in targets) {
+#   for (i in horizons) {
+#     name <- paste0(tar, "-", i)
+#     
+#     tmp_df <- df[target_phase == tar & horizon == i, 
+#                  .(model, interval_score, sharpness,
+#                    target_phase, horizon, 
+#                    underprediction, overprediction, 
+#                    `WIS - median` = interval_score_0.5, 
+#                    `WIS - sd` = interval_score_sd)]
+#     
+#     tables[[name]] <- make_score_table(tmp_df, 
+#                                        group = FALSE, 
+#                                        full_width = FALSE) %>%
+#       pack_rows(tar, 1, nrow(tmp_df), indent = FALSE)
+#     
+#     save_kable(tables[[name]],
+#                file = here("analysis", "plots",
+#                            paste0("table-", gsub(" ", "", name), ".png")))
+#   }
+# }
 
 ```
 
@@ -921,7 +918,7 @@ p <- scores_target[model %in% regular_models] %>%
   distribution_plot_wis(x = "bias") + 
   scale_x_continuous() + 
   facet_wrap(~ target_phase, ncol = 3) + 
-  geom_vline(xintercept = 0, color = "white", size = 1) + 
+  geom_vline(xintercept = 0, color = "black", size = 1.4) + 
   labs(y = "Bias")
 
 ggsave(here("analysis", "plots", "distribution_bias_phases.png"), plot = p)
