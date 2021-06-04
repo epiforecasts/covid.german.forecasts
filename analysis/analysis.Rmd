@@ -874,7 +874,7 @@ tbl[,
 #         by = c("target_end_date", "location_name", "target_type"))
 
 scores_target <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "target_type", "classification"), 
   compute_relative_skill = TRUE
 ) 
