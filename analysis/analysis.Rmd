@@ -774,92 +774,92 @@ ggsave("plots/distribution_scores_ae.png", pl_ae, height = 9)
 
 
 ```{r fig.height=10, fig.width=15}
-
-coverage_tables <- eval_forecasts(
-  filtered_data[grepl("2", target)], 
-  summarise_by = c("model", "target_phase", "classification", "range", "horizon"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
-)[range %in% c(50, 90), 
-                   .(model, target_phase, coverage, classification, range)] %>%
-  dcast(formula = ... ~ range, value.var = "coverage")
-
-scores_tables <- eval_forecasts(
-  filtered_data[grepl("2", target)], 
-  summarise_by = c("model", "target_phase", "classification", "horizon"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
-)
-
-tbl <- scores_tables %>%
-  merge(coverage_tables, all.x = TRUE, by = c("model", "target_phase", "classification")) 
-
- tbl <- tbl[, lapply(.SD, FUN = function(x) {
-    if (is.numeric(x)) {
-      return(round(signif(x, 3), 2))
-    } else {
-      return(x)
-    }
-  })]
-
-tables <- list()
-table_dfs <- list()
-targets <- unique(tbl$target_phase)
-
-for (tar in targets) {
-  tables[[tar]] <- make_score_table(tbl[target_phase == tar])
-}
-
-for (tar in targets) {
-  table_dfs[[tar]] <- tbl[target_phase == tar, 
-                          .("Model" = model, 
-                            # "Target" = target_phase,
-                            "WIS" = interval_score,
-                            # "Rel. skill" = scaled_rel_skill, 
-                            "Sharpn." = sharpness, 
-                            "Underp.." = underprediction, 
-                            "Overp." = overprediction)#, 
-                            # "Bias" = bias,
-                            # "50%-Cov." = `50`, 
-                            # "90%-Cov." = `90`)
-                          ]
-}
-
-
-# make plots with tables
-library(gridExtra)
-
-tbl_plt <- grid.arrange(tableGrob(table_dfs[[1]]), 
-             tableGrob(table_dfs[[2]]), 
-             tableGrob(table_dfs[[3]]), 
-             tableGrob(table_dfs[[4]]), 
-             tableGrob(table_dfs[[5]]), 
-             tableGrob(table_dfs[[6]]), 
-             nrow = 2) 
-
-tbl_plt <- ggplotify::as.ggplot(tbl_plt)
-
-tbl_plt
-
-ggsave("plots/distribution_scores_table.png")
-
-library(gt)
-
-tbl[, 
-    .("Model" = model, 
-      "Target" = target_phase,
-      "WIS" = interval_score,
-      # "Rel. skill" = scaled_rel_skill, 
-      "Sharpn." = sharpness, 
-      "Underp.." = underprediction, 
-      "Overp." = overprediction)#, 
-    # "Bias" = bias,
-    # "50%-Cov." = `50`, 
-    # "90%-Cov." = `90`)
-] %>%
-  gt(rowname_col = "Model", 
-     groupname_col = "Target") 
-
+# 
+# coverage_tables <- eval_forecasts(
+#   filtered_data[grepl("2", target)], 
+#   summarise_by = c("model", "target_phase", "classification", "range", "horizon"), 
+#   compute_relative_skill = TRUE, 
+#   baseline = "Baseline"
+# )[range %in% c(50, 90), 
+#                    .(model, target_phase, coverage, classification, range)] %>%
+#   dcast(formula = ... ~ range, value.var = "coverage")
+# 
+# scores_tables <- eval_forecasts(
+#   filtered_data[grepl("2", target)], 
+#   summarise_by = c("model", "target_phase", "classification", "horizon"), 
+#   compute_relative_skill = TRUE, 
+#   baseline = "Baseline"
+# )
+# 
+# tbl <- scores_tables %>%
+#   merge(coverage_tables, all.x = TRUE, by = c("model", "target_phase", "classification")) 
+# 
+#  tbl <- tbl[, lapply(.SD, FUN = function(x) {
+#     if (is.numeric(x)) {
+#       return(round(signif(x, 3), 2))
+#     } else {
+#       return(x)
+#     }
+#   })]
+# 
+# tables <- list()
+# table_dfs <- list()
+# targets <- unique(tbl$target_phase)
+# 
+# for (tar in targets) {
+#   tables[[tar]] <- make_score_table(tbl[target_phase == tar])
+# }
+# 
+# for (tar in targets) {
+#   table_dfs[[tar]] <- tbl[target_phase == tar, 
+#                           .("Model" = model, 
+#                             # "Target" = target_phase,
+#                             "WIS" = interval_score,
+#                             # "Rel. skill" = scaled_rel_skill, 
+#                             "Sharpn." = sharpness, 
+#                             "Underp.." = underprediction, 
+#                             "Overp." = overprediction)#, 
+#                             # "Bias" = bias,
+#                             # "50%-Cov." = `50`, 
+#                             # "90%-Cov." = `90`)
+#                           ]
+# }
+# 
+# 
+# # make plots with tables
+# library(gridExtra)
+# 
+# tbl_plt <- grid.arrange(tableGrob(table_dfs[[1]]), 
+#              tableGrob(table_dfs[[2]]), 
+#              tableGrob(table_dfs[[3]]), 
+#              tableGrob(table_dfs[[4]]), 
+#              tableGrob(table_dfs[[5]]), 
+#              tableGrob(table_dfs[[6]]), 
+#              nrow = 2) 
+# 
+# tbl_plt <- ggplotify::as.ggplot(tbl_plt)
+# 
+# tbl_plt
+# 
+# ggsave("plots/distribution_scores_table.png")
+# 
+# library(gt)
+# 
+# tbl[, 
+#     .("Model" = model, 
+#       "Target" = target_phase,
+#       "WIS" = interval_score,
+#       # "Rel. skill" = scaled_rel_skill, 
+#       "Sharpn." = sharpness, 
+#       "Underp.." = underprediction, 
+#       "Overp." = overprediction)#, 
+#     # "Bias" = bias,
+#     # "50%-Cov." = `50`, 
+#     # "90%-Cov." = `90`)
+# ] %>%
+#   gt(rowname_col = "Model", 
+#      groupname_col = "Target") 
+# 
 
 
 ```
@@ -906,7 +906,7 @@ ggsave(here("analysis", "plots", "wis-components.png"))
 #         by = c("target_end_date", "location_name", "target_type"))
 
 scores_target <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "target_type", "classification", "forecast_date")
 ) 
 
@@ -928,7 +928,7 @@ ggsave(here("analysis", "plots", "distribution_bias_phases.png"), plot = p)
 
 ```{r, eval = TRUE}
 scores_full <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "location_target", "horizon", "forecast_date"), 
   compute_relative_skill = FALSE, 
   baseline = "Baseline"
@@ -983,7 +983,7 @@ ggsave("plots/scores_horizons.png")
 #         by = c("target_end_date", "location_name", "target_type"))
 
 scores_target <- eval_forecasts(
-  filtered_data, 
+  filtered_data[model %in% regular_models], 
   summarise_by = c("model", "target_type", "classification", "range", "quantile"), 
   compute_relative_skill = FALSE, 
   pit_plots = TRUE

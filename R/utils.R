@@ -50,13 +50,13 @@ dates_to_epiweek <- function(df){
 #' `epiweek`.
 #' @return A data frame grouped by week.
 #' @export
-#' @importFrom grates as_yrwk
+#' @importFrom grates as_yearweek
 #' @importFrom dplyr filter group_by summarise ungroup select
 make_weekly <- function(inc) {
   inc_weekly <- inc %>%
     dates_to_epiweek() %>% 
     filter(epiweek_full == TRUE) %>% 
-    mutate(year_week = as_yrwk(date, firstday = 7L)) %>%
+    mutate(year_week = as_yearweek(date, firstday = 7L)) %>%
     group_by(location, location_name, year_week) %>%
     summarise(value = sum(value), 
               target_end_date = max(date),
