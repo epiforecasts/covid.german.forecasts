@@ -26,7 +26,8 @@ file_paths <- purrr::map(folders,
                            return(out)}) %>%
   unlist()
 file_paths <- file_paths[grepl(".csv", file_paths)]
-file_paths <- file_paths[!(grepl("EpiExpert_Rt", file_paths))]
+file_paths <- file_paths[!(grepl("EpiExpert_Rt", file_paths)) & 
+                           !(grepl("included_models", file_paths))]
   
 # load all past forecasts ------------------------------------------------------
 # ceate a helper function to get model name from a file path
