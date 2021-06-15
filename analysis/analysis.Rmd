@@ -59,10 +59,10 @@ truth_and_pred_plot <- function(df) {
                  size = 1.7,
                  alpha = 1,
                  position = position_dodge(width = 4)) + 
-    geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
-                   size = 1.7,
-                   alpha = 0.1,
-                   position = position_dodge(width = 4)) +   
+    # geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
+    #                size = 1.7,
+    #                alpha = 0.1,
+    #                position = position_dodge(width = 4)) +   
     geom_point(aes(shape = classification)) + 
   geom_line() + 
   theme_light() + 
