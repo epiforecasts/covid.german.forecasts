@@ -184,7 +184,7 @@ for (i in 1:4) {
   
   scores_over_time_deaths <- scores_target_forecastdate[horizon == i & target_type == "death"] %>%
     scores_over_time_plot(y = "interval_score") + 
-    scale_color_manual(values = colcases) + 
+    scale_color_manual(values = coldeaths) + 
     annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
              xmax = max(forecast_dates$death_not_scored) + 14,
              ymin = 0,
@@ -677,7 +677,8 @@ distribution_plot_wis <- function(df, x = "interval_score") {
     labs(y = "Model", x = "Weighted interval score") + 
   scale_x_continuous(labels = scales::label_number(suffix = "k", 
                                                    scale = 1e-3, 
-                                                   accuracy = NULL))
+                                                   accuracy = NULL)) + 
+    theme_light()
 }
 
 
@@ -950,7 +951,8 @@ scores_full %>%
   #           position = position_dodge2(width = 0.5), 
   #           size = 2) +
   # theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  scale_color_brewer(palette = "Accent") + 
+  scale_color_manual(values = coldeaths) + 
+  scale_fill_manual(values = coldeaths) + 
   geom_point(data = means, 
              mapping = aes(y = meanval, fill = model),
              color = "black",
@@ -965,7 +967,6 @@ scores_full %>%
              shape = 22,
              size = 2,
              position = position_dodge2(width = 0.5)) + 
-  scale_fill_brewer(palette = "Accent") + 
   scale_y_log10() + 
   facet_wrap( ~ location_target, scales = "free") + 
   theme(legend.position = "bottom")
