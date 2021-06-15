@@ -52,25 +52,27 @@ ggsave(here("analysis", "plots", "daily_truth.png"))
 
 ```{r truth-vs-forecasts, fig.height=12, fig.width=15}
 # create helper function for the plot ------------------------------------------
-truth_and_pred_plot <- function(df) {
+truth_and_pred_plot <- function(df, ttype = "case") {
   p <- df %>%
-  ggplot(aes(y = true_value, x = target_end_date)) + 
-  geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = model), 
-                 size = 1.7,
-                 alpha = 1,
-                 position = position_dodge(width = 4)) + 
+    dplyr::filter(target_type == ttype) %>%
+    ggplot(aes(y = true_value, x = target_end_date)) + 
+    geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = model), 
+                   size = 1.7,
+                   alpha = 1,
+                   position = position_dodge(width = 4)) + 
     # geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
     #                size = 1.7,
     #                alpha = 0.1,
     #                position = position_dodge(width = 4)) +   
-    geom_point(aes(shape = classification)) + 
-  geom_line() + 
-  theme_light() + 
-  facet_wrap(~ location_target, scales = "free", ncol = 2) + 
-  theme(legend.position = "bottom") + 
-  # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
-  scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
-                          max(forecast_dates$full_hub_period)))
+    geom_point(data = unfiltered_data[target_type == ttype], 
+               aes(shape = classification)) + 
+    geom_line(data = unfiltered_data[target_type == ttype]) + 
+    theme_light() + 
+    facet_wrap(~ location_target, scales = "free", ncol = 2) + 
+    theme(legend.position = "bottom") + 
+    # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
+    scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 7, 
+                            max(forecast_dates$full_hub_period)))
   return(p)
 }
 
@@ -98,8 +100,7 @@ df <- merge(
 for (i in 1:4) {
   # plot for cases
   truth_vs_forecast_cases <- df[grepl(i, target)] %>%
-    dplyr::filter(target_type == "case") %>%
-    truth_and_pred_plot() + 
+    truth_and_pred_plot(ttype = "case") + 
     scale_color_manual(values = colcases) + 
     labs(y = "Cases", x = "")
     
@@ -112,8 +113,7 @@ for (i in 1:4) {
   
   # plot for deaths
   truth_vs_forecast_deaths <- df[grepl(i, target)] %>%
-  dplyr::filter(target_type == "death") %>%
-  truth_and_pred_plot()  + 
+  truth_and_pred_plot(ttype = "death")  + 
   scale_color_manual(values = coldeaths) + 
   annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
                 xmax = max(forecast_dates$death_not_scored) + 14,
