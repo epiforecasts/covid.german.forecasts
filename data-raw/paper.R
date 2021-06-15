@@ -100,7 +100,7 @@ usethis::use_data(prediction_data, overwrite = TRUE)
 
 
 # store names of regular models and ensemble models ----------------------------
-regular_models <- c("Renewal", "Baseline", "Hub-ensemble", "Crowd forecast", "Convolution")
+regular_models <- c("Renewal", "Hub-ensemble", "Crowd forecast", "Convolution")
 usethis::use_data(regular_models, overwrite = TRUE)
 
 ensemble_models <- unique(prediction_data$model)

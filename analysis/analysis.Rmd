@@ -18,14 +18,14 @@ library(RColorBrewer)
 library(patchwork)
 library(stringr)
 library(covid.german.forecasts)
+library(grates)
+library(ggdist)
+
+# define colors for deaths and cases
+colcases <- brewer.pal(name = "Accent", n = 5)[-c(1, 4)]
+coldeaths <- brewer.pal(name = "Accent", n = 5)[-4]
 
 ```
-
-## Todo
-
--   [ ] final decision on the Christmas period. Do we want to also exclude target end dates, or just forceast dates? Do we want to exclude the 2nd of January?
--   [ ] look more closely into the stratification: do we want the current thing or do we want something else that has the outcome in it as well? One thing I thought was have another category: inflection or no inflection and also score that?
--   [ ] Talk to Johannes about whether we want to score log forecasts and log truth values instead. I for now removed that part for the following reasons: I currently don't have a good feeling for what it does. I'm somewhat hesitant that establishing a completely new way of scoring forecasts could be beyond the scope of this paper. Very happy to switch to it entirely if we agree it is the better metric, but not sure we are at that point yet.
 
 ## Visualsiation of daily data
 
@@ -34,10 +34,13 @@ dailytruth_data %>%
   dplyr::filter(target_end_date >= min(forecast_dates$full_hub_period), 
                 target_end_date <= max(forecast_dates$full_hub_period)) %>%
   ggplot(aes(y = true_value, x = target_end_date)) + 
-  geom_point(size = 0.3) + 
-  geom_line(size = 0.5) + 
+  geom_point(size = 0.3, alpha = 0.4) + 
+  geom_line(size = 0.5, alpha = 0.4) + 
+  geom_line(data = truth_data, aes(y = true_value / 7)) + 
   facet_grid(target_type ~ location_name, scales = "free") + 
   labs(y = "Observed values", x = "Date") + 
+  scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
+                            max(forecast_dates$full_hub_period)))
   theme_light()
 
 ggsave(here("analysis", "plots", "daily_truth.png"))
@@ -53,15 +56,19 @@ truth_and_pred_plot <- function(df) {
   p <- df %>%
   ggplot(aes(y = true_value, x = target_end_date)) + 
   geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = model), 
-                 size = 1.5,
+                 size = 1.7,
                  alpha = 1,
-                 position = position_dodge(width = 6)) + 
-  geom_point(aes(shape = classification)) + 
+                 position = position_dodge(width = 4)) + 
+    geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
+                   size = 1.7,
+                   alpha = 0.1,
+                   position = position_dodge(width = 4)) +   
+    geom_point(aes(shape = classification)) + 
   geom_line() + 
   theme_light() + 
   facet_wrap(~ location_target, scales = "free", ncol = 2) + 
   theme(legend.position = "bottom") + 
-  theme(panel.background = element_rect(fill = "#e1f0fe")) + 
+  # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
                           max(forecast_dates$full_hub_period)))
   return(p)
@@ -77,7 +84,7 @@ truth_and_pred_plot <- function(df) {
 #   (and remove classification by forecast_date that is already present)
 
 df <- unfiltered_data[model %in% regular_models &
-                        quantile %in% c(0.025, 0.25, 0.75, 0.975)] %>%
+                        quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
   dcast(... ~ quantile, value.var = "prediction")
 df <- merge(
   df[, c("classification", "speed") := NULL], 
@@ -93,7 +100,7 @@ for (horizon in 1:4) {
   truth_vs_forecast_cases <- df[grepl(horizon, target)] %>%
     dplyr::filter(target_type == "case") %>%
     truth_and_pred_plot() + 
-    scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[-2]) + 
+    scale_color_manual(values = colcases) + 
     labs(y = "Cases", x = "")
     
   filename <- here("analysis", "plots", 
@@ -107,7 +114,7 @@ for (horizon in 1:4) {
   truth_vs_forecast_deaths <- df[grepl(horizon, target)] %>%
   dplyr::filter(target_type == "death") %>%
   truth_and_pred_plot()  + 
-  scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
+  scale_color_manual(values = coldeaths) + 
   annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
                 xmax = max(forecast_dates$death_not_scored) + 14,
                 ymin = 0,
@@ -123,7 +130,6 @@ for (horizon in 1:4) {
 }
 ```
 
-
 ### Plots that visualise the achieved scores over time
 
 ```{r scores-over-time, fig.height=10, fig.width=15}
@@ -137,11 +143,10 @@ scores_target_forecastdate <- eval_forecasts(
   summarise_by = summarise_by
 )
 
-pairwise <- pairwise_comparison(scores_target_forecastdate, 
-                                summarise_by = summarise_by, 
-                                baseline = "Baseline")
-pairwise <- pairwise[compare_against == "Baseline"]
-
+# pairwise <- pairwise_comparison(scores_target_forecastdate, 
+#                                 summarise_by = summarise_by, 
+#                                 baseline = "Baseline")
+# pairwise <- pairwise[compare_against == "Baseline"]
 
 # create helper function to plot forecasts -------------------------------------
 scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
@@ -156,18 +161,19 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   #               xmax = max(forecast_dates$christmas) + 14,
   #               ymin = 0,
   #               ymax = Inf), fill = "lightgrey", alpha = 0.002) +
-  theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  scale_y_log10() + 
+  # theme(panel.background = element_rect(fill = "#e1f0fe")) +
+  # scale_y_log10() + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
                           max(forecast_dates$full_hub_period)))
   return(p)
 }
 
+
 # create plots for all horizons ------------------------------------------------
 for (i in 1:4) {
-  scores_over_time_case <- pairwise[horizon == i & target_type == "case"] %>%
-    scores_over_time_plot() + 
-    scale_color_manual(values = brewer.pal(name = "Accent", n = 5)[-2]) + 
+  scores_over_time_case <- scores_target_forecastdate[horizon == i & target_type == "case"] %>%
+    scores_over_time_plot(y = "interval_score") + 
+    scale_color_manual(values = colcases) + 
     labs(y = "WIS rel. to baseline", x = "")
   
   ggsave(here("analysis", "plots", paste0("score-over-time-cases-", i, ".png")), 
@@ -176,8 +182,8 @@ for (i in 1:4) {
   saveRDS(scores_over_time_case, 
           here("analysis", "plots", paste0("score-over-time-cases-", i, ".RDS")))
   
-  scores_over_time_deaths <- pairwise[horizon == i & target_type == "death"] %>%
-    scores_over_time_plot() + 
+  scores_over_time_deaths <- scores_target_forecastdate[horizon == i & target_type == "death"] %>%
+    scores_over_time_plot(y = "interval_score") + 
     scale_color_brewer(palette = "Accent") + 
     annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
              xmax = max(forecast_dates$death_not_scored) + 14,
@@ -312,8 +318,7 @@ coverage <- eval_forecasts(
 df <- eval_forecasts(
   filtered_data[model %in% regular_models], 
   summarise_by = c("model", "horizon", "target_type"), 
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline", 
+  compute_relative_skill = TRUE,
   sd = TRUE, 
   quantiles = 0.5
 ) %>%
@@ -353,7 +358,6 @@ df <- eval_forecasts(
   filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]], 
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = TRUE, 
-  baseline = "Baseline", 
   sd = TRUE, 
   quantiles = 0.5,
 ) %>%
@@ -394,7 +398,6 @@ df <- eval_forecasts(
   filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]], 
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = TRUE, 
-  baseline = "Baseline", 
   sd = TRUE, 
   quantiles = 0.5,
 ) %>%
@@ -549,7 +552,6 @@ save_kable(table,
 ens <- ensemble_members %>%
   melt(id.vars = c("Date", "model"))
 
-
 epinow2_included <- ens[model == "epiforecasts-EpiNow2", "epinow" := value]
 crowd_included <- ens[model == "epiforecasts-EpiExpert", "crowd" := value]
 
@@ -589,7 +591,7 @@ comparison_ensembles <- function(models_to_plot) {
     theme_light() + 
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
     theme(legend.position = "bottom") + 
-    theme(panel.background = element_rect(fill = "#e1f0fe")) + 
+    # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
     scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
                             max(forecast_dates$full_hub_period))) + 
     labs(y = "Median forecast", x = "Date")
@@ -614,111 +616,23 @@ ggsave(here("analysis", "plots", "ensemble-with-and-without-both.png"),
 ```
 
 
-
 ------------------------------------------------------------------------
 
 ## Analyse distribution of scores
 
 ```{r}
 scores <- eval_forecasts(
-  filtered_data[(model %in% regular_models) & grepl("2", target)], 
-  summarise_by = c("model", "target_type", "location_name", "forecast_date", 
-                   "target_phase",
+  filtered_data[(model %in% regular_models)], 
+  summarise_by = c("model", "target_type", "location_name", "horizon", 
+                   "forecast_date", "target_phase",
                    "location_target", "classification"),
-  compute_relative_skill = TRUE, 
-  baseline = "Baseline"
+  compute_relative_skill = FALSE
 ) 
 
 scores[, .(sd = sd(interval_score)), by = c("model", "target_type")]
 
 scores[, target_type := paste0(str_to_title(target_type), "s overall")]
 
-# look at variance to check
-scores[, .(sd = sd(scaled_rel_skill)), by = c("model")]
-
-distribution_plot <- function(df, x = "scaled_rel_skill") {
-  df %>%
-    ggplot(aes_string(y = "model", x = x, 
-                      group = "model")) + 
-    geom_density_ridges(aes(fill = model), 
-                                  quantile_lines = TRUE, quantiles = 0.5, 
-                                  rel_min_height = 0.01) + 
-    geom_vline(aes(xintercept = 1), alpha = 0.4) + 
-    scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[2:5]) + 
-    theme(panel.background = element_rect(fill = "#e1f0fe")) +
-    theme(legend.position = "bottom") + 
-    labs(y = "Scaled relative skill") + 
-    scale_x_log10(labels = scales::number_format(accuracy = 0.1))
-}
-
-distribution_plot_wis <- function(df, x = "interval_score") {
-  df %>%
-    ggplot(aes_string(y = "model", x = x, 
-                      group = "model", fill = "model")) + 
-    geom_density_ridges(aes(fill = model), 
-                        quantile_lines = TRUE, quantiles = 0.5, 
-                        rel_min_height = 0.005, 
-                        scale = 0.9, 
-                        jittered_points = TRUE, 
-                        position = position_points_jitter(width = 0.05, height = 0),
-                        point_size = 1.5, 
-                        point_shape = 21,
-                        #point_shape = '|',
-                        point_alpha = 1, 
-                        alpha = 0.7) + 
-    geom_density_ridges(quantile_lines=TRUE,
-                        quantile_fun=function(x,...) mean(x), 
-                        linetype = "dotted", 
-                        alpha = 0, 
-                        scale = 0.9, 
-                        rel_min_height = 0.01) +
-    scale_fill_manual(values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
-    # scale_color_manual(aesthetics = "point_color", 
-    #                    values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
-    theme(panel.background = element_rect(fill = "#e1f0fe")) +
-    theme(legend.position = "bottom") + 
-    labs(y = "Model", x = "Weighted interval score") + 
-  scale_x_continuous(labels = scales::label_number(suffix = "k", 
-                                                   scale = 1e-3, 
-                                                   accuracy = NULL))
-}
-
-p_combined <- distribution_plot(df = scores[model != "Baseline"]) + 
-  facet_wrap(~ target_type, ncol = 1)
-
-p_combined_wis <- distribution_plot_wis(df = scores, 
-                                        x = "interval_score") +
-  facet_wrap(~ target_type, ncol = 1, scales = "free") + 
-  theme(plot.margin=unit(c(0,0.4,0,0),"cm")) 
-
-p_combined_ae <- distribution_plot_wis(df = scores, 
-                                        x = "aem") +
-  facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
-
-
-p <- distribution_plot(df = scores[model != "Baseline"]) + 
-  theme(axis.title.y=element_blank(),
-        axis.text.y=element_blank(), 
-        axis.ticks.y = element_blank()) + 
-  facet_wrap(~ location_target, ncol = 2)
-
-p_wis <- distribution_plot_wis(df = scores) + 
-  theme(axis.title.y=element_blank(),
-        axis.text.y=element_blank(), 
-        axis.ticks.y = element_blank()) + 
-  facet_wrap(~ location_target, ncol = 2, scale = "free")
-
-p_ae <- distribution_plot_wis(df = scores, x = "aem") + 
-  theme(axis.title.y=element_blank(),
-        axis.text.y=element_blank(), 
-        axis.ticks.y = element_blank()) + 
-  facet_wrap(~ location_target, ncol = 2, scale = "free")
-
-
-
-```
-
-```{r}
 # scores for different phases of the epidemic
 scores[, target_phase := factor(target_phase, 
                                 levels = str_to_title(c("Cases - decreasing phase", 
@@ -728,13 +642,106 @@ scores[, target_phase := factor(target_phase,
                                                         "Deaths - unclear phase", 
                                                         "Deaths - increasing phase")))]
 
+
+distribution_plot_wis <- function(df, x = "interval_score") {
+  df %>%
+    ggplot(aes_string(y = "model", x = x, 
+                      group = "model", fill = "model")) + 
+    # geom_density_ridges(aes(fill = model, color = NA),
+    #                     rel_min_height = 0.005,
+    #                     scale = 0.9,
+    #                     # jittered_points = TRUE,
+    #                     # position = position_points_jitter(width = 0.05, height = 0),
+    #                     point_size = 1.5,
+    #                     point_shape = 21,
+    #                     #point_shape = '|',
+    #                     point_alpha = 1,
+    #                     alpha = 0.3) +
+    ggdist::stat_dots(aes(color = model)) + 
+    ggdist::stat_pointinterval(point_interval = mean_qi, size = 3, shape = 16, fill = "black", .width = NA) + 
+    ggdist::stat_pointinterval(point_interval = median_qi, size = 3, shape = 15, fill = "black", .width = NA) + 
+        facet_wrap(~ target_type, ncol = 1, scales = "free") + 
+    theme(plot.margin=unit(c(0,0.4,0,0),"cm")) +
+    # geom_density_ridges(quantile_lines=TRUE,
+    #                     quantile_fun=function(x,...) mean(x), 
+    #                     linetype = "dotted", 
+    #                     alpha = 0, 
+    #                     scale = 0.9, 
+    #                     rel_min_height = 0.01) +
+    scale_fill_manual(values = coldeaths) + 
+    scale_color_manual(values = coldeaths) + 
+    # scale_color_manual(aesthetics = "point_color", 
+    #                    values = brewer.pal(name = "Accent", n = 5)[1:5]) + 
+    # theme(panel.background = element_rect(fill = "#e1f0fe")) +
+    theme(legend.position = "bottom") + 
+    labs(y = "Model", x = "Weighted interval score") + 
+  scale_x_continuous(labels = scales::label_number(suffix = "k", 
+                                                   scale = 1e-3, 
+                                                   accuracy = NULL))
+}
+
+
+for (i in 1:4) {
+  p_combined_wis <- distribution_plot_wis(df = scores[horizon == i], 
+                                          x = "interval_score") +
+    facet_wrap(~ target_type, ncol = 1, scales = "free") + 
+    theme(plot.margin=unit(c(0,0.4,0,0),"cm")) 
+  
+  p_wis <- distribution_plot_wis(df = scores[horizon == i]) + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2, scale = "free")
+  
+  p_phases_wis <- distribution_plot_wis(df = scores[horizon == i]) + 
+    facet_wrap( ~ target_phase, scales = "free_x") 
+
+  
+  pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis + 
+    plot_layout(guides = "collect") & 
+    plot_annotation(tag_levels = 'A') &
+    theme(legend.position = 'bottom') 
+  
+  ggsave(here("analysis", "plots", 
+              paste0("distribution_scores_wis-", i, ".png")), 
+         pl_wis, height = 11, width = 9)
+    
+}
+
+
+
+
+p_combined_ae <- distribution_plot_wis(df = scores, 
+                                        x = "aem") +
+  facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
+
+
+# p <- distribution_plot(df = scores[model != "Baseline"]) + 
+#   theme(axis.title.y=element_blank(),
+#         axis.text.y=element_blank(), 
+#         axis.ticks.y = element_blank()) + 
+#   facet_wrap(~ location_target, ncol = 2)
+
+
+
+p_ae <- distribution_plot_wis(df = scores, x = "aem") + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2, scale = "free")
+
+
+
+    
+
+```
+
+```{r}
 scores[, .(target_count = .N), by = c("target_phase", "model")]
 
-p_phases <- distribution_plot(df = scores[model != "Baseline"]) + 
-  facet_wrap( ~ target_phase)
+# p_phases <- distribution_plot(df = scores[model != "Baseline"]) + 
+#   facet_wrap( ~ target_phase)
 
-p_phases_wis <- distribution_plot_wis(df = scores) + 
-  facet_wrap( ~ target_phase, scales = "free_x") 
 
 p_phases_ae <- distribution_plot_wis(df = scores, x = "aem") + 
   facet_wrap( ~ target_phase, scales = "free_x")
@@ -746,21 +753,15 @@ scores[, .(n = .N), by = "target_phase"]
 
 ```{r fig.height=10, fig.width=15}
 
-pl <- wrap_plots(p_combined, p, widths = c(1, 2)) / p_phases + 
-  plot_layout(guides = "collect") & 
-  plot_annotation(tag_levels = 'A') &
-  theme(legend.position = 'bottom') 
+# pl <- wrap_plots(p_combined, p, widths = c(1, 2)) / p_phases + 
+#   plot_layout(guides = "collect") & 
+#   plot_annotation(tag_levels = 'A') &
+#   theme(legend.position = 'bottom') 
+# 
+# ggsave("plots/distribution_scores.png", plot = pl, height = 9)
 
-ggsave("plots/distribution_scores.png", plot = pl, height = 9)
 
 
-
-pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis + 
-  plot_layout(guides = "collect") & 
-  plot_annotation(tag_levels = 'A') &
-  theme(legend.position = 'bottom') 
-
-ggsave("plots/distribution_scores_wis.png", pl_wis, height = 11, width = 9)
 
 pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
   plot_layout(guides = "collect") & 
@@ -931,8 +932,7 @@ ggsave(here("analysis", "plots", "distribution_bias_phases.png"), plot = p)
 scores_full <- eval_forecasts(
   filtered_data[model %in% regular_models], 
   summarise_by = c("model", "location_target", "horizon", "forecast_date"), 
-  compute_relative_skill = FALSE, 
-  baseline = "Baseline"
+  compute_relative_skill = FALSE
 )
 
 means <- scores_full[, .(meanval = mean(interval_score), 
@@ -949,7 +949,7 @@ scores_full %>%
   #           aes(group = model, y = meanval, color = model), 
   #           position = position_dodge2(width = 0.5), 
   #           size = 2) +
-  theme(panel.background = element_rect(fill = "#e1f0fe")) +
+  # theme(panel.background = element_rect(fill = "#e1f0fe")) +
   scale_color_brewer(palette = "Accent") + 
   geom_point(data = means, 
              mapping = aes(y = meanval, fill = model),
@@ -1014,8 +1014,7 @@ scores <- list()
 # scores for restricted data set
 scores_full <- eval_forecasts(filtered_data, 
                               summarise_by = c("model", "target_type", "target"), 
-                              compute_relative_skill = TRUE, 
-                              baseline = "Baseline")
+                              compute_relative_skill = TRUE)
 
 scores[["full"]] <- 
   scores_full[, .(model, target_type, scaled_rel_skill, interval_score, target,
@@ -1132,6 +1131,209 @@ plot_df %>%
   geom_smooth(method='lm', formula= y~x)
 
 ggsave("plots/skill-vs-forecast-freq.png")
+
+
+```
+
+
+``` {r}
+
+scores <- eval_forecasts(filtered_data[model %in% regular_models], 
+                         summarise_by = c("model", "target_type", "horizon"), 
+                         quantiles = 0.5, 
+                         sd = TRUE)
+
+# mean performance
+p_mean <- scores %>%
+  ggplot(aes(x = horizon, y = interval_score, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
+  
+
+# median performance
+p_median <- scores %>%
+  ggplot(aes(x = horizon, y = interval_score_0.5, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-median.png"))
+
+# sd of performance
+p_wis_sd <- scores %>%
+  ggplot(aes(x = horizon, y = interval_score_sd, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-wis-sd.png"))
+
+
+# sharpness of performance
+p_sharpness <- scores %>%
+  ggplot(aes(x = horizon, y = sharpness, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
+
+# absolute error of performance
+p_aem <- scores %>%
+  ggplot(aes(x = horizon, y = aem, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-aem.png"))
+
+# bias
+p_bias <- scores %>%
+  ggplot(aes(x = horizon, y = bias, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-bias.png"))
+
+# coverage
+scores <- eval_forecasts(filtered_data[model %in% regular_models], 
+                         summarise_by = c("model", "target_type", "horizon", "range"), 
+                         quantiles = 0.5, 
+                         sd = TRUE)
+
+scores[range %in% c(50, 90)] %>%
+  ggplot(aes(x = horizon, y = coverage, group = range, color = range)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(model ~ target_type , scales = "free_y")
+
+p_cov50 <- scores[range %in% c(50)] %>%
+  ggplot(aes(x = horizon, y = coverage, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type) + 
+  geom_hline(yintercept = 0.5, linetype = "dashed") +
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-coverage50.png"))
+
+
+p_cov90 <- scores[range %in% c(90)] %>%
+  ggplot(aes(x = horizon, y = coverage, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type) + 
+  geom_hline(yintercept = 0.9, linetype = "dashed") +
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths)
+
+ggsave(here("analysis", "plots", "aggregate-performance-coverage90.png"))
+
+
+p_combined <- (p_mean + p_median) / 
+  (p_aem + p_wis_sd) / 
+  (p_sharpness + p_bias) / 
+  (p_cov50 + p_cov90) +  
+    plot_layout(guides = "collect") & 
+    plot_annotation(tag_levels = 'A') &
+    theme(legend.position = 'bottom') 
+
+ggsave(here("analysis", "plots", "aggregate-performance-all.png"), 
+       height = 12, width = 10)
+
+
+
+```
+
+
+
+
+## Plots with all forecasts
+
+```{r}
+# only select every second forecast date to stratify
+df <- unfiltered_data[model %in% regular_models &
+                        quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
+  dcast(... ~ quantile, value.var = "prediction")
+df <- merge(
+  df[, c("classification", "speed") := NULL], 
+  copy(epitrend)[, forecast_date := NULL], 
+  by = c("target_end_date", "location_name", "target_type")
+)
+
+df[, forecast_date := as.Date(forecast_date)]
+df[, i := as.numeric(forecast_date - as.Date(min(forecast_date))) %% 2 + 1]
+
+plot_forecast <- function(df, m = "Renewal") {
+  min_date <- min(forecast_dates$unfiltered)
+  plot_dates <- c((min_date - c(28, 21, 14, 7)), forecast_dates$unfiltered)
+  plot_dates <- plot_dates - 2
+  d <- copy(truth_data)[, location_target := paste0(str_to_sentence(target_type), 
+                                                    "s", " in ", location_name)]
+  daily <- copy(dailytruth_data)[, location_target := paste0(str_to_sentence(target_type), 
+                                                             "s", " in ", location_name)]
+  daily[, week := as_yearweek(target_end_date, firstday = 7L)]
+  daily[, sum_val := sum(true_value), by = c("week", "location_target")]
+  daily[, scaled_val := true_value - sum_val / 7]
+  
+  df <- copy(df)[, forecast_date := as.factor(forecast_date)]
+  
+  df[model == m] %>%
+    ggplot(aes(y = true_value, x = target_end_date)) + 
+    geom_line() + 
+    geom_line(data = d[target_end_date %in% plot_dates],
+              aes(y = true_value, x = target_end_date)) +
+    geom_line(data = daily[target_end_date >= min(plot_dates) & target_end_date <= max(plot_dates)],
+              aes(y = scaled_val, x = target_end_date), alpha = 0.4) +
+    geom_vline(aes(xintercept = as.Date(forecast_date), 
+                   color = forecast_date), alpha = 0.3, size = 0.4) + 
+    ggplot2::geom_ribbon(ggplot2::aes(ymin = `0.025`, ymax = `0.975`, 
+                                      group = forecast_date, 
+                                      fill = forecast_date), alpha = 0.3) +
+    ggplot2::geom_ribbon(ggplot2::aes(ymin = `0.25`, ymax = `0.75`, 
+                                      group = forecast_date, 
+                                      fill = forecast_date), alpha = 0.5) +
+    ggplot2::geom_line(aes(y = `0.5`,group = forecast_date, 
+                           colour = forecast_date), alpha = 1) +
+    geom_point() + 
+    theme_light() + 
+    facet_grid(location_target ~ i, scale = "free_y") + 
+    theme(legend.position = "bottom") 
+    # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
+    # scale_y_log10() 
+}
+
+
+
+for (m in c("Renewal", "Convolution", "Crowd forecast")) {
+  p <- plot_forecast(df[horizon <= 2], m = m) 
+  
+  saveRDS(p, file = here("analysis", "plots", 
+                         paste0("all-forecasts-", m,".RDS")))
+  
+  ggsave(here("analysis", "plots", 
+                         paste0("all-forecasts-", m,".png")), 
+         height = 15, width = 10)
+  
+}
+
 
 
 ```

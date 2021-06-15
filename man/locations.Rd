@@ -39,7 +39,7 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 266 
 
 An object of class \code{character} of length 8.
 
-An object of class \code{character} of length 5.
+An object of class \code{character} of length 4.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 273 rows and 6 columns.
 }
