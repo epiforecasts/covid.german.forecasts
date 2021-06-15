@@ -106,7 +106,7 @@ for (i in 1:4) {
     labs(y = "Cases", x = "")
     
   filename <- here("analysis", "plots", 
-                   paste0("truth-and-", horizon, "-wk-ahead_cases"))
+                   paste0("truth-and-", i, "-wk-ahead_cases"))
   ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_cases)
   
   saveRDS(truth_vs_forecast_cases, 
@@ -164,7 +164,7 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   #               ymax = Inf), fill = "lightgrey", alpha = 0.002) +
   # theme(panel.background = element_rect(fill = "#e1f0fe")) +
   # scale_y_log10() + 
-  scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
+  scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 5, 
                           max(forecast_dates$full_hub_period)))
   return(p)
 }
