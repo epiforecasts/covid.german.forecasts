@@ -95,9 +95,9 @@ df <- merge(
 
 # create plots for deaths and cases --------------------------------------------
 
-for (horizon in 1:4) {
+for (i in 1:4) {
   # plot for cases
-  truth_vs_forecast_cases <- df[grepl(horizon, target)] %>%
+  truth_vs_forecast_cases <- df[grepl(i, target)] %>%
     dplyr::filter(target_type == "case") %>%
     truth_and_pred_plot() + 
     scale_color_manual(values = colcases) + 
@@ -111,7 +111,7 @@ for (horizon in 1:4) {
           paste0(filename, ".RDS"))
   
   # plot for deaths
-  truth_vs_forecast_deaths <- df[grepl(horizon, target)] %>%
+  truth_vs_forecast_deaths <- df[grepl(i, target)] %>%
   dplyr::filter(target_type == "death") %>%
   truth_and_pred_plot()  + 
   scale_color_manual(values = coldeaths) + 
@@ -122,7 +122,7 @@ for (horizon in 1:4) {
     labs(y = "Deaths", x = "")
   
   filename <- here("analysis", "plots", 
-                   paste0("truth-and-", horizon, "-wk-ahead_deaths"))
+                   paste0("truth-and-", i, "-wk-ahead_deaths"))
   ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_deaths)
   
   saveRDS(truth_vs_forecast_deaths, 
@@ -184,7 +184,7 @@ for (i in 1:4) {
   
   scores_over_time_deaths <- scores_target_forecastdate[horizon == i & target_type == "death"] %>%
     scores_over_time_plot(y = "interval_score") + 
-    scale_color_brewer(palette = "Accent") + 
+    scale_color_manual(values = colcases) + 
     annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
              xmax = max(forecast_dates$death_not_scored) + 14,
              ymin = 0,
