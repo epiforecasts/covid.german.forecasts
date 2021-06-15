@@ -71,10 +71,11 @@ truth_and_pred_plot <- function(df, ttype = "case") {
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
     theme(legend.position = "bottom") + 
     # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
-    scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 7, 
+    scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 5, 
                             max(forecast_dates$full_hub_period)))
   return(p)
 }
+
 
 
 
