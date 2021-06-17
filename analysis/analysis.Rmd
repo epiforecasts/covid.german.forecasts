@@ -658,6 +658,8 @@ distribution_plot_wis <- function(df, x = "interval_score") {
     #                     #point_shape = '|',
     #                     point_alpha = 1,
     #                     alpha = 0.3) +
+    ggdist::stat_slab(alpha = 0.3, scale = 0.8, normalize = "panels") +
+  # ggridges::geom_density_ridges(aes(color = NA), scale = 1.3) + 
     ggdist::stat_dots(aes(color = model)) + 
     ggdist::stat_pointinterval(point_interval = mean_qi, size = 3, shape = 16, fill = "black", .width = NA) + 
     ggdist::stat_pointinterval(point_interval = median_qi, size = 3, shape = 15, fill = "black", .width = NA) + 
