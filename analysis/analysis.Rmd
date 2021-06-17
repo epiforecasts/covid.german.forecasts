@@ -319,7 +319,7 @@ coverage <- eval_forecasts(
 df <- eval_forecasts(
   filtered_data[model %in% regular_models], 
   summarise_by = c("model", "horizon", "target_type"), 
-  compute_relative_skill = TRUE,
+  compute_relative_skill = FALSE,
   sd = TRUE, 
   quantiles = 0.5
 ) %>%
@@ -358,7 +358,7 @@ coverage <- eval_forecasts(
 df <- eval_forecasts(
   filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]], 
   summarise_by = c("model", "horizon", "target_type"), 
-  compute_relative_skill = TRUE, 
+  compute_relative_skill = FALSE, 
   sd = TRUE, 
   quantiles = 0.5,
 ) %>%
