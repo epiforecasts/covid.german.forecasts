@@ -327,6 +327,7 @@ df <- eval_forecasts(
 
 del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
                         !(grepl("interval", names(df)))]
+del_cols <- c(del_cols, "coverage_deviation")
 df[, (del_cols) := NULL]
 
 setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
@@ -405,6 +406,7 @@ df <- eval_forecasts(
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
 del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
                         !(grepl("interval", names(df)))]
+del_cols <- c(del_cols, "coverage_deviation")
 df[, (del_cols) := NULL]
 
 setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
@@ -494,6 +496,7 @@ df <- eval_forecasts(
 
 del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
                         !(grepl("interval", names(df)))]
+del_cols <- c(del_cols, "coverage_deviation")
 df[, (del_cols) := NULL]
 
 setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
@@ -1154,7 +1157,9 @@ p_mean <- scores %>%
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "mean WIS", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
   
@@ -1166,7 +1171,9 @@ p_median <- scores %>%
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "median WIS", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-median.png"))
 
@@ -1177,7 +1184,9 @@ p_wis_sd <- scores %>%
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "WIS - standard deviation", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-wis-sd.png"))
 
@@ -1189,7 +1198,9 @@ p_sharpness <- scores %>%
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "sharpness", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
 
@@ -1200,7 +1211,9 @@ p_aem <- scores %>%
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Absolute error", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-aem.png"))
 
@@ -1211,7 +1224,9 @@ p_bias <- scores %>%
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Bias", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-bias.png"))
 
@@ -1234,7 +1249,9 @@ p_cov50 <- scores[range %in% c(50)] %>%
   facet_wrap(~ target_type) + 
   geom_hline(yintercept = 0.5, linetype = "dashed") +
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Empirical coverage", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-coverage50.png"))
 
@@ -1246,7 +1263,9 @@ p_cov90 <- scores[range %in% c(90)] %>%
   facet_wrap(~ target_type) + 
   geom_hline(yintercept = 0.9, linetype = "dashed") +
   theme(legend.position = "bottom") + 
-  scale_color_manual(values = coldeaths)
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "empirical coverage", x = "Forecast horizon") + 
+  theme_light()
 
 ggsave(here("analysis", "plots", "aggregate-performance-coverage90.png"))
 
