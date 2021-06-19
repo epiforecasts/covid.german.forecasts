@@ -26,6 +26,10 @@ library(ggthemes)
 colcases <- brewer.pal(name = "Accent", n = 5)[-c(1, 4)]
 coldeaths <- brewer.pal(name = "Accent", n = 5)[-4]
 
+# colcases <- few_pal()(4)[-1]
+# coldeaths <- few_pal()(4)
+
+
 ```
 
 ## Visualsiation of daily data
@@ -1159,9 +1163,9 @@ p_mean <- scores %>%
   theme_minimal() + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "mean WIS", x = "Forecast horizon")
+  labs(y = "mean WIS", x = NULL)
 
-ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
   
 
 # median performance
@@ -1172,10 +1176,10 @@ p_median <- scores %>%
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "median WIS", x = "Forecast horizon") + 
+  labs(y = "median WIS", x = NULL) + 
   theme_minimal()
 
-ggsave(here("analysis", "plots", "aggregate-performance-median.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-median.png"))
 
 # sd of performance
 p_wis_sd <- scores %>%
@@ -1185,10 +1189,10 @@ p_wis_sd <- scores %>%
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "WIS - standard deviation", x = "Forecast horizon") + 
+  labs(y = "WIS - sd", x = NULL) + 
   theme_minimal()
 
-ggsave(here("analysis", "plots", "aggregate-performance-wis-sd.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-wis-sd.png"))
 
 
 # sharpness of performance
@@ -1199,10 +1203,10 @@ p_sharpness <- scores %>%
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "sharpness", x = "Forecast horizon") + 
+  labs(y = "sharpness", x = NULL) + 
   theme_minimal()
 
-ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
 
 # absolute error of performance
 p_aem <- scores %>%
@@ -1212,23 +1216,25 @@ p_aem <- scores %>%
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "Absolute error", x = "Forecast horizon") + 
+  labs(y = "Absolute error", x = NULL) + 
   theme_minimal()
 
-ggsave(here("analysis", "plots", "aggregate-performance-aem.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-aem.png"))
 
 # bias
 p_bias <- scores %>%
   ggplot(aes(x = horizon, y = bias, group = model, color = model)) + 
   geom_point() + 
   geom_line() + 
-  facet_wrap(~ target_type, scales = "free_y") + 
+  facet_wrap(~ target_type) + 
+  geom_hline(yintercept = 0, linetype = "dashed") +
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "Bias", x = "Forecast horizon") + 
+  expand_limits(y=c(-0.2, 0.2)) + 
+  labs(y = "Bias", x = NULL) + 
   theme_minimal()
 
-ggsave(here("analysis", "plots", "aggregate-performance-bias.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-bias.png"))
 
 # coverage
 scores <- eval_forecasts(filtered_data[model %in% regular_models], 
@@ -1256,7 +1262,7 @@ p_cov50 <- scores[range %in% c(50)] %>%
   scale_y_continuous(labels = scales::percent)
 
 
-ggsave(here("analysis", "plots", "aggregate-performance-coverage50.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-coverage50.png"))
 
 
 p_cov90 <- scores[range %in% c(90)] %>%
@@ -1269,11 +1275,11 @@ p_cov90 <- scores[range %in% c(90)] %>%
   geom_hline(yintercept = 0.90, linetype = "dashed") +
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "empirical coverage", x = "Forecast horizon") + 
+  labs(y = "Empirical coverage", x = "Forecast horizon") + 
   expand_limits(y=c(0, 1)) + 
   scale_y_continuous(labels = scales::percent)
 
-ggsave(here("analysis", "plots", "aggregate-performance-coverage90.png"))
+# ggsave(here("analysis", "plots", "aggregate-performance-coverage90.png"))
 
 
 p_combined <- (p_mean + p_median) / 
@@ -1285,7 +1291,7 @@ p_combined <- (p_mean + p_median) /
     theme(legend.position = 'bottom') 
 
 ggsave(here("analysis", "plots", "aggregate-performance-all.png"), 
-       height = 12, width = 10)
+       height = 9.1, width = 10)
 
 
 
