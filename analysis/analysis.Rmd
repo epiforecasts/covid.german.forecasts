@@ -20,6 +20,7 @@ library(stringr)
 library(covid.german.forecasts)
 library(grates)
 library(ggdist)
+library(ggthemes)
 
 # define colors for deaths and cases
 colcases <- brewer.pal(name = "Accent", n = 5)[-c(1, 4)]
@@ -41,7 +42,7 @@ dailytruth_data %>%
   labs(y = "Observed values", x = "Date") + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
                             max(forecast_dates$full_hub_period)))
-  theme_light()
+  theme_minimal()
 
 ggsave(here("analysis", "plots", "daily_truth.png"))
 ```
@@ -67,7 +68,7 @@ truth_and_pred_plot <- function(df, ttype = "case") {
     geom_point(data = unfiltered_data[target_type == ttype], 
                aes(shape = classification)) + 
     geom_line(data = unfiltered_data[target_type == ttype]) + 
-    theme_light() + 
+    theme_minimal() + 
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
     theme(legend.position = "bottom") + 
     # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
@@ -155,7 +156,7 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   ggplot(aes(x = as.Date(target_end_date), y = get(y))) + 
   geom_line(aes(colour = model)) + 
   geom_point(aes(shape = classification, colour = model)) + 
-  theme_light() + 
+  theme_minimal() + 
   facet_wrap( ~ location_target, ncol = 2, scales = "free_y") +
   theme(legend.position = "bottom") +
   # geom_rect(aes(xmin = min(forecast_dates$christmas) + 14,
@@ -321,8 +322,7 @@ df <- eval_forecasts(
   summarise_by = c("model", "horizon", "target_type"), 
   compute_relative_skill = FALSE,
   sd = TRUE, 
-  quantiles = 0.5
-) %>%
+  quantiles = 0.5) %>%
   merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
 
 del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
@@ -592,7 +592,7 @@ comparison_ensembles <- function(models_to_plot) {
     ggplot(aes(y = `0.5`, x = target_end_date, color = model)) +
     geom_line() +
     geom_line(aes(y = true_value), color = "black") + 
-    theme_light() + 
+    theme_minimal() + 
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
     theme(legend.position = "bottom") + 
     # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
@@ -684,7 +684,7 @@ distribution_plot_wis <- function(df, x = "interval_score") {
   scale_x_continuous(labels = scales::label_number(suffix = "k", 
                                                    scale = 1e-3, 
                                                    accuracy = NULL)) + 
-    theme_light()
+    theme_minimal()
 }
 
 
@@ -1101,7 +1101,7 @@ mean(num_fc$n_forecasts)
 num_fc %>%
   ggplot(aes(x = n_forecasts)) + 
   geom_bar() + 
-  theme_light() + 
+  theme_minimal() + 
   labs(x = "Number of available submissions", 
        y = "Number of forecasters") 
 
@@ -1132,7 +1132,7 @@ plot_df %>%
   ggplot(aes(y = scaled_rel_skill, x = n_forecasts)) + 
   geom_point() + 
   geom_line() + 
-  theme_light() + 
+  theme_minimal() + 
   facet_wrap(~ target_type) + 
   labs(y = "Scaled relative skill", x = "Number of available submissions") + 
   geom_smooth(method='lm', formula= y~x)
@@ -1156,10 +1156,10 @@ p_mean <- scores %>%
   geom_point() + 
   geom_line() + 
   facet_wrap(~ target_type, scales = "free_y") + 
+  theme_minimal() + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "mean WIS", x = "Forecast horizon") + 
-  theme_light()
+  labs(y = "mean WIS", x = "Forecast horizon")
 
 ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
   
@@ -1173,7 +1173,7 @@ p_median <- scores %>%
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "median WIS", x = "Forecast horizon") + 
-  theme_light()
+  theme_minimal()
 
 ggsave(here("analysis", "plots", "aggregate-performance-median.png"))
 
@@ -1186,7 +1186,7 @@ p_wis_sd <- scores %>%
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "WIS - standard deviation", x = "Forecast horizon") + 
-  theme_light()
+  theme_minimal()
 
 ggsave(here("analysis", "plots", "aggregate-performance-wis-sd.png"))
 
@@ -1200,7 +1200,7 @@ p_sharpness <- scores %>%
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "sharpness", x = "Forecast horizon") + 
-  theme_light()
+  theme_minimal()
 
 ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
 
@@ -1213,7 +1213,7 @@ p_aem <- scores %>%
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "Absolute error", x = "Forecast horizon") + 
-  theme_light()
+  theme_minimal()
 
 ggsave(here("analysis", "plots", "aggregate-performance-aem.png"))
 
@@ -1226,7 +1226,7 @@ p_bias <- scores %>%
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "Bias", x = "Forecast horizon") + 
-  theme_light()
+  theme_minimal()
 
 ggsave(here("analysis", "plots", "aggregate-performance-bias.png"))
 
@@ -1248,10 +1248,13 @@ p_cov50 <- scores[range %in% c(50)] %>%
   geom_line() + 
   facet_wrap(~ target_type) + 
   geom_hline(yintercept = 0.5, linetype = "dashed") +
-  theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "Empirical coverage", x = "Forecast horizon") + 
-  theme_light()
+  theme_minimal() + 
+  expand_limits(y=c(0, 1)) + 
+  theme(legend.position = "bottom") + 
+  scale_y_continuous(labels = scales::percent)
+
 
 ggsave(here("analysis", "plots", "aggregate-performance-coverage50.png"))
 
@@ -1261,11 +1264,14 @@ p_cov90 <- scores[range %in% c(90)] %>%
   geom_point() + 
   geom_line() + 
   facet_wrap(~ target_type) + 
-  geom_hline(yintercept = 0.9, linetype = "dashed") +
+  theme_minimal() + 
+  theme(legend.position = "bottom") + 
+  geom_hline(yintercept = 0.90, linetype = "dashed") +
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
   labs(y = "empirical coverage", x = "Forecast horizon") + 
-  theme_light()
+  expand_limits(y=c(0, 1)) + 
+  scale_y_continuous(labels = scales::percent)
 
 ggsave(here("analysis", "plots", "aggregate-performance-coverage90.png"))
 
@@ -1280,6 +1286,44 @@ p_combined <- (p_mean + p_median) /
 
 ggsave(here("analysis", "plots", "aggregate-performance-all.png"), 
        height = 12, width = 10)
+
+
+
+```
+
+```{r}
+scores <- eval_forecasts(filtered_data[model %in% 
+                                         ensemble_models[!grepl("mean", ensemble_models)]], 
+                         summarise_by = c("model", "target_type", "horizon"), 
+                         quantiles = 0.5, 
+                         sd = TRUE)
+
+# mean performance
+p_mean_ens <- scores %>%
+  ggplot(aes(x = horizon, y = interval_score, group = model, color = model)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme_minimal() + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "mean WIS", x = "Forecast horizon")
+
+ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
+
+
+
+```
+
+
+``` {r}
+scores <- eval_forecasts(filtered_data[model %in% regular_models], 
+                         summarise_by = c("model", "target_type", "location", 
+                                          "horizon", "forecast_date"))
+scores <- scores[order(interval_score), , by = c("target_type", "location", 
+                                               "horizon", "forecast_date")]
+scores <- scores[, ranking := 1:.N, by = c("target_type", "location", 
+                                           "horizon", "forecast_date")]
 
 
 
@@ -1336,7 +1380,7 @@ plot_forecast <- function(df, m = "Renewal") {
     ggplot2::geom_line(aes(y = `0.5`,group = forecast_date, 
                            colour = forecast_date), alpha = 1) +
     geom_point() + 
-    theme_light() + 
+    theme_minimal() + 
     facet_grid(location_target ~ i, scale = "free_y") + 
     theme(legend.position = "bottom") 
     # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
