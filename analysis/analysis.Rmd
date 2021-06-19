@@ -1146,6 +1146,7 @@ ggsave("plots/skill-vs-forecast-freq.png")
 
 ```
 
+### Aggregate performance across different horizons
 
 ``` {r}
 
@@ -1203,7 +1204,7 @@ p_sharpness <- scores %>%
   facet_wrap(~ target_type, scales = "free_y") + 
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "sharpness", x = NULL) + 
+  labs(y = "Sharpness", x = NULL) + 
   theme_minimal()
 
 # ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
@@ -1255,7 +1256,7 @@ p_cov50 <- scores[range %in% c(50)] %>%
   facet_wrap(~ target_type) + 
   geom_hline(yintercept = 0.5, linetype = "dashed") +
   scale_color_manual(values = coldeaths) + 
-  labs(y = "Empirical coverage", x = "Forecast horizon") + 
+  labs(y = "Coverage - 50% PI", x = "Forecast horizon") + 
   theme_minimal() + 
   expand_limits(y=c(0, 1)) + 
   theme(legend.position = "bottom") + 
@@ -1275,7 +1276,7 @@ p_cov90 <- scores[range %in% c(90)] %>%
   geom_hline(yintercept = 0.90, linetype = "dashed") +
   theme(legend.position = "bottom") + 
   scale_color_manual(values = coldeaths) + 
-  labs(y = "Empirical coverage", x = "Forecast horizon") + 
+  labs(y = "Coverage - 90% PI", x = "Forecast horizon") + 
   expand_limits(y=c(0, 1)) + 
   scale_y_continuous(labels = scales::percent)
 
@@ -1297,6 +1298,163 @@ ggsave(here("analysis", "plots", "aggregate-performance-all.png"),
 
 ```
 
+### Aggregate performance across locations
+
+```{r}
+scores <- eval_forecasts(filtered_data[model %in% regular_models & horizon == 2], 
+                         summarise_by = c("model", "target_type", "location_name"), 
+                         quantiles = 0.5, 
+                         sd = TRUE)
+
+# mean performance
+p_mean <- scores %>%
+  ggplot(aes(x = location_name, y = interval_score, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme_minimal() + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "mean WIS", x = NULL)
+
+
+
+# mean performance
+p_mean <- scores %>%
+  ggplot(aes(x = location_name, y = interval_score, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme_minimal() + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "mean WIS", x = NULL)
+
+# ggsave(here("analysis", "plots", "aggregate-performance-mean.png"))
+  
+
+# median performance
+p_median <- scores %>%
+  ggplot(aes(x = location_name, y = interval_score_0.5, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "median WIS", x = NULL) + 
+  theme_minimal()
+
+# ggsave(here("analysis", "plots", "aggregate-performance-median.png"))
+
+# sd of performance
+p_wis_sd <- scores %>%
+  ggplot(aes(x = location_name, y = interval_score_sd, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "WIS - sd", x = NULL) + 
+  theme_minimal()
+
+# ggsave(here("analysis", "plots", "aggregate-performance-wis-sd.png"))
+
+
+# sharpness of performance
+p_sharpness <- scores %>%
+  ggplot(aes(x = location_name, y = sharpness, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Sharpness", x = NULL) + 
+  theme_minimal()
+
+# ggsave(here("analysis", "plots", "aggregate-performance-sharpness.png"))
+
+# absolute error of performance
+p_aem <- scores %>%
+  ggplot(aes(x = location_name, y = aem, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type, scales = "free_y") + 
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Absolute error", x = NULL) + 
+  theme_minimal()
+
+# ggsave(here("analysis", "plots", "aggregate-performance-aem.png"))
+
+# bias
+p_bias <- scores %>%
+  ggplot(aes(x = location_name, y = bias, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type) + 
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  expand_limits(y=c(-0.2, 0.2)) + 
+  labs(y = "Bias", x = NULL) + 
+  theme_minimal()
+
+# ggsave(here("analysis", "plots", "aggregate-performance-bias.png"))
+
+# coverage
+scores <- eval_forecasts(filtered_data[model %in% regular_models], 
+                         summarise_by = c("model", "target_type", "location_name", "range"), 
+                         quantiles = 0.5, 
+                         sd = TRUE)
+
+p_cov50 <- scores[range %in% c(50)] %>%
+  ggplot(aes(x = location_name, y = coverage, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type) + 
+  geom_hline(yintercept = 0.5, linetype = "dashed") +
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Coverage - 50% PI", x = "Location") + 
+  theme_minimal() + 
+  expand_limits(y=c(0, 1)) + 
+  theme(legend.position = "bottom") + 
+  scale_y_continuous(labels = scales::percent)
+
+
+# ggsave(here("analysis", "plots", "aggregate-performance-coverage50.png"))
+
+
+p_cov90 <- scores[range %in% c(90)] %>%
+  ggplot(aes(x = location_name, y = coverage, group = model, color = model)) + 
+  geom_point() + 
+  geom_line(linetype = "dashed", size = 0.3) + 
+  facet_wrap(~ target_type) + 
+  theme_minimal() + 
+  theme(legend.position = "bottom") + 
+  geom_hline(yintercept = 0.90, linetype = "dashed") +
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = coldeaths) + 
+  labs(y = "Coverage - 90% PI", x = "Location") + 
+  expand_limits(y=c(0, 1)) + 
+  scale_y_continuous(labels = scales::percent)
+
+# ggsave(here("analysis", "plots", "aggregate-performance-coverage90.png"))
+
+
+p_combined <- (p_mean + p_median) / 
+  (p_aem + p_wis_sd) / 
+  (p_sharpness + p_bias) / 
+  (p_cov50 + p_cov90) +  
+    plot_layout(guides = "collect") & 
+    plot_annotation(tag_levels = 'A') &
+    theme(legend.position = 'bottom') 
+
+ggsave(here("analysis", "plots", "aggregate-performance-2-weeks-locations-all.png"), 
+       height = 9.1, width = 10)
+
+```
+
+}
 ```{r}
 scores <- eval_forecasts(filtered_data[model %in% 
                                          ensemble_models[!grepl("mean", ensemble_models)]], 
