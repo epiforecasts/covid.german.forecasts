@@ -45,7 +45,7 @@ dailytruth_data %>%
   facet_grid(target_type ~ location_name, scales = "free") + 
   labs(y = "Observed values", x = "Date") + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
-                            max(forecast_dates$full_hub_period)))
+                            max(forecast_dates$full_hub_period))) + 
   theme_minimal()
 
 ggsave(here("analysis", "plots", "daily_truth.png"))
@@ -58,20 +58,24 @@ ggsave(here("analysis", "plots", "daily_truth.png"))
 ```{r truth-vs-forecasts, fig.height=12, fig.width=15}
 # create helper function for the plot ------------------------------------------
 truth_and_pred_plot <- function(df, ttype = "case") {
+  
+  trend <- copy(epitrend)[, location_target := paste0(str_to_sentence(target_type), 
+                                                    "s", " in ", location_name)]
   p <- df %>%
     dplyr::filter(target_type == ttype) %>%
     ggplot(aes(y = true_value, x = target_end_date)) + 
     geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = model), 
                    size = 1.7,
                    alpha = 1,
-                   position = position_dodge(width = 4)) + 
+                   position = position_dodge(width = 4.6)) + 
     # geom_linerange(aes(ymin = `0.025`, ymax = `0.975`, color = model), 
     #                size = 1.7,
     #                alpha = 0.1,
     #                position = position_dodge(width = 4)) +   
-    geom_point(data = unfiltered_data[target_type == ttype], 
-               aes(shape = classification)) + 
-    geom_line(data = unfiltered_data[target_type == ttype]) + 
+    geom_point(data = trend[target_type == ttype],
+               aes(shape = classification)) +
+    # geom_point(data = unfiltered_data[target_type == ttype & horizon == 2]) + 
+    geom_line(data = unfiltered_data[target_type == ttype & horizon == 2]) + 
     theme_minimal() + 
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
     theme(legend.position = "bottom") + 
@@ -80,10 +84,6 @@ truth_and_pred_plot <- function(df, ttype = "case") {
                             max(forecast_dates$full_hub_period)))
   return(p)
 }
-
-
-
-
 
 
 # prepare data for plotting ----------------------------------------------------
@@ -96,7 +96,7 @@ df <- unfiltered_data[model %in% regular_models &
   dcast(... ~ quantile, value.var = "prediction")
 df <- merge(
   df[, c("classification", "speed") := NULL], 
-  copy(epitrend)[, forecast_date := NULL], 
+  copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
   by = c("target_end_date", "location_name", "target_type")
 )
 
@@ -112,7 +112,7 @@ for (i in 1:4) {
     
   filename <- here("analysis", "plots", 
                    paste0("truth-and-", i, "-wk-ahead_cases"))
-  ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_cases)
+  # ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_cases)
   
   saveRDS(truth_vs_forecast_cases, 
           paste0(filename, ".RDS"))
@@ -129,7 +129,7 @@ for (i in 1:4) {
   
   filename <- here("analysis", "plots", 
                    paste0("truth-and-", i, "-wk-ahead_deaths"))
-  ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_deaths)
+  # ggsave(paste0(filename, ".png"), plot = truth_vs_forecast_deaths)
   
   saveRDS(truth_vs_forecast_deaths, 
           paste0(filename, ".RDS"))
@@ -142,8 +142,8 @@ for (i in 1:4) {
 # score forecasts --------------------------------------------------------------
 # obtain scores and then do pairwise comparisons between models
 summarise_by <- c("model", "horizon", "location_name", "target_type", 
-                   "forecast_date", "target_end_date", "location_target", 
-                   "classification")
+                   "forecast_date", "target_end_date", "location_target")
+
 scores_target_forecastdate <- eval_forecasts(
   data = unfiltered_data[model %in% regular_models],
   summarise_by = summarise_by
@@ -159,7 +159,7 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   p <- scores %>%
   ggplot(aes(x = as.Date(target_end_date), y = get(y))) + 
   geom_line(aes(colour = model)) + 
-  geom_point(aes(shape = classification, colour = model)) + 
+  geom_point(aes(colour = model, shape = classification)) + 
   theme_minimal() + 
   facet_wrap( ~ location_target, ncol = 2, scales = "free_y") +
   theme(legend.position = "bottom") +
@@ -177,7 +177,13 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
 
 # create plots for all horizons ------------------------------------------------
 for (i in 1:4) {
+  epi_tmp <- copy(epitrend)
+  epi_tmp[, forecast_date := as.character(as.Date(forecast_date) + 7 * i)]
+  epi_tmp <- epi_tmp[, .(location_name, forecast_date, classification, target_type)] %>% 
+    unique()
+  
   scores_over_time_case <- scores_target_forecastdate[horizon == i & target_type == "case"] %>%
+    merge(epi_tmp) %>%
     scores_over_time_plot(y = "interval_score") + 
     scale_color_manual(values = colcases) + 
     labs(y = "WIS rel. to baseline", x = "")
@@ -189,6 +195,7 @@ for (i in 1:4) {
           here("analysis", "plots", paste0("score-over-time-cases-", i, ".RDS")))
   
   scores_over_time_deaths <- scores_target_forecastdate[horizon == i & target_type == "death"] %>%
+    merge(epi_tmp) %>%
     scores_over_time_plot(y = "interval_score") + 
     scale_color_manual(values = coldeaths) + 
     annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
@@ -588,7 +595,7 @@ comparison_ensembles <- function(models_to_plot) {
     dcast(... ~ quantile, value.var = "prediction")
   df <- merge(
     df[, c("classification", "speed") := NULL], 
-    copy(epitrend)[, forecast_date := NULL], 
+    copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
     by = c("target_end_date", "location_name", "target_type")
   )
   
@@ -1505,7 +1512,7 @@ df <- unfiltered_data[model %in% regular_models &
   dcast(... ~ quantile, value.var = "prediction")
 df <- merge(
   df[, c("classification", "speed") := NULL], 
-  copy(epitrend)[, forecast_date := NULL], 
+  copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
   by = c("target_end_date", "location_name", "target_type")
 )
 

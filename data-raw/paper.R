@@ -259,7 +259,6 @@ classify_epidemic <- function(data, cutoff = 0.05, growth_cutoff = 2) {
 # obtain classification
 epitrend <- classify_epidemic(truth_data)
 epitrend[, forecast_date := as.character(target_end_date + 2)]
-epitrend[, true_value := NULL]
 
 usethis::use_data(epitrend, overwrite = TRUE)
 
@@ -280,7 +279,7 @@ unfiltered_data[
 # and remove the forecast_date and merge by target_end_date instead
 unfiltered_data <- merge(
   unfiltered_data, 
-  copy(epitrend)[, target_end_date := NULL], 
+  copy(epitrend)[, c("target_end_date", "true_value") := NULL], 
   by = c("location_name", "target_type", "forecast_date")
 )
 
