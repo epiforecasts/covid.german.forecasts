@@ -35,7 +35,7 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 6900
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 87400 rows and 15 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 266 rows and 6 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 266 rows and 7 columns.
 
 An object of class \code{character} of length 8.
 
