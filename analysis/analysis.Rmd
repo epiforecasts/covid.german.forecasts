@@ -282,14 +282,6 @@ score_table <- function(scores,
                    "50%-Cov.", "90%-Cov.", "Target", "Target"), 
            skip_absent = TRUE)
   
-  scores <- scores[, lapply(.SD, FUN = function(x) {
-    if (is.numeric(x)) {
-      return(round(signif(x, 3), 2))
-    } else {
-      return(x)
-    }
-  })]
-  
   # remove some cols, change column order, sort table and rename horizon
   if (all(c("coverage_deviation", "rel. skill") %in% names(scores))) {
     scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
@@ -346,10 +338,32 @@ make_table <- function(data,
     quantiles = 0.5) %>%
     merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
   
+  # round digits
+  df <- df[, lapply(.SD, FUN = function(x) {
+    if (is.numeric(x)) {
+      return(round(signif(x, 3), 2))
+    } else {
+      return(x)
+    }
+  })]
+  
+  percentage_cols <- c("interval_score", "interval_score_0.5", 
+                       "interval_score_sd", "sharpness", "underprediction", 
+                       "overprediction", "aem")
+  
+  # no idea how to do that in data.table: 
+  df <- df %>%
+    dplyr::group_by(horizon, target_type) %>%
+    dplyr::mutate_at(percentage_cols, ~ paste0(., " (", 
+                                               round(100 * ./.[model == "Hub-ensemble"]), 
+                                               "%)"))
+  
+  setDT(df)
+  
   del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
                           !(grepl("interval", names(df)))]
   del_cols <- c(del_cols, "coverage_deviation")
-  df[, (del_cols) := NULL]
+  df[, (del_cols) := NULL] 
   
   setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
            new = c("WIS - median", 
