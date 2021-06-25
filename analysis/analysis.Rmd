@@ -40,7 +40,10 @@ coldeaths <- brewer.pal(name = "Accent", n = 8)[-4]
 ```{r}
 df <- copy(dailytruth_data)[
   , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+][, target_end_date := as.Date(target_end_date)
 ]
+
+df[weekdays(target_end_date) == "Sunday", sundays := target_end_date]
 
 weeklytruth <- copy(truth_data)[
   , target_location := paste0(str_to_title(target_type), "s in ", location_name)
@@ -53,11 +56,14 @@ df %>%
   geom_col(fill = "lightsteelblue", color = "white") + 
   geom_line(data = weeklytruth, aes(y = true_value / 7)) + 
   geom_point(data = weeklytruth, aes(y = true_value / 7), size = 0.3) +
+  # geom_vline(aes(xintercept = sundays), linetype = "dashed", alpha = 0.2) + 
   facet_wrap( ~ target_location, scales = "free", ncol = 1) + 
   labs(y = "Observed values", x = "Date") + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
                           max(forecast_dates$full_hub_period + 21))) + 
   theme_minimal()
+
+
 
 ggsave(here("analysis", "plots", "daily_truth.png"), width = 10, height = 8)
 ```
@@ -570,7 +576,12 @@ p <- ens[, .(value = sum(value),
              epinow = sum(epinow, na.rm = TRUE), 
              crowd = sum(crowd, na.rm = TRUE)), by = c("variable", "Date")] %>%
   ggplot(aes(y = value, x = Date, color = variable)) + 
-  geom_point()
+  # geom_col(aes(fill = variable), position = position_dodge()) + 
+  geom_point() + 
+  geom_line() + 
+  scale_color_manual(values = colcases) + 
+  theme_minimal()
+
 
 ggsave(here("analysis", "plots", "ensemble-members.png"), 
        plot = p)
