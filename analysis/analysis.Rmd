@@ -38,20 +38,28 @@ coldeaths <- brewer.pal(name = "Accent", n = 8)[-4]
 ## Plot with Visualsiation of daily data
 
 ```{r}
-dailytruth_data %>%
-  dplyr::filter(target_end_date >= min(forecast_dates$full_hub_period), 
-                target_end_date <= max(forecast_dates$full_hub_period)) %>%
+df <- copy(dailytruth_data)[
+  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+]
+
+weeklytruth <- copy(truth_data)[
+  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+]
+
+df %>%
   ggplot(aes(y = true_value, x = target_end_date)) + 
-  geom_point(size = 0.3, alpha = 0.4) + 
-  geom_line(size = 0.5, alpha = 0.4) + 
-  geom_line(data = truth_data, aes(y = true_value / 7)) + 
-  facet_grid(target_type ~ location_name, scales = "free") + 
+  # geom_point(size = 0.3, alpha = 0.4) + 
+  # geom_line(size = 0.5, alpha = 0.4) + 
+  geom_col(fill = "lightsteelblue", color = "white") + 
+  geom_line(data = weeklytruth, aes(y = true_value / 7)) + 
+  geom_point(data = weeklytruth, aes(y = true_value / 7), size = 0.3) +
+  facet_wrap( ~ target_location, scales = "free", ncol = 1) + 
   labs(y = "Observed values", x = "Date") + 
   scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
-                            max(forecast_dates$full_hub_period))) + 
+                          max(forecast_dates$full_hub_period + 21))) + 
   theme_minimal()
 
-ggsave(here("analysis", "plots", "daily_truth.png"))
+ggsave(here("analysis", "plots", "daily_truth.png"), width = 10, height = 8)
 ```
 
 --------------------------------------------------------------------------------
@@ -1217,14 +1225,14 @@ aggregate_performance <- function(data,
   setnames(scores, old = "model", new = "Model")
   
   p_cov50 <- scores[range %in% c(50)] %>%
-    plot_helper(y = "coverage") + 
+    plot_helper(y = "coverage", rel = FALSE) + 
     geom_hline(yintercept = 0.5, linetype = "dashed") +
     labs(y = "Coverage - 50% PI", x = xlabel) + 
     expand_limits(y=c(0, 1)) + 
     scale_y_continuous(labels = scales::percent)
   
   p_cov90 <- scores[range %in% c(90)] %>%
-    plot_helper(y = "coverage") + 
+    plot_helper(y = "coverage", rel = FALSE) + 
     geom_hline(yintercept = 0.5, linetype = "dashed") +
     labs(y = "Coverage - 50% PI", x = xlabel) + 
     expand_limits(y=c(0, 1)) + 
