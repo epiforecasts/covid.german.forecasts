@@ -1,5 +1,5 @@
 ---
-title: Evaluating crowd sourced forecasts of Covid-19https://hackmd.io/tZ1I_ls6T2eF5ydV-w5Vmg?editagainst epidemiological model forecasts in Germany and Poland
+title: Evaluating crowd sourced forecasts of Covid-19 against epidemiological model forecasts in Germany and Poland
 output: pdf_document
 bibliography: 
   - references.bib  
@@ -18,34 +18,39 @@ Target journal: elife
 
 #### Background
 
->[name=Sam Abbott] Another sentence linking to the German forecasting hub + mention routinely submitted. X
-
 Model based forecasts have played an important role in shaping public policy throughout the Covid-19 pandemic. Models, in turn, are usually adjusted by human judgement. Any model forecast is therefore a combination of the researcher's subjective opinion and model assumptions. To compare and combine different predictions and approaches, the German and Polish Forecast Hub in October 2020 started to elicit weekly forecasts from various research insitutions for case and death notifications of Covid-19 in Germany and Poland. 
 
 #### Methods
 
-To examine the added benefit from either human insight or model-based in model-based predictions, we evaluate three models we submitted to the German and Polish Forecast Hub between October 12 2020 and March 01 2021. One is a crowd sourced forecast that represents human judgement without any explicit theory-derived assumptions. The other two represent the simplest possible epidemiological baseline models and were left completely untuned. One of these model estimates the reproduction number $R_t$ and predicts future cases and deaths based on the assumption that $R_t$ will stay constant in the future, while the other model (submitted only for death forecasts), models deaths as a scaled convolution of past cases with a delay distribution. In addition, we compare these three models to the median ensemble of all other predictions submitted to the German and Polish Forecast Hub. Forecasts are evaluated using the weighted interval score (a proper scoring rule) and the empirical coverage of 50% and 90% prediction intervals. We look at predictions stratified by location and target as well as forecasts made in different phases of the epidemic. To assess the contribution our models made to the overall hub ensemble we compare the hub-ensemble with our models included against a retrospectively refit version of the hub ensemble without our models. 
-
->[name=Sam Abbott] Detail of evaluation approach (i.e proper scoring rules, data stratification etc). More detail on what the models are is needed here (convolution randomly appears in the results at the moment with no support). Missing leave on out from the ensemble. X
+To examine the added benefit from either human insight or model-based in model-based predictions, we evaluate three different forecasts we submitted to the German and Polish Forecast Hub between October 12 2020 and March 01 2021 and compare them against the ensemble of all other (model-based, but expert tuned) predictions to the hub. Our first approach is a crowd sourced forecast that represents human judgement without any explicit theory-derived assumptions. The other two represent the simplest possible epidemiological baseline models and were left completely untuned. The 'renewal' model estimates the reproduction number $R_t$ and predicts future cases and deaths based on the assumption that $R_t$ will stay constant in the future, while the 'convolution' model (submitted only for death forecasts), models deaths as a scaled convolution of past cases with a delay distribution. Forecasts are evaluated using the weighted interval score (a proper scoring rule) and the empirical coverage of 50% and 90% prediction intervals. We look at predictions stratified by location and target as well as forecasts made in different phases of the epidemic. To assess the contribution our models made to the overall hub ensemble we compare the hub-ensemble with our models included against a retrospectively refit version of the hub ensemble without our models. 
 
 
 #### Results
 
+<!--
 > [name=Sam Abbott] Any statement should be supported with quantification (i.e performed worse on average is a conclusion not a result).  
-> This sections would benefit from being a little more nuanced and detailed + less leaning on the average. Pull out more on models vs crowd for example. There lots of results you are not mentioning. The conclusions are for crafting your policy angle etc. 
+> This sections would benefit from being a little more nuanced and detailed + less leaning on the average. Pull out more on models vs crowd for example. There lots of results you are not mentioning. The conclusions are for crafting your policy angle etc. X
+-->
 
-Human forecasts outperformed the model forecasts as well as the Forecast Hub ensemble on case predictions over all time horizons considered (20%, 12%, 19%, and 30% relative improvement over the ensemble of Forecast Hub submissions excluding our contributions for 1 to 4 week forecast horizons). For death forecasts, crowd predictions performed less well (7%, 26%, 29%, and 17% difference to the Forecast Hub ensemble excluding our contributions). The model forecasts we submitted performed on average worse than other models for most targets, but the convolution model of cases was able to forecast deaths relatively well. Our contributions noticeably improved the German and Polish Forecast Hub ensemble on cases (20%, 10%, 7%, and 9% improvement through our contributions on one to four week ahead case forecasts) and had a neutral or even slightly negative impact on death forecasts (6%, -2%, -4%, and -5% change in performance due to our models).
+Human forecasters were able to predict case numbers well and on average had a lower weighted interval score than both untuned model-based forecasts as well as the ensemble of all other models from the German and Polish Forecast Hub (WIS XX vs. XX and XX). Crowd forecasts were closest to the observed numbers for cases in terms of absolute error (XX), but also produced the narrowest forecasts and had the lowest empirical coverage of the 50% and 90% prediction intervals (XX and XX). 
+Crowd predictions did relatively worse on deaths, with a simple convolution model based on case numbers outperforming human forecasters at shorter forecast horizons (WIS XX vs. XX). 
+The untuned renewal model, which assumed constant $R_t$ across all forecast horizons, had only slightly higher weighted interval scores on cases short-term (rel. WIS XX at one week ahead), but performance quickly deteriorated with increasing forecast horizon. On deaths, the renewal model had relatively high weighted interval scores for all but one week ahead predictions, indicating that forecasting deaths based on an $R_t$ value estimated from past deaths without knowledge of past cases is difficult. 
+The simple convolution model performed relatively well on one and two week ahead predictions of deaths (rel WIS XX), but weighted interval scores increased for three and four week ahead forecasts when the model had to rely on case numbers predicted by the renewal model, rather than observed cases. 
+All forecasts for cases had lower empirical coverage than aimed for, with coverage values decreasing with increasing forecast horizons (highest coverage was XX and XX four weeks ahead). Coverage levels on average were higher for death forecasts (all higher than XX and XX), especially for the hub ensemble (XX), indicating better calibrated predictions. 
+Distributions of weighted interval scores for all forecasts were right skewed, with average performance often dominated by few outlier predictions. This was more pronounced for the untuned models, which were prone to outlier predictions and had relatively high variance in their performance (sd XX and XX), and less the case for the crowd forecasts (itself an ensemble of individual predictions) and the hub ensemble. 
+Our contributions noticeably improved the German and Polish Forecast Hub ensemble on cases (20%, 10%, 7%, and 9% improvement through our contributions on one to four week ahead case forecasts) and had a neutral or even slightly negative impact on death forecasts (6%, -2%, -4%, and -5% change in performance due to our models). 
 
 #### Conclusions
 
-> [name=Sam Abbott] Move some of the results interpretation here. Conclusions should build on the results. At the moment this is very we submitted to the hub and we added some value. There is a lot more to this paper than that - that is a side benefit tbh. 
+<!--
+> [name=Sam Abbott] Move some of the results interpretation here. Conclusions should build on the results. At the moment this is very we submitted to the hub and we added some value. There is a lot more to this paper than that - that is a side benefit tbh. X
+-->
 
-Expert opinion can provide valuable insight and possibly outperforms models at forecasting future case numbers, as humans can make use of information, e.g. about potential future policy interventions, not directly available to models. Models, however, have an advantage when forecasting lagged quantities such as deaths, which are generally better predictable using mechanistic epidemiological relations like the delay between current case numbers and future deaths. Individual models can make positive contributions to an ensemble even if they individually perform worse than the pre-existing ensemble without them. 
+Human insight is especially valuable for predicting quantites such as cases that depend on countless hard to model factors such as future policy interventions and changes in behaviour. Despite their overconfidence, crowd forecasters were able to predict overall trends in cases well and outperformed the ensemble of all other models submitted to the German and Polish Forecast Hub. In terms of predicting deaths, models are at a relative advantage as they can make better use of a variety of leading indicators such as the number of reported cases or hospitalisations and are better than humans at modelling the delays and scaling factors between reported cases and deaths. Our untuned models could make decent short-term predictions, but, left on their own without any human intervention or any further assumptions, were not able to handle changing conditions well. If the aim of the forecast is to inform future policy changes, rather than to anticipate and incorporate them, this may be considered an advantage rather than a drawback. 
+The large influence of a few outlier values on the average weighted interval score suggests that it favours ensembles which generally seem to be better at avoiding outlier predictions than individual models. Even models which perform less well than the pre-existing ensemble without them can make a positive contribution and improve the ensemble they enter. 
 
 
 ## Introduction
-
-> [name=Sam Abbott] Cite ECDC hub X
 
 The COVID-19 pandemic has resulted in an increase of interest in infectious disease forecasting, and the evaluation of these forecasts. Single model forecasts [@fergusonReportImpactNonpharmaceutical2020; @IHMEpaper] were impactful on policy decisions early in the pandemic despite previous work having shown that relying on a single model can lead to less accurate forecasts than decisions based on multiple approaches [@yamanaSuperensembleForecastsDengue2016; @gneitingWeatherForecastingEnsemble2005]. Since then several collaborations have sought to improve Covid-19 forecasting by eliciting submissions from a large number of research teams and collecting them in forecast hubs in the United Kingdom [@funkShorttermForecastsInform2020], in the United States of America [@esteecramerCOVID19ForecastHub2020; @cramerEvaluationIndividualEnsemble2021], in Germany and Poland [@bracherShorttermForecastingCOVID192021], and in Europe [@EuroHub]. Whilst all of these efforts have successfully delivered more accurate forecasts to policy makers compared to individual forecasting efforts they have struggled to unpick what leads to good Covid-19 forecasts [@cramerEvaluationIndividualEnsemble2021; @bracherShorttermForecastingCOVID192021; @funkShorttermForecastsInform2020]. 
 
@@ -60,8 +65,11 @@ In this work, we evaluate two contrasting forecasting approaches that simplify a
 Data on test positive cases and deaths linked to Covid-19 were provided by the organisers of the German and Polish forecast hub [@bracherShorttermForecastingCOVID192021]. Until December 14th 2020 these data were sourced from the European Centre for Disease Control (ECDC) [@DownloadHistoricalData2020a]. After ECDC stopped publishing daily data, observations were sourced from the Robert Koch Institute (RKI) for the remainder of the submission period [@RKICoronavirusSARSCoV2a]. These data are subject to reporting artefacts (such as a retrospective case reporting in Poland on the 24th November [@RozbieznosciStatystykachKoronawirusa0100]), changes in reporting over time and variation in testing regimes (e.g. in Germany from the 11th of November on [@aerzteblattSARSCoV2DiagnostikRKIPasst2020]). 
 
 Line list data used to inform the delay from symptom onset to test postive case report or death in the model based forecasts was sourced from (cite public linelist) with data available up to June (check exact date). Population data at the national and state level in Germany and Poland used in the model based forecasts was sourced from [@statistischesbundesamtBevoelkerungNachNationalitaet2020] and [@glownyurzadstatystycznyLudnoscStanStruktura2020]. 
- 
+
+<!--
 > [name=Sam Abbott] Citations missing.
+> [name=Nikos] Can you check the linelist please? I wasn't able to find it. 
+--> 
 
 ### Forecasts
 
@@ -71,17 +79,16 @@ We used two models from the `EpiNow2` R package (version 1.3.3) as our baseline 
 
 Each forecast target was fit independently for each model using Markov-chain Monte Carlo (MCMC) in stan [@rstan]. A minimum of 4 chains were used with a warmup of 250 samples for the renewal equation based model and 1000 samples for the convolution model. 2000 samples total post warmup were used for the renewal equation model and 4000 samples for the convolution model. Different settings were chosen for each model to optimise compute time contigent on convergence. Convergence was assessed using the R hat diagnostic [@rstan]. For the convolution model forecast the case forecast from the renewal equation model was used in place of observed cases beyond the forecast horizon using 1000 posterior samples. 
 
+<!--
 > [name= Sam Abbott] It is a little odd having so little detail on the models and so much fitting info. 
 > [name=Nikos] Can you add something to this please? 
+--> 
 
 #### Crowd forecast
 
 Crowd forecasts were created by ensembling forecasts submitted by individual participants. To that end, we calculated 22 quantiles plus the median from every forecaster's predictive distribution for a given target and combined predictions by taking the quantile-wise mean. 
 
 Participants were recruited mostly within the Centre of Mathematical Modeling of Infectious Diseases at the London School of Hygiene and Tropical Medicine, but participants were also invited personally or via social media to submit predictions. 
-
-> [name=Sam Abbott] Expand on ensembling method.
-> [name=Nikos] Also adding another point to the discussion on why we chose the mean is probably a good idea
 
 ##### Collection
 
@@ -101,12 +108,11 @@ All forecasts were processed in a Docker [@merkel2014docker] container that ran 
 
 All forecasts are available here: https://github.com/epiforecasts/covid.german.forecasts
 
-> [name=Sam Abbott] cite  docker, and R X
 
 ### Forecast Hub ensemble
-
+<!--
 > [name=Nikos] maybe move this section to data sources?
-
+-->
 Our forecasts were compared against the ensemble of all other models submitted to the German and Polish Forecast Hub. For the purpose of this analysis and unless otherwise specified, 'ensemble' means the median ensemble of all predictions submitted to the forecast hub, excluding our models. The median ensemble was chosen as it is the default ensemble shown in the visualisations of the German and Polish Forecast Hub. The version of the ensemble that excluded our models was created retrospectively and kindly provided by the German and Polish Forecast Hub organisers. 
 
 ### Statistical analysis
@@ -117,8 +123,7 @@ For the main analysis we focused on one and two week ahead predictions, as predi
 
 To assess the impact of our contributions on the hub-ensemble, we performed a 'leave-one-out'-analysis, evaluating versions of the hub ensemble that include none of our models, only one of them, or all of our models. We also consider the 'official' hub ensemble, which is the version that includes the renewal model as well as the crowd forecast, as the convolution model never entered the hub ensemble due to concerns about the number of models submitted from a single team. 
 
-> [name=Sam Abbott] Missing leave on out from the ensemble X
-> [name=Nikos] Maybe need a citation (not sure what to cite. scoringutils?) or an even more detailed explanation of the bias metric?
+> [name=Nikos] Maybe need a citation (not sure what to cite. the scoringutils vignette?) or an even more detailed explanation of the bias metric?
 
 ## Results
 
@@ -130,184 +135,193 @@ A total number of 31 participants submitted forecasts. The median number of fore
 
 
 ### Performance overview
+![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/aggregate-performance-all.png)
+
+*Figure 1. Visualisation of aggregate performance metrics across forecast horizons. A: mean weighted interval score (WIS) across horizons. B: median WIS. C: Absolute error of the median forecast. D: Standard deviation of the WIS. E: Sharpness (higher values mean greater dispersion of the forecast). F: Bias, i.e. general tendency to over- or underpredict. Values are between -1 (complete underprediction) and 1 (complete overprediction) and 0 ideally. G: Empirical coverage of the 50% prediction intervals. F: Empirical coverage of the 90% prediction intervals.*
+
+
 ![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/table_scores_2_ahead.png)\label{tab:scores-2}
-![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/table_scores_4_ahead.png)\label{tab:scores-4}
+<!--![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/table_scores_4_ahead.png)\label{tab:scores-4}-->
 
 *Table 1: Scores for one and two week ahead forecasts (cut to three significant digits and rounded). WIS is the mean weighted interval score (lower values ar better), WIS - median and WIS - sd give the median and standard deviation of all scores achieved by a model. Sharpness, overprediction and underprediction together some up to the weighted interval score. Bias (between -1 and 1, 0 is ideal) represents the general average tendency of a model to over- or underpredict. 50% and 90%-coverage are the percentage of observed values that fell within the 50% and 90% prediction intervals of a model.*
+
+
 
 We found that crowd forecast had a lower mean WIS than the untuned renewal model across all forecast targets, horizons and locations with a mean WIS for two week ahead predictions of XX vs. XX for cases and XX vs. XX for deaths (Figure S1, Table 1). The convolution model predicted deaths slightly better than the crowd forecast up to two weeks ahead (mean WIS of XX vs. XX), where deaths were largely informed by observed cases. It did poorly at greater forecast horizons, when death forecasts to a greater extent depended on predicted cases. The renewal model generally performed poorly at predicting deaths (mean WIS 524), indicating the benefit of including case data which was either implicitly or explicitly included in all other models. 
 
 When considering the median WIS, relative performance changes slighty. The renewal model did comparably well on cases in terms of median WIS one and two weeks ahead and even outperformed all other models at a one week forecast horizon (median WIS 3550, Figure S1, Table1). It also performed best at one week ahead death forecasts (median WIS 128), but performance quickly deteriorated for both cases and deaths for greater forecast horizons. Judged by the median WIS, crowd forecasts also did relatively better on death forecasts (median WIS 164), performing en par or better than all other models. 
 
-The crowd forecast also overall had a lower overall mean WIS as well as median WIS than the hub ensemble on cases (mean XX, median XX, Figure S1 and Table 1) across all horizons. For cases, crowd forecasts were also closest to the observed values in terms of their central tendency across all forecast horizons (absolute error of the median forecast 23300, Table 1 and Figure S1). On deaths, the hub ensemble outperformed all other models in terms of mean WIS (XX) and absolute error across all horizons, but not in terms of median WIS (XX), where crowd forecasts tended to be slightly better (and the renewal model at a one week horizon) (Figure S1, Table 1). 
+The crowd forecast also overall had a lower overall mean WIS as well as median WIS than the hub ensemble on cases (mean XX, median XX, Figure S1 and Table 1) across all horizons. For cases, crowd forecasts were also closest to the observed values in terms of their central tendency across all forecast horizons (absolute error of the median forecast 23300, Table 1 and Figure S1). The untuned renewal model performed comparable to the hub ensemble at one week ahead predictions (XX vs. XX), but worse than the hub ensemble for all greater horizons in terms of mean WIS. It also performed better than it in terms of median WIS at one and two week ahead predictions (XX and XX vs. XX and XX). On deaths, the hub ensemble outperformed both untuned models as well as the crowd forecasts in terms of mean WIS (XX) and absolute error across all horizons, but not in terms of median WIS (XX), where crowd forecasts tended to be slightly better across horizons (and the renewal model at a one week horizon) (Figure S1, Table 1). 
 
-SENTENCE FOR PERFORMANCE ACROSS LOCATIONS
-- performance was similar
-- scores higher in Germany
-
-<!--
-the renewal model on case predictions over all four time horizons (Figure S1), with a mean WIS of 7010, 16200, 27000 and 39200 for the crowd forecasts and 8740, 25600, 50600, 91700 for the renewal model (Tables 1 and S2). For both models, the median WIS (4540, 8330, 17200, 28200 for the crowd forecasts, 3550, 9020, 19700, 31500 for the renewal model) (Tables 1 and S2) was lower than the mean WIS implying skewed distributions where average performance is influenced by outliers (Figures 1 and 2A). 
--->
+Generally, trends in overall performance were similar across locations (Figure S1). Notably, the overall level of scores for both cases and deaths was higher in Germany than in Poland (and average performance therefore more heavily influenced by forecasts in Germany), in line with a relatively high number of cases in Germany over a prolonged period of time, but also possibly influenced by differences in how 'hard' it was to make predictions in the two settings. The difference in performance across locations was largest for the renewal model, which on average performed poorly in Germany (WIS XX), but comparably to other forecasts in Poland (WIS XX). It was small for the crowd forecast (XX in Germany and XX in Poland), indicating that forecasters had a greater relative advantage in Germany than in Poland when compared to both the untuned models and the hub ensemble (Figure S1). 
 
 ### Sharpness and calibration
 
-- crowd generally sharpest
-- 
-
 Crowd forecasts generally tended to be the sharpest (sharpness of XX) and especialy for cases issued substantially narrower predictions than the renewal model (sharpness of XX), with uncertainty of the crowd forecasts increasing relatively slowly across horizons (Figure S1, Tables 1 and S2). The renewal model was comparably sharp for both cases and deaths at a one week horizon, but on average had rapidly increasing uncertainty across forecast horizons. The convolution model was about as sharp as the crowd forecast for one and two week ahead predictions of deaths, but had greater uncertainty for three and four weeks ahead predictions when it had to rely on projected instead of observed cases. 
+
+The hub ensemble was less sharp than the crowd forecasts across all horizons and prediction targets and especially for cases its uncertainty grew quicker (Figure S1). It was also less sharp than the renewal model for smaller forecast horizons (up to two weeks for cases, up to one week for deaths) and less sharp than the convolution model up to three weeks ahead. 
 
 On case forecasts, all models generally struggled with marginal calibration and mostly had lower empirical than nominal coverage of its 50% and 90% prediction intervals (Figure S1 and Table 1). This was especially true for the crowd forecasts. Due to its narrow forecast intervals especially for cases, it had the lowest empirical coverage of the 50% and 90% prediction intervals of all models for case forecasts more than one week into the future (36% and 55% two weeks ahead and only 5% and 38% 4 weeks ahead). Due to its rapidly increasing uncertainty, the renewal model showed a slightly better empirical coverage for cases (43% and 67% two weeks ahead and 31% and 48% 4 weeks ahead), even though the forecasts were farther away from the observed values (absolute errors of 12000, 34600, 68700, 125000).
 On deaths, the renewal model had good 50% coverage (50%), but covered less than the nominal 90% of observed values with its 90% prediction intervals (XX%). The crowd and the convolution model had worse coverage of the 50% prediction intervals (XX% and XX%), but generally had comparable coverage for 90% prediction intervals across horizons (XX% and XX%). 
 
+The hub ensemble had higher coverage than the crowd forecasts across all horizons for both deaths and cases. For cases it also struggled with marginal calibration and tended to have comparable coverage than the renewal model (XX and XX vs. XX and XX). For deaths, the hub ensemble showed higher coverage than all other forecasts and exceeded both 50% and 90% nominal coverage levels across all horizons (XX and XX for two weeks ahead, XX and XX for four weeks ahead). 
 
-Crowd forecasts for cases, on average, were mostly unbiased with bias values of -0.01, -0.01, 0.02, and 0.07. The renewal model exhibited a general tendency to overpredict that slightly decreased with increasing forecast horizon with bias values of 0.18, 0.17, 0.13, and 0.09. Across all forecast horizons, all models incurred larger absolute penalties from over-prediction than from underprediction (Table 1 and SXX). This was the case regardless of a general tendency to either over- or underpredict (as captured by the bias metric), implying that overprediction, when it happened, was on average more costly (Table 1 and SXX). 
+<!-- maybe rewrite this by model rather than separating cases from deaths -->
+Crowd forecasts for cases, on average, were mostly unbiased with bias values of -0.01, -0.01, 0.02, and 0.07. The renewal model exhibited a general tendency to overpredict that slightly decreased with increasing forecast horizon with bias values of 0.18, 0.17, 0.13, and 0.09. Across all forecast horizons, all case forecasts on average incurred larger absolute penalties from over-prediction than from underprediction (Table 1 and SXX). This was the case regardless of a general tendency to either over- or underpredict (as captured by the bias metric), implying that overprediction, when it happened, was on average more costly for case forecasts (Table 1 and SXX). 
+For death forecasts, there was no clear pattern that overpredictions were more costly in absolute terms than underprediction and instead the picture was more varied. Crowd forecasts were upwards biased across all forecast horizons (bias values of 0.08, 0.14, 0.12 and 0.14) and also on average incurred higher penalties from overprediction (XX numbers). The renewal model was slightly downwards biased on average for most horizons (XX values), but incurred higher penalties from overprediction than from underprediction. The convolution model was on average strongly downwards biased for one and two week ahead predictions (-0.18 and -0.1), but had decreasing bias over time (-0.04 and 0.01 at three and four weeks ahead). 
 
+Forecasts from the hub ensemble were generally unbiased both for cases (-0.03) and deaths (0.01) across all horizons. For cases, they incurred on average higher penalties from overprediction (XX vs. XX), for deaths underprediction penalties were on average higher (XX vs. XX). 
 
-Forecasts from the ensemble were generally unbiased (bias values of -0.04, -0.03, -0.01, 0.01), even though again overprediction penalties were on average higher than underprediction penalties in absolute terms. The hub ensemble was less sharp than the crowd forecasts at all time horizons and also had faster growing uncertainty for increasing forecast horizons (sharpness of 3670, 6140, 9130, 12200 vs. 2680, 3660, 4750, 5970). It was also more uncertain than the renewal model at one and two week ahead predictions, but its uncertainty grew less quickly than that of the renewal model (sharpness values of 2190, 5420, 10800, 19500). 
-The hub ensemble had better empirical coverage than the crowd forecasts and comparable or mostly even slightly better coverage than the renewal model. 
-
-For death forecasts, there was no clear pattern that overpredictions were more costly in absolute terms than underprediction and instead the picture is varied. Crowd forecasts were upwards biased across all forecast horizons (bias values of 0.08, 0.14, 0.12 and 0.14) and also incurred higher penalties from overprediction (XX numbers). The renewal model was slightly downwards biased on average for most horizons (XX values), but incurred higher penalties from overprediction than from underprediction. The convolution model was on average strongly downwards biased for one and two week ahead predictions (-0.18 and -0.1), but had decreasing bias over time (-0.04 and 0.01 at three and four weeks ahead). 
-
-
-
-At death forcasts, the hub ensemble outperformed all other models at all forecast horizons, with mean WIS values of XX. For all but one week ahead forecasts it was also most consistent , having the lowest standard deviation of the WIS (XX values). Ensemble forecasts were relatively unbiased (values of -0.04, 0.01, -0.03 and -0.06). Its empirical coverage was better than that of all other models, having almost perfect coverage at all forecast horizons (e.g. 62% and 96% at a two week ahead and 58% and 92% at a four week ahead horizon). Its predictions were less confident (i.e. less sharp) than the crowd forecasts, and also less confident than those of the convolution model at one to three weeks ahead, but sharper than the renewal model predictions for all but one week ahead forecasts. 
+All model-based predictions, but not the crowd forecasts were noticeably sharper in Poland than in Germany (Figure S1), in line with their smaller overall WIS values. Crowd forecasts for cases (but not for deaths) were about equally sharp in Poland and in Germany (sharpness XX vs. XX in Poland), and also not much better overall in terms of WIS and absolute error, indicating that human forecasters found it relatively hard to make predictions in Poland. For both cases and deaths, forecasts tended to be lower relative to observed values in Poland than in Germany, with bias values lower for all forecasts in Poland than in Germany (except crowd forecasts of cases, Figure S1F). 
+<!-- would be interesting to think more about why this is the case -->
 
 
+### Evaluation by horizon
 
-- Overview of performance at the target horizon
-     - Mean/Median/SD of scaled WIS by model, target, and location
-- Detail on each score
-     - Short summary on interesting differences by model, target, and location
-- Distribution
-- Pandemic phase
-- By horizon (differences to other sections that are interesting)
-- Hub ensemble contribution
-     - Overall
-     - By model (edited) 
+Performance across different forecast horizons showed a different pattern for crowd forecasts and the two untuned models. Generally, crowd forecasts were able to make decent predictions at all forecast horizons, with WIS values growing almost linearly across forecast horizons (Figure S1). The renewal model on average showed comparable performance to the other forecasts at a one week ahead horizon, but quickly deteriorating performance with increasing horizon, indicating that the assumption of a constant $R_t$ did not allow for good long-term predictions. The convolution model was able to perform reasonable for one and two week ahead predictions, but not for three and four weeks ahead, indicating that a modelling deaths as a convolution of cases starts to become increasingly difficult the more one has to rely on predicted rather than observed cases. 
+
+Forecast uncertainty increased quickly for the renewal model across horizons and similarly for the convolution model for three and four weeks ahead, when it increasingly relied on case predictions from the renewal model. Uncertainty grew at about a linear rate for the hub ensemble and the crowd forecasts, albeit at a much smaller rate for crowd forecasts (Figure S1). Empirical coverage quickly decreased for all models with increasing forecast horizons for cases, but not for deaths, where coverage remained relatively stable across horizons (Figure S1G and S1H), indicating overconfidence in the ability to predict cases further ahead into the future. 
 
 
-### Performance by horizon
-
-- for cases, coverage decreased rapidly across horizons
-
-
-### Case forecasts
-
-<!--
-> [name= Sam Abbott] You are not consistent with how you talk about forecasts despite defining definitions for each in the intro. Suggest a careful read to correct this. 
-> [name=Nikos] You mean the naming of models? 
-> [name=Sam Abbott] There should be links to figs and tbales in this text (i.e figure 1 and table 1).
-> [nameSam Abbott] Suggest yet more use of numbers and linking to tables + figures. The flow is make a point, mention some data that shows it and link to the source where more data is. The tables and figs should be part of the flow. 
-> [name=Sam Abbott] I would suggest recasting this in the form (maybe not now). Crowd forecast performance vs model for each thing and then crowd forecast vs ensemble and ensemble vs model (+ baseline). That way you get to keep the thrust of the paper clear. With that in mind I would generally edit this to get rid of detail that isn't reallyon target for the paper (the bias in the baseline model for example seems not very important to flag).
-> [name=Sam Abbott] report order of calibration. X
-> [name=Sam Abbott] Link to tables and figures in the supplement at other forecast horizons. 
-> [name=Sam Abbott] I would also suggest pulling in the score over time plots from the SI here and using them in the discussion. 
-> [name=Sam Abbott] Pull out by target differences in SI and report here. 
-
-> [name=Sam Abbott] Just a general note we are looking for a summary initially of interesting performancce behaviour difference that we can then dive into further. We also want everything focussed on the interplay between opinion and model structure (so concluding likely that both have a place and that forecasts when evaluated for consistency and in the prescence of a rapidly changing NPI landscape do better when they have both).
--->
-
-
-### Distribution
-
-
-
-
-#### Comparison of crowd forecasts and renewal model 
-
-Crowd forecasts on average outperformed the renewal model on case predictions over all four time horizons (Figure S1), with a mean WIS of 7010, 16200, 27000 and 39200 for the crowd forecasts and 8740, 25600, 50600, 91700 for the renewal model (Tables 1 and S2). For both models, the median WIS (4540, 8330, 17200, 28200 for the crowd forecasts, 3550, 9020, 19700, 31500 for the renewal model) (Tables 1 and S2) was lower than the mean WIS implying skewed distributions where average performance is influenced by outliers (Figures 1 and 2A). 
-This was especially prononuced for the renewal model, which had more outliers (Figure A), as well as a more varied performance in general, with a higher standard deviation of the WIS across all horizons (11800, 33800, 70000, and 135000) than the crowd forecasts (7480, 16600, 26200, and 38600 for the crowd forecasts) (Tables 1 and Figure S1). 
-<!-- Outliers for the renewal model were more frequent in Germany, where the trend of the epidemic changed more often (Figure 1). Notable outliers were the forecasts made on November 2 2020 (target date of November 14 2020 in Figure 1) and several forecasts made in late December 2020 and early January 2021 (target dates in January 2021 in Figure 1). In November, the renewal model continued the trend in rising cases that was observed in October (Figure S3) and severely overpredicted, before adapting to the changing trend. On January 11 2021 it interpreted a new rise in cases as signal, rather than noise and predicted a new rise in cases.  
--->
-Judged by median performance, the renewal model even outperformed the crowd forecasts (and all other models) at a one week ahead horizon (median WIS of 3550 vs. 4540). 
-For greater forecast horizons, average as well as median performance of the renewal model quickly detoriated compared to other models (Table SXX, Figure 3XX). <!-- any statement about how the assumption breaks down would be discussion? --> 
-
-Crowd forecasts were on average closest to the observed values, with an absolute error of the median forecast of 10400, 23300, 39000, 54800. However, they were also mostly the narrowest (with sharpness values of 2680, 3660, 4750, 5970), and therefore struggled with marginal calibration, having the lowest empirical coverage of its 50% and 90% prediction intervals of all models for forecasts more than one week into the future (36% and 55% two weeks ahead and only 5% and 38% 4 weeks ahead). The renewal model had an uncertainty that quickly increased with increasing forecast horizon (sharpness values of 2190, 5420, 10800, 19500), and therefore had better empirical coverage (43% and 67% two weeks ahead and 31% and 48% 4 weeks ahead), even though the forecasts were farther away from the observed values (absolute errors of 12000, 34600, 68700, 125000). 
-
-Crowd forecasts for cases, on average, were mostly unbiased with bias values of -0.01, -0.01, 0.02, and 0.07. The renewal model exhibited a general tendency to overpredict that slightly decreased with increasing forecast horizon with bias values of 0.18, 0.17, 0.13, and 0.09. Across all forecast horizons, all models incurred larger absolute penalties from over-prediction than from underprediction (Table 1 and SXX). This was the case regardless of a general tendency to either over- or underpredict (as captured by the bias metric), implying that overprediction, when it happened, was on average more costly (Table 1 and SXX). 
-
-MISSING: INTERPRETATION ABOUT MODELS IN DIFFERENT PHASES
-
-#### Comparison of our models against the hub ensemble forecasts
-
-Crowd forecasts on average outperformed the Forecast Hub ensemble (excluding our own models) on case predictions over all time horizons (WIS of 7010, 16200, 27000, 39200 vs. 8740, 18300, 50600, 55900), and outperformed it in terms of median WIS at all time horizons except for four week ahead predictions (WIS of 4540, 8330, 17200, 28200 vs. 5240, 9940, 17800, 26400). The renewal model performed en par with the hub ensemble at a one week ahead forecast horizon (WIS of 8740 vs. 8770), but on average performed worse than the ensemble for other time horizons. In terms of median performance it outperformed the ensemble at one and two week ahead predictions (3550, 9020, 19700, 31500, vs. 5240, 9940, 17800, 26400). 
-
-Variation of the performance of the hub ensemble on cases was in between the renewal model and the crowd forecasts, as judged by a visual inspection of the distribution (Figure 2) as well as standard deviation of the WIS (11700, 21900, 40700, 73700 for the ensemble vs. 11800, 33800, 70000, and 135000 for the renewal model and 7480, 16600, 26200, 38600 for the crowd forecasts). 
-
-Forecasts from the ensemble were generally unbiased (bias values of -0.04, -0.03, -0.01, 0.01), even though again overprediction penalties were on average higher than underprediction penalties in absolute terms. The hub ensemble was less sharp than the crowd forecasts at all time horizons and also had faster growing uncertainty for increasing forecast horizons (sharpness of 3670, 6140, 9130, 12200 vs. 2680, 3660, 4750, 5970). It was also more uncertain than the renewal model at one and two week ahead predictions, but its uncertainty grew less quickly than that of the renewal model (sharpness values of 2190, 5420, 10800, 19500). 
-The hub ensemble had better empirical coverage than the crowd forecasts and comparable or mostly even slightly better coverage than the renewal model. 
+### Distribution of forecast scores
 
 ![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/figure-forecasts-2.png)\label{fig:forecasts-2}
 
 *Figure 1. A, C: Visualisation of 2 week ahead forecasts against the true observed values. The shape indicates whether there has been a monotonic increase or decrease over the last two weeks leading up to a given data point, or an unclear trend. Forecasts that aren't scored (because there was no complete set of death forecasts available) are greyed out. 
 B, D: Visualisation of corresponding WIS relative to the baseline that can be thought of as ‘improvement over the baseline model’. The shape indicates whether the trend was rising, falling or unclear at the date when the corresponding forecast was made (i.e. two weeks earlier, which leads to a shift of two weeks when compared to panels A and C)*
 
-MISSING: INTERPRETATION ABOUT MODELS IN DIFFERENT PHASES
-
-### Death forecasts
-
-#### Comparison of crowd forecasts vs. renewal model and convolution model 
-
-On deaths, the convolution model on average outperformed the renewal model across all forecast horizons (mean WIS of 255, 357, 541, 763, vs. 298, 524, 724, 959) (Table 1, Figure X). It performed on average slightly better than the crowd forecasts at a one and two week ahead horizon (mean WIS of the crowd forecast of 265 and 368), but performed worse than the crowd forecast at greater forecast horizons (mean WIS of 414 and 498 three and four weeks ahead). In terms of median performance, the crowd forecasts beat both the renewal model and the convolution model across all horizons, while the convolution model and renewal model showed comparable median performance (XX vs. XX). Again, for all models, median performance was lower than mean performance, implying skewed distributions. 
-In terms of variability of performance, the convolution model, due to two outlier predictions (Figure XX, *find and discuss*), ranked in between the renewal model and the crowd forecasts in terms of standard deviaton of the weighted interval score (XX values). For all three models, empirical coverage was closer to the desired nominal coverage for death forecasts than for case forecasts (with all coverage levels above 33% and 71% for two week ahead predictions and above 38% and 75% for four week ahead predictions). 
-Across all horizons, the renewal model forecasts were the least sharp (sharpness values). At one and two week ahead predictions, the convolution model was about as sharp as the crowd forecasts, but had quickly growing uncertainty for three and four week ahead predictions (leading to constant or even improved coverage in spite of worse absolute errors), and became almost as uncertain as the renewal model. 
-
-For death forecasts, there was no clear pattern that overpredictions were more costly in absolute terms than underprediction and instead the picture is varied. Crowd forecasts were upwards biased across all forecast horizons (bias values of 0.08, 0.14, 0.12 and 0.14) and also incurred higher penalties from overprediction (XX numbers). The renewal model was slightly downwards biased on average for most horizons (XX values), but incurred higher penalties from overprediction than from underprediction. The convolution model was on average strongly downwards biased for one and two week ahead predictions (-0.18 and -0.1), but had decreasing bias over time (-0.04 and 0.01 at three and four weeks ahead). 
-
-
-#### Comparison of our models against the hub ensemble
-
-At death forcasts, the hub ensemble outperformed all other models at all forecast horizons, with mean WIS values of XX. For all but one week ahead forecasts it was also most consistent , having the lowest standard deviation of the WIS (XX values). Ensemble forecasts were relatively unbiased (values of -0.04, 0.01, -0.03 and -0.06). Its empirical coverage was better than that of all other models, having almost perfect coverage at all forecast horizons (e.g. 62% and 96% at a two week ahead and 58% and 92% at a four week ahead horizon). Its predictions were less confident (i.e. less sharp) than the crowd forecasts, and also less confident than those of the convolution model at one to three weeks ahead, but sharper than the renewal model predictions for all but one week ahead forecasts. <!-- suggest remove the last sentence?--> 
-
-<!--
- 
-### Score distribution
-
-> [name=Sam Abbott] Suggestion: We found a wide variation in forecasts scores accross targets, locations, forecast time horizons, and forecast dates.
-> [name=Sam Abbott] Suggest drop: "(The distribution of WIS relative to the baseline is shown in Figure XX in the supplementary information)"
-> [name=Sam Abbott] Same note on flow. It should be point and then link to thing and not summary of thing locations followed by some info disconnected from it. 
-> [name=Sam Abbott] Could do with a more technical handling: "The hub ensemble, baseline and convolution were usually in between, with performance of the convolution model being almost as varying as the performance of the renewal model for deaths."
-Figure 2A shows the distribution of WIS scores for a two week ahead horizon achieved by each model (The distribution of WIS relative to the baseline is shown in Figure XX in the supplementary information). The distribution of WIS scores for different forecast horizons can be seen in Figure XX in the SI, a summary can be seen in Table XX in the Appendix. 
-> [name=Sam Abbott] I think there is a lot more nuance to get out from these plots and they probably contain the core of the interesting findings so more interpretation would be good.
-> [name=Sam Abbott] Some models have outliers. When were these, do we know what they were, and what happens to overall performance measures if you take them out?
-> [name=Sam Abbott] I'd suggest discussing overall by cases and deaths and then by target.
-> [name=Sam Abbott] Vis using a log scale.  
-
-
-The crowd forecasts tended to have the lowest variance in scores (standard deviation of 7600 and 16800 for cases one and two week ahead, 322 and 450 for deaths), while scores for the renewal equation are most dispersed (11900 and 34200 for cases, 407 and 681 for deaths). The hub ensemble, baseline and convolution were usually in between, with performance of the convolution model being almost as varying as the performance of the renewal model for deaths. Notably, the baseline model had the lowest variability in scores (and also the lowest mean and median score) for cases at a four week ahead horizon. 
-The WIS distribution was skewed for all models, with the median being higher than the mean. This was most extreme for the renewal model, and usually least extreme for the crowd forecasts. Whether or not a model was 'better than another model' therefore depends on whether one cares about mean performance or median performance. For one and two weeks ahead, for example, the median forecast from the renewal model beat the baseline, while the mean forecast did not. 
-<!-- not sure this is true
-For the renewal and the convolution model, performance relative to the baseline varied across countries, where the median forecast of the two models beat the baseline in one country, but not the other, as can be seen in Figure 2B. Interestingly, the convolution model performed well on deaths in Germany, even though the renewal model performed poorly. Conversely, the convolution model performed poorly on deaths in Poland even though the renewal had performed relatively well. 
-
-
-Figure 2C shows the distribution of scores in different phases of the epidemic and Table 3 shows accompanying summarised scores. Across different targets, countries and phases the WIS for the renewal model had the strongest tendency towards a bimodal distribution, meaning that performance was often either very good or very bad. 
-
-<!--
-- Renewal and Crowd forecast good when cases are rising (maybe: renewal model is good at modelling exponential growth and humans are good at adapting to turning points)
-- hard to identify a clear pattern
--->
-
 ![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/distribution_scores_wis-2.png)
 *Figure 2. A: Estimated density distribution of weighted interval scores (smaller is better) for two week ahead forecasts of the different models and forecast targets. Points indicate single data points. B: Distribution of WIS separate by country. C: Distribution of WIS in different phases of the epidemic. 
 Phases are classified according to whether the two weeks prior to the date when a forecast was made show a consistent trend.*
 
---- 
+Across all models, locations, targets and horizons, mean WIS was higher than median WIS, implying right skewed distributions of WIS values where mean performance of a model was often dominated by outliers (Figures 1 and 2). Overall, low variance in forecast performance was closely linked with good average performance (Figures 1A and 1D), suggesting that the ability to avoid large errors was an important factor in determining overall performance. The impact of outlier values was especially prononuced for the renewal model, which had more outliers (Figure 2), as well as the highest standard deviation of the WIS of all models across all horizons and targets (Figure S1). Crowd forecasts were more stable and had a lower standard deviation of the WIS than the untuned models for both cases and deaths. Performance of the convolution model was more varied than that of the crowd forecasts as judged by the standard deviation of the WIS (sd of XX vs. XX), but visual inspection suggests this is due to two extreme outlier forecasts (Figure S1). 
 
-### Contribution to the Forecast Hub
+On cases, crowd forecasts were also more stable in their performance than the hub ensemble (Figures S1 and 2A). On deaths, however, the hub ensemble was more consistent than all other forecasts (sd of XX vs. XXs), underlying again the relationship between average performance and variance in WIS. 
 
-> [name=Sam Abbott] Isn't this interesting: "This positive contribution from a model often even occured when the ensemble without that model was better than the model itself" -> lets think about that a bit more. 
-> [name=Sam Abbott] these need to be in place before sending this elsewhere.
->[name=Sam Abbott] Again flow. Comment, number, link to further info.
-> [name=Sam Abbott] Condsider a variant of the distribution plot above to look at what the drivers of this are (i.e showing each variant of the ensemble and the ensemble without us).
-> [name=Sam Abbott] I would probably report the median and mean at the same time for WIS and use that as the point of interest.
+Outliers for the renewal model were more frequent in Germany (and so was variance in WIS values, Figure 1D), where the trend of the epidemic changed more often (Figure 1). Notable outliers were the forecasts made on November 2 2020 (target date of November 14 2020 in Figure 1) and several forecasts made in late December 2020 and early January 2021 (target dates in January 2021 in Figure 2). In October, the renewal model did very well in predicting the exponential growth of cases in Germany until November 2 2020 (first two data points in Figure 2B), but missed the following slowdown and therefore severly overpredicted (3rd and 4th data point in Figure 2B). Human forecasters, possibly aware of the semi-lockdown announced on November 02 2020 and the change in the testing regime (with stricter test criteria, meaning less people tested) on November 03 2020, were able to handle this period better. In December, cases rose again in Germany, leading the model again to overpredict when reported case numbers fell over Christmas. Predictions from the renewal model in January show a very high variance, with severe underpredcition (possibly explained by noise in the reporting of daily cases) followed by severe overprediction on XX January (target date XX January in Figure 2), indicating that the renewal model was not well suited to distinguish noise and signal. 
 
-The crowd forecasts and the renewal model generally improved the performance of the median hub ensemble mostly when considering all forecast dates together. This was particularly true for case forecasts and it was also true both individually and together. This positive contribution from a model often even occured when the ensemble without that model was better than the model itself. Scores from the ensembles with and without the two models included can be seen in Table 3 for one and two week ahead forecasts and in the Table XX in the SI for three and four week ahead forecasts. A pot with the number of ensemble member models over time can be seen in Figure XX in the SI. The median number of models included in the ensemble was 7, with an increase over time. 
+INSERT OTHER ASTONISHING REVELATIONS ABOUT OTHER MODELS HERE. 
 
-For case forecasts, including both models improved the average WIS of the forecast hub median ensemble for one week ahead predictions by 20% from 8770 to 7000. Each of the models alone achieved a reduction of around 10%. For two weak ahead case forecasts, the average WIS was reduced from 18300 to 17500 by the including the renewal model alone, to 16900 by including the crowd forecasts alone and to 16500 with both models included. Note that the renewal model performed, on average, worse than the hub ensemble without it for two week ahead case forecasts with a WIS of 25600). For three and four weeks ahead, inclusion of the renewal model slightly deteriorated ensemble predictions on average, while the crowd forecasts made a positive contribution at all forecast horizons. 
-For death forecasts, including both models improved average WIS from 248 to 235 for one week ahead forecasts. For two week ahead forecasts, both models deteriorated performance, albeit only slightly, from an average WIS of 292 to 296 with both models included. At three and four weeks ahead, crowd forecasts made a neutral (three weeks ahead) or positive contribution (four weeks ahead), while the renewal model made the overall performance of the ensemble slightly worse. 
 
-![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/table_median-ensemble_scores_2_ahead.png)
-*Table 3. Summarised scores for the one and two week ahead predictions of the forecast hub median ensemble with and without the crowd forecasts and the renewal model included*
+### Performance in different phases of the pandemic
+
+CURRENTLY MISSING
+
+General note: Maybe a lot of what we see isn't actually model vs. humans, but rather daily vs. weekly data...
+
+<!--
+Cases - Decreasing Phase
+- overall: phase with the lowest mean and median score
+- Renewal model: 4 outliers, often very good
+    - one very large outlier in Germany 
+        - Forecast date 2021-01-04 Target end date 2021-01-16, underprediction
+    - three outliers in Poland. 
+        - Target end date 2020-12-07, Forecast date 2020-12-19, underprediction
+        - Target end date 2020-12-28, Forecast date 2021-01-09, underprediction
+        - Target end date 2021-01-11, Forecast date 2021-01-23, overprediction
+    - -> Some kind of daily reporting artifact issue? 
+- Crowd forecast: 2 small outliers, often very good
+    - both in Poland
+        - Forecast date 2020-11-30, Target end date 2020-12-12, overprediction before a sudden drop that humans didn't recognise beforehand (but models did? Maybe that was just the good Polish models)
+        - Forecast date 2021-01-11, Target end date 2021-01-23, overprediction
+- Hub-ensemble: no outliers, good, but not exceptional overall
+
+Cases - Unclear Phase
+- Phase with the fewest observation (for cases)
+- Renewal model: 2 very large outliers, otherwise very very good performance
+    - both in Germany
+        - Forecast date 2020-12-28, Target end date 2021-01-09, underprediction
+        - Forecast date 2021-01-11, Target end date 2021-01-23, overprediction
+- Crowd forecast: mediocre performance, but no real outliers
+- Hub ensemble: mediocre performance, but no real outliers
+
+Cases - Increasing Phase
+- Phase where all models had their largest outliers
+- Renewal model: six outliers
+    - Germany
+        - Forecast date 2020-10-26, Target end date 2020-11-07, overprediction
+        - Forecast date 2020-11-02, Target end date 2020-11-14, overprediction
+        - Forecast date 2020-12-14, Target end date 2020-12-26, overprediction
+        - Forecast date 2020-12-21, Target end date 2021-01-02, overprediction
+    - Poland
+        - Forecast date 2020-11-02, Target end date 2020-11-14, overprediction
+        - Forecast date 2020-11-09, Target end date 2020-11-21, overprediction
+- Crowd forecast: one outlier, more mediocre forecasts
+    - Germany
+        - Forecast date 2020-12-21, Target end date 2021-01-02, overprediction
+- Hub ensemble: 5 outliers
+    - Germany
+        - Forecast date 2020-11-02, Target end date 2020-11-14, overprediction
+        - Forecast date 2020-11-09, Target end date 2020-11-21, overprediction
+        - Forecast date 2020-12-21, Target end date 2021-01-02, overprediction
+    - Poland
+        - Forecast date 2020-11-02, Target end date 2020-11-14, overprediction
+        - Forecast date 2020-11-09, Target end date 2020-11-21, overprediction
+
+Deaths - Decreasing Phase (threshold 350)
+- Phase with the lowest scores for deaths
+- Renewal model: one large outlier, two smaller ones
+    - Germany
+        - Forecast date 2021-01-25, Target end date 2021-02-06, overprediction
+    - Poland 
+        - Forecast date 2020-12-28, Target end date 2021-01-09, very large underprediction, very very sharp forecast -> data issue? 
+        - Forecast date 2021-01-11, Target end date 2021-01-23, overprediction
+- Crowd forecast: 2 outliers
+    - Germany
+        - Forecast date 2021-02-08, Target end date 2021-02-20, overprediction
+    - Poland
+        - Forecast date 2021-01-04, Target end date 2021-01-16, underprediction
+- Hub ensemble: 2 outliers
+    - Germany
+        - Forecast date 2021-01-25, Target end date 2021-02-06, excessive sharpness
+    - Poland
+        - Forecast date 2021-01-04, Target end date 2021-01-16, underprediction
+- Convolution model: overall quite good performance
+    - Germany
+        - Forecast date 2021-03-01, Target end date 2021-03-13, overprediction
+
+
+Deaths - Unclear Phase (threshold 500)
+- Renewal: 3 outliers
+    - Germany
+        - Forecast date 2020-12-28, Target end date 2021-01-09, underprediction
+        - Forecast date 2021-01-04, Target end date 2021-01-16, underprediction
+    - Poland
+        - Forecast date 2021-01-18, Target end date 2021-01-30, overprediction
+- Crowd forecast: 2 outliers (identical outliers to Renewal in Germany)
+    - Germany
+        - Forecast date 2020-12-28, Target end date 2021-01-09, underprediction
+        - Forecast date 2021-01-04, Target end date 2021-01-16, underprediction
+- Hub ensemble: 1 outlier
+    - Germany
+        - Forecast date 2021-01-04, Target end date 2021-01-16, underprediction
+- Convolution: outliers (identical outliers to Renewal in Germany)
+    - Germany
+        - Forecast date 2020-12-28, Target end date 2021-01-09, underprediction
+        - Forecast date 2021-01-04, Target end date 2021-01-16, underprediction
+
+Deaths - Increasing Phase: Threshold 500
+- Renewal: 3 outliers 
+    - Germany
+        - Forecast date 2022-12-21, Target end date 2021-01-02, overprediction
+        - Forecast date 2021-01-11, Target end date 2021-01-23, overprediction
+        - Forecast date 2021-01-18, Target end date 2021-01-30, overprediction
+- Crowd forecast: 3 outliers (same as Renewal)
+    - Germany
+        - Forecast date 2022-12-21, Target end date 2021-01-02, overprediction
+        - Forecast date 2021-01-11, Target end date 2021-01-23, overprediction
+        - Forecast date 2021-01-18, Target end date 2021-01-30, overprediction
+- Hub ensemble: only one of the 3 outliers
+    - Germany
+        - Forecast date 2022-12-21, Target end date 2021-01-02, overprediction
+- Convolution: only one of the 3, but a different from Hub ensemble, and also in a different direction
+    - Germany
+        - Forecast date 2021-01-11, Target end date 2021-01-23, underprediction
+        
+- maybe discuss the way the renewal model generates its uncertainty -> difference between rising and falling case numbers
+- maybe somethin about weekly and daily data here? Or in the discussion
+
+-->
 
 <!--
 
@@ -327,82 +341,140 @@ For death forecasts in decreasing phases, sharpness (i.e. forecast uncertainty) 
 
 -->
 
+--- 
+
+### Contribution to the Forecast Hub
+
+<!--
+> [name=Sam Abbott] Isn't this interesting: "This positive contribution from a model often even occured when the ensemble without that model was better than the model itself" -> lets think about that a bit more. 
+> [name=Sam Abbott] these need to be in place before sending this elsewhere.
+>[name=Sam Abbott] Again flow. Comment, number, link to further info.
+> [name=Sam Abbott] Condsider a variant of the distribution plot above to look at what the drivers of this are (i.e showing each variant of the ensemble and the ensemble without us).
+> [name=Sam Abbott] I would probably report the median and mean at the same time for WIS and use that as the point of interest.
+
+-->
+
+<!--
+> [name=Nikos] So at the moment this is all just the average and not very interesting. Since I want to make a project about ensembles anyway I'm not sure we *need* to make it very interesting right now. My issue is not lack of motivation, but rather that I'm not entirely clear what we'd need to do in order to get some meaningful insights. Maybe we could discuss ways to plot this? Or just leave for now as is? 
+
+> [name=Nikos] Also maybe move the table to the Appendix? Not sure it is such an important part of the paper
+-->
+
+![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/table_median-ensemble_scores_2_ahead.png)
+*Table 3. Summarised scores for the one and two week ahead predictions of the forecast hub median ensemble with and without the crowd forecasts and the renewal model included*
+
+Submission of the crowd forecasts and the renewal model improved the hub ensemble forecasts noticeably (XX% improvement in WIS, Table XX). Contributions from the crowd forecasts were positive across all forecast horizons (XX% at 2 week ahead, XX% at 4 week ahead, Tables XX and XX). Contributions from the renewal model were positive for one and two week ahead predictions (XX%), even though the renewal model alone performed worse than the hub ensemble without it (WIS XX vs. XX). The median number of models included in the hub ensemble was 7, with an increase over time (Figure XX). 
+
+For death forecasts, including both models overall slightly decreased performance of the forecast hub ensemble (XX% reduction). At two weeks ahead, the crowd forecasts made a stronger negative contribution than the renewal model (XX% with crowd alone, XX% with renewal model alone), but at four weeks ahead, crowd forecasts made a positive contribution (XX% improvement), while the renewal model decreased ensemble WIS (-XX% change). 
+
+
+
+
+
 ## Discussion
 
 ### Summary
 
-In this study we evaluated crowd forecasts, simple untuned model based forecasts, and a multi-model ensemble of expert opinion supported models in a robust real-time setting. We found that across a range of forecast observations locations, and evaluation metrics that crowd forecasts performed comparably or better than a large multi-model ensemble made up of expert-informed model based forecasts. The performance of the untuned model forecasts was more nuanced when compared to the ensemble with a large variation in performance but in general we found that the simple models evaluated here improved the overall ensemble they were included in for most scenarios and evaluation targets of interet. The ensemble crowd forecast was rarely the best performing forecast approach at short time scales but delivered consistently good performance without the large outliers seen in untuned model forecasts. In addition at longer time-scales the crowd forecast outperformed other methods for most target types and locations. Stratifying by observation type we found that crowd derived forecasts performed less well and that there was some evidence that simple models could better capture the relationship between COVID-19 cases and deaths though this was hard to fully quantify. This dynamic was highlighted when stratifying by recent trend where crowd forecasts appeared to struggle to forecast deaths during periods of increase (though this inference is based on a low sample size). Across all targets the untuned models we evaluated often performed well at short timescales but this outperformance was marred by several extremely poor forecasts, especially for the renewal model forecasting deaths without the benefit of case data. It is difficult to assess fully whether this behaviour was desirable, or if different optimisation approaches are warranted. At longer time horizons the simple models assumption of no change in transmission from the forecast date resulted in poor performance when forecasting cases and to a less extent deaths when using cases as a predictor.  
+In this study we evaluated crowd forecasts, simple untuned model based forecasts, and a multi-model ensemble of expert opinion supported models in a robust real-time setting. We found that across a range of forecast observations locations, and evaluation metrics that crowd forecasts performed comparably or better than a large multi-model ensemble made up of expert-informed model based forecasts. The performance of the untuned model forecasts was more nuanced when compared to the ensemble with a large variation in performance..II  general we found that the simple models evaluated here improved the overall ensemble they were included in for most scenarios and evaluation targets of interet. The ensemble crowd forecast was rarely the best performing forecast approach at short time scales but delivered consistently good performance without the large outliers seen in untuned model forecasts. In addition at longer time-scales the crowd forecast outperformed other methods for most target types and locations. Stratifying by observation type we found that crowd derived forecasts performed less well and that there was some evidence that simple models could better capture the relationship between COVID-19 cases and deaths though this was hard to fully quantify. This dynamic was highlighted when stratifying by recent trend where crowd forecasts appeared to struggle to forecast deaths during periods of increase (though this inference is based on a low sample size). Across all targets the untuned models we evaluated often performed well at short timescales but this outperformance was marred by several extremely poor forecasts, especially for the renewal model forecasting deaths without the benefit of case data. It is difficult to assess fully whether this behaviour was desirable, or if different optimisation approaches are warranted. At longer time horizons the simple models assumption of no change in transmission from the forecast date resulted in poor performance when forecasting cases and to a lesser extent deaths when using cases as a predictor.  
 
-- Detail on score: 
-    - Crowd forecasts performed well in terms of absolute error suggesting that...
-    - In comparison model based forecast which suggests....
-    - However crowd based forecasts performed less well in terms of calibration indicating that trend forecasts were relatively correct but forecasters struggled to estimate uncertainty without the aid of a models ability to infer it from data. This is in line with previous research into crowd forecasts [@recchiaHowWellDid2021] and is an area of further research.
-    - Our scoring methods were biased towards penalising overprediction during periods of increasing cases. This may have favoured methods with a linear error rather than an exponential error. As both our untuned models used an exponential model of case growth this may have led to some bias against them in our findings.
-    - To a certain extent, underpredicting may be interpretable as 'hedging against' or incorporating the fact that a sudden downturn may be possible. Given that underpredictions made up a large part of penalties incurred during increasing phases this implies that either humans were not well prepared to forecast exponential growth in cases or systematically overestimated the probably of a sudden downturn. For deaths it was even more striking that all models consistently overpredicted deaths, maybe missing a change in the observed case fatality rate due to changes in testing. It is interesting to see that the pattern of the relative share of the WIS components for human forecasters most closely resembles the pattern of the baseline model. 
+### Differences in predicting cases and deaths
 
+Future cases often depend on a range of factors that are difficult to quantify such as future policy interventions, adherence to these interventions, testing policy, and the evolution of new disease variants. It appears that these factors may be better captured by explicit crowd forecasts rather than other forms of forecast models, even supported by expert opinion. For deaths, there exists a more direct relationship to previously observed cases which can potentially be captured using epidemiological insight and mechanistic modelling. Other studies have found that this makes deaths easier to forecast [@cramerEvaluationIndividualEnsemble2021; @bracherShorttermForecastingCOVID192021], which our results support as even the simplest interpretation of this relationship, deaths as a discrete convolution of cases, performed well in most scenarios. Death forecasts had far better coverage values than case forecasts, indicating that models were better able to adjust their uncertainty over time. We found some evidence that crowd based forecasts struggled to fully capture this relationship though this was difficult to separate from crowd forecasts ability to incorporate future complex changes which led to outperformance in general across targets. 
+> [name = Nikos] not sure I fully understand the next sentence(s)
+
+Interestly we found that for some target locations and time periods this relationship between cases and deaths did not hold and in these circumstances a simple model that forecast deaths using only previously observed deaths outperformed but this was mitigated by periods of underperformance for this model where knowledge of variation in cases led to improved forecasts. This may indicate that a hybrid approach should perform well but in practice specifying the correct mixture of these approaches may be difficult. For example the hub ensemble is a version of this hybrid approach and also struggled in periods where the relationship between cases and deaths became less clear. 
+
+### Human forecasts and calibration
+
+Crowd forecasts tended to perform relatively well in terms of absolute error, but poorly in terms of empirical coverage. This suggsts that humans are relatively good at estimating general trends, but tend to be overconfident and struggle to quantify uncertainty appropriately without the aid of a model's ability to infer it from data. This is in line with previous research into crowd forecasts [@recchiaHowWellDid2021; @TomMcAndrew] and is an area of further research. Our untuned models, on the other hand, did better in terms of calibration even though they were on average further away from the observed values (had higher absolute errors). 
+
+
+### Human underprediction
+> [name=Nikos] Need to think more about this
+
+To a certain extent, underpredicting may be interpretable as 'hedging against' or incorporating the fact that a sudden downturn may be possible. Given that underpredictions made up a large part of penalties incurred during increasing phases this implies that either humans were not well prepared to forecast exponential growth in cases or systematically overestimated the probably of a sudden downturn. For deaths it was even more striking that all models consistently overpredicted deaths, maybe missing a change in the observed case fatality rate due to changes in testing. 
+
+
+
+### Linear or exponential error
+> [name=Nikos] @Sam can you elaborate on this one?
+
+- Our scoring methods were biased towards penalising overprediction during periods of increasing cases. This may have favoured methods with a linear error rather than an exponential error. As both our untuned models used an exponential model of case growth this may have led to some bias against them in our findings.
+
+
+
+### Capturing changes in trends
 
 - Changes in trend model comparison (just cases here)
     - Potentially the crowd forecat predicted a slowdown in cases. Was this pricing in an intervention and if so is this a good thing.
     - Model based forecasts were in general good/bad at capturing changes in trend. 
     - The multi-model ensemble was relatively poor at detecting changes in trend though equally it did not predict spurious changes in trend. 
 
-- Detail on comparison between cases and deaths
 
-Future cases often depend on a range of factors that are difficult to quantify such as future policy interventions, adherence to these interventions, testing policy, and the evolution of new disease variants. It appears that these factors may be better captured by explicit crowd forecasts rather than other forms of forecast models, even supported by expert opinion, though it is an open question whether this is desirable in all circumstances. For deaths, there exists a more direct relationship to previously observed cases which can potentially be captured using epidemiological insight and mechanistic modelling. Other studies have found that this makes deaths easier to forecast [@cramerEvaluationIndividualEnsemble2021; @bracherShorttermForecastingCOVID192021], which our results support as even the simplest interpretation of this relationship, deaths as a discrete convolution of cases, performed well in most scenarios. We found some evidence that crowd based forecasts struggled to fully capture this relationship though this was difficult to separate from crowd forecasts ability to incorporate future complex changes which led to outperformance in general across targets. Interestly we found that for some target locations and time periods this relationship between cases and deaths did not hold and in these circumstances a simple model that forecast deaths using only previously observed deaths out performed but this was mitigated by periods of underperformance for this model where knowledge of variation in cases led to improved forecasts. This may indicate that a hybrid approach should perform well but in practice specifying the correct mixture of these approaches may be difficult. For example the hub ensemble is a version of this hybrid approach and also struggled in periods where the relationship between cases and deaths became less clear. 
-- More on horizon
-    - Optimising a forecast to a specific time horizon relies on understanding the use case of those consuming the forecasts.
-    - At longer time horizons modelling potential future interventions becomes more important in the context of forecasting COVID-19 due to the large burdens on the health system meaning that interventions were often required. Whilst building this into forecasts as an assumption may lead to better performing forecasts at these longer time horizons there is a question whether this is a useful thing to do for forecasts used by policy makers. This is difficult to explore more fully without knowing the full context in which forecasts are interpreted and used. 
-    
+
+### Contribution to the forecast hub ensemble
 - Interpretation of models contribution to overall forecasts
     - All models improved the ensemble in general
     - Which models improved it the most? 
     - How good were our models as an ensemble (i.e did anyone apart from us add anything - cheeky but interesting). 
     - At longer time horizons our simple models may have worsen the scored performance of forecasts though as mentioned there is a tension here between influencing and incorporating policy changes.
     
-<!-- - 
-
-To a certain extent, underpredicting may be interpretable as 'hedging against' or incorporating the fact that a sudden downturn may be possible. Given that underpredictions made up a large part of penalties incurred during increasing phases this implies that either humans were not well prepared to forecast exponential growth in cases or systematically overestimated the probably of a sudden downturn. For deaths it was even more striking that all models consistently overpredicted deaths, maybe missing a change in the observed case fatality rate due to changes in testing. It is interesting to see that the pattern of the relative share of the WIS components for human forecasters most closely resembles the pattern of the baseline model. 
+    
 
 
---> 
-
-- Discussion of the mean ensemble
-
-The rationale for taking the mean (rather than the median) was that it would make better use of the available information when the number of forecasters was small, sacrifing the robustness a median ensemble would offer. At the time the ensemble used by the German and Polish Forecast Hub was a mean ensemble. 
-
-- Discussion of the recruiting process
-Motivating forecasters to contribute regularly proved challenging, especially given that the majority of our participants were from the UK and had no real connection to either Germany or Poland.
 
 
 ### Strengths and Weaknesses
 
-<!-- *When writing this layer strengths and limitations together. Start with a strength and then for every limitation counter with a strength* -->
-
-> [name=Sam Abbott] Mention: We published everything to a public repo with a timestamp. 
+<!-- *When writing this layer strengths and limitations together. Start with a strength and then for every limitation counter with a strength* 
 > [name=Sam Abbott] Again if keeping the stated aim of the paper would reflow to mention s and w in the internal structure of the paper and mention the hb stuff second. I would have a section on our general approach in reference to the aim, the crowd forecast, the models, and then the hub. 
 
+-->
+
+<!--#### Aims -->
+In this paper we have attempted to disentangle the role of human insight and epidemiological modelling in real-time Covid-19 forecasting. Our work has robustly assessed the performance of crowd-sourced human predictions and model based forecasts in a realistic real-time setting. Forecasts reflect unbiased predictive performance at the time and could not be tuned in response to reporting artifacts after submission as they were registered with an independent research organisation, timestamped and published to a public repository. Our evaluation followed a methodology pre-registered by the German and Polish Forecast Hub [@bracherComparisonCombinationRealtime2020] which makes sure our results can be fairly compared against official forecast hub evaluations. Submitting human crowd forecasts to a forecast hub expressly designed to evaluate and aggregate quantitative forecasts is a novelty and created a unique opportunity to directly and fairly compare human predictions against model-based forecasts as well as contribute to the forecasts available to public health policy makers. Our findings shed light on potential structural patterns that distinguish human crowd forecasts, untuned model-based predictions and forecast models that are continuously improved by human intervention. They are, however, not directly generalisable for a few reasons. 
+
+<!-- #### Generalisability -->
+First, our untuned models cannot represent all model-based forecasts. While we aimed to create to models that capture the simplest possible epidemiological baseline assumption about how an epidemic involves, these are still two particular models with particular strenghts and weaknesses. Second, findings are confounded by the fact that we compared models and ensembles of models. Many of the features we observed, for example the ability or inability to avoid large outlier predictions, may be more a feature of ensembles than sign of any human intervention. However, omitting the complexity of comparing all individual forecasters as well as forecast hub models allowed us to discern patterns and trends in a way that would otherwise have been hard to accomplish. Third, we were not able to directly observe the role of human insight in the models that were submitted to the German and Polish Forecast Hub. Based on conversations with different contributors we know that all models have been tuned by human intervention to variying degrees, but are not able to quantify this conclusively, nor estimate the effect of human interventions on hub models. We unfortunately did not test a scenario where users were tasked to directly adjust predictions from the renewal model and the convolution model (and also did not have the statistical power to do so). This would have been a possible way to quantify the effect of researchers tuning their models more directly. Fourth, while the methodology did not change for the renewal model and the convolution model, this continuity is not given for the crowd forecasts and the hub ensemble. Comparability of crowd forecasts at different time points is hampered by the low number of participants we were able to recruit initially and the fact that participants kept joining or dropping out. Similarly, the composition of the Hub ensemble changed over time as did many of the individual models contributing forecasts to the Forecast Hub. <!-- To mitigate this, a wide range of potential confounding factors, like different time periods, were considered to ensure the robustness of the obtained results. -->
+Fifth, given the low number of participants, it is difficult to generalise conclusions about crowd predictions to other settings. In particular, our crowd forecasting application was relatively technical which may have precluded less technical, but interested parties, from submitting forecasts. This relatively high bar to participate (compared to a simple online study like e.g. [@reccia] conducted) may have impacted on performance. It is both conceivable that a greater number of participants would have improved forecasts, but also that excluding a larger audience may have increased average quality of predictions. Given that the majority of our forecasters was based in the UK and therefore had limited connection to Germany or Poland, perfomance might be better in a setting with a greater number of participants who have detailed local expertise. 
+
+<!-- #### Forecaster recruitment -->
+Motivating forecasters to contribute regularly proved challenging, especially given that the majority of our participants were from the UK and little connection to either Germany or Poland. In addition, lack of capacity to do proper outreach played an important role as well as a lack of time and ressources to design the interface in a way that is appealing enough to attract large audiences outside of academia. Having to ask forecasters for a full predictive distribution (instead of a simple point prediction) increased complexity for participants, but allowed us submit the forecasts to the German and Polish Forecast Hub as well as analyse probabilistic aspects of human forecasts. Using an R shiny app as an interface arguably created some limits to user experience and performance, influencing the number of participants. On the other hand, it faciliated quick development and allows us to provide our crowd forecasting tooling as an open source R package, meaning that it is available for others to use, and to further develop, in their context. 
+
+Due to the low number of submissions per forecast target and date we were not able to evaluate some important factors, namely the role of expert knowledge in this study, the impact of the interface exposed to forecasters and the baseline model shown, or to explore weighting forecasters by prior performance. Notwithstanding these limitations, we showed that even a small number of human forecasters, who were in general not domain experts in the target countries, can make Covid-19 forecasts that perform well when compared to forecasts from other sources. We hypothesise that our findings represent a lower rather than an upper bound for the performance achieveable with crowd forecasts of this type. 
 
 
-Our work has robustly assessed the performance of crowd-sourced human predictions and model based forecasts in a realistic real-time setting. Forecasts reflect unbiased predictive performance at the time and could not be tuned in response to reporting artifacts after submission as they were registered with an independent research organisation. Our evaluation followed a methodology pre-registered by the German and Polish Forecast Hub [@bracherComparisonCombinationRealtime2020] which makes sure our results can be fairly compared against official forecast hub evaluations. 
+### Contrasting forecasting goals and the trade-offs involved
+Deciding on how to evaluate a forecast, and concluding whether it is 'good' or 'poor' to a certain extent depends on what that forecast is meant to achieve. Some policy-makers, for example, may view underprediction more problematic than overprediction in a way that is not captured by our main evaluation metric, the weighted interval score. Similarly, optimising a forecast to a specific time horizon relies on understanding how the forecast is used by those that consume it. This is potentially somewhat difficult in the context of a forecast hub, where very different groups (academics, policy makers, the general public) see and use the forecasts. Modelling that is meant to inform policy makers may be different from forecasts meant to inform general public about possible scenarios, and yet again different from a situation where research teams submit predictions with the goal of advancing open research and in order to allow public scrutiny and discussion about the merits of different approaches. 
 
-While the methodology did not change for the Renewal model, the Convolution model and the Baseline model, this continuity is not given for the crowd forecasts and the hub ensemble model. Comparability of crowd forecasts at different time points is hampered by the low number of participants we were able to recruit initially and the fact that participants kept joining or dropping out. Similarly, the composition of the Hub ensemble changed over time as did many of the individual models contributing forecasts to the Forecast Hub. To mitigate this, a wide range of potential confounding factors, like different time periods, were considered to ensure the robustness of the obtained results. 
+We feel this is a point worth reflecting on in the context of our research. Judging by the weighted interval score, we found that crowd forecasts outperformed the untuned models at greater forecast horizons. To a certain extent this is to be expected as humans are able to foresee future changes in conditions (e.g. future policy interventions, adherence to these interventions, testing policy, and the evolution of new disease variants) while our untuned models made forecasts based on fixed assumptions. This distinction is important especially if we think of 'future changes in conditions' mostly in terms of things that depend on decisions and changes in behaviour, as not only do these change forecasts, but also forecasts may influence future interventions and behaviour. The apparent advantage of the crowd forecast may therefore even be a drawback, depending on who is using the forecasts for what purpose. If the aim of a forecast is to inform policy and decision making, than precluding the very interventions one is meant to inform may be problematic (and conversely, arguing for or against interventions based on predictions may be difficult depending on what the forecast assumes about future interventions). In that sense, crowd forecasts can be understood as actual forecasts, whereas our untuned models may be better understood as scenario modelling that shows what would happen based on simple epidemiological assumptions if everything stayed as it was. Adapting to changing conditions, however, again needs some kind of human intervention that incorporates knowledge or assumptions about the new conditions into the model. In order to not dilute the model based predictions with human opinion, we refrained from applying any tweaks to the computer models. One possible very simple adjustment that would seem promising in terms of pure predictive performance would be to have $R_t$ revert to one over time for the renewal model. 
 
-We showed that even a small number of expert forecasters, who were in general not domain experts in the target countries, can make Covid-19 forecasts that perform well when compared to forecasts from other sources. Unfortunately, due to the low number of submissions per forecast target and date we were not able to evaluate the role of expert knowledge in this study, the impact of the interface exposed to forecasters, or to explore weighting forecasters by prior performance. In particular, our crowd forecasting application was relatively technical which may have precluded less technical, but interested parties, from submitting forecasts. However, our approach did allow us to produce user specific crowd forecasts, and and crowd ensemble forecasts, with a full predictive distribution. This allowed us to directly evaluate crowd forecasts compared to model based forecasts and to submit our crowd forecasts to an ensembling and evaluation platform expressly designed to evaluate quantitive forecasts and improve forecasts available to public health policy makers. Due to the limitations listed above we feel that our findings represent a lower rather than an upper bound for the performance of crowd forecasts of this type. Lastly, we provide our crowd forecasting tooling as an open source R package, meaning that it is available for others to use, and to further develop, in their context. 
+<!--
+- More on horizon
+    - Optimising a forecast to a specific time horizon relies on understanding the use case of those consuming the forecasts.
+    - At longer time horizons modelling potential future interventions becomes more important in the context of forecasting COVID-19 due to the large burdens on the health system meaning that interventions were often required. Whilst building this into forecasts as an assumption may lead to better performing forecasts at these longer time horizons there is a question whether this is a useful thing to do for forecasts used by policy makers. This is difficult to explore more fully without knowing the full context in which forecasts are interpreted and used. 
+-->
+
+
+
+
 
 **Strengths and weaknesses in the context of the literature**
 
-Forecasts are rarely evaluated based on real-time performance as done in this study with retrospective analysis being more common outside of large scale collaborative projects. This approach has allowed us to capture realised performance characteristics rather than performance in idealised settings. When forecasts are evaluated basesd on real-time performance studies often have to treat the models as effectively "black boxes"  as little is known about the individual models and the interaction between the models and those submitting them. Noteworthy examples of robust forecast ensembling and evaluation projects in the context of COVID-19 are: evaluation of UK SPI-M forecasts (cite seb), the US COVID-19 forecasting hub [@cramerEvaluationIndividualEnsemble2021], the related Germany/Poland forecasting hub @bracherShorttermForecastingCOVID192021, and the more recent ECDC forecasting hub. All of these projects have provided policy makers with forecasts that are more robust than otherwise available and have allowed individual forecasters to be ranked. These projects also have key advantages when compared to our study in that they often have a larger sample size of both submitted models and forecast targets (both in terms of location and observation type) and that those evaluating the forecasts are independent from those submitting forecasts. However, to our knowledge, outside of our submissions to these efforts, none of the submitted forecasts represent either a non-model based crowd forecast or an untuned model based forecast. Another key advantage of our study in comparison to others evaluating  real-time performance was that due to our focus on a limited subset of known models and forecast targets we could explore performance in much greater detail, and with greater clarity than large scale studies such as [@bracherShorttermForecastingCOVID192021; @cramerEvaluationIndividualEnsemble2021; @seb]. A potential limitation of our study in comparison to @bracherShorttermForecastingCOVID192021 was that we did not evaluate the role of interventions on forecast performance. However, we instead explored performance under different categorisations of recent trends in the target observations. This had the advantage of mitigating potentials bias caused by having to define an intervention but may slightly obscure the evaluation of forecasts in the context of the benefit to policy makers. 
+Forecasts are rarely evaluated based on real-time performance as done in this study with retrospective analysis being more common outside of large scale collaborative projects. This approach has allowed us to capture realised performance characteristics rather than performance in idealised settings. When forecasts are evaluated basesd on real-time performance studies often have to treat the models as effectively "black boxes"  as little is known about the individual models and the interaction between the models and those submitting them. Noteworthy examples of robust forecast ensembling and evaluation projects in the context of COVID-19 are: evaluation of UK SPI-M forecasts (cite seb), the US COVID-19 forecasting hub [@cramerEvaluationIndividualEnsemble2021], the related Germany/Poland forecasting hub @bracherShorttermForecastingCOVID192021, and the more recent ECDC forecasting hub. All of these projects have provided policy makers with forecasts that are more robust than otherwise available and have allowed individual forecasters to be ranked. These projects also have key advantages when compared to our study in that they often have a larger sample size of both submitted models and forecast targets (both in terms of location and observation type) and that those evaluating the forecasts are independent from those submitting forecasts. However, to our knowledge, outside of our submissions to these efforts, none of the submitted forecasts represent either a non-model based crowd forecast or an untuned model based forecast. Another key advantage of our study in comparison to others evaluating  real-time performance was that due to our focus on a limited subset of known models and forecast targets we could explore performance in much greater detail, and with greater clarity than large scale studies such as [@bracherShorttermForecastingCOVID192021; @cramerEvaluationIndividualEnsemble2021; @seb]. A potential limitation of our study in comparison to @bracherShorttermForecastingCOVID192021 was that we did not evaluate the role of interventions on forecast performance. However, we instead explored performance under different categorisations of recent trends in the target observations. This had the advantage of mitigating potential biases caused by having to define an intervention but may slightly obscure the evaluation of forecasts in the context of the benefit to policy makers. 
 
 Forecasts based on expert and non-expert opinion have been widely used previously both in the context of infectious diseases [@mcandrewAggregatingPredictionsExperts2021; @metaculusPreliminaryLookMetaculus2020; @metaculusPreliminaryLookMetaculus2020]and more widely [@citationsneeded]. Generally, it has been found that crowd forecasts perform well when the target is clearly defined and those submitting opinions are motivated to forecast as well as possible [@citation + fact checking]. However, to our knowledge, crowd infectious disease forecasts have not previously been evaluated against both expert tuned and untuned model based forecasts in real-time previously. However, prior crowd forecasting efforts have benefitted from significantly larger sample sizes and a larger diversity of forecasters. For example in our study many of the forecasts submitted came from researchers working on this study or connected directly to our research group which may have resulted in some biases or reduction in forecasting performance. Another potential limitation is that our application was relatively difficult to use when compared to other crowd forecasting projects such as @recchiaHowWellDid2021. However, this may in fact have benefitted the overall performance of the crowd forecast by raising the technical and motivation levels required to submit. Ultimately however, the impact of this potential bias is difficult to evaluate without further study.
 
 
 **Future work**
 
-Whilst this study robustly explored the role of crowd forecasts compared to model only forecasts and forecasts using both models and expert opinion there are a large number of avenues for further study. These include exploring individual crowd forecasters contribution to the ensemble in greater detail and in particular understanding what role having an ensemble of forecasters of whatever type (i.e either model or opinion derived) plays versus the potential benefits or costs to a forecast from a single model or individual. A related avenue for further work, which relates to both model based and crowd forecasts is how to optimally ensemble forecasts. In addition to this, different ensembling techniques may work differently when used on forecasts produced from models versus forecasts derived from opinion or forecasts that are a combination of both opinion and models. Another area of further study is understanding why crowd forecasts behave the way they do and if this behaviour is useful for public health policy makers. For example it is liklely that crowd forecasts explicitly account for potential future interventions which may cause issues if forecasts are then used by public health policy makers to decide if these interventions should be implemented. Finally, an area of further work that we are currently pursuing is more fully exploring the interaction between crowd derived forecasts and forecasts from models. It may be the case that combining these two approachs explicitly in a robust framework, borrowing the strengths of each, may lead to improved forecasts overall. Ideally this would over come the noted downsides of crowd forecasts such as the difficulty in scaling them and their relatively poor performance forecasting secondary observations such as COVID-19 deaths whilst not obfuscating the role of human insight. 
+Whilst this study robustly explored the role of crowd forecasts compared to model only forecasts and forecasts using both models and expert opinion there are a large number of avenues for further study. These include exploring individual crowd forecasters' contributions to the ensemble in greater detail and in particular understanding what role having an ensemble of forecasters of whatever type (i.e either model or opinion derived) plays versus the potential benefits or costs to a forecast from a single model or individual. A related avenue for further work, which relates to both model based and crowd forecasts is how to optimally ensemble forecasts. In addition to this, different ensembling techniques may work differently when used on forecasts produced from models versus forecasts derived from opinion or forecasts that are a combination of both opinion and models. Another area of further study is understanding why crowd forecasts behave the way they do and if this behaviour is useful for public health policy makers. For example it is liklely that crowd forecasts explicitly account for potential future interventions which may cause issues if forecasts are then used by public health policy makers to decide if these interventions should be implemented. Finally, an area of further work that we are currently pursuing is more fully exploring the interaction between crowd derived forecasts and forecasts from models. It may be the case that combining these two approachs explicitly in a robust framework, borrowing the strengths of each, may lead to improved forecasts overall. Ideally this would overcome the noted downsides of crowd forecasts such as the difficulty in scaling them and their relatively poor performance forecasting secondary observations such as COVID-19 deaths whilst not obfuscating the role of human insight. 
 
 **Conclusions**
 
+
 > [name=Sam Abbott] As mentioned if this is the conclusion the aim of the paper needs to be recast.
+> [name=Nikos] Haven't worked on the conclusions yet
 
 Crowd (or expert) forecasts can perform en par or even better than a large ensemble of epidemiological models and is a viable approach for a manageable set of forecasting targets. Human forecasters are good at predicting general trends, even if they tend to be overly confident in their predictions. Our research suggests that purely theory-derived forecasts are not optimal and that models may benefit from human intervention and fine-tuning. Epidemiological models are most at an advantage when there are a large number of targets to predict or when forecasting lagged quantities such as deaths, as these models can more easily cope with large amounts of data and quantify known relations between parameters. Models can make a positive contribution to an existing ensemble even in situation where the model performs worse than the existing ensemble. Future work should investigate how forecasts can be improved, for example by means of weighted ensembles, and by looking into forecasting methods that combine expert opinion and mechanistic modelling. 
 
@@ -537,11 +609,6 @@ with $\alpha$, $\mu$, $\sigma$, and $\phi$ truncated to be greater than 0 and wi
 
 
 ### Additional figures and tables
-
-#### Aggregate performance metrics for all models
-![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/aggregate-performance-all.png)
-
-*Figure S1. Visualisation of aggregate metrics across forecast horizons. A: mean weighted interval score (WIS) across horizons. B: median WIS. C: Absolute error of the median forecast. D: Standard deviation of the WIS. E: Sharpness (higher values mean greater dispersion of the forecast). F: Bias, i.e. general tendency to over- or underpredict. Values are between -1 (complete underprediction) and 1 (complete overprediction) and 0 ideally. G: Empirical coverage of the 50% prediction intervals. F: Empirical coverage of the 90% prediction intervals.*
 
 
 ![](https://raw.githubusercontent.com/epiforecasts/covid.german.forecasts/analysis/analysis/plots/wis-components.png)
