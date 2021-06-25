@@ -22,6 +22,7 @@ library(grates)
 library(ggdist)
 library(ggthemes)
 library(scales)
+library(dplyr)
 
 # define colors for deaths and cases
 colcases <- brewer.pal(name = "Accent", n = 8)[-c(1, 4)]
@@ -263,10 +264,10 @@ scores %>%
 
 }
 
-   scores_target_forecastdate[horizon == i & target_type == "case"] %>%
-    scores_over_time_plot_components() + 
-    scale_color_manual(values = colcases) + 
-    labs(y = "WIS rel. to baseline", x = "")
+# scores_target_forecastdate[horizon == i & target_type == "case"] %>%
+#   scores_over_time_plot_components() + 
+#   scale_color_manual(values = colcases) + 
+#   labs(y = "WIS rel. to baseline", x = "")
 
 
 ```
