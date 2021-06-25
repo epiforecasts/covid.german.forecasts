@@ -1156,16 +1156,18 @@ aggregate_performance <- function(data,
                            quantiles = 0.5, 
                            sd = TRUE)
   
+  setnames(scores, old = "model", new = "Model")
+  
   plot_helper <- function(tmp = scores, xvar = x, y, rel = relative) {
     if (rel) {
       tmp <- tmp %>%
         arrange(target_type, get(x)) %>%
         group_by(target_type, get(x)) %>%
-        mutate_at(y, ~ . - .[model == "Hub-ensemble"])
+        mutate_at(y, ~ . - .[Model == "Hub-ensemble"])
     }
     
     tmp %>%
-      ggplot(aes_string(x = xvar, y = y, group = "model", color = "model")) +
+      ggplot(aes_string(x = xvar, y = y, group = "Model", color = "Model")) +
       geom_point() +
       geom_line() +
       facet_wrap(facet_formula, scales = "free_y") +
@@ -1211,6 +1213,8 @@ aggregate_performance <- function(data,
                            summarise_by = c("model", "target_type", x, "range"), 
                            quantiles = 0.5, 
                            sd = TRUE)
+  
+  setnames(scores, old = "model", new = "Model")
   
   p_cov50 <- scores[range %in% c(50)] %>%
     plot_helper(y = "coverage") + 
