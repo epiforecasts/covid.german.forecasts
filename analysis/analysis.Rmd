@@ -21,6 +21,7 @@ library(covid.german.forecasts)
 library(grates)
 library(ggdist)
 library(ggthemes)
+library(scales)
 
 # define colors for deaths and cases
 colcases <- brewer.pal(name = "Accent", n = 8)[-c(1, 4)]
@@ -65,18 +66,21 @@ ggsave(here("analysis", "plots", "daily_truth.png"))
 
 truth_and_pred_plot <- function(df, ttype = "case") {
   
+  setnames(df, old = c("model"), new = c("Model"))
+  
   trend <- 
     copy(epitrend)[, location_target := paste0(str_to_sentence(target_type), 
                                                "s", " in ", location_name)]
+  setnames(trend, old = c("classification"), new = c("Classification"))
   p <- df %>%
     dplyr::filter(target_type == ttype) %>%
     ggplot(aes(y = true_value, x = target_end_date)) + 
-    geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = model), 
-                   size = 1.7,
+    geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = Model), 
+                   size = 1.4,
                    alpha = 1,
                    position = position_dodge(width = 4.6)) + 
     geom_point(data = trend[target_type == ttype],
-               aes(shape = classification)) +
+               aes(shape = Classification)) +
     geom_line(data = unfiltered_data[target_type == ttype & horizon == 2]) + 
     theme_minimal() + 
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
@@ -88,14 +92,16 @@ truth_and_pred_plot <- function(df, ttype = "case") {
 
 scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   p <- scores %>%
-  ggplot(aes(x = as.Date(target_end_date), y = get(y))) + 
-  geom_line(aes(colour = model)) + 
-  geom_point(aes(colour = model, shape = classification)) + 
-  theme_minimal() + 
-  facet_wrap( ~ location_target, ncol = 2, scales = "free_y") +
-  theme(legend.position = "bottom") +
-  scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 5, 
-                          max(forecast_dates$full_hub_period)))
+    ggplot(aes(x = as.Date(target_end_date), y = get(y))) + 
+    geom_line(aes(colour = model)) + 
+    geom_point(aes(colour = model, shape = classification)) + 
+    theme_minimal() + 
+    facet_wrap( ~ location_target, ncol = 2, scales = "free_y") +
+    theme(legend.position = "bottom") +
+    scale_y_continuous(labels = comma) + # , 
+                       # trans = log_trans()) +
+    scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 5, 
+                            max(forecast_dates$full_hub_period)))
   return(p)
 }
 
@@ -141,8 +147,8 @@ forecasts_and_scores <- function(data,
     truth_vs_forecast_cases <- df[grepl(i, target)] %>%
       truth_and_pred_plot(ttype = "case") + 
       scale_color_manual(values = colcases) + 
-      labs(y = "Cases", x = "")
-
+      labs(y = "Cases", x = "") 
+    
     # truth plot for deaths
     truth_vs_forecast_deaths <- df[grepl(i, target)] %>%
       truth_and_pred_plot(ttype = "death")  + 
@@ -151,7 +157,9 @@ forecasts_and_scores <- function(data,
                xmax = max(forecast_dates$death_not_scored) + 14,
                ymin = 0,
                ymax = Inf, fill = "grey10", alpha = 0.1) + 
-      labs(y = "Deaths", x = "")
+      labs(y = "Deaths", x = "") +
+      theme(legend.position = "none") + 
+      guides(color = "none", shape = "none")
     
     # scores plot for cases
     scores_over_time_cases <- 
@@ -159,7 +167,10 @@ forecasts_and_scores <- function(data,
       merge(epi_tmp) %>%
       scores_over_time_plot(y = "interval_score") + 
       scale_color_manual(values = colcases) + 
-      labs(y = "WIS", x = "")
+      labs(y = "WIS", x = "") + 
+      theme(legend.position = "none") + 
+      guides(color = "none", shape = "none")
+
   
     # scores plot for deaths
     scores_over_time_deaths <- 
@@ -171,12 +182,16 @@ forecasts_and_scores <- function(data,
                xmax = max(forecast_dates$death_not_scored) + 14,
                ymin = 0,
                ymax = Inf, fill = "grey10", alpha = 0.1) + 
-      labs(y = "WIS", x = "Date")
+      labs(y = "WIS", x = "Date") + 
+      theme(legend.position = "none") + 
+      guides(color = "none", shape = "none")
+
     
     # putting them all together
     truth_vs_forecast_cases / scores_over_time_cases / 
       truth_vs_forecast_deaths / scores_over_time_deaths + 
       plot_layout(guides = "collect") & 
+      # guides(fill = "guidetitle") &
       plot_annotation(tag_levels = 'A') &
       theme(legend.position = 'bottom') 
     
