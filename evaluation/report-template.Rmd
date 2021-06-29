@@ -28,6 +28,9 @@ each week. Currently, we submit an unweighted mean ensemble to the Forecast Hub,
 The evaluations are our own and not authorised by the German Forecast Hub team. We cannot rule out mistakes 
 and the analyses are subject to change. 
 
+Note that forecasts have now shifted to the European Forecast Hub. You can find our evaluation for these
+forecasts [here](https://epiforecasts.io/covid-europe-forecast).
+
 If you have questions or want to give feedback, please create an issue on our 
 [github repository](https://github.com/epiforecasts/covid.german.forecasts)
 
