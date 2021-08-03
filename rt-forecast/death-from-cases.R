@@ -13,7 +13,7 @@ library(purrr, quietly = TRUE)
 target_date <- latest_weekday(char = TRUE)
 
 # Get observations --------------------------------------------------------
-observations <- get_observations(dir = here("data-raw"), target_date)
+observations <- get_observations(dir = here("data-raw"), as.Date(target_date))
 
 # Get case forecasts ------------------------------------------------------
 case_forecast <- suppressWarnings(
@@ -43,7 +43,7 @@ forecast <- regional_secondary(
   return_fit = FALSE,
   secondary = secondary_opts(type = "incidence"),
   obs = obs_opts(scale = list(mean = 0.01, sd = 0.02)),
-  burn_in = as.integer(max(observations$date) - min(observations$date)) - 3 * 7,
+  window = 3 * 7,
   control = list(adapt_delta = 0.95, max_treedepth = 15),
   verbose = TRUE
 )
