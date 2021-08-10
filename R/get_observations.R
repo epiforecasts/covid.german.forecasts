@@ -23,7 +23,7 @@ get_observations <- function(dir, target_date = Sys.Date(),
     .(region = as.character(location_name),
       date = as.Date(date), primary, secondary)
   ]
-  obs <- obs[date >= (max(target_date) - weeks * 7)]
+  obs <- obs[date >= (as.Date(target_date) - weeks * 7)]
   obs <- obs[date <= target_date]
   obs <- obs[primary < 0, primary := 0]
   obs <- obs[secondary < 0, secondary := 0]
