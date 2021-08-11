@@ -1200,10 +1200,10 @@ aggregate_performance <- function(data,
     plot_helper(scores, y = "interval_score") + 
     labs(y = "mean WIS", x = NULL)
   
-  # median performance
-  p_median <- 
-    plot_helper(scores, y = "interval_score_0.5") + 
-    labs(y = "median WIS", x = NULL)
+    # absolute error of performance
+  p_aem <-
+    plot_helper(scores, y = "aem") + 
+    labs(y = "Absolute error", x = NULL) 
   
   # sd of performance
   p_wis_sd <- 
@@ -1215,11 +1215,6 @@ aggregate_performance <- function(data,
     plot_helper(scores, y = "sharpness") + 
     labs(y = "Sharpness", x = NULL)
     
-  # absolute error of performance
-  p_aem <-
-    plot_helper(scores, y = "aem") + 
-    labs(y = "Absolute error", x = NULL) 
-   
   # bias
   p_bias <- 
     plot_helper(scores, y = "bias") + 
@@ -1244,15 +1239,15 @@ aggregate_performance <- function(data,
   
   p_cov90 <- scores[range %in% c(90)] %>%
     plot_helper(y = "coverage", rel = FALSE) + 
-    geom_hline(yintercept = 0.5, linetype = "dashed") +
-    labs(y = "Coverage - 50% PI", x = xlabel) + 
+    geom_hline(yintercept = 0.9, linetype = "dashed") +
+    labs(y = "Coverage - 90% PI", x = xlabel) + 
     expand_limits(y=c(0, 1)) + 
     scale_y_continuous(labels = scales::percent)
   
-  p_combined <- (p_mean + p_median) / 
-    (p_aem + p_wis_sd) / 
+  p_combined <- (p_mean + p_aem) / 
     (p_sharpness + p_bias) / 
-    (p_cov50 + p_cov90) +  
+    (p_cov50 + p_cov90) /
+    (p_wis_sd) +  
     plot_layout(guides = "collect") & 
     plot_annotation(tag_levels = 'A') &
     theme(legend.position = 'bottom') 
