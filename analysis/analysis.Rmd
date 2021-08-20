@@ -23,6 +23,8 @@ library(ggdist)
 library(ggthemes)
 library(scales)
 library(dplyr)
+library(tidyr)
+library(forcats)
 
 # define colors for deaths and cases
 colcases <- brewer.pal(name = "Accent", n = 8)[-c(1, 4)]
@@ -81,6 +83,17 @@ ggsave(here("analysis", "plots", "daily_truth.png"), width = 10, height = 8)
 
 truth_and_pred_plot <- function(df, ttype = "case") {
   
+  # data = unfiltered_data[model %in% regular_models]
+  # df <- data[quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
+  #   dcast(... ~ quantile, value.var = "prediction")
+  # df <- merge(
+  #   df[, c("classification", "speed") := NULL], 
+  #   copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
+  #   by = c("target_end_date", "location_name", "target_type")
+  # )
+  # df <- df[grepl(2, target)]
+  
+  
   setnames(df, old = c("model"), new = c("Model"))
   
   trend <- 
@@ -91,17 +104,19 @@ truth_and_pred_plot <- function(df, ttype = "case") {
     dplyr::filter(target_type == ttype) %>%
     ggplot(aes(y = true_value, x = target_end_date)) + 
     geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = Model), 
-                   size = 1.4,
+                   size = 1.1,
                    alpha = 1,
-                   position = position_dodge(width = 4.6)) + 
+                   position = position_dodge(width = 3.6)) + 
     geom_point(data = trend[target_type == ttype],
                aes(shape = Classification)) +
     geom_line(data = unfiltered_data[target_type == ttype & horizon == 2]) + 
     theme_minimal() + 
+    theme(panel.grid.major.x = element_blank()) +
     facet_wrap(~ location_target, scales = "free", ncol = 2) + 
     theme(legend.position = "bottom") + 
     scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 5, 
-                            max(forecast_dates$full_hub_period)))
+                            max(forecast_dates$full_hub_period)), 
+                 minor_breaks = forecast_dates$unfiltered + 5)
   return(p)
 }
 
@@ -1221,7 +1236,59 @@ aggregate_performance <- function(data,
     labs(y = "Bias", x = NULL) +
     geom_hline(yintercept = 0, linetype = "dashed") +
     expand_limits(y=c(-0.2, 0.2)) 
-   
+  
+  data <- filtered_data[model %in% regular_models]
+  
+  scores <- eval_forecasts(data, 
+                           summarise_by = c("model", "target_type", "horizon"), 
+                           quantiles = 0.5, 
+                           sd = TRUE)
+  
+  setnames(scores, old = "model", new = "Model")
+  
+  
+  component_plot <- function(scores, type) {
+    
+    if (type == "case") {
+      vals <- colcases
+    } else {
+      vals <- coldeaths
+    }
+    
+    scores %>%
+      select(Model, target_type, horizon, sharpness, interval_score,
+             underprediction, overprediction) %>%
+      filter(target_type == type) %>%
+      pivot_longer(names_to = "WIS components",
+                   cols = c(sharpness, overprediction, underprediction)) %>%
+      mutate(`WIS components` = fct_relevel(`WIS components`, 
+                                            c("sharpness", "underprediction", 
+                                              "overprediction"))) %>%
+      group_by(target_type, horizon) %>%
+      arrange(interval_score) %>%
+      ggplot(aes(x = reorder(Model, (interval_score)), y = value, fill = Model, 
+                 group = Model, alpha = `WIS components`)) + 
+      scale_alpha_manual(values = c(1, 0.1, 0.6)) +
+      scale_fill_manual(values = vals) + 
+      geom_bar(stat = "identity", position = "stack",
+               color = "black",
+               size = 0.1,
+               width = 0.8) +
+      facet_wrap(~ horizon, ncol = 4,
+                 strip.position="bottom") + 
+      theme_minimal() + 
+      theme(axis.text.x = element_blank(), 
+            plot.title = element_text(hjust = 0.5, 
+                                      size = 8), 
+            legend.position = c(0.12, 0.83)) + 
+      labs(x = NULL, title = type, y = "WIS") + 
+      guides(fill = "none")
+  }
+  
+  component_case <- component_plot(scores, "case")
+  component_death <- component_plot(scores, "death")
+  components <- component_case + component_death
+
   # coverage
   scores <- eval_forecasts(data, 
                            summarise_by = c("model", "target_type", x, "range"), 
@@ -1233,28 +1300,65 @@ aggregate_performance <- function(data,
   p_cov50 <- scores[range %in% c(50)] %>%
     plot_helper(y = "coverage", rel = FALSE) + 
     geom_hline(yintercept = 0.5, linetype = "dashed") +
-    labs(y = "Coverage - 50% PI", x = xlabel) + 
+    labs(y = "Coverage - 50% PI") + 
     expand_limits(y=c(0, 1)) + 
     scale_y_continuous(labels = scales::percent)
   
   p_cov90 <- scores[range %in% c(90)] %>%
     plot_helper(y = "coverage", rel = FALSE) + 
     geom_hline(yintercept = 0.9, linetype = "dashed") +
-    labs(y = "Coverage - 90% PI", x = xlabel) + 
+    labs(y = "Coverage - 90% PI") + 
     expand_limits(y=c(0, 1)) + 
     scale_y_continuous(labels = scales::percent)
   
-  p_combined <- (p_mean + p_aem) / 
-    (p_sharpness + p_bias) / 
-    (p_cov50 + p_cov90) /
-    (p_wis_sd) +  
+  p_combined <- (p_mean) / 
+    (p_cov50) /
+    (p_cov90) / 
+    (component_case + component_death) +  
     plot_layout(guides = "collect") & 
     plot_annotation(tag_levels = 'A') &
-    theme(legend.position = 'bottom') 
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
   
   ggsave(here(output_dir, paste0(plotname, ".png")), 
-         height = 9.1, width = 10)
+         height = 9.1, width = 8)
   
+  p_combined2 <- (p_aem + p_wis_sd) /
+    (p_sharpness + p_bias) + 
+    plot_layout(guides = "collect") & 
+    plot_annotation(tag_levels = 'A') &
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
+
+    ggsave(here(output_dir, paste0(plotname, "-2.png")), 
+         height = 5.1, width = 10)
+    
+    p_combined3 <- (p_mean + p_aem) /
+        (p_cov50 + p_cov90) /
+        (p_sharpness + p_bias) /
+        (p_wis_sd + plot_spacer()) + 
+    plot_layout(guides = "collect") & 
+    plot_annotation(tag_levels = 'A')  &
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
+
+    ggsave(here(output_dir, paste0(plotname, "-3.png")), 
+         height = 9.1, width = 10)
+    
+    
+    p_combined4 <- 
+      components / 
+      (p_cov50 + p_cov90) /
+      (p_sharpness + p_bias) /
+      (p_aem + p_wis_sd) +
+    plot_layout(guides = "collect", 
+                heights = c(1.3, 1, 1, 1)) &
+    plot_annotation(tag_levels = 'A')  &
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
+    
+    ggsave(here(output_dir, paste0(plotname, "-4.png")), 
+           height = 9.1, width = 10)
 }
 
 
