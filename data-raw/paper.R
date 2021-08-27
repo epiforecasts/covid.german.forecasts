@@ -64,7 +64,7 @@ change_model_name <- function(names, old_name, new_name) {
 
 change_names <- list(
   c("KITCOVIDhub-median_ensemble", 
-    "Hub-ensemble-all"), 
+    "Hub-ensemble-realised"), 
   c("KITCOVIDhub-mean_ensemble", 
     "Hub-ensemble-mean-all"), 
   c("KIT-baseline", 
@@ -86,7 +86,11 @@ change_names <- list(
   c("KITCOVIDhub-mean_ensemble_exclude_EpiExpert", 
     "Hub-ensemble-mean-with-renewal"), 
   c("KITCOVIDhub-mean_ensemble_exclude_EpiNow2", 
-    "Hub-ensemble-mean-with-crowd")
+    "Hub-ensemble-mean-with-crowd"), 
+  c("KITCOVIDhub-median_ensemble_include_EpiNow2_secondary_additionally", 
+    "Hub-ensemble-with-all"), 
+  c("KITCOVIDhub-median_ensemble_include_only_EpiNow2_secondary", 
+    "Hub-ensemble-with-convolution")
 )
 
 purrr::walk(change_names, 
@@ -117,7 +121,7 @@ weekly_deaths <- fread(here("data-raw", "weekly-incident-deaths.csv"))
 weekly_deaths[, target_type := "death"]
 truth <- rbindlist(list(weekly_cases, weekly_deaths)) 
 truth <- truth[location_name %in% c("Germany", "Poland")]
-truth_data <- truth[, `:=` (location = NULL, epiweek = NULL, 
+truth_data <- truth[, `:=` (location = NULL, 
               target_end_date = as.Date(target_end_date))]
 setnames(truth_data, old = "value", new = "true_value")
 
