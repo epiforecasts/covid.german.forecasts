@@ -21,7 +21,7 @@ for (target_date in dates) {
   cases <- cases[, .(region = as.character(location_name), date = as.Date(date), confirm = value)]
   cases <- cases[confirm < 0, confirm := 0]
   cases <- cases[date >= (max(date) - weeks(12))]
-  cases <- cases[region %in% c("GM", "PL")]
+  cases <- cases[region %in% c("Germany", "Poland")]
   setorder(cases, region, date)
   
   # Set up parallel execution -----------------------------------------------
@@ -31,7 +31,7 @@ for (target_date in dates) {
   rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), future = "latest"), cases)
   # add population adjustment for each country
   loc_names <- names(rt)
-  loc_names <- c("GM", "PL")
+  loc_names <- c("Germany", "Poland")
   rt <- lapply(loc_names,  function(loc) {
     rt_loc <- rt[[loc]]
     rt_loc$pop <- locations[location_name %in% loc, ]$population
