@@ -9,8 +9,6 @@ library(lubridate, quietly = TRUE)
 # Set target dates ---------------------------------------------------------
 dates <- as.character(as.Date("2020-10-12") + 7*(0:9))
 
-target_date <- covid.german.forecasts::latest_weekday()
-
 # Update delays -----------------------------------------------------------
 generation_time <- readRDS(here("rt-forecast", "data", "delays", "generation_time.rds"))
 incubation_period <- readRDS(here("rt-forecast", "data" ,"delays", "incubation_period.rds"))
