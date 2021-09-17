@@ -304,3 +304,113 @@ Thoughts about what changes when you look at logged predictions
 
 - models with outliers benefit
 - do models lose out that aren't great, but have no outliers? 
+
+
+
+--------------------------------------------------------------------------------
+### alternative visualisation of forecasts
+--> show underprediction, sharpness, overprediction in one plot
+
+not yet done
+
+```{r}
+scores_over_time_plot_components <- function(scores) {
+  
+size = 1.8
+width = 4
+
+scores %>%
+  ggplot(aes(x = forecast_date, 
+             group = model, 
+             color = model)) + 
+  
+  geom_linerange(aes(ymin = -0.5*sharpness, ymax = 0.5 * sharpness, alpha = "Sharpness"), 
+                 size = size,
+                 alpha = 1,
+                 position = position_dodge(width = width)) + 
+  
+  geom_linerange(aes(ymax = -0.5 * sharpness, ymin = -0.5* sharpness - underprediction),
+                 size = size,
+                 position = position_dodge(width = width)) + 
+  geom_linerange(aes(ymax = -0.5 * sharpness, ymin = -0.5* sharpness - underprediction),
+                 size = size,
+                 colour = "white",
+                 size = size - 0.6,
+                 alpha = 0.6,
+                 position = position_dodge(width = width)) + 
+  geom_linerange(aes(ymin = 0.5 * sharpness, ymax = 0.5* sharpness + overprediction),
+                 size = size,
+                 position = position_dodge(width = width)) + 
+  geom_linerange(aes(ymin = 0.5 * sharpness, ymax = 0.5* sharpness + overprediction),
+                 size = size,
+                 colour = "white",
+                 size = size - 0.6,
+                 alpha = 0.6,
+                 position = position_dodge(width = width)) + 
+  theme_minimal() + 
+  scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 5, 
+                          max(forecast_dates$full_hub_period)))
+
+
+}
+
+# scores_target_forecastdate[horizon == i & target_type == "case"] %>%
+#   scores_over_time_plot_components() + 
+#   scale_color_manual(values = colcases) + 
+#   labs(y = "WIS rel. to baseline", x = "")
+
+
+```
+
+
+
+```{r}
+# # calculate median and sd of the WIS -------------------------------------------
+# 
+# df <- eval_forecasts(
+#   filtered_data[model %in% regular_models], 
+#   metric = "interval_score",
+#   summarise_by = c("model", "horizon", "target_type"), 
+#   sd = TRUE, 
+#   quantile = 0.5
+# ) 
+# 
+# 
+# df <- df[, .(model, horizon, target_type, 
+#              `WIS - mean` = interval_score, 
+#              `WIS - median` = interval_score_0.5, 
+#              `WIS - sd` = interval_score_sd)] %>%
+#     dcast(... ~ ., value.var = c("WIS - mean", "WIS - median", "WIS - sd"))
+# 
+# setcolorder(df, c("target_type", "horizon", "model"))
+# 
+# 
+# table <- df[order(target_type, horizon, model)] %>%
+#   score_table()
+# 
+# save_kable(table, 
+#            file = here("analysis", "plots", "table-wis-sd-median.png"))
+
+```
+
+
+```{r}
+# calculate percentage differences in performance ------------------------------
+
+df <- eval_forecasts(
+  filtered_data, 
+  summarise_by = c("model", "horizon", "target_type")
+)
+
+
+
+df <- df %>%
+  merge(df[model == "Hub-ensemble", 
+           .(horizon, target_type, base_score = interval_score)])
+df[, rel_score := (interval_score / base_score) * 100 - 100]
+df[, diff_score := interval_score - base_score]
+df[, .(horizon, target_type, model, rel_score, diff_score)][order(target_type, horizon)]
+
+
+```
+

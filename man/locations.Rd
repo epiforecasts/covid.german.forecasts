@@ -23,21 +23,21 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 314 
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 2200 rows and 5 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 139840 rows and 9 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 183264 rows and 9 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 73508 rows and 10 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 139938 rows and 10 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 183362 rows and 10 columns.
 
 An object of class \code{list} of length 4.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 87216 rows and 15 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 117576 rows and 15 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 106168 rows and 15 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 141864 rows and 15 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 314 rows and 7 columns.
 
-An object of class \code{character} of length 11.
+An object of class \code{character} of length 12.
 
 An object of class \code{character} of length 4.
 

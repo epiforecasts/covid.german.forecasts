@@ -9,9 +9,9 @@ library(scoringutils)
 # ==============================================================================
 
 # update forecast data from server ---------------------------------------------
-system(
-  paste(". data-raw/paper.sh")
-)
+# system(
+#   paste(". data-raw/paper.sh")
+# )
 
 # get the correct file paths to all forecasts ----------------------------------
 folders <- here::here("data-raw", list.files("data-raw"))
@@ -66,7 +66,8 @@ change_names <- list(
   c("KITCOVIDhub-median_ensemble", 
     "Hub-ensemble-realised"), 
   c("KITCOVIDhub-mean_ensemble", 
-    "Hub-ensemble-mean-all"), 
+    "Hub-ensemble-realised-mean"), 
+  
   c("KIT-baseline", 
     "Baseline"),
   c("epiforecasts-EpiExpert", 
@@ -75,23 +76,35 @@ change_names <- list(
     "Renewal"), 
   c("epiforecasts-EpiNow2_secondary", 
     "Convolution"), 
+  
   c("KITCOVIDhub-median_ensemble_exclude_both", 
     "Hub-ensemble"), 
-  c("KITCOVIDhub-median_ensemble_exclude_EpiExpert", 
-    "Hub-ensemble-with-renewal"), 
-  c("KITCOVIDhub-median_ensemble_exclude_EpiNow2", 
-    "Hub-ensemble-with-crowd"), 
   c("KITCOVIDhub-mean_ensemble_exclude_both", 
     "Hub-ensemble-mean"), 
+  
+  c("KITCOVIDhub-median_ensemble_exclude_EpiExpert", 
+    "Hub-ensemble-with-renewal"), 
   c("KITCOVIDhub-mean_ensemble_exclude_EpiExpert", 
-    "Hub-ensemble-mean-with-renewal"), 
+    "Hub-ensemble-with-renewal-mean"), 
+  
+  c("KITCOVIDhub-median_ensemble_exclude_EpiNow2", 
+    "Hub-ensemble-with-crowd"), 
   c("KITCOVIDhub-mean_ensemble_exclude_EpiNow2", 
-    "Hub-ensemble-mean-with-crowd"), 
+    "Hub-ensemble-with-crowd-mean"), 
+  
   c("KITCOVIDhub-median_ensemble_include_EpiNow2_secondary_additionally", 
     "Hub-ensemble-with-all"), 
+  c("KITCOVIDhub-mean_ensemble_include_EpiNow2_secondary_additionally", 
+    "Hub-ensemble-with-all-mean"), 
+  
+  
   c("KITCOVIDhub-median_ensemble_include_only_EpiNow2_secondary", 
-    "Hub-ensemble-with-convolution")
-)
+    "Hub-ensemble-with-convolution"), 
+  c("KITCOVIDhub-mean_ensemble_include_only_EpiNow2_secondary", 
+    "Hub-ensemble-with-convolution-mean")
+) %>%
+  # not sure why this is not unique?
+  unique()
 
 purrr::walk(change_names, 
             .f = function(change) {
@@ -112,7 +125,7 @@ ensemble_models <- ensemble_models[grepl("ensemble", ensemble_models)]
 usethis::use_data(ensemble_models, overwrite = TRUE)
 
 # update truth data ------------------------------------------------------------
-source(here("data-raw", "update.R"))
+# source(here("data-raw", "update.R"))
 
 # weekly truth data
 weekly_cases <- fread(here("data-raw", "weekly-incident-cases.csv"))
