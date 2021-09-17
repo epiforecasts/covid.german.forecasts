@@ -9,6 +9,8 @@ library(lubridate, quietly = TRUE)
 # Set target dates ---------------------------------------------------------
 dates <- as.character(as.Date("2020-10-12") + 7*(0:9))
 
+target_date <- covid.german.forecasts::latest_weekday()
+
 # Update delays -----------------------------------------------------------
 generation_time <- readRDS(here("rt-forecast", "data", "delays", "generation_time.rds"))
 incubation_period <- readRDS(here("rt-forecast", "data" ,"delays", "incubation_period.rds"))
@@ -20,7 +22,7 @@ for (target_date in dates) {
   cases <- fread(file.path("data-raw", "daily-incidence-cases.csv"))
   cases <- cases[, .(region = as.character(location_name), date = as.Date(date), confirm = value)]
   cases <- cases[confirm < 0, confirm := 0]
-  cases <- cases[date >= (max(date) - weeks(12))]
+  cases <- cases[date >= (max(target_date) - weeks(12))]
   cases <- cases[region %in% c("Germany", "Poland")]
   setorder(cases, region, date)
   
