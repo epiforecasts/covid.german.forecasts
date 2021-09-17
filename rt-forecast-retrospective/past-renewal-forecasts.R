@@ -22,7 +22,8 @@ for (target_date in dates) {
   cases <- fread(file.path("data-raw", "daily-incidence-cases.csv"))
   cases <- cases[, .(region = as.character(location_name), date = as.Date(date), confirm = value)]
   cases <- cases[confirm < 0, confirm := 0]
-  cases <- cases[date >= (max(target_date) - weeks(12))]
+  cases <- cases[date >= (max(as.Date(target_date)) - weeks(12))]
+  cases <- cases[date <= (as.Date(target_date))]
   cases <- cases[region %in% c("Germany", "Poland")]
   setorder(cases, region, date)
   
