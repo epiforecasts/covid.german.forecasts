@@ -21,7 +21,7 @@ for (target_date in dates) {
   # Get case forecasts ------------------------------------------------------
   case_forecast <- suppressWarnings(
     get_regional_results(
-      results_dir = here("rt-forecast", "data", "samples", "cases"),
+      results_dir = here("rt-forecast-retrospective", "data", "samples", "cases"),
       date = ymd(target_date), forecast = TRUE, samples = TRUE
     )$estimated_reported_cases$samples
   )
