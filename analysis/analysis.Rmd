@@ -254,10 +254,14 @@ forecasts_and_scores <- function(data,
 
 # create plots -----------------------------------------------------------------
 # regular forecasts
-unfiltered_data[model %in% regular_models] %>%
+unfiltered_data[model %in% c(regular_models)] %>%
   forecasts_and_scores()
-  
 
+df <- unfiltered_data[model %in% c(regular_models, "Renewal-retrospective", "Convolution-retrospective")]
+
+unfiltered_data$model %>% unique()
+  
+df$model %>% unique()
 # ensemble variants
 
 # models <- c("Hub-ensemble-all", "Crowd forecast", "Hub-ensemble", "Renewal")

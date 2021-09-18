@@ -74,8 +74,12 @@ change_names <- list(
     "Crowd forecast"), 
   c("epiforecasts-EpiNow2", 
     "Renewal"), 
+  c("epiforecasts-EpiNow2-retrospective", 
+    "Renewal-retrospective"), 
   c("epiforecasts-EpiNow2_secondary", 
     "Convolution"), 
+  c("epiforecasts-EpiNow2_secondary-retrospective", 
+    "Convolution-retrospective"),
   
   c("KITCOVIDhub-median_ensemble_exclude_both", 
     "Hub-ensemble"), 

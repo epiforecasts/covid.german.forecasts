@@ -14,7 +14,6 @@ generation_time <- readRDS(here("rt-forecast", "data", "delays", "generation_tim
 incubation_period <- readRDS(here("rt-forecast", "data" ,"delays", "incubation_period.rds"))
 onset_to_report <- readRDS(here("rt-forecast", "data", "delays", "onset_to_report.rds"))
 
-
 for (target_date in dates) {
   # Get cases  ---------------------------------------------------------------
   cases <- fread(file.path("data-raw", "daily-incidence-cases.csv"))
