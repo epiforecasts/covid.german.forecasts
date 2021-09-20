@@ -1,0 +1,163 @@
+INFO [2021-09-17 16:57:56] Initialising estimates for: Baden-Wurttemberg
+DEBUG [2021-09-17 16:57:56] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:56] Baden-Wurttemberg: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:56] Initialising estimates for: Bavaria
+DEBUG [2021-09-17 16:57:56] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:56] Bavaria: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:56] Initialising estimates for: Berlin
+DEBUG [2021-09-17 16:57:56] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:56] Berlin: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:56] Initialising estimates for: Brandenburg
+DEBUG [2021-09-17 16:57:56] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:56] Brandenburg: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:56] Initialising estimates for: Bremen
+DEBUG [2021-09-17 16:57:56] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:57] Bremen: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:57] Initialising estimates for: Dolnośląskie
+DEBUG [2021-09-17 16:57:57] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:57] Dolnośląskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:57] Initialising estimates for: Germany
+DEBUG [2021-09-17 16:57:57] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:57] Germany: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:57] Initialising estimates for: Hamburg
+DEBUG [2021-09-17 16:57:57] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:57] Hamburg: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Hesse
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Hesse: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Kujawsko-Pomorskie
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Kujawsko-Pomorskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Lower Saxony
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Lower Saxony: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Lubelskie
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Lubelskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Lubuskie
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Lubuskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Mazowieckie
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Mazowieckie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:58] Initialising estimates for: Małopolskie
+DEBUG [2021-09-17 16:57:58] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:58] Małopolskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:59] Initialising estimates for: Mecklenburg-Vorpommern
+DEBUG [2021-09-17 16:57:59] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:59] Mecklenburg-Vorpommern: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:59] Initialising estimates for: North Rhine-Westphalia
+DEBUG [2021-09-17 16:57:59] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:59] North Rhine-Westphalia: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:59] Initialising estimates for: Opolskie
+DEBUG [2021-09-17 16:57:59] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:59] Opolskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:59] Initialising estimates for: Podkarpackie
+DEBUG [2021-09-17 16:57:59] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:59] Podkarpackie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:57:59] Initialising estimates for: Podlaskie
+DEBUG [2021-09-17 16:57:59] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:57:59] Podlaskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:00] Initialising estimates for: Poland
+DEBUG [2021-09-17 16:58:00] Producing following optional outputs: samples, fit, timing
+INFO [2021-09-17 16:58:00] Initialising estimates for: Pomorskie
+ERROR [2021-09-17 16:58:00] Poland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:00] Initialising estimates for: Rhineland-Palatinate
+DEBUG [2021-09-17 16:58:00] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:00] Pomorskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+DEBUG [2021-09-17 16:58:00] Producing following optional outputs: samples, fit, timing
+INFO [2021-09-17 16:58:00] Initialising estimates for: Saarland
+ERROR [2021-09-17 16:58:00] Rhineland-Palatinate: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+DEBUG [2021-09-17 16:58:00] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:00] Saarland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:01] Initialising estimates for: Saxony
+DEBUG [2021-09-17 16:58:01] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:01] Saxony: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:01] Initialising estimates for: Saxony-Anhalt
+DEBUG [2021-09-17 16:58:01] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:01] Saxony-Anhalt: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:01] Initialising estimates for: Schleswig-Holstein
+DEBUG [2021-09-17 16:58:01] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:01] Schleswig-Holstein: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:02] Initialising estimates for: Thuringia
+DEBUG [2021-09-17 16:58:02] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:02] Thuringia: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:02] Initialising estimates for: Warmińsko-Mazurskie
+DEBUG [2021-09-17 16:58:02] Producing following optional outputs: samples, fit, timing
+INFO [2021-09-17 16:58:02] Initialising estimates for: Wielkopolskie
+ERROR [2021-09-17 16:58:02] Warmińsko-Mazurskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+DEBUG [2021-09-17 16:58:02] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:02] Wielkopolskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:02] Initialising estimates for: Zachodniopomorskie
+DEBUG [2021-09-17 16:58:02] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:02] Zachodniopomorskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:02] Initialising estimates for: Łódzkie
+DEBUG [2021-09-17 16:58:02] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:02] Łódzkie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:03] Initialising estimates for: Śląskie
+DEBUG [2021-09-17 16:58:03] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:03] Śląskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:03] Initialising estimates for: Świętokrzyskie
+DEBUG [2021-09-17 16:58:03] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 16:58:03] Świętokrzyskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Baden-Wurttemberg : Baden-Wurttemberg: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Bavaria : Bavaria: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Berlin : Berlin: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Brandenburg : Brandenburg: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Bremen : Bremen: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Dolnośląskie : Dolnośląskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Germany : Germany: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Hamburg : Hamburg: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Hesse : Hesse: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Kujawsko-Pomorskie : Kujawsko-Pomorskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Lower Saxony : Lower Saxony: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Lubelskie : Lubelskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Lubuskie : Lubuskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Mazowieckie : Mazowieckie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Małopolskie : Małopolskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Mecklenburg-Vorpommern : Mecklenburg-Vorpommern: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in North Rhine-Westphalia : North Rhine-Westphalia: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Opolskie : Opolskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Podkarpackie : Podkarpackie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Podlaskie : Podlaskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Poland : Poland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Pomorskie : Pomorskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Rhineland-Palatinate : Rhineland-Palatinate: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Saarland : Saarland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Saxony : Saxony: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Saxony-Anhalt : Saxony-Anhalt: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Schleswig-Holstein : Schleswig-Holstein: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Thuringia : Thuringia: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Warmińsko-Mazurskie : Warmińsko-Mazurskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Wielkopolskie : Wielkopolskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Zachodniopomorskie : Zachodniopomorskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Łódzkie : Łódzkie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Śląskie : Śląskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 16:58:04] Runtime error in Świętokrzyskie : Świętokrzyskie: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:01] Initialising estimates for: Germany
+DEBUG [2021-09-17 17:13:01] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 17:13:02] Germany: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:02] Initialising estimates for: Poland
+DEBUG [2021-09-17 17:13:02] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 17:13:02] Poland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:02] Runtime error in Germany : Germany: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:02] Runtime error in Poland : Poland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 19:17:09] Initialising estimates for: Germany
+DEBUG [2021-09-17 19:17:09] Producing following optional outputs: samples, fit, timing
+INFO [2021-09-17 19:17:09] Initialising estimates for: Poland
+DEBUG [2021-09-17 19:17:09] Producing following optional outputs: samples, fit, timing
+DEBUG [2021-09-17 19:17:09] Germany: Running in exact mode for 2000 samples (across 4 chains each with a warm up of 250 iterations each) and 126 time steps of which 30 are a forecast
+DEBUG [2021-09-17 19:17:09] Poland: Running in exact mode for 2000 samples (across 4 chains each with a warm up of 250 iterations each) and 126 time steps of which 30 are a forecast
+WARN [2021-09-17 19:24:21] Germany (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-09-17 19:24:21] Germany (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-09-17 19:24:23] Germany (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-09-17 19:26:45] Poland (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-09-17 19:26:45] Poland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
