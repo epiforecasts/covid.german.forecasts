@@ -47,11 +47,12 @@ for (target_date in dates) {
     )),
     return_fit = FALSE,
     secondary = secondary_opts(type = "incidence"),
-    obs = obs_opts(scale = list(mean = 0.01, sd = 0.05), week_effect = FALSE),
+    obs = obs_opts(scale = list(mean = 0.01, sd = 0.02)),
     window = 3 * 7,
-    control = list(adapt_delta = 0.99, max_treedepth = 15),
+    control = list(adapt_delta = 0.95, max_treedepth = 15),
     verbose = TRUE
   )
+  
   
   # Save results to disk ----------------------------------------------------
   samples_path <- here(
