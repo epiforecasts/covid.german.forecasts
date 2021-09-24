@@ -27,7 +27,7 @@ for (target_date in dates) {
   )
   case_forecast <- case_forecast[sample <= 1000]
   case_forecast <- case_forecast[region %in% c("Germany", "Poland")]
-  
+  case_forecast[, date := as.Date(date)]
   # Forecast deaths from cases ----------------------------------------------
   # set up parallel options
   options(mc.cores = 4)
