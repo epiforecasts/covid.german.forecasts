@@ -16,11 +16,8 @@ onset_to_report <- readRDS(here("rt-forecast", "data", "delays", "onset_to_repor
 
 for (target_date in dates) {
   # Get cases  ---------------------------------------------------------------
-  cases <- fread(file.path("data-raw", "daily-incidence-cases.csv"))
-  cases <- cases[, .(region = as.character(location_name), date = as.Date(date), confirm = value)]
-  cases <- cases[confirm < 0, confirm := 0]
-  cases <- cases[date >= (max(as.Date(target_date)) - weeks(12))]
-  cases <- cases[date <= (as.Date(target_date))]
+  cases <- fread(file.path("rt-forecast", "data", "summary", 
+                           "cases", target_date, "reported_cases.csv"))
   cases <- cases[region %in% c("Germany", "Poland")]
   setorder(cases, region, date)
   
@@ -45,7 +42,7 @@ for (target_date in dates) {
                   rt = rt,
                   stan = stan_opts(samples = 2000, warmup = 250, 
                                    chains = 4, cores = no_cores),
-                  obs = obs_opts(scale = list(mean = 0.25, sd = 0.05)),
+                  obs = obs_opts(scale = list(mean = 0.5, sd = 0.05)), #(mean = 0.25, sd = 0.05)),
                   horizon = 30,
                   output = c("region", "summary", "timing", "samples", "fit"),
                   target_date = target_date,
