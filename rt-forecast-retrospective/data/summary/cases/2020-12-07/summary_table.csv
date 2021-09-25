@@ -1,3 +1,3 @@
 Region,New confirmed cases by infection date,Expected change in daily cases,Effective reproduction no.,Rate of growth,Doubling/halving time (days)
-Germany,49375 (34531 -- 72381),Likely increasing,1.1 (0.95 -- 1.3),0.03 (-0.013 -- 0.079),23 (8.8 -- -54)
-Poland,13839 (6342 -- 29781),Likely decreasing,0.79 (0.58 -- 1.1),-0.059 (-0.12 -- 0.014),-12 (50 -- -5.6)
+Germany,50143 (35426 -- 73099),Likely increasing,1.1 (0.96 -- 1.3),0.031 (-0.012 -- 0.082),23 (8.5 -- -59)
+Poland,13320 (6136 -- 30207),Likely decreasing,0.78 (0.58 -- 1),-0.062 (-0.12 -- 0.0093),-11 (75 -- -5.6)
