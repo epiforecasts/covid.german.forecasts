@@ -1,5 +1,5 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases,prob_control
-Germany,38023 (26353 -- 56514),38023,39339,9488,26353,32681,36009,40455,44693,56514,New confirmed cases by infection date,Stable,0.43
-Poland,35111 (15856 -- 76198),35111,39147,19621,15856,25835,31461,39677,48093,76198,New confirmed cases by infection date,Likely decreasing,0.75
-Germany,1 (0.87 -- 1.2),1,1,0.11,0.87,0.96,0.99,1,1.1,1.2,Effective reproduction no.,Stable,0.43
-Poland,0.9 (0.65 -- 1.2),0.9,0.91,0.16,0.65,0.81,0.87,0.94,1,1.2,Effective reproduction no.,Likely decreasing,0.75
+Germany,37394 (26183 -- 57180),37394,39133,9870,26183,32324,35660,39710,44430,57180,New confirmed cases by infection date,Stable,0.46
+Poland,34455 (15511 -- 75100),34455,38542,19744,15511,24929,30131,38512,47355,75100,New confirmed cases by infection date,Likely decreasing,0.76
+Germany,1 (0.86 -- 1.2),1,1,0.11,0.86,0.95,0.98,1,1.1,1.2,Effective reproduction no.,Stable,0.46
+Poland,0.89 (0.64 -- 1.2),0.89,0.9,0.17,0.64,0.79,0.86,0.93,1,1.2,Effective reproduction no.,Likely decreasing,0.76
