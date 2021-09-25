@@ -257,7 +257,7 @@ forecasts_and_scores <- function(data,
 unfiltered_data[model %in% c(regular_models)] %>%
   forecasts_and_scores()
 
-df <- unfiltered_data[model %in% c(regular_models, "Renewal-retrospective", "Convolution-retrospective")]
+data <- unfiltered_data[model %in% c(regular_models, "Renewal-retrospective", "Convolution-retrospective")]
 
 unfiltered_data$model %>% unique()
   

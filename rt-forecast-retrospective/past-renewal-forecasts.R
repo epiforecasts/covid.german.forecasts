@@ -19,13 +19,21 @@ for (target_date in dates) {
   cases <- fread(file.path("rt-forecast", "data", "summary", 
                            "cases", target_date, "reported_cases.csv"))
   cases <- cases[region %in% c("Germany", "Poland")]
+  cases[, date := as.Date(date)]
   setorder(cases, region, date)
   
   # Set up parallel execution -----------------------------------------------
   no_cores <- setup_future(cases)
   
   # Run Rt estimation -------------------------------------------------------
-  rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), future = "latest"), cases)
+  
+  if (target_date <= "2020-11-09") {
+    future <- "estimate"
+  } else {
+    future <- "latest"
+  }
+  
+  rt <- opts_list(rt_opts(prior = list(mean = 1.1, sd = 0.2), future = future), cases)
   # add population adjustment for each country
   loc_names <- names(rt)
   loc_names <- c("Germany", "Poland")
@@ -42,7 +50,7 @@ for (target_date in dates) {
                   rt = rt,
                   stan = stan_opts(samples = 2000, warmup = 250, 
                                    chains = 4, cores = no_cores),
-                  obs = obs_opts(scale = list(mean = 0.5, sd = 0.05)), #(mean = 0.25, sd = 0.05)),
+                  obs = obs_opts(scale = list(mean = 0.5, sd = 0.05)), #(mean = 0.25, sd = 0.05)), from 2020-12-07 on
                   horizon = 30,
                   output = c("region", "summary", "timing", "samples", "fit"),
                   target_date = target_date,
