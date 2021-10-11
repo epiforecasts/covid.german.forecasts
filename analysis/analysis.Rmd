@@ -411,6 +411,11 @@ make_table <- function(data,
 filtered_data[model %in% regular_models] %>%
   make_table()
 
+
+filtered_data[model %in% regular_models] %>%
+  filter(!(forecast_date %in% as.character(forecast_dates$death_not_scored))) %>%
+  make_table(plotname = "table_mean-late-period")
+
 filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
   make_table(plotname = "table_mean-ensemble_scores")
 
@@ -738,17 +743,6 @@ scores[, .(n = .N), by = "target_phase"]
 ```
 
 ```{r fig.height=10, fig.width=15}
-
-# pl <- wrap_plots(p_combined, p, widths = c(1, 2)) / p_phases + 
-#   plot_layout(guides = "collect") & 
-#   plot_annotation(tag_levels = 'A') &
-#   theme(legend.position = 'bottom') 
-# 
-# ggsave("plots/distribution_scores.png", plot = pl, height = 9)
-
-
-
-
 pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
   plot_layout(guides = "collect") & 
   plot_annotation(tag_levels = 'A') &
@@ -1380,6 +1374,10 @@ aggregate_performance <- function(data,
 
 filtered_data[model %in% regular_models] %>%
   aggregate_performance(plotname = "aggregate-performance-all")
+
+filtered_data[model %in% regular_models] %>%
+  filter(!(forecast_date %in% as.character(forecast_dates$death_not_scored))) %>%
+  aggregate_performance(plotname = "aggregate-performance-all-late-period")
 
 # plot for locations
 filtered_data[model %in% regular_models & horizon == 2] %>%
