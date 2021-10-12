@@ -40,14 +40,12 @@ We created a crowd-sourced forecast (“crowd forecast”), elicited from partic
 
 The German and Polish Forecast Hub elicits predictions for various COVID-19 related forecast targets from different research institutions every week. Forecasts had to be made every Monday (with submissions allowed until Tuesday 3pm) using data available until Monday 11.59pm. We submitted forecasts for incident and cumulative weekly reported numbers of cases and deaths from COVID-19 on a national level in Germany and Poland over a one to four week forecast horizon. Weeks were defined as epiweeks starting on Sunday and ending on Saturday, meaning that forecast horizons were in fact 5, 12, 19 and 26 days. Submissions were required in a quantile-based format with 23 quantiles at levels 0.01, 0.025, 0.05, 0.10, 0.15, ..., 0.95, 0.975, 0.99. Forecasts submitted to the Forecast Hub were combined to different ensembles every week, with the median ensemble being the default ensemble shown on all official Forecast hub visualisations. 
 
-<!-- In addition to the official Hub ensembles, we computed versions of the  -->
-
 Data on daily reported test positive cases and deaths linked to Covid-19 were provided by the organisers of the German and Polish forecast hub (J. Bracher et al. 2021). Until December 14th 2020 these data were sourced from the European Centre for Disease Control (ECDC) (“Download Historical Data (to 14 December 2020) on the Daily Number of New Reported COVID-19 Cases and Deaths Worldwide” 2020). After ECDC stopped publishing daily data, observations were sourced from the Robert Koch Institute (RKI) and the Polish Ministry of Health for the remainder of the submission period (“RKI - Coronavirus SARS-CoV-2 - Aktueller Lage-/Situationsbericht Des RKI Zu COVID-19” n.d.). These data are subject to reporting artefacts (such as a delayed case reporting in Poland on the 24th November (“Rozbieżności w statystykach koronawirusa. 22 tys. przypadków będą doliczone do ogólnej liczby wyników” 16:07:56+0100)), changes in reporting over time and variation in testing regimes (e.g. in Germany from the 11th of November on (Ärzteblatt 2020)).
 
 
 ### Crowd forecasts
 
-Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application  (https://cmmid-lshtm.shinyapps.io/crowd-forecast/). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information avaialble until Monday. The application was built using the shiny and golem R packages (Chang et al. 2021; Fay et al. 2021) and is available in the crowdforecastr R package (N. I. Bosse et al. 2020). To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e. as `sd(c(log(value4) - log(value3), log(value3) - log(value2), ...))`). 
+Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application  (https://cmmid-lshtm.shinyapps.io/crowd-forecast/). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information available until Monday. The application was built using the shiny and golem R packages (Chang et al. 2021; Fay et al. 2021) and is available in the crowdforecastr R package (N. I. Bosse et al. 2020). To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e. as `sd(c(log(value4) - log(value3), log(value3) - log(value2), ...))`). 
 Our interface also allowed participants to view the observed data, and their forecasts, on a logarithmic scale and presented additional contextual COVID-19 data sourced from (“COVID-19 Data Explorer” n.d.). These data included e.g. notifications of both test positive COVID-19 cases and COVID-19 linked deaths and the number of COVID-19 tests conducted over time. 
 
 Forecasts were stored in a Google Sheet and downloaded, cleaned and processed every week for submission. If a forecaster had submitted multiple predictions for a single target, only the latest submission was kept. Information on the chosen distribution as well as the parameters for median and width were used to obtain the required set of 23 quantiles from that distribution. Forecasts from all forecasters were then aggregated using an unweighted quantile-wise mean. On a few occasions, individual forecasts were assessed as clearly erroneous by visual inspection and subsequently removed before aggregation. 
@@ -57,68 +55,28 @@ Participants were recruited mostly within the Centre of Mathematical Modeling of
 
 ### Model-based forecasts
 
-We used two models from the EpiNow2 R package (version 1.3.3) as our model-based forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called “renewal model”, uses the renewal equation [@fraserEstimatingIndividualHousehold2007] to predict reported cases and deaths. It estimates the effective reproduction number $R_t$ (the average number of people each infected person is expected to infect in turn) and models future infections as a weighted sum of past infections times $R_t$. $R_t$ was assumed to stay constant in the future, roughly corresponding to continuing the latest trend in cases. The $R_t$ value which was carried forward was slightly changed on November 9th 2020, where before that date the last 'reliable' $R_t$ estimate from X days before the forecast was used and after that the latest and most up-to-date (but possibly less stable) $R_t$ estimate made on the actual forecast date was used. Reported cases and deaths were obtained by convolving predicted infections over data-based delay distributions (Abbott, Hellewell, et al. 2020; DOI n.d.; “Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the Covid-19 Outbreak in England | medRxiv” n.d.) to model the time between infection and report date or death. The renewal model was used to predict cases as well as deaths, but the two were forecast completely indepdently, meaning that $R_t$ was forecast once from reported cases and once from reported deaths. Death forecasts from the renewal model were therefore not informed by past cases. 
+We used two models from the `EpiNow2` R package (version 1.3.3) as our model-based forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called “renewal model”, used the renewal equation [@fraserEstimatingIndividualHousehold2007] to predict reported cases and deaths. It estimated the effective reproduction number $R_t$ (the average number of people each infected person is expected to infect in turn) and models future infections as a weighted sum of past infections times $R_t$. $R_t$ was assumed to stay constant in the future, roughly corresponding to continuing the latest trend in infections. The $R_t$ value which was carried forward was slightly changed on November 9th 2020, where before that date the last 'reliable' $R_t$ estimate from X days before the forecast was used and after that the latest and most up-to-date (but possibly less stable) $R_t$ estimate made on the actual forecast date was used. Reported cases and deaths were obtained by convolving predicted infections over data-based delay distributions (Abbott, Hellewell, et al. 2020; DOI n.d.; “Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the Covid-19 Outbreak in England | medRxiv” n.d.) to model the time between infection and report date or death. The renewal model was used to predict cases as well as deaths, but the two were forecast completely independently, meaning that $R_t$ was forecast once from reported cases and once from reported deaths. Death forecasts from the renewal model were therefore not informed by past cases. One submission of the renewal model on December 28th 2020 was belated and therefore not included in the official Forecast hub ensemble. 
 
-The second model (“convolution model”) was only used to forecast deaths and modeled these as a fraction of infected people who would die with some delay. 
-
-Both models were left completely untuned and unchanged throughout the study period to create a baseline purely informed by epidemiological assumptions. Human forecasters, on the other hand, were able to adapt their forecasts to current or likely future interventions.
-
-
-
-The second model, here called “convolution model”, which was only used to forecast deaths, assumed that deaths could be modelled using a scaling parameter, as a  convolution of test positive cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both models assumed a negative binomial observation model and a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). 
-
-All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information. 
-
-
-Line list data used to inform the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al., n.d.) with data available up to the 1st of August. Population data at the national and state level in Germany and Poland used in the model-based forecasts was sourced from (Statistisches Bundesamt 2020) and (Statystyczny 2020).
-
-
+The second model (“convolution model”) was only used to forecast deaths and was added later, starting December 7th 2020 (with the first forecast from December 7th suffering from a software bug and therefore disregarded in all further analyses). The convolution model was submitted, but never included in the official Forecast hub ensemble due to concerns that it could be too similar to the renewal model. The convolution model predicted deaths these as a fraction of infected people who would die with some delay, by using a convolution of reported cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both the renewal and the convolution model used daily observations and assumed a negative binomial observation model and a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). Line list data used to inform the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al., n.d.) with data available up to the 1st of August. All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information. 
 
 
 ### Statistical analysis
 
+For the main analysis we focused on two week ahead predictions, as predictions beyond this horizon are often unreliable due to rapidly changing conditions (J. Bracher et al. 2021). Forecasts for cases were scored using the full period from October 2020 until March 2021. To ensure comparability between models, all death forecasts were scored using only the period from December 14th on, where all models including the convolution model were available. To ensure robustness of our results we conducted a sensitivity analysis where all forecasts (including cases) where scored only over the later period where are forecasts were available (see Section \@ref(sensitivity-analysis) in the SI). Results remained broadly unchanged. 
 
+Forecasts were analysed using the following scoring metrics: The weighted interval score (WIS) (Johannes Bracher et al. 2021), the absolute error, relative bias, and empirical coverage of the 50% and 90% prediction intervals. The WIS is a proper scoring rule (CITE GNEITING) and can be understood as a generalisation of the absolute error to quantile-based forecasts. It can be decomposed into three separate penalties: forecast spread (i.e. uncertainty of forecasts), over-prediction and under-prediction - lower values are always better. While the over- and under-prediction components of the WIS capture the amount of over-prediction and under-prediction in absolute terms, we also look at a relative tendency to make biased forecasts. The bias metric we use captures how much probability mass of the forecast was above or below the true value and therefore represents a general tendency to over- or under-predict in relative terms. It is bound between -1 (all quantiles of the predictive distribution are below the observed value) and 1 (all quantiles are above the observed value). Empirical coverage is the percentage of observed values that fall inside a given prediction interval (e.g. how many observed values fall inside all 50% prediction intervals). Scoring metrics are explained in more detail in Table \@ref(tab:scoring-metrics) in the SI. All scores were calculated using the scoringutils R package (N. Bosse 2020). 
 
-
-
-Crowd forecasts and the renewal model were created over the whole period between October 12th 2020 until March 1st 2021. We added the convolution model later and started creating and submitting it on December 7th 2020. As the first submission suffered from a software bug, we disregard it here. 
-Crowd forecasts and renewal model forecasts were created in real time over a period of 21 weeks from October 12th 2020 until March 1st 2021. We added the convolution model later and started creating it on December 7th 2020. As the first forecast suffered from a software bug, we disregard it here. All our forecasts were time-stamped and submitted to the German and Polish Forecast Hub (CITATION). 
-All forecasts were processed in a Docker (Merkel 2014) container to ensure a reproducible environment.
-
-
-To ensure compatibility between models, all death forecasts were scored using only the period from December 14th on, whereas case forecasts were evaluated on the entire submission period.
-They were both submitted to the so-called German/Polish forecast hub (http ref) and thus time-stamped (with one belated submission for the renewal model on December 28). 
-
-
-
-
-
-### Forecasts
-
-#### Model-based forecasts
-
-We used two models from the EpiNow2 R package (version 1.3.3) as our model forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called “renewal model”, which was used to forecast both test positive cases and deaths, used the renewal equation [@fraserEstimatingIndividualHousehold2007] to estimate the effective reproduction number over time for latent infections and then convolved these infections to the target observation using data based delay distributions (Abbott, Hellewell, et al. 2020; DOI n.d.; “Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the Covid-19 Outbreak in England | medRxiv” n.d.). Line list data used to inform the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al., n.d.) with data available up to the 1st of August. For the forecasts, the reproduction number was assumed to remain constant from X days before the last data for which case data was available, roughly corresponding to continuing the latest trend in cases. 
-
-The second model, here called “convolution model”, which was only used to forecast deaths, assumed that deaths could be modelled using a scaling parameter, as a  convolution of test positive cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both models assumed a negative binomial observation model and a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information. 
-
-
-
-
-
-
-
+At all stages of the evaluation our forecasts were compared to the median ensemble of all other models submitted to the German and Polish Forecast Hub (Hub ensemble). The ensemble that we call "Hub ensemble" in this paper differs from the official Hub ensemble (here called "XXX") as our forecasts were excluded from it to allow for a more straightforward comparison. To enhance interpretability of scores we mainly report WIS relative to the Hub ensemble in the main text, i.e. we divided all scores by those achieved by the Hub ensemble on the same set of forecasts. In addition to comparing our forecasts against the hub ensemble excluding our models, we also assessed the impact of our forecasts on the performance of the forecasting hub by recalculating separate versions of the Hub ensemble with only some (or all) of our forecasts included. 
 
 
 
 
 # Results
 
-The crowd forecast was constructed as an unweighted average of submissions by individual participants. The first of the two epidemiological models, the “renewal model”, estimates the effective reproduction number Rt (the average number of people each infected person is expected to infect in turn) and models future infections as a weighted sum of past infections (i.e. active infections) times Rt (assuming Rt to stay constant in the future). Based on predicted infections, reported cases and deaths are obtained by using delay distributions to model the time between infection and report date or death. Cases and deaths were forecast completely separately, meaning that Rt was estimated once from reported cases and once from reported deaths independently, meaning that death forecasts from the renewal model were not informed by past cases. The second model (“convolution model”) was only used to forecast deaths and modeled these as a fraction of infected people who would die with some delay. Both models were left completely untuned and unchanged throughout the study period to create a baseline purely informed by epidemiological assumptions. Human forecasters, on the other hand, were able to adapt their forecasts to current or likely future interventions.
 
+## Crowd forecast participation
 
-## Study period
-
-Crowd forecasts and the renewal model were created over the whole period between October 12th 2020 until March 1st 2021. They were both submitted to the so-called German/Polish forecast hub (http ref) and thus time-stamped (with one belated submission for the renewal model on December 28). We only added the convolution model later and started submitting it on December 21st 2020. To ensure compatibility between models, all death forecasts were scored using only the period from December 14th on, whereas case forecasts were evaluated on the entire submission period. A total number of 32 participants submitted forecasts, 17 of those self-identified as 'expert'. The median number of forecasters for any given forecast target was 6, the minimum 2 and the maximum 10. The mean number of submissions from an individual forecaster was 4.7 but the median number was only one - most participants dropped out after their first submission. Only two participants submitted a forecast every single week, both of whom are authors on this study.
+A total number of 32 participants submitted forecasts, 17 of those self-identified as 'expert'. The median number of forecasters for any given forecast target was 6, the minimum 2 and the maximum 10. The mean number of submissions from an individual forecaster was 4.7 but the median number was only one - most participants dropped out after their first submission. Only two participants submitted a forecast every single week, both of whom are authors on this study.
 
 ```{r}
 caption <- "Visualisation of aggregate performance metrics across forecast horizons. A, B: mean weighted interval score (WIS, lower indicates better performance) across horizons. WIS is decomposed into its components sharpness, over-prediction and under-prediction. C: Empirical coverage of the 50\\% prediction intervals (50\\% coverage is perfect). D: Empirical coverage of the 90\\% prediction intervals. E: Sharpness (same as in panel A, B). Higher values mean greater dispersion of the forecast and imply ceteris paribus a worse score. F: Bias, i.e. general (relative) tendency to over- or underpredict. Values are between -1 (complete under-prediction) and 1 (complete over-prediction) and 0 ideally. G: Absolute error of the median forecast (lower is better). H. Standard deviation of all WIS values for different horizons"
@@ -234,6 +192,70 @@ Further work should explore the effects of human intervention on model-based for
 
 # Supplementary information
 
+## Scoring metrics used
+
+
+
+```{r scoring-metrics}
+wis <- list(
+  Metric = "WIS (Weighted) interval score", 
+  `Explanation` = r"(The weighted interval score (smaller values are better) is a proper scoring rule for quantile forecasts. It converges to the continuos ranked probability score (which itself is a generalisation of the absolute error to probabilistic forecasts) for an increasing number of intervals. The score can be decomposed into a dispersion (uncertainty) component and penalties for over- and underprediction. For a single interval, the score is computed as 
+  $$IS_\alpha(F,y) = (u-l) + \frac{2}{\alpha} \cdot (l-y) \cdot 1(y \leq l) + \frac{2}{\alpha} \cdot (y-u) \cdot 1(y \geq u), $$ 
+  where $1()$ is the indicator function, $y$ is the true value, and $l$ and $u$ are the $\frac{\alpha}{2}$ and $1 - \frac{\alpha}{2}$ quantiles of the predictive distribution $F$, i.e. the lower and upper bound of a single prediction interval. For a set of $K$ prediction intervals and the median $m$, the score is computed as a weighted sum, 
+  $$WIS = \frac{1}{K + 0.5} \cdot (w_0 \cdot |y - m| + \sum_{k = 1}^{K} w_k \cdot IS_{\alpha}(F, y)),$$ 
+  where $w_k$ is a weight for every interval. Usually, $w_k = \frac{\alpha_k}{2}$ and $w_0 = 0.5$. 
+
+Its proximity to the absolute error means that when averaging across multiple targets (e.g. different weeks), it will be dominated by targets with higher absolute values.)", 
+  `Caveats` = "The wis is based on measures of absolute error. When averaging across multiple targets, it will therefore be dominated by targets with higher absolute values.",
+  `References` = ""
+)
+
+interval_coverage <- list(
+  `Metric` = "Interval coverage", 
+  `Explanation` = r"(Interval coverage is a measure of marginal calibration and indicates the proportion of observed values that fall in a given prediction interval range. Nominal coverage represents the percentage of observed values that should ideally be covered (e.g. we would like a 50 percent prediction interval to cover on average 50 percent of the observations), while empirical coverage is the actual percentage of observations covered by a certain prediction interval.)",
+  `Caveats` = "",
+  `References` = ""
+)
+
+
+bias <- list(
+  `Metric` = "Bias", 
+  `Explanation` = r"((Relative) bias is a measure of the general tendency of a forecaster to over- or underpredict. Values are between -1 and 1 and 0 ideally. For continuous forecasts, bias is given as 
+$$B(F, y) = 1 - 2 \cdot (F (y)), $$ 
+where $F$ is the CDF of the predictive distribution and $y$ is the observed value. 
+
+For quantile forecasts, $F(y)$ is replaced by a quantile rank. The appropriate quantile rank is determined by whether the median forecast is below  or above the true value. We then take the innermost quantile rank for which the quantile is still larger (under-prediction) or smaller (over-prediction) than the observed value. 
+
+In contrast to the over- and underprediction penalties of the interval score it is bound between 0 and 1 and represents a general tendency of forecasts to be biased rather than the absolute amount of over- and underprediction. It is therefore a more robust measurement.)",
+  `Caveats` = "",
+  `References` = ""
+)
+
+
+data <- rbind(as.data.frame(wis), 
+              as.data.frame(interval_coverage),
+              as.data.frame(bias))
+
+# saveRDS(data, file = "tables/scores-table.rds")
+
+library(kableExtra)
+library(magrittr)
+library(knitr)
+data[, 1:2] %>%
+  kableExtra::kbl(format = "latex", booktabs = TRUE, 
+                  escape = FALSE,
+                  caption = "Overview of the scoring metrics used.",
+                  longtable = TRUE,
+                  linesep = c('\\addlinespace \\addlinespace')) %>%
+  kableExtra::column_spec(1, width = "2.5cm") %>%
+  kableExtra::column_spec(2, width = "13.0cm") %>%
+  # kableExtra::column_spec(3, width = "4.5cm") %>%
+  kableExtra::kable_styling(latex_options = c("striped", "repeat_header")) 
+
+```
+
+
+
 ## Further details on the semi-mechanistic forecasting models
 
 ### Renewal equation model
@@ -307,7 +329,7 @@ where $I^c_t = \sum_{s< t} I_s$ are cumulative infections by $t-1$ and $I'_t$ ar
 
 #### Convolution model
 
-The convolution model shares the same observation model as the renewal model but rather than assuming that an observation is predicted by itself instead assumes that it is predicted entirely by another observation after some parametric delay. It can be defined mathematically as follow,
+The convolution model shares the same observation model as the renewal model but rather than assuming that an observation is predicted by itself instead assumes that it is predicted entirely by another observation after some parametric delay. It can be defined mathematically as follows,
 
 \begin{equation} 
     D_{t} \sim \mathrm{NB}\left(\omega_{(t \mod 7)} \alpha \sum_{\tau = 0}^{30} \xi(\tau | \mu, \sigma) C_{t-\tau},  \phi \right)
