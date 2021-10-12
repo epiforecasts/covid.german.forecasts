@@ -1020,13 +1020,24 @@ maybe leave that to a second paper --\>
 
 ## Number of expert forecasters
 
+```{r num-forecasters0, results = 'asis'}
+# number of experts and non-experts --------------------------------------------
+crowdforecast_data %>%
+  select(model, expert) %>%
+  unique() %>%
+  summarise(experts = sum(expert), 
+            nonexpert = sum(!expert))
+```
+
+
 ```{r num-forecasters, results = 'asis'}
+# check number of available forecasters
 dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
-                                        "EpiNow2_secondary", 
-                                        "EpiExpert-ensemble", 
-                                        "EpiNow2")), 
-                         .(`number of forecasters` = length(unique(model))), , 
-                         by = c("forecast_date", "location_name", "target_type")
+                               "EpiNow2_secondary", 
+                               "EpiExpert-ensemble", 
+                               "EpiNow2")), 
+                .(`number of forecasters` = length(unique(model))), , 
+                by = c("forecast_date", "location_name", "target_type")
 ][order(forecast_date)][
   !is.na(forecast_date)]
 
@@ -1038,6 +1049,11 @@ dt[, .(sd = sd(`number of forecasters`),
                              median = median(`number of forecasters`)), 
    by = c("location_name", "target_type")] 
 
+dt[, .(sd = sd(`number of forecasters`), 
+       mean = mean(`number of forecasters`), 
+       min  = min(`number of forecasters`), 
+       max = max(`number of forecasters`), 
+       median = median(`number of forecasters`))] 
 
 
 ```

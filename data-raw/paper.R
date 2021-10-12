@@ -344,11 +344,39 @@ usethis::use_data(filtered_data, overwrite = TRUE)
 
 # additional analysis for individual forecasters -------------------------------
 
-# store prediction data for individual forecasters
-root_dir <- here::here("crowd-forecast", "processed-forecast-data")
-file_paths_forecast <- here::here(root_dir, list.files(root_dir))
+# check number of experts ------------------------------------------------------
 
-crowdforecast_data <- purrr::map_dfr(file_paths_forecast, 
+
+purrr::map_dfr(file_paths, 
+               .f = function(file_path) {
+                 data <- data.table::fread(file_path)
+                 data[, `:=`(
+                   target_end_date = as.Date(target_end_date), 
+                   submission_date = as.Date(submission_date),
+                   forecast_date = as.Date(forecast_date), 
+                   model = get_model_name(file_path)
+                 )]
+                 return(data)
+               }) %>%
+  select(board_name, expert) %>%
+  unique() %>%
+  summarise(experts = sum(expert), 
+            nonexpert = sum(!expert))
+
+
+
+
+
+
+# store prediction data for individual forecasters
+file_paths <- list.files(here::here("crowd-forecast", "processed-forecast-data"))
+file_dates <- substr(file_paths, 1, 10)
+indices <- (1:length(file_dates))[as.Date(file_dates) <= "2021-03-15" &
+                                    !is.na(as.Date(file_dates))]
+file_paths <- here::here("crowd-forecast", "processed-forecast-data", file_paths)
+file_paths <- file_paths[indices]
+
+crowdforecast_data <- purrr::map_dfr(file_paths, 
                                   .f = function(x) {
                                     data <- data.table::fread(x) %>%
                                       dplyr::mutate(target_end_date = as.Date(target_end_date), 
@@ -361,26 +389,6 @@ crowdforecast_data <- purrr::map_dfr(file_paths_forecast,
   dplyr::rename(model = board_name) %>%
   dplyr::filter(type == "quantile", 
                 location_name %in% c("Germany", "Poland")) %>%
-  dplyr::select(location, location_name, forecast_date, quantile, prediction, model, target_end_date, horizon, target, target_type)
+  dplyr::select(location, location_name, forecast_date, quantile, prediction, model, target_end_date, horizon, target, target_type, expert)
 
 usethis::use_data(crowdforecast_data, overwrite = TRUE)
-
-
-# check number of available forecasters
-dt <- prediction_data[!(model %in% c("Crowd-Rt-Forecast",
-                               "EpiNow2_secondary", 
-                               "EpiExpert-ensemble", 
-                               "EpiNow2")), 
-                .(`number of forecasters` = length(unique(model))), , 
-                by = c("forecast_date", "location_name", "target_type")
-][order(forecast_date)][
-  !is.na(forecast_date)]
-
-
-dt[, .(sd = sd(`number of forecasters`), 
-                             mean = mean(`number of forecasters`), 
-                             min  = min(`number of forecasters`), 
-                             max = max(`number of forecasters`), 
-                             median = median(`number of forecasters`)), 
-   by = c("location_name", "target_type")] 
-

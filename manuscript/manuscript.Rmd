@@ -3,9 +3,9 @@ title: "Comparing human and model-based forecasts of COVID-19 in Germany and Pol
 output: 
   bookdown::pdf_document2:
     extra_dependencies: ["float"]
-# bibliography: 
-#   - references.bib  
-#   - GermanPolishpaper.bib
+bibliography:
+  - references.bib
+  - GermanPolishpaper.bib
 ---
 
 *Anonymous Alpaca and many friends*
@@ -26,7 +26,90 @@ Infectious disease forecasting has a long tradition and has helped inform public
 
 Previous work has examined human predictions in various contexts, such as geopolitics (Tetlock et al. 2014; Atanasov et al. 2016), meta-science (Cite Replication Markets), and epidemiology (CITE FARROW ET AL, McAndrew et al. 2021, Cite that other paper). Several prediction platforms (Metaculus 2020, Hypermind, Foretell) and prediction markets (cite predictit) have been created to collate expert and non-expert predictions. However, with the notable exception of Farrow et al., these crowd forecasts  were not designed to be evaluated alongside model-based forecasts and usually follow their own (often binary) formats. Farrow et al. found that humans could outperform computer models at predicting the 2014/15 and 2015/16 flu season in the US, a setting where the disease was well known and information about previous seasons was available. They tended to do slightly worse at predicting the 2014/15 outbreak of chikungunya in the Americas, a disease previously largely unobserved and unknown there and then. 
 
-In this study, we attempt to further shed light on the role of human judgement and model-based insight and analyse respective strengths and weaknesses. To compare human judgement and model-derived insights we evaluate and compare forecasts of weekly reported cases and deaths from COVID-19 in Germany and Poland made in real time over 21 weeks from October 2020 until March 2021. Specifically, we created a crowd-sourced forecast (“crowd forecast”), elicited from participants through a web application [Citation], as well as two semi-mechanistic models informed by basic assumptions about COVID-19 epidemiology. In contrast to Farrow et al., we asked participants not only for point predictions, but also for their predictive uncertainty, to exploit the greater utility of probabilistic forecasts (CITE Held, Meyer, Bracher, 2017). 
+In this study, we attempt to further shed light on the role of human judgement and model-derived insight and analyse respective strengths and weaknesses by comparing human forecasts and model-based predictions. 
+
+<!-- In contrast to Farrow et al., we analyse not only point predictions, but also for their predictive uncertainty, to exploit the greater utility of probabilistic forecasts (CITE Held, Meyer, Bracher, 2017).  -->
+
+
+## Methods 
+
+We created a crowd-sourced forecast (“crowd forecast”), elicited from participants through a web application [Citation], as well as two semi-mechanistic models ("renewal model" and "convolution model") informed by basic assumptions about COVID-19 epidemiology. Forecasts were created in real time over a period of 21 weeks from October 12th 2020 until March 1st 2021 and submitted to the German and Polish Forecast hub (CITATION). All code and tools necessary to generate the forecasts and make a forecast submission are available in the `covid.german.forecasts` R package (N. Bosse et al. 2020). This repository also contains a record of all forecasts submitted to the German and Polish Forecast Hub. Forecasts were evaluated using a variety of scoring metrics and compared among each other and against an ensemble of all other models submitted to the Forecast Hub. 
+
+
+### Forecast targets and interaction with the German and Polish Forecast Hub
+
+The German and Polish Forecast Hub elicits predictions for various COVID-19 related forecast targets from different research institutions every week. Forecasts had to be made every Monday (with submissions allowed until Tuesday 3pm) using data available until Monday 11.59pm. We submitted forecasts for incident and cumulative weekly reported numbers of cases and deaths from COVID-19 on a national level in Germany and Poland over a one to four week forecast horizon. Weeks were defined as epiweeks starting on Sunday and ending on Saturday, meaning that forecast horizons were in fact 5, 12, 19 and 26 days. Submissions were required in a quantile-based format with 23 quantiles at levels 0.01, 0.025, 0.05, 0.10, 0.15, ..., 0.95, 0.975, 0.99. Forecasts submitted to the Forecast Hub were combined to different ensembles every week, with the median ensemble being the default ensemble shown on all official Forecast hub visualisations. 
+
+<!-- In addition to the official Hub ensembles, we computed versions of the  -->
+
+Data on daily reported test positive cases and deaths linked to Covid-19 were provided by the organisers of the German and Polish forecast hub (J. Bracher et al. 2021). Until December 14th 2020 these data were sourced from the European Centre for Disease Control (ECDC) (“Download Historical Data (to 14 December 2020) on the Daily Number of New Reported COVID-19 Cases and Deaths Worldwide” 2020). After ECDC stopped publishing daily data, observations were sourced from the Robert Koch Institute (RKI) and the Polish Ministry of Health for the remainder of the submission period (“RKI - Coronavirus SARS-CoV-2 - Aktueller Lage-/Situationsbericht Des RKI Zu COVID-19” n.d.). These data are subject to reporting artefacts (such as a delayed case reporting in Poland on the 24th November (“Rozbieżności w statystykach koronawirusa. 22 tys. przypadków będą doliczone do ogólnej liczby wyników” 16:07:56+0100)), changes in reporting over time and variation in testing regimes (e.g. in Germany from the 11th of November on (Ärzteblatt 2020)).
+
+
+### Crowd forecasts
+
+Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application  (https://cmmid-lshtm.shinyapps.io/crowd-forecast/). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information avaialble until Monday. The application was built using the shiny and golem R packages (Chang et al. 2021; Fay et al. 2021) and is available in the crowdforecastr R package (N. I. Bosse et al. 2020). To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e. as `sd(c(log(value4) - log(value3), log(value3) - log(value2), ...))`). 
+Our interface also allowed participants to view the observed data, and their forecasts, on a logarithmic scale and presented additional contextual COVID-19 data sourced from (“COVID-19 Data Explorer” n.d.). These data included e.g. notifications of both test positive COVID-19 cases and COVID-19 linked deaths and the number of COVID-19 tests conducted over time. 
+
+Forecasts were stored in a Google Sheet and downloaded, cleaned and processed every week for submission. If a forecaster had submitted multiple predictions for a single target, only the latest submission was kept. Information on the chosen distribution as well as the parameters for median and width were used to obtain the required set of 23 quantiles from that distribution. Forecasts from all forecasters were then aggregated using an unweighted quantile-wise mean. On a few occasions, individual forecasts were assessed as clearly erroneous by visual inspection and subsequently removed before aggregation. 
+
+Participants were recruited mostly within the Centre of Mathematical Modeling of Infectious Diseases at the London School of Hygiene & Tropical Medicine, but participants were also invited personally or via social media to submit predictions. Depending on whether they had a background in either statistics, forecasting or epidemiology, participants were asked to self-identify as 'experts' or 'non-experts'. 
+
+
+### Model-based forecasts
+
+We used two models from the EpiNow2 R package (version 1.3.3) as our model-based forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called “renewal model”, uses the renewal equation [@fraserEstimatingIndividualHousehold2007] to predict reported cases and deaths. It estimates the effective reproduction number $R_t$ (the average number of people each infected person is expected to infect in turn) and models future infections as a weighted sum of past infections times $R_t$. $R_t$ was assumed to stay constant in the future, roughly corresponding to continuing the latest trend in cases. The $R_t$ value which was carried forward was slightly changed on November 9th 2020, where before that date the last 'reliable' $R_t$ estimate from X days before the forecast was used and after that the latest and most up-to-date (but possibly less stable) $R_t$ estimate made on the actual forecast date was used. Reported cases and deaths were obtained by convolving predicted infections over data-based delay distributions (Abbott, Hellewell, et al. 2020; DOI n.d.; “Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the Covid-19 Outbreak in England | medRxiv” n.d.) to model the time between infection and report date or death. The renewal model was used to predict cases as well as deaths, but the two were forecast completely indepdently, meaning that $R_t$ was forecast once from reported cases and once from reported deaths. Death forecasts from the renewal model were therefore not informed by past cases. 
+
+The second model (“convolution model”) was only used to forecast deaths and modeled these as a fraction of infected people who would die with some delay. 
+
+Both models were left completely untuned and unchanged throughout the study period to create a baseline purely informed by epidemiological assumptions. Human forecasters, on the other hand, were able to adapt their forecasts to current or likely future interventions.
+
+
+
+The second model, here called “convolution model”, which was only used to forecast deaths, assumed that deaths could be modelled using a scaling parameter, as a  convolution of test positive cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both models assumed a negative binomial observation model and a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). 
+
+All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information. 
+
+
+Line list data used to inform the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al., n.d.) with data available up to the 1st of August. Population data at the national and state level in Germany and Poland used in the model-based forecasts was sourced from (Statistisches Bundesamt 2020) and (Statystyczny 2020).
+
+
+
+
+### Statistical analysis
+
+
+
+
+
+Crowd forecasts and the renewal model were created over the whole period between October 12th 2020 until March 1st 2021. We added the convolution model later and started creating and submitting it on December 7th 2020. As the first submission suffered from a software bug, we disregard it here. 
+Crowd forecasts and renewal model forecasts were created in real time over a period of 21 weeks from October 12th 2020 until March 1st 2021. We added the convolution model later and started creating it on December 7th 2020. As the first forecast suffered from a software bug, we disregard it here. All our forecasts were time-stamped and submitted to the German and Polish Forecast Hub (CITATION). 
+All forecasts were processed in a Docker (Merkel 2014) container to ensure a reproducible environment.
+
+
+To ensure compatibility between models, all death forecasts were scored using only the period from December 14th on, whereas case forecasts were evaluated on the entire submission period.
+They were both submitted to the so-called German/Polish forecast hub (http ref) and thus time-stamped (with one belated submission for the renewal model on December 28). 
+
+
+
+
+
+### Forecasts
+
+#### Model-based forecasts
+
+We used two models from the EpiNow2 R package (version 1.3.3) as our model forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called “renewal model”, which was used to forecast both test positive cases and deaths, used the renewal equation [@fraserEstimatingIndividualHousehold2007] to estimate the effective reproduction number over time for latent infections and then convolved these infections to the target observation using data based delay distributions (Abbott, Hellewell, et al. 2020; DOI n.d.; “Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the Covid-19 Outbreak in England | medRxiv” n.d.). Line list data used to inform the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al., n.d.) with data available up to the 1st of August. For the forecasts, the reproduction number was assumed to remain constant from X days before the last data for which case data was available, roughly corresponding to continuing the latest trend in cases. 
+
+The second model, here called “convolution model”, which was only used to forecast deaths, assumed that deaths could be modelled using a scaling parameter, as a  convolution of test positive cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both models assumed a negative binomial observation model and a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information. 
+
+
+
+
+
+
+
+
+
+
 
 # Results
 
@@ -35,7 +118,7 @@ The crowd forecast was constructed as an unweighted average of submissions by in
 
 ## Study period
 
-Crowd forecasts and the renewal model were created over the whole period between October 12th 2020 until March 1st 2021. They were both submitted to the so-called German/Polish forecast hub (http ref) and thus time-stamped (with one belated submission for the renewal model on December 28). We only added the convolution model later and started submitting it on December 21st 2020. To ensure compatibility between models, all death forecasts were scored using only the period from December 14th on, whereas case forecasts were evaluated on the entire submission period. A total number of 31 participants submitted forecasts. The median number of forecasters was 6, the minimum 2 and the maximum 9 for a single forecast target. Participation rose steadily and peaked in February, before declining towards the end of the study period. The mean number of submissions from an individual forecaster was 4.7 but the median number was only one - most participants dropped out after their first submission. Only two participants submitted a forecast every single week, both of whom are authors on this study.
+Crowd forecasts and the renewal model were created over the whole period between October 12th 2020 until March 1st 2021. They were both submitted to the so-called German/Polish forecast hub (http ref) and thus time-stamped (with one belated submission for the renewal model on December 28). We only added the convolution model later and started submitting it on December 21st 2020. To ensure compatibility between models, all death forecasts were scored using only the period from December 14th on, whereas case forecasts were evaluated on the entire submission period. A total number of 32 participants submitted forecasts, 17 of those self-identified as 'expert'. The median number of forecasters for any given forecast target was 6, the minimum 2 and the maximum 10. The mean number of submissions from an individual forecaster was 4.7 but the median number was only one - most participants dropped out after their first submission. Only two participants submitted a forecast every single week, both of whom are authors on this study.
 
 ```{r}
 caption <- "Visualisation of aggregate performance metrics across forecast horizons. A, B: mean weighted interval score (WIS, lower indicates better performance) across horizons. WIS is decomposed into its components sharpness, over-prediction and under-prediction. C: Empirical coverage of the 50\\% prediction intervals (50\\% coverage is perfect). D: Empirical coverage of the 90\\% prediction intervals. E: Sharpness (same as in panel A, B). Higher values mean greater dispersion of the forecast and imply ceteris paribus a worse score. F: Bias, i.e. general (relative) tendency to over- or underpredict. Values are between -1 (complete under-prediction) and 1 (complete over-prediction) and 0 ideally. G: Absolute error of the median forecast (lower is better). H. Standard deviation of all WIS values for different horizons"
@@ -136,8 +219,6 @@ Further work should explore the effects of human intervention on model-based for
 
 
 
-
-## Methods - missing
 
 
 
