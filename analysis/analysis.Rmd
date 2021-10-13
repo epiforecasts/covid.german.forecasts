@@ -280,8 +280,8 @@ df$model %>% unique()
 # create helper function to make table
 # ------------------------------------------------------------------------------
 score_table <- function(scores, 
-                             group = TRUE, 
-                             full_width = TRUE) {
+                        group = TRUE, 
+                        full_width = TRUE) {
   # copy data, change names, round column values and reduce to sign. digits
   scores <- as.data.table(scores)
   setnames(scores, 
@@ -290,7 +290,7 @@ score_table <- function(scores,
                    "underprediction", "overprediction", "bias", 
                    "50", "90", "location_target", "target_phase"), 
            new = c("Horizon", "Model", "Target", "WIS", "Abs. error", 
-                   "rel. skill", "WIS - rel.", "Sharpness", 
+                   "rel. skill", "WIS - rel.", "Dispersion", 
                    "Underpred.", "Overpred.", "Bias", 
                    "50%-Cov.", "90%-Cov.", "Target", "Target"), 
            skip_absent = TRUE)
@@ -314,18 +314,22 @@ score_table <- function(scores,
   
   # calculate where to group rows
   case_rows <- nrow(scores[Target == "case"])
-
+  
   table <- scores[,!c("Target")] %>%
-    kable(format = "html", col.names = c(" ", names(scores)[-(1:2)])) %>% #format = "markdown"
+    kable(format = "latex", booktabs = TRUE, 
+          align = c("l", "l", rep("c", 9)),
+          col.names = c(" ", names(scores)[-(1:2)])) %>%
     collapse_rows(columns = 1) %>%
-    kable_styling(bootstrap_options = "striped", 
-                  full_width = full_width) %>%
+    kable_styling(latex_options = c("scale_down", 
+                                    "hold_position")) %>%
     column_spec(1, background = "white")
   
   if (group) {
     table <- table %>%
-      pack_rows("Cases", 1, case_rows, indent = FALSE) %>% 
-      pack_rows("Deaths", case_rows + 1, nrow(scores), indent = FALSE)
+      pack_rows("Cases", 1, case_rows, indent = FALSE, 
+                hline_after = TRUE) %>% 
+      pack_rows("Deaths", case_rows + 1, nrow(scores), indent = FALSE, 
+                hline_after = TRUE)
   }
     
   return(table)
@@ -378,9 +382,9 @@ make_table <- function(data,
     dplyr::group_by(horizon, target_type) %>%
     dplyr::mutate_at(percentage_cols, 
                      ~ paste0(., " (", 
-                              round(100 * ./.[model %in% c("Hub-ensemble", 
-                                                           "Hub-ensemble-mean")]), 
-                              "%)"))
+                              round(./.[model %in% c("Hub-ensemble", 
+                                                     "Hub-ensemble-mean")], 2), 
+                              ")"))
   
   setDT(df)
   
@@ -394,12 +398,13 @@ make_table <- function(data,
 
   # tables for 1-2 weeks ahead and 3-4 weeks ahdead
   table <- score_table(df[horizon <= 2]) 
-  save_kable(table, file = here(output_dir, 
-                                paste0(plotname, "_", 2, "_ahead.png")))
+  
+  saveRDS(object = table, 
+          file = here("analysis", "plots", paste0(plotname, "_", 2, "_ahead.rds")))
   
   table <- score_table(df[horizon > 2]) 
-  save_kable(table, file = here(output_dir, 
-                                paste0(plotname, "_", 4, "_ahead.png")))
+  saveRDS(object = table, 
+          file = here("analysis", "plots", paste0(plotname, "_", 4, "_ahead.rds")))
 }
 
 
@@ -410,16 +415,17 @@ make_table <- function(data,
 filtered_data[model %in% regular_models] %>%
   make_table()
 
-
 filtered_data[model %in% regular_models] %>%
   filter(!(forecast_date %in% as.character(forecast_dates$death_not_scored))) %>%
-  make_table(plotname = "table_mean-late-period")
+  make_table(plotname = "table-late-period")
 
 filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
   make_table(plotname = "table_mean-ensemble_scores")
 
 filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]] %>%
   make_table(plotname = "table_median-ensemble_scores")
+
+
 
 ```
 
@@ -768,8 +774,6 @@ ggsave("plots/distribution_scores_ae.png", pl_ae, height = 9)
 
 ```
 
-*Figure 2. Top: Distribution of the scaled relative skill scores for the different model and forecast targets. The vertical black line represents the baseline model. Models beat the baseline more easily for death forecasts. The renewal model had by far the most variance in terms of its performance, while the crowd forecasting model seems most consistent. Bottom: Distribution of scaled relative skill in different phases of the epidemic. The epidemic was classified as 'increasing', if the forecast point and the two data points before form a monotonically rising line, 'decreasing' if numbers were falling and 'unclear' otherwise. This plot seems like a lot of noise to me, but unsure.*
-
 
 ```{r fig.height=10, fig.width=15}
 # 
@@ -1024,15 +1028,6 @@ res %>%
   theme(legend.position = "bottom")
 ```
 
-<!-- **Further things we could look at** -->
-
-<!-- - maybe look at correlation between the number of weekly cases and the score? -->
-
-<!-- - maybe it would be interesting to look at other baseline models, e.g. "how hard is it to beat a model that just always continues the trend?" -->
-
-<!-- - look at crowd performance as a function of the number of forecasts -->
-
-maybe leave that to a second paper --\>
 
 ## Number of expert forecasters
 
@@ -1084,11 +1079,17 @@ dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
 ][order(forecast_date)][
   !is.na(forecast_date)]
 
+dt[, location_target := paste0(str_to_title(target_type), 
+                               "s", " in ", location_name)]
+
 dt %>%
   ggplot(aes(y = `number of forecasters`, x = forecast_date)) + 
   geom_line() + 
-  facet_wrap(location_name ~ target_type)
+  facet_wrap(~ location_target) + 
+  theme_minimal() + 
+  labs(y = "Number of forecasters", x = "Date")
 
+ggsave(filename = here("analysis", "plots", "number-forecasters.png"))
 ```
 
 ```{r, results = 'asis'}
