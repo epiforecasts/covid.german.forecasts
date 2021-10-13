@@ -121,8 +121,7 @@ truth_and_pred_plot <- function(df, ttype = "case") {
                    size = 1.1,
                    alpha = 1,
                    position = position_dodge(width = dodgewidth)) + 
-    geom_point(data = trend[target_type == ttype],
-               aes(shape = Classification)) +
+    geom_point(data = trend[target_type == ttype], size = 0.7) +
     geom_line(data = unfiltered_data[target_type == ttype & horizon == 2]) + 
     theme_minimal() + 
     theme(panel.grid.major.x = element_blank()) +
@@ -510,17 +509,34 @@ ens <- ensemble_members %>%
 epinow2_included <- ens[model == "epiforecasts-EpiNow2", "epinow" := value]
 crowd_included <- ens[model == "epiforecasts-EpiExpert", "crowd" := value]
 
+targetvars <- data.frame(
+  variable = c("GM_inc_case", "GM_inc_death", "PL_inc_case", "PL_inc_death"), 
+  target = c("Cases - Germany", "Deaths - Germany", "Cases - Poland", "Deaths - Poland")
+)
 
-
-p <- ens[, .(value = sum(value), 
+ens <- ens[, .(value = sum(value), 
              epinow = sum(epinow, na.rm = TRUE), 
              crowd = sum(crowd, na.rm = TRUE)), by = c("variable", "Date")] %>%
-  ggplot(aes(y = value, x = Date, color = variable)) + 
+  merge(targetvars)
+
+# number of submissions from crowd and epinow2
+ens[, .(crowd = sum(crowd) / 4, 
+        epinow = sum(epinow) / 4)]
+
+# how many models included in the ensemble? 
+ens %>%
+  summary()
+
+p <- ens %>%
+  ggplot(aes(y = value, x = Date)) + 
+  facet_wrap(~ target) + 
   # geom_col(aes(fill = variable), position = position_dodge()) + 
-  geom_point() + 
+  geom_point(size = 0.7) + 
   geom_line() + 
   scale_color_manual(values = colcases) + 
-  theme_minimal()
+  theme_minimal() + 
+  labs(y = "Number of ensemble members", x = "Date")
+  
 
 
 ggsave(here("analysis", "plots", "ensemble-members.png"), 
@@ -1503,4 +1519,5 @@ for (m in c("Renewal", "Convolution", "Crowd forecast")) {
 
 
 ```
+
 
