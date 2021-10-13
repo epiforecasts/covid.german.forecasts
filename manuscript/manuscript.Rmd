@@ -109,6 +109,8 @@ All forecasting approaches, including the Hub ensemble, were overconfident and s
 
 The renewal model exhibited a noticeable tendency towards over-predicting reported cases across all horizons. The crowd forecast tended to over-predict at longer forecast horizons, whereas the Hub ensemble showed no systematic bias (Figure 1X). Regardless of a general relative tendency to over-predict, all forecasting approaches incurred larger absolute penalties from over- than from under-prediction (see decomposition of the WIS into absolute penalties for over-prediction, under-prediction and dispersion in Figure X and Table X), implying that over-prediction (e.g. when missing a peak) tended to be more costly in terms of the WIS. 
 
+Generally, trends in overall performance were broadly similar across locations (Figure XX). However, relative to the Hub ensemble, the crowd forecasts performed better in Germany than in Poland and the renewal model better in Poland than in Germany (Figure XXA, XXG). 
+
 ## Death Forecasts
 
 For deaths, the Hub ensemble outperformed the crowd forecasts as well as our model-based approaches across all forecast horizons and locations (Figure 1A, Figure S1A). Relative WIS values for the models two weeks ahead were 122% (convolution model), 126% (crowd forecast), 100% (Hub ensemble) and 179% (renewal model). The crowd forecasts performed better than the renewal model across all forecast horizons and locations (Figure 1A, Figure S1A), and also better than the convolution model three and four weeks ahead. Poor performance of the renewal model, especially at longer horizons, indicates that an approach that does not know about past cases, but instead estimates and projects a separate Rt trace from deaths, is not well suited for the task. The convolution model was able to outperform both the renewal model and the crowd forecasts at shorter forecast horizons (where the delay between cases and deaths means that future deaths are largely informed by present cases), but saw performance deteriorate at three and four weeks ahead (where case predictions from the renewal model were increasingly used to inform death predictions) (Figure 1A, Table SX). 
@@ -127,13 +129,6 @@ caption <- ""
 knitr::include_graphics("../analysis/plots/distribution_scores_wis-2.png")
 ```
 
-
-
-## Performance across locations (maybe not a separate section or more nuance)
-
-Generally, trends in overall performance were similar across locations (Figure S1). Notably,the convolution model performed better, when assessed by both median and mean WIS, in Germany than Poland indicating a stronger connection between observed cases and deaths. Due to the differing population sizes and numbers of notifications in Germany and Poland absolute scores were difficult to compare directly  (Figure S1).
-
-All model-based predictions, but not the crowd forecasts, were noticeably sharper in Poland than in Germany (Figure S1), in line with their smaller overall WIS values. Crowd forecasts for cases (but not for deaths) were approximately equally sharp in Poland and in Germany. For both cases and deaths, forecasts tended to be lower relative to observed values in Poland than in Germany, with bias values lower for all forecasts in Poland than in Germany (except crowd forecasts of cases, Figure S1F). 
 
 ```{r}
 caption <- "Visualisation of aggregate performance metrics across forecast horizons for the different versions of the Hub ensemble. “Hub-ensemble” excludes all our models, Hub-ensemble-all includes all of our models, “Hub-ensemble-real” is the real hub-ensemble with the renewal model and the crowd forecasts included. Values (except for Bias) are computed as differences to the Hub ensemble excluding our contributions. For Coverage, this is an absolute difference, for other metrics this is a percentage difference. A: mean weighted interval score (WIS) across horizons. B: median WIS. C: Absolute error of the median forecast. D: Standard deviation of the WIS. E: Sharpness (higher values mean greater dispersion of the forecast). F: Bias, i.e. general tendency to over- or underpredict. Values are between -1 (complete under-prediction) and 1 (complete over-prediction) and 0 ideally. G: Empirical coverage of the 50\\% prediction intervals. F: Empirical coverage of the 90\\% prediction intervals"
