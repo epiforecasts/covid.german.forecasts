@@ -1177,7 +1177,7 @@ plot_helper <- function(tmp = scores, xvar = x, y, rel = relative,
 component_plot <- function(scores, type, colour_scheme, x = x, rel = relative,
                            facet_formula, vals = NULL) {
   
- if (colour_scheme == "ensemble") {
+ if (colour_scheme == "ensemble" & type == "case") {
     # filter out ensembles not needed
     scores <- scores %>%
       filter(!(Model %in% c("Hub-ensemble-with-all", "Hub-ensemble-with-convolution")))
@@ -1362,7 +1362,7 @@ aggregate_performance <- function(data,
     theme(legend.position = 'bottom', 
           legend.box="vertical", legend.margin=margin()) 
   
-  ggsave(here(output_dir, paste0(plotname, ".png")), 
+  ggsave(here(output_dir, paste0(plotname, "-v1.png")), 
          height = 9.1, width = 8)
   
   p_combined2 <- (p_aem + p_wis_sd) /
@@ -1372,7 +1372,7 @@ aggregate_performance <- function(data,
     theme(legend.position = 'bottom', 
           legend.box="vertical", legend.margin=margin()) 
 
-    ggsave(here(output_dir, paste0(plotname, "-2.png")), 
+    ggsave(here(output_dir, paste0(plotname, "-v2.png")), 
          height = 5.1, width = 10)
     
     p_combined3 <- (p_mean + p_aem) /
@@ -1384,7 +1384,7 @@ aggregate_performance <- function(data,
     theme(legend.position = 'bottom', 
           legend.box="vertical", legend.margin=margin()) 
 
-    ggsave(here(output_dir, paste0(plotname, "-3.png")), 
+    ggsave(here(output_dir, paste0(plotname, "-v3.png")), 
          height = 9.1, width = 10)
     
     
@@ -1399,7 +1399,7 @@ aggregate_performance <- function(data,
     theme(legend.position = 'bottom', 
           legend.box="vertical", legend.margin=margin()) 
     
-    ggsave(here(output_dir, paste0(plotname, "-4.png")), 
+    ggsave(here(output_dir, paste0(plotname, "-v4.png")), 
            height = 9.1, width = 10)
 }
 
