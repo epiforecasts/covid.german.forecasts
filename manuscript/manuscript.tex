@@ -132,26 +132,26 @@ Model-based forecasts, which have played an important role in shaping public pol
 
 Infectious disease forecasting has a long tradition and has helped inform public health decisions about (among others) influenza (e.g. McGowan et al. 2019; Reich et al. 2019; Shaman and Karspeck 2012; Biggerstaff et al. 2016), dengue fever (e.g. Johansson et al. 2019; Yamana, Kandula, and Shaman 2016; Colón-González et al. 2021), ebola (e.g. Viboud et al. 2018; Funk et al. 2019), chikungunya (e.g. Del Valle et al. 2018; Farrow et al. 2017) and now COVID-19 (e.g. Funk et al. 2020; Cramer et al. 2020; Cramer et al. 2021; Bracher, Wolffram, et al. 2021; Hub 2021). The aggregation of forecasts of COVID-19 cases, hospitalisations or deaths from multiple teams has created opportunities to compare the predictive performance of different models. Yet it has been difficult to discern which factors lead to good COVID-19 forecasts. Answering this question is complicated by the varying and generally unobserved degree of manual expert intervention. Model-based forecasts usually represent an implicit combination of human judgement and model-derived insights, in the sense that forecasts have been generated with the help of epidemiological or statistical models, but throughout the process were manually changed and adjusted according to the researchers' judgement.
 
-Previous work has examined human predictions in various contexts, such as geopolitics (Tetlock et al. 2014; Atanasov et al. 2016), meta-science (Hoogeveen, Sarafoglou, and Wagenmakers 2020; {``Replication {Markets} -- {Reliable} Research Replicates\ldots you Can Bet on It.''} n.d.), sports (Servan-Schreiber et al. 2004) and epidemiology Recchia, Freeman, and Spiegelhalter (2021). Several prediction platforms (Metaculus 2020; {``Hypermind \textbar{} {Supercollective} Intelligence for Decision Makers''} n.d.; {``{CSET Foretell}''} n.d.) and prediction markets ({``{PredictIt}''} n.d.) have been created to collate expert and non-expert predictions. However, with the notable exception of Farrow et al., these crowd forecasts were not designed to be evaluated alongside model-based forecasts and usually follow their own (often binary) formats. Farrow et al.~found that humans could outperform computer models at predicting the 2014/15 and 2015/16 flu season in the US, a setting where the disease was well known and information about previous seasons was available. They tended to do slightly worse at predicting the 2014/15 outbreak of chikungunya in the Americas, a disease previously largely unobserved and unknown there and then.
+Previous work has examined human predictions in various contexts, such as geopolitics (Tetlock et al. 2014; Atanasov et al. 2016), meta-science (Hoogeveen, Sarafoglou, and Wagenmakers 2020; ReplicationMarkets 2020), sports (Servan-Schreiber et al. 2004) and epidemiology (Farrow et al. 2017; McAndrew and Reich 2020; Recchia, Freeman, and Spiegelhalter 2021). Several prediction platforms (Metaculus 2020; Hypermind 2021; CSET Foretell 2021) and prediction markets (PredictIt 2021) have been created to collate expert and non-expert predictions. However, with the notable exception of Farrow et al., these crowd forecasts were not designed to be evaluated alongside model-based forecasts and usually follow their own (often binary) formats. Farrow et al.~found that humans could outperform computer models at predicting the 2014/15 and 2015/16 flu season in the US, a setting where the disease was well known and information about previous seasons was available. They tended to do slightly worse at predicting the 2014/15 outbreak of chikungunya in the Americas, a disease previously largely unobserved and unknown there and then.
 
 In this study, we attempt to further shed light on the role of human judgement and model-derived insight and analyse respective strengths and weaknesses. To allow for a direct comparison on an equal footing we employ a novel approach that elicits full probabilistic forecasts (Held, Meyer, and Bracher 2017) from participants, rather than constructing a predictive distribution from individual point predictions.
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-We created a crowd-sourced forecast (``crowd forecast''), elicited from participants through a web application (N. I. Bosse et al. 2020), as well as two semi-mechanistic models (``renewal model'' and ``convolution model'') informed by basic assumptions about COVID-19 epidemiology. Forecasts were created in real time over a period of 21 weeks from October 12th 2020 until March 1st 2021 and submitted to the German and Polish Forecast hub (Bracher, Wolffram, et al. 2021). All code and tools necessary to generate the forecasts and make a forecast submission are available in the \texttt{covid.german.forecasts} R package (N. Bosse et al. 2020). This repository also contains a record of all forecasts submitted to the German and Polish Forecast Hub. Forecasts were evaluated using a variety of scoring metrics and compared among each other and against an ensemble of all other models submitted to the Forecast Hub.
+We created a crowd-sourced forecast (``crowd forecast''), elicited from participants through a web application (Bosse et al. 2020b), as well as two semi-mechanistic models (``renewal model'' and ``convolution model'') informed by basic assumptions about COVID-19 epidemiology. Forecasts were created in real time over a period of 21 weeks from October 12th 2020 until March 1st 2021 and submitted to the German and Polish Forecast hub (Bracher, Wolffram, et al. 2021). All code and tools necessary to generate the forecasts and make a forecast submission are available in the \texttt{covid.german.forecasts} R package (Bosse et al. 2020a). This repository also contains a record of all forecasts submitted to the German and Polish Forecast Hub. Forecasts were evaluated using a variety of scoring metrics and compared among each other and against an ensemble of all other models submitted to the Forecast Hub.
 
 \hypertarget{forecast-targets-and-interaction-with-the-german-and-polish-forecast-hub}{%
 \subsection{Forecast targets and interaction with the German and Polish Forecast Hub}\label{forecast-targets-and-interaction-with-the-german-and-polish-forecast-hub}}
 
 The German and Polish Forecast Hub elicits predictions for various COVID-19 related forecast targets from different research institutions every week. Forecasts had to be made every Monday (with submissions allowed until Tuesday 3pm) using data available until Monday 11.59pm. We submitted forecasts for incident and cumulative weekly reported numbers of cases and deaths from COVID-19 on a national level in Germany and Poland over a one to four week forecast horizon. Weeks were defined as epiweeks starting on Sunday and ending on Saturday, meaning that forecast horizons were in fact 5, 12, 19 and 26 days. Submissions were required in a quantile-based format with 23 quantiles at levels 0.01, 0.025, 0.05, 0.10, 0.15, \ldots, 0.95, 0.975, 0.99. Forecasts submitted to the Forecast Hub were combined to different ensembles every week, with the median ensemble being the default ensemble shown on all official Forecast hub visualisations.
 
-Data on daily reported test positive cases and deaths linked to COVID-19 were provided by the organisers of the German and Polish forecast hub. Until December 14th 2020 these data were sourced from the European Centre for Disease Control (ECDC) ({``Download Historical Data (to 14 {December} 2020) on the Daily Number of New Reported {COVID}-19 Cases and Deaths Worldwide''} 2020). After ECDC stopped publishing daily data, observations were sourced from the Robert Koch Institute (RKI) and the Polish Ministry of Health for the remainder of the submission period ({``{RKI} - {Coronavirus SARS}-{CoV}-2 - {Aktueller Lage}-/{Situationsbericht} Des {RKI} Zu {COVID}-19''} n.d.). These data are subject to reporting artefacts (such as a delayed case reporting in Poland on the 24th November ({``Rozbieżności w statystykach koronawirusa. 22 tys. przypadków będą doliczone do ogólnej liczby wyników''} 16:07:56+0100)), changes in reporting over time and variation in testing regimes (e.g.~in Germany from the 11th of November on (Ärzteblatt 2020)).
+Data on daily reported test positive cases and deaths linked to COVID-19 were provided by the organisers of the German and Polish forecast hub. Until December 14th 2020 these data were sourced from the European Centre for Disease Control (ECDC) (ECDC 2020). After ECDC stopped publishing daily data, observations were sourced from the Robert Koch Institute (RKI) and the Polish Ministry of Health for the remainder of the submission period (RKI 2021). These data are subject to reporting artefacts (such as a delayed case reporting in Poland on the 24th November (Forsal.pl 2020)), changes in reporting over time and variation in testing regimes (e.g.~in Germany from the 11th of November on (Ärzteblatt 2020)).
 
 \hypertarget{crowd-forecasts}{%
 \subsection{Crowd forecasts}\label{crowd-forecasts}}
 
-Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application (\url{https://cmmid-lshtm.shinyapps.io/crowd-forecast/}). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information available until Monday. The application was built using the shiny and golem R packages (Fay et al. 2021; Chang et al. 2021) and is available in the \texttt{crowdforecastr} R package (N. I. Bosse et al. 2020). To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e.~as \texttt{sd(c(log(value4)\ -\ log(value3),\ log(value3)\ -\ log(value2),\ ...))}).
+Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application (\url{https://cmmid-lshtm.shinyapps.io/crowd-forecast/}). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information available until Monday. The application was built using the shiny and golem R packages (Fay et al. 2021; Chang et al. 2021) and is available in the \texttt{crowdforecastr} R package (Bosse et al. 2020b). To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e.~as \(\sigma(log(value4) - log(value3), log(value3) - log(value2), \ldots )\)).
 Our interface also allowed participants to view the observed data, and their forecasts, on a logarithmic scale and presented additional contextual COVID-19 data sourced from ({``{COVID}-19 {Data Explorer}''} n.d.). These data included e.g.~notifications of both test positive COVID-19 cases and COVID-19 linked deaths and the number of COVID-19 tests conducted over time.
 
 Forecasts were stored in a Google Sheet and downloaded, cleaned and processed every week for submission. If a forecaster had submitted multiple predictions for a single target, only the latest submission was kept. Information on the chosen distribution as well as the parameters for median and width were used to obtain the required set of 23 quantiles from that distribution. Forecasts from all forecasters were then aggregated using an unweighted quantile-wise mean. On a few occasions, individual forecasts were assessed as clearly erroneous by visual inspection and subsequently removed before aggregation.
@@ -161,9 +161,9 @@ Participants were recruited mostly within the Centre of Mathematical Modeling of
 \hypertarget{model-based-forecasts}{%
 \subsection{Model-based forecasts}\label{model-based-forecasts}}
 
-We used two models from the \texttt{EpiNow2} R package (version 1.3.3) as our model-based forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called ``renewal model,'' used the renewal equation (Fraser 2007) to predict reported cases and deaths. It estimated the effective reproduction number \(R_t\) (the average number of people each infected person is expected to infect in turn) and models future infections as a weighted sum of past infection multiplied by \(R_t\). \(R_t\) was assumed to stay constant beyond the forecast horizon, roughly corresponding to continuing the latest exponential trend in infections. On the 9th of November we altered the date when \(R_t\) was assumed to be constant from two weeks prior to the date of the forecast to the forecast date. Reported notifications were obtained by convolving predicted infections over data-based delay distributions (Abbott, Hellewell, et al. 2020; DOI n.d.; {``Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the {Covid}-19 Outbreak in {England} \textbar{} {medRxiv}''} n.d.) to model the time between infection and report date or death. The renewal model was used to predict cases as well as deaths with forecasts being generated for each target separately, meaning that \(R_t\) was forecast once from reported cases and once from reported deaths. Death forecasts from the renewal model were therefore not informed by past cases. One submission of the renewal model on December 28th 2020 was delayed and therefore not included in the official Forecast hub ensemble.
+We used two models from the \texttt{EpiNow2} R package (version 1.3.3) as our model-based forecasts (Abbott, Hellewell, et al. 2020). The first of these models, here called ``renewal model,'' used the renewal equation (Fraser 2007) to predict reported cases and deaths. It estimated the effective reproduction number \(R_t\) (the average number of people each infected person is expected to infect in turn) and models future infections as a weighted sum of past infection multiplied by \(R_t\). \(R_t\) was assumed to stay constant beyond the forecast horizon, roughly corresponding to continuing the latest exponential trend in infections. On the 9th of November we altered the date when \(R_t\) was assumed to be constant from two weeks prior to the date of the forecast to the forecast date. Reported notifications were obtained by convolving predicted infections over data-based delay distributions (Abbott, Hellewell, et al. 2020; epiforecasts.io/covid n.d.; Sherratt et al. 2021) to model the time between infection and report date or death. The renewal model was used to predict cases as well as deaths with forecasts being generated for each target separately, meaning that \(R_t\) was forecast once from reported cases and once from reported deaths. Death forecasts from the renewal model were therefore not informed by past cases. One submission of the renewal model on December 28th 2020 was delayed and therefore not included in the official Forecast hub ensemble.
 
-The second model (``convolution model'') was only used to forecast deaths and was added later, starting December 7th 2020 (with the first forecast from December 7th suffering from a software bug and therefore disregarded in all further analyses). The convolution model was submitted, but never included in the official Forecast hub ensemble due to concerns that it could be too similar to the renewal model. The convolution model predicted deaths as a fraction of infected people who would die with some delay, by using a convolution of reported cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both the renewal and the convolution model used daily observations and assumed a negative binomial observation model with a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). Line list data used to inform the prior for the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al., n.d.) with data available up to the 1st of August. All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information.
+The second model (``convolution model'') was only used to forecast deaths and was added later, starting December 7th 2020 (with the first forecast from December 7th suffering from a software bug and therefore disregarded in all further analyses). The convolution model was submitted, but never included in the official Forecast hub ensemble due to concerns that it could be too similar to the renewal model. The convolution model predicted deaths as a fraction of infected people who would die with some delay, by using a convolution of reported cases with a distribution that described the delay from case report to death and a scaling factor (the case-fatality ratio). Both the renewal and the convolution model used daily observations and assumed a negative binomial observation model with a multiplicative day-of-the-week effect (Abbott, Hellewell, et al. 2020). Line list data used to inform the prior for the delay from symptom onset to test positive case report or death in the model-based forecasts was sourced from (Xu et al. 2020) with data available up to the 1st of August. All model fitting was done using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020) with each location and forecast target being fit separately. More details are available in the supplementary information.
 
 \hypertarget{analysis}{%
 \subsection{Analysis}\label{analysis}}
@@ -306,6 +306,13 @@ For quantile forecasts, $F(y)$ is replaced by a quantile rank. The appropriate q
 
 \clearpage
 
+\hypertarget{the-crowdforecasting-app}{%
+\subsection{The crowdforecasting app}\label{the-crowdforecasting-app}}
+
+\begin{figure}[H]
+\includegraphics[width=1\linewidth,]{../crowd-forecast/Screenshot-forecasting-app} \caption{Screenshot of the crowdforecasting app used to elicit predictions (made in June 2021). }\label{fig:screenshot}
+\end{figure}
+
 \hypertarget{further-details-on-the-semi-mechanistic-forecasting-models}{%
 \subsection{Further details on the semi-mechanistic forecasting models}\label{further-details-on-the-semi-mechanistic-forecasting-models}}
 
@@ -362,7 +369,7 @@ and updated the reporting process as follows when forecasting deaths,
 
 \(\alpha\), \(\mu\), \(\sigma\), and \(\phi\) were truncated to be greater than 0 and with \(\xi\), and \(w\) normalised to sum to 1.
 
-The prior for the generation time was sourced from (Ganyani et al. 2020) but refit using a log-normal incubation period with a mean of 5.2 days (SD 1.1) and SD of 1.52 days (SD 1.1) with this incubation period also being used as a prior (Lauer et al. 2020) for \(\xi_{O}\). This resulted in a gamma-distributed generation time with mean 3.6 days (standard deviation (SD) 0.7), and SD of 3.1 days (SD 0.8) for all estimates. We estimated the delay between symptom onset and case report or death required to convolve latent infections to observations by fitting an integer adjusted log-normal distribution to 10 subsampled bootstraps of a public linelist for cases in Germany from April 2020 to June 2020 with each bootstrap using 1\% or 1769 samples of the available data (Xu et al., n.d.; Abbott, Sherratt, et al. 2020) and combining the posteriors for the mean and standard deviation of the log-normal distribution (Abbott, Hellewell, et al. 2020; DOI n.d.; {``Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the {Covid}-19 Outbreak in {England} \textbar{} {medRxiv}''} n.d.; Stan Development Team 2020).
+The prior for the generation time was sourced from (Ganyani et al. 2020) but refit using a log-normal incubation period with a mean of 5.2 days (SD 1.1) and SD of 1.52 days (SD 1.1) with this incubation period also being used as a prior (Lauer et al. 2020) for \(\xi_{O}\). This resulted in a gamma-distributed generation time with mean 3.6 days (standard deviation (SD) 0.7), and SD of 3.1 days (SD 0.8) for all estimates. We estimated the delay between symptom onset and case report or death required to convolve latent infections to observations by fitting an integer adjusted log-normal distribution to 10 subsampled bootstraps of a public linelist for cases in Germany from April 2020 to June 2020 with each bootstrap using 1\% or 1769 samples of the available data (Xu et al. 2020; Abbott, Sherratt, et al. 2020) and combining the posteriors for the mean and standard deviation of the log-normal distribution (Abbott, Hellewell, et al. 2020; epiforecasts.io/covid n.d.; {``Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the {Covid}-19 Outbreak in {England} \textbar{} {medRxiv}''} n.d.; Stan Development Team 2020).
 
 \(GP_t\) is an approximate Hilbert space Gaussian process as defined in (Riutort-Mayol et al. 2020) using a Matern 3/2 kernel using a boundary factor of 1.5 and 17 basis functions (20\% of the number of days used in fitting). The length scale of the Gaussian process was given a log-normal prior with a mean of 21 days, and a standard deviation of 7 days truncated to be greater than 3 days and less than 60 days. The magnitude of the Gaussian process was assumed to be normally distributed centred at 0 with a standard deviation of 0.1.
 
@@ -1016,11 +1023,11 @@ Bhatt, Samir, Neil Ferguson, Seth Flaxman, Axel Gandy, Swapnil Mishra, and James
 \leavevmode\vadjust pre{\hypertarget{ref-biggerstaffResultsCentersDisease2016}{}}%
 Biggerstaff, Matthew, David Alper, Mark Dredze, Spencer Fox, Isaac Chun-Hai Fung, Kyle S. Hickmann, Bryan Lewis, et al. 2016. {``Results from the Centers for Disease Control and Prevention's Predict the 2013--2014 {Influenza Season Challenge}.''} \emph{BMC Infectious Diseases} 16 (1): 357. \url{https://doi.org/10.1186/s12879-016-1669-x}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-crowdforecastr}{}}%
-Bosse, Nikos I., Sam Abbott, EpiForecasts, and Sebastian Funk. 2020. \emph{Crowdforecastr: Eliciting Crowd Forecasts in r Shiny}. \url{https://doi.org/10.5281/zenodo.4618519}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-covidgermanforecasts}{}}%
-Bosse, Nikos, Sam Abbott, EpiForecasts, and Sebastian Funk. 2020. \emph{Covid.german.forecasts: Forecasting Covid-19 Related Metrics for the German/Poland Forecast Hub}.
+Bosse, Nikos I., Sam Abbott, EpiForecasts, and Sebastian Funk. 2020a. \emph{Covid.german.forecasts: Forecasting Covid-19 Related Metrics for the German/Poland Forecast Hub}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-crowdforecastr}{}}%
+---------. 2020b. \emph{Crowdforecastr: Eliciting Crowd Forecasts in r Shiny}. \url{https://doi.org/10.5281/zenodo.4618519}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bracherEvaluatingEpidemicForecasts2021}{}}%
 Bracher, Johannes, Evan L. Ray, Tilmann Gneiting, and Nicholas G. Reich. 2021. {``Evaluating Epidemic Forecasts in an Interval Format.''} \emph{PLoS Computational Biology} 17 (2): e1008618. \url{https://doi.org/10.1371/journal.pcbi.1008618}.
@@ -1043,17 +1050,17 @@ Cramer, Estee, Evan L. Ray, Velma K. Lopez, Johannes Bracher, Andrea Brennen, Al
 \leavevmode\vadjust pre{\hypertarget{ref-cramerCOVID19ForecastHub2020}{}}%
 Cramer, Estee, Nicholas G Reich, Serena Yijin Wang, Jarad Niemi, Abdul Hannan, Katie House, Youyang Gu, et al. 2020. {``{COVID}-19 {Forecast Hub}: 4 {December} 2020 Snapshot.''} {Zenodo}. \url{https://doi.org/10.5281/zenodo.3963371}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-CSETForetell}{}}%
-{``{CSET Foretell}.''} n.d. Accessed October 13, 2021. \url{https://www.cset-foretell.com/}.
+\leavevmode\vadjust pre{\hypertarget{ref-csetforetellCSETForetell2021}{}}%
+CSET Foretell. 2021. {``{CSET Foretell}.''} 2021. \url{https://www.cset-foretell.com/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-delvalleSummaryResults201420152018}{}}%
 Del Valle, Sara Y., Benjamin H. McMahon, Jason Asher, Richard Hatchett, Joceline C. Lega, Heidi E. Brown, Mark E. Leany, et al. 2018. {``Summary Results of the 2014-2015 {DARPA Chikungunya} Challenge.''} \emph{BMC Infectious Diseases} 18 (1): 245. \url{https://doi.org/10.1186/s12879-018-3124-7}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-doiCovid19TemporalVariation}{}}%
-DOI, Authors Affiliations Published Not published yet. n.d. {``Covid-19: Temporal Variation in Transmission During the {COVID}-19 Outbreak.''} {Covid-19}. Accessed May 30, 2021. \url{https://epiforecasts.io/covid/}.
+\leavevmode\vadjust pre{\hypertarget{ref-ecdcDownloadHistoricalData2020}{}}%
+ECDC. 2020. {``Download Historical Data (to 14 {December} 2020) on the Daily Number of New Reported {COVID}-19 Cases and Deaths Worldwide.''} {European Centre for Disease Prevention and Control}. December 14, 2020. \url{https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-DownloadHistoricalData2020a}{}}%
-{``Download Historical Data (to 14 {December} 2020) on the Daily Number of New Reported {COVID}-19 Cases and Deaths Worldwide.''} 2020. {European Centre for Disease Prevention and Control}. December 14, 2020. \url{https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide}.
+\leavevmode\vadjust pre{\hypertarget{ref-epiforecasts.ioux2fcovidCovid19TemporalVariation}{}}%
+epiforecasts.io/covid. n.d. {``Covid-19: Temporal Variation in Transmission During the {COVID}-19 Outbreak.''} {Covid-19}. Accessed May 30, 2021. \url{https://epiforecasts.io/covid/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-EvaluatingUseReproduction}{}}%
 {``Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the {Covid}-19 Outbreak in {England} \textbar{} {medRxiv}.''} n.d. Accessed May 30, 2021. \url{https://www.medrxiv.org/content/10.1101/2020.10.18.20214585v1}.
@@ -1063,6 +1070,9 @@ Farrow, David C., Logan C. Brooks, Sangwon Hyun, Ryan J. Tibshirani, Donald S. B
 
 \leavevmode\vadjust pre{\hypertarget{ref-golem}{}}%
 Fay, Colin, Vincent Guyader, Sébastien Rochette, and Cervan Girard. 2021. \emph{Golem: A Framework for Robust Shiny Applications}. \url{https://github.com/ThinkR-open/golem}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-forsal.plRozbieznosciStatystykachKoronawirusa2020}{}}%
+Forsal.pl. 2020. {``Rozbieżności w statystykach koronawirusa. 22 tys. przypadków będą doliczone do ogólnej liczby wyników.''} 2020. \url{https://forsal.pl/lifestyle/zdrowie/artykuly/8017628,rozbieznosci-w-statystykach-koronawirusa-22-tys-przypadkow-beda-doliczone-do-ogolnej-liczby-wynikow.html}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-fraserEstimatingIndividualHousehold2007}{}}%
 Fraser, Christophe. 2007. {``Estimating {Individual} and {Household Reproduction Numbers} in an {Emerging Epidemic}.''} \emph{PLOS ONE} 2 (8): e758. \url{https://doi.org/10.1371/journal.pone.0000758}.
@@ -1088,8 +1098,8 @@ Hoogeveen, Suzanne, Alexandra Sarafoglou, and Eric-Jan Wagenmakers. 2020. {``Lay
 \leavevmode\vadjust pre{\hypertarget{ref-EuroHub}{}}%
 Hub, European COVID-19 Forecast. 2021. {``Forecasts of New Cases and Deaths Due to Covid-19 over the Next Four Weeks in Countries Across Europe and the UK.''} \url{https://covid19forecasthub.eu/}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-HypermindSupercollectiveIntelligence}{}}%
-{``Hypermind \textbar{} {Supercollective} Intelligence for Decision Makers.''} n.d. {Hypermind}. Accessed October 13, 2021. \url{https://www.hypermind.com/en/}.
+\leavevmode\vadjust pre{\hypertarget{ref-hypermindHypermindSupercollectiveIntelligence2021}{}}%
+Hypermind. 2021. {``Hypermind \textbar{} {Supercollective} Intelligence for Decision Makers.''} {Hypermind}. 2021. \url{https://www.hypermind.com/en/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-johanssonOpenChallengeAdvance2019}{}}%
 Johansson, Michael A., Karyn M. Apfeldorf, Scott Dobson, Jason Devita, Anna L. Buczak, Benjamin Baugher, Linda J. Moniz, et al. 2019. {``An Open Challenge to Advance Probabilistic Forecasting for Dengue Epidemics.''} \emph{Proceedings of the National Academy of Sciences} 116 (48): 24268--74. \url{https://doi.org/10.1073/pnas.1909865116}.
@@ -1106,8 +1116,8 @@ McGowan, Craig J., Matthew Biggerstaff, Michael Johansson, Karyn M. Apfeldorf, M
 \leavevmode\vadjust pre{\hypertarget{ref-metaculusPreliminaryLookMetaculus2020}{}}%
 Metaculus. 2020. {``A {Preliminary Look} at {Metaculus} and {Expert Forecasts}.''} June 22, 2020. \url{https://www.metaculus.com/news/2020/06/02/LRT/}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-PredictIt}{}}%
-{``{PredictIt}.''} n.d. Accessed October 13, 2021. \url{https://www.predictit.org/}.
+\leavevmode\vadjust pre{\hypertarget{ref-predictitPredictIt2021}{}}%
+PredictIt. 2021. {``{PredictIt}.''} 2021. \url{https://www.predictit.org/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-recchiaHowWellDid2021}{}}%
 Recchia, Gabriel, Alexandra L. J. Freeman, and David Spiegelhalter. 2021. {``How Well Did Experts and Laypeople Forecast the Size of the {COVID}-19 Pandemic?''} \emph{PLOS ONE} 16 (5): e0250935. \url{https://doi.org/10.1371/journal.pone.0250935}.
@@ -1115,17 +1125,14 @@ Recchia, Gabriel, Alexandra L. J. Freeman, and David Spiegelhalter. 2021. {``How
 \leavevmode\vadjust pre{\hypertarget{ref-reichCollaborativeMultiyearMultimodel2019}{}}%
 Reich, Nicholas G., Logan C. Brooks, Spencer J. Fox, Sasikiran Kandula, Craig J. McGowan, Evan Moore, Dave Osthus, et al. 2019. {``A Collaborative Multiyear, Multimodel Assessment of Seasonal Influenza Forecasting in the {United States}.''} \emph{Proceedings of the National Academy of Sciences} 116 (8): 3146--54. \url{https://doi.org/10.1073/pnas.1812594116}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-ReplicationMarketsReliable}{}}%
-{``Replication {Markets} -- {Reliable} Research Replicates\ldots you Can Bet on It.''} n.d. Accessed October 13, 2021. \url{https://www.replicationmarkets.com/}.
+\leavevmode\vadjust pre{\hypertarget{ref-replicationmarketsReplicationMarketsReliable2020}{}}%
+ReplicationMarkets. 2020. {``Replication {Markets} -- {Reliable} Research Replicates\ldots you Can Bet on It.''} 2020. \url{https://www.replicationmarkets.com/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-approxGP}{}}%
 Riutort-Mayol, Gabriel, Paul-Christian Bürkner, Michael R. Andersen, Arno Solin, and Aki Vehtari. 2020. {``Practical Hilbert Space Approximate Bayesian Gaussian Processes for Probabilistic Programming.''} \url{https://arxiv.org/abs/2004.11408}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-RKICoronavirusSARSCoV2a}{}}%
-{``{RKI} - {Coronavirus SARS}-{CoV}-2 - {Aktueller Lage}-/{Situationsbericht} Des {RKI} Zu {COVID}-19.''} n.d. Accessed May 30, 2021. \url{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-RozbieznosciStatystykachKoronawirusa0100}{}}%
-{``Rozbieżności w statystykach koronawirusa. 22 tys. przypadków będą doliczone do ogólnej liczby wyników.''} 16:07:56+0100. 16:07:56+0100. \url{https://forsal.pl/lifestyle/zdrowie/artykuly/8017628,rozbieznosci-w-statystykach-koronawirusa-22-tys-przypadkow-beda-doliczone-do-ogolnej-liczby-wynikow.html}.
+\leavevmode\vadjust pre{\hypertarget{ref-rkiRKICoronavirusSARSCoV22021}{}}%
+RKI. 2021. {``{RKI} - {Coronavirus SARS}-{CoV}-2 - {Aktueller Lage}-/{Situationsbericht} Des {RKI} Zu {COVID}-19.''} 2021. \url{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-epidemia}{}}%
 Scott, James A., Axel Gandy, Swapnil Mishra, Juliette Unwin, Seth Flaxman, and Samir Bhatt. 2020. {``Epidemia: Modeling of Epidemics Using Hierarchical Bayesian Models.''} \url{https://imperialcollegelondon.github.io/epidemia/}.
@@ -1135,6 +1142,9 @@ Servan-Schreiber, Emile, Justin Wolfers, David M. Pennock, and Brian Galebach. 2
 
 \leavevmode\vadjust pre{\hypertarget{ref-shamanForecastingSeasonalOutbreaks2012}{}}%
 Shaman, Jeffrey, and Alicia Karspeck. 2012. {``Forecasting Seasonal Outbreaks of Influenza.''} \emph{Proceedings of the National Academy of Sciences} 109 (50): 20425--30. \url{https://doi.org/10.1073/pnas.1208772109}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sherrattExploringSurveillanceData2021}{}}%
+Sherratt, Katharine, Sam Abbott, Sophie R. Meakin, Joel Hellewell, James D. Munday, Nikos Bosse, CMMID Covid-19 working Group, Mark Jit, and Sebastian Funk. 2021. {``Exploring Surveillance Data Biases When Estimating the Reproduction Number: With Insights into Subpopulation Transmission of {Covid}-19 in {England},''} March, 2020.10.18.20214585. \url{https://doi.org/10.1101/2020.10.18.20214585}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-rstan}{}}%
 Stan Development Team. 2020. {``RStan: The r Interface to Stan.''} \url{http://mc-stan.org/}.
@@ -1146,7 +1156,7 @@ Tetlock, Philip E., Barbara A. Mellers, Nick Rohrbaugh, and Eva Chen. 2014. {``F
 Viboud, Cécile, Kaiyuan Sun, Robert Gaffey, Marco Ajelli, Laura Fumanelli, Stefano Merler, Qian Zhang, Gerardo Chowell, Lone Simonsen, and Alessandro Vespignani. 2018. {``The {RAPIDD} Ebola Forecasting Challenge: Synthesis and Lessons Learnt.''} \emph{Epidemics}, The {RAPIDD Ebola Forecasting Challenge}, 22 (March): 13--21. \url{https://doi.org/10.1016/j.epidem.2017.08.002}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kraemer2020epidemiological}{}}%
-Xu, Bo, Bernardo Gutierrez, Sarah Hill, Samuel Scarpino, Alyssa Loskill, Jessie Wu, Kara Sewalk, et al. n.d. {``Epidemiological Data from the nCoV-2019 Outbreak: Early Descriptions from Publicly Available Data.''} \url{http://virological.org/t/epidemiological-data-from-the-ncov-2019-outbreak-early-descriptions-from-publicly-available-data/337}.
+Xu, Bo, Bernardo Gutierrez, Sarah Hill, Samuel Scarpino, Alyssa Loskill, Jessie Wu, Kara Sewalk, et al. 2020. {``Epidemiological Data from the nCoV-2019 Outbreak: Early Descriptions from Publicly Available Data.''} \url{http://virological.org/t/epidemiological-data-from-the-ncov-2019-outbreak-early-descriptions-from-publicly-available-data/337}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-yamanaSuperensembleForecastsDengue2016}{}}%
 Yamana, Teresa K., Sasikiran Kandula, and Jeffrey Shaman. 2016. {``Superensemble Forecasts of Dengue Outbreaks.''} \emph{Journal of The Royal Society Interface} 13 (123): 20160410. \url{https://doi.org/10.1098/rsif.2016.0410}.
