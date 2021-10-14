@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.9)  14 OCT 2021 12:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.9)  14 OCT 2021 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -727,16 +727,16 @@ r (name{table.3}) has been already used, duplicate ignored
                                                   
 l.501 \clearpage
                 ]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-4.png, id=278, 7
-22.7pt x 657.657pt>
-File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-4.png Graph
-ic file (type png)
-<use ../analysis/plots/aggregate-performance-2-weeks-locations-all-4.png>
+<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=247, 
+722.7pt x 657.657pt>
+File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png Grap
+hic file (type png)
+<use ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-4.png  used on input line 510.
+ons-all-v4.png  used on input line 510.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
 <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=2
-79, 722.7pt x 657.657pt>
+48, 722.7pt x 657.657pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png 
 Graphic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>
@@ -750,15 +750,15 @@ s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.519 
-       <../analysis/plots/aggregate-performance-2-weeks-locations-all-4.png (PN
-G copy)>] [22pdfTeX warning (ext4): destination with the same identifier (name{
-figure.6}) has been already used, duplicate ignored
+       <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png (P
+NG copy)>] [22pdfTeX warning (ext4): destination with the same identifier (name
+{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.520 \clearpage
                  <../analysis/plots/aggregate-performance-2-weeks-locations-all
 -rel-v4.png (PNG copy)>]
-<../analysis/plots/daily_truth.png, id=292, 722.7pt x 578.16pt>
+<../analysis/plots/daily_truth.png, id=262, 722.7pt x 578.16pt>
 File: ../analysis/plots/daily_truth.png Graphic file (type png)
 <use ../analysis/plots/daily_truth.png>
 Package pdftex.def Info: ../analysis/plots/daily_truth.png  used on input line 
@@ -772,13 +772,13 @@ s been already used, duplicate ignored
                                                   
 l.529 \clearpage
                  <../analysis/plots/daily_truth.png>]
-<../analysis/plots/figure-forecasts-1.png, id=301, 722.7pt x 794.97pt>
+<../analysis/plots/figure-forecasts-1.png, id=271, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-1.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-1.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-1.png  used on inpu
 t line 535.
 (pdftex.def)             Requested size: 469.76045pt x 516.73651pt.
-<../analysis/plots/figure-forecasts-3.png, id=302, 722.7pt x 794.97pt>
+<../analysis/plots/figure-forecasts-3.png, id=272, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-3.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
@@ -792,7 +792,7 @@ s been already used, duplicate ignored
                                                   
 l.541 
        <../analysis/plots/figure-forecasts-1.png (PNG copy)>]
-<../analysis/plots/figure-forecasts-4.png, id=309, 722.7pt x 794.97pt>
+<../analysis/plots/figure-forecasts-4.png, id=279, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-4.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-4.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-4.png  used on inpu
@@ -810,13 +810,13 @@ y used, duplicate ignored
                                                   
 l.546 \clearpage
                  <../analysis/plots/figure-forecasts-4.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-1.png, id=321, 650.43pt x 433.62pt>
+<../analysis/plots/distribution_scores_wis-1.png, id=291, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-1.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-1.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1.png  used 
 on input line 555.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-<../analysis/plots/distribution_scores_wis-3.png, id=322, 650.43pt x 433.62pt>
+<../analysis/plots/distribution_scores_wis-3.png, id=292, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-3.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
@@ -830,7 +830,7 @@ as been already used, duplicate ignored
                                                   
 l.561 
        <../analysis/plots/distribution_scores_wis-1.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-4.png, id=331, 650.43pt x 433.62pt>
+<../analysis/plots/distribution_scores_wis-4.png, id=301, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-4.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-4.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4.png  used 
@@ -842,7 +842,7 @@ on input line 563.
                                                   
 l.565 
        <../analysis/plots/distribution_scores_wis-3.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-1-ranks.png, id=337, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-1-ranks.png, id=307, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-1-ranks.png Graphic file (type 
 png)
@@ -856,7 +856,7 @@ Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1-ranks.png
                                                   
 l.572 
        <../analysis/plots/distribution_scores_wis-4.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-2-ranks.png, id=343, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-2-ranks.png, id=313, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-2-ranks.png Graphic file (type 
 png)
@@ -870,7 +870,7 @@ Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2-ranks.png
                                                   
 l.576 
        <../analysis/plots/distribution_scores_wis-1-ranks.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-3-ranks.png, id=351, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-3-ranks.png, id=321, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-3-ranks.png Graphic file (type 
 png)
@@ -884,7 +884,7 @@ Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3-ranks.png
                                                   
 l.580 
        <../analysis/plots/distribution_scores_wis-2-ranks.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-4-ranks.png, id=358, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-4-ranks.png, id=328, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-4-ranks.png Graphic file (type 
 png)
@@ -905,7 +905,7 @@ s been already used, duplicate ignored
 l.585 \clearpage
                  <../analysis/plots/distribution_scores_wis-4-ranks.png (PNG co
 py)>]
-<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=369, 722.
+<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=339, 722.
 7pt x 657.657pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png Graphic 
 file (type png)
@@ -975,7 +975,7 @@ r (name{table.7}) has been already used, duplicate ignored
                                                   
 l.835 \clearpage
                 ]
-<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=401, 722.7p
+<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=370, 722.7p
 t x 657.657pt>
 File: ../analysis/plots/aggregate-performance-all-late-period-v4.png Graphic fi
 le (type png)
@@ -1018,21 +1018,21 @@ me{table.9}) has been already used, duplicate ignored
                                                   
 l.938 \clearpage
                 ]
-<../analysis/plots/number-forecasters.png, id=414, 406.3983pt x 420.6114pt>
+<../analysis/plots/number-forecasters.png, id=383, 404.9529pt x 419.8887pt>
 File: ../analysis/plots/number-forecasters.png Graphic file (type png)
 <use ../analysis/plots/number-forecasters.png>
 Package pdftex.def Info: ../analysis/plots/number-forecasters.png  used on inpu
 t line 990.
-(pdftex.def)             Requested size: 406.4097pt x 420.62321pt.
+(pdftex.def)             Requested size: 404.95807pt x 419.89407pt.
 [41
 
 ]
-<../analysis/plots/ensemble-members.png, id=420, 388.3308pt x 356.0502pt>
+<../analysis/plots/ensemble-members.png, id=390, 404.9529pt x 419.8887pt>
 File: ../analysis/plots/ensemble-members.png Graphic file (type png)
 <use ../analysis/plots/ensemble-members.png>
 Package pdftex.def Info: ../analysis/plots/ensemble-members.png  used on input 
 line 994.
-(pdftex.def)             Requested size: 388.3476pt x 356.06561pt.
+(pdftex.def)             Requested size: 404.95807pt x 419.89407pt.
 [42pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1048,9 +1048,9 @@ l.997 \clearpage
 
 ] [45] [46] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 14739 strings out of 478994
- 221722 string characters out of 5864752
- 694128 words of memory out of 5000000
+ 14710 strings out of 478994
+ 221387 string characters out of 5864752
+ 694098 words of memory out of 5000000
  31516 multiletter control sequences out of 15000+600000
  467180 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1068,10 +1068,10 @@ dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share
 /texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1
 /public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on manuscript.pdf (46 pages, 8649789 bytes).
+Output written on manuscript.pdf (46 pages, 8790827 bytes).
 PDF statistics:
- 745 PDF objects out of 1000 (max. 8388607)
- 653 compressed objects within 7 object streams
- 231 named destinations out of 1000 (max. 500000)
+ 706 PDF objects out of 1000 (max. 8388607)
+ 614 compressed objects within 7 object streams
+ 202 named destinations out of 1000 (max. 500000)
  33074 words of extra memory for PDF output out of 35830 (max. 10000000)
 

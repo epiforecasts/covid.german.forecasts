@@ -584,12 +584,13 @@ make_table <- function(data,
   setDT(df)
   
   # delete and rename a few columns
+  setnames(df, 
+           old = c("interval_score_sd", "sharpness"), 
+           new = c("WIS - sd", "dispersion"))
   del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
                           !(grepl("interval", names(df)))]
   del_cols <- c(del_cols, "coverage_deviation")
   df[, (del_cols) := NULL] 
-  setnames(df, old = c("interval_score_sd, sharpness"), 
-           new = c("WIS - sd", "dispersion"))
 
   # create and save tables for 1-2 weeks ahead and 3-4 weeks ahead
   table <- score_table(df[horizon <= 2]) 
@@ -604,7 +605,6 @@ make_table <- function(data,
 
 
 # create tables
-
 # regular models
 filtered_data[model %in% regular_models] %>%
   make_table()

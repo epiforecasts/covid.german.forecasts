@@ -44,7 +44,7 @@ Data on daily reported test positive cases and deaths linked to COVID-19 were pr
 
 ## Crowd forecasts
 
-Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application  (https://cmmid-lshtm.shinyapps.io/crowd-forecast/). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information available until Monday. The application was built using the shiny and golem R packages [@golem; @shiny] and is available in the `crowdforecastr` R package [@crowdforecastr]. To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e. as `sd(c(log(value4) - log(value3), log(value3) - log(value2), ...))`[a]). 
+Our crowd forecasts were created as an ensemble of forecasts made by individual participants every week through a web application  (https://cmmid-lshtm.shinyapps.io/crowd-forecast/). Forecasts were allowed until 12pm on Tuesdays, but participants were asked to only use information available until Monday. The application was built using the shiny and golem R packages [@golem; @shiny] and is available in the `crowdforecastr` R package [@crowdforecastr]. To make a forecast in the application participants could select a predictive distribution, with the default being log-normal, and adjust the median and the width of the uncertainty by either interacting with a figure showing their forecast or providing numerical values. The baseline shown was a repetition of the last known observation with constant uncertainty around it computed as the standard deviation of the last four changes in log observed forecasts (i.e. as `sd(c(log(value4) - log(value3), log(value3) - log(value2), ...))`). 
 Our interface also allowed participants to view the observed data, and their forecasts, on a logarithmic scale and presented additional contextual COVID-19 data sourced from  [@COVID19DataExplorer]. These data included e.g. notifications of both test positive COVID-19 cases and COVID-19 linked deaths and the number of COVID-19 tests conducted over time. 
 
 Forecasts were stored in a Google Sheet and downloaded, cleaned and processed every week for submission. If a forecaster had submitted multiple predictions for a single target, only the latest submission was kept. Information on the chosen distribution as well as the parameters for median and width were used to obtain the required set of 23 quantiles from that distribution. Forecasts from all forecasters were then aggregated using an unweighted quantile-wise mean. On a few occasions, individual forecasts were assessed as clearly erroneous by visual inspection and subsequently removed before aggregation. 
@@ -290,7 +290,7 @@ $\alpha$, $\mu$, $\sigma$, and $\phi$ were truncated to be greater than 0 and wi
 
 The prior for the generation time was sourced from [@generationinterval] but refit using a log-normal incubation period with a mean of 5.2 days (SD 1.1) and SD of 1.52 days (SD 1.1) with this incubation period also being used as a prior [@incubationperiod] for $\xi_{O}$. This resulted in a gamma-distributed generation time with mean 3.6 days (standard deviation (SD) 0.7), and SD of 3.1 days (SD 0.8) for all estimates. We estimated the delay between symptom onset and case report or death required to convolve latent infections to observations by fitting an integer adjusted log-normal distribution to 10 subsampled bootstraps of a public linelist for cases in Germany from April 2020 to June 2020 with each bootstrap using 1% or 1769 samples of the available data  [@kraemer2020epidemiological; @covidregionaldata] and combining the posteriors for the mean and standard deviation of the log-normal distribution [@epinow2; @doiCovid19TemporalVariation; @EvaluatingUseReproduction; @rstan].
 
-$GP_t$ is an approximate Hilbert space Gaussian process as defined in [@approxGP] using a Matern 3/2 kernel using a boundary factor of 1.5 and 17 basis functions (20% of the number of days used in fitting). The length scale of the Gaussian process[b] was given a log-normal prior with a mean of 21 days, and a standard deviation of 7 days truncated to be greater than 3 days and less than 60 days. The magnitude of the Gaussian process was assumed to be normally distributed centred at 0 with a standard deviation of 0.1.
+$GP_t$ is an approximate Hilbert space Gaussian process as defined in [@approxGP] using a Matern 3/2 kernel using a boundary factor of 1.5 and 17 basis functions (20% of the number of days used in fitting). The length scale of the Gaussian process was given a log-normal prior with a mean of 21 days, and a standard deviation of 7 days truncated to be greater than 3 days and less than 60 days. The magnitude of the Gaussian process was assumed to be normally distributed centred at 0 with a standard deviation of 0.1.
 
 From the forecast time horizon ($T$) and onwards the last value of the Gaussian process was used (hence $R_t$ was assumed to be fixed) and latent infections were adjusted to account for the proportion of the population that was susceptible to infection as follows,
  
@@ -376,7 +376,7 @@ caption <- "Visualisation of aggregate performance metrics across locations. A: 
 ```
 
 ```{r performance-locations, fig.cap=caption}
-knitr::include_graphics("../analysis/plots/aggregate-performance-2-weeks-locations-all-4.png")
+knitr::include_graphics("../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png")
 ```
 
 ## Performance across locations in relative terms
@@ -672,6 +672,3 @@ knitr::include_graphics("../analysis/plots/ensemble-members.png")
 ```
 
 \clearpage
-
-[a]-> maths?
-[b]that sentence seems odd. Is it supposed to be that way @Sam.Abbott@lshtm.ac.uk
