@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.9)  13 OCT 2021 18:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.9)  14 OCT 2021 08:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,32 +1046,32 @@ licate ignored
 l.996 \clearpage
                  <../analysis/plots/ensemble-members.png>] [44
 
-] [45] (./manuscript.aux) ) 
+] [45] [46] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 14680 strings out of 478994
- 220439 string characters out of 5864752
+ 14739 strings out of 478994
+ 221634 string characters out of 5864752
  694140 words of memory out of 5000000
- 31512 multiletter control sequences out of 15000+600000
- 459906 words of font info for 141 fonts, out of 8000000 for 9000
+ 31516 multiletter control sequences out of 15000+600000
+ 467332 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,88p,2072b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.
-enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/
-lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf
--dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
-></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/
-fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
-r7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
-f-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on manuscript.pdf (45 pages, 8634143 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ma
+thsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/te
+xmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvip
+s/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/
+texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/
+public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></
+usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fo
+nts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi
+7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-
+dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
+lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share
+/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1
+/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on manuscript.pdf (46 pages, 8649331 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 202 named destinations out of 1000 (max. 500000)
- 28978 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 734 PDF objects out of 1000 (max. 8388607)
+ 642 compressed objects within 7 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 33074 words of extra memory for PDF output out of 35830 (max. 10000000)
 
