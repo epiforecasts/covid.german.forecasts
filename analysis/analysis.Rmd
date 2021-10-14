@@ -317,76 +317,27 @@ filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
 
 
 
-
-
-
-
-
---------------------------------------------------------------------------------
-## Plot with Visualsiation of daily data
-
-```{r}
-df <- copy(dailytruth_data)[
-  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
-][, target_end_date := as.Date(target_end_date)
-]
-
-df[weekdays(target_end_date) == "Sunday", sundays := target_end_date]
-
-weeklytruth <- copy(truth_data)[
-  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
-]
-
-df %>%
-  ggplot(aes(y = true_value, x = target_end_date)) + 
-  # geom_point(size = 0.3, alpha = 0.4) + 
-  # geom_line(size = 0.5, alpha = 0.4) + 
-  geom_col(fill = "lightsteelblue", color = "white") + 
-  geom_line(data = weeklytruth, aes(y = true_value / 7)) + 
-  geom_point(data = weeklytruth, aes(y = true_value / 7), size = 0.3) +
-  # geom_vline(aes(xintercept = sundays), linetype = "dashed", alpha = 0.2) + 
-  facet_wrap( ~ target_location, scales = "free", ncol = 1) + 
-  labs(y = "Observed values", x = "Date") + 
-  scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
-                          max(forecast_dates$full_hub_period + 21))) + 
-  theme_minimal()
-
-
-
-ggsave(here("analysis", "plots", "daily_truth.png"), width = 10, height = 8)
-```
-
-
-
-
---------------------------------------------------------------------------------
-## Plot with Visualsiation of x week ahead forecasts and scores
+# Plot with Visualsiation of x week ahead forecasts and scores
 
 ```{r truth-vs-forecasts, fig.height=12, fig.width=15}
 
-# create helper functions for the plot 
-# ------------------------------------------------------------------------------
-# truth_and_pred_plot = helper function for the visualisation truth and forecast
-# scores_over_time_plot = helper function for plotting scores over time
-# forecasts_and_scores = function that organises creation of the plots
-
+# helper function which creates panels A and C
 truth_and_pred_plot <- function(df, ttype = "case") {
   
+  # adjust distance between bars depending on case or death forecast
   if (ttype == "case") {
     dodgewidth = 3.6
   } else {
     dodgewidth = 3.7
   }
   
+  # rename model column
   setnames(df, old = c("model"), new = c("Model"))
   
-  trend <- 
-    copy(epitrend)[, location_target := paste0(str_to_sentence(target_type), 
-                                               "s", " in ", location_name)]
-  setnames(trend, old = c("classification"), new = c("Classification"))
+  # define date limits for the plot
+  limits <- min(forecast_dates$full_hub_period) + 5 + 0:21 * 7
   
-  limits <- min(forecast_dates$full_hub_period) + 5 + 1:21 * 7
-  
+  # create plot
   p <- df %>%
     dplyr::filter(target_type == ttype) %>%
     ggplot(aes(y = true_value, x = target_end_date)) + 
@@ -394,25 +345,28 @@ truth_and_pred_plot <- function(df, ttype = "case") {
                    size = 1.1,
                    alpha = 1,
                    position = position_dodge(width = dodgewidth)) + 
-    geom_point(data = trend[target_type == ttype], size = 0.7) +
-    geom_line(data = unfiltered_data[target_type == ttype & horizon == 2]) + 
+    geom_line(data = unfiltered_data[target_type == ttype & 
+                                       target_end_date %in% limits]) + 
     theme_minimal() + 
     theme(panel.grid.major.x = element_blank()) +
     facet_wrap(~ location_target, scales = "free", ncol = 1) + 
     theme(legend.position = "bottom") + 
-    scale_x_date(limits = c(min(limits), max(limits)), 
+    scale_x_date(limits = c(min(limits) - 2, max(limits) + 2), 
                  minor_breaks = limits) + 
       scale_y_continuous(labels = scale_fn)
   return(p)
 }
 
+# helper function which creates panels B and D
 scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
-  limits <- min(forecast_dates$full_hub_period) + 5 + 1:21 * 7
+  
+  # define plot limits on x axis
+  limits <- min(forecast_dates$full_hub_period) + 5 + 0:20 * 7
   
   p <- scores %>%
     ggplot(aes(x = as.Date(target_end_date), y = get(y))) + 
     geom_line(aes(colour = model)) + 
-    geom_point(aes(colour = model, shape = classification)) + 
+    geom_point(aes(colour = model)) + 
     theme_minimal() + 
     facet_wrap( ~ location_target, ncol = 1, scales = "free") +
     theme(legend.position = "bottom") +
@@ -424,26 +378,12 @@ scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
   return(p)
 }
 
+# helper function that creates the final plot
 forecasts_and_scores <- function(data, 
                                  output_dir = here("analysis", "plots"), 
-                                 plotname = "figure-forecasts", 
-                                 ensembles = FALSE) {
+                                 plotname = "figure-forecasts") {
   
-  if (ensembles) {
-    colcases <- c(colcases[1:2], colcases[4], colcases[3])
-    coldeaths <- colcases
-  }
-  
-  # create data.frame for plotting predictions ---------------------------------
-  df <- data[quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
-    dcast(... ~ quantile, value.var = "prediction")
-  df <- merge(
-    df[, c("classification", "speed") := NULL], 
-    copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
-    by = c("target_end_date", "location_name", "target_type")
-  )
-  
-  # create data.frame for plotting scores --------------------------------------
+  # calculate scores
   summarise_by <- c("model", "horizon", "location_name", "target_type", 
                     "forecast_date", "target_end_date", "location_target")
   
@@ -452,20 +392,17 @@ forecasts_and_scores <- function(data,
     summarise_by = summarise_by
   )[, forecast_date := as.Date(forecast_date)]
   
-  # copy epitrend data.frame and only keep necessary columns
-  epi_tmp <- copy(epitrend)
-  epi_tmp[, forecast_date := (as.Date(forecast_date))]
-  epi_tmp <- 
-    epi_tmp[, .(location_name, forecast_date, classification, target_type)] %>% 
-    unique()
+  # create data.frame for plotting predictions 
+  df <- data[quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
+    dcast(... ~ quantile, value.var = "prediction")
   
-  # create plots for all horizons ----------------------------------------------
+  # create plots for all horizons 
   for (i in 1:4) {
     
     # truth plot for cases 
     truth_vs_forecast_cases <- df[grepl(i, target)] %>%
       truth_and_pred_plot(ttype = "case") + 
-      scale_color_manual(values = colcases) + 
+      scale_color_manual(values = colcases, name = "Model") + 
       labs(y = "Forecasts and observed values", x = "")  + 
       theme(legend.position = "none") +
       guides(color = "none", shape = "none") + 
@@ -475,9 +412,9 @@ forecasts_and_scores <- function(data,
     # truth plot for deaths
     truth_vs_forecast_deaths <- df[grepl(i, target)] %>%
       truth_and_pred_plot(ttype = "death")  + 
-      scale_color_manual(values = coldeaths) + 
-      annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
-               xmax = max(forecast_dates$death_not_scored) + 14,
+      scale_color_manual(values = coldeaths, name = "Model") + 
+      annotate('rect', xmin = min(forecast_dates$full_hub_period) + 5 + (i-1) * 7,
+               xmax = max(forecast_dates$death_not_scored) + 5 + (i-1) * 7,
                ymin = 0,
                ymax = Inf, fill = "grey10", alpha = 0.1) + 
       labs(y = "Forecasts and observed values", x = "") +
@@ -488,9 +425,8 @@ forecasts_and_scores <- function(data,
     # scores plot for cases
     scores_over_time_cases <- 
       scores_target_forecastdate[horizon == i & target_type == "case"] %>%
-      merge(epi_tmp) %>%
       scores_over_time_plot(y = "interval_score") + 
-      scale_color_manual(values = colcases) + 
+      scale_color_manual(values = colcases, name = "Model") + 
       labs(y = "Weighted interval score", x = "") + 
       theme(legend.position = "none") +
       guides(color = "none", shape = "none")
@@ -499,9 +435,8 @@ forecasts_and_scores <- function(data,
     # scores plot for deaths
     scores_over_time_deaths <- 
       scores_target_forecastdate[horizon == i & target_type == "death"] %>%
-      merge(epi_tmp) %>%
       scores_over_time_plot(y = "interval_score") + 
-      scale_color_manual(values = coldeaths) + 
+      scale_color_manual(values = coldeaths, name = "Model") + 
       annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
                xmax = max(forecast_dates$death_not_scored) + 14,
                ymin = 0,
@@ -528,34 +463,19 @@ forecasts_and_scores <- function(data,
 # regular forecasts
 unfiltered_data[model %in% c(regular_models)] %>%
   forecasts_and_scores()
-
-data <- unfiltered_data[model %in% c(regular_models, "Renewal-retrospective", "Convolution-retrospective")]
-
-unfiltered_data$model %>% unique()
-  
-df$model %>% unique()
-# ensemble variants
-
-# models <- c("Hub-ensemble-all", "Crowd forecast", "Hub-ensemble", "Renewal")
-# unfiltered_data[model %in% models] %>%
-#   forecasts_and_scores(plotname = "figure-forecasts-ensembles", 
-#                        ensembles = TRUE)
-
 ```
 
 
-
---------------------------------------------------------------------------------
-## Summary tables
+# Create tables with scores
 
 ```{r}
 
-# create helper function to make table
-# ------------------------------------------------------------------------------
+# helper function to create the tables
 score_table <- function(scores, 
                         group = TRUE, 
                         full_width = TRUE) {
-  # copy data, change names, round column values and reduce to sign. digits
+  
+  # change column names, round column values and reduce to sign. digits
   scores <- as.data.table(scores)
   setnames(scores, 
            old = c("horizon", "model", "target_type", "interval_score", "aem", 
@@ -568,7 +488,7 @@ score_table <- function(scores,
                    "50%-Cov.", "90%-Cov.", "Target", "Target"), 
            skip_absent = TRUE)
   
-  # remove some cols, change column order, sort table and rename horizon
+  # remove some cols, change column order, sort table
   if (all(c("coverage_deviation", "rel. skill") %in% names(scores))) {
     scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
   }
@@ -583,7 +503,6 @@ score_table <- function(scores,
     scores <- scores[order(Target, Horizon)]
     scores[, Horizon := paste(Horizon, "wk ahead")]
   }
-
   
   # calculate where to group rows
   case_rows <- nrow(scores[Target == "case"])
@@ -609,10 +528,12 @@ score_table <- function(scores,
 }
 
 
+# function that actually makes the tables
 make_table <- function(data, 
                        plotname = "table_scores",
                        output_dir = here("analysis", "plots")) {
   
+  # get coverage values
   coverage <- eval_forecasts(
     data = data, 
     summarise_by = c("horizon", "model", "target_type", "range"), 
@@ -625,6 +546,7 @@ make_table <- function(data,
                           "Hub-ensemble-with-convolution-mean") & 
                target_type == "case"))
   
+  # compute scores and merge with coverage values
   df <- eval_forecasts(
     data, 
     summarise_by = c("model", "horizon", "target_type"), 
@@ -650,7 +572,7 @@ make_table <- function(data,
                        "interval_score_sd", "sharpness", "underprediction", 
                        "overprediction", "aem")
   
-  # no idea how to do that in data.table: 
+  # add percentage values in brackets
   df <- df %>%
     dplyr::group_by(horizon, target_type) %>%
     dplyr::mutate_at(percentage_cols, 
@@ -661,17 +583,16 @@ make_table <- function(data,
   
   setDT(df)
   
+  # delete and rename a few columns
   del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
                           !(grepl("interval", names(df)))]
   del_cols <- c(del_cols, "coverage_deviation")
   df[, (del_cols) := NULL] 
-  
   setnames(df, old = c("interval_score_sd, sharpness"), 
            new = c("WIS - sd", "dispersion"))
 
-  # tables for 1-2 weeks ahead and 3-4 weeks ahead
+  # create and save tables for 1-2 weeks ahead and 3-4 weeks ahead
   table <- score_table(df[horizon <= 2]) 
-  
   saveRDS(object = table, 
           file = here("analysis", "plots", paste0(plotname, "_", 2, "_ahead.rds")))
   
@@ -683,79 +604,62 @@ make_table <- function(data,
 
 
 # create tables
-# ------------------------------------------------------------------------------
 
+# regular models
 filtered_data[model %in% regular_models] %>%
   make_table()
 
+# regular models with later period as sensitivity analysis in SI
 filtered_data[model %in% regular_models] %>%
   filter(!(forecast_date %in% as.character(forecast_dates$death_not_scored))) %>%
   make_table(plotname = "table-late-period")
 
+# table for mean ensembles for SI
 filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
   make_table(plotname = "table_mean-ensemble_scores")
 
+# table for median ensembles for SI
 filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]] %>%
   make_table(plotname = "table_median-ensemble_scores")
-
-
-
 ```
 
 
-### Tables for different phases of the epidemic
+# Plot with Visualsiation of daily data
 
-```{r fig.height=10, fig.width=5}
+```{r}
 
-coverage <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("horizon", "model", "target_type", "target_phase", "range"), 
-)[range %in% c(50, 90), 
-                   .(model, target_type, coverage, range, target_phase, horizon)] %>%
-  dcast(formula = ... ~ range, value.var = "coverage")
+# reformat daily truth data
+df <- copy(dailytruth_data)[
+  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+][, target_end_date := as.Date(target_end_date)
+]
 
-df <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "horizon", "target_type", "target_phase"), 
-  metrics = c("interval_score", "coverage_deviation"),
-  sd = TRUE, 
-  quantiles = 0.5
-) %>%
-  merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_phase", "target_type")) 
+df[weekdays(target_end_date) == "Sunday", sundays := target_end_date]
 
-del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
-                        !(grepl("interval", names(df)))]
-del_cols <- c(del_cols, "coverage_deviation")
-df[, (del_cols) := NULL]
+# reformat weekly truth data
+weeklytruth <- copy(truth_data)[
+  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+]
 
-setnames(df, old = c("interval_score_0.5", "interval_score_sd"), 
-         new = c("WIS - median", 
-                 "WIS - sd"))
+# create plot
+df %>%
+  ggplot(aes(y = true_value, x = target_end_date)) + 
+  geom_col(fill = "lightsteelblue", color = "white") + 
+  geom_line(data = weeklytruth, aes(y = true_value / 7)) + 
+  geom_point(data = weeklytruth, aes(y = true_value / 7), size = 0.3) +
+  # geom_vline(aes(xintercept = sundays), linetype = "dashed", alpha = 0.2) + 
+  facet_wrap( ~ target_location, scales = "free", ncol = 1) + 
+  labs(y = "Observed values", x = "Date") + 
+  scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
+                          max(forecast_dates$full_hub_period + 21))) + 
+  theme_minimal()
 
-tables <- list()
-table_dfs <- list()
-targets <- unique(df$target_phase)
-
-# for horizon <= 2
-labels <- df[horizon <= 2][order(target_phase, horizon)]$target_phase
-table <- score_table(df[horizon <= 2, !"target_type"], group = FALSE) %>%
-  pack_rows(index = table(labels), indent = FALSE)
-save_kable(table, 
-           file = here("analysis", "plots", "table-phases-2.png"))
-
-# for horizon > 2
-labels <- df[horizon > 2][order(target_phase, horizon)]$target_phase
-table <- score_table(df[horizon > 2, !"target_type"], group = FALSE) %>%
-  pack_rows(index = table(labels), indent = FALSE)
-save_kable(table, 
-           file = here("analysis", "plots", "table-phases-4.png"))
-
+ggsave(here("analysis", "plots", "daily_truth.png"), width = 10, height = 8)
 ```
 
 
-### Look at ensemble forecasts
+# Number of member models in the Hub ensemble
 
-#### Number of members in the ensemble
 ```{r}
 ens <- ensemble_members %>%
   melt(id.vars = c("Date", "model"))
@@ -795,62 +699,12 @@ p <- ens %>%
 
 ggsave(here("analysis", "plots", "ensemble-members.png"), 
        plot = p)
-  
-
 ```
 
-
-### Comparing ensembles with and without a model
-
-```{r}
-
-comparison_ensembles <- function(models_to_plot) {
-  df <- unfiltered_data[model %in% models_to_plot &
-                          quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
-    dcast(... ~ quantile, value.var = "prediction")
-  df <- merge(
-    df[, c("classification", "speed") := NULL], 
-    copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
-    by = c("target_end_date", "location_name", "target_type")
-  )
-  
-  p <- df[grepl(2, target)] %>%
-    ggplot(aes(y = `0.5`, x = target_end_date, color = model)) +
-    geom_line() +
-    geom_line(aes(y = true_value), color = "black") + 
-    theme_minimal() + 
-    facet_wrap(~ location_target, scales = "free", ncol = 2) + 
-    theme(legend.position = "bottom") + 
-    # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
-    scale_x_date(limits = c(min(forecast_dates$full_hub_period) + 14, 
-                            max(forecast_dates$full_hub_period))) + 
-    labs(y = "Median forecast", x = "Date")
-  return(p)
-}
-
-models_plot <- c("Crowd forecast", "Hub-ensemble-with-crowd", "Hub-ensemble")
-p <- comparison_ensembles(models_plot)
-ggsave(here("analysis", "plots", "ensemble-with-and-without-crowd.png"), 
-       plot = p)
-
-models_plot <- c("Renewal", "Hub-ensemble-with-renewal", "Hub-ensemble")
-p <- comparison_ensembles(models_plot)
-ggsave(here("analysis", "plots", "ensemble-with-and-without-renewal.png"), 
-       plot = p)
-
-models_plot <- c("Renewal", "Crowd forecast", "Hub-ensemble-all", "Hub-ensemble")
-p <- comparison_ensembles(models_plot)
-ggsave(here("analysis", "plots", "ensemble-with-and-without-both.png"), 
-       plot = p)
-
-```
-
-
-------------------------------------------------------------------------
-
-## Analyse distribution of scores
+# Plot with distribution of scores
 
 ```{r}
+# score forecasts
 scores <- eval_forecasts(
   filtered_data[(model %in% regular_models)], 
   summarise_by = c("model", "target_type", "location_name", "horizon", 
@@ -859,21 +713,15 @@ scores <- eval_forecasts(
   compute_relative_skill = FALSE
 ) 
 
-scores[, .(sd = sd(interval_score)), by = c("model", "target_type")]
-
+# reformat column
 scores[, target_type := paste0(str_to_title(target_type), "s overall")]
 
-# scores for different phases of the epidemic
-scores[, target_phase := factor(target_phase, 
-                                levels = str_to_title(c("Cases - decreasing phase", 
-                                                        "Cases - unclear phase", 
-                                                        "Cases - increasing phase", 
-                                                        "Deaths - decreasing phase", 
-                                                        "Deaths - unclear phase", 
-                                                        "Deaths - increasing phase")))]
+# display standard deviation for different models
+scores[, .(sd = sd(interval_score)), by = c("model", "target_type")]
 
-
-distribution_plot_wis <- function(df, x = "interval_score", ranks = FALSE) {
+# helper function to create distribution plot
+distribution_plot_wis <- function(df, x = "interval_score", 
+                                  ranks = FALSE) {
   
   xlabel = "Weighted interval score"
   dotsize = 1
@@ -910,8 +758,9 @@ distribution_plot_wis <- function(df, x = "interval_score", ranks = FALSE) {
     theme_minimal()
 }
 
-
+# create plots for the distributions of WIS
 for (i in 1:4) {
+  # plot for locations combined
   p_combined_wis <- distribution_plot_wis(df = scores[horizon == i], 
                                           x = "interval_score") +
     facet_wrap(~ target_type, ncol = 1, scales = "free") + 
@@ -919,17 +768,14 @@ for (i in 1:4) {
     theme(legend.position = "none") + 
     guides(shape = "none", colour = "none", fill = "none")
   
+  # plot for locations separate
   p_wis <- distribution_plot_wis(df = scores[horizon == i]) + 
   theme(axis.title.y=element_blank(),
         axis.text.y=element_blank(), 
         axis.ticks.y = element_blank()) + 
   facet_wrap(~ location_target, ncol = 2, scale = "free")
   
-  p_phases_wis <- distribution_plot_wis(df = scores[horizon == i]) + 
-    facet_wrap( ~ target_phase, scales = "free_x") 
-
-  
-  # pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis + 
+  # combine plots and save
   pl_wis <- p_combined_wis + p_wis +
     plot_layout(guides = "collect", 
                 widths = c(1, 2)) &
@@ -940,11 +786,9 @@ for (i in 1:4) {
   ggsave(here("analysis", "plots", 
               paste0("distribution_scores_wis-", i, ".png")), 
          plot = pl_wis, height = 6, width = 9)
-    
 }
 
-
-# plot with rank distributions
+# create plots for the distributions of WIS rank
 for (i in 1:4) {
   p_combined_wis <- distribution_plot_wis(df = scores[horizon == i], 
                                           x = "interval_score", 
@@ -961,11 +805,6 @@ for (i in 1:4) {
         axis.ticks.y = element_blank()) + 
   facet_wrap(~ location_target, ncol = 2, scale = "free")
   
-  p_phases_wis <- distribution_plot_wis(df = scores[horizon == i]) + 
-    facet_wrap( ~ target_phase, scales = "free_x") 
-
-  
-  # pl_wis <- wrap_plots(p_combined_wis, p_wis, widths = c(1, 2)) / p_phases_wis + 
   pl_wis <- p_combined_wis + p_wis +
     plot_layout(guides = "collect", 
                 widths = c(1, 2)) &
@@ -978,196 +817,9 @@ for (i in 1:4) {
          plot = pl_wis, height = 6, width = 9)
     
 }
-
-
-# same plot for absolute error
-p_combined_ae <- distribution_plot_wis(df = scores, 
-                                        x = "aem") +
-  facet_wrap(~ target_type, ncol = 1, scales = "free_x") 
-
-p_ae <- distribution_plot_wis(df = scores, x = "aem") + 
-  theme(axis.title.y=element_blank(),
-        axis.text.y=element_blank(), 
-        axis.ticks.y = element_blank()) + 
-  facet_wrap(~ location_target, ncol = 2, scale = "free")
-
-
-
-    
-
 ```
 
-```{r}
-scores[, .(target_count = .N), by = c("target_phase", "model")]
-
-# p_phases <- distribution_plot(df = scores[model != "Baseline"]) + 
-#   facet_wrap( ~ target_phase)
-
-
-p_phases_ae <- distribution_plot_wis(df = scores, x = "aem") + 
-  facet_wrap( ~ target_phase, scales = "free_x")
-
-scores[, .(n = .N), by = "target_phase"]
-  
-
-```
-
-```{r fig.height=10, fig.width=15}
-pl_ae <- wrap_plots(p_combined_ae, p_ae, widths = c(1, 2)) / p_phases_wis + 
-  plot_layout(guides = "collect") & 
-  plot_annotation(tag_levels = 'A') &
-  theme(legend.position = 'bottom') 
-
-ggsave("plots/distribution_scores_ae.png", pl_ae, height = 9)
-
-```
-
-------------------------------------------------------------------------
-
-## WIS contributions
-
-```{r}
-# df <- data[grepl("2", target)] %>%
-#   merge(epitrend, 
-#         by = c("target_end_date", "location_name", "target_type"))
-
-scores_target <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "target_type", "classification"), 
-  compute_relative_skill = TRUE
-) 
-
-scores_target[, target_phase := paste0(target_type, "s - ", 
-                                       classification, " phase")]
-
-wis_components(scores_target, 
-               facet_formula = ~ target_phase, 
-               scales = "free_x", 
-               relative_contributions = TRUE,
-               x_text_angle = 0) + 
-  theme(legend.position = "bottom") + 
-  coord_flip() + 
-  labs(x = NULL)
-
-ggsave(here("analysis", "plots", "wis-components.png"))
-  
-```
-
-
-### Distribution of Bias over time
-
-```{r}
-# df <- data[grepl("2", target)] %>%
-#   merge(epitrend, 
-#         by = c("target_end_date", "location_name", "target_type"))
-
-scores_target <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "target_type", "classification", "forecast_date")
-) 
-
-scores_target[, target_phase := paste0(target_type, "s - ", 
-                                       classification, " phase")]
-
-
-p <- scores_target[model %in% regular_models] %>%
-  distribution_plot_wis(x = "bias") + 
-  scale_x_continuous() + 
-  facet_wrap(~ target_phase, ncol = 3) + 
-  geom_vline(xintercept = 0, color = "black", size = 1.4) + 
-  labs(y = "Bias")
-
-ggsave(here("analysis", "plots", "distribution_bias_phases.png"), plot = p)
-```
-
-
-
-```{r, eval = TRUE}
-scores_full <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "location_target", "horizon", "forecast_date"), 
-  compute_relative_skill = FALSE
-)
-
-means <- scores_full[, .(meanval = mean(interval_score), 
-                         medianval = median(interval_score)), 
-                     by =c("model", "location_target", "horizon")]
-
-scores_full %>%
-  ggplot(aes(y = interval_score, x = horizon, 
-             fill = model, color = model)) +
-  geom_boxplot(outlier.shape = 21, coef = 1.5, 
-               width=0.5, alpha = 1, 
-               position = position_dodge2(width = 0.5)) + 
-  # geom_line(data = means, 
-  #           aes(group = model, y = meanval, color = model), 
-  #           position = position_dodge2(width = 0.5), 
-  #           size = 2) +
-  # theme(panel.background = element_rect(fill = "#e1f0fe")) +
-  scale_color_manual(values = coldeaths) + 
-  scale_fill_manual(values = coldeaths) + 
-  geom_point(data = means, 
-             mapping = aes(y = meanval, fill = model),
-             color = "black",
-             # fill = "red",
-             shape = 21,
-             size = 2,
-             position = position_dodge2(width = 0.5)) + 
-    geom_point(data = means, 
-             mapping = aes(y = medianval, fill = model),
-             color = "black",
-             # fill = "red",
-             shape = 22,
-             size = 2,
-             position = position_dodge2(width = 0.5)) + 
-  scale_y_log10() + 
-  facet_wrap( ~ location_target, scales = "free") + 
-  theme(legend.position = "bottom")
-
-ggsave("plots/scores_horizons.png")
-
-```
-
-------------------------------------------------------------------------
-
-## Calibration
-
-```{r, eval = TRUE}
-scores_target <- eval_forecasts(
-  filtered_data[model %in% regular_models], 
-  summarise_by = c("model", "target_type", "classification", "range", "quantile"), 
-  compute_relative_skill = FALSE, 
-  pit_plots = TRUE
-) 
-
-interval_coverage(scores_target, 
-                  facet_formula = ~ target_type + classification)
-
-```
-
-
-
-```{r, eval = FALSE}
-scores <- list()
-# scores for restricted data set
-scores_full <- eval_forecasts(filtered_data, 
-                              summarise_by = c("model", "target_type", "target"), 
-                              compute_relative_skill = TRUE)
-
-scores[["full"]] <- 
-  scores_full[, .(model, target_type, scaled_rel_skill, interval_score, target,
-                  scenario = "full")]
-
-res <- rbindlist(scores)
-res %>%
-  ggplot(aes(x = scenario, y = scaled_rel_skill, color = model, group = model)) + 
-  geom_point() + 
-  facet_wrap( ~ target, scales = "free", ncol = 2) + 
-  theme(legend.position = "bottom")
-```
-
-
-## Number of expert forecasters
+# Number of expert forecasters
 
 ```{r num-forecasters0, results = 'asis'}
 # number of experts and non-experts --------------------------------------------
@@ -1178,9 +830,10 @@ crowdforecast_data %>%
             nonexpert = sum(!expert))
 ```
 
+# Number of forecasts over time
 
 ```{r num-forecasters, results = 'asis'}
-# check number of available forecasters
+# filter out ensembles and model-based forecasts
 dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
                                "EpiNow2_secondary", 
                                "EpiExpert-ensemble", 
@@ -1190,24 +843,24 @@ dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
 ][order(forecast_date)][
   !is.na(forecast_date)]
 
-
-dt[, .(sd = sd(`number of forecasters`), 
-                             mean = mean(`number of forecasters`), 
-                             min  = min(`number of forecasters`), 
-                             max = max(`number of forecasters`), 
-                             median = median(`number of forecasters`)), 
-   by = c("location_name", "target_type")] 
-
+# display summary for the number of available forecasters
 dt[, .(sd = sd(`number of forecasters`), 
        mean = mean(`number of forecasters`), 
        min  = min(`number of forecasters`), 
        max = max(`number of forecasters`), 
        median = median(`number of forecasters`))] 
 
-
+# display summary for the number of available forecasters by location and target
+dt[, .(sd = sd(`number of forecasters`), 
+       mean = mean(`number of forecasters`), 
+       min  = min(`number of forecasters`), 
+       max = max(`number of forecasters`), 
+       median = median(`number of forecasters`)), 
+   by = c("location_name", "target_type")] 
 ```
 
 ```{r num-forecasters2, results = 'asis'}
+# filter out ensembles and model-based forecasts
 dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
                                         "EpiNow2_secondary", 
                                         "EpiExpert-ensemble", 
@@ -1220,6 +873,7 @@ dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
 dt[, location_target := paste0(str_to_title(target_type), 
                                "s", " in ", location_name)]
 
+# plot number of forecasters over time
 dt %>%
   ggplot(aes(y = `number of forecasters`, x = forecast_date)) + 
   geom_line() + 
@@ -1229,6 +883,8 @@ dt %>%
 
 ggsave(filename = here("analysis", "plots", "number-forecasters.png"))
 ```
+
+# Number of submissions per forecaster
 
 ```{r, results = 'asis'}
 dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
@@ -1253,115 +909,6 @@ ggsave("plots/crowdforecast_regularity.png")
 
 ```
 
-## Number of expert forecasters
-
-```{r, results = 'asis'}
-
-dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
-                                        "EpiNow2_secondary", 
-                                        "EpiNow2")) & forecast_date %in% forecast_dates$unfiltered]
-
-crowddata <- merge_pred_and_obs(dt, truth_data)
-
-scores <- eval_forecasts(
-  data = crowddata[grepl("2", target)],
-  summarise_by = c("model", "target_type"), 
-  compute_relative_skill = TRUE, 
-  baseline = "EpiExpert-ensemble"
-)
-
-plot_df <- merge(num_fc, scores, by = "model")
-
-plot_df %>%
-  ggplot(aes(y = scaled_rel_skill, x = n_forecasts)) + 
-  geom_point() + 
-  geom_line() + 
-  theme_minimal() + 
-  facet_wrap(~ target_type) + 
-  labs(y = "Scaled relative skill", x = "Number of available submissions") + 
-  geom_smooth(method='lm', formula= y~x)
-
-ggsave("plots/skill-vs-forecast-freq.png")
-
-
-```
-
-
-
-
-
-## Plots with all forecasts
-
-```{r}
-# only select every second forecast date to stratify
-df <- unfiltered_data[model %in% regular_models &
-                        quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
-  dcast(... ~ quantile, value.var = "prediction")
-df <- merge(
-  df[, c("classification", "speed") := NULL], 
-  copy(epitrend)[, c("forecast_date", "true_value") := NULL], 
-  by = c("target_end_date", "location_name", "target_type")
-)
-
-df[, forecast_date := as.Date(forecast_date)]
-df[, i := as.numeric(forecast_date - as.Date(min(forecast_date))) %% 2 + 1]
-
-plot_forecast <- function(df, m = "Renewal") {
-  min_date <- min(forecast_dates$unfiltered)
-  plot_dates <- c((min_date - c(28, 21, 14, 7)), forecast_dates$unfiltered)
-  plot_dates <- plot_dates - 2
-  d <- copy(truth_data)[, location_target := paste0(str_to_sentence(target_type), 
-                                                    "s", " in ", location_name)]
-  daily <- copy(dailytruth_data)[, location_target := paste0(str_to_sentence(target_type), 
-                                                             "s", " in ", location_name)]
-  daily[, week := as_yearweek(target_end_date, firstday = 7L)]
-  daily[, sum_val := sum(true_value), by = c("week", "location_target")]
-  daily[, scaled_val := true_value - sum_val / 7]
-  
-  df <- copy(df)[, forecast_date := as.factor(forecast_date)]
-  
-  df[model == m] %>%
-    ggplot(aes(y = true_value, x = target_end_date)) + 
-    geom_line() + 
-    geom_line(data = d[target_end_date %in% plot_dates],
-              aes(y = true_value, x = target_end_date)) +
-    geom_line(data = daily[target_end_date >= min(plot_dates) & target_end_date <= max(plot_dates)],
-              aes(y = scaled_val, x = target_end_date), alpha = 0.4) +
-    geom_vline(aes(xintercept = as.Date(forecast_date), 
-                   color = forecast_date), alpha = 0.3, size = 0.4) + 
-    ggplot2::geom_ribbon(ggplot2::aes(ymin = `0.025`, ymax = `0.975`, 
-                                      group = forecast_date, 
-                                      fill = forecast_date), alpha = 0.3) +
-    ggplot2::geom_ribbon(ggplot2::aes(ymin = `0.25`, ymax = `0.75`, 
-                                      group = forecast_date, 
-                                      fill = forecast_date), alpha = 0.5) +
-    ggplot2::geom_line(aes(y = `0.5`,group = forecast_date, 
-                           colour = forecast_date), alpha = 1) +
-    geom_point() + 
-    theme_minimal() + 
-    facet_grid(location_target ~ i, scale = "free_y") + 
-    theme(legend.position = "bottom") 
-    # theme(panel.background = element_rect(fill = "#e1f0fe")) + 
-    # scale_y_log10() 
-}
-
-
-
-for (m in c("Renewal", "Convolution", "Crowd forecast")) {
-  p <- plot_forecast(df[horizon <= 2], m = m) 
-  
-  saveRDS(p, file = here("analysis", "plots", 
-                         paste0("all-forecasts-", m,".RDS")))
-  
-  ggsave(here("analysis", "plots", 
-                         paste0("all-forecasts-", m,".png")), 
-         height = 15, width = 10)
-  
-}
-
-
-
-```
 
 
 

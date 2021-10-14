@@ -25,7 +25,7 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 2200
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 186944 rows and 9 columns.
 
-An object of class \code{data.table} (inherits from \code{data.frame}) with 73508 rows and 10 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 51244 rows and 11 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 187042 rows and 10 columns.
 
