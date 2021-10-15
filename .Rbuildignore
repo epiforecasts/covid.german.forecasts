@@ -6,6 +6,7 @@
 ^rt-crowd-forecast$
 ^rt-forecast-retrospective$
 ^rt-forecast$
+^manuscript$
 ^submissions$
 ^\.github$
 ^data-raw$

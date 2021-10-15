@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.9)  14 OCT 2021 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.9)  15 OCT 2021 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,314 +626,310 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 118
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) (./manuscript.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 4.
-)
-\tf@toc=\write3
-\openout3 = `manuscript.toc'.
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-42.
+40.
 (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2] [3] [4]
-<../analysis/plots/aggregate-performance-all-v4.png, id=95, 722.7pt x 657.657pt
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 152.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 152.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 152.
+[2] [3]
+<../analysis/plots/aggregate-performance-all-v4.png, id=44, 722.7pt x 657.657pt
 >
 File: ../analysis/plots/aggregate-performance-all-v4.png Graphic file (type png
 )
 <use ../analysis/plots/aggregate-performance-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-v4.png  us
-ed on input line 192.
+ed on input line 190.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
-[5]
-<../analysis/plots/figure-forecasts-2.png, id=102, 722.7pt x 794.97pt>
+[4]
+<../analysis/plots/figure-forecasts-2.png, id=54, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-2.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-2.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-2.png  used on inpu
-t line 196.
+t line 194.
 (pdftex.def)             Requested size: 469.76045pt x 516.73651pt.
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.198 
-       <../analysis/plots/aggregate-performance-all-v4.png (PNG copy)>] [7pdfTe
+l.196 
+       <../analysis/plots/aggregate-performance-all-v4.png (PNG copy)>] [6pdfTe
 X warning (ext4): destination with the same identifier (name{figure.2}) has bee
 n already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.203 
-       <../analysis/plots/figure-forecasts-2.png (PNG copy)>] [8]
-<../analysis/plots/distribution_scores_wis-2.png, id=164, 650.43pt x 433.62pt>
+l.201 
+       <../analysis/plots/figure-forecasts-2.png (PNG copy)>] [7]
+<../analysis/plots/distribution_scores_wis-2.png, id=116, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-2.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-2.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2.png  used 
-on input line 225.
+on input line 223.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[9]
-<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=169, 722.7pt x
+[8]
+<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=122, 722.7pt x
  657.657pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-v4.png Graphic file 
 (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-v
-4.png  used on input line 229.
+4.png  used on input line 227.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
- has been already used, duplicate ignored
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.231 
-       <../analysis/plots/distribution_scores_wis-2.png (PNG copy)>] [11pdfTeX 
+l.229 
+       <../analysis/plots/distribution_scores_wis-2.png (PNG copy)>] [10pdfTeX 
 warning (ext4): destination with the same identifier (name{figure.4}) has been 
 already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.236 
+l.234 
        <../analysis/plots/aggregate-performance-rel-ensemble-v4.png (PNG copy)>
-] [12] [13] [14] [15]
-<../crowd-forecast/Screenshot-forecasting-app.png, id=217, 2055.68pt x 991.705p
+] [11] [12] [13] [14]
+<../crowd-forecast/Screenshot-forecasting-app.png, id=175, 2055.68pt x 991.705p
 t>
 File: ../crowd-forecast/Screenshot-forecasting-app.png Graphic file (type png)
 <use ../crowd-forecast/Screenshot-forecasting-app.png>
 Package pdftex.def Info: ../crowd-forecast/Screenshot-forecasting-app.png  used
- on input line 313.
+ on input line 311.
 (pdftex.def)             Requested size: 469.75385pt x 226.61954pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--313
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
 [][]
  []
 
-[16
+[15
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.338 \end{align*}
-                   <../crowd-forecast/Screenshot-forecasting-app.png>] [17] [18
-] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+l.336 \end{align*}
+                   <../crowd-forecast/Screenshot-forecasting-app.png>] [16] [17
+] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--463
+Underfull \hbox (badness 10000) in paragraph at lines 461--461
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20
+[19
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.508 \clearpage
-                ] [21pdfTeX warning (ext4): destination with the same identifie
+l.506 \clearpage
+                ] [20pdfTeX warning (ext4): destination with the same identifie
 r (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.508 \clearpage
+l.506 \clearpage
                 ]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=256, 
+<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=218, 
 722.7pt x 657.657pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png Grap
 hic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-v4.png  used on input line 517.
+ons-all-v4.png  used on input line 515.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
 <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=2
-57, 722.7pt x 657.657pt>
+19, 722.7pt x 657.657pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png 
 Graphic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-rel-v4.png  used on input line 524.
+ons-all-rel-v4.png  used on input line 522.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
-[22
+[21
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.526 
+l.524 
        <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png (P
-NG copy)>] [23pdfTeX warning (ext4): destination with the same identifier (name
+NG copy)>] [22pdfTeX warning (ext4): destination with the same identifier (name
 {figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.527 \clearpage
+l.525 \clearpage
                  <../analysis/plots/aggregate-performance-2-weeks-locations-all
 -rel-v4.png (PNG copy)>]
-<../analysis/plots/daily_truth.png, id=271, 722.7pt x 578.16pt>
+<../analysis/plots/daily_truth.png, id=234, 722.7pt x 578.16pt>
 File: ../analysis/plots/daily_truth.png Graphic file (type png)
 <use ../analysis/plots/daily_truth.png>
 Package pdftex.def Info: ../analysis/plots/daily_truth.png  used on input line 
-533.
+531.
 (pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
-[24
+[23
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.536 \clearpage
+l.534 \clearpage
                  <../analysis/plots/daily_truth.png>]
-<../analysis/plots/figure-forecasts-1.png, id=280, 722.7pt x 794.97pt>
+<../analysis/plots/figure-forecasts-1.png, id=244, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-1.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-1.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-1.png  used on inpu
-t line 542.
+t line 540.
 (pdftex.def)             Requested size: 469.76045pt x 516.73651pt.
-<../analysis/plots/figure-forecasts-3.png, id=281, 722.7pt x 794.97pt>
+<../analysis/plots/figure-forecasts-3.png, id=245, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-3.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
-t line 546.
+t line 544.
 (pdftex.def)             Requested size: 469.76045pt x 516.73651pt.
-[25
+[24
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.548 
+l.546 
        <../analysis/plots/figure-forecasts-1.png (PNG copy)>]
-<../analysis/plots/figure-forecasts-4.png, id=289, 722.7pt x 794.97pt>
+<../analysis/plots/figure-forecasts-4.png, id=253, 722.7pt x 794.97pt>
 File: ../analysis/plots/figure-forecasts-4.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-4.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-4.png  used on inpu
-t line 550.
+t line 548.
 (pdftex.def)             Requested size: 469.76045pt x 516.73651pt.
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.552 
-       <../analysis/plots/figure-forecasts-3.png (PNG copy)>] [27pdfTeX warning
+l.550 
+       <../analysis/plots/figure-forecasts-3.png (PNG copy)>] [26pdfTeX warning
  (ext4): destination with the same identifier (name{figure.11}) has been alread
 y used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.553 \clearpage
+l.551 \clearpage
                  <../analysis/plots/figure-forecasts-4.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-1.png, id=300, 650.43pt x 433.62pt>
+<../analysis/plots/distribution_scores_wis-1.png, id=265, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-1.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-1.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1.png  used 
-on input line 562.
+on input line 560.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-<../analysis/plots/distribution_scores_wis-3.png, id=301, 650.43pt x 433.62pt>
+<../analysis/plots/distribution_scores_wis-3.png, id=266, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-3.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
-on input line 566.
+on input line 564.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[28
+[27
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.568 
+l.566 
        <../analysis/plots/distribution_scores_wis-1.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-4.png, id=310, 650.43pt x 433.62pt>
+<../analysis/plots/distribution_scores_wis-4.png, id=277, 650.43pt x 433.62pt>
 File: ../analysis/plots/distribution_scores_wis-4.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-4.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4.png  used 
-on input line 570.
+on input line 568.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[29pdfTeX warning (ext4): destination with the same identifier (name{figure.13}
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.13}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.572 
+l.570 
        <../analysis/plots/distribution_scores_wis-3.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-1-ranks.png, id=316, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-1-ranks.png, id=283, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-1-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-1-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1-ranks.png 
- used on input line 577.
+ used on input line 575.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[30pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.579 
+l.577 
        <../analysis/plots/distribution_scores_wis-4.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-2-ranks.png, id=322, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-2-ranks.png, id=289, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-2-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-2-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2-ranks.png 
- used on input line 581.
+ used on input line 579.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[31pdfTeX warning (ext4): destination with the same identifier (name{figure.15}
+[30pdfTeX warning (ext4): destination with the same identifier (name{figure.15}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.583 
+l.581 
        <../analysis/plots/distribution_scores_wis-1-ranks.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-3-ranks.png, id=331, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-3-ranks.png, id=297, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-3-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-3-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3-ranks.png 
- used on input line 585.
+ used on input line 583.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[32pdfTeX warning (ext4): destination with the same identifier (name{figure.16}
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.16}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.587 
+l.585 
        <../analysis/plots/distribution_scores_wis-2-ranks.png (PNG copy)>]
-<../analysis/plots/distribution_scores_wis-4-ranks.png, id=337, 650.43pt x 433.
+<../analysis/plots/distribution_scores_wis-4-ranks.png, id=304, 650.43pt x 433.
 62pt>
 File: ../analysis/plots/distribution_scores_wis-4-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-4-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4-ranks.png 
- used on input line 589.
+ used on input line 587.
 (pdftex.def)             Requested size: 469.76817pt x 313.17879pt.
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
+[32pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.591 
-       <../analysis/plots/distribution_scores_wis-3-ranks.png (PNG copy)>] [34p
+l.589 
+       <../analysis/plots/distribution_scores_wis-3-ranks.png (PNG copy)>] [33p
 dfTeX warning (ext4): destination with the same identifier (name{figure.18}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.592 \clearpage
+l.590 \clearpage
                  <../analysis/plots/distribution_scores_wis-4-ranks.png (PNG co
 py)>]
-<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=348, 722.
+<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=315, 722.
 7pt x 657.657pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png Graphic 
 file (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-m
-ean-v4.png  used on input line 601.
+ean-v4.png  used on input line 599.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--608
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
 
  []
 
@@ -941,7 +937,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 608--608
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--666
+Underfull \hbox (badness 10000) in paragraph at lines 664--664
 
  []
 
@@ -949,61 +945,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 666--666
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--727
+Underfull \hbox (badness 10000) in paragraph at lines 725--725
 
  []
 
-[35
+[34
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.782 \end{table}
+l.780 \end{table}
                   <../analysis/plots/aggregate-performance-rel-ensemble-mean-v4
 .png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 785--785
+Underfull \hbox (badness 10000) in paragraph at lines 783--783
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+[35pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.842 \clearpage
-                ] [37pdfTeX warning (ext4): destination with the same identifie
+l.840 \clearpage
+                ] [36pdfTeX warning (ext4): destination with the same identifie
 r (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.842 \clearpage
-                ] [38pdfTeX warning (ext4): destination with the same identifie
+l.840 \clearpage
+                ] [37pdfTeX warning (ext4): destination with the same identifie
 r (name{table.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.842 \clearpage
-                ] [39pdfTeX warning (ext4): destination with the same identifie
+l.840 \clearpage
+                ] [38pdfTeX warning (ext4): destination with the same identifie
 r (name{table.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.842 \clearpage
+l.840 \clearpage
                 ]
-<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=379, 722.7p
+<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=347, 722.7p
 t x 657.657pt>
 File: ../analysis/plots/aggregate-performance-all-late-period-v4.png Graphic fi
 le (type png)
 <use ../analysis/plots/aggregate-performance-all-late-period-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-late-perio
-d-v4.png  used on input line 850.
+d-v4.png  used on input line 848.
 (pdftex.def)             Requested size: 469.76045pt x 427.48203pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--854
+Underfull \hbox (badness 10000) in paragraph at lines 852--852
 
  []
 
@@ -1011,73 +1007,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 854--854
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 900--900
+Underfull \hbox (badness 10000) in paragraph at lines 898--898
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40
+[39
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.945 \clearpage
+l.943 \clearpage
                  <../analysis/plots/aggregate-performance-all-late-period-v4.pn
-g (PNG copy)>] [41pdfTeX warning (ext4): destination with the same identifier (
+g (PNG copy)>] [40pdfTeX warning (ext4): destination with the same identifier (
 name{table.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.945 \clearpage
+l.943 \clearpage
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{table.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.945 \clearpage
+l.943 \clearpage
                 ]
-<../analysis/plots/number-forecasters.png, id=393, 404.9529pt x 419.8887pt>
+<../analysis/plots/number-forecasters.png, id=360, 404.9529pt x 419.8887pt>
 File: ../analysis/plots/number-forecasters.png Graphic file (type png)
 <use ../analysis/plots/number-forecasters.png>
 Package pdftex.def Info: ../analysis/plots/number-forecasters.png  used on inpu
-t line 997.
+t line 995.
 (pdftex.def)             Requested size: 404.95807pt x 419.89407pt.
-[42
+[41
 
 ]
-<../analysis/plots/ensemble-members.png, id=399, 404.9529pt x 419.8887pt>
+<../analysis/plots/ensemble-members.png, id=367, 404.9529pt x 419.8887pt>
 File: ../analysis/plots/ensemble-members.png Graphic file (type png)
 <use ../analysis/plots/ensemble-members.png>
 Package pdftex.def Info: ../analysis/plots/ensemble-members.png  used on input 
-line 1001.
+line 999.
 (pdftex.def)             Requested size: 404.95807pt x 419.89407pt.
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1003 
-        <../analysis/plots/number-forecasters.png>] [44pdfTeX warning (ext4): d
+l.1001 
+        <../analysis/plots/number-forecasters.png>] [43pdfTeX warning (ext4): d
 estination with the same identifier (name{figure.22}) has been already used, du
 plicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1004 \clearpage
-                  <../analysis/plots/ensemble-members.png>] [45
+l.1002 \clearpage
+                  <../analysis/plots/ensemble-members.png>] [44
 
-] [46] [47] (./manuscript.aux) ) 
+] [45] [46] (./manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 14729 strings out of 478994
- 222058 string characters out of 5864752
- 694345 words of memory out of 5000000
- 31526 multiletter control sequences out of 15000+600000
- 467263 words of font info for 156 fonts, out of 8000000 for 9000
+ 14732 strings out of 478994
+ 222059 string characters out of 5864752
+ 694416 words of memory out of 5000000
+ 31532 multiletter control sequences out of 15000+600000
+ 467393 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,88p,2072b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ma
-thsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/te
-xmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/
+thsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-
+dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm
+/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/
 public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></
 usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fo
@@ -1087,10 +1083,10 @@ dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share
 /texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1
 /public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on manuscript.pdf (47 pages, 8933057 bytes).
+Output written on manuscript.pdf (46 pages, 8930842 bytes).
 PDF statistics:
- 721 PDF objects out of 1000 (max. 8388607)
- 627 compressed objects within 7 object streams
- 207 named destinations out of 1000 (max. 500000)
- 33087 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 714 PDF objects out of 1000 (max. 8388607)
+ 621 compressed objects within 7 object streams
+ 205 named destinations out of 1000 (max. 500000)
+ 33151 words of extra memory for PDF output out of 35830 (max. 10000000)
 
