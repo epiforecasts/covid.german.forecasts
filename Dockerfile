@@ -6,7 +6,7 @@ RUN apt-get update -y && \
     apt-get clean
     
 ## Copy files to working directory of server
-ADD . covid.german.forecasts
+COPY DESCRIPTION covid.german.forecasts/DESCRIPTION
 
 ## Set working directory to be this folder
 WORKDIR covid.german.forecasts
