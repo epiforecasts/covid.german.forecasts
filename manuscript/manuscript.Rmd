@@ -4,6 +4,7 @@ output:
   bookdown::pdf_document2:
     extra_dependencies: ["float"]
     keep_tex:  true
+    toc: false
 bibliography:
   - references.bib
   - GermanPolishpaper.bib
