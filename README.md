@@ -33,7 +33,7 @@ The following data are stored:
 | truth_data         | Truth data used for the paper                                                                                 |
 | unfiltered_data    | Unfiltered version of the combined prediction and truth data used for the paper                               |
 |                    |                                                                                                               |
-- you can and load individual data by running e.g. `covid.german.forecasts::filtered_data` for the main data set. 
+- you can load individual data by running e.g. `covid.german.forecasts::filtered_data` for the main data set. 
 
 
 
