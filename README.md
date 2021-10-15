@@ -32,7 +32,7 @@ The following data are stored:
 | regular_models     | Names of all regular models                                                                                   |
 | truth_data         | Truth data used for the paper                                                                                 |
 | unfiltered_data    | Unfiltered version of the combined prediction and truth data used for the paper                               |
-|                    |                                                                                                               |
+
 - you can load individual data by running e.g. `covid.german.forecasts::filtered_data` for the main data set. 
 
 

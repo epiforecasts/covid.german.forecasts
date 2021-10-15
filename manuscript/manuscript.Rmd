@@ -9,6 +9,10 @@ bibliography:
   - GermanPolishpaper.bib
 ---
 
+Target journal: eLife
+
+*Nikos I. Bosse, Sam Abbott, Habakuk Hain, Billy Quilty, CMMID Working Group, Anne Cori, Edwin van Leeuwen, Sebastian Funk*
+
 *Anonymous Alpaca and many friends*
 
 ```{r setup, include=FALSE}
