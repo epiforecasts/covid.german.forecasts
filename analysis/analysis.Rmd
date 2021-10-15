@@ -1,0 +1,914 @@
+---
+title: "Analysis paper"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, cache = TRUE)
+options(knitr.kable.NA = '')
+library(here)
+library(magrittr)
+library(scoringutils)
+library(knitr)
+library(kableExtra)
+library(data.table)
+library(ggplot2)
+library(ggridges)
+library(RColorBrewer)
+library(patchwork)
+library(stringr)
+library(covid.german.forecasts)
+library(grates)
+library(ggdist)
+library(ggthemes)
+library(scales)
+library(dplyr)
+library(tidyr)
+library(forcats)
+
+# define colors for deaths and cases
+colcases <- brewer.pal(name = "Accent", n = 8)[-c(1, 4)]
+coldeaths <- brewer.pal(name = "Accent", n = 8)[-4]
+colensemble <- c("#FDC086", brewer.pal(name = "Set2", n = 8))
+
+# helper function for labeling plots
+scale_fn <- function(x) {
+  ifelse(x >= 5000,
+         paste0(x / 1000, "k"), x)
+}
+```
+
+# Visualisation of aggregate performance across horizons
+
+``` {r}
+# helper function to score forecasts
+score_helper <- function(data, summarise_by) {
+  scores <- eval_forecasts(data, 
+                           summarise_by = summarise_by, 
+                           quantiles = 0.5, 
+                           sd = TRUE) 
+  
+  # for cases, filter out redundant ensembles as convolution model only does 
+  # deaths (e.g. ensemble with all is identical to realised ensemble for cases)
+  scores <- scores %>%
+    filter(!(model %in% c("Hub-ensemble-with-all", 
+                          "Hub-ensemble-with-convolution", 
+                          "Hub-ensemble-with-all-mean", 
+                          "Hub-ensemble-with-convolution-mean") & 
+               target_type == "case")
+    )
+  
+  setnames(scores, old = c("model", "sharpness"), 
+           new = c("Model", "dispersion"))
+}
+
+
+# helper function to create the WIS plot with its sub-components in panels A and B
+component_plot <- function(scores, type, colour_scheme, x = x, rel = relative,
+                           facet_formula, vals = NULL) {
+  
+  # define colour values for plot
+  # for cases and ensembles, filter out identical ensembles
+  if (colour_scheme == "ensemble" & type == "case") {
+    scores <- scores %>%
+      filter(!(Model %in% c("Hub-ensemble-with-all", 
+                            "Hub-ensemble-with-convolution")))
+    vals <- vals[-c(3, 4)]
+  } else if (type == "case") {
+    vals <- vals[-1]
+  }
+  
+  # pivot scores and rename WIS components
+  scores <- scores %>%
+    select(Model, target_type, dispersion, interval_score,
+           underprediction, overprediction, !!x) %>%
+    rename("Dispersion" = dispersion, 
+           "Over-prediction" = overprediction, 
+           "Under-prediction" = underprediction) %>%
+    filter(target_type == type) %>%
+    pivot_longer(names_to = "WIS components",
+                 cols = c(`Dispersion`, `Over-prediction`, `Under-prediction`)) %>%
+    mutate(`WIS components` = fct_relevel(`WIS components`, 
+                                          c("Dispersion", "Under-prediction", 
+                                            "Over-prediction"))) 
+  
+  # compute relative version of the scores
+  if (rel) {
+    scores <- scores %>%
+      arrange(!!sym(x), target_type, interval_score) %>%
+      group_by(!!sym(x), target_type) %>%
+      mutate_at("value", ~ . / interval_score[Model %in% c("Hub-ensemble", 
+                                                           "Hub-ensemble-mean")])
+  }
+
+  # create plot
+  p <- scores %>%
+    ggplot(aes(x = reorder(Model, (interval_score)), y = value, fill = Model, 
+               group = Model, alpha = `WIS components`)) 
+  
+  if (rel) {
+    p <- p + 
+      geom_hline(yintercept = 1, linetype = "dashed")
+  }
+  
+  p <- p + 
+    scale_alpha_manual(values = c(1, 0.1, 0.6)) +
+    scale_fill_manual(values = vals) + 
+    geom_bar(stat = "identity", position = "stack",
+             color = "black",
+             size = 0.1,
+             width = 0.8) +
+    facet_wrap(as.formula(paste("~", x)), ncol = 4,
+               strip.position="bottom") + 
+    theme_minimal() + 
+    theme(axis.text.x = element_blank(), 
+          plot.title = element_text(hjust = 0.5, 
+                                    size = 8), 
+          legend.position = c(0.12, 0.83)) + 
+    labs(x = NULL, title = type, y = "WIS") + 
+    guides(fill = "none")
+  
+  return(p)
+}
+
+
+# helper function to make subplots E - H
+plot_helper <- function(tmp = scores, xvar = x, y, rel = relative, 
+                        facet_formula, colour) {
+  if (rel) {
+    tmp <- tmp %>%
+      arrange(target_type, !!sym(xvar)) %>%
+      group_by(target_type, !!sym(xvar)) %>%
+      mutate_at(y, ~ . / .[Model %in% c("Hub-ensemble", 
+                                        "Hub-ensemble-mean")])
+  }
+  
+  tmp %>%
+    ggplot(aes_string(x = xvar, y = y, group = "Model", color = "Model")) +
+    geom_point(position = position_dodge(width = 0.1)) +
+    geom_line(position = position_dodge(width = 0.1)) +
+    facet_wrap(facet_formula, scales = "free_y") +
+    theme_minimal() +
+    theme(legend.position = "bottom") +
+    scale_color_manual(values = colour) + 
+    scale_y_continuous(labels = scale_fn)
+}
+
+# function to create Figure 1
+aggregate_performance <- function(data, 
+                                  x = "horizon",
+                                  xlabel = "Forecast horizon",
+                                  output_dir = here("analysis", "plots"), 
+                                  plotname,
+                                  relative = FALSE,
+                                  facet_formula = ~ target_type, 
+                                  colour_scheme = c("normal", "ensemble"),
+                                  vals = NULL) {
+  
+  # calculate scores
+  scores <- score_helper(data, c("model", "target_type", x)) 
+
+  # define colour values for the plot
+  if (colour_scheme[1] == "normal") {
+    vals <- coldeaths
+  } else {
+    vals <- colensemble
+  }
+  
+  # plot with wis components (panels A and B) ----------------------------------
+  component_case <- component_plot(scores, "case", x = x, vals = vals, 
+                                   facet_formula = facet_formula, 
+                                   rel = relative, 
+                                   colour_scheme = colour_scheme[1])
+  component_death <- component_plot(scores, "death", x = x, vals = vals, 
+                                    facet_formula = facet_formula, 
+                                    rel = relative, 
+                                    colour_scheme = colour_scheme[1])
+  
+  # plot with dispersion of forecasts in panel E -------------------------------
+  p_sharpness <- 
+    plot_helper(scores, y = "dispersion", rel = relative, xvar = x,
+                facet_formula = facet_formula, colour = vals) + 
+    labs(y = "Dispersion", x = NULL)
+    
+  # bias plot in panel F -------------------------------------------------------
+  # define appropriate y limits
+  bias_limits <- max(abs(scores$bias)) * c(-1.1, 1.1) %>% 
+    round(2)
+  p_bias <- 
+    plot_helper(scores, y = "bias", rel = FALSE, colour = vals, xvar = x,
+                facet_formula = facet_formula) + 
+    labs(y = "Bias", x = NULL) +
+    geom_hline(yintercept = 0, linetype = "dashed") +
+    expand_limits(y=bias_limits) 
+
+  # plot with absolute error of performance in panel G -------------------------
+  p_aem <-
+    plot_helper(scores, y = "aem", rel = relative, xvar = x,
+                facet_formula = facet_formula, colour = vals) + 
+    labs(y = "Absolute error", x = NULL) 
+  
+  # plot with sd of performance in panel H -------------------------------------
+  p_wis_sd <- 
+    plot_helper(scores, y = "interval_score_sd", rel = relative, xvar = x,
+                facet_formula = facet_formula, colour = vals) + 
+    labs(y = "WIS - sd", x = NULL)
+  
+  # coverage plots (panel C and D) ---------------------------------------------
+  # calculate scores that also include the interval range
+  scores <- score_helper(data,  c("model", "target_type", x, "range"))
+  
+  # take difference to Hub ensemble if relative
+  if (relative) {
+    scores <- scores %>%
+      arrange(target_type, range, !!sym(x)) %>%
+      group_by(target_type, range, !!sym(x)) %>%
+      mutate_at("coverage", ~ . - .[Model %in%  c("Hub-ensemble", 
+                                                  "Hub-ensemble-mean")])
+  }
+  
+  p_cov50 <- scores %>%
+    filter(range == c(50)) %>%
+    plot_helper(y = "coverage", rel = FALSE, facet_formula = facet_formula, 
+                colour = vals, xvar = x) +
+    labs(y = "Diff. cov. - 50% PI", x = "") + 
+    scale_y_continuous(labels = scales::percent)
+  
+  # if not relative, add a dashed line at 50%
+  if (!relative) {
+    p_cov50 <- p_cov50 + 
+      expand_limits(y=c(0, 1)) + 
+      labs(y = "Coverage - 50% PI", x = "") + 
+      geom_hline(yintercept = 0.5, linetype = "dashed") + 
+      scale_y_continuous(labels = scales::percent)
+    }
+  
+  p_cov90 <-  scores %>%
+    filter(range == c(90)) %>%
+    plot_helper(y = "coverage", rel = FALSE, facet_formula = facet_formula, 
+                xvar = x, colour = vals) + 
+    labs(y = "Diff. cov. - 90% PI") + 
+    scale_y_continuous(labels = scales::percent)
+  
+  # if not relative, add a dashed line at 90%
+  if (!relative) {
+    p_cov90 <- p_cov90 + 
+      expand_limits(y=c(0, 1)) + 
+      labs(y = "Coverage - 90% PI", x = "") + 
+      geom_hline(yintercept = 0.9, linetype = "dashed") + 
+      scale_y_continuous() + 
+      scale_y_continuous(labels = scales::percent)
+  }  
+  
+  # put all plots together -----------------------------------------------------
+  p_combined4 <- 
+    (component_case + component_death) / 
+    (p_cov50 + p_cov90) /
+    (p_sharpness + p_bias) /
+    (p_aem + p_wis_sd) +
+    plot_layout(guides = "collect", 
+                heights = c(1.3, 1, 1, 1)) &
+    plot_annotation(tag_levels = 'A')  &
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
+    
+    ggsave(here(output_dir, paste0(plotname, "-v4.png")), 
+           height = 9.1, width = 10)
+}
+
+
+# create plots with aggregate performance --------------------------------------
+# regular plot for Figure 1
+filtered_data[model %in% regular_models] %>%
+  aggregate_performance(plotname = "aggregate-performance-all")
+
+# plot with restricted time period for sensitivity analysis for SI
+filtered_data[model %in% regular_models] %>%
+  filter(!(forecast_date %in% as.character(forecast_dates$death_not_scored))) %>%
+  aggregate_performance(plotname = "aggregate-performance-all-late-period")
+
+# plot version that compares locations for SI
+filtered_data[model %in% regular_models & horizon == 2] %>%
+  aggregate_performance(plotname = "aggregate-performance-2-weeks-locations-all", 
+                        x = "location_name", 
+                        xlabel = NULL)
+
+# plot version that compares locations in relative terms for SI
+filtered_data[model %in% regular_models & horizon == 2] %>%
+  aggregate_performance(plotname = "aggregate-performance-2-weeks-locations-all-rel", 
+                        x = "location_name", 
+                        xlabel = NULL, relative = TRUE)
+
+# plot for different median ensembles (in relative terms) for SI
+filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]] %>%
+  # filter(!(model == "Hub-ensemble-with-all" & target_type == "case")) %>%
+  aggregate_performance(plotname = "aggregate-performance-rel-ensemble", 
+                        relative = TRUE, colour_scheme = "ensemble")
+
+# plot for different mean ensembles (in relative terms) for SI
+filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
+  # filter(!(model == "Hub-ensemble-with-all" & target_type == "case")) %>%
+  aggregate_performance(plotname = "aggregate-performance-rel-ensemble-mean", 
+                        relative = TRUE, colour_scheme = "ensemble")
+
+```
+
+
+
+
+
+# Plot with Visualisation of x week ahead forecasts and scores
+
+```{r truth-vs-forecasts, fig.height=12, fig.width=15}
+
+# helper function which creates panels A and C
+truth_and_pred_plot <- function(df, ttype = "case") {
+  
+  # adjust distance between bars depending on case or death forecast
+  if (ttype == "case") {
+    dodgewidth = 3.6
+  } else {
+    dodgewidth = 3.7
+  }
+  
+  # rename model column
+  setnames(df, old = c("model"), new = c("Model"))
+  
+  # define date limits for the plot
+  limits <- min(forecast_dates$full_hub_period) + 5 + 0:21 * 7
+  
+  # create plot
+  p <- df %>%
+    dplyr::filter(target_type == ttype) %>%
+    ggplot(aes(y = true_value, x = target_end_date)) + 
+    geom_linerange(aes(ymin = `0.25`, ymax = `0.75`, color = Model), 
+                   size = 1.1,
+                   alpha = 1,
+                   position = position_dodge(width = dodgewidth)) + 
+    geom_line(data = unfiltered_data[target_type == ttype & 
+                                       target_end_date %in% limits]) + 
+    theme_minimal() + 
+    theme(panel.grid.major.x = element_blank()) +
+    facet_wrap(~ location_target, scales = "free", ncol = 1) + 
+    theme(legend.position = "bottom") + 
+    scale_x_date(limits = c(min(limits) - 2, max(limits) + 2), 
+                 minor_breaks = limits) + 
+      scale_y_continuous(labels = scale_fn)
+  return(p)
+}
+
+# helper function which creates panels B and D
+scores_over_time_plot <- function(scores, y = "mean_scores_ratio") {
+  
+  # define plot limits on x axis
+  limits <- min(forecast_dates$full_hub_period) + 5 + 0:20 * 7
+  
+  p <- scores %>%
+    ggplot(aes(x = as.Date(target_end_date), y = get(y))) + 
+    geom_line(aes(colour = model)) + 
+    geom_point(aes(colour = model)) + 
+    theme_minimal() + 
+    facet_wrap( ~ location_target, ncol = 1, scales = "free") +
+    theme(legend.position = "bottom") +
+    theme(panel.grid.major.x = element_blank()) +
+    scale_y_continuous(labels = scale_fn) + # , 
+                       # trans = log_trans()) + 
+    scale_x_date(limits = c(min(limits), max(limits)), 
+                 minor_breaks = limits) 
+  return(p)
+}
+
+# helper function that creates the final plot
+forecasts_and_scores <- function(data, 
+                                 output_dir = here("analysis", "plots"), 
+                                 plotname = "figure-forecasts") {
+  
+  # calculate scores
+  summarise_by <- c("model", "horizon", "location_name", "target_type", 
+                    "forecast_date", "target_end_date", "location_target")
+  
+  scores_target_forecastdate <- eval_forecasts(
+    data = data,
+    summarise_by = summarise_by
+  )[, forecast_date := as.Date(forecast_date)]
+  
+  # create data.frame for plotting predictions 
+  df <- data[quantile %in% c(0.025, 0.25, 0.5, 0.75, 0.975)] %>%
+    dcast(... ~ quantile, value.var = "prediction")
+  
+  # create plots for all horizons 
+  for (i in 1:4) {
+    
+    # truth plot for cases 
+    truth_vs_forecast_cases <- df[grepl(i, target)] %>%
+      truth_and_pred_plot(ttype = "case") + 
+      scale_color_manual(values = colcases, name = "Model") + 
+      labs(y = "Forecasts and observed values", x = "")  + 
+      theme(legend.position = "none") +
+      guides(color = "none", shape = "none") + 
+      theme(plot.margin = unit(c(0.5,1.3,0.5,0.5), "cm")) + 
+      scale_y_continuous(labels = scale_fn)
+    
+    # truth plot for deaths
+    truth_vs_forecast_deaths <- df[grepl(i, target)] %>%
+      truth_and_pred_plot(ttype = "death")  + 
+      scale_color_manual(values = coldeaths, name = "Model") + 
+      annotate('rect', xmin = min(forecast_dates$full_hub_period) + 5 + (i-1) * 7,
+               xmax = max(forecast_dates$death_not_scored) + 5 + (i-1) * 7,
+               ymin = 0,
+               ymax = Inf, fill = "grey10", alpha = 0.1) + 
+      labs(y = "Forecasts and observed values", x = "") +
+      theme(legend.position = "none") +
+      guides(color = "none", shape = "none") + 
+      theme(plot.margin = unit(c(0.5,1.3,0.5,0.5), "cm")) 
+    
+    # scores plot for cases
+    scores_over_time_cases <- 
+      scores_target_forecastdate[horizon == i & target_type == "case"] %>%
+      scores_over_time_plot(y = "interval_score") + 
+      scale_color_manual(values = colcases, name = "Model") + 
+      labs(y = "Weighted interval score", x = "") + 
+      theme(legend.position = "none") +
+      guides(color = "none", shape = "none")
+
+  
+    # scores plot for deaths
+    scores_over_time_deaths <- 
+      scores_target_forecastdate[horizon == i & target_type == "death"] %>%
+      scores_over_time_plot(y = "interval_score") + 
+      scale_color_manual(values = coldeaths, name = "Model") + 
+      annotate('rect', xmin = min(forecast_dates$full_hub_period) + 14,
+               xmax = max(forecast_dates$death_not_scored) + 14,
+               ymin = 0,
+               ymax = Inf, fill = "grey10", alpha = 0.1) + 
+      labs(y = "Weighted interval score", x = "") 
+    
+    # putting them all together
+    p <- (truth_vs_forecast_cases + scores_over_time_cases) / 
+      (truth_vs_forecast_deaths + scores_over_time_deaths) + 
+      plot_layout(guides = "collect") &
+      plot_layout(widths = c(1.9, 1)) &
+      plot_annotation(tag_levels = 'A') &
+      theme(legend.position = 'bottom', 
+            legend.box="vertical", legend.margin = margin()) 
+    
+    ggsave(here(output_dir, 
+                paste0(plotname, "-", i, ".png")), width = 10, height = 11)
+    
+  }
+}
+
+
+# create plots -----------------------------------------------------------------
+# regular forecasts
+unfiltered_data[model %in% c(regular_models)] %>%
+  forecasts_and_scores()
+```
+
+
+# Create tables with scores
+
+```{r}
+
+# helper function to create the tables
+score_table <- function(scores, 
+                        group = TRUE, 
+                        full_width = TRUE) {
+  
+  # change column names, round column values and reduce to sign. digits
+  scores <- as.data.table(scores)
+  setnames(scores, 
+           old = c("horizon", "model", "target_type", "interval_score", "aem", 
+                   "relative_skill", "scaled_rel_skill", "sharpness", 
+                   "underprediction", "overprediction", "bias", 
+                   "50", "90", "location_target", "target_phase"), 
+           new = c("Horizon", "Model", "Target", "WIS", "Abs. error", 
+                   "rel. skill", "WIS - rel.", "Dispersion", 
+                   "Underpred.", "Overpred.", "Bias", 
+                   "50%-Cov.", "90%-Cov.", "Target", "Target"), 
+           skip_absent = TRUE)
+  
+  # remove some cols, change column order, sort table
+  if (all(c("coverage_deviation", "rel. skill") %in% names(scores))) {
+    scores <- scores[, .SD,  .SDcols = !c("coverage_deviation", "rel. skill")]
+  }
+
+  if (all(c("WIS", "Horizon") %in% names(scores))) {
+    wis <- names(scores)[grepl("WIS", names(scores))]
+    setcolorder(scores, 
+                neworder = c("Target", "Horizon", "Model", wis))  
+  }
+  
+  if ("Horizon" %in% names(scores)) {
+    scores <- scores[order(Target, Horizon)]
+    scores[, Horizon := paste(Horizon, "wk ahead")]
+  }
+  
+  # calculate where to group rows
+  case_rows <- nrow(scores[Target == "case"])
+  
+  table <- scores[,!c("Target")] %>%
+    kable(format = "latex", booktabs = TRUE, 
+          align = c("l", "l", rep("c", 9)),
+          col.names = c(" ", names(scores)[-(1:2)])) %>%
+    collapse_rows(columns = 1) %>%
+    kable_styling(latex_options = c("scale_down", 
+                                    "hold_position")) %>%
+    column_spec(1, background = "white")
+  
+  if (group) {
+    table <- table %>%
+      pack_rows("Cases", 1, case_rows, indent = FALSE, 
+                hline_after = TRUE) %>% 
+      pack_rows("Deaths", case_rows + 1, nrow(scores), indent = FALSE, 
+                hline_after = TRUE)
+  }
+    
+  return(table)
+}
+
+
+# function that actually makes the tables
+make_table <- function(data, 
+                       plotname = "table_scores",
+                       output_dir = here("analysis", "plots")) {
+  
+  # get coverage values
+  coverage <- eval_forecasts(
+    data = data, 
+    summarise_by = c("horizon", "model", "target_type", "range"), 
+  )[range %in% c(50, 90), 
+    .(model, target_type, coverage, range, horizon)] %>%
+    dcast(formula = ... ~ range, value.var = "coverage") %>%
+    filter(!(model %in% c("Hub-ensemble-with-all", 
+                          "Hub-ensemble-with-convolution", 
+                          "Hub-ensemble-with-all-mean", 
+                          "Hub-ensemble-with-convolution-mean") & 
+               target_type == "case"))
+  
+  # compute scores and merge with coverage values
+  df <- eval_forecasts(
+    data, 
+    summarise_by = c("model", "horizon", "target_type"), 
+    compute_relative_skill = FALSE,
+    sd = TRUE) %>%
+    filter(!(model %in% c("Hub-ensemble-with-all", 
+                          "Hub-ensemble-with-convolution", 
+                          "Hub-ensemble-with-all-mean", 
+                          "Hub-ensemble-with-convolution-mean") & 
+               target_type == "case")) %>%
+    merge(coverage, all.x = TRUE, by = c("model", "horizon", "target_type")) 
+  
+  # round digits
+  df <- df[, lapply(.SD, FUN = function(x) {
+    if (is.numeric(x)) {
+      return(round(signif(x, 3), 2))
+    } else {
+      return(x)
+    }
+  })]
+  
+  percentage_cols <- c("interval_score", 
+                       "interval_score_sd", "sharpness", "underprediction", 
+                       "overprediction", "aem")
+  
+  # add percentage values in brackets
+  df <- df %>%
+    dplyr::group_by(horizon, target_type) %>%
+    dplyr::mutate_at(percentage_cols, 
+                     ~ paste0(., " (", 
+                              round(./.[model %in% c("Hub-ensemble", 
+                                                     "Hub-ensemble-mean")], 2), 
+                              ")"))
+  
+  setDT(df)
+  
+  # delete and rename a few columns
+  setnames(df, 
+           old = c("interval_score_sd", "sharpness"), 
+           new = c("WIS - sd", "dispersion"))
+  del_cols <- names(df)[(grepl("_sd", names(df)) | grepl("0.5", names(df))) &
+                          !(grepl("interval", names(df)))]
+  del_cols <- c(del_cols, "coverage_deviation")
+  df[, (del_cols) := NULL] 
+
+  # create and save tables for 1-2 weeks ahead and 3-4 weeks ahead
+  table <- score_table(df[horizon <= 2]) 
+  saveRDS(object = table, 
+          file = here("analysis", "plots", paste0(plotname, "_", 2, "_ahead.rds")))
+  
+  table <- score_table(df[horizon > 2]) 
+  saveRDS(object = table, 
+          file = here("analysis", "plots", paste0(plotname, "_", 4, "_ahead.rds")))
+}
+
+
+
+# create tables
+# regular models
+filtered_data[model %in% regular_models] %>%
+  make_table()
+
+# regular models with later period as sensitivity analysis in SI
+filtered_data[model %in% regular_models] %>%
+  filter(!(forecast_date %in% as.character(forecast_dates$death_not_scored))) %>%
+  make_table(plotname = "table-late-period")
+
+# table for mean ensembles for SI
+filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
+  make_table(plotname = "table_mean-ensemble_scores")
+
+# table for median ensembles for SI
+filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]] %>%
+  make_table(plotname = "table_median-ensemble_scores")
+```
+
+
+# Plot with Visualsiation of daily data
+
+```{r}
+
+# reformat daily truth data
+df <- copy(dailytruth_data)[
+  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+][, target_end_date := as.Date(target_end_date)
+]
+
+df[weekdays(target_end_date) == "Sunday", sundays := target_end_date]
+
+# reformat weekly truth data
+weeklytruth <- copy(truth_data)[
+  , target_location := paste0(str_to_title(target_type), "s in ", location_name)
+]
+
+# create plot
+df %>%
+  ggplot(aes(y = true_value, x = target_end_date)) + 
+  geom_col(fill = "lightsteelblue", color = "white") + 
+  geom_line(data = weeklytruth, aes(y = true_value / 7)) + 
+  geom_point(data = weeklytruth, aes(y = true_value / 7), size = 0.3) +
+  # geom_vline(aes(xintercept = sundays), linetype = "dashed", alpha = 0.2) + 
+  facet_wrap( ~ target_location, scales = "free", ncol = 1) + 
+  labs(y = "Observed values", x = "Date") + 
+  scale_x_date(limits = c(min(forecast_dates$full_hub_period) - 28, 
+                          max(forecast_dates$full_hub_period + 21))) + 
+  theme_minimal()
+
+ggsave(here("analysis", "plots", "daily_truth.png"), width = 10, height = 8)
+```
+
+
+# Number of member models in the Hub ensemble
+
+```{r}
+ens <- ensemble_members %>%
+  melt(id.vars = c("Date", "model"))
+
+epinow2_included <- ens[model == "epiforecasts-EpiNow2", "epinow" := value]
+crowd_included <- ens[model == "epiforecasts-EpiExpert", "crowd" := value]
+
+targetvars <- data.frame(
+  variable = c("GM_inc_case", "GM_inc_death", "PL_inc_case", "PL_inc_death"), 
+  target = c("Cases - Germany", "Deaths - Germany", "Cases - Poland", "Deaths - Poland")
+)
+
+ens <- ens[, .(value = sum(value), 
+             epinow = sum(epinow, na.rm = TRUE), 
+             crowd = sum(crowd, na.rm = TRUE)), by = c("variable", "Date")] %>%
+  merge(targetvars)
+
+# number of submissions from crowd and epinow2
+ens[, .(crowd = sum(crowd) / 4, 
+        epinow = sum(epinow) / 4)]
+
+# how many models included in the ensemble? 
+ens %>%
+  summary()
+
+p <- ens %>%
+  ggplot(aes(y = value, x = Date)) + 
+  facet_wrap(~ target) + 
+  # geom_col(aes(fill = variable), position = position_dodge()) + 
+  geom_point(size = 0.7) + 
+  geom_line() + 
+  scale_color_manual(values = colcases) + 
+  theme_minimal() + 
+  labs(y = "Number of ensemble members", x = "Date")
+  
+
+
+ggsave(here("analysis", "plots", "ensemble-members.png"), 
+       plot = p)
+```
+
+# Plot with distribution of scores
+
+```{r}
+# score forecasts
+scores <- eval_forecasts(
+  filtered_data[(model %in% regular_models)], 
+  summarise_by = c("model", "target_type", "location_name", "horizon", 
+                   "forecast_date", "target_phase",
+                   "location_target", "classification"),
+  compute_relative_skill = FALSE
+) 
+
+# reformat column
+scores[, target_type := paste0(str_to_title(target_type), "s overall")]
+
+# display standard deviation for different models
+scores[, .(sd = sd(interval_score)), by = c("model", "target_type")]
+
+# helper function to create distribution plot
+distribution_plot_wis <- function(df, x = "interval_score", 
+                                  ranks = FALSE) {
+  
+  xlabel = "Weighted interval score"
+  dotsize = 1
+  
+  if (ranks) {
+    df <- df %>%
+      group_by(location_name, target_type, horizon, forecast_date) %>%
+      arrange(location_name, target_type, horizon, forecast_date, interval_score) %>%
+      mutate(!!x := rank(get(x))) %>%
+      ungroup() 
+    xlabel <- "Rank in terms of WIS"
+    dotsize = 0.1
+    
+  }
+  
+  df %>%
+    rename(Model = model) %>%
+    ggplot(aes_string(y = "Model", x = x, 
+                      group = "Model", fill = "Model")) + 
+    ggdist::stat_slab(alpha = 0.3, scale = 0.8, normalize = "panels") +
+    ggdist::stat_dots(aes(color = Model),
+                      dotsize = dotsize) + 
+    ggdist::stat_pointinterval(point_interval = mean_qi, size = 3, 
+                               shape = 16, fill = "black", .width = NA) + 
+    ggdist::stat_pointinterval(point_interval = median_qi, size = 3, 
+                               shape = 15, fill = "black", .width = NA) + 
+        facet_wrap(~ target_type, ncol = 1, scales = "free") + 
+    theme(plot.margin=unit(c(0,0.4,0,0),"cm")) +
+    scale_fill_manual(values = coldeaths) + 
+    scale_color_manual(values = coldeaths) + 
+    theme(legend.position = "bottom") + 
+    labs(y = "", x = xlabel) + 
+  scale_x_continuous(labels = scale_fn) + 
+    theme_minimal()
+}
+
+# create plots for the distributions of WIS
+for (i in 1:4) {
+  # plot for locations combined
+  p_combined_wis <- distribution_plot_wis(df = scores[horizon == i], 
+                                          x = "interval_score") +
+    facet_wrap(~ target_type, ncol = 1, scales = "free") + 
+    theme(plot.margin=unit(c(0,0.4,0,0),"cm")) + 
+    theme(legend.position = "none") + 
+    guides(shape = "none", colour = "none", fill = "none")
+  
+  # plot for locations separate
+  p_wis <- distribution_plot_wis(df = scores[horizon == i]) + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2, scale = "free")
+  
+  # combine plots and save
+  pl_wis <- p_combined_wis + p_wis +
+    plot_layout(guides = "collect", 
+                widths = c(1, 2)) &
+    plot_annotation(tag_levels = 'A')  &
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
+    
+  ggsave(here("analysis", "plots", 
+              paste0("distribution_scores_wis-", i, ".png")), 
+         plot = pl_wis, height = 6, width = 9)
+}
+
+# create plots for the distributions of WIS rank
+for (i in 1:4) {
+  p_combined_wis <- distribution_plot_wis(df = scores[horizon == i], 
+                                          x = "interval_score", 
+                                          ranks = TRUE) +
+    facet_wrap(~ target_type, ncol = 1, scales = "free") + 
+    theme(plot.margin=unit(c(0,0.4,0,0),"cm")) + 
+    theme(legend.position = "none") + 
+    guides(shape = "none", colour = "none", fill = "none")
+  
+  p_wis <- distribution_plot_wis(df = scores[horizon == i], 
+                                 ranks = TRUE) + 
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(), 
+        axis.ticks.y = element_blank()) + 
+  facet_wrap(~ location_target, ncol = 2, scale = "free")
+  
+  pl_wis <- p_combined_wis + p_wis +
+    plot_layout(guides = "collect", 
+                widths = c(1, 2)) &
+    plot_annotation(tag_levels = 'A')  &
+    theme(legend.position = 'bottom', 
+          legend.box="vertical", legend.margin=margin()) 
+    
+  ggsave(here("analysis", "plots", 
+              paste0("distribution_scores_wis-", i, "-ranks.png")), 
+         plot = pl_wis, height = 6, width = 9)
+    
+}
+```
+
+# Number of expert forecasters
+
+```{r num-forecasters0, results = 'asis'}
+# number of experts and non-experts --------------------------------------------
+crowdforecast_data %>%
+  select(model, expert) %>%
+  unique() %>%
+  summarise(experts = sum(expert), 
+            nonexpert = sum(!expert))
+```
+
+# Number of forecasts over time
+
+```{r num-forecasters, results = 'asis'}
+# filter out ensembles and model-based forecasts
+dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
+                               "EpiNow2_secondary", 
+                               "EpiExpert-ensemble", 
+                               "EpiNow2")), 
+                .(`number of forecasters` = length(unique(model))), , 
+                by = c("forecast_date", "location_name", "target_type")
+][order(forecast_date)][
+  !is.na(forecast_date)]
+
+# display summary for the number of available forecasters
+dt[, .(sd = sd(`number of forecasters`), 
+       mean = mean(`number of forecasters`), 
+       min  = min(`number of forecasters`), 
+       max = max(`number of forecasters`), 
+       median = median(`number of forecasters`))] 
+
+# display summary for the number of available forecasters by location and target
+dt[, .(sd = sd(`number of forecasters`), 
+       mean = mean(`number of forecasters`), 
+       min  = min(`number of forecasters`), 
+       max = max(`number of forecasters`), 
+       median = median(`number of forecasters`)), 
+   by = c("location_name", "target_type")] 
+```
+
+```{r num-forecasters2, results = 'asis'}
+# filter out ensembles and model-based forecasts
+dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
+                                        "EpiNow2_secondary", 
+                                        "EpiExpert-ensemble", 
+                                        "EpiNow2")), 
+                         .(`number of forecasters` = length(unique(model))), , 
+                         by = c("forecast_date", "location_name", "target_type")
+][order(forecast_date)][
+  !is.na(forecast_date)]
+
+dt[, location_target := paste0(str_to_title(target_type), 
+                               "s", " in ", location_name)]
+
+# plot number of forecasters over time
+dt %>%
+  ggplot(aes(y = `number of forecasters`, x = forecast_date)) + 
+  geom_line() + 
+  facet_wrap(~ location_target) + 
+  theme_minimal() + 
+  labs(y = "Number of forecasters", x = "Date")
+
+ggsave(filename = here("analysis", "plots", "number-forecasters.png"))
+```
+
+# Number of submissions per forecaster
+
+```{r, results = 'asis'}
+dt <- crowdforecast_data[!(model %in% c("Crowd-Rt-Forecast",
+                                        "EpiNow2_secondary", 
+                                        "EpiExpert-ensemble", 
+                                        "EpiNow2")) & forecast_date %in% forecast_dates$unfiltered]
+
+num_fc <- dt[, .(n_forecasts = length(unique(forecast_date))),
+             by = c("model")][order(n_forecasts)]
+
+median(num_fc$n_forecasts)
+mean(num_fc$n_forecasts)
+
+num_fc %>%
+  ggplot(aes(x = n_forecasts)) + 
+  geom_bar() + 
+  theme_minimal() + 
+  labs(x = "Number of available submissions", 
+       y = "Number of forecasters") 
+
+ggsave("plots/crowdforecast_regularity.png")
+
+```
+
+
+
+

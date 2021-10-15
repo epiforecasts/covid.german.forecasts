@@ -5,8 +5,13 @@
 .secrets
 rt-forecast/data/samples
 rt-forecast/logs
+rt-forecast-retrospective/data/samples
+rt-forecast-retrospective/logs
 data-raw/*.csv
 crowd-forecast/data-raw
 Rplots.pdf
 crowd-forecast/data/
 rt-crowd-forecast/data-raw
+data-raw/epiforecasts-*
+data-raw/KIT*
+data-raw/included_models

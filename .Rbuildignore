@@ -4,6 +4,7 @@
 ^evaluation$
 ^crowd-forecast$
 ^rt-crowd-forecast$
+^rt-forecast-retrospective$
 ^rt-forecast$
 ^submissions$
 ^\.github$
@@ -11,3 +12,4 @@
 ^Dockerfile$
 ^\.secrets$
 ^Rplots\.pdf$
+^analysis
