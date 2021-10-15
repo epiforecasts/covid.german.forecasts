@@ -3,72 +3,12 @@
 \docType{data}
 \name{locations}
 \alias{locations}
-\alias{truth_data}
-\alias{dailytruth_data}
-\alias{prediction_data}
-\alias{crowdforecast_data}
-\alias{combined_data}
-\alias{forecast_dates}
-\alias{filtered_data}
-\alias{unfiltered_data}
-\alias{epitrend}
-\alias{ensemble_models}
-\alias{regular_models}
-\alias{ensemble_members}
 \title{Location and Population Look Up for Germany and Poland}
 \format{
 An object of class \code{data.table} (inherits from \code{data.frame}) with 34 rows and 3 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 314 rows and 4 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 2200 rows and 5 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 186944 rows and 9 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 51244 rows and 11 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 187042 rows and 10 columns.
-
-An object of class \code{list} of length 4.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 119600 rows and 15 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 145544 rows and 15 columns.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 314 rows and 7 columns.
-
-An object of class \code{character} of length 12.
-
-An object of class \code{character} of length 4.
-
-An object of class \code{data.table} (inherits from \code{data.frame}) with 273 rows and 6 columns.
 }
 \usage{
 locations
-
-truth_data
-
-dailytruth_data
-
-prediction_data
-
-crowdforecast_data
-
-combined_data
-
-forecast_dates
-
-filtered_data
-
-unfiltered_data
-
-epitrend
-
-ensemble_models
-
-regular_models
-
-ensemble_members
 }
 \description{
 Downloaded from https://github.com/KITmetricslab/covid19-forecast-hub-de

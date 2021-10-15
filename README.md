@@ -17,6 +17,7 @@ Model-based forecasts, which have played an important role in shaping public pol
 All data used for the paper are included as data objects in the `covid.german.forecasts` R package. 
 - The data for the paper were loaded and compiled using the script `data-raw/paper.R`
 - package data are stored in `data/`
+- you can list all package data by running `data(package = "covid.german.forecasts")` and load individual data files by running e.g. `covid.german.forecasts::
 
 
 

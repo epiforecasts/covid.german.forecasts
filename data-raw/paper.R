@@ -167,9 +167,6 @@ combined_data <- merge_pred_and_obs(
   forecast_date := as.character(forecast_date)
 ]
 
-usethis::use_data(combined_data, overwrite = TRUE)
-
-
 # update data about the number of ensembles included in the Hub ----------------
 root_dir <- here("data-raw", "included_models")
 filenames <- list.files(root_dir)

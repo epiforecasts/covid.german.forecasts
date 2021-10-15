@@ -317,7 +317,7 @@ filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
 
 
 
-# Plot with Visualsiation of x week ahead forecasts and scores
+# Plot with Visualisation of x week ahead forecasts and scores
 
 ```{r truth-vs-forecasts, fig.height=12, fig.width=15}
 
