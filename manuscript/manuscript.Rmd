@@ -11,9 +11,7 @@ bibliography:
 
 Target journal: eLife
 
-*Nikos I. Bosse, Sam Abbott, Habakuk Hain, Billy Quilty, CMMID Working Group, Anne Cori, Edwin van Leeuwen, Sebastian Funk*
-
-*Anonymous Alpaca and many friends*
+*Nikos I. Bosse, Sam Abbott, Johannes Bracher, Habakuk Hain, Billy Quilty, CMMID Working Group, Edwin van Leeuwen, Anne Cori, Sebastian Funk*
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
