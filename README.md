@@ -1,8 +1,6 @@
 # Comparing human and model-based forecasts of COVID-19 in Germany and Poland
 
-This repository was used to create submissions from the epiforecasts team at the London School of Hygiene & Tropical Medicine to the [German and Polish Forecast Hub](https://kitmetricslab.github.io/forecasthub/forecast). It also holds the data and analysis scripts used for the paper "Comparing human and model-based forecasts of COVID-19 in Germany and Poland". 
-
-This project is under development with forecasts being submitted each week and evaluation under development.
+This repository holds the data and analysis scripts used for the paper "Comparing human and model-based forecasts of COVID-19 in Germany and Poland". It is also still used to to create weekly forecast submissions from the epiforecasts team at the London School of Hygiene & Tropical Medicine to the [German and Polish Forecast Hub](https://kitmetricslab.github.io/forecasthub/forecast). 
 
 ## Abstract
 
@@ -17,7 +15,25 @@ Model-based forecasts, which have played an important role in shaping public pol
 All data used for the paper are included as data objects in the `covid.german.forecasts` R package. 
 - The data for the paper were loaded and compiled using the script `data-raw/paper.R`
 - package data are stored in `data/`
-- you can list all package data by running `data(package = "covid.german.forecasts")` and load individual data files by running e.g. `covid.german.forecasts::
+
+The following data are stored: 
+
+| Name               | Description                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| crowdforecast_data | Crowd forecast data used for the paper                                                                        |
+| dailytruth_data    | Daily truth data used for the paper                                                                           |
+| ensemble_members   | Models included in the official hub ensemble                                                                  |
+| ensemble_models    | Names of all ensemble models                                                                                  |
+| epitrend           | Classification of the epidemic into falling, rising etc (not used)                                            |
+| filtered_data      | Pre-filtered data used for the paper (with death forecasts restricted to the period after December 14th 2020) |
+| forecast_dates     | Forecast dates used for the paper                                                                             |
+| locations          | Location and Population Look Up for Germany and Poland                                                        |
+| prediction_data    | Forecast data used for the paper                                                                              |
+| regular_models     | Names of all regular models                                                                                   |
+| truth_data         | Truth data used for the paper                                                                                 |
+| unfiltered_data    | Unfiltered version of the combined prediction and truth data used for the paper                               |
+|                    |                                                                                                               |
+- you can and load individual data by running e.g. `covid.german.forecasts::filtered_data` for the main data set. 
 
 
 
