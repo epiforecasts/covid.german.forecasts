@@ -1,4 +1,4 @@
-FROM  docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+FROM  ghcr.io/epiforecasts/epinow2/epinow2:latest
 
 
 RUN apt-get update -y && \
