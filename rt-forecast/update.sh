@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Update the input data
 Rscript data-raw/update.R

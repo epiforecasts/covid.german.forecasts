@@ -1,0 +1,25 @@
+INFO [2021-09-17 17:13:08] Reporting estimates using data up to: 2020-12-14
+INFO [2021-09-17 17:13:08] Saving estimates to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 17:13:09] Producing estimates for: Germany, Poland
+INFO [2021-09-17 17:13:09] Regions excluded: none
+INFO [2021-09-17 17:13:09] Completed regional estimates
+INFO [2021-09-17 17:13:09] Regions with estimates: 0
+INFO [2021-09-17 17:13:09] Regions with runtime errors: 2
+INFO [2021-09-17 17:13:09] Producing summary
+INFO [2021-09-17 17:13:09] Saving summary to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/summary/cases/2020-12-14
+INFO [2021-09-17 17:13:09] Errors caught whilst generating summary statistics: 
+INFO [2021-09-17 17:13:09] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
+
+INFO [2021-09-17 17:13:09] Saving timings information to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 20:46:40] Reporting estimates using data up to: 2020-12-14
+INFO [2021-09-17 20:46:40] Saving estimates to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 20:46:40] Producing estimates for: Germany, Poland
+INFO [2021-09-17 20:46:40] Regions excluded: none
+INFO [2021-09-17 20:51:36] Completed estimates for: Poland
+INFO [2021-09-17 20:53:14] Completed estimates for: Germany
+INFO [2021-09-17 20:53:16] Completed regional estimates
+INFO [2021-09-17 20:53:16] Regions with estimates: 2
+INFO [2021-09-17 20:53:16] Regions with runtime errors: 0
+INFO [2021-09-17 20:53:16] Producing summary
+INFO [2021-09-17 20:53:16] Saving summary to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/summary/cases/2020-12-14
+INFO [2021-09-17 20:53:22] Saving timings information to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases

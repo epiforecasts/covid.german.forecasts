@@ -1,0 +1,69 @@
+region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases,prob_control
+Germany,21540 (7668 -- 50326),21540,25232,20276,7668,15005,18973,25115,30861,50326,New confirmed cases by infection date,Likely decreasing,0.69
+Poland,19035 (4600 -- 55622),19035,23760,21448,4600,11905,16047,22647,30003,55622,New confirmed cases by infection date,Likely decreasing,0.91
+Śląskie,12078 (2974 -- 35333),12078,14918,12992,2974,7285,10182,14211,18996,35333,New confirmed cases by infection date,Stable,0.57
+North Rhine-Westphalia,7710 (1803 -- 24036),7710,10713,17898,1803,4677,6506,9196,12302,24036,New confirmed cases by infection date,Stable,0.5
+Dolnośląskie,4798 (1463 -- 11106),4798,5406,3270,1463,3228,4150,5591,6943,11106,New confirmed cases by infection date,Stable,0.51
+Bavaria,3786 (1111 -- 10503),3786,4634,4337,1111,2522,3288,4431,5623,10503,New confirmed cases by infection date,Stable,0.55
+Świętokrzyskie,3514 (910 -- 14183),3514,6583,24937,910,2093,2884,4291,5756,14183,New confirmed cases by infection date,Likely increasing,0.38
+Baden-Wurttemberg,3372 (1021 -- 9023),3372,4158,3706,1021,2318,2929,3859,4949,9023,New confirmed cases by infection date,Stable,0.43
+Hesse,3089 (1331 -- 9064),3089,4157,7248,1331,2221,2738,3556,4575,9064,New confirmed cases by infection date,Likely increasing,0.27
+Saxony,2935 (263 -- 15094),2935,5203,14301,263,1180,2176,3975,6006,15094,New confirmed cases by infection date,Likely decreasing,0.61
+Łódzkie,2855 (561 -- 9898),2855,4253,19742,561,1698,2332,3466,4700,9898,New confirmed cases by infection date,Likely decreasing,0.74
+Zachodniopomorskie,2445 (717 -- 5824),2445,2758,1895,717,1679,2135,2753,3357,5824,New confirmed cases by infection date,Stable,0.44
+Hamburg,2165 (475 -- 15279),2165,4846,13336,475,1179,1739,2707,4123,15279,New confirmed cases by infection date,Likely increasing,0.18
+Lower Saxony,2021 (743 -- 6034),2021,2537,2179,743,1363,1763,2319,3007,6034,New confirmed cases by infection date,Stable,0.47
+Pomorskie,1969 (318 -- 6738),1969,2737,5531,318,1044,1589,2416,3347,6738,New confirmed cases by infection date,Likely decreasing,0.79
+Thuringia,1839 (643 -- 4971),1839,2379,3229,643,1355,1653,2058,2503,4971,New confirmed cases by infection date,Stable,0.58
+Kujawsko-Pomorskie,1833 (433 -- 7639),1833,2962,8837,433,1050,1506,2199,3009,7639,New confirmed cases by infection date,Likely decreasing,0.8
+Brandenburg,1799 (503 -- 6190),1799,2569,4034,503,1153,1514,2142,2835,6190,New confirmed cases by infection date,Likely increasing,0.38
+Podkarpackie,1647 (193 -- 6143),1647,2194,2006,193,837,1286,2037,2889,6143,New confirmed cases by infection date,Likely decreasing,0.92
+Mazowieckie,1618 (144 -- 6372),1618,2338,3692,144,734,1187,2081,3034,6372,New confirmed cases by infection date,Likely decreasing,0.92
+Wielkopolskie,1401 (189 -- 5539),1401,2707,26655,189,694,1087,1812,2570,5539,New confirmed cases by infection date,Likely decreasing,0.89
+Małopolskie,1223 (141 -- 6936),1223,2259,4773,141,518,902,1615,2393,6936,New confirmed cases by infection date,Likely decreasing,0.85
+Podlaskie,1074 (99 -- 3173),1074,1266,1033,99,496,839,1300,1757,3173,New confirmed cases by infection date,Likely decreasing,0.81
+Lubelskie,818 (71 -- 3808),818,1349,4355,71,369,619,1062,1594,3808,New confirmed cases by infection date,Likely decreasing,0.85
+Lubuskie,724 (21 -- 3633),724,1183,1560,21,231,497,1029,1645,3633,New confirmed cases by infection date,Likely decreasing,0.8
+Mecklenburg-Vorpommern,638 (131 -- 2279),638,906,1774,131,374,522,762,1046,2279,New confirmed cases by infection date,Stable,0.46
+Warmińsko-Mazurskie,543 (104 -- 2120),543,797,1277,104,311,446,673,952,2120,New confirmed cases by infection date,Likely decreasing,0.84
+Saxony-Anhalt,463 (15 -- 3879),463,1183,5282,15,145,317,686,1235,3879,New confirmed cases by infection date,Likely decreasing,0.83
+Opolskie,407 (25 -- 4995),407,2859,35352,25,144,280,588,1065,4995,New confirmed cases by infection date,Likely decreasing,0.77
+Berlin,375 (92 -- 1058),375,478,608,92,263,329,428,542,1058,New confirmed cases by infection date,Likely decreasing,0.8
+Rhineland-Palatinate,343 (22 -- 1655),343,560,767,22,133,244,483,744,1655,New confirmed cases by infection date,Likely decreasing,0.82
+Schleswig-Holstein,263 (51 -- 1250),263,422,659,51,147,213,326,480,1250,New confirmed cases by infection date,Stable,0.56
+Saarland,254 (7 -- 3658),254,1453,12033,7,75,168,380,719,3658,New confirmed cases by infection date,Stable,0.49
+Bremen,141 (4 -- 651),141,226,539,4,69,111,173,251,651,New confirmed cases by infection date,Likely decreasing,0.73
+Hamburg,1.2 (0.8 -- 1.9),1.2,1.2,0.37,0.8,1,1.1,1.3,1.4,1.9,Effective reproduction no.,Likely increasing,0.18
+Hesse,1.1 (0.85 -- 1.4),1.1,1.1,0.25,0.85,0.99,1,1.1,1.1,1.4,Effective reproduction no.,Likely increasing,0.27
+Baden-Wurttemberg,1 (0.73 -- 1.3),1,1,0.17,0.73,0.93,0.99,1,1.1,1.3,Effective reproduction no.,Stable,0.43
+Brandenburg,1 (0.73 -- 1.4),1,1.1,0.22,0.73,0.96,1,1.1,1.1,1.4,Effective reproduction no.,Likely increasing,0.38
+Dolnośląskie,1 (0.74 -- 1.2),1,0.98,0.14,0.74,0.91,0.97,1,1.1,1.2,Effective reproduction no.,Stable,0.51
+Lower Saxony,1 (0.77 -- 1.3),1,1,0.17,0.77,0.94,0.98,1,1.1,1.3,Effective reproduction no.,Stable,0.47
+Mecklenburg-Vorpommern,1 (0.65 -- 1.4),1,1,0.23,0.65,0.9,0.98,1.1,1.1,1.4,Effective reproduction no.,Stable,0.46
+North Rhine-Westphalia,1 (0.67 -- 1.4),1,1,0.26,0.67,0.88,0.96,1,1.1,1.4,Effective reproduction no.,Stable,0.5
+Saarland,1 (0.31 -- 2),1,1.1,0.57,0.31,0.74,0.92,1.1,1.3,2,Effective reproduction no.,Stable,0.49
+Zachodniopomorskie,1 (0.7 -- 1.2),1,0.99,0.15,0.7,0.93,0.99,1,1.1,1.2,Effective reproduction no.,Stable,0.44
+Świętokrzyskie,1 (0.77 -- 1.5),1,1.1,0.3,0.77,0.94,1,1.1,1.1,1.5,Effective reproduction no.,Likely increasing,0.38
+Thuringia,0.99 (0.76 -- 1.2),0.99,0.99,0.17,0.76,0.94,0.98,1,1,1.2,Effective reproduction no.,Stable,0.58
+Bavaria,0.98 (0.69 -- 1.3),0.98,0.98,0.2,0.69,0.88,0.94,1,1.1,1.3,Effective reproduction no.,Stable,0.55
+Śląskie,0.98 (0.68 -- 1.1),0.98,0.96,0.16,0.68,0.88,0.95,1,1.1,1.1,Effective reproduction no.,Stable,0.57
+Schleswig-Holstein,0.97 (0.61 -- 1.3),0.97,0.98,0.24,0.61,0.86,0.94,1,1.1,1.3,Effective reproduction no.,Stable,0.56
+Bremen,0.94 (0.32 -- 1.3),0.94,0.9,0.28,0.32,0.81,0.91,0.97,1,1.3,Effective reproduction no.,Likely decreasing,0.73
+Germany,0.94 (0.68 -- 1.2),0.94,0.94,0.18,0.68,0.84,0.91,0.97,1,1.2,Effective reproduction no.,Likely decreasing,0.69
+Berlin,0.93 (0.66 -- 1.1),0.93,0.92,0.17,0.66,0.86,0.91,0.95,0.98,1.1,Effective reproduction no.,Likely decreasing,0.8
+Podlaskie,0.92 (0.47 -- 1.1),0.92,0.85,0.2,0.47,0.76,0.86,0.96,0.99,1.1,Effective reproduction no.,Likely decreasing,0.81
+Saxony,0.92 (0.41 -- 1.4),0.92,0.92,0.35,0.41,0.71,0.85,0.99,1.1,1.4,Effective reproduction no.,Likely decreasing,0.61
+Pomorskie,0.9 (0.54 -- 1.1),0.9,0.88,0.22,0.54,0.79,0.86,0.94,0.99,1.1,Effective reproduction no.,Likely decreasing,0.79
+Łódzkie,0.9 (0.56 -- 1.2),0.9,0.9,0.28,0.56,0.79,0.86,0.95,1,1.2,Effective reproduction no.,Likely decreasing,0.74
+Kujawsko-Pomorskie,0.87 (0.58 -- 1.2),0.87,0.89,0.23,0.58,0.76,0.83,0.91,0.98,1.2,Effective reproduction no.,Likely decreasing,0.8
+Warmińsko-Mazurskie,0.85 (0.56 -- 1.1),0.85,0.85,0.19,0.56,0.75,0.82,0.88,0.95,1.1,Effective reproduction no.,Likely decreasing,0.84
+Lubuskie,0.84 (0.28 -- 1.1),0.84,0.79,0.28,0.28,0.64,0.76,0.9,0.98,1.1,Effective reproduction no.,Likely decreasing,0.8
+Poland,0.81 (0.51 -- 1.1),0.81,0.8,0.18,0.51,0.7,0.76,0.85,0.9,1.1,Effective reproduction no.,Likely decreasing,0.91
+Lubelskie,0.8 (0.4 -- 1.1),0.8,0.79,0.25,0.4,0.64,0.74,0.85,0.93,1.1,Effective reproduction no.,Likely decreasing,0.85
+Rhineland-Palatinate,0.8 (0.31 -- 1.2),0.8,0.78,0.28,0.31,0.6,0.72,0.86,0.96,1.2,Effective reproduction no.,Likely decreasing,0.82
+Podkarpackie,0.79 (0.41 -- 1),0.79,0.77,0.19,0.41,0.66,0.74,0.83,0.89,1,Effective reproduction no.,Likely decreasing,0.92
+Opolskie,0.77 (0.32 -- 1.5),0.77,0.85,0.5,0.32,0.59,0.7,0.84,0.99,1.5,Effective reproduction no.,Likely decreasing,0.77
+Wielkopolskie,0.77 (0.42 -- 1.1),0.77,0.78,0.29,0.42,0.63,0.72,0.82,0.89,1.1,Effective reproduction no.,Likely decreasing,0.89
+Małopolskie,0.76 (0.4 -- 1.3),0.76,0.78,0.29,0.4,0.6,0.7,0.82,0.91,1.3,Effective reproduction no.,Likely decreasing,0.85
+Mazowieckie,0.73 (0.34 -- 1),0.73,0.72,0.23,0.34,0.59,0.68,0.79,0.86,1,Effective reproduction no.,Likely decreasing,0.92
+Saxony-Anhalt,0.69 (0.2 -- 1.3),0.69,0.72,0.37,0.2,0.48,0.62,0.77,0.91,1.3,Effective reproduction no.,Likely decreasing,0.83

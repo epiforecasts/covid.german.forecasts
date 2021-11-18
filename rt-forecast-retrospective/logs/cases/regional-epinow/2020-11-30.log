@@ -1,0 +1,29 @@
+INFO [2021-09-17 17:13:06] Reporting estimates using data up to: 2020-11-30
+INFO [2021-09-17 17:13:06] Saving estimates to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 17:13:06] Producing estimates for: Germany, Poland
+INFO [2021-09-17 17:13:06] Regions excluded: none
+INFO [2021-09-17 17:13:08] Completed regional estimates
+INFO [2021-09-17 17:13:08] Regions with estimates: 0
+INFO [2021-09-17 17:13:08] Regions with runtime errors: 2
+INFO [2021-09-17 17:13:08] Producing summary
+INFO [2021-09-17 17:13:08] Saving summary to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/summary/cases/2020-11-30
+INFO [2021-09-17 17:13:08] Errors caught whilst generating summary statistics: 
+INFO [2021-09-17 17:13:08] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
+
+INFO [2021-09-17 17:13:08] Saving timings information to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 17:13:08] Using 2 workers with 8 cores per worker
+INFO [2021-09-17 17:13:08] Producing following optional outputs: regions, summary, timing, samples, fit
+INFO [2021-09-17 20:33:57] Reporting estimates using data up to: 2020-11-30
+INFO [2021-09-17 20:33:57] Saving estimates to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 20:33:57] Producing estimates for: Germany, Poland
+INFO [2021-09-17 20:33:57] Regions excluded: none
+INFO [2021-09-17 20:39:22] Completed estimates for: Poland
+INFO [2021-09-17 20:39:56] Completed estimates for: Germany
+INFO [2021-09-17 20:39:57] Completed regional estimates
+INFO [2021-09-17 20:39:57] Regions with estimates: 2
+INFO [2021-09-17 20:39:57] Regions with runtime errors: 0
+INFO [2021-09-17 20:39:57] Producing summary
+INFO [2021-09-17 20:39:57] Saving summary to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/summary/cases/2020-11-30
+INFO [2021-09-17 20:40:03] Saving timings information to : /home/rstudio/covid.german.forecasts/rt-forecast-retrospective/data/samples/cases
+INFO [2021-09-17 20:40:03] Using 2 workers with 8 cores per worker
+INFO [2021-09-17 20:40:03] Producing following optional outputs: regions, summary, timing, samples, fit

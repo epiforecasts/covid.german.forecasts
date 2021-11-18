@@ -1,0 +1,24 @@
+INFO [2021-09-17 17:13:09] Initialising estimates for: Germany
+DEBUG [2021-09-17 17:13:09] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 17:13:09] Germany: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:09] Initialising estimates for: Poland
+DEBUG [2021-09-17 17:13:09] Producing following optional outputs: samples, fit, timing
+ERROR [2021-09-17 17:13:09] Poland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:09] Runtime error in Germany : Germany: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 17:13:09] Runtime error in Poland : Poland: wrong sign in 'by' argument - seq.int, 0, to0 - from, by
+INFO [2021-09-17 20:46:40] Initialising estimates for: Germany
+DEBUG [2021-09-17 20:46:40] Producing following optional outputs: samples, fit, timing
+INFO [2021-09-17 20:46:40] Initialising estimates for: Poland
+DEBUG [2021-09-17 20:46:40] Germany: Running in exact mode for 2000 samples (across 4 chains each with a warm up of 250 iterations each) and 126 time steps of which 30 are a forecast
+DEBUG [2021-09-17 20:46:40] Producing following optional outputs: samples, fit, timing
+DEBUG [2021-09-17 20:46:40] Poland: Running in exact mode for 2000 samples (across 4 chains each with a warm up of 250 iterations each) and 126 time steps of which 30 are a forecast
+WARN [2021-09-17 20:51:26] Poland (chain: 1): There were 34 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-09-17 20:51:26] Poland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-09-17 20:53:06] Germany (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-09-17 20:53:06] Germany (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
