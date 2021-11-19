@@ -125,8 +125,7 @@ component_plot <- function(scores, type, colour_scheme, x = x, rel = relative,
           plot.title = element_text(hjust = 0.5, 
                                     size = 8), 
           legend.position = c(0.12, 0.83)) + 
-    labs(x = NULL, title = type, y = "WIS") + 
-    guides(fill = "none")
+    labs(x = NULL, title = type, y = "WIS") 
   
   return(p)
 }
@@ -151,7 +150,8 @@ plot_helper <- function(tmp = scores, xvar = x, y, rel = relative,
     theme_minimal() +
     theme(legend.position = "bottom") +
     scale_color_manual(values = colour) + 
-    scale_y_continuous(labels = scale_fn)
+    scale_y_continuous(labels = scale_fn) + 
+    guides(fill = "none", colour = "none")
 }
 
 # function to create Figure 1
@@ -179,7 +179,8 @@ aggregate_performance <- function(data,
   component_case <- component_plot(scores, "case", x = x, vals = vals, 
                                    facet_formula = facet_formula, 
                                    rel = relative, 
-                                   colour_scheme = colour_scheme[1])
+                                   colour_scheme = colour_scheme[1]) + 
+    guides(fill = "none")
   component_death <- component_plot(scores, "death", x = x, vals = vals, 
                                     facet_formula = facet_formula, 
                                     rel = relative, 
