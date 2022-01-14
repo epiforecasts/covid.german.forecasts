@@ -94,6 +94,7 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \usepackage{lineno}
 \linenumbers
+\newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -169,6 +170,8 @@ Our interface also allowed participants to view past observations based on the h
 Forecasts were stored in a Google Sheet and downloaded, cleaned and processed every week for submission to the Forecast Hub. If a forecaster had submitted multiple predictions for a single target, only the latest submission was kept. Information on the chosen distribution as well as the parameters for median and width were used to obtain the required set of 23 quantiles from that distribution. Forecasts from all forecasters were then aggregated using an unweighted quantile-wise mean (i.e., the \(\alpha\)-quantile of the ensemble is given by the mean of all submitted \(\alpha\)-quantiles). On a few occasions, individual forecasts were assessed as clearly erroneous by visual inspection and subsequently removed before aggregation and were excluded from the submission as well as the analysis.
 
 Participants were recruited mostly within the Centre of Mathematical Modeling of Infectious Diseases at the London School of Hygiene \& Tropical Medicine, but participants were also invited personally or via social media to submit predictions. Depending on whether they had a background in either statistics, forecasting or epidemiology, participants were asked to self-identify as `experts' or `non-experts'.
+
+The study was approved by the Observational / Interventions Research Ethics Committee at the London School of Hygiene \& Tropical Medicine, LSHTM Ethics Reference: 22290.
 
 \hypertarget{model-based-forecasts}{%
 \subsection{Model-based forecasts}\label{model-based-forecasts}}
@@ -270,13 +273,15 @@ Further work should explore the effects of humans refining their mathematical mo
 
 \textbf{Acknowledgements}
 
-NIB received funding from the Health Protection Research Unit (grant code NIHR200908). SA's work was funded by the Wellcome Trust (grant: 210758/Z/18/Z). The work of JB was supported by the Helmholtz Foundation via the SIMCARD Information and Data Science Pilot Project. This research was partly funded by the National Institute for Health Research (NIHR) (16/137/109 \& 16/136/46) using UK aid from the UK Government to support global health research. The views expressed in this publication are those of the author(s) and not necessarily those of the NIHR or the UK Department of Health and Social Care. BJQ is supported in part by a grant from the Bill and Melinda Gates Foundation (OPP1139859). EvL acknowledges funding by the National Institute for Health Research (NIHR) Health Protection Research Unit (HPRU) in Modelling and Health Economics (grant number NIHR200908) and the European Union's Horizon 2020 research and innovation programme - project EpiPose (101003688). AC acknowledges funding by the NIHR, the Sergei Brin foundation, USAID, and the Academy of Medical Sciences. SF's work was supported by the Wellcome Trust (grant: 210758/Z/18/Z), and the NIHR (NIHR200908).
+NIB received funding from the Health Protection Research Unit (grant code NIHR200908, \url{https://www.nihr.ac.uk/}). SA's work was funded by the Wellcome Trust (grant: 210758/Z/18/Z, \url{https://wellcome.org/}). The work of JB was supported by the Helmholtz Foundation (\url{https://www.helmholtz.de/}) via the SIMCARD Information and Data Science Pilot Project. This research was partly funded by the National Institute for Health Research (NIHR, \url{https://www.nihr.ac.uk/}) (16/137/109 \& 16/136/46) using UK aid from the UK Government to support global health research. The views expressed in this publication are those of the author(s) and not necessarily those of the NIHR or the UK Department of Health and Social Care. BJQ is supported in part by a grant from the Bill and Melinda Gates Foundation (OPP1139859, \url{https://www.gatesfoundation.org/}). EvL acknowledges funding by the National Institute for Health Research (NIHR) Health Protection Research Unit (HPRU) in Modelling and Health Economics (grant number NIHR200908, \url{https://www.nihr.ac.uk/}) and the European Union's Horizon 2020 research and innovation programme - project EpiPose (101003688, \url{https://ec.europa.eu/programmes/horizon2020/}). AC acknowledges funding by the NIHR, the Sergei Brin foundation, USAID (\url{https://www.usaid.gov/}), and the Academy of Medical Sciences (\url{https://acmedsci.ac.uk/}). SF's work was supported by the Wellcome Trust (grant: 210758/Z/18/Z, \url{https://wellcome.org/}), and the NIHR (NIHR200908, \url{https://www.nihr.ac.uk/}).
 
 We thank all forecasters who participated in this study for their contribution.
 
 We would also like to acknowledge (in a randomised order) the members of Centre for the Mathematical Modelling of Infectious Diseases COVID-19 Working Group at the the London School of Hygiene \& Tropical Medicine: Oliver Brady, Katharine Sherratt, Kaja Abbas, Kerry LM Wong, Charlie Diamond, Katherine E. Atkins, Rein M G J Houben, Jiayao Lei, Rachel Lowe, David Simons, Sophie R Meakin, Nicholas G. Davies, Timothy W Russell, Kevin van Zandvoort, Quentin J Leclerc, Kathleen O'Reilly, Stéphane Hué, Alicia Rosello, Emilie Finch, C Julian Villabona-Arenas, Thibaut Jombart, W John Edmunds, Yalda Jafari, Jack Williams, Alicia Showering, Damien C Tully, Jon C Emery, Carl A B Pearson, David Hodgson, Frank G Sandmann, Petra Klepac, Adam J Kucharski, Graham Medley, Yang Liu, Simon R Procter, Emily S Nightingale, William Waites, Rosanna C Barnard, Joel Hellewell, Yung-Wai Desmond Chan, Fiona Yueqian Sun, Hamish P Gibbs, Rosalind M Eggo, Lloyd A C Chapman, Stefan Flasche, James W Rudge, Akira Endo, Naomi R Waterlow, Paul Mee, James D Munday, Ciara V McCarthy, Mihaly Koltai, Amy Gimma, Christopher I Jarvis, Megan Auzenbergs, Matthew Quaife, Fabienne Krauer, Samuel Clifford, Georgia R Gore-Langton, Arminder K Deol, Kiesha Prem, Gwenan M Knight, Rachael Pung, Anna M Foss.
 
 \clearpage
+
+\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}
 
 \hypertarget{appendix-supplementary-information}{%
 \appendix}
