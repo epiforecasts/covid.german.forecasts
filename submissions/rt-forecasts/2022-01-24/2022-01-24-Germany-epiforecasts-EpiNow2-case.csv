@@ -1,0 +1,2119 @@
+location,location_name,type,quantile,value,target_end_date,forecast_date,target
+GM,Germany,point,,9651936,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.01,9414306,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.025,9427444,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.05,9442983,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.1,9475440,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.15,9500034,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.2,9520853,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.25,9539277,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.3,9560889,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.35,9582044,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.4,9602196,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.45,9630709,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.5,9651936,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.55,9676202,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.6,9703388,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.65,9726733,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.7,9751551,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.75,9774194,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.8,9803601,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.85,9840555,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.9,9881184,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.95,9938171,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.975,9961786,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,quantile,0.99,9979108,2022-01-29,2022-01-24,1 wk ahead cum case
+GM,Germany,point,,1055929,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.01,818299,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.025,831437,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.05,846976,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.1,879433,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.15,904027,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.2,924846,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.25,943270,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.3,964882,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.35,986037,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.4,1006189,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.45,1034702,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.5,1055929,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.55,1080195,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.6,1107381,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.65,1130726,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.7,1155544,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.75,1178187,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.8,1207594,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.85,1244548,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.9,1285177,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.95,1342164,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.975,1365779,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,quantile,0.99,1383101,2022-01-29,2022-01-24,1 wk ahead inc case
+GM,Germany,point,,11046351,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.01,10270244,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.025,10301753,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.05,10357151,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.1,10450299,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.15,10523108,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.2,10590072,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.25,10655470,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.3,10723558,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.35,10801080,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.4,10871785,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.45,10960019,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.5,11046351,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.55,11129249,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.6,11210585,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.65,11294753,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.7,11400319,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.75,11488827,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.8,11591703,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.85,11723401,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.9,11907335,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.95,12126640,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.975,12244383,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,quantile,0.99,12313257,2022-02-05,2022-01-24,2 wk ahead cum case
+GM,Germany,point,,1394415,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.01,855938,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.025,874309,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.05,914168,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.1,974859,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.15,1023074,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.2,1069219,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.25,1116193,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.3,1162669,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.35,1219036,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.4,1269589,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.45,1329310,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.5,1394415,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.55,1453047,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.6,1507197,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.65,1568020,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.7,1648768,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.75,1714633,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.8,1788102,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.85,1882846,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.9,2026151,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.95,2188469,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.975,2282597,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,quantile,0.99,2334149,2022-02-05,2022-01-24,2 wk ahead inc case
+GM,Germany,point,,12414431,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.01,10998047,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.025,11065006,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.05,11159551,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.1,11317085,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.15,11455752,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.2,11585954,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.25,11711933,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.3,11843401,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.35,11978635,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.4,12091239,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.45,12251324,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.5,12414431,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.55,12570530,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.6,12712996,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.65,12895035,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.7,13091334,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.75,13275902,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.8,13475162,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.85,13715837,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.9,14051259,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.95,14441599,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.975,14655180,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,quantile,0.99,14778266,2022-02-12,2022-01-24,3 wk ahead cum case
+GM,Germany,point,,1368080,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.01,727803,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.025,763253,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.05,802400,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.1,866786,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.15,932644,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.2,995882,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.25,1056463,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.3,1119843,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.35,1177555,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.4,1219454,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.45,1291305,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.5,1368080,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.55,1441281,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.6,1502411,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.65,1600282,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.7,1691015,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.75,1787075,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.8,1883459,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.85,1992436,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.9,2143924,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.95,2314959,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.975,2410797,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,quantile,0.99,2465009,2022-02-12,2022-01-24,3 wk ahead inc case
+GM,Germany,point,,13454998,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.01,11485772,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.025,11577736,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.05,11712477,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.1,11938862,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.15,12134820,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.2,12319617,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.25,12497146,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.3,12678579,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.35,12865090,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.4,13030514,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.45,13230432,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.5,13454998,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.55,13665511,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.6,13865011,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.65,14110687,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.7,14379444,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.75,14629319,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.8,14920392,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.85,15247538,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.9,15699832,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.95,16214012,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.975,16495231,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,quantile,0.99,16662967,2022-02-19,2022-01-24,4 wk ahead cum case
+GM,Germany,point,,1040567,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.01,487725,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.025,512730,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.05,552926,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.1,621777,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.15,679068,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.2,733663,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.25,785213,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.3,835178,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.35,886455,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.4,939275,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.45,979108,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.5,1040567,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.55,1094981,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.6,1152015,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.65,1215652,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.7,1288110,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.75,1353417,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.8,1445230,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.85,1531701,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.9,1648573,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.95,1772413,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.975,1840051,2022-02-19,2022-01-24,4 wk ahead inc case
+GM,Germany,quantile,0.99,1884701,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,point,,1337906,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.01,1296963,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.025,1298816,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.05,1301175,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.1,1306769,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.15,1311542,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.2,1315292,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.25,1318823,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.3,1322571,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.35,1326156,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.4,1329633,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.45,1333767,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.5,1337906,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.55,1341238,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.6,1345895,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.65,1350791,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.7,1356161,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.75,1361078,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.8,1365594,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.85,1371540,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.9,1379079,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.95,1388590,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.975,1396139,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.99,1400095,2022-01-29,2022-01-24,1 wk ahead cum case
+GM01,Baden-Wurttemberg,point,,139596,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.01,98653,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.025,100506,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.05,102865,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.1,108459,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.15,113232,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.2,116982,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.25,120513,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.3,124261,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.35,127846,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.4,131323,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.45,135457,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.5,139596,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.55,142928,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.6,147585,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.65,152481,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.7,157851,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.75,162768,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.8,167284,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.85,173230,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.9,180769,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.95,190280,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.975,197829,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.99,201785,2022-01-29,2022-01-24,1 wk ahead inc case
+GM01,Baden-Wurttemberg,point,,1519933,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.01,1392205,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.025,1397700,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.05,1404447,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.1,1420246,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.15,1436305,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.2,1450004,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.25,1461227,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.3,1471941,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.35,1483631,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.4,1494639,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.45,1506641,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.5,1519933,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.55,1533264,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.6,1547983,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.65,1563703,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.7,1580206,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.75,1596128,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.8,1613852,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.85,1632120,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.9,1656359,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.95,1690785,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.975,1708969,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.99,1722615,2022-02-05,2022-01-24,2 wk ahead cum case
+GM01,Baden-Wurttemberg,point,,182027,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.01,95242,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.025,98884,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.05,103272,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.1,113477,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.15,124763,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.2,134712,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.25,142404,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.3,149370,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.35,157475,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.4,165006,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.45,172874,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.5,182027,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.55,192026,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.6,202088,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.65,212912,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.7,224045,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.75,235050,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.8,248258,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.85,260580,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.9,277280,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.95,302195,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.975,312830,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.99,322520,2022-02-05,2022-01-24,2 wk ahead inc case
+GM01,Baden-Wurttemberg,point,,1700720,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.01,1469171,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.025,1478753,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.05,1491980,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.1,1521702,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.15,1548699,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.2,1572641,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.25,1593169,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.3,1612764,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.35,1634128,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.4,1653082,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.45,1675887,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.5,1700720,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.55,1726808,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.6,1752697,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.65,1782457,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.7,1812978,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.75,1841128,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.8,1872501,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.85,1906340,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.9,1947751,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.95,2005003,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.975,2034912,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.99,2059251,2022-02-12,2022-01-24,3 wk ahead cum case
+GM01,Baden-Wurttemberg,point,,180787,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.01,76966,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.025,81053,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.05,87533,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.1,101456,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.15,112394,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.2,122637,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.25,131942,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.3,140823,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.35,150497,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.4,158443,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.45,169246,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.5,180787,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.55,193544,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.6,204714,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.65,218754,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.7,232772,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.75,245000,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.8,258649,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.85,274220,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.9,291392,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.95,314218,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.975,325943,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.99,336636,2022-02-12,2022-01-24,3 wk ahead inc case
+GM01,Baden-Wurttemberg,point,,1836485,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.01,1522831,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.025,1535698,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.05,1553729,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.1,1591622,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.15,1628138,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.2,1659643,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.25,1688899,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.3,1716348,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.35,1745863,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.4,1773640,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.45,1805470,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.5,1836485,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.55,1871574,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.6,1905101,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.65,1946412,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.7,1985640,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.75,2022190,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.8,2064829,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.85,2112545,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.9,2168663,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.95,2243448,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.975,2283046,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,quantile,0.99,2312363,2022-02-19,2022-01-24,4 wk ahead cum case
+GM01,Baden-Wurttemberg,point,,135765,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.01,53660,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.025,56945,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.05,61749,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.1,69920,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.15,79439,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.2,87002,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.25,95730,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.3,103584,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.35,111735,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.4,120558,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.45,129583,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.5,135765,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.55,144766,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.6,152404,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.65,163955,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.7,172662,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.75,181062,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.8,192328,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.85,206205,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.9,220912,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.95,238445,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.975,248134,2022-02-19,2022-01-24,4 wk ahead inc case
+GM01,Baden-Wurttemberg,quantile,0.99,253112,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,point,,1722129,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.01,1684426,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.025,1686074,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.05,1689166,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.1,1693156,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.15,1697219,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.2,1701214,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.25,1704619,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.3,1707923,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.35,1711124,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.4,1715402,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.45,1718277,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.5,1722129,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.55,1725636,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.6,1729585,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.65,1734098,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.7,1738272,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.75,1742993,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.8,1747686,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.85,1752843,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.9,1760852,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.95,1769427,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.975,1774655,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,quantile,0.99,1777779,2022-01-29,2022-01-24,1 wk ahead cum case
+GM02,Bavaria,point,,171543,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.01,133840,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.025,135488,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.05,138580,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.1,142570,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.15,146633,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.2,150628,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.25,154033,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.3,157337,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.35,160538,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.4,164816,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.45,167691,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.5,171543,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.55,175050,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.6,178999,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.65,183512,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.7,187686,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.75,192407,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.8,197100,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.85,202257,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.9,210266,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.95,218841,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.975,224069,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,quantile,0.99,227193,2022-01-29,2022-01-24,1 wk ahead inc case
+GM02,Bavaria,point,,1930422,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.01,1810958,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.025,1814831,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.05,1822899,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.1,1836219,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.15,1849443,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.2,1861832,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.25,1873042,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.3,1883865,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.35,1895305,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.4,1906185,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.45,1917025,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.5,1930422,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.55,1943564,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.6,1957279,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.65,1972820,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.7,1988500,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.75,2005055,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.8,2022342,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.85,2043524,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.9,2070356,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.95,2102113,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.975,2126836,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,quantile,0.99,2140112,2022-02-05,2022-01-24,2 wk ahead cum case
+GM02,Bavaria,point,,208293,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.01,126532,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.025,128757,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.05,133733,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.1,143063,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.15,152224,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.2,160618,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.25,168423,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.3,175942,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.35,184181,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.4,190783,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.45,198748,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.5,208293,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.55,217928,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.6,227694,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.65,238722,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.7,250228,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.75,262062,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.8,274656,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.85,290681,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.9,309504,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.95,332686,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.975,352181,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,quantile,0.99,362333,2022-02-05,2022-01-24,2 wk ahead inc case
+GM02,Bavaria,point,,2126732,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.01,1907448,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.025,1914367,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.05,1928387,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.1,1953512,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.15,1976341,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.2,1999773,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.25,2021403,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.3,2040838,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.35,2061140,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.4,2080918,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.45,2103379,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.5,2126732,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.55,2150908,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.6,2174876,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.65,2202501,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.7,2233116,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.75,2262538,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.8,2294626,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.85,2338635,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.9,2383651,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.95,2446467,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.975,2485751,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,quantile,0.99,2510496,2022-02-12,2022-01-24,3 wk ahead cum case
+GM02,Bavaria,point,,196310,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.01,96490,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.025,99536,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.05,105488,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.1,117293,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.15,126898,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.2,137941,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.25,148361,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.3,156973,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.35,165835,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.4,174733,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.45,186354,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.5,196310,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.55,207344,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.6,217597,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.65,229681,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.7,244616,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.75,257483,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.8,272284,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.85,295111,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.9,313295,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.95,344354,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.975,358915,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,quantile,0.99,370384,2022-02-12,2022-01-24,3 wk ahead inc case
+GM02,Bavaria,point,,2269183,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.01,1970347,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.025,1980922,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.05,2000440,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.1,2034078,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.15,2064662,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.2,2095749,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.25,2125059,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.3,2151813,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.35,2180740,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.4,2208311,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.45,2238088,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.5,2269183,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.55,2301814,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.6,2333120,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.65,2369973,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.7,2412378,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.75,2452350,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.8,2494671,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.85,2557010,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.9,2618640,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.95,2700589,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.975,2750877,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,quantile,0.99,2782764,2022-02-19,2022-01-24,4 wk ahead cum case
+GM02,Bavaria,point,,142451,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.01,62899,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.025,66555,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.05,72053,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.1,80566,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.15,88321,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.2,95976,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.25,103656,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.3,110975,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.35,119600,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.4,127393,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.45,134709,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.5,142451,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.55,150906,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.6,158244,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.65,167472,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.7,179262,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.75,189812,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.8,200045,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.85,218375,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.9,234989,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.95,254122,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.975,265126,2022-02-19,2022-01-24,4 wk ahead inc case
+GM02,Bavaria,quantile,0.99,272268,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,point,,85546,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.01,79392,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.025,79627,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.05,79974,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.1,80715,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.15,81220,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.2,81939,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.25,82601,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.3,83232,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.35,83854,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.4,84439,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.45,84969,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.5,85546,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.55,86051,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.6,86555,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.65,87236,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.7,87903,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.75,88791,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.8,89664,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.85,90657,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.9,91894,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.95,93400,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.975,94798,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,quantile,0.99,95280,2022-01-29,2022-01-24,1 wk ahead cum case
+GM03,Bremen,point,,11487,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.01,5333,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.025,5568,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.05,5915,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.1,6656,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.15,7161,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.2,7880,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.25,8542,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.3,9173,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.35,9795,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.4,10380,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.45,10910,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.5,11487,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.55,11992,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.6,12496,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.65,13177,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.7,13844,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.75,14732,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.8,15605,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.85,16598,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.9,17835,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.95,19341,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.975,20739,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,quantile,0.99,21221,2022-01-29,2022-01-24,1 wk ahead inc case
+GM03,Bremen,point,,97022,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.01,82528,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.025,82969,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.05,83887,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.1,85423,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.15,86791,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.2,88382,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.25,90038,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.3,91395,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.35,92621,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.4,94017,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.45,95520,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.5,97022,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.55,98347,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.6,99730,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.65,101276,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.7,102926,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.75,104873,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.8,106965,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.85,109151,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.9,111980,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.95,115307,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.975,118190,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,quantile,0.99,119307,2022-02-05,2022-01-24,2 wk ahead cum case
+GM03,Bremen,point,,11476,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.01,3136,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.025,3342,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.05,3913,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.1,4708,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.15,5571,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.2,6443,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.25,7437,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.3,8163,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.35,8767,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.4,9578,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.45,10551,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.5,11476,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.55,12296,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.6,13175,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.65,14040,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.7,15023,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.75,16082,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.8,17301,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.85,18494,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.9,20086,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.95,21907,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.975,23392,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,quantile,0.99,24027,2022-02-05,2022-01-24,2 wk ahead inc case
+GM03,Bremen,point,,106001,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.01,84040,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.025,84692,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.05,86000,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.1,88248,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.15,90588,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.2,92927,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.25,95275,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.3,97418,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.35,99444,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.4,101553,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.45,103743,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.5,106001,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.55,108068,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.6,110121,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.65,112305,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.7,114808,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.75,117683,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.8,120788,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.85,124078,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.9,128102,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.95,132602,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.975,136656,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,quantile,0.99,138410,2022-02-12,2022-01-24,3 wk ahead cum case
+GM03,Bremen,point,,8979,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.01,1512,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.025,1723,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.05,2113,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.1,2825,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.15,3797,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.2,4545,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.25,5237,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.3,6023,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.35,6823,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.4,7536,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.45,8223,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.5,8979,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.55,9721,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.6,10391,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.65,11029,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.7,11882,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.75,12810,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.8,13823,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.85,14927,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.9,16122,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.95,17295,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.975,18466,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,quantile,0.99,19103,2022-02-12,2022-01-24,3 wk ahead inc case
+GM03,Bremen,point,,111696,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.01,84795,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.025,85545,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.05,87109,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.1,89951,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.15,92712,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.2,95680,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.25,98501,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.3,101120,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.35,103701,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.4,106260,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.45,108933,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.5,111696,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.55,114218,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.6,116752,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.65,119526,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.7,122533,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.75,125958,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.8,129808,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.85,133711,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.9,138520,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.95,144252,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.975,148969,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,quantile,0.99,151014,2022-02-19,2022-01-24,4 wk ahead cum case
+GM03,Bremen,point,,5695,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.01,755,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.025,853,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.05,1109,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.1,1703,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.15,2124,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.2,2753,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.25,3226,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.3,3702,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.35,4257,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.4,4707,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.45,5190,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.5,5695,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.55,6150,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.6,6631,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.65,7221,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.7,7725,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.75,8275,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.8,9020,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.85,9633,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.9,10418,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.95,11650,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.975,12313,2022-02-19,2022-01-24,4 wk ahead inc case
+GM03,Bremen,quantile,0.99,12604,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,point,,255062,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.01,242476,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.025,243128,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.05,244147,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.1,245581,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.15,247145,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.2,248264,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.25,249406,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.3,250634,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.35,251896,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.4,252926,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.45,254028,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.5,255062,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.55,256185,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.6,257558,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.65,258801,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.7,260534,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.75,262215,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.8,263569,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.85,265308,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.9,267499,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.95,270155,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.975,272064,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,quantile,0.99,273069,2022-01-29,2022-01-24,1 wk ahead cum case
+GM04,Hamburg,point,,55110,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.01,42524,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.025,43176,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.05,44195,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.1,45629,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.15,47193,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.2,48312,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.25,49454,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.3,50682,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.35,51944,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.4,52974,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.45,54076,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.5,55110,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.55,56233,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.6,57606,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.65,58849,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.7,60582,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.75,62263,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.8,63617,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.85,65356,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.9,67547,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.95,70203,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.975,72112,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,quantile,0.99,73117,2022-01-29,2022-01-24,1 wk ahead inc case
+GM04,Hamburg,point,,329366,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.01,295350,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.025,296948,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.05,299805,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.1,303931,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.15,307918,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.2,310789,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.25,313840,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.3,317244,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.35,320637,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.4,323436,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.45,326582,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.5,329366,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.55,332540,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.6,336119,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.65,339504,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.7,343757,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.75,347912,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.8,352268,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.85,357604,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.9,363392,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.95,370340,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.975,374993,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,quantile,0.99,378153,2022-02-05,2022-01-24,2 wk ahead cum case
+GM04,Hamburg,point,,74304,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.01,52874,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.025,53820,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.05,55658,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.1,58350,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.15,60773,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.2,62525,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.25,64434,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.3,66610,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.35,68741,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.4,70510,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.45,72554,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.5,74304,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.55,76355,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.6,78561,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.65,80703,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.7,83223,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.75,85697,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.8,88699,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.85,92296,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.9,95893,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.95,100185,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.975,102929,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,quantile,0.99,105084,2022-02-05,2022-01-24,2 wk ahead inc case
+GM04,Hamburg,point,,390095,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.01,335371,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.025,337966,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.05,342125,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.1,348701,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.15,354907,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.2,360149,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.25,365402,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.3,370935,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.35,376148,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.4,381065,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.45,385757,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.5,390095,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.55,394958,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.6,400372,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.65,405776,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.7,412334,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.75,418694,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.8,425662,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.85,433824,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.9,442478,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.95,452756,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.975,459267,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,quantile,0.99,464523,2022-02-12,2022-01-24,3 wk ahead cum case
+GM04,Hamburg,point,,60729,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.01,40021,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.025,41018,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.05,42320,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.1,44770,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.15,46989,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.2,49360,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.25,51562,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.3,53691,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.35,55511,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.4,57629,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.45,59175,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.5,60729,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.55,62418,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.6,64253,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.65,66272,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.7,68577,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.75,70782,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.8,73394,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.85,76220,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.9,79086,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.95,82416,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.975,84274,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,quantile,0.99,86370,2022-02-12,2022-01-24,3 wk ahead inc case
+GM04,Hamburg,point,,423977,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.01,353653,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.025,357005,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.05,361965,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.1,370434,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.15,378556,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.2,385225,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.25,392314,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.3,399313,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.35,405939,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.4,412068,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.45,418038,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.5,423977,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.55,430180,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.6,437407,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.65,444233,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.7,452155,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.75,459894,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.8,468649,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.85,478591,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.9,489301,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.95,502132,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.975,509919,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,quantile,0.99,516103,2022-02-19,2022-01-24,4 wk ahead cum case
+GM04,Hamburg,point,,33882,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.01,18282,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.025,19039,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.05,19840,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.1,21733,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.15,23649,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.2,25076,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.25,26912,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.3,28378,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.35,29791,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.4,31003,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.45,32281,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.5,33882,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.55,35222,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.6,37035,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.65,38457,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.7,39821,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.75,41200,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.8,42987,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.85,44767,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.9,46823,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.95,49376,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.975,50652,2022-02-19,2022-01-24,4 wk ahead inc case
+GM04,Hamburg,quantile,0.99,51580,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,point,,683203,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.01,665151,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.025,666035,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.05,667076,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.1,669586,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.15,671463,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.2,672905,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.25,674797,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.3,676504,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.35,678009,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.4,679690,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.45,681450,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.5,683203,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.55,685274,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.6,687383,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.65,689137,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.7,691085,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.75,692858,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.8,695045,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.85,697328,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.9,699816,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.95,703634,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.975,705701,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,quantile,0.99,706711,2022-01-29,2022-01-24,1 wk ahead cum case
+GM05,Hesse,point,,83664,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.01,65612,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.025,66496,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.05,67537,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.1,70047,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.15,71924,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.2,73366,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.25,75258,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.3,76965,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.35,78470,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.4,80151,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.45,81911,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.5,83664,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.55,85735,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.6,87844,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.65,89598,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.7,91546,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.75,93319,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.8,95506,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.85,97789,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.9,100277,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.95,104095,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.975,106162,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,quantile,0.99,107172,2022-01-29,2022-01-24,1 wk ahead inc case
+GM05,Hesse,point,,782257,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.01,724936,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.025,727506,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.05,731268,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.1,738780,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.15,744468,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.2,749659,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.25,754911,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.3,759918,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.35,764802,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.4,770614,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.45,776406,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.5,782257,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.55,788667,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.6,794941,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.65,801909,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.7,809441,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.75,815860,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.8,824409,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.85,834082,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.9,843360,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.95,856245,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.975,864012,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,quantile,0.99,868970,2022-02-05,2022-01-24,2 wk ahead cum case
+GM05,Hesse,point,,99054,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.01,59785,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.025,61471,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.05,64192,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.1,69194,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.15,73005,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.2,76754,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.25,80114,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.3,83414,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.35,86793,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.4,90924,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.45,94956,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.5,99054,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.55,103393,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.6,107558,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.65,112772,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.7,118356,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.75,123002,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.8,129364,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.85,136754,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.9,143544,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.95,152611,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.975,158311,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,quantile,0.99,162259,2022-02-05,2022-01-24,2 wk ahead inc case
+GM05,Hesse,point,,880843,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.01,773950,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.025,778110,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.05,784739,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.1,797218,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.15,808018,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.2,818539,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.25,828895,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.3,838330,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.35,848037,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.4,858877,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.45,870333,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.5,880843,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.55,893011,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.6,904711,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.65,918480,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.7,932390,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.75,945008,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.8,961658,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.85,980911,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.9,1000180,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.95,1025792,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.975,1040099,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,quantile,0.99,1050180,2022-02-12,2022-01-24,3 wk ahead cum case
+GM05,Hesse,point,,98586,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.01,49014,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.025,50604,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.05,53471,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.1,58438,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.15,63550,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.2,68880,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.25,73984,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.3,78412,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.35,83235,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.4,88263,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.45,93927,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.5,98586,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.55,104344,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.6,109770,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.65,116571,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.7,122949,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.75,129148,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.8,137249,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.85,146829,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.9,156820,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.95,169547,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.975,176087,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,quantile,0.99,181210,2022-02-12,2022-01-24,3 wk ahead inc case
+GM05,Hesse,point,,962069,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.01,809631,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.025,816054,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.05,825702,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.1,842814,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.15,857606,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.2,872230,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.25,887630,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.3,901590,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.35,915609,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.4,930789,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.45,947389,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.5,962069,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.55,978896,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.6,996324,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.65,1015724,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.7,1036439,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.75,1054775,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.8,1079053,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.85,1104529,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.9,1131542,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.95,1167053,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.975,1188576,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,quantile,0.99,1204002,2022-02-19,2022-01-24,4 wk ahead cum case
+GM05,Hesse,point,,81226,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.01,35681,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.025,37944,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.05,40963,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.1,45596,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.15,49588,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.2,53691,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.25,58735,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.3,63260,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.35,67572,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.4,71912,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.45,77056,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.5,81226,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.55,85885,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.6,91613,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.65,97244,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.7,104049,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.75,109767,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.8,117395,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.85,123618,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.9,131362,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.95,141261,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.975,148477,2022-02-19,2022-01-24,4 wk ahead inc case
+GM05,Hesse,quantile,0.99,153822,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,point,,629793,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.01,586254,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.025,587281,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.05,589522,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.1,593997,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.15,599308,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.2,603446,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.25,606608,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.3,610437,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.35,615206,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.4,619701,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.45,624451,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.5,629793,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.55,635179,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.6,640995,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.65,647820,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.7,655785,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.75,664482,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.8,675402,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.85,688456,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.9,704832,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.95,728773,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.975,740473,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,quantile,0.99,748555,2022-01-29,2022-01-24,1 wk ahead cum case
+GM06,Lower Saxony,point,,75767,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.01,32228,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.025,33255,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.05,35496,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.1,39971,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.15,45282,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.2,49420,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.25,52582,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.3,56411,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.35,61180,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.4,65675,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.45,70425,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.5,75767,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.55,81153,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.6,86969,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.65,93794.0000000001,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.7,101759,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.75,110456,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.8,121376,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.85,134430,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.9,150806,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.95,174747,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.975,186447,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,quantile,0.99,194529,2022-01-29,2022-01-24,1 wk ahead inc case
+GM06,Lower Saxony,point,,730515,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.01,621172,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.025,623953,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.05,629073,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.1,639664,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.15,650543,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.2,659907,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.25,670021,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.3,680750,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.35,692393,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.4,704089,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.45,717840,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.5,730515,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.55,745523,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.6,762761,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.65,781368,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.7,803494,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.75,827726,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.8,858499,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.85,890687,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.9,932734,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.95,1008778,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.975,1041187,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,quantile,0.99,1070325,2022-02-05,2022-01-24,2 wk ahead cum case
+GM06,Lower Saxony,point,,100722,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.01,34918,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.025,36672,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.05,39551,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.1,45667,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.15,51235,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.2,56461,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.25,63413,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.3,70313,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.35,77187,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.4,84388,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.45,93389,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.5,100722,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.55,110344,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.6,121766,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.65,133548,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.7,147709,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.75,163244,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.8,183097,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.85,202231,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.9,227902,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.95,280005,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.975,300714,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,quantile,0.99,321770,2022-02-05,2022-01-24,2 wk ahead inc case
+GM06,Lower Saxony,point,,840120,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.01,654623,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.025,659464,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.05,667919,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.1,685266,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.15,702870,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.2,719297,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.25,738186,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.3,755662,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.35,775403,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.4,795302,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.45,817522,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.5,840120,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.55,865006,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.6,893760,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.65,924536,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.7,961739,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.75,1006660,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.8,1059642,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.85,1116711,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.9,1188520,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.95,1292745,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.975,1349762,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,quantile,0.99,1394090,2022-02-12,2022-01-24,3 wk ahead cum case
+GM06,Lower Saxony,point,,109605,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.01,33451,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.025,35511,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.05,38846,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.1,45602,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.15,52327,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.2,59390,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.25,68165,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.3,74912,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.35,83010,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.4,91213,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.45,99682,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.5,109605,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.55,119483,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.6,130999,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.65,143168,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.7,158245,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.75,178934,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.8,201143,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.85,226024,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.9,255786,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.95,283967,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.975,308575,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,quantile,0.99,323765,2022-02-12,2022-01-24,3 wk ahead inc case
+GM06,Lower Saxony,point,,933417,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.01,684810,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.025,691748,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.05,703731,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.1,727391,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.15,750646,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.2,772794,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.25,798146,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.3,821340,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.35,846781,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.4,874588,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.45,903442,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.5,933417,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.55,965821,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.6,1002447,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.65,1043392,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.7,1092856,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.75,1147989,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.8,1217444,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.85,1288439,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.9,1379784,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.95,1506938,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.975,1575767,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,quantile,0.99,1632227,2022-02-19,2022-01-24,4 wk ahead cum case
+GM06,Lower Saxony,point,,93297,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.01,30187,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.025,32284,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.05,35812,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.1,42125,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.15,47776,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.2,53497,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.25,59960,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.3,65678,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.35,71378,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.4,79286,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.45,85920,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.5,93297,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.55,100815,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.6,108687,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.65,118856,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.7,131117,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.75,141329,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.8,157802,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.85,171728,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.9,191264,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.95,214193,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.975,226005,2022-02-19,2022-01-24,4 wk ahead inc case
+GM06,Lower Saxony,quantile,0.99,238137,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,point,,1875952,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.01,1828104,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.025,1829949,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.05,1833131,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.1,1838876,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.15,1844671,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.2,1849761,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.25,1853828,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.3,1858383,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.35,1864005,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.4,1868295,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.45,1872019,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.5,1875952,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.55,1880914,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.6,1885089,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.65,1889747,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.7,1895225,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.75,1900947,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.8,1906699,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.85,1915030,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.9,1923984,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.95,1934495,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.975,1939942,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.99,1943899,2022-01-29,2022-01-24,1 wk ahead cum case
+GM07,North Rhine-Westphalia,point,,192639,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.01,144791,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.025,146636,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.05,149818,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.1,155563,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.15,161358,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.2,166448,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.25,170515,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.3,175070,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.35,180692,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.4,184982,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.45,188706,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.5,192639,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.55,197601,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.6,201776,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.65,206434,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.7,211912,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.75,217634,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.8,223386,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.85,231717,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.9,240671,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.95,251182,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.975,256629,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.99,260586,2022-01-29,2022-01-24,1 wk ahead inc case
+GM07,North Rhine-Westphalia,point,,2096978,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.01,1955542,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.025,1960971,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.05,1969630,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.1,1986450,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.15,2000458,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.2,2015498,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.25,2029730,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.3,2044250,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.35,2058148,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.4,2071721,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.45,2084183,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.5,2096978,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.55,2110823,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.6,2124640,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.65,2140536,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.7,2158210,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.75,2178103,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.8,2199606,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.85,2223215,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.9,2249796,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.95,2282257,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.975,2306845,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.99,2324568,2022-02-05,2022-01-24,2 wk ahead cum case
+GM07,North Rhine-Westphalia,point,,221026,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.01,127438,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.025,131022,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.05,136499,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.1,147574,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.15,155787,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.2,165737,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.25,175902,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.3,185867,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.35,194143,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.4,203426,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.45,212164,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.5,221026,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.55,229909,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.6,239551,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.65,250789,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.7,262985,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.75,277156,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.8,292907,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.85,308185,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.9,325812,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.95,347762,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.975,366903,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.99,380669,2022-02-05,2022-01-24,2 wk ahead inc case
+GM07,North Rhine-Westphalia,point,,2301820,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.01,2048967,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.025,2057999,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.05,2075228,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.1,2102228,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.15,2128008,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.2,2153971,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.25,2178735,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.3,2206028,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.35,2231623,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.4,2254879,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.45,2278034,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.5,2301820,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.55,2325994,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.6,2352530,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.65,2382990,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.7,2417138,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.75,2453830,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.8,2491651,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.85,2536648,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.9,2586169,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.95,2645781,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.975,2689600,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.99,2719218,2022-02-12,2022-01-24,3 wk ahead cum case
+GM07,North Rhine-Westphalia,point,,204842,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.01,93425,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.025,97028,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.05,105598,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.1,115778,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.15,127550,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.2,138473,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.25,149005,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.3,161778,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.35,173475,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.4,183158,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.45,193851,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.5,204842,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.55,215171,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.6,227890,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.65,242454,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.7,258928,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.75,275727,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.8,292045,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.85,313433,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.9,336373,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.95,363524,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.975,382755,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.99,394650,2022-02-12,2022-01-24,3 wk ahead inc case
+GM07,North Rhine-Westphalia,point,,2460575,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.01,2109772,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.025,2121158,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.05,2143993,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.1,2182498,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.15,2217977,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.2,2251696,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.25,2285845,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.3,2322316,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.35,2357706,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.4,2392504,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.45,2425224,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.5,2460575,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.55,2494566,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.6,2532203,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.65,2573664,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.7,2620227,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.75,2672416,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.8,2723458,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.85,2784752,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.9,2854679,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.95,2943596,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.975,3004120,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,quantile,0.99,3044804,2022-02-19,2022-01-24,4 wk ahead cum case
+GM07,North Rhine-Westphalia,point,,158755,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.01,60805,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.025,63159,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.05,68765,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.1,80270,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.15,89969,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.2,97725,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.25,107110,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.3,116288,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.35,126083,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.4,137625,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.45,147190,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.5,158755,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.55,168572,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.6,179673,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.65,190674,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.7,203089,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.75,218586,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.8,231807,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.85,248104,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.9,268510,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.95,297815,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.975,314520,2022-02-19,2022-01-24,4 wk ahead inc case
+GM07,North Rhine-Westphalia,quantile,0.99,325586,2022-02-19,2022-01-24,4 wk ahead inc case
+GM08,,,,,,,NA wk ahead cum case
+GM09,,,,,,,NA wk ahead cum case
+GM10,,,,,,,NA wk ahead cum case
+GM11,Brandenburg,point,,348399,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.01,334705,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.025,335230,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.05,336214,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.1,337884,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.15,339157,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.2,340582,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.25,341906,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.3,343170,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.35,344514,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.4,345916,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.45,347166,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.5,348399,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.55,349913,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.6,351309,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.65,353141,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.7,354462,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.75,356310,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.8,357990,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.85,359853,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.9,362766,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.95,366091,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.975,368164,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,quantile,0.99,369495,2022-01-29,2022-01-24,1 wk ahead cum case
+GM11,Brandenburg,point,,50763,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.01,37069,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.025,37594,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.05,38578,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.1,40248,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.15,41521,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.2,42946,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.25,44270,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.3,45534,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.35,46878,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.4,48280,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.45,49530,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.5,50763,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.55,52277,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.6,53673,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.65,55505,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.7,56826,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.75,58674,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.8,60354,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.85,62217,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.9,65130,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.95,68455,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.975,70528,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,quantile,0.99,71859,2022-01-29,2022-01-24,1 wk ahead inc case
+GM11,Brandenburg,point,,423287,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.01,378979,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.025,380345,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.05,383460,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.1,389063,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.15,393736,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.2,398892,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.25,402704,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.3,406887,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.35,411005,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.4,415170,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.45,418889,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.5,423287,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.55,427522,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.6,432197,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.65,436850,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.7,441638,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.75,447361,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.8,453891,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.85,460084,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.9,468333,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.95,477482,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.975,483893,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,quantile,0.99,487125,2022-02-05,2022-01-24,2 wk ahead cum case
+GM11,Brandenburg,point,,74888,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.01,44274,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.025,45115,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.05,47246,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.1,51179,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.15,54579,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.2,58310,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.25,60798,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.3,63717,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.35,66491,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.4,69254,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.45,71723,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.5,74888,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.55,77609,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.6,80888,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.65,83709,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.7,87176,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.75,91051,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.8,95901,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.85,100231,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.9,105567,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.95,111391,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.975,115729,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,quantile,0.99,117630,2022-02-05,2022-01-24,2 wk ahead inc case
+GM11,Brandenburg,point,,486275,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.01,412020,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.025,415213,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.05,420379,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.1,429152,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.15,437267,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.2,445934,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.25,452409,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.3,459023,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.35,465821,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.4,472702,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.45,479188,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.5,486275,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.55,493814,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.6,501345,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.65,508305,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.7,516409,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.75,525816,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.8,535579,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.85,546042,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.9,558616,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.95,573434,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.975,583097,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,quantile,0.99,588002,2022-02-12,2022-01-24,3 wk ahead cum case
+GM11,Brandenburg,point,,62988,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.01,33041,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.025,34868,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.05,36919,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.1,40089,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.15,43531,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.2,47042,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.25,49705,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.3,52136,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.35,54816,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.4,57532,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.45,60299,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.5,62988,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.55,66292,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.6,69148,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.65,71455,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.7,74771,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.75,78455,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.8,81688,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.85,85958,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.9,90283.0000000001,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.95,95952,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.975,99204,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,quantile,0.99,100877,2022-02-12,2022-01-24,3 wk ahead inc case
+GM11,Brandenburg,point,,522131,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.01,426520,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.025,430389,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.05,437208,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.1,448855,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.15,459552,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.2,470344,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.25,478728,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.3,487326,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.35,495705,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.4,504606,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.45,512829,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.5,522131,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.55,531760,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.6,541648,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.65,550708,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.7,560477,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.75,571944,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.8,584183,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.85,597308,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.9,612339,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.95,630910,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.975,642129,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,quantile,0.99,648206,2022-02-19,2022-01-24,4 wk ahead cum case
+GM11,Brandenburg,point,,35856,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.01,14500,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.025,15176,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.05,16829,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.1,19703,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.15,22285,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.2,24410,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.25,26319,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.3,28303,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.35,29884,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.4,31904,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.45,33641,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.5,35856,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.55,37946,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.6,40303,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.65,42403,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.7,44068,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.75,46128,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.8,48604,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.85,51266,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.9,53723,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.95,57476,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.975,59032,2022-02-19,2022-01-24,4 wk ahead inc case
+GM11,Brandenburg,quantile,0.99,60204,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,point,,147593,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,141909,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,142089,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,142396,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,143103,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,143697,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,144269,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,144908,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,145483,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,146025,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,146629,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,147106,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,147593,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,148270,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,148875,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,149546,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,150294,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,151223,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,152181,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,153323,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,154869,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,156286,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,157204,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,158001,2022-01-29,2022-01-24,1 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,point,,20970,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,15286,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,15466,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,15773,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,16480,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,17074,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,17646,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,18285,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,18860,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,19402,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,20006,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,20483,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,20970,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,21647,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,22252,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,22923,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,23671,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,24600,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,25558,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,26700,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,28246,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,29663,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,30581,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,31378,2022-01-29,2022-01-24,1 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,point,,181750,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,160834,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,161935,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,163119,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,165280,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,167302,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,169553,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,171707,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,173493,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,175388,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,177482,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,179717,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,181750,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,184339,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,186464,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,189233,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,192336,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,195953,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,199191,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,203246,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,208859,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,215259,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,219452,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,222711,2022-02-05,2022-01-24,2 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,point,,34157,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,18925,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,19846,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,20723,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,22177,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,23605,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,25284,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,26799,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,28010,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,29363,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,30853,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,32611,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,34157,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,36069,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,37589,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,39687,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,42042,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,44730,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,47010,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,49923,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,53990,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,58973,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,62248,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,64710,2022-02-05,2022-01-24,2 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,point,,221403,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,180638,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,182722,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,185202,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,189232,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,193248,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,197196,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,201440,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,205102,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,208939,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,213319,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,217403,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,221403,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,226235,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,230493,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,235901,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,241734,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,248242,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,254541,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,261586,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,271247,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,282671,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,289414,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,294017,2022-02-12,2022-01-24,3 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,point,,39653,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,19804,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,20787,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,22083,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,23952,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,25946,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,27643,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,29733,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,31609,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,33551,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,35837,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,37686,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,39653,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,41896,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,44029,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,46668,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,49398,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,52289,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,55350,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,58340.0000000001,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,62388,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,67412,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,69962,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,71306,2022-02-12,2022-01-24,3 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,point,,252657,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,196198,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,198955,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,202641,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,208326,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,214074,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,219853,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,225571,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,230862,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,235887,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,241812,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,247339,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,252657,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,259145,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,264969,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,272414,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,279837,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,288584,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,296737,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,306200,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,318275,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,332724,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,341388,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,347141,2022-02-19,2022-01-24,4 wk ahead cum case
+GM12,Mecklenburg-Vorpommern,point,,31254,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.01,15560,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.025,16233,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.05,17439,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.1,19094,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.15,20826,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.2,22657,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.25,24131,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.3,25760,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.35,26948,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.4,28493,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.45,29936,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.5,31254,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.55,32910,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.6,34476,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.65,36513,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.7,38103,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.75,40342,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.8,42196,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.85,44614,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.9,47028,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.95,50053,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.975,51974,2022-02-19,2022-01-24,4 wk ahead inc case
+GM12,Mecklenburg-Vorpommern,quantile,0.99,53124,2022-02-19,2022-01-24,4 wk ahead inc case
+GM13,,,,,,,NA wk ahead cum case
+GM14,,,,,,,NA wk ahead cum case
+GM15,,,,,,,NA wk ahead cum case
+GM16,Berlin,point,,547726,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.01,507520,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.025,508830,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.05,511462,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.1,515928,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.15,520055,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.2,523810,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.25,527720,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.3,531450,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.35,535805,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.4,539708,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.45,543769,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.5,547726,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.55,553053,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.6,557013,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.65,561874,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.7,568391,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.75,573925,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.8,581019,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.85,589055,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.9,599814,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.95,610117,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.975,618543,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,quantile,0.99,623755,2022-01-29,2022-01-24,1 wk ahead cum case
+GM16,Berlin,point,,96078,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.01,55872,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.025,57182,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.05,59814,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.1,64280,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.15,68407,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.2,72162,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.25,76072,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.3,79802,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.35,84157,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.4,88060,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.45,92121,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.5,96078,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.55,101405,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.6,105365,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.65,110226,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.7,116743,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.75,122277,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.8,129371,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.85,137407,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.9,148166,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.95,158469,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.975,166895,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,quantile,0.99,172107,2022-01-29,2022-01-24,1 wk ahead inc case
+GM16,Berlin,point,,656186,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.01,560614,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.025,564004,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.05,570843,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.1,581141,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.15,591721,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.2,601350,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.25,610665,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.3,619655,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.35,628658,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.4,638029,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.45,647180,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.5,656186,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.55,666437,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.6,676483,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.65,688322,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.7,701824,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.75,714916,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.8,730841,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.85,748207,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.9,772894,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.95,798684,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.975,814082,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,quantile,0.99,825277,2022-02-05,2022-01-24,2 wk ahead cum case
+GM16,Berlin,point,,108460,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.01,53094,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.025,55174,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.05,59381,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.1,65213,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.15,71666,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.2,77540,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.25,82945,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.3,88205,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.35,92853,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.4,98321,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.45,103411,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.5,108460,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.55,113384,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.6,119470,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.65,126448,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.7,133433,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.75,140991,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.8,149822,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.85,159152,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.9,173080,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.95,188567,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.975,195539,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,quantile,0.99,201522,2022-02-05,2022-01-24,2 wk ahead inc case
+GM16,Berlin,point,,733400,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.01,594560,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.025,599948,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.05,609206,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.1,624768,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.15,640041,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.2,654174,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.25,668162,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.3,681233,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.35,694530,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.4,707575,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.45,720324,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.5,733400,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.55,748395,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.6,762827,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.65,779637,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.7,799209,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.75,817837,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.8,839270,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.85,863542,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.9,895106,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.95,929578,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.975,949057,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,quantile,0.99,963410,2022-02-12,2022-01-24,3 wk ahead cum case
+GM16,Berlin,point,,77214,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.01,33946,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.025,35944,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.05,38363,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.1,43627,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.15,48320,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.2,52824,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.25,57497,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.3,61578,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.35,65872,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.4,69546,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.45,73144,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.5,77214,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.55,81958,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.6,86344,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.65,91315,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.7,97385,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.75,102921,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.8,108429,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.85,115335,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.9,122212,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.95,130894,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.975,134975,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,quantile,0.99,138133,2022-02-12,2022-01-24,3 wk ahead inc case
+GM16,Berlin,point,,773458,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.01,609800,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.025,616003,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.05,627264,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.1,646146,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.15,663775,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.2,679901,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.25,696257,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.3,711754,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.35,727494,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.4,743048,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.45,758222,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.5,773458,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.55,790997,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.6,808195,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.65,827851,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.7,850227,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.75,871527,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.8,896083,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.85,924106,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.9,960357,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.95,1000632,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.975,1024305,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,quantile,0.99,1040679,2022-02-19,2022-01-24,4 wk ahead cum case
+GM16,Berlin,point,,40058,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.01,15240,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.025,16055,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.05,18058,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.1,21378,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.15,23734,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.2,25727,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.25,28095,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.3,30521,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.35,32964,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.4,35473,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.45,37898,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.5,40058,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.55,42602,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.6,45368,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.65,48214,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.7,51018,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.75,53690,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.8,56813,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.85,60564,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.9,65251,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.95,71054,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.975,75248,2022-02-19,2022-01-24,4 wk ahead inc case
+GM16,Berlin,quantile,0.99,77269,2022-02-19,2022-01-24,4 wk ahead inc case
