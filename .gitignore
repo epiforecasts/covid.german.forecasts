@@ -15,3 +15,4 @@ rt-crowd-forecast/data-raw
 data-raw/epiforecasts-*
 data-raw/KIT*
 data-raw/included_models
+*.DS_Store
