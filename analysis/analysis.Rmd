@@ -8,7 +8,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, cache = TR
 options(knitr.kable.NA = '')
 library(here)
 library(magrittr)
-library(scoringutils)
+library(scoringutils) #needs v0.18
+# remotes::install_github("epiforecasts/scoringutils@v0.1.8")
 library(knitr)
 library(kableExtra)
 library(data.table)
@@ -33,7 +34,7 @@ colensemble <- c("#FDC086", brewer.pal(name = "Set2", n = 8))
 
 # helper function for labeling plots
 scale_fn <- function(x) {
-  ifelse(x >= 5000,
+  ifelse(abs(x) >= 5000,
          paste0(x / 1000, "k"), x)
 }
 ```
@@ -108,7 +109,9 @@ component_plot <- function(scores, type, colour_scheme, x = x, rel = relative,
   
   if (rel) {
     p <- p + 
-      geom_hline(yintercept = 1, linetype = "dashed")
+      geom_hline(yintercept = 1, linetype = "dashed") +
+      expand_limits(y = c(0, 1)) +
+      scale_y_continuous(breaks = seq(0, max(scores$value), 0.25))
   }
   
   p <- p + 
@@ -133,8 +136,12 @@ component_plot <- function(scores, type, colour_scheme, x = x, rel = relative,
 
 # helper function to make subplots E - H
 plot_helper <- function(tmp = scores, xvar = x, y, rel = relative, 
-                        facet_formula, colour) {
+                        facet_formula, colour, scalefree = NULL) {
+  if (is.null(scalefree)) {
+    scalefree <- "free_y"
+  }
   if (rel) {
+    scalefree <- "fixed"
     tmp <- tmp %>%
       arrange(target_type, !!sym(xvar)) %>%
       group_by(target_type, !!sym(xvar)) %>%
@@ -142,22 +149,28 @@ plot_helper <- function(tmp = scores, xvar = x, y, rel = relative,
                                         "Hub-ensemble-mean")])
   }
   
-  tmp %>%
+  out <- tmp %>%
     ggplot(aes_string(x = xvar, y = y, group = "Model", color = "Model")) +
     geom_point(position = position_dodge(width = 0.1)) +
     geom_line(position = position_dodge(width = 0.1)) +
-    facet_wrap(facet_formula, scales = "free_y") +
     theme_minimal() +
     theme(legend.position = "bottom") +
     scale_color_manual(values = colour) + 
     scale_y_continuous(labels = scale_fn) + 
+    expand_limits(y = 0) +
+    facet_wrap(facet_formula, scales = scalefree) +
     guides(fill = "none", colour = "none")
+  
+  return(out)
 }
+
+
+
 
 # function to create Figure 1
 aggregate_performance <- function(data, 
                                   x = "horizon",
-                                  xlabel = "Forecast horizon",
+                                  xlabel = "Forecast horizon (weeks)",
                                   output_dir = here("analysis", "plots"), 
                                   plotname,
                                   relative = FALSE,
@@ -198,7 +211,7 @@ aggregate_performance <- function(data,
     round(2)
   p_bias <- 
     plot_helper(scores, y = "bias", rel = FALSE, colour = vals, xvar = x,
-                facet_formula = facet_formula) + 
+                facet_formula = facet_formula, scalefree = "fixed") + 
     labs(y = "Bias", x = NULL) +
     geom_hline(yintercept = 0, linetype = "dashed") +
     expand_limits(y=bias_limits) 
@@ -207,13 +220,13 @@ aggregate_performance <- function(data,
   p_aem <-
     plot_helper(scores, y = "aem", rel = relative, xvar = x,
                 facet_formula = facet_formula, colour = vals) + 
-    labs(y = "Absolute error", x = NULL) 
+    labs(y = "Absolute error", x = xlabel) 
   
   # plot with sd of performance in panel H -------------------------------------
   p_wis_sd <- 
     plot_helper(scores, y = "interval_score_sd", rel = relative, xvar = x,
                 facet_formula = facet_formula, colour = vals) + 
-    labs(y = "WIS - sd", x = NULL)
+    labs(y = "WIS - sd", x = xlabel)
   
   # coverage plots (panel C and D) ---------------------------------------------
   # calculate scores that also include the interval range
@@ -231,7 +244,7 @@ aggregate_performance <- function(data,
   p_cov50 <- scores %>%
     filter(range == c(50)) %>%
     plot_helper(y = "coverage", rel = FALSE, facet_formula = facet_formula, 
-                colour = vals, xvar = x) +
+                colour = vals, xvar = x, scalefree = "fixed") +
     labs(y = "Diff. cov. - 50% PI", x = "") + 
     scale_y_continuous(labels = scales::percent)
   
@@ -247,8 +260,8 @@ aggregate_performance <- function(data,
   p_cov90 <-  scores %>%
     filter(range == c(90)) %>%
     plot_helper(y = "coverage", rel = FALSE, facet_formula = facet_formula, 
-                xvar = x, colour = vals) + 
-    labs(y = "Diff. cov. - 90% PI") + 
+                xvar = x, colour = vals, scalefree = "fixed") + 
+    labs(y = "Diff. cov. - 90% PI", x = "") + 
     scale_y_continuous(labels = scales::percent)
   
   # if not relative, add a dashed line at 90%
@@ -271,7 +284,8 @@ aggregate_performance <- function(data,
                 heights = c(1.3, 1, 1, 1)) &
     plot_annotation(tag_levels = 'A')  &
     theme(legend.position = 'bottom', 
-          legend.box="vertical", legend.margin=margin()) 
+          legend.box="vertical", legend.margin=margin()) &
+    labs(x = xlabel)
     
     ggsave(here(output_dir, paste0(plotname, "-v4.png")), 
            height = 9.1, width = 10)
@@ -292,15 +306,15 @@ filtered_data[model %in% regular_models] %>%
 filtered_data[model %in% regular_models & horizon == 2] %>%
   aggregate_performance(plotname = "aggregate-performance-2-weeks-locations-all", 
                         x = "location_name", 
-                        xlabel = NULL)
+                        xlabel = "Location")
 
 # plot version that compares locations in relative terms for SI
 filtered_data[model %in% regular_models & horizon == 2] %>%
   aggregate_performance(plotname = "aggregate-performance-2-weeks-locations-all-rel", 
                         x = "location_name", 
-                        xlabel = NULL, relative = TRUE)
+                        xlabel = "Location", relative = TRUE)
 
-# plot for different median ensembles (in relative terms) for SI
+# plot for different median ensembles (in relative terms) Figure 4
 filtered_data[model %in% ensemble_models[!grepl("mean", ensemble_models)]] %>%
   # filter(!(model == "Hub-ensemble-with-all" & target_type == "case")) %>%
   aggregate_performance(plotname = "aggregate-performance-rel-ensemble", 
@@ -311,6 +325,13 @@ filtered_data[model %in% ensemble_models[grepl("mean", ensemble_models)]] %>%
   # filter(!(model == "Hub-ensemble-with-all" & target_type == "case")) %>%
   aggregate_performance(plotname = "aggregate-performance-rel-ensemble-mean", 
                         relative = TRUE, colour_scheme = "ensemble")
+
+# make SI version of Figure 1 for Germany and Poland separately
+filtered_data[(model %in% regular_models) & location == "GM" ] %>%
+  aggregate_performance(plotname = "aggregate-performance-all-Germany")
+
+filtered_data[(model %in% regular_models) & location == "PL" ] %>%
+  aggregate_performance(plotname = "aggregate-performance-all-Poland")
 
 ```
 
@@ -911,5 +932,312 @@ ggsave("plots/crowdforecast_regularity.png")
 ```
 
 
+
+
+Create comparison of crowd forecasts and baseline model - 2 Week ahead forecasts
+
+```{r}
+
+dailytruth_data
+
+crowdforecasts <- covid.german.forecasts::prediction_data %>% 
+  filter(model == "Crowd forecast")
+
+
+qs <- c(0.05, 0.25, 0.5, 0.75, 0.95)
+
+basline_forecasts <- truth_data %>%
+  mutate(difference = c(NA, diff(log(pmax(true_value, 1)))), 
+         target_end_date = as.Date(target_end_date), 
+         id = 1:n()) %>%
+  rowwise() %>%
+  mutate(sd = sd(d$difference[pmax(0, id - (4:1))]), 
+         quantile = list(qs)) %>%
+  tidyr::unnest(cols = quantile) %>%
+  mutate(prediction = exp(qnorm(quantile, mean = log(true_value), sd = sd)), 
+         model = "Baseline", 
+         forecast_date = target_end_date + 2) %>%
+  unique()
+
+plot_df <- prediction_data %>%
+  filter(model == "Crowd forecast", 
+         quantile %in% qs, 
+         grepl("2", target)) %>%
+  unique() %>%
+  rbind(basline_forecasts, fill = TRUE) %>%
+  filter(forecast_date %in% forecast_dates$unfiltered) %>%
+  pivot_wider(names_from = quantile, values_from = prediction) %>%
+  rename(Model = model) %>%
+  mutate(target_type = ifelse(target_type == "case", "Case", "Death"))
+
+
+plot_df %>%
+  ggplot(aes(x = forecast_date, colour = NULL, fill = Model)) +
+  geom_line(aes(y = `0.5`)) +
+  facet_wrap(location_name ~ target_type, scales = "free_y") +
+  geom_ribbon(aes(ymin = `0.05`, ymax = `0.95`), alpha = 0.2) +
+  geom_ribbon(aes(ymin = `0.25`, ymax = `0.75`), alpha = 0.5) +
+  theme_minimal() +
+  scale_y_continuous(labels = scale_fn) +
+  labs(y = "Prediction intervals", x = "Forecast date") +
+  theme(legend.position = "bottom")
+
+ggsave(here("analysis", "plots", "comparison-forecast-interals.png"), 
+       height = 6, width = 9)
+
+```
+
+
+
+
+
+
+
+
+
+Analysis of how data changed over time
+
+
+```{r}
+current_data <- 
+  rbind(
+    fread(here("data-raw", "daily-incidence-cases.csv")) %>%
+      mutate(target_type = "Case"), 
+    fread(here("data-raw", "daily-incidence-deaths.csv")) %>%
+      mutate(target_type = "Death")
+  ) %>%
+  filter(location_name %in% c("Germany", "Poland")) %>%
+  select(region = location_name, date, value, target_type) %>%
+  unique()
+
+original_cases <- original_deaths <- list()
+for (target_date in as.character(forecast_dates$unfiltered)) {
+  # Get cases  ---------------------------------------------------------------
+  original_cases[[target_date]] <- 
+    fread(file.path("rt-forecast", "data", "summary", 
+                    "cases", target_date, "reported_cases.csv")) %>%
+    mutate(fit_date = target_date)
+  
+  original_deaths[[target_date]] <- 
+    fread(file.path("rt-forecast", "data", "summary", 
+                    "deaths", target_date, "reported_cases.csv")) %>%
+    mutate(fit_date = target_date)
+}
+original_cases <- rbindlist(original_cases) %>%
+  mutate(target_type = "Case") 
+original_deaths <- rbindlist(original_deaths) %>%
+  mutate(target_type = "Death")
+
+original <- 
+  rbind(original_cases, original_deaths) %>%
+  filter(region %in% c("Germany", "Poland")) %>%
+  unique() %>%
+  rename(value_original = confirm) 
+
+dailycomparison <- full_join(current_data, original) %>%
+  filter(!is.na(value_original)) %>%
+  mutate(difference = value - value_original, 
+         rel_difference = difference / value_original)
+
+dailycomparison%>%
+  filter(date >= min(forecast_dates$unfiltered -2), 
+         date <= max(forecast_dates$unfiltered)) %>%
+  ggplot(aes(x = date)) +
+  geom_line(aes(y = difference)) +
+  theme_minimal() +
+  facet_wrap(region ~ target_type, scales = "free_y") +
+  labs(y = "Absolute change in data", x = "Date")
+
+ggsave(here("analysis", "plots", "daily-data-updates.png"), 
+       height = 6, width = 9)
+
+
+# weekly data
+weeklycomparison <- dailycomparison %>%
+  group_by(date, region, target_type) %>%
+  # only take the oldest one for comparison if an update has taken place
+  slice_head(n = 1) %>%
+  ungroup() %>%
+  select(-fit_date) %>%
+  unique() %>%
+  mutate(week = grates::as_yearweek(as.character(date), firstday = 7)) %>%
+  group_by(week, target_type, region) %>%
+  summarise(value = sum(value), 
+            date = max(date),
+            value_original = sum(value_original)) %>%
+  mutate(difference = value - value_original, 
+         rel_difference = difference / value_original)
+
+weeklycomparison %>%
+  filter(date >= min(forecast_dates$unfiltered -2), 
+         date <= max(forecast_dates$unfiltered)) %>%
+  ggplot(aes(x = date, y = rel_difference)) +
+  geom_line() +
+  facet_wrap(region ~ target_type, scales = "fixed") +
+  scale_y_continuous(labels = scales::percent) +
+  theme_minimal() +
+  labs(y = "Relative change in weekly data", x = "Date")
+
+ggsave(here("analysis", "plots", "weekly-data-updates.png"), 
+       height = 6, width = 9)
+
+
+```
+
+Plot with differences hub ensemble vs. crowd forecasts
+
+```{r}
+scores <- eval_forecasts(
+  filtered_data[(model %in% regular_models)], 
+  summarise_by = c("model", "target_type", "location_name", "horizon", 
+                   "forecast_date", "target_phase",
+                   "location_target", "classification"),
+  compute_relative_skill = FALSE
+) 
+
+# reformat column
+scores[, target_type := str_to_title(target_type)]
+
+p <- scores[model %in% c("Crowd forecast", "Hub-ensemble")] %>%
+  filter(horizon == 2) %>%
+  select(target_type, model, location_name, forecast_date, interval_score) %>%
+  rename(Model = model) %>%
+  pivot_wider(names_from = Model, values_from = interval_score) %>%
+  ggplot(aes(x = `Crowd forecast` - `Hub-ensemble`)) +
+  ggdist::stat_slab(alpha = 1, scale = 1, normalize = "panels") +
+  scale_x_continuous(labels = scale_fn) +
+  theme(axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  scale_y_continuous(labels = NULL) +
+  lemon::scale_x_symmetric(labels = scale_fn) +
+  theme_minimal() +
+  labs(y = "Density", x = "WIS difference Crowd forecast - Hub-ensemble") 
+
+p1 <- p +
+  facet_wrap(~ target_type, nrow = 2, scales = "free")
+p2 <- p +
+  facet_wrap(location_name ~ target_type, scales = "free")
+
+p1 + p2
+
+ggsave(here("analysis", "plots", "difference-wis-crowd-ensemble.png"), 
+       height = 6, width = 9)
+
+```
+
+
+
+Looking at removed forecasts - yields nothing
+
+```{r}
+
+files <- list.files(here("crowd-forecast", "raw-forecast-data/"))
+
+raw_forecasts <- purrr::map_dfr(
+  files,
+  .f = function(x) {
+    out <- fread(
+      here("crowd-forecast", "raw-forecast-data/", x)
+    ) %>%
+      mutate(target_end_date = as.character(target_end_date))
+    } 
+) %>%
+  dplyr::filter(location_name %in% c("Germany", "Poland")) %>%
+  mutate(location = ifelse(location_name == "Germany", "GM", "PL"), 
+         distribution = ifelse(is.na(distribution), "log-normal", distribution), 
+         width = ifelse(is.na(width), shape_log_normal, width), 
+         target_type = ifelse(is.na(target_type), type, target_type)) 
+
+# use only the latest forecast from a given forecaster
+filtered_forecasts <- raw_forecasts %>%
+  group_by(forecaster_id, location, target_type) %>%
+  dplyr::filter(forecast_time == max(forecast_time)) %>%
+  ungroup()
+
+# replace forecast duration with exact data about forecast date and time
+# define function to do this for raw and filtered forecasts
+replace_date_and_time <- function(forecasts) {
+  forecast_times <- forecasts %>%
+    group_by(forecaster_id, location, target_type) %>%
+    summarise(forecast_time = unique(forecast_time)) %>%
+    ungroup() %>%
+    arrange(forecaster_id, forecast_time) %>%
+    group_by(forecaster_id) %>%
+    mutate(forecast_duration = c(NA, diff(forecast_time))) %>%
+    ungroup()
+
+  forecasts <- inner_join(
+    forecasts, forecast_times,
+    by = c("forecaster_id", "location", "target_type", "forecast_time")) %>%
+    mutate(forecast_week = epiweek(forecast_date),
+           target_end_date = as.Date(target_end_date)) %>%
+    select(-forecast_time)
+  return(forecasts)
+}
+
+# replace time with duration and date with epiweek
+raw_forecasts <- replace_date_and_time(raw_forecasts)
+filtered_forecasts <- replace_date_and_time(filtered_forecasts)
+
+# obtain quantiles from forecasts ----------------------------------------------
+# define function that returns quantiles depending on condition and distribution
+calculate_quantiles <- function(quantile_grid, median, width, forecast_type, 
+                                distribution, lower_90, upper_90) {
+  if (distribution == "log-normal") {
+    values <- list(exp(qnorm(
+      quantile_grid, mean = log(as.numeric(median)), sd = as.numeric(width)
+      )))
+  } else if (distribution == "normal") {
+    values <- list((qnorm(
+      quantile_grid, mean = (as.numeric(median)), sd = as.numeric(width)
+      )))
+  } else if (distribution == "cubic-normal") {
+    values <- list((qnorm(quantile_grid,
+     mean = (as.numeric(median) ^ (1 / 3)), sd = as.numeric(width))
+      ) ^ 3)
+  } else if (distribution == "fifth-power-normal") {
+    values <- list((qnorm(quantile_grid, 
+    mean = (as.numeric(median) ^ (1 / 5)), sd = as.numeric(width)
+      )) ^ 5)
+  } else if (distribution == "seventh-power-normal") {
+    values <- list((qnorm(quantile_grid,
+     mean = (as.numeric(median) ^ (1 / 7)), sd = as.numeric(width))
+     ) ^ 7)
+  }
+  return(values)
+}
+
+quantile_grid <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
+
+forecast_quantiles <- filtered_forecasts %>%
+  # disregard quantile forecasts this week
+  rowwise() %>%
+  mutate(quantile = list(quantile_grid),
+        value = calculate_quantiles(quantile_grid, median, width, 
+        forecast_type, distribution, lower_90, upper_90)) %>%
+  unnest(cols = c(quantile, value)) %>%
+  ungroup() %>%
+  mutate(type = ifelse(target_type == "cases", "case", "death"), 
+         target = paste0(horizon, " wk ahead inc ", type), 
+         type = "quantile")
+
+# omit forecasters who haven't forecasted at least two targets
+forecasters_to_omit <- forecast_quantiles %>%
+  select(forecaster_id, location, target_type, forecast_date) %>%
+  unique() %>%
+  group_by(forecaster_id) %>%
+  mutate(n = n(), flag = n >= 2) %>%
+  dplyr::filter(!flag) %>%
+  pull(forecaster_id) %>%
+  unique()
+
+
+
+
+
+
+
+```
 
 
