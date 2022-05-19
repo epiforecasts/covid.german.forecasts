@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  12 MAY 2022 13:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  19 MAY 2022 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,16 +699,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 160.
 [5] [6] [7] [8]
-<../analysis/plots/aggregate-performance-all-v4.png, id=79, 3011.25pt x 2740.23
+<../analysis/plots/aggregate-performance-all-v4.png, id=80, 3011.25pt x 2740.23
 75pt>
 File: ../analysis/plots/aggregate-performance-all-v4.png Graphic file (type png
 )
 <use ../analysis/plots/aggregate-performance-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-v4.png  us
-ed on input line 204.
+ed on input line 206.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
 [][]
  []
 
@@ -720,16 +720,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.206 
+l.208 
        <../analysis/plots/aggregate-performance-all-v4.png>]
-<../analysis/plots/figure-forecasts-2.png, id=97, 3011.25pt x 3312.375pt>
+<../analysis/plots/figure-forecasts-2.png, id=99, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-2.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-2.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-2.png  used on inpu
-t line 208.
+t line 210.
 (pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--208
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 [][]
  []
 
@@ -738,32 +738,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.212 ...on{Case Forecasts}\label{case-forecasts}}
+l.214 ...on{Case Forecasts}\label{case-forecasts}}
                                                    <../analysis/plots/figure-fo
 recasts-2.png>] [12] [13] [14]
-<../analysis/plots/distribution_scores_wis-2.png, id=165, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-2.png, id=170, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-2.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-2.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2.png  used 
-on input line 237.
+on input line 241.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
 [][]
  []
 
 [15]
-<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=170, 3011.25pt
+<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=175, 3011.25pt
  x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-v4.png Graphic file 
 (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-v
-4.png  used on input line 241.
+4.png  used on input line 245.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
+Underfull \hbox (badness 10000) in paragraph at lines 245--245
 [][]
  []
 
@@ -772,7 +772,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.243 
+l.247 
        <../analysis/plots/distribution_scores_wis-2.png>]
 Overfull \vbox (75.02023pt too high) has occurred while \output is active []
 
@@ -781,33 +781,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.243 
-       <../analysis/plots/aggregate-performance-rel-ensemble-v4.png>]
-
-LaTeX Warning: Reference `fig:agg-performance-ensemble' on page 18 undefined on
- input line 254.
-
-[18] [19] [20] [21] [22] [23
+l.247 
+       <../analysis/plots/aggregate-performance-rel-ensemble-v4.png>] [18] [19]
+[20] [21] [22] [23
 
 ] [24] [25
 
 ] [26]
-<../crowd-forecast/Screenshot-forecasting-app.png, id=255, 2055.68pt x 991.705p
+<../crowd-forecast/Screenshot-forecasting-app.png, id=261, 2055.68pt x 991.705p
 t>
 File: ../crowd-forecast/Screenshot-forecasting-app.png Graphic file (type png)
 <use ../crowd-forecast/Screenshot-forecasting-app.png>
 Package pdftex.def Info: ../crowd-forecast/Screenshot-forecasting-app.png  used
- on input line 337.
+ on input line 341.
 (pdftex.def)             Requested size: 469.75385pt x 226.61954pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.337 ...cast/Screenshot-forecasting-app} \caption
+l.341 ...cast/Screenshot-forecasting-app} \caption
                                                   {Screenshot of the crowdfo...
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 [][]
  []
 
@@ -816,18 +812,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.337 ...elicit predictions (made in June 2021). }
+l.341 ...elicit predictions (made in June 2021). }
                                                   \label{fig:screenshot} [27
 
  <../crowd-forecast/Screenshot-forecasting-app.png>] [28
 
 ] [29] [30] [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 443--443
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--489
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
 
  []
 
@@ -841,31 +837,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.534 \clearpage
+l.538 \clearpage
                 ] [34
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.534 \clearpage
+l.538 \clearpage
                 ]
-<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=335, 3011.25pt 
+<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=341, 3011.25pt 
 x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-Germany-v4.png Graphic file (
 type png)
 <use ../analysis/plots/aggregate-performance-all-Germany-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Germany-v4
-.png  used on input line 543.
+.png  used on input line 547.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.543 ...gate-performance-all-Germany-v4} \caption
+l.547 ...gate-performance-all-Germany-v4} \caption
                                                   {Visualisation of aggregat...
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
 [][]
  []
 
@@ -874,14 +870,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.543 ...of all WIS values for different horizons}
+l.547 ...of all WIS values for different horizons}
                                                   \label{fig:agg-performance...
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.543 ...of all WIS values for different horizons}
+l.547 ...of all WIS values for different horizons}
                                                   \label{fig:agg-performance...
 [35
 
@@ -889,23 +885,23 @@ l.543 ...of all WIS values for different horizons}
 Overfull \vbox (59.38113pt too high) has occurred while \output is active []
 
 [36 <../analysis/plots/aggregate-performance-all-Germany-v4.png>]
-<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=349, 3011.25pt x
+<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=355, 3011.25pt x
  2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-Poland-v4.png Graphic file (t
 ype png)
 <use ../analysis/plots/aggregate-performance-all-Poland-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Poland-v4.
-png  used on input line 550.
+png  used on input line 554.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.550 ...egate-performance-all-Poland-v4} \caption
+l.554 ...egate-performance-all-Poland-v4} \caption
                                                   {Visualisation of aggregat...
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--550
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
 [][]
  []
 
@@ -914,36 +910,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.550 ...of all WIS values for different horizons}
+l.554 ...of all WIS values for different horizons}
                                                   \label{fig:agg-performance...
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.550 ...of all WIS values for different horizons}
+l.554 ...of all WIS values for different horizons}
                                                   \label{fig:agg-performance...
 [37]
 Overfull \vbox (26.97847pt too high) has occurred while \output is active []
 
 [38 <../analysis/plots/aggregate-performance-all-Poland-v4.png>]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=362, 
+<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=368, 
 3011.25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png Grap
 hic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-v4.png  used on input line 557.
+ons-all-v4.png  used on input line 561.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.557 ...rmance-2-weeks-locations-all-v4} \caption
+l.561 ...rmance-2-weeks-locations-all-v4} \caption
                                                   {Visualisation of aggregat...
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--557
+Underfull \hbox (badness 10000) in paragraph at lines 561--561
 [][]
  []
 
@@ -952,29 +948,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.557 ...r). H. Standard deviation of WIS values.}
+l.561 ...r). H. Standard deviation of WIS values.}
                                                   \label{fig:performance-loc...
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.557 ...r). H. Standard deviation of WIS values.}
+l.561 ...r). H. Standard deviation of WIS values.}
                                                   \label{fig:performance-loc...
 [39]
 Overfull \vbox (24.47847pt too high) has occurred while \output is active []
 
 [40 <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>]
 <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=3
-74, 3011.25pt x 2740.2375pt>
+80, 3011.25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png 
 Graphic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-rel-v4.png  used on input line 564.
+ons-all-rel-v4.png  used on input line 568.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--564
+Underfull \hbox (badness 10000) in paragraph at lines 568--568
 [][]
  []
 
@@ -983,28 +979,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.567 \clearpage
+l.571 \clearpage
                  <../analysis/plots/aggregate-performance-2-weeks-locations-all
 -rel-v4.png>]
-<../analysis/plots/daily_truth.png, id=382, 3011.25pt x 2409.0pt>
+<../analysis/plots/daily_truth.png, id=388, 3011.25pt x 2409.0pt>
 File: ../analysis/plots/daily_truth.png Graphic file (type png)
 <use ../analysis/plots/daily_truth.png>
 Package pdftex.def Info: ../analysis/plots/daily_truth.png  used on input line 
-573.
+577.
 (pdftex.def)             Requested size: 469.72556pt x 375.78044pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--573
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 [][]
  []
 
-<../analysis/plots/daily-data-updates.png, id=383, 2710.125pt x 1806.75pt>
+<../analysis/plots/daily-data-updates.png, id=389, 2710.125pt x 1806.75pt>
 File: ../analysis/plots/daily-data-updates.png Graphic file (type png)
 <use ../analysis/plots/daily-data-updates.png>
 Package pdftex.def Info: ../analysis/plots/daily-data-updates.png  used on inpu
-t line 577.
+t line 581.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--577
+Underfull \hbox (badness 10000) in paragraph at lines 581--581
 [][]
  []
 
@@ -1015,16 +1011,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.579 
+l.583 
        <../analysis/plots/daily_truth.png>]
-<../analysis/plots/weekly-data-updates.png, id=392, 2710.125pt x 1806.75pt>
+<../analysis/plots/weekly-data-updates.png, id=399, 2710.125pt x 1806.75pt>
 File: ../analysis/plots/weekly-data-updates.png Graphic file (type png)
 <use ../analysis/plots/weekly-data-updates.png>
 Package pdftex.def Info: ../analysis/plots/weekly-data-updates.png  used on inp
-ut line 581.
+ut line 585.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 581--581
+Underfull \hbox (badness 10000) in paragraph at lines 585--585
 [][]
  []
 
@@ -1033,33 +1029,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.583 
+l.587 
        <../analysis/plots/daily-data-updates.png>] [44
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.584 \clearpage
+l.588 \clearpage
                  <../analysis/plots/weekly-data-updates.png>]
-<../analysis/plots/figure-forecasts-1.png, id=405, 3011.25pt x 3312.375pt>
+<../analysis/plots/figure-forecasts-1.png, id=411, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-1.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-1.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-1.png  used on inpu
-t line 590.
-(pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--590
-[][]
- []
-
-<../analysis/plots/figure-forecasts-3.png, id=406, 3011.25pt x 3312.375pt>
-File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
-<use ../analysis/plots/figure-forecasts-3.png>
-Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
 t line 594.
 (pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 594--594
+[][]
+ []
+
+<../analysis/plots/figure-forecasts-3.png, id=412, 3011.25pt x 3312.375pt>
+File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
+<use ../analysis/plots/figure-forecasts-3.png>
+Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
+t line 598.
+(pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 598--598
 [][]
  []
 
@@ -1070,16 +1066,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.596 
+l.600 
        <../analysis/plots/figure-forecasts-1.png>]
-<../analysis/plots/figure-forecasts-4.png, id=415, 3011.25pt x 3312.375pt>
+<../analysis/plots/figure-forecasts-4.png, id=421, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-4.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-4.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-4.png  used on inpu
-t line 598.
+t line 602.
 (pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--598
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
 [][]
  []
 
@@ -1088,35 +1084,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.600 
+l.604 
        <../analysis/plots/figure-forecasts-3.png>] [47
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.601 \clearpage
+l.605 \clearpage
                  <../analysis/plots/figure-forecasts-4.png>]
-<../analysis/plots/distribution_scores_wis-1.png, id=428, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-1.png, id=434, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-1.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-1.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1.png  used 
-on input line 610.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 610--610
-[][]
- []
-
-<../analysis/plots/distribution_scores_wis-3.png, id=429, 2710.125pt x 1806.75p
-t>
-File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
-<use ../analysis/plots/distribution_scores_wis-3.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
 on input line 614.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 614--614
+[][]
+ []
+
+<../analysis/plots/distribution_scores_wis-3.png, id=435, 2710.125pt x 1806.75p
+t>
+File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
+<use ../analysis/plots/distribution_scores_wis-3.png>
+Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
+on input line 618.
+(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--618
 [][]
  []
 
@@ -1127,17 +1123,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.616 
+l.620 
        <../analysis/plots/distribution_scores_wis-1.png>]
-<../analysis/plots/distribution_scores_wis-4.png, id=440, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-4.png, id=446, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-4.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-4.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4.png  used 
-on input line 618.
+on input line 622.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--618
+Underfull \hbox (badness 10000) in paragraph at lines 622--622
 [][]
  []
 
@@ -1146,18 +1142,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.620 
+l.624 
        <../analysis/plots/distribution_scores_wis-3.png>]
-<../analysis/plots/distribution_scores_wis-1-ranks.png, id=448, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-1-ranks.png, id=454, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-1-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-1-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1-ranks.png 
- used on input line 625.
+ used on input line 629.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--625
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
 [][]
  []
 
@@ -1166,18 +1162,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.627 
+l.631 
        <../analysis/plots/distribution_scores_wis-4.png>]
-<../analysis/plots/distribution_scores_wis-2-ranks.png, id=455, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-2-ranks.png, id=461, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-2-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-2-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2-ranks.png 
- used on input line 629.
+ used on input line 633.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--629
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
 [][]
  []
 
@@ -1186,18 +1182,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.631 
+l.635 
        <../analysis/plots/distribution_scores_wis-1-ranks.png>]
-<../analysis/plots/distribution_scores_wis-3-ranks.png, id=464, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-3-ranks.png, id=470, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-3-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-3-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3-ranks.png 
- used on input line 633.
+ used on input line 637.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 637--637
 [][]
  []
 
@@ -1206,18 +1202,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.635 
+l.639 
        <../analysis/plots/distribution_scores_wis-2-ranks.png>]
-<../analysis/plots/distribution_scores_wis-4-ranks.png, id=471, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-4-ranks.png, id=477, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-4-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-4-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4-ranks.png 
- used on input line 637.
+ used on input line 641.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--637
+Underfull \hbox (badness 10000) in paragraph at lines 641--641
 [][]
  []
 
@@ -1226,18 +1222,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.639 
+l.643 
        <../analysis/plots/distribution_scores_wis-3-ranks.png>]
-<../analysis/plots/difference-wis-crowd-ensemble.png, id=478, 2710.125pt x 1806
-.75pt>
+<../analysis/plots/difference-wis-crowd-ensemble.png, id=484, 2710.125pt x 1053
+.9375pt>
 File: ../analysis/plots/difference-wis-crowd-ensemble.png Graphic file (type pn
 g)
 <use ../analysis/plots/difference-wis-crowd-ensemble.png>
 Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-ensemble.png  u
-sed on input line 641.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
+sed on input line 645.
+(pdftex.def)             Requested size: 469.73015pt x 182.67282pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--641
+Underfull \hbox (badness 10000) in paragraph at lines 645--645
 [][]
  []
 
@@ -1246,53 +1242,64 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.643 
-       <../analysis/plots/distribution_scores_wis-4-ranks.png>] [55
+l.647 
+       <../analysis/plots/distribution_scores_wis-4-ranks.png>]
+<../analysis/plots/difference-wis-crowd-renewal.png, id=491, 2710.125pt x 1053.
+9375pt>
+File: ../analysis/plots/difference-wis-crowd-renewal.png Graphic file (type png
+)
+<use ../analysis/plots/difference-wis-crowd-renewal.png>
+Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-renewal.png  us
+ed on input line 649.
+(pdftex.def)             Requested size: 469.73015pt x 182.67282pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+[][]
+ []
+
+[55
 pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.644 \clearpage
-                 <../analysis/plots/difference-wis-crowd-ensemble.png>]
-<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=492, 3011
+l.652 \newpage
+              
+pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.652 \newpage
+               <../analysis/plots/difference-wis-crowd-ensemble.png> <../analys
+is/plots/difference-wis-crowd-renewal.png>]
+<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=501, 3011
 .25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png Graphic 
 file (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-m
-ean-v4.png  used on input line 653.
+ean-v4.png  used on input line 661.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--653
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
 [][]
  []
 
-[56
-
-]
+[56]
 Overfull \vbox (174.9367pt too high) has occurred while \output is active []
 
 [57
-pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
+pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.655 
+l.663 
        <../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 660--660
+Underfull \hbox (badness 10000) in paragraph at lines 668--668
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--718
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 779--779
+Underfull \hbox (badness 10000) in paragraph at lines 726--726
 
  []
 
@@ -1300,7 +1307,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 779--779
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--837
+Underfull \hbox (badness 10000) in paragraph at lines 787--787
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--845
 
  []
 
@@ -1312,36 +1327,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.894 \clearpage
+l.902 \clearpage
                 ] [59
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.894 \clearpage
+l.902 \clearpage
                 ] [60
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.894 \clearpage
+l.902 \clearpage
                 ] [61
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.894 \clearpage
+l.902 \clearpage
                 ]
-<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=529, 3011.2
+<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=538, 3011.2
 5pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-late-period-v4.png Graphic fi
 le (type png)
 <use ../analysis/plots/aggregate-performance-all-late-period-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-late-perio
-d-v4.png  used on input line 902.
+d-v4.png  used on input line 910.
 (pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 902--902
+Underfull \hbox (badness 10000) in paragraph at lines 910--910
 [][]
  []
 
@@ -1351,18 +1366,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 902--902
 Overfull \vbox (27.02023pt too high) has occurred while \output is active []
 
 [63
-pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) h
+pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.904 
+l.912 
        <../analysis/plots/aggregate-performance-all-late-period-v4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 906--906
+Underfull \hbox (badness 10000) in paragraph at lines 914--914
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--952
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
 
  []
 
@@ -1374,97 +1389,68 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.997 \clearpage
-                ] [65
+l.1005 \clearpage
+                 ] [65
 pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.997 \clearpage
-                ] [66
+l.1005 \clearpage
+                 ] [66
 
 ]
-<../analysis/plots/number-forecasters.png, id=558, 2106.87125pt x 1504.62125pt>
-
+<../analysis/plots/number-forecasters.png, id=567, 2525.435pt x 2425.06pt>
 File: ../analysis/plots/number-forecasters.png Graphic file (type png)
 <use ../analysis/plots/number-forecasters.png>
 Package pdftex.def Info: ../analysis/plots/number-forecasters.png  used on inpu
-t line 1049.
-(pdftex.def)             Requested size: 469.74986pt x 335.47168pt.
+t line 1057.
+(pdftex.def)             Requested size: 469.74147pt x 451.0713pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
 [][]
  []
 
 [67]
-<../analysis/plots/ensemble-members.png, id=564, 2106.87125pt x 1504.62125pt>
+<../analysis/plots/ensemble-members.png, id=573, 2525.435pt x 2425.06pt>
 File: ../analysis/plots/ensemble-members.png Graphic file (type png)
 <use ../analysis/plots/ensemble-members.png>
 Package pdftex.def Info: ../analysis/plots/ensemble-members.png  used on input 
-line 1053.
-(pdftex.def)             Requested size: 469.74986pt x 335.47168pt.
+line 1061.
+(pdftex.def)             Requested size: 469.74147pt x 451.0713pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1061
 [][]
  []
 
 [68
-pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1055 
-        <../analysis/plots/number-forecasters.png>] [69
 pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1056 \clearpage
+l.1063 
+        <../analysis/plots/number-forecasters.png>] [69
+pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1064 \clearpage
                   <../analysis/plots/ensemble-members.png>]
-<../analysis/plots/comparison-forecast-interals.png, id=576, 2710.125pt x 1806.
+<../analysis/plots/comparison-forecast-interals.png, id=585, 2710.125pt x 1806.
 75pt>
 File: ../analysis/plots/comparison-forecast-interals.png Graphic file (type png
 )
 <use ../analysis/plots/comparison-forecast-interals.png>
 Package pdftex.def Info: ../analysis/plots/comparison-forecast-interals.png  us
-ed on input line 1062.
+ed on input line 1070.
 (pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1062
+Underfull \hbox (badness 10000) in paragraph at lines 1070--1070
 [][]
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1067--1070
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1070
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1071--1074
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1074
-
- []
-
-[70
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1074 
-        <../analysis/plots/comparison-forecast-interals.png>]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1075--1078
-[][] []
+[] []
  []
 
 
@@ -1482,7 +1468,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 1079--1082
 
  []
 
+[70
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1082 
+        <../analysis/plots/comparison-forecast-interals.png>]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1083--1086
 [][] []
  []
@@ -1542,7 +1536,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1103--1106
 
  []
 
-[71]
+
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1107--1110
 [][] []
  []
@@ -1562,7 +1556,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1111--1114
 
  []
 
-
+[71]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1115--1118
 [][] []
  []
@@ -1612,7 +1606,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1131--1134
 
  []
 
-[72]
+
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1135--1138
 [][] []
  []
@@ -1632,7 +1626,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1139--1142
 
  []
 
-
+[72]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1143--1146
 [][] []
  []
@@ -1692,7 +1686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1163--1166
 
  []
 
-[73]
+
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1167--1170
 [][] []
  []
@@ -1712,7 +1706,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1171--1174
 
  []
 
-
+[73]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1175--1178
 [][] []
  []
@@ -1783,18 +1777,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1199--1202
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 1205--1205
-[]\T1/lmr/m/n/10 (+20) Forsal.pl. Roz-bie»no±ci w statystykach ko-ron-awirusa. 
-22 tys. przy-pad-ków b¦d¡ dolic-
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 1205--1205
-\T1/lmr/m/n/10 (+20) zone do ogól-nej liczby wyników [In-ter-net]. 2020 [cited 
-2021 May 30]. Avail-able
- []
-
-
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1203--1206
 [][] []
  []
@@ -1804,7 +1786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1203--1206
 
  []
 
-[74]
+
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1207--1210
 [][] []
  []
@@ -1812,6 +1794,18 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 1207--1210
 
 Underfull \hbox (badness 10000) in paragraph at lines 1207--1210
 
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 1213--1213
+[]\T1/lmr/m/n/10 (+20) Forsal.pl. Roz-bie»no±ci w statystykach ko-ron-awirusa. 
+22 tys. przy-pad-ków b¦d¡ dolic-
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 1213--1213
+\T1/lmr/m/n/10 (+20) zone do ogól-nej liczby wyników [In-ter-net]. 2020 [cited 
+2021 May 30]. Avail-able
  []
 
 
@@ -1824,7 +1818,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1211--1214
 
  []
 
-
+[74]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1215--1218
 [][] []
  []
@@ -1894,7 +1888,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1239--1242
 
  []
 
-[75]
+
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1243--1246
 [][] []
  []
@@ -1914,7 +1908,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1247--1250
 
  []
 
-
+[75]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1251--1254
 [][] []
  []
@@ -1984,7 +1978,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1275--1278
 
  []
 
-[76]
+
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1279--1282
 [][] []
  []
@@ -2004,7 +1998,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1283--1286
 
  []
 
-
+[76]
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1287--1290
 [][] []
  []
@@ -2024,19 +2018,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 1291--1294
 
  []
 
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1295--1298
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1295--1298
+
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1299--1302
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1302
+
+ []
+
 [77] (./manuscript.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16175 strings out of 479719
- 271431 string characters out of 5880575
- 707317 words of memory out of 5000000
- 33426 multiletter control sequences out of 15000+600000
+ 16187 strings out of 479719
+ 272034 string characters out of 5880575
+ 707621 words of memory out of 5000000
+ 33436 multiletter control sequences out of 15000+600000
  531396 words of font info for 145 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  74i,12n,77p,1883b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2058,10 +2069,10 @@ cal/texlive/2022basic/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/te
 xlive/2022basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
 /2022basic/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2022b
 asic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on manuscript.pdf (77 pages, 10218371 bytes).
+Output written on manuscript.pdf (77 pages, 10288580 bytes).
 PDF statistics:
- 997 PDF objects out of 1000 (max. 8388607)
- 825 compressed objects within 9 object streams
- 281 named destinations out of 1000 (max. 500000)
- 33213 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1005 PDF objects out of 1200 (max. 8388607)
+ 831 compressed objects within 9 object streams
+ 282 named destinations out of 1000 (max. 500000)
+ 33218 words of extra memory for PDF output out of 35830 (max. 10000000)
 

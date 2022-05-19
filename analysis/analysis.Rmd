@@ -110,7 +110,6 @@ component_plot <- function(scores, type, colour_scheme, x = x, rel = relative,
   if (rel) {
     p <- p + 
       geom_hline(yintercept = 1, linetype = "dashed") +
-      expand_limits(y = c(0, 1)) +
       scale_y_continuous(breaks = seq(0, max(scores$value), 0.25))
   }
   
@@ -147,7 +146,7 @@ plot_helper <- function(tmp = scores, xvar = x, y, rel = relative,
       group_by(target_type, !!sym(xvar)) %>%
       mutate_at(y, ~ . / .[Model %in% c("Hub-ensemble", 
                                         "Hub-ensemble-mean")])
-  }
+  } 
   
   out <- tmp %>%
     ggplot(aes_string(x = xvar, y = y, group = "Model", color = "Model")) +
@@ -157,9 +156,13 @@ plot_helper <- function(tmp = scores, xvar = x, y, rel = relative,
     theme(legend.position = "bottom") +
     scale_color_manual(values = colour) + 
     scale_y_continuous(labels = scale_fn) + 
-    expand_limits(y = 0) +
     facet_wrap(facet_formula, scales = scalefree) +
     guides(fill = "none", colour = "none")
+  
+  if (!rel) {
+    out <- out + 
+      expand_limits(y = 0)
+  }
   
   return(out)
 }
@@ -1098,31 +1101,69 @@ scores <- eval_forecasts(
 # reformat column
 scores[, target_type := str_to_title(target_type)]
 
-p <- scores[model %in% c("Crowd forecast", "Hub-ensemble")] %>%
-  filter(horizon == 2) %>%
-  select(target_type, model, location_name, forecast_date, interval_score) %>%
-  rename(Model = model) %>%
-  pivot_wider(names_from = Model, values_from = interval_score) %>%
-  ggplot(aes(x = `Crowd forecast` - `Hub-ensemble`)) +
-  ggdist::stat_slab(alpha = 1, scale = 1, normalize = "panels") +
-  scale_x_continuous(labels = scale_fn) +
-  theme(axis.ticks.y = element_blank(), 
-        axis.text.y = element_blank(), 
-        axis.title.y = element_blank()) +
-  scale_y_continuous(labels = NULL) +
-  lemon::scale_x_symmetric(labels = scale_fn) +
-  theme_minimal() +
-  labs(y = "Density", x = "WIS difference Crowd forecast - Hub-ensemble") 
-
+diff_plot <- function(scores) {
+  p <- scores %>%
+    select(target_type, difference, location_name, forecast_date) %>%
+    ggplot(aes(x = difference)) +
+    ggdist::stat_slab(alpha = 1, scale = 1, normalize = "panels") +
+    ggdist::stat_dots(fill = "black", color = "black", dotsize = 0.5) + 
+    scale_x_continuous(labels = scale_fn) +
+    theme(axis.ticks.y = element_blank(), 
+          axis.text.y = element_blank(), 
+          axis.title.y = element_blank()) +
+    scale_y_continuous(labels = NULL) +
+    lemon::scale_x_symmetric(labels = scale_fn) +
+    theme_minimal()
 p1 <- p +
   facet_wrap(~ target_type, nrow = 2, scales = "free")
 p2 <- p +
   facet_wrap(location_name ~ target_type, scales = "free")
 
-p1 + p2
+return(p1 + p2)
+}
+
+p <- scores[model %in% c("Crowd forecast", "Hub-ensemble")] %>%
+  filter(horizon == 2) %>%
+  select(target_type, model, horizon, interval_score, location_name, forecast_date) %>%
+  pivot_wider(names_from = model, values_from = interval_score) %>%
+  mutate(difference = `Crowd forecast` - `Hub-ensemble`) %>%
+  diff_plot()
 
 ggsave(here("analysis", "plots", "difference-wis-crowd-ensemble.png"), 
-       height = 6, width = 9)
+        plot = p,
+       height = 3.5, width = 9) +
+  labs(y = "Density", x = "WIS difference Crowd forecast - Hub-ensemble") 
+
+
+p <- scores[model %in% c("Crowd forecast", "Renewal")] %>%
+  filter(horizon == 2) %>%
+  select(target_type, model, interval_score, location_name, forecast_date) %>%
+  pivot_wider(names_from = model, values_from = interval_score) %>%
+  mutate(difference = `Crowd forecast` - `Renewal`) %>%
+  diff_plot() +
+  labs(y = "Density", x = "WIS difference Crowd forecast - renewal") 
+
+ggsave(here("analysis", "plots", "difference-wis-crowd-renewal.png"), plot = p,
+       height = 3.5, width = 9)
+
+
+# significant results
+significance <- function(scores, 
+                         A = "Crowd forecast", B = "Hub-ensemble", 
+                         horizons = 1:4) {
+  scores[model %in% c(A, B)] %>%
+    select(target_type, horizon, model, interval_score, location_name, forecast_date) %>%
+    filter(horizon %in% horizons) %>%
+    pivot_wider(names_from = model, values_from = interval_score) %>%
+    mutate(difference = .data[[A]] - .data[[B]]) %>%
+    pull(difference) %>%
+    wilcox.test()
+}
+
+significance(scores, B = "Hub-ensemble")
+significance(scores, B = "Renewal",  horizon = 4)
+significance(scores, B = "Convolution")
+
 
 ```
 
