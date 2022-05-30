@@ -949,25 +949,39 @@ crowdforecasts <- covid.german.forecasts::prediction_data %>%
 
 qs <- c(0.05, 0.25, 0.5, 0.75, 0.95)
 
-basline_forecasts <- truth_data %>%
-  mutate(difference = c(NA, diff(log(pmax(true_value, 1)))), 
-         target_end_date = as.Date(target_end_date), 
-         id = 1:n()) %>%
-  rowwise() %>%
-  mutate(sd = sd(d$difference[pmax(0, id - (4:1))]), 
-         quantile = list(qs)) %>%
-  tidyr::unnest(cols = quantile) %>%
-  mutate(prediction = exp(qnorm(quantile, mean = log(true_value), sd = sd)), 
-         model = "Baseline", 
-         forecast_date = target_end_date + 2) %>%
-  unique()
+baseline_forecasts <- truth_data %>%
+  mutate(log_true_value = log(pmax(true_value, 1)),
+         difference = c(NA, diff(log_true_value)), 
+         target_end_date = as.Date(target_end_date)) 
+
+calc_baseline <- function(baseline_forecasts) {
+  baseline_forecasts %>%
+    mutate(id = 1:n()) %>%
+    rowwise() %>%
+    mutate(sd = sd(baseline_forecasts$difference[pmax(0, id - (4:1))]), 
+           quantile = list(qs)) %>%
+    tidyr::unnest(cols = quantile) %>%
+    mutate(prediction = exp(qnorm(quantile, mean = log(true_value), sd = sd)), 
+           model = "Baseline", 
+           forecast_date = target_end_date + 2) %>%
+    unique()
+}
+
+baseline_forecasts <- 
+  rbind(
+    calc_baseline(filter(baseline_forecasts, location_name == "Germany" & target_type == "case")), 
+    calc_baseline(filter(baseline_forecasts, location_name == "Germany" & target_type == "death")), 
+    calc_baseline(filter(baseline_forecasts, location_name == "Poland" & target_type == "case")), 
+    calc_baseline(filter(baseline_forecasts, location_name == "Poland" & target_type == "death"))
+  )
+  
 
 plot_df <- prediction_data %>%
   filter(model == "Crowd forecast", 
          quantile %in% qs, 
          grepl("2", target)) %>%
   unique() %>%
-  rbind(basline_forecasts, fill = TRUE) %>%
+  rbind(baseline_forecasts, fill = TRUE) %>%
   filter(forecast_date %in% forecast_dates$unfiltered) %>%
   pivot_wider(names_from = quantile, values_from = prediction) %>%
   rename(Model = model) %>%
