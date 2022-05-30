@@ -1,0 +1,1737 @@
+location,location_name,type,quantile,value,target_end_date,forecast_date,target
+GM,,,,,,,NA wk ahead cum death
+GM01,,,,,,,NA wk ahead cum death
+GM02,,,,,,,NA wk ahead cum death
+GM03,Bremen,point,,776,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.01,774,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.025,774,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.05,774,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.1,774,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.15,774,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.2,775,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.25,775,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.3,775,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.35,775,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.4,775,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.45,776,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.5,776,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.55,776,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.6,776,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.65,776,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.7,777,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.75,777,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.8,777,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.85,778,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.9,779,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.95,780,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.975,782,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,quantile,0.99,783,2022-06-04,2022-05-30,1 wk ahead cum death
+GM03,Bremen,point,,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.01,0,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.025,0,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.05,0,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.1,0,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.15,0,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.2,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.25,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.3,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.35,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.4,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.45,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.5,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.55,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.6,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.65,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.7,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.75,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.8,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.85,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.9,5,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.95,6,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.975,8,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,quantile,0.99,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM03,Bremen,point,,777,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.01,774,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.025,774,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.05,774,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.1,774,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.15,774,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.2,775,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.25,775,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.3,776,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.35,776,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.4,776,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.45,777,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.5,777,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.55,778,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.6,778,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.65,778,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.7,779,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.75,780,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.8,780,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.85,782,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.9,783,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.95,786,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.975,789,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,quantile,0.99,793,2022-06-11,2022-05-30,2 wk ahead cum death
+GM03,Bremen,point,,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.01,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.025,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.05,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.1,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.15,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.2,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.25,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.3,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.35,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.4,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.45,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.5,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.55,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.6,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.65,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.7,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.75,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.8,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.85,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.9,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.95,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.975,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,quantile,0.99,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM03,Bremen,point,,778,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.01,774,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.025,774,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.05,774,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.1,774,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.15,774,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.2,775,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.25,775,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.3,776,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.35,776,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.4,777,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.45,778,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.5,778,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.55,779,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.6,779,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.65,779,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.7,781,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.75,782,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.8,782,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.85,785,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.9,786,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.95,791,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.975,795,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,quantile,0.99,803,2022-06-18,2022-05-30,3 wk ahead cum death
+GM03,Bremen,point,,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.01,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.025,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.05,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.1,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.15,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.2,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.25,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.3,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.35,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.4,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.45,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.5,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.55,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.6,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.65,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.7,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.75,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.8,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.85,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.9,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.95,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.975,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,quantile,0.99,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM03,Bremen,point,,779,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.01,774,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.025,774,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.05,774,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.1,774,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.15,774,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.2,775,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.25,775,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.3,776,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.35,776,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.4,777,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.45,778,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.5,779,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.55,780,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.6,780,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.65,780,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.7,782,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.75,784,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.8,784,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.85,787,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.9,789,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.95,796,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.975,801,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,quantile,0.99,812,2022-06-25,2022-05-30,4 wk ahead cum death
+GM03,Bremen,point,,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.05,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.1,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.15,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.2,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.25,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.3,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.35,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.4,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.45,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.5,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.55,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.6,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.65,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.7,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.75,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.8,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.85,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.9,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.95,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.975,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM03,Bremen,quantile,0.99,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,point,,2661,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.01,2650,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.025,2651,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.05,2652,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.1,2653,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.15,2654,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.2,2655,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.25,2656,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.3,2657,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.35,2658,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.4,2658,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.45,2660,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.5,2661,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.55,2661,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.6,2662,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.65,2663,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.7,2665,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.75,2666,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.8,2668,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.85,2670.15,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.9,2673.1,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.95,2680,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.975,2687.025,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,quantile,0.99,2696.01,2022-06-04,2022-05-30,1 wk ahead cum death
+GM04,Hamburg,point,,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.01,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.025,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.05,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.1,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.15,5,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.2,6,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.25,7,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.3,8,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.35,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.4,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.45,11,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.5,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.55,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.6,13,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.65,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.7,16,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.75,17,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.8,19,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.85,21.1500000000001,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.9,24.1000000000001,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.95,31,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.975,38.025,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,quantile,0.99,47.01,2022-06-04,2022-05-30,1 wk ahead inc death
+GM04,Hamburg,point,,2670,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.01,2651,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.025,2652,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.05,2654,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.1,2656,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.15,2658,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.2,2660,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.25,2662,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.3,2664,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.35,2665,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.4,2666,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.45,2669,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.5,2670,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.55,2671,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.6,2673,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.65,2675,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.7,2678,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.75,2681,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.8,2685,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.85,2689.15,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.9,2696.1,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.95,2708,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.975,2722.025,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,quantile,0.99,2741.03,2022-06-11,2022-05-30,2 wk ahead cum death
+GM04,Hamburg,point,,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.01,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.025,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.05,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.1,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.15,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.2,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.25,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.3,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.35,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.4,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.45,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.5,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.55,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.6,11,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.65,12,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.7,13,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.75,15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.8,17,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.85,19,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.9,23,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.95,28,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.975,35,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,quantile,0.99,45.02,2022-06-11,2022-05-30,2 wk ahead inc death
+GM04,Hamburg,point,,2677,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.01,2651,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.025,2653,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.05,2655,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.1,2658,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.15,2661,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.2,2663,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.25,2666,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.3,2668,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.35,2670,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.4,2671,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.45,2675,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.5,2677,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.55,2678.45,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.6,2681,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.65,2684,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.7,2688,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.75,2692,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.8,2697,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.85,2703.15,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.9,2715.1,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.95,2732,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.975,2752.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,quantile,0.99,2781.04,2022-06-18,2022-05-30,3 wk ahead cum death
+GM04,Hamburg,point,,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.01,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.025,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.05,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.1,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.15,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.2,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.25,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.3,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.35,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.4,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.45,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.5,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.55,7.45000000000005,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.6,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.65,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.7,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.75,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.8,12,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.85,14,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.9,19,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.95,24,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.975,30.025,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,quantile,0.99,40.01,2022-06-18,2022-05-30,3 wk ahead inc death
+GM04,Hamburg,point,,2681,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.01,2651,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.025,2653,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.05,2655,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.1,2659,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.15,2662,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.2,2664,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.25,2668,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.3,2670,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.35,2673,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.4,2674,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.45,2679,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.5,2681,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.55,2683.45,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.6,2687,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.65,2691,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.7,2696,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.75,2701,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.8,2707,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.85,2715.15,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.9,2729.1,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.95,2751.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.975,2782.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,quantile,0.99,2822.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM04,Hamburg,point,,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.05,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.1,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.15,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.2,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.25,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.3,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.35,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.4,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.45,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.5,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.55,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.6,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.65,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.7,8,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.75,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.8,10,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.85,12,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.9,14,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.95,19.05,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.975,30,2022-06-25,2022-05-30,4 wk ahead inc death
+GM04,Hamburg,quantile,0.99,41.01,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,point,,10145,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.01,10125,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.025,10127,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.05,10129,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.1,10132,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.15,10133,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.2,10135,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.25,10137,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.3,10138,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.35,10140,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.4,10142,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.45,10143,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.5,10145,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.55,10148,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.6,10149,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.65,10152,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.7,10155,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.75,10158,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.8,10162,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.85,10167,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.9,10174,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.95,10188.05,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.975,10202,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,quantile,0.99,10213.05,2022-06-04,2022-05-30,1 wk ahead cum death
+GM05,Hesse,point,,32,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.01,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.025,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.05,16,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.1,19,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.15,20,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.2,22,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.25,24,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.3,25,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.35,27,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.4,29,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.45,30,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.5,32,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.55,35,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.6,36,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.65,39,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.7,42,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.75,45,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.8,49,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.85,54,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.9,61,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.95,75.05,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.975,89,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,quantile,0.99,100.05,2022-06-04,2022-05-30,1 wk ahead inc death
+GM05,Hesse,point,,10165,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.01,10128,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.025,10131,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.05,10135,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.1,10140,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.15,10142,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.2,10146,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.25,10149,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.3,10152,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.35,10155,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.4,10159,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.45,10161,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.5,10165,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.55,10169,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.6,10172,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.65,10178,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.7,10183,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.75,10189,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.8,10196,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.85,10206,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.9,10218.1,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.95,10243.05,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.975,10271.075,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,quantile,0.99,10323.11,2022-06-11,2022-05-30,2 wk ahead cum death
+GM05,Hesse,point,,20,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.01,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.025,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.05,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.1,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.15,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.2,11,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.25,12,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.3,14,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.35,15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.4,17,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.45,18,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.5,20,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.55,21,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.6,23,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.65,26,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.7,28,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.75,31,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.8,34,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.85,39,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.9,44.1000000000001,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.95,55,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.975,69.0749999999999,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,quantile,0.99,110.06,2022-06-11,2022-05-30,2 wk ahead inc death
+GM05,Hesse,point,,10178,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.01,10129,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.025,10133,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.05,10138,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.1,10144,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.15,10148,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.2,10153,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.25,10157,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.3,10161,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.35,10165,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.4,10170,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.45,10173,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.5,10178,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.55,10183,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.6,10188,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.65,10195,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.7,10203,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.75,10211,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.8,10221,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.85,10234,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.9,10252.1,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.95,10291.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.975,10336.1,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,quantile,0.99,10410.15,2022-06-18,2022-05-30,3 wk ahead cum death
+GM05,Hesse,point,,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.01,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.025,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.05,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.1,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.15,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.2,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.25,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.3,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.35,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.4,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.45,12,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.5,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.55,14,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.6,16,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.65,17,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.7,20,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.75,22,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.8,25,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.85,28,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.9,34,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.95,48,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.975,65.025,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,quantile,0.99,87.04,2022-06-18,2022-05-30,3 wk ahead inc death
+GM05,Hesse,point,,10187,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.01,10129,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.025,10133,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.05,10139,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.1,10146,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.15,10151,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.2,10157,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.25,10161,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.3,10166,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.35,10171,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.4,10177,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.45,10181,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.5,10187,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.55,10194,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.6,10200,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.65,10208,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.7,10218,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.75,10228,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.8,10241.2,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.85,10258,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.9,10282.1,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.95,10336.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.975,10410.1,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,quantile,0.99,10536.18,2022-06-25,2022-05-30,4 wk ahead cum death
+GM05,Hesse,point,,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.05,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.1,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.15,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.2,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.25,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.3,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.35,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.4,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.45,8,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.5,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.55,11,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.6,12,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.65,13,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.7,15,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.75,17,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.8,20.2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.85,24,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.9,30,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.95,45,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.975,74,2022-06-25,2022-05-30,4 wk ahead inc death
+GM05,Hesse,quantile,0.99,126.03,2022-06-25,2022-05-30,4 wk ahead inc death
+GM06,,,,,,,NA wk ahead cum death
+GM07,North Rhine-Westphalia,point,,25473,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25415,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25424.975,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25429,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25438,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25444,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25448,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25453,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,25457,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,25462,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,25465,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,25469,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,25473,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,25478,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,25481,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,25485,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,25491,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,25497,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,25503,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,25510,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,25523,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,25543,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,25560.025,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,25585.07,2022-06-04,2022-05-30,1 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,96,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,38,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,47.975,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,52,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,61,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,67,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,71,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,76,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,80,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,85,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,88,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,92,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,96,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,101,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,104,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,108,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,114,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,120,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,126,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,133,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,146,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,166,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,183.025,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,208.07,2022-06-04,2022-05-30,1 wk ahead inc death
+GM07,North Rhine-Westphalia,point,,25543,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25435.98,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25450.975,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25463,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25479,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25490,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25498,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25506,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,25513.7,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,25522,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,25529,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,25536,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,25543,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,25550,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,25557,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,25566,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,25576,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,25586,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,25598,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,25613.15,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,25636,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,25679.05,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,25719.025,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,25772.15,2022-06-11,2022-05-30,2 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,70,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,20.98,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,26,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,34,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,41,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,46,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,50,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,53,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,56.7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,60,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,64,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,67,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,70,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,72,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,76,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,81,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,85,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,89,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,95,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,103.15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,113,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,136.05,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,159,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,187.08,2022-06-11,2022-05-30,2 wk ahead inc death
+GM07,North Rhine-Westphalia,point,,25592,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25446.98,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25463.975,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25482,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25503,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25520,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25531,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25542,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,25551.7,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,25563,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,25573,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,25582,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,25592,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,25602,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,25611,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,25624,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,25637,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,25651,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,25667,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,25688.15,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,25719,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,25776.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,25830.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,25896.15,2022-06-18,2022-05-30,3 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,49,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,19,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,24,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,30,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,33,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,36,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,38,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,41,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,44,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,46,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,49,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,52,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,54,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,58,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,61,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,65,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,69,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,75,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,83,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,97,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,111.025,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,124,2022-06-18,2022-05-30,3 wk ahead inc death
+GM07,North Rhine-Westphalia,point,,25627,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25449.98,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25469.975,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25491,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25517,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25537,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25552,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25565,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,25576.7,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,25591,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,25603,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,25615,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,25627,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,25639,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,25650,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,25665,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,25681,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,25698.25,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,25718,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,25743.3,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,25781,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,25853.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,25917.075,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,25996.15,2022-06-25,2022-05-30,4 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,35,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,14,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,17,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,21,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,23,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,25,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,28,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,30,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,33,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,35,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,37,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,39,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,41,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,44,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,47.2500000000001,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,51,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,55.1500000000001,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,62,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,77,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,87.025,2022-06-25,2022-05-30,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,100,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,point,,5698,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.01,5681,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.025,5683,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.05,5685,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.1,5687,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.15,5689,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.2,5690,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.25,5691,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.3,5693,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.35,5694,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.4,5695,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.45,5696,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.5,5698,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.55,5699,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.6,5701,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.65,5703,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.7,5704,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.75,5707,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.8,5709.2,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.85,5712,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.9,5717,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.95,5726,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.975,5736.025,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.99,5747.01,2022-06-04,2022-05-30,1 wk ahead cum death
+GM08,Rhineland-Palatinate,point,,21,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.01,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.025,6,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.05,8,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.1,10,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.15,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.2,13,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.25,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.3,16,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.35,17,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.4,18,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.45,19,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.5,21,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.55,22,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.6,24,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.65,26,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.7,27,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.75,30,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.8,32.2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.85,35,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.9,40,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.95,49,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.975,59.025,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.99,70.01,2022-06-04,2022-05-30,1 wk ahead inc death
+GM08,Rhineland-Palatinate,point,,5712,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.01,5682,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.025,5686,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.05,5689,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.1,5692,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.15,5696,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.2,5698,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.25,5700,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.3,5703,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.35,5704,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.4,5707,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.45,5709,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.5,5712,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.55,5714,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.6,5717,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.65,5721,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.7,5723,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.75,5728,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.8,5732.4,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.85,5738,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.9,5747,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.95,5765.05,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.975,5781.025,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.99,5803.02,2022-06-11,2022-05-30,2 wk ahead cum death
+GM08,Rhineland-Palatinate,point,,14,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.01,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.025,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.05,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.1,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.15,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.2,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.25,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.3,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.35,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.4,12,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.45,13,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.5,14,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.55,15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.6,16,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.65,18,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.7,19,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.75,21,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.8,23.2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.85,26,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.9,30,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.95,39.05,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.975,45,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.99,56.01,2022-06-11,2022-05-30,2 wk ahead inc death
+GM08,Rhineland-Palatinate,point,,5721,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.01,5682,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.025,5687,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.05,5691,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.1,5694,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.15,5699,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.2,5702,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.25,5705,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.3,5709,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.35,5710,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.4,5714,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.45,5717,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.5,5721,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.55,5724,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.6,5728,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.65,5733,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.7,5736,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.75,5743,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.8,5748.4,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.85,5757,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.9,5770,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.95,5797.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.975,5819.1,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.99,5857.03,2022-06-18,2022-05-30,3 wk ahead cum death
+GM08,Rhineland-Palatinate,point,,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.01,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.025,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.05,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.1,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.15,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.2,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.25,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.3,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.35,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.4,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.45,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.5,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.55,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.6,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.65,12,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.7,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.75,15,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.8,16,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.85,19,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.9,23,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.95,32,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.975,38.0749999999999,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.99,54.01,2022-06-18,2022-05-30,3 wk ahead inc death
+GM08,Rhineland-Palatinate,point,,5726,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.01,5682,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.025,5687,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.05,5691,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.1,5695,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.15,5700,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.2,5704,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.25,5707,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.3,5712,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.35,5713,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.4,5718,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.45,5721,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.5,5726,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.55,5730,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.6,5735,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.65,5741,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.7,5745,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.75,5753,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.8,5760.4,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.85,5771,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.9,5787.1,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.95,5821.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.975,5851.1,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,quantile,0.99,5935.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM08,Rhineland-Palatinate,point,,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.05,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.1,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.15,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.2,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.25,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.3,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.35,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.4,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.45,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.5,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.55,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.6,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.65,8,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.7,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.75,10,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.8,12,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.85,14,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.9,17.1000000000001,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.95,24,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.975,32,2022-06-25,2022-05-30,4 wk ahead inc death
+GM08,Rhineland-Palatinate,quantile,0.99,78.02,2022-06-25,2022-05-30,4 wk ahead inc death
+GM09,,,,,,,NA wk ahead cum death
+GM10,Schleswig-Holstein,point,,2551,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.01,2538.99,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.025,2540,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.05,2541,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.1,2542,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.15,2544,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.2,2545,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.25,2546,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.3,2547,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.35,2548,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.4,2549,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.45,2550,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.5,2551,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.55,2552,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.6,2554,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.65,2555,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.7,2557,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.75,2559,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.8,2561,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.85,2564,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.9,2568,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.95,2576,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.975,2582.025,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.99,2597.02,2022-06-04,2022-05-30,1 wk ahead cum death
+GM10,Schleswig-Holstein,point,,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.01,1.99,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.025,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.05,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.1,5,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.15,7,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.2,8,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.25,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.3,10,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.35,11,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.4,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.45,13,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.5,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.55,15,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.6,17,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.65,18,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.7,20,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.75,22,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.8,24,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.85,27,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.9,31,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.95,39,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.975,45.025,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.99,60.02,2022-06-04,2022-05-30,1 wk ahead inc death
+GM10,Schleswig-Holstein,point,,2561,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.01,2539.99,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.025,2541,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.05,2543,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.1,2545,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.15,2548,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.2,2550,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.25,2552,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.3,2554,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.35,2555,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.4,2557,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.45,2559,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.5,2561,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.55,2563,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.6,2566,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.65,2568,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.7,2571,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.75,2575,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.8,2579,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.85,2584.15,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.9,2592,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.95,2607,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.975,2619.025,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.99,2647.04,2022-06-11,2022-05-30,2 wk ahead cum death
+GM10,Schleswig-Holstein,point,,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.01,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.025,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.05,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.1,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.15,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.2,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.25,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.3,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.35,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.4,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.45,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.5,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.55,11,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.6,12,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.65,13,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.7,14,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.75,16,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.8,18,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.85,20.1500000000001,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.9,24,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.95,31,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.975,37,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.99,50.02,2022-06-11,2022-05-30,2 wk ahead inc death
+GM10,Schleswig-Holstein,point,,2568,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.01,2539.99,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.025,2541,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.05,2544,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.1,2547,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.15,2550,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.2,2553,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.25,2555.75,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.3,2558,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.35,2560,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.4,2562,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.45,2565,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.5,2568,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.55,2571,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.6,2575,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.65,2578,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.7,2581,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.75,2586,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.8,2592,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.85,2599.15,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.9,2609,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.95,2630,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.975,2646.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.99,2685.08,2022-06-18,2022-05-30,3 wk ahead cum death
+GM10,Schleswig-Holstein,point,,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.01,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.025,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.05,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.1,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.15,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.2,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.25,3.75,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.3,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.35,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.4,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.45,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.5,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.55,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.6,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.65,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.7,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.75,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.8,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.85,15,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.9,17,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.95,23,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.975,27.025,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.99,38.04,2022-06-18,2022-05-30,3 wk ahead inc death
+GM10,Schleswig-Holstein,point,,2572,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.01,2539.99,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.025,2541,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.05,2544,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.1,2547,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.15,2551,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.2,2554,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.25,2557.75,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.3,2560,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.35,2562,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.4,2565,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.45,2568,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.5,2572,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.55,2576,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.6,2580,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.65,2584,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.7,2588,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.75,2594,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.8,2601,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.85,2609.15,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.9,2623,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.95,2649,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.975,2669.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,quantile,0.99,2716.08,2022-06-25,2022-05-30,4 wk ahead cum death
+GM10,Schleswig-Holstein,point,,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.05,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.1,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.15,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.2,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.25,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.3,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.35,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.4,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.45,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.5,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.55,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.6,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.65,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.7,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.75,8,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.8,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.85,10,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.9,14,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.95,19,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.975,23,2022-06-25,2022-05-30,4 wk ahead inc death
+GM10,Schleswig-Holstein,quantile,0.99,31,2022-06-25,2022-05-30,4 wk ahead inc death
+GM11,,,,,,,NA wk ahead cum death
+GM12,,,,,,,NA wk ahead cum death
+GM13,,,,,,,NA wk ahead cum death
+GM14,Saxony-Anhalt,point,,5355,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.01,5347,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.025,5348,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.05,5349,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.1,5350,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.15,5351,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.2,5351,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.25,5352,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.3,5353,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.35,5353,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.4,5354,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.45,5355,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.5,5355,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.55,5356,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.6,5357,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.65,5358,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.7,5359,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.75,5360,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.8,5361,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.85,5362,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.9,5364,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.95,5369,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.975,5375.025,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.99,5381,2022-06-04,2022-05-30,1 wk ahead cum death
+GM14,Saxony-Anhalt,point,,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.01,1,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.025,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.05,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.1,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.15,5,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.2,5,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.25,6,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.3,7,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.35,7,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.4,8,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.45,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.5,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.55,10,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.6,11,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.65,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.7,13,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.75,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.8,15,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.85,16,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.9,18,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.95,23,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.975,29.025,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.99,35,2022-06-04,2022-05-30,1 wk ahead inc death
+GM14,Saxony-Anhalt,point,,5360,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.01,5347,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.025,5348,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.05,5350,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.1,5352,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.15,5353,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.2,5354,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.25,5355,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.3,5356.7,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.35,5357,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.4,5359,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.45,5360,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.5,5360,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.55,5362,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.6,5363,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.65,5365,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.7,5367,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.75,5368,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.8,5370,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.85,5372,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.9,5376,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.95,5384,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.975,5392.05,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.99,5402,2022-06-11,2022-05-30,2 wk ahead cum death
+GM14,Saxony-Anhalt,point,,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.01,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.025,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.05,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.1,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.15,2,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.2,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.25,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.3,3.69999999999999,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.35,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.4,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.45,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.5,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.55,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.6,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.65,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.7,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.75,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.8,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.85,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.9,12,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.95,15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.975,17.025,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.99,21,2022-06-11,2022-05-30,2 wk ahead inc death
+GM14,Saxony-Anhalt,point,,5363,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.01,5347,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.025,5348,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.05,5350,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.1,5352,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.15,5354,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.2,5355,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.25,5356.75,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.3,5358.7,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.35,5359,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.4,5361,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.45,5363,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.5,5363,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.55,5365,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.6,5367,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.65,5369,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.7,5372,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.75,5373,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.8,5376,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.85,5379,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.9,5384,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.95,5395,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.975,5405.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.99,5419,2022-06-18,2022-05-30,3 wk ahead cum death
+GM14,Saxony-Anhalt,point,,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.01,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.025,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.05,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.1,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.15,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.2,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.25,1.75,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.3,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.35,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.4,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.45,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.5,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.55,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.6,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.65,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.7,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.75,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.8,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.85,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.9,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.95,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.975,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.99,17,2022-06-18,2022-05-30,3 wk ahead inc death
+GM14,Saxony-Anhalt,point,,5365,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.01,5347,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.025,5348,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.05,5350,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.1,5352,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.15,5354,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.2,5355,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.25,5356.75,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.3,5359.7,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.35,5360,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.4,5362,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.45,5364,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.5,5365,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.55,5367,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.6,5369,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.65,5371,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.7,5375,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.75,5376,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.8,5380,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.85,5383,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.9,5390,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.95,5402,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.975,5415.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,quantile,0.99,5431.01,2022-06-25,2022-05-30,4 wk ahead cum death
+GM14,Saxony-Anhalt,point,,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.05,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.1,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.15,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.2,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.25,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.3,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.35,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.4,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.45,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.5,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.55,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.6,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.65,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.7,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.75,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.8,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.85,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.9,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.95,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.975,10,2022-06-25,2022-05-30,4 wk ahead inc death
+GM14,Saxony-Anhalt,quantile,0.99,12.01,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,point,,7295,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.01,7280,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.025,7281,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.05,7282,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.1,7284,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.15,7286,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.2,7287,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.25,7289,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.3,7290,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.35,7291,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.4,7292,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.45,7294,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.5,7295,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.55,7296,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.6,7298,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.65,7299,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.7,7301,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.75,7303,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.8,7305,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.85,7308,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.9,7313.1,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.95,7322.05,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.975,7331.075,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,quantile,0.99,7342.01,2022-06-04,2022-05-30,1 wk ahead cum death
+GM15,Thuringia,point,,17,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.01,2,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.025,3,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.05,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.1,6,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.15,8,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.2,9,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.25,11,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.3,12,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.35,13,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.4,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.45,16,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.5,17,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.55,18,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.6,20,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.65,21,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.7,23,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.75,25,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.8,27,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.85,30,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.9,35.1000000000001,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.95,44.05,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.975,53.0749999999999,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,quantile,0.99,64.01,2022-06-04,2022-05-30,1 wk ahead inc death
+GM15,Thuringia,point,,7304,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.01,7280,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.025,7282,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.05,7283,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.1,7287,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.15,7290,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.2,7291,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.25,7294,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.3,7296,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.35,7298,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.4,7300,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.45,7302.55,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.5,7304,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.55,7306,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.6,7309,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.65,7312,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.7,7315,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.75,7318,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.8,7322,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.85,7328,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.9,7337.1,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.95,7353.05,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.975,7369.075,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,quantile,0.99,7400.02,2022-06-11,2022-05-30,2 wk ahead cum death
+GM15,Thuringia,point,,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.01,0,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.025,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.05,1,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.1,3,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.15,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.2,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.25,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.3,6,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.35,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.4,8,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.45,8.55000000000001,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.5,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.55,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.6,11,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.65,13,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.7,14,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.75,15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.8,17,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.85,20,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.9,24,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.95,31,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.975,38,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,quantile,0.99,58.01,2022-06-11,2022-05-30,2 wk ahead inc death
+GM15,Thuringia,point,,7309,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.01,7280,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.025,7282,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.05,7283,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.1,7288,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.15,7291,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.2,7293,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.25,7296,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.3,7298,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.35,7301,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.4,7304,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.45,7306.55,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.5,7309,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.55,7311,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.6,7315,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.65,7319,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.7,7323,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.75,7327,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.8,7333,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.85,7341,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.9,7352.2,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.95,7373.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.975,7398.075,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,quantile,0.99,7442.02,2022-06-18,2022-05-30,3 wk ahead cum death
+GM15,Thuringia,point,,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.01,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.025,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.05,0,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.1,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.15,1,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.2,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.25,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.3,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.35,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.4,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.45,4,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.5,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.55,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.6,6,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.65,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.7,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.75,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.8,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.85,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.9,15.1000000000001,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.95,20,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.975,29,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,quantile,0.99,42,2022-06-18,2022-05-30,3 wk ahead inc death
+GM15,Thuringia,point,,7311,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.01,7280,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.025,7282,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.05,7283,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.1,7288,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.15,7291,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.2,7293,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.25,7296,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.3,7299,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.35,7302,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.4,7305,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.45,7307.55,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.5,7311,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.55,7313,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.6,7318,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.65,7322,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.7,7327,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.75,7331,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.8,7338,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.85,7348,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.9,7361.2,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.95,7388.05,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.975,7420.075,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,quantile,0.99,7494.04,2022-06-25,2022-05-30,4 wk ahead cum death
+GM15,Thuringia,point,,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.025,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.05,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.1,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.15,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.2,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.25,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.3,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.35,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.4,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.45,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.5,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.55,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.6,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.65,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.7,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.75,4,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.8,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.85,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.9,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.95,15,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.975,22,2022-06-25,2022-05-30,4 wk ahead inc death
+GM15,Thuringia,quantile,0.99,52.02,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,point,,4633,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.01,4614,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.025,4615,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.05,4617,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.1,4620,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.15,4621,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.2,4623,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.25,4624,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.3,4626,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.35,4628,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.4,4629,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.45,4631,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.5,4633,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.55,4634,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.6,4636,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.65,4639,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.7,4641,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.75,4643,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.8,4647,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.85,4650,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.9,4657.1,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.95,4667.05,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.975,4680.025,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,quantile,0.99,4697.02,2022-06-04,2022-05-30,1 wk ahead cum death
+GM16,Berlin,point,,23,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.01,4,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.025,5,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.05,7,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.1,10,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.15,11,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.2,13,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.25,14,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.3,16,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.35,18,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.4,19,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.45,21,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.5,23,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.55,24,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.6,26,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.65,29,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.7,31,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.75,33,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.8,37,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.85,40,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.9,47.1000000000001,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.95,57.05,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.975,70.025,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,quantile,0.99,87.02,2022-06-04,2022-05-30,1 wk ahead inc death
+GM16,Berlin,point,,4652,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.01,4616.99,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.025,4619,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.05,4622,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.1,4627,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.15,4630,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.2,4633,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.25,4636,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.3,4639,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.35,4643,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.4,4645,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.45,4648,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.5,4652,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.55,4654,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.6,4658,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.65,4663,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.7,4667,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.75,4671,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.8,4678,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.85,4685,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.9,4696.1,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.95,4716.1,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.975,4741.025,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,quantile,0.99,4775.02,2022-06-11,2022-05-30,2 wk ahead cum death
+GM16,Berlin,point,,19,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.01,2.99,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.025,4,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.05,5,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.1,7,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.15,9,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.2,10,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.25,12,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.3,13,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.35,15,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.4,16,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.45,17,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.5,19,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.55,20,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.6,22,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.65,24,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.7,26,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.75,28,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.8,31,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.85,35,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.9,39,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.95,49.05,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.975,61,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,quantile,0.99,78,2022-06-11,2022-05-30,2 wk ahead inc death
+GM16,Berlin,point,,4667,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.01,4618.99,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.025,4621,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.05,4625,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.1,4632,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.15,4637,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.2,4641,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.25,4645,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.3,4649,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.35,4654,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.4,4657,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.45,4661,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.5,4667,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.55,4670,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.6,4675,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.65,4682,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.7,4688,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.75,4694,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.8,4704,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.85,4714,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.9,4730.1,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.95,4758.15,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.975,4790.05,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,quantile,0.99,4837.03,2022-06-18,2022-05-30,3 wk ahead cum death
+GM16,Berlin,point,,15,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.01,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.025,2,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.05,3,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.1,5,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.15,7,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.2,8,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.25,9,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.3,10,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.35,11,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.4,12,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.45,13,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.5,15,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.55,16,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.6,17,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.65,19,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.7,21,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.75,23,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.8,26,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.85,29,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.9,34,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.95,42.05,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.975,49.025,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,quantile,0.99,62.01,2022-06-18,2022-05-30,3 wk ahead inc death
+GM16,Berlin,point,,4679,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.01,4618.99,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.025,4622,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.05,4627,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.1,4635,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.15,4642,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.2,4647,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.25,4652,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.3,4657,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.35,4663,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.4,4667,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.45,4672,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.5,4679,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.55,4684,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.6,4690,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.65,4699,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.7,4707,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.75,4714,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.8,4726,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.85,4741,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.9,4763.2,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.95,4800.15,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.975,4847.1,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,quantile,0.99,4913.04,2022-06-25,2022-05-30,4 wk ahead cum death
+GM16,Berlin,point,,12,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.01,0,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.025,1,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.05,2,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.1,3,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.15,5,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.2,6,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.25,7,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.3,8,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.35,9,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.4,10,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.45,11,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.5,12,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.55,14,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.6,15,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.65,17,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.7,19,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.75,20,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.8,22,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.85,27,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.9,33.1000000000001,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.95,42,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.975,57.05,2022-06-25,2022-05-30,4 wk ahead inc death
+GM16,Berlin,quantile,0.99,76.01,2022-06-25,2022-05-30,4 wk ahead inc death
