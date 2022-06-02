@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  30 MAY 2022 16:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  2 JUN 2022 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,20 +731,20 @@ t line 686.
 (pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
 [7 <../analysis/plots/aggregate-performance-all-v4.png>] [8 <../analysis/plots/
 figure-forecasts-2.png>] [9] [10]
-<../analysis/plots/distribution_scores_wis-2.png, id=298, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-2.png, id=300, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-2.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-2.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2.png  used 
-on input line 875.
+on input line 874.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=299, 3011.25pt
+<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=301, 3011.25pt
  x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-v4.png Graphic file 
 (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-v
-4.png  used on input line 879.
+4.png  used on input line 878.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
@@ -754,12 +754,12 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ] [17
 
 ] [18]
-<../crowd-forecast/Screenshot-forecasting-app.png, id=364, 2055.68pt x 991.705p
+<../crowd-forecast/Screenshot-forecasting-app.png, id=367, 2055.68pt x 991.705p
 t>
 File: ../crowd-forecast/Screenshot-forecasting-app.png Graphic file (type png)
 <use ../crowd-forecast/Screenshot-forecasting-app.png>
 Package pdftex.def Info: ../crowd-forecast/Screenshot-forecasting-app.png  used
- on input line 1183.
+ on input line 1182.
 (pdftex.def)             Requested size: 379.4175pt x 183.03885pt.
 [19
 
@@ -772,177 +772,177 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [23
 
 ] [24]
-<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=437, 3011.25pt 
+<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=440, 3011.25pt 
 x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-Germany-v4.png Graphic file (
 type png)
 <use ../analysis/plots/aggregate-performance-all-Germany-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Germany-v4
-.png  used on input line 1444.
+.png  used on input line 1443.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=438, 3011.25pt x
+<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=441, 3011.25pt x
  2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-Poland-v4.png Graphic file (t
 ype png)
 <use ../analysis/plots/aggregate-performance-all-Poland-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Poland-v4.
-png  used on input line 1451.
+png  used on input line 1450.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 [25
 
  <../analysis/plots/aggregate-performance-all-Germany-v4.png>]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=448, 
+<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=451, 
 3011.25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png Grap
 hic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-v4.png  used on input line 1459.
+ons-all-v4.png  used on input line 1458.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 [26 <../analysis/plots/aggregate-performance-all-Poland-v4.png>]
 <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=4
-56, 3011.25pt x 2740.2375pt>
+59, 3011.25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png 
 Graphic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-rel-v4.png  used on input line 1467.
+ons-all-rel-v4.png  used on input line 1466.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 [27 <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>] [28
  <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>]
-<../analysis/plots/daily_truth.png, id=471, 3011.25pt x 2409.0pt>
+<../analysis/plots/daily_truth.png, id=474, 3011.25pt x 2409.0pt>
 File: ../analysis/plots/daily_truth.png Graphic file (type png)
 <use ../analysis/plots/daily_truth.png>
 Package pdftex.def Info: ../analysis/plots/daily_truth.png  used on input line 
-1477.
+1476.
 (pdftex.def)             Requested size: 379.4175pt x 303.51355pt.
-<../analysis/plots/daily-data-updates.png, id=472, 2710.125pt x 1806.75pt>
+<../analysis/plots/daily-data-updates.png, id=475, 2710.125pt x 1806.75pt>
 File: ../analysis/plots/daily-data-updates.png Graphic file (type png)
 <use ../analysis/plots/daily-data-updates.png>
 Package pdftex.def Info: ../analysis/plots/daily-data-updates.png  used on inpu
-t line 1481.
+t line 1480.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 [29
 
  <../analysis/plots/daily_truth.png>]
-<../analysis/plots/weekly-data-updates.png, id=481, 2710.125pt x 1806.75pt>
+<../analysis/plots/weekly-data-updates.png, id=484, 2710.125pt x 1806.75pt>
 File: ../analysis/plots/weekly-data-updates.png Graphic file (type png)
 <use ../analysis/plots/weekly-data-updates.png>
 Package pdftex.def Info: ../analysis/plots/weekly-data-updates.png  used on inp
-ut line 1485.
+ut line 1484.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 [30 <../analysis/plots/daily-data-updates.png>] [31 <../analysis/plots/weekly-d
 ata-updates.png>]
-<../analysis/plots/figure-forecasts-1.png, id=495, 3011.25pt x 3312.375pt>
+<../analysis/plots/figure-forecasts-1.png, id=498, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-1.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-1.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-1.png  used on inpu
-t line 1495.
+t line 1494.
 (pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
-<../analysis/plots/figure-forecasts-3.png, id=496, 3011.25pt x 3312.375pt>
+<../analysis/plots/figure-forecasts-3.png, id=499, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-3.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
-t line 1499.
+t line 1498.
 (pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
 [32
 
  <../analysis/plots/figure-forecasts-1.png>]
-<../analysis/plots/figure-forecasts-4.png, id=505, 3011.25pt x 3312.375pt>
+<../analysis/plots/figure-forecasts-4.png, id=508, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-4.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-4.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-4.png  used on inpu
-t line 1503.
+t line 1502.
 (pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
 [33 <../analysis/plots/figure-forecasts-3.png>] [34 <../analysis/plots/figure-f
 orecasts-4.png>]
-<../analysis/plots/distribution_scores_wis-1.png, id=520, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-1.png, id=523, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-1.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-1.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1.png  used 
-on input line 1515.
+on input line 1514.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-3.png, id=521, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-3.png, id=524, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-3.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
-on input line 1519.
+on input line 1518.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-4.png, id=522, 2710.125pt x 1806.75p
+<../analysis/plots/distribution_scores_wis-4.png, id=525, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-4.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-4.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4.png  used 
-on input line 1523.
+on input line 1522.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 [35
 
  <../analysis/plots/distribution_scores_wis-1.png> <../analysis/plots/distribut
 ion_scores_wis-3.png>]
-<../analysis/plots/distribution_scores_wis-1-ranks.png, id=534, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-1-ranks.png, id=537, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-1-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-1-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1-ranks.png 
- used on input line 1531.
+ used on input line 1530.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-2-ranks.png, id=535, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-2-ranks.png, id=538, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-2-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-2-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2-ranks.png 
- used on input line 1535.
+ used on input line 1534.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 [36 <../analysis/plots/distribution_scores_wis-4.png> <../analysis/plots/distri
 bution_scores_wis-1-ranks.png>]
-<../analysis/plots/distribution_scores_wis-3-ranks.png, id=546, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-3-ranks.png, id=549, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-3-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-3-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3-ranks.png 
- used on input line 1539.
+ used on input line 1538.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-4-ranks.png, id=547, 2710.125pt x 18
+<../analysis/plots/distribution_scores_wis-4-ranks.png, id=550, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-4-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-4-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4-ranks.png 
- used on input line 1543.
+ used on input line 1542.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 [37 <../analysis/plots/distribution_scores_wis-2-ranks.png> <../analysis/plots/
 distribution_scores_wis-3-ranks.png>]
-<../analysis/plots/difference-wis-crowd-ensemble.png, id=558, 2710.125pt x 1053
+<../analysis/plots/difference-wis-crowd-ensemble.png, id=562, 2710.125pt x 1053
 .9375pt>
 File: ../analysis/plots/difference-wis-crowd-ensemble.png Graphic file (type pn
 g)
 <use ../analysis/plots/difference-wis-crowd-ensemble.png>
 Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-ensemble.png  u
-sed on input line 1547.
+sed on input line 1546.
 (pdftex.def)             Requested size: 379.4175pt x 147.55025pt.
-<../analysis/plots/difference-wis-crowd-renewal.png, id=559, 2710.125pt x 1053.
+<../analysis/plots/difference-wis-crowd-renewal.png, id=563, 2710.125pt x 1053.
 9375pt>
 File: ../analysis/plots/difference-wis-crowd-renewal.png Graphic file (type png
 )
 <use ../analysis/plots/difference-wis-crowd-renewal.png>
 Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-renewal.png  us
-ed on input line 1551.
+ed on input line 1550.
 (pdftex.def)             Requested size: 379.4175pt x 147.55025pt.
 [38 <../analysis/plots/distribution_scores_wis-4-ranks.png> <../analysis/plots/
 difference-wis-crowd-ensemble.png>] [39 <../analysis/plots/difference-wis-crowd
 -renewal.png>]
-<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=577, 3011
+<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=580, 3011
 .25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png Graphic 
 file (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-m
-ean-v4.png  used on input line 1564.
+ean-v4.png  used on input line 1563.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -958,13 +958,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [40 <../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>] [41] [4
 2] [43] [44]
-<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=611, 3011.2
+<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=614, 3011.2
 5pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-late-period-v4.png Graphic fi
 le (type png)
 <use ../analysis/plots/aggregate-performance-all-late-period-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-late-perio
-d-v4.png  used on input line 1816.
+d-v4.png  used on input line 1815.
 (pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -979,89 +979,89 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: Text page 46 contains only floats.
 
 [46]
-<../analysis/plots/number-forecasters.png, id=627, 2525.435pt x 2425.06pt>
+<../analysis/plots/number-forecasters.png, id=630, 2525.435pt x 2425.06pt>
 File: ../analysis/plots/number-forecasters.png Graphic file (type png)
 <use ../analysis/plots/number-forecasters.png>
 Package pdftex.def Info: ../analysis/plots/number-forecasters.png  used on inpu
-t line 1964.
+t line 1963.
 (pdftex.def)             Requested size: 379.4175pt x 364.33536pt.
 [47
 
 ]
-<../analysis/plots/ensemble-members.png, id=634, 2525.435pt x 2425.06pt>
+<../analysis/plots/ensemble-members.png, id=637, 2525.435pt x 2425.06pt>
 File: ../analysis/plots/ensemble-members.png Graphic file (type png)
 <use ../analysis/plots/ensemble-members.png>
 Package pdftex.def Info: ../analysis/plots/ensemble-members.png  used on input 
-line 1968.
+line 1967.
 (pdftex.def)             Requested size: 379.4175pt x 364.33536pt.
 [48 <../analysis/plots/number-forecasters.png>] [49 <../analysis/plots/ensemble
 -members.png>]
-<../analysis/plots/comparison-forecast-interals.png, id=649, 2710.125pt x 1806.
+<../analysis/plots/comparison-forecast-interals.png, id=652, 2710.125pt x 1806.
 75pt>
 File: ../analysis/plots/comparison-forecast-interals.png Graphic file (type png
 )
 <use ../analysis/plots/comparison-forecast-interals.png>
 Package pdftex.def Info: ../analysis/plots/comparison-forecast-interals.png  us
-ed on input line 1978.
+ed on input line 1977.
 (pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 [50
 
  <../analysis/plots/comparison-forecast-interals.png>]
-Underfull \hbox (badness 1348) in paragraph at lines 2076--2076
+Underfull \hbox (badness 1348) in paragraph at lines 2075--2075
 \T1/cmr/m/n/10 (+20) COVID-19 Fore-cast Hub: 4 De-cem-ber 2020 snap-shot. Zen-o
 do; 2020.
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 2114--2114
+Underfull \hbox (badness 1097) in paragraph at lines 2113--2113
 \T1/cmr/m/n/10 (+20) fluenza in the U.S. PLOS Com-pu-ta-tional Bi-ol-ogy. 2019;
 15: e1007486.
  []
 
 [51]
-Underfull \hbox (badness 1688) in paragraph at lines 2137--2137
+Underfull \hbox (badness 1688) in paragraph at lines 2136--2136
 []\T1/cmr/m/n/10 (+20) Hoogeveen S, Sarafoglou A, Wa-gen-mak-ers E-J. Laypeo-pl
 e Can Pre-dict
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 2137--2137
+Underfull \hbox (badness 1527) in paragraph at lines 2136--2136
 \T1/cmr/m/n/10 (+20) in Meth-ods and Prac-tices in Psy-cho-log-i-cal Sci-ence. 
 2020;3: 267--285.
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 2143--2143
+Underfull \hbox (badness 1584) in paragraph at lines 2142--2142
 \T1/cmr/m/n/10 (+20) can bet on it. 2020 [cited 13 Oct 2021]. Avail-able: []$\T
 1/cmtt/m/n/10 https : / / www .
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 2150--2150
+Underfull \hbox (badness 1824) in paragraph at lines 2149--2149
 \T1/cmr/m/n/10 (+20) kets: Does Money Mat-ter? Elec-tronic Mar-kets. 2004;14: 2
 43--251.
  []
 
 [52]
-Underfull \hbox (badness 1454) in paragraph at lines 2213--2213
+Underfull \hbox (badness 1454) in paragraph at lines 2212--2212
 []\T1/cmr/m/n/10 (+20) ECDC. Down-load his-tor-i-cal data (to 14 De-cem-ber 202
 0) on the daily
  []
 
 
-Overfull \hbox (16.74411pt too wide) in paragraph at lines 2213--2213
+Overfull \hbox (16.74411pt too wide) in paragraph at lines 2212--2212
 \T1/cmtt/m/n/10 download-[]todays-[]data-[]geographic-[]distribution-[]covid-[]
 19-[]cases-[]worldwide$[] 
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 2220--2220
+Underfull \hbox (badness 5189) in paragraph at lines 2219--2219
 \T1/cmr/m/n/10 (+20) des RKI zu COVID-19. 2021 [cited 30 May 2021]. Avail-able:
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2220--2220
+Underfull \hbox (badness 10000) in paragraph at lines 2219--2219
 []$\T1/cmtt/m/n/10 https : / / www . rki . de / DE / Content / InfAZ / N / Neua
 rtiges _ Coronavirus /
  []
@@ -1069,55 +1069,55 @@ rtiges _ Coronavirus /
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2227--2227
+Underfull \hbox (badness 10000) in paragraph at lines 2226--2226
 \T1/cmr/m/n/10 (+20) Avail-able: []$\T1/cmtt/m/n/10 https : / / forsal . pl / l
 ifestyle / zdrowie / artykuly / 8017628 ,[]
  []
 
 
-Overfull \hbox (177.78027pt too wide) in paragraph at lines 2227--2227
+Overfull \hbox (177.78027pt too wide) in paragraph at lines 2226--2226
 \T1/cmtt/m/n/10 rozbieznosci-[]w-[]statystykach-[]koronawirusa-[]22-[]tys-[]prz
 ypadkow-[]beda-[]doliczone-[]do-[]ogolnej-[]liczby-[]wynikow .
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 2234--2234
+Underfull \hbox (badness 2165) in paragraph at lines 2233--2233
 []\T1/cmr/m/n/10 (+20) Ärzteblatt DÄG Redak-tion Deutsches. SARS-CoV-2-Diagnost
 ik: RKI
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 2252--2252
+Underfull \hbox (badness 2376) in paragraph at lines 2251--2251
 \T1/cmr/m/n/10 (+20) 2020 [cited 30 May 2021]. Avail-able: []$\T1/cmtt/m/n/10 h
 ttps : / / ourworldindata . org /
  []
 
 [53]
-Underfull \hbox (badness 1033) in paragraph at lines 2294--2294
+Underfull \hbox (badness 1033) in paragraph at lines 2293--2293
 \T1/cmr/m/n/10 (+20) pub-licly avail-able data. 2020. Avail-able: []$\T1/cmtt/m
 /n/10 http : / / virological . org / t /
  []
 
 
-Overfull \hbox (164.65848pt too wide) in paragraph at lines 2294--2294
+Overfull \hbox (164.65848pt too wide) in paragraph at lines 2293--2293
 \T1/cmtt/m/n/10 epidemiological-[]data-[]from-[]the-[]ncov-[]2019-[]outbreak-[]
 early-[]descriptions-[]from-[]publicly-[]available-[]data /
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 2306--2306
+Underfull \hbox (badness 1571) in paragraph at lines 2305--2305
 []\T1/cmr/m/n/10 (+20) Bracher J, Ray EL, Gneit-ing T, Re-ich NG. Eval-u-at-ing
  epi-demic fore-
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 2306--2306
+Underfull \hbox (badness 1019) in paragraph at lines 2305--2305
 \T1/cmr/m/n/10 (+20) casts in an in-ter-val for-mat. PLoS Com-put Biol. 2021;17
 : e1008618.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2326--2326
+Underfull \hbox (badness 10000) in paragraph at lines 2325--2325
 \T1/cmtt/m/n/10 com / en / coronavirus-[]germany-[]to-[]impose-[]one-[]month-[]
 partial-[]lockdown /
  []
@@ -1131,7 +1131,7 @@ Package rerunfilecheck Info: File `manuscript.out' has not changed.
 Here is how much of TeX's memory you used:
  19474 strings out of 479719
  321074 string characters out of 5880575
- 758611 words of memory out of 5000000
+ 759612 words of memory out of 5000000
  36764 multiletter control sequences out of 15000+600000
  482725 words of font info for 107 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -1155,10 +1155,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022basic/
 texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/2022bas
 ic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022
 basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on manuscript.pdf (55 pages, 10803986 bytes).
+Output written on manuscript.pdf (55 pages, 10803927 bytes).
 PDF statistics:
- 945 PDF objects out of 1000 (max. 8388607)
- 789 compressed objects within 8 object streams
+ 948 PDF objects out of 1000 (max. 8388607)
+ 792 compressed objects within 8 object streams
  263 named destinations out of 1000 (max. 500000)
  27578 words of extra memory for PDF output out of 29859 (max. 10000000)
 

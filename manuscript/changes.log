@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  19 MAY 2022 14:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  2 JUN 2022 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,6 +23,32 @@ File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+)
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
@@ -33,51 +59,51 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen139
+\@emptytoks=\toks18
+\ex@=\dimen147
 ))
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen140
+\pmbraise@=\dimen148
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count193
+\inf@bad=\count196
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count194
-\leftroot@=\count195
+\uproot@=\count197
+\leftroot@=\count198
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count196
-\DOTSCASE@=\count197
+\classnum@=\count199
+\DOTSCASE@=\count266
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box50
 \strutbox@=\box51
-\big@size=\dimen141
+\big@size=\dimen149
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count198
-\c@MaxMatrixCols=\count199
+\macc@depth=\count267
+\c@MaxMatrixCols=\count268
 \dotsspace@=\muskip16
-\c@parentequation=\count266
-\dspbrk@lvl=\count267
-\tag@help=\toks17
-\row@=\count268
-\column@=\count269
-\maxfields@=\count270
-\andhelp@=\toks18
-\eqnshift@=\dimen142
-\alignsep@=\dimen143
-\tagshift@=\dimen144
-\tagwidth@=\dimen145
-\totwidth@=\dimen146
-\lineht@=\dimen147
-\@envbody=\toks19
+\c@parentequation=\count269
+\dspbrk@lvl=\count270
+\tag@help=\toks19
+\row@=\count271
+\column@=\count272
+\maxfields@=\count273
+\andhelp@=\toks20
+\eqnshift@=\dimen150
+\alignsep@=\dimen151
+\tagshift@=\dimen152
+\tagwidth@=\dimen153
+\totwidth@=\dimen154
+\lineht@=\dimen155
+\@envbody=\toks21
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
@@ -92,144 +118,66 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/lmodern.sty
-Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count274
+\cp@tempcnt=\count275
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks21
-\inpenc@posthook=\toks22
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count276
+\uc@combtoks=\toks25
+\uc@combtoksb=\toks26
+\uc@temptokena=\toks27
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2022/02/22 v3.0c Micro-typographical refinements (RS)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks23
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count271
-)
-\MT@toks=\toks24
-\MT@tempbox=\box52
-\MT@count=\count272
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
-LaTeX Info: Redefining \leftprotrusion on input line 1028.
-LaTeX Info: Redefining \rightprotrusion on input line 1036.
-LaTeX Info: Redefining \textls on input line 1200.
-\MT@outer@kern=\dimen148
-LaTeX Info: Redefining \textmicrotypecontext on input line 1786.
-\MT@listname@count=\count273
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/microtype-pdftex.d
-ef
-File: microtype-pdftex.def 2022/02/22 v3.0c Definitions specific to pdftex (RS)
-
-LaTeX Info: Redefining \lsstyle on input line 897.
-LaTeX Info: Redefining \lslig on input line 897.
-\MT@outer@space=\skip52
-)
-Package microtype Info: Loading configuration file microtype.cfg.
- (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2022/02/22 v3.0c microtype main configuration file (RS)
-)) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/parskip/parskip.sty
-Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
+(/usr/local/texlive/2022basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+))
+(/usr/local/texlive/2022basic/texmf-dist/tex/generic/gettitlestring/gettitlestr
+ing.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
 (/usr/local/texlive/2022basic/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 227.
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
-Package xcolor Info: Model `RGB' extended on input line 1368.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/bookmark/bookmark.sty
-Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+)))
+\c@section@level=\count277
+LaTeX Info: Redefining \ref on input line 356.
+LaTeX Info: Redefining \pageref on input line 356.
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -250,14 +198,12 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen149
-\Hy@linkcounter=\count274
-\Hy@pagecounter=\count275
+\@linkdim=\dimen156
+\Hy@linkcounter=\count278
+\Hy@pagecounter=\count279
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -265,14 +211,11 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2022basic/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count276
+\Hy@SavedSpaceFactor=\count280
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4018.
 Package hyperref Info: Hyper figures OFF on input line 4137.
 Package hyperref Info: Link nesting OFF on input line 4142.
 Package hyperref Info: Hyper index ON on input line 4145.
@@ -280,14 +223,14 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count277
+\c@Hy@tempcnt=\count281
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4749.
-\XeTeXLinkMargin=\dimen150
+\XeTeXLinkMargin=\dimen157
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -296,9 +239,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count278
-\Field@Width=\dimen151
-\Fld@charsize=\dimen152
+\Fld@menulength=\count282
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -312,9 +255,9 @@ LaTeX Info: Redefining \pageref on input line 6101.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count279
-\c@Item=\count280
-\c@Hfootnote=\count281
+\Hy@abspage=\count283
+\c@Item=\count284
+\c@Hfootnote=\count285
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -326,8 +269,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count282
-\c@bookmark@seq@number=\count283
+\Fld@listcount=\count286
+\c@bookmark@seq@number=\count287
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -340,100 +283,133 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip53
+\Hy@SectionHShift=\skip52
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count288
+\output=\toks28
+\linenoprevgraf=\count289
+\linenumbersep=\dimen160
+\linenumberwidth=\dimen161
+\c@linenumber=\count290
+\c@pagewiselinenumber=\count291
+\c@LN@truepage=\count292
+\c@internallinenumber=\count293
+\c@internallinenumbers=\count294
+\quotelinenumbersep=\dimen162
+\bframerule=\dimen163
+\bframesep=\dimen164
+\bframebox=\box52
+LaTeX Info: Redefining \\ on input line 3056.
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count284
-))
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2022/02/22 v3.0c Micro-typographical refinements (RS)
 
-(/usr/local/texlive/2022basic/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
 )
-\Gm@cnth=\count285
-\Gm@cntv=\count286
-\c@Gm@tempcnt=\count287
-\Gm@bindingoffset=\dimen153
-\Gm@wd@mp=\dimen154
-\Gm@odd@mp=\dimen155
-\Gm@even@mp=\dimen156
-\Gm@layoutwidth=\dimen157
-\Gm@layoutheight=\dimen158
-\Gm@layouthoffset=\dimen159
-\Gm@layoutvoffset=\dimen160
-\Gm@dimlist=\toks25
+\MT@toks=\toks29
+\MT@tempbox=\box53
+\MT@count=\count296
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1200.
+\MT@outer@kern=\dimen165
+LaTeX Info: Redefining \textmicrotypecontext on input line 1786.
+\MT@listname@count=\count297
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/microtype-pdftex.d
+ef
+File: microtype-pdftex.def 2022/02/22 v3.0c Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 897.
+LaTeX Info: Redefining \lslig on input line 897.
+\MT@outer@space=\skip53
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip54
-\LTright=\skip55
-\LTpre=\skip56
-\LTpost=\skip57
-\LTchunksize=\count288
-\LTcapwidth=\dimen161
-\LT@head=\box53
-\LT@firsthead=\box54
-\LT@foot=\box55
-\LT@lastfoot=\box56
-\LT@gbox=\box57
-\LT@cols=\count289
-\LT@rows=\count290
-\c@LT@tables=\count291
-\c@LT@chunks=\count292
-\LT@p@ftn=\toks26
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2022/02/22 v3.0c microtype main configuration file (RS)
+)) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen162
-\lightrulewidth=\dimen163
-\cmidrulewidth=\dimen164
-\belowrulesep=\dimen165
-\belowbottomsep=\dimen166
-\aboverulesep=\dimen167
-\abovetopsep=\dimen168
-\cmidrulesep=\dimen169
-\cmidrulekern=\dimen170
-\defaultaddspace=\dimen171
-\@cmidla=\count293
-\@cmidlb=\count294
-\@aboverulesep=\dimen172
-\@belowrulesep=\dimen173
-\@thisruleclass=\count295
-\@lastruleclass=\count296
-\@thisrulewidth=\dimen174
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen175
-\ar@mcellbox=\box58
-\extrarowheight=\dimen176
-\NC@list=\toks27
-\extratabsurround=\skip58
-\backup@length=\skip59
-\ar@cellbox=\box59
+\col@sep=\dimen166
+\ar@mcellbox=\box54
+\extrarowheight=\dimen167
+\NC@list=\toks30
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box55
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count297
-\calc@Bcount=\count298
-\calc@Adimen=\dimen177
-\calc@Bdimen=\dimen178
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count299
-\calc@Cskip=\skip62
+\everycr=\toks31
+\minrowclearance=\skip56
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/footnotehyper/footnotehyper.
-sty
-Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
-\FNH@notes=\box60
-\FNH@width=\dimen179
-\FNH@toks=\toks28
-) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/graphicx.sty
+\rownum=\count298
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+\savedwidth=\skip57
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/02/28 v3.6a Customizing captions (AR)
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/02/28 v2.3a caption3 kernel (AR)
+\caption@tempdima=\dimen168
+\captionmargin=\dimen169
+\caption@leftmargin=\dimen170
+\caption@rightmargin=\dimen171
+\caption@width=\dimen172
+\caption@indent=\dimen173
+\caption@parindent=\dimen174
+\caption@hangindent=\dimen175
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count299
+\c@continuedfloat=\count300
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen176
+\caption@adjustwidth@linewidth=\dimen177
+Package caption Info: hyperref package is loaded.
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip58
+\f@nch@O@elh=\skip59
+\f@nch@O@erh=\skip60
+\f@nch@O@olh=\skip61
+\f@nch@O@orh=\skip62
+\f@nch@O@elf=\skip63
+\f@nch@O@erf=\skip64
+\f@nch@O@olf=\skip65
+\f@nch@O@orf=\skip66
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/graphics.sty
@@ -447,57 +423,108 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen180
-\Gin@req@width=\dimen181
+\Gin@req@height=\dimen178
+\Gin@req@width=\dimen179
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
-\cslhangindent=\skip63
-\csllabelwidth=\skip64
-\cslentryspacingunit=\skip65
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count300
-\output=\toks29
-\linenoprevgraf=\count301
-\linenumbersep=\dimen182
-\linenumberwidth=\dimen183
-\c@linenumber=\count302
-\c@pagewiselinenumber=\count303
-\c@LN@truepage=\count304
-\c@internallinenumber=\count305
-\c@internallinenumbers=\count306
-\quotelinenumbersep=\dimen184
-\bframerule=\dimen185
-\bframesep=\dimen186
-\bframebox=\box61
-LaTeX Info: Redefining \\ on input line 3056.
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
+ty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+\cslhangindent=\skip67
+\csllabelwidth=\skip68
+\cslentryspacingunit=\skip69
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count301
+\calc@Bcount=\count302
+\calc@Adimen=\dimen180
+\calc@Bdimen=\dimen181
+\calc@Askip=\skip70
+\calc@Bskip=\skip71
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count303
+\calc@Cskip=\skip72
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count307
-\float@exts=\toks30
-\float@box=\box62
-\@float@everytoks=\toks31
-\@floatcapt=\box63
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen182
+\lightrulewidth=\dimen183
+\cmidrulewidth=\dimen184
+\belowrulesep=\dimen185
+\belowbottomsep=\dimen186
+\aboverulesep=\dimen187
+\abovetopsep=\dimen188
+\cmidrulesep=\dimen189
+\cmidrulekern=\dimen190
+\defaultaddspace=\dimen191
+\@cmidla=\count304
+\@cmidlb=\count305
+\@aboverulesep=\dimen192
+\@belowrulesep=\dimen193
+\@thisruleclass=\count306
+\@lastruleclass=\count307
+\@thisrulewidth=\dimen194
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip73
+\LTright=\skip74
+\LTpre=\skip75
+\LTpost=\skip76
+\LTchunksize=\count308
+\LTcapwidth=\dimen195
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count309
+\LT@rows=\count310
+\c@LT@tables=\count311
+\c@LT@chunks=\count312
+\LT@p@ftn=\toks32
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip66
-\multirow@cntb=\count308
-\multirow@dima=\skip67
-\bigstrutjot=\dimen187
+\multirow@colwidth=\skip77
+\multirow@cntb=\count313
+\multirow@dima=\skip78
+\bigstrutjot=\dimen196
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen188
-\WF@size=\dimen189
-\c@WF@wrappedlines=\count309
-\WF@box=\box64
-\WF@everypar=\toks32
+\wrapoverhang=\dimen197
+\WF@size=\dimen198
+\c@WF@wrappedlines=\count314
+\WF@box=\box61
+\WF@everypar=\toks33
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-\everycr=\toks33
-\minrowclearance=\skip68
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count315
+\float@exts=\toks34
+\float@box=\box62
+\@float@everytoks=\toks35
+\@floatcapt=\box63
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
@@ -512,38 +539,38 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box65
-\sift@deathcycles=\count310
-\@vwid@loff=\dimen190
-\@vwid@roff=\dimen191
+\@vwid@box=\box64
+\sift@deathcycles=\count316
+\@vwid@loff=\dimen199
+\@vwid@roff=\dimen256
 )
-\c@taburow=\count311
-\tabu@nbcols=\count312
-\tabu@cnt=\count313
-\tabu@Xcol=\count314
-\tabu@alloc=\count315
-\tabu@nested=\count316
-\tabu@target=\dimen192
-\tabu@spreadtarget=\dimen193
-\tabu@naturalX=\dimen194
-\tabucolX=\dimen195
-\tabu@Xsum=\dimen196
-\extrarowdepth=\dimen197
-\abovetabulinesep=\dimen198
-\belowtabulinesep=\dimen199
-\tabustrutrule=\dimen256
-\tabu@thebody=\toks34
-\tabu@footnotes=\toks35
-\tabu@box=\box66
-\tabu@arstrutbox=\box67
-\tabu@hleads=\box68
-\tabu@vleads=\box69
-\tabu@cellskip=\skip69
+\c@taburow=\count317
+\tabu@nbcols=\count318
+\tabu@cnt=\count319
+\tabu@Xcol=\count320
+\tabu@alloc=\count321
+\tabu@nested=\count322
+\tabu@target=\dimen257
+\tabu@spreadtarget=\dimen258
+\tabu@naturalX=\dimen259
+\tabucolX=\dimen260
+\tabu@Xsum=\dimen261
+\extrarowdepth=\dimen262
+\abovetabulinesep=\dimen263
+\belowtabulinesep=\dimen264
+\tabustrutrule=\dimen265
+\tabu@thebody=\toks36
+\tabu@footnotes=\toks37
+\tabu@box=\box65
+\tabu@arstrutbox=\box66
+\tabu@hleads=\box67
+\tabu@vleads=\box68
+\tabu@cellskip=\skip79
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/threeparttable/threeparttabl
 e.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box70
+\@tempboxb=\box69
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/threeparttablex/threeparttab
 lex.sty
@@ -554,60 +581,76 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip70
+\TPTL@width=\skip80
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box71
-\UL@hyphenbox=\box72
-\UL@skip=\skip71
-\UL@hook=\toks36
-\UL@height=\dimen257
-\UL@pe=\count317
-\UL@pixel=\dimen258
-\ULC@box=\box73
+\UL@box=\box70
+\UL@hyphenbox=\box71
+\UL@skip=\skip81
+\UL@hook=\toks38
+\UL@height=\dimen266
+\UL@pe=\count323
+\UL@pixel=\dimen267
+\ULC@box=\box72
 Package: ulem 2019/11/18
-\ULdepth=\dimen259
+\ULdepth=\dimen268
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen260
-\c@nlinenum=\count318
-\TeXr@lab=\toks37
+\rotheadsize=\dimen269
+\c@nlinenum=\count324
+\TeXr@lab=\toks39
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/forarray/forarray.sty
+Package: forarray 2008/06/20 Version 1.01 -- Using array structures in LaTeX
+\fe@toks=\toks40
+\fe@level=\count325
+\fe@cnt@i=\count326
+\fe@cnt@ii=\count327
+\thislevelcount=\count328
+\thislevelnr=\count329
+)
+(/usr/local/texlive/2022basic/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2022basic/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count330
+\decimalpart=\count331
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/oberdiek/settobox.sty
 Package: settobox 2016/05/16 v1.5 Assign box dimensions to length registers (HO
 )
 )
-\DIFdelgraphicsbox=\box74
-\DIFdelgraphicswidth=\skip72
-\DIFdelgraphicsheight=\skip73
-LaTeX Info: Redefining \DIFaddbegin on input line 174.
-LaTeX Info: Redefining \DIFaddend on input line 175.
-LaTeX Info: Redefining \DIFdelbegin on input line 176.
-LaTeX Info: Redefining \DIFdelend on input line 177.
-LaTeX Info: Redefining \DIFaddbeginFL on input line 182.
-LaTeX Info: Redefining \DIFaddendFL on input line 183.
-LaTeX Info: Redefining \DIFdelbeginFL on input line 184.
-LaTeX Info: Redefining \DIFdelendFL on input line 185.
+\DIFdelgraphicsbox=\box73
+\DIFdelgraphicswidth=\skip82
+\DIFdelgraphicsheight=\skip83
+LaTeX Info: Redefining \DIFaddbegin on input line 407.
+LaTeX Info: Redefining \DIFaddend on input line 408.
+LaTeX Info: Redefining \DIFdelbegin on input line 409.
+LaTeX Info: Redefining \DIFdelend on input line 410.
+LaTeX Info: Redefining \DIFaddbeginFL on input line 415.
+LaTeX Info: Redefining \DIFaddendFL on input line 416.
+LaTeX Info: Redefining \DIFdelbeginFL on input line 417.
+LaTeX Info: Redefining \DIFdelendFL on input line 418.
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count319
-\lst@gtempboxa=\box75
-\lst@token=\toks38
-\lst@length=\count320
-\lst@currlwidth=\dimen261
-\lst@column=\count321
-\lst@pos=\count322
-\lst@lostspace=\dimen262
-\lst@width=\dimen263
-\lst@newlines=\count323
-\lst@lineno=\count324
-\lst@maxwidth=\dimen264
+\lst@mode=\count332
+\lst@gtempboxa=\box74
+\lst@token=\toks41
+\lst@length=\count333
+\lst@currlwidth=\dimen270
+\lst@column=\count334
+\lst@pos=\count335
+\lst@lostspace=\dimen271
+\lst@width=\dimen272
+\lst@newlines=\count336
+\lst@lineno=\count337
+\lst@maxwidth=\dimen273
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count325
-\lst@skipnumbers=\count326
-\lst@framebox=\box76
+\c@lstnumber=\count338
+\lst@skipnumbers=\count339
+\lst@framebox=\box75
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -617,117 +660,51 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count327
-\l__pdf_internal_box=\box77
-) (./changes.aux
-
-LaTeX Warning: Label `tab:scoring-metrics' multiply defined.
-
-
-LaTeX Warning: Label `tab:table-ensemble-versions' multiply defined.
-
-)
+\l__color_backend_stack_int=\count340
+\l__pdf_internal_box=\box76
+) (./changes.aux)
 \openout1 = `changes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 204.
-LaTeX Font Info:    ... okay on input line 204.
-LaTeX Info: Redefining \microtypecontext on input line 204.
-Package microtype Info: Applying patch `item' on input line 204.
-Package microtype Info: Applying patch `toc' on input line 204.
-Package microtype Info: Applying patch `eqnum' on input line 204.
-Package microtype Info: Applying patch `footnote' on input line 204.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using protrusion set `basicmath'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 204.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
- (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen265
-\scratchbox=\box78
-\nofMPsegments=\count329
-\nofMParguments=\count330
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen266
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
-\everyMPtoPDFconversion=\toks40
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
-ty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-Package hyperref Info: Link coloring OFF on input line 204.
- (/usr/local/texlive/2022basic/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/local/texlive/2022basic/texmf-dist/tex/generic/gettitlestring/gettitlestr
-ing.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count334
-)
-LaTeX Info: Redefining \ref on input line 204.
-LaTeX Info: Redefining \pageref on input line 204.
-LaTeX Info: Redefining \nameref on input line 204.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 437.
+LaTeX Font Info:    ... okay on input line 437.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(198.7425pt, 323.40732pt, 92.14519pt)
+* v-part:(T,H,B)=(61.42993pt, 638.14268pt, 95.39737pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=379.4175pt
+* \textheight=632.36249pt
+* \oddsidemargin=126.4725pt
+* \evensidemargin=126.4725pt
+* \topmargin=-47.84006pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
-* \footskip=30.0pt
+* \footskip=54.2025pt
 * \marginparwidth=65.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
@@ -741,43 +718,77 @@ LaTeX Info: Redefining \nameref on input line 204.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count335
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
-06.
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-06.
+Package hyperref Info: Link coloring OFF on input line 437.
+LaTeX Info: Redefining \ref on input line 437.
+LaTeX Info: Redefining \pageref on input line 437.
+LaTeX Info: Redefining \nameref on input line 437.
 
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-06.
+(./changes.out) (./changes.out)
+\@outlinefile=\write3
+\openout3 = `changes.out'.
 
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-206.
+LaTeX Info: Redefining \microtypecontext on input line 437.
+Package microtype Info: Applying patch `item' on input line 437.
+Package microtype Info: Applying patch `toc' on input line 437.
+Package microtype Info: Applying patch `eqnum' on input line 437.
+Package microtype Info: Applying patch `footnote' on input line 437.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 437.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
 
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-206.
+(/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count341
+\scratchdimen=\dimen274
+\scratchbox=\box77
+\nofMPsegments=\count342
+\nofMParguments=\count343
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count344
+\MPscratchDim=\dimen275
+\MPnumerator=\count345
+\makeMPintoPDFobject=\count346
+\everyMPtoPDFconversion=\toks43
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 437.
+\c@lstlisting=\count347
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 4
+49.
 
-(/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 206.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 206.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 206.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 206
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 484
 .
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -786,7 +797,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 206
+LaTeX Font Info:    Trying to load font information for U+msb on input line 484
 .
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -795,1418 +806,586 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-[1
+\fe@count@abs@i=\count348
+\fe@count@abs@ii=\count349
 
-{/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-39.
- (/usr/local/texlive/2022basic/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+) [1
+
+{/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+61.
+
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-[4]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 244.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 244.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 244.
- [5] [6] [7] [8]
-<../analysis/plots/aggregate-performance-all-v4.png, id=81, 3011.25pt x 2740.23
-75pt>
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [3] [4]
+[5]
+
+Package hyperref Warning: Suppressing empty link on input line 833.
+
+
+Package hyperref Warning: Suppressing empty link on input line 870.
+
+[6]
+<../analysis/plots/aggregate-performance-all-v4.png, id=222, 3011.25pt x 2740.2
+375pt>
 File: ../analysis/plots/aggregate-performance-all-v4.png Graphic file (type png
 )
 <use ../analysis/plots/aggregate-performance-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-v4.png  us
-ed on input line 293.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--293
-[][]
- []
-
-[9]
-Overfull \vbox (27.02023pt too high) has occurred while \output is active []
-
-
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.295 
-       <../analysis/plots/aggregate-performance-all-v4.png>]
-<../analysis/plots/figure-forecasts-2.png, id=100, 3011.25pt x 3312.375pt>
+ed on input line 902.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
+<../analysis/plots/figure-forecasts-2.png, id=224, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-2.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-2.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-2.png  used on inpu
-t line 297.
-(pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--297
-[][]
- []
-
-[11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.301 ...on{Case Forecasts}\label{case-forecasts}}
-                                                   <../analysis/plots/figure-fo
-recasts-2.png>] [12] [13] [14]
-<../analysis/plots/distribution_scores_wis-2.png, id=173, 2710.125pt x 1806.75p
+t line 906.
+(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
+ [7 <../analysis/plots/aggregate-performance-all-v4.png>] [8 <../analysis/plots
+/figure-forecasts-2.png>] [9] [10]
+<../analysis/plots/distribution_scores_wis-2.png, id=303, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-2.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-2.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2.png  used 
-on input line 330.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[][]
- []
-
-[15]
-<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=178, 3011.25pt
+on input line 1096.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=304, 3011.25pt
  x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-v4.png Graphic file 
 (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-v
-4.png  used on input line 334.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
+4.png  used on input line 1100.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
-[][]
- []
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+[11 <../analysis/plots/distribution_scores_wis-2.png>] [12 <../analysis/plots/a
+ggregate-performance-rel-ensemble-v4.png>]
 
-[16
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.338 
-       <../analysis/plots/distribution_scores_wis-2.png>]
-Overfull \vbox (174.52023pt too high) has occurred while \output is active []
+LaTeX Warning: Reference `fig:agg-performance-ensemble' on page 13 undefined on
+ input line 1159.
 
+[13] [14] [15] [16
+
+]
+! Misplaced \noalign.
+\caption ->\noalign 
+                    \bgroup \@ifnextchar [{\egroup \LT@c@ption \@firstofone ...
+l.1389 \DIFaddend \caption
+                          {\label{tab:scoring-metrics}Overview of the scorin...
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \noalign.
+\caption@LT@make #1->\noalign 
+                              {\caption@LT@config }\expandafter \LT@mcol \ex...
+l.1389 ...s}Overview of the scoring metrics used.}
+                                                  \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1389 ...s}Overview of the scoring metrics used.}
+                                                  \\
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
 [17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.338 
-       <../analysis/plots/aggregate-performance-rel-ensemble-v4.png>]
 
-LaTeX Warning: Reference `fig:agg-performance-ensemble' on page 18 undefined on
- input line 353.
-
-[18] [19] [20] [21] [22] [23
-
-] [24] [25
-
-] [26]
-<../crowd-forecast/Screenshot-forecasting-app.png, id=264, 2055.68pt x 991.705p
+] [18]
+<../crowd-forecast/Screenshot-forecasting-app.png, id=370, 2055.68pt x 991.705p
 t>
 File: ../crowd-forecast/Screenshot-forecasting-app.png Graphic file (type png)
 <use ../crowd-forecast/Screenshot-forecasting-app.png>
 Package pdftex.def Info: ../crowd-forecast/Screenshot-forecasting-app.png  used
- on input line 437.
-(pdftex.def)             Requested size: 469.75385pt x 226.61954pt.
+ on input line 1429.
+(pdftex.def)             Requested size: 379.4175pt x 183.03885pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.437 ...cast/Screenshot-forecasting-app} \caption
-                                                  {Screenshot of the crowdfo...
-
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
-[][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1429--1429
+[][][] 
  []
 
+[19
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.437 ...elicit predictions (made in June 2021). }
-                                                  \label{fig:screenshot}
-[27
+ <../crowd-forecast/Screenshot-forecasting-app.png>] [20
 
- <../crowd-forecast/Screenshot-forecasting-app.png>] [28
-
-] [29] [30] [31]
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--589
-
- []
-
+] [21] [22]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33
+[23
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.634 \clearpage
-                ] [34
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.634 \clearpage
-                ]
-<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=344, 3011.25pt 
+] [24]
+<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=443, 3011.25pt 
 x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-Germany-v4.png Graphic file (
 type png)
 <use ../analysis/plots/aggregate-performance-all-Germany-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Germany-v4
-.png  used on input line 643.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
+.png  used on input line 1694.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.643 ...gate-performance-all-Germany-v4} \caption
-                                                  {\DIFaddFL{Visualisation o...
-
-Overfull \hbox (6.77052pt too wide) in paragraph at lines 643--643
-[][][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1694--1694
+[][][] 
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.643 ...f all WIS values for different horizons}}
-                                                  \label{fig:agg-performance...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.643 ...f all WIS values for different horizons}}
-                                                  \label{fig:agg-performance...
-[35
-
-]
-Overfull \vbox (63.78113pt too high) has occurred while \output is active []
-
-
-[36 <../analysis/plots/aggregate-performance-all-Germany-v4.png>]
-<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=358, 3011.25pt x
+<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=444, 3011.25pt x
  2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-Poland-v4.png Graphic file (t
 ype png)
 <use ../analysis/plots/aggregate-performance-all-Poland-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Poland-v4.
-png  used on input line 650.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
+png  used on input line 1701.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.650 ...egate-performance-all-Poland-v4} \caption
-                                                  {\DIFaddFL{Visualisation o...
-
-Overfull \hbox (6.77052pt too wide) in paragraph at lines 650--650
-[][][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1701--1701
+[][][] 
  []
 
+[25
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.650 ...f all WIS values for different horizons}}
-                                                  \label{fig:agg-performance...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.650 ...f all WIS values for different horizons}}
-                                                  \label{fig:agg-performance...
-[37]
-Overfull \vbox (31.37846pt too high) has occurred while \output is active []
-
-
-[38 <../analysis/plots/aggregate-performance-all-Poland-v4.png>]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=371, 
+ <../analysis/plots/aggregate-performance-all-Germany-v4.png>]
+<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=454, 
 3011.25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png Grap
 hic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-v4.png  used on input line 657.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.657 ...rmance-2-weeks-locations-all-v4} \caption
-                                                  {Visualisation of aggregat...
-
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
-[][]
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.657 ...inFL \DIFaddFL{WIS values}\DIFaddendFL .}
-                                                  \label{fig:performance-loc...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.657 ...inFL \DIFaddFL{WIS values}\DIFaddendFL .}
-                                                  \label{fig:performance-loc...
-[39]
-Overfull \vbox (75.97847pt too high) has occurred while \output is active []
-
-
-[40 <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=3
-83, 3011.25pt x 2740.2375pt>
+ons-all-v4.png  used on input line 1709.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
+ [26 <../analysis/plots/aggregate-performance-all-Poland-v4.png>]
+<../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=4
+62, 3011.25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png 
 Graphic file (type png)
 <use ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-rel-v4.png  used on input line 664.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 664--664
-[][]
- []
-
-[41]
-Overfull \vbox (51.97847pt too high) has occurred while \output is active []
-
-
-[42
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.666 
-       <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.pn
-g>]
-<../analysis/plots/daily_truth.png, id=395, 3011.25pt x 2409.0pt>
+ons-all-rel-v4.png  used on input line 1717.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
+ [27 <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>] [2
+8 <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>]
+<../analysis/plots/daily_truth.png, id=477, 3011.25pt x 2409.0pt>
 File: ../analysis/plots/daily_truth.png Graphic file (type png)
 <use ../analysis/plots/daily_truth.png>
 Package pdftex.def Info: ../analysis/plots/daily_truth.png  used on input line 
-673.
-(pdftex.def)             Requested size: 469.72556pt x 375.78044pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 673--673
-[][]
- []
-
-<../analysis/plots/daily-data-updates.png, id=396, 2710.125pt x 1806.75pt>
+1727.
+(pdftex.def)             Requested size: 379.4175pt x 303.51355pt.
+<../analysis/plots/daily-data-updates.png, id=478, 2710.125pt x 1806.75pt>
 File: ../analysis/plots/daily-data-updates.png Graphic file (type png)
 <use ../analysis/plots/daily-data-updates.png>
 Package pdftex.def Info: ../analysis/plots/daily-data-updates.png  used on inpu
-t line 677.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
+t line 1731.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 
-Overfull \hbox (6.77512pt too wide) in paragraph at lines 677--677
-[][][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1731--1731
+[][][] 
  []
 
-[43
+[29
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.679 
-       <../analysis/plots/daily_truth.png>]
-<../analysis/plots/weekly-data-updates.png, id=407, 2710.125pt x 1806.75pt>
+ <../analysis/plots/daily_truth.png>]
+<../analysis/plots/weekly-data-updates.png, id=487, 2710.125pt x 1806.75pt>
 File: ../analysis/plots/weekly-data-updates.png Graphic file (type png)
 <use ../analysis/plots/weekly-data-updates.png>
 Package pdftex.def Info: ../analysis/plots/weekly-data-updates.png  used on inp
-ut line 681.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
+ut line 1735.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 
-Overfull \hbox (6.77512pt too wide) in paragraph at lines 681--681
-[][][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1735--1735
+[][][] 
  []
 
-[44
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.683 
-       <../analysis/plots/daily-data-updates.png>] [45
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.684 \DIFaddend \clearpage
-                            <../analysis/plots/weekly-data-updates.png>]
-<../analysis/plots/figure-forecasts-1.png, id=418, 3011.25pt x 3312.375pt>
+[30 <../analysis/plots/daily-data-updates.png>] [31 <../analysis/plots/weekly-d
+ata-updates.png>]
+<../analysis/plots/figure-forecasts-1.png, id=501, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-1.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-1.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-1.png  used on inpu
-t line 690.
-(pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 690--690
-[][]
- []
-
-<../analysis/plots/figure-forecasts-3.png, id=419, 3011.25pt x 3312.375pt>
+t line 1745.
+(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
+<../analysis/plots/figure-forecasts-3.png, id=502, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-3.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
-t line 694.
-(pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
+t line 1749.
+(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
+ [32
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--694
-[][]
- []
-
-[46
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.696 
-       <../analysis/plots/figure-forecasts-1.png>]
-<../analysis/plots/figure-forecasts-4.png, id=428, 3011.25pt x 3312.375pt>
+ <../analysis/plots/figure-forecasts-1.png>]
+<../analysis/plots/figure-forecasts-4.png, id=511, 3011.25pt x 3312.375pt>
 File: ../analysis/plots/figure-forecasts-4.png Graphic file (type png)
 <use ../analysis/plots/figure-forecasts-4.png>
 Package pdftex.def Info: ../analysis/plots/figure-forecasts-4.png  used on inpu
-t line 698.
-(pdftex.def)             Requested size: 469.72556pt x 516.6981pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 698--698
-[][]
- []
-
-[47
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.700 
-       <../analysis/plots/figure-forecasts-3.png>] [48
-pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.701 \clearpage
-                 <../analysis/plots/figure-forecasts-4.png>]
-<../analysis/plots/distribution_scores_wis-1.png, id=441, 2710.125pt x 1806.75p
+t line 1753.
+(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
+ [33 <../analysis/plots/figure-forecasts-3.png>] [34 <../analysis/plots/figure-
+forecasts-4.png>]
+<../analysis/plots/distribution_scores_wis-1.png, id=526, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-1.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-1.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1.png  used 
-on input line 710.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 710--710
-[][]
- []
-
-<../analysis/plots/distribution_scores_wis-3.png, id=442, 2710.125pt x 1806.75p
+on input line 1765.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+<../analysis/plots/distribution_scores_wis-3.png, id=527, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-3.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
-on input line 714.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--714
-[][]
- []
-
-[49
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.716 
-       <../analysis/plots/distribution_scores_wis-1.png>]
-<../analysis/plots/distribution_scores_wis-4.png, id=454, 2710.125pt x 1806.75p
+on input line 1769.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+<../analysis/plots/distribution_scores_wis-4.png, id=528, 2710.125pt x 1806.75p
 t>
 File: ../analysis/plots/distribution_scores_wis-4.png Graphic file (type png)
 <use ../analysis/plots/distribution_scores_wis-4.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4.png  used 
-on input line 718.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
+on input line 1773.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+ [35
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--718
-[][]
- []
-
-[50
-pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.720 
-       <../analysis/plots/distribution_scores_wis-3.png>]
-<../analysis/plots/distribution_scores_wis-1-ranks.png, id=461, 2710.125pt x 18
+ <../analysis/plots/distribution_scores_wis-1.png> <../analysis/plots/distribut
+ion_scores_wis-3.png>]
+<../analysis/plots/distribution_scores_wis-1-ranks.png, id=540, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-1-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-1-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1-ranks.png 
- used on input line 725.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 725--725
-[][]
- []
-
-[51
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.727 
-       <../analysis/plots/distribution_scores_wis-4.png>]
-<../analysis/plots/distribution_scores_wis-2-ranks.png, id=468, 2710.125pt x 18
+ used on input line 1781.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+<../analysis/plots/distribution_scores_wis-2-ranks.png, id=541, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-2-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-2-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2-ranks.png 
- used on input line 729.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 729--729
-[][]
- []
-
-[52
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.731 
-       <../analysis/plots/distribution_scores_wis-1-ranks.png>]
-<../analysis/plots/distribution_scores_wis-3-ranks.png, id=477, 2710.125pt x 18
+ used on input line 1785.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+ [36 <../analysis/plots/distribution_scores_wis-4.png> <../analysis/plots/distr
+ibution_scores_wis-1-ranks.png>]
+<../analysis/plots/distribution_scores_wis-3-ranks.png, id=552, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-3-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-3-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3-ranks.png 
- used on input line 733.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 733--733
-[][]
- []
-
-[53
-pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.735 
-       <../analysis/plots/distribution_scores_wis-2-ranks.png>]
-<../analysis/plots/distribution_scores_wis-4-ranks.png, id=484, 2710.125pt x 18
+ used on input line 1789.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+<../analysis/plots/distribution_scores_wis-4-ranks.png, id=553, 2710.125pt x 18
 06.75pt>
 File: ../analysis/plots/distribution_scores_wis-4-ranks.png Graphic file (type 
 png)
 <use ../analysis/plots/distribution_scores_wis-4-ranks.png>
 Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4-ranks.png 
- used on input line 737.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 737--737
-[][]
- []
-
-[54
-pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.739 
-       <../analysis/plots/distribution_scores_wis-3-ranks.png>]
-<../analysis/plots/difference-wis-crowd-ensemble.png, id=491, 2710.125pt x 1053
+ used on input line 1793.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
+ [37 <../analysis/plots/distribution_scores_wis-2-ranks.png> <../analysis/plots
+/distribution_scores_wis-3-ranks.png>]
+<../analysis/plots/difference-wis-crowd-ensemble.png, id=565, 2710.125pt x 1053
 .9375pt>
 File: ../analysis/plots/difference-wis-crowd-ensemble.png Graphic file (type pn
 g)
 <use ../analysis/plots/difference-wis-crowd-ensemble.png>
 Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-ensemble.png  u
-sed on input line 743.
-(pdftex.def)             Requested size: 469.73015pt x 182.67282pt.
+sed on input line 1799.
+(pdftex.def)             Requested size: 379.4175pt x 147.55025pt.
 
-Overfull \hbox (6.77512pt too wide) in paragraph at lines 743--743
-[][][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1799--1799
+[][][] 
  []
 
-[55
-pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.746 
-       <../analysis/plots/distribution_scores_wis-4-ranks.png>]
-<../analysis/plots/difference-wis-crowd-renewal.png, id=499, 2710.125pt x 1053.
+<../analysis/plots/difference-wis-crowd-renewal.png, id=566, 2710.125pt x 1053.
 9375pt>
 File: ../analysis/plots/difference-wis-crowd-renewal.png Graphic file (type png
 )
 <use ../analysis/plots/difference-wis-crowd-renewal.png>
 Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-renewal.png  us
-ed on input line 748.
-(pdftex.def)             Requested size: 469.73015pt x 182.67282pt.
+ed on input line 1804.
+(pdftex.def)             Requested size: 379.4175pt x 147.55025pt.
 
-Overfull \hbox (6.77512pt too wide) in paragraph at lines 748--748
-[][][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1804--1804
+[][][] 
  []
 
-[56
-pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.751 \newpage
-              
-pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.751 \newpage
-               <../analysis/plots/difference-wis-crowd-ensemble.png> <../analys
-is/plots/difference-wis-crowd-renewal.png>]
-<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=508, 3011
+[38 <../analysis/plots/distribution_scores_wis-4-ranks.png> <../analysis/plots/
+difference-wis-crowd-ensemble.png>] [39 <../analysis/plots/difference-wis-crowd
+-renewal.png>]
+<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=583, 3011
 .25pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png Graphic 
 file (type png)
 <use ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-m
-ean-v4.png  used on input line 760.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
+ean-v4.png  used on input line 1817.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
+ [40 <../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--760
-[][]
- []
-
-[57]
-Overfull \vbox (226.4367pt too high) has occurred while \output is active []
-
-
-[58
-pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.762 
-       <../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 767--767
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 825--825
-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
-
- []
-
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[59
-pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1001 \clearpage
-                 ] [60
-pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1001 \clearpage
-                 ] [61
-pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1001 \clearpage
-                 ] [62
-pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1001 \clearpage
-                 ]
-<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=545, 3011.2
+[41] [42] [43] [44]
+<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=617, 3011.2
 5pt x 2740.2375pt>
 File: ../analysis/plots/aggregate-performance-all-late-period-v4.png Graphic fi
 le (type png)
 <use ../analysis/plots/aggregate-performance-all-late-period-v4.png>
 Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-late-perio
-d-v4.png  used on input line 1009.
-(pdftex.def)             Requested size: 469.72556pt x 427.45024pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-[][]
- []
-
-[63
-
-]
-Overfull \vbox (27.02023pt too high) has occurred while \output is active []
-
-
-[64
-pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1011 
-        <../analysis/plots/aggregate-performance-all-late-period-v4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
-
- []
+d-v4.png  used on input line 2069.
+(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[65
-pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1104 \clearpage
-                 ] [66
-pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1104 \clearpage
-                 ] [67
 
-]
-<../analysis/plots/number-forecasters.png, id=575, 2525.435pt x 2425.06pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[45
+
+ <../analysis/plots/aggregate-performance-all-late-period-v4.png>]
+
+LaTeX Warning: Text page 46 contains only floats.
+
+[46]
+! Misplaced \noalign.
+\caption ->\noalign 
+                    \bgroup \@ifnextchar [{\egroup \LT@c@ption \@firstofone ...
+l.2173 \DIFaddend \caption
+                          {\label{tab:table-ensemble-versions}Overview of th...
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \noalign.
+\caption@LT@make #1->\noalign 
+                              {\caption@LT@config }\expandafter \LT@mcol \ex...
+l.2173 ...rview of the models and ensembles used.}
+                                                  \\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.2173 ...rview of the models and ensembles used.}
+                                                  \\
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+<../analysis/plots/number-forecasters.png, id=633, 2525.435pt x 2425.06pt>
 File: ../analysis/plots/number-forecasters.png Graphic file (type png)
 <use ../analysis/plots/number-forecasters.png>
 Package pdftex.def Info: ../analysis/plots/number-forecasters.png  used on inpu
-t line 1156.
-(pdftex.def)             Requested size: 469.74147pt x 451.0713pt.
+t line 2220.
+(pdftex.def)             Requested size: 379.4175pt x 364.33536pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1156
-[][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 2220--2220
+[][][] 
  []
 
-[68]
-<../analysis/plots/ensemble-members.png, id=580, 2525.435pt x 2425.06pt>
+[47
+
+]
+<../analysis/plots/ensemble-members.png, id=640, 2525.435pt x 2425.06pt>
 File: ../analysis/plots/ensemble-members.png Graphic file (type png)
 <use ../analysis/plots/ensemble-members.png>
 Package pdftex.def Info: ../analysis/plots/ensemble-members.png  used on input 
-line 1160.
-(pdftex.def)             Requested size: 469.74147pt x 451.0713pt.
+line 2224.
+(pdftex.def)             Requested size: 379.4175pt x 364.33536pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1160
-[][]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 2224--2224
+[][][] 
  []
 
-[69
-pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1162 
-        <../analysis/plots/number-forecasters.png>] [70
-pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1163 \clearpage
-                  <../analysis/plots/ensemble-members.png>]
-<../analysis/plots/comparison-forecast-interals.png, id=592, 2710.125pt x 1806.
+[48 <../analysis/plots/number-forecasters.png>] [49 <../analysis/plots/ensemble
+-members.png>]
+<../analysis/plots/comparison-forecast-interals.png, id=655, 2710.125pt x 1806.
 75pt>
 File: ../analysis/plots/comparison-forecast-interals.png Graphic file (type png
 )
 <use ../analysis/plots/comparison-forecast-interals.png>
 Package pdftex.def Info: ../analysis/plots/comparison-forecast-interals.png  us
-ed on input line 1169.
-(pdftex.def)             Requested size: 469.73015pt x 313.15343pt.
-
-Overfull \hbox (6.77512pt too wide) in paragraph at lines 1169--1169
-[][][]
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1174--1177
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1174--1177
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1178--1181
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1178--1181
-
- []
-
-[71
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1181 
-        <../analysis/plots/comparison-forecast-interals.png>]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1182--1185
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1182--1185
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1186--1189
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1186--1189
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1190--1193
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1190--1193
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1194--1197
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1197
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1198--1201
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1201
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1202--1205
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1205
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1206--1209
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1209
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1210--1213
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1210--1213
-
- []
-
-[72]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1214--1217
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1214--1217
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1218--1221
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1221
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1222--1225
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1225
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1226--1229
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1229
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1230--1233
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1233
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1234--1237
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1234--1237
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1238--1241
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1238--1241
-
- []
-
-[73]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1242--1245
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1245
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1246--1249
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1249
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1250--1253
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1253
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1254--1257
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1257
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1258--1261
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1261
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1262--1265
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1266--1269
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1266--1269
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1270--1273
-[][] []
- []
-
+ed on input line 2234.
+(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1273
-
- []
-
-[74]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1274--1277
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1277
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1278--1281
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1281
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1282--1285
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1282--1285
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1286--1289
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1286--1289
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1290--1293
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1290--1293
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1294--1300
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1294--1300
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1301--1304
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1304
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1305--1308
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1305--1308
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1309--1312
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1309--1312
-
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 1315--1315
-[]\T1/lmr/m/n/10 (+20) Forsal.pl. Roz-bie»no±ci w statystykach ko-ron-awirusa. 
-22 tys. przy-pad-ków b¦d¡ dolic-
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 1315--1315
-\T1/lmr/m/n/10 (+20) zone do ogól-nej liczby wyników [In-ter-net]. 2020 [cited 
-2021 May 30]. Avail-able
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1313--1316
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1316
-
- []
-
-[75]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1317--1320
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1320
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1321--1324
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1321--1324
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1325--1328
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1328
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1329--1332
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1332
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1333--1339
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1339
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1340--1343
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1340--1343
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1344--1347
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1344--1347
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1348--1351
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1348--1351
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1352--1355
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1352--1355
-
- []
-
-[76]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1356--1359
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1356--1359
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1360--1363
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1360--1363
-
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 2234--2234
+[][][] 
  []
 
+[50
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1364--1370
-[][] []
+ <../analysis/plots/comparison-forecast-interals.png>]
+Underfull \hbox (badness 1348) in paragraph at lines 2370--2370
+\T1/cmr/m/n/10 (+20) COVID-19 Fore-cast Hub: 4 De-cem-ber 2020 snap-shot. Zen-o
+do; 2020.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1370
-
- []
-
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1371--1374
-[][] []
+Underfull \hbox (badness 1097) in paragraph at lines 2423--2423
+\T1/cmr/m/n/10 (+20) fluenza in the U.S. PLOS Com-pu-ta-tional Bi-ol-ogy. 2019;
+15: e1007486.
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 1371--1374
-
+[51]
+Underfull \hbox (badness 1688) in paragraph at lines 2455--2455
+[]\T1/cmr/m/n/10 (+20) Hoogeveen S, Sarafoglou A, Wa-gen-mak-ers E-J. Laypeo-pl
+e Can Pre-dict
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1375--1381
-[][] []
+Underfull \hbox (badness 1527) in paragraph at lines 2455--2455
+\T1/cmr/m/n/10 (+20) in Meth-ods and Prac-tices in Psy-cho-log-i-cal Sci-ence. 
+2020;3: 267--285.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1375--1381
-
+Underfull \hbox (badness 1584) in paragraph at lines 2464--2464
+\T1/cmr/m/n/10 (+20) can bet on it. 2020 [cited 13 Oct 2021]. Avail-able: []$\T
+1/cmtt/m/n/10 https : / / www .
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1382--1385
-[][] []
+Underfull \hbox (badness 1824) in paragraph at lines 2474--2474
+\T1/cmr/m/n/10 (+20) kets: Does Money Mat-ter? Elec-tronic Mar-kets. 2004;14: 2
+43--251.
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1385
-
+[52]
+Underfull \hbox (badness 1454) in paragraph at lines 2564--2564
+[]\T1/cmr/m/n/10 (+20) ECDC. Down-load his-tor-i-cal data (to 14 De-cem-ber 202
+0) on the daily
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1386--1389
-[][] []
+Overfull \hbox (16.74411pt too wide) in paragraph at lines 2564--2564
+\T1/cmtt/m/n/10 download-[]todays-[]data-[]geographic-[]distribution-[]covid-[]
+19-[]cases-[]worldwide$[] 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1386--1389
 
- []
 
+Underfull \hbox (badness 5189) in paragraph at lines 2574--2574
+\T1/cmr/m/n/10 (+20) des RKI zu COVID-19. 2021 [cited 30 May 2021]. Avail-able:
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1390--1393
-[][] []
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1393
 
+Underfull \hbox (badness 10000) in paragraph at lines 2574--2574
+[]$\T1/cmtt/m/n/10 https : / / www . rki . de / DE / Content / InfAZ / N / Neua
+rtiges _ Coronavirus /
  []
 
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1394--1400
-[][] []
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2584--2584
+\T1/cmr/m/n/10 (+20) Avail-able: []$\T1/cmtt/m/n/10 https : / / forsal . pl / l
+ifestyle / zdrowie / artykuly / 8017628 ,[]
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1400
 
- []
 
-[77]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1401--1404
-[][] []
+Overfull \hbox (177.78027pt too wide) in paragraph at lines 2584--2584
+\T1/cmtt/m/n/10 rozbieznosci-[]w-[]statystykach-[]koronawirusa-[]22-[]tys-[]prz
+ypadkow-[]beda-[]doliczone-[]do-[]ogolnej-[]liczby-[]wynikow .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1401--1404
-
+Underfull \hbox (badness 2165) in paragraph at lines 2594--2594
+[]\T1/cmr/m/n/10 (+20) Ärzteblatt DÄG Redak-tion Deutsches. SARS-CoV-2-Diagnost
+ik: RKI
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1405--1408
-[][] []
+Underfull \hbox (badness 2376) in paragraph at lines 2621--2621
+\T1/cmr/m/n/10 (+20) 2020 [cited 30 May 2021]. Avail-able: []$\T1/cmtt/m/n/10 h
+ttps : / / ourworldindata . org /
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1408
-
+[53]
+Underfull \hbox (badness 1033) in paragraph at lines 2681--2681
+\T1/cmr/m/n/10 (+20) pub-licly avail-able data. 2020. Avail-able: []$\T1/cmtt/m
+/n/10 http : / / virological . org / t /
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1409--1412
-[][] []
+Overfull \hbox (164.65848pt too wide) in paragraph at lines 2681--2681
+\T1/cmtt/m/n/10 epidemiological-[]data-[]from-[]the-[]ncov-[]2019-[]outbreak-[]
+early-[]descriptions-[]from-[]publicly-[]available-[]data /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1412
-
+Underfull \hbox (badness 1571) in paragraph at lines 2699--2699
+[]\T1/cmr/m/n/10 (+20) Bracher J, Ray EL, Gneit-ing T, Re-ich NG. Eval-u-at-ing
+ epi-demic fore-
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1413--1416
-[][] []
+Underfull \hbox (badness 1019) in paragraph at lines 2699--2699
+\T1/cmr/m/n/10 (+20) casts in an in-ter-val for-mat. PLoS Com-put Biol. 2021;17
+: e1008618.
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1416
 
+Underfull \hbox (badness 10000) in paragraph at lines 2728--2728
+\T1/cmtt/m/n/10 com / en / coronavirus-[]germany-[]to-[]impose-[]one-[]month-[]
+partial-[]lockdown /
  []
 
-[78] (./changes.aux)
+[54] 
+AED: lastpage setting LastPage
+[55] (./changes.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
+Package rerunfilecheck Info: File `changes.out' has not changed.
+(rerunfilecheck)             Checksum: 59158F36FA87CB75DBCC8ECEBAD5D0F3;7546.
  ) 
 Here is how much of TeX's memory you used:
- 17628 strings out of 479719
- 293278 string characters out of 5880575
- 732031 words of memory out of 5000000
- 34860 multiletter control sequences out of 15000+600000
- 531396 words of font info for 145 fonts, out of 8000000 for 9000
+ 20903 strings out of 479719
+ 342169 string characters out of 5880575
+ 780311 words of memory out of 5000000
+ 38185 multiletter control sequences out of 15000+600000
+ 482441 words of font info for 103 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 74i,12n,77p,4008b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
-sr/local/texlive/2022basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2022basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/t
-exlive/2022basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-22basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022basic/t
-exmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/20
-22basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022bas
-ic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022basic/te
-xmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022basic/texmf-d
-ist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/f
-onts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/t
-ype1/public/lm/lmmi7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/p
-ublic/lm/lmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/
-lm/lmr17.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/lm/lmr
-7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb
-></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr
-/local/texlive/2022basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
-l/texlive/2022basic/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texl
-ive/2022basic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on changes.pdf (78 pages, 10311983 bytes).
+ 67i,12n,76p,4472b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1
+.enc}</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/t
+ype1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2022basic/texmf-dis
+t/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022basic/texmf-
+dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022basic/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022basic/
+texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022bas
+ic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022
+basic/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2
+022basic/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texliv
+e/2022basic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/tex
+live/2022basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on changes.pdf (55 pages, 10846851 bytes).
 PDF statistics:
- 1017 PDF objects out of 1200 (max. 8388607)
- 840 compressed objects within 9 object streams
- 283 named destinations out of 1000 (max. 500000)
- 33218 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 955 PDF objects out of 1000 (max. 8388607)
+ 797 compressed objects within 8 object streams
+ 263 named destinations out of 1000 (max. 500000)
+ 27578 words of extra memory for PDF output out of 29859 (max. 10000000)
 
