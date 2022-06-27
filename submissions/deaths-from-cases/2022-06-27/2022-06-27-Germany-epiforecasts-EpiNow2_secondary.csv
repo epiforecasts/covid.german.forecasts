@@ -1,0 +1,591 @@
+location,location_name,type,quantile,value,target_end_date,forecast_date,target
+GM,,,,,,,NA wk ahead cum death
+GM01,Baden-Wurttemberg,point,,16331,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.01,16284,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.025,16287.975,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.05,16293,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.1,16299,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.15,16304,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.2,16308,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.25,16313,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.3,16317,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.35,16320,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.4,16323,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.45,16327,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.5,16331,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.55,16334,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.6,16338,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.65,16343,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.7,16348,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.75,16354,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.8,16363,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.85,16372,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.9,16382,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.95,16408.05,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.975,16437.025,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.99,16484.05,2022-07-02,2022-06-27,1 wk ahead cum death
+GM01,Baden-Wurttemberg,point,,62,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.01,15,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.025,18.975,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.05,24,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.1,30,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.15,35,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.2,39,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.25,44,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.3,48,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.35,51,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.4,54,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.45,58,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.5,62,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.55,65,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.6,69,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.65,74,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.7,79,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.75,85,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.8,94,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.85,103,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.9,113,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.95,139.05,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.975,168.025,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.99,215.05,2022-07-02,2022-06-27,1 wk ahead inc death
+GM01,Baden-Wurttemberg,point,,16410,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.01,16300.99,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.025,16307.975,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.05,16319,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.1,16333.9,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.15,16347,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.2,16357,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.25,16367,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.3,16376,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.35,16383,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.4,16391,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.45,16401,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.5,16410,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.55,16419,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.6,16429,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.65,16443,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.7,16456,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.75,16472,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.8,16497.2,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.85,16529,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.9,16569,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.95,16670.2,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.975,16767.225,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.99,16979.4,2022-07-09,2022-06-27,2 wk ahead cum death
+GM01,Baden-Wurttemberg,point,,79,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.01,16.99,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.025,20,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.05,26,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.1,34.9,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.15,43,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.2,49,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.25,54,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.3,59,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.35,63,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.4,68,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.45,74,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.5,79,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.55,85,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.6,91,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.65,100,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.7,108,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.75,118,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.8,134.2,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.85,157,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.9,187,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.95,262.15,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.975,330.2,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.99,495.35,2022-07-09,2022-06-27,2 wk ahead inc death
+GM01,Baden-Wurttemberg,point,,16500,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.01,16313.99,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.025,16325.95,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.05,16343.95,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.1,16367.9,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.15,16386.85,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.2,16403,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.25,16420,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.3,16436,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.35,16450.65,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.4,16467,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.45,16484,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.5,16500,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.55,16520.45,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.6,16541,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.65,16570.35,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.7,16600,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.75,16635.25,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.8,16683.2,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.85,16755.15,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.9,16859.2,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.95,17075.25,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.975,17326.925,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.99,17903.74,2022-07-16,2022-06-27,3 wk ahead cum death
+GM01,Baden-Wurttemberg,point,,90,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.01,13,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.025,17.975,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.05,24.95,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.1,34,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.15,39.85,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.2,46,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.25,53,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.3,60,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.35,67.65,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.4,76,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.45,83,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.5,90,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.55,101.45,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.6,112,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.65,127.35,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.7,144,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.75,163.25,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.8,186,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.85,226.15,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.9,290.2,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.95,405.05,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.975,559.699999999999,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.99,924.34,2022-07-16,2022-06-27,3 wk ahead inc death
+GM01,Baden-Wurttemberg,point,,16596,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.01,16322.98,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.025,16339.95,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.05,16362.95,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.1,16394.9,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.15,16421.85,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.2,16446,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.25,16470,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.3,16493,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.35,16515.65,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.4,16542,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.45,16569,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.5,16596,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.55,16630.45,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.6,16669,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.65,16721.35,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.7,16772.6,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.75,16833.25,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.8,16918.2,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.85,17048.15,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.9,17254.2,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.95,17610.4,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.975,18031.15,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,quantile,0.99,18886.99,2022-07-23,2022-06-27,4 wk ahead cum death
+GM01,Baden-Wurttemberg,point,,96,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.01,8.99,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.025,14,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.05,19,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.1,27,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.15,35,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.2,43,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.25,50,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.3,57,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.35,65,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.4,75,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.45,85,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.5,96,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.55,110,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.6,128,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.65,151,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.7,172.6,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.75,198,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.8,235,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.85,293,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.9,395,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.95,535.15,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.975,704.225,2022-07-23,2022-06-27,4 wk ahead inc death
+GM01,Baden-Wurttemberg,quantile,0.99,983.25,2022-07-23,2022-06-27,4 wk ahead inc death
+GM02,,,,,,,NA wk ahead cum death
+GM03,,,,,,,NA wk ahead cum death
+GM04,,,,,,,NA wk ahead cum death
+GM05,,,,,,,NA wk ahead cum death
+GM06,,,,,,,NA wk ahead cum death
+GM07,North Rhine-Westphalia,point,,25819,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25734.99,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25741.975,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25749.95,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25762,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25770,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25779,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25787,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,25794,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,25799,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,25804.6,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,25811,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,25819,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,25825.45,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,25833,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,25841,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,25852,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,25860,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,25875,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,25887,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,25914.1,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,25959.3,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,26007.025,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,26100.08,2022-07-02,2022-06-27,1 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,125,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,40.99,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,47.975,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,55.95,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,68,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,76,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,85,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,93,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,100,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,105,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,110.6,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,117,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,125,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,131.45,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,139,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,147,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,158,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,166,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,181,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,193,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,220.1,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,265.3,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,313.025,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,406.08,2022-07-02,2022-06-27,1 wk ahead inc death
+GM07,North Rhine-Westphalia,point,,25972,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25764.97,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25787.925,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25811.9,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25838,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25855,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25875,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25892,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,25909,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,25924,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,25938.6,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,25953,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,25972,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,25991.45,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,26011,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,26034,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,26062.3,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,26090,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,26124.6,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,26178.15,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,26259.1,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,26428.35,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,26589.125,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,26911.29,2022-07-09,2022-06-27,2 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,153,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,29.98,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,45.95,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,61.95,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,76,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,85,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,96,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,105,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,115,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,125,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,134,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,142,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,153,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,166,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,178,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,193,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,210.3,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,230,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,249.6,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,291.15,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,345,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,469.05,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,582.1,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,811.209999999999,2022-07-09,2022-06-27,2 wk ahead inc death
+GM07,North Rhine-Westphalia,point,,26139,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25791.96,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25827.9,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25861.9,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25904.9,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,25935,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,25967,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,25996,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,26023,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,26051,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,26078.6,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,26105,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,26139,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,26178.45,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,26215.4,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,26263.35,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,26314.3,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,26378,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,26460.8,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,26567.15,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,26736.3,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,27060.55,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,27393.125,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,27963.36,2022-07-16,2022-06-27,3 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,167,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,26.99,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,39.975,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,50,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,66.9,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,80,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,92,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,104,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,114,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,127,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,140,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,152,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,167,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,187,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,204.4,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,229.35,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,252,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,288,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,336.2,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,389,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,477.2,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,632.2,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,804,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,1052.07,2022-07-16,2022-06-27,3 wk ahead inc death
+GM07,North Rhine-Westphalia,point,,26314.5,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.01,25805.95,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.025,25852.875,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.05,25898.85,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.1,25960.7,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.15,26000,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.2,26045.8,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.25,26091,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.3,26134.7,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.35,26176.65,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.4,26221.6,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.45,26263,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.5,26314.5,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.55,26379.35,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.6,26437.8,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.65,26514.35,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.7,26599.6,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.75,26711.25,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.8,26850.8,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.85,27038.45,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.9,27313.5,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.95,27816.55,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.975,28417.225,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,quantile,0.99,29328.97,2022-07-23,2022-06-27,4 wk ahead cum death
+GM07,North Rhine-Westphalia,point,,175.5,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.01,13.99,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.025,24.975,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.05,36.95,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.1,55.8,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.15,65,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.2,78.8,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.25,95,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.3,111.7,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.35,125.65,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.4,143,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.45,158,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.5,175.5,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.55,200.9,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.6,222.4,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.65,251,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.7,285.3,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.75,333.25,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.8,390,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.85,471.3,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.9,577.2,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.95,756,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.975,1024.1,2022-07-23,2022-06-27,4 wk ahead inc death
+GM07,North Rhine-Westphalia,quantile,0.99,1365.61,2022-07-23,2022-06-27,4 wk ahead inc death
+GM08,,,,,,,NA wk ahead cum death
+GM09,,,,,,,NA wk ahead cum death
+GM10,,,,,,,NA wk ahead cum death
+GM11,,,,,,,NA wk ahead cum death
+GM12,,,,,,,NA wk ahead cum death
+GM13,,,,,,,NA wk ahead cum death
+GM14,,,,,,,NA wk ahead cum death
+GM15,,,,,,,NA wk ahead cum death
+GM16,Berlin,point,,4648,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.01,4640,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.025,4641,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.05,4642,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.1,4643,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.15,4643.85,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.2,4644,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.25,4645,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.3,4645,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.35,4646,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.4,4647,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.45,4648,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.5,4648,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.55,4649,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.6,4650,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.65,4651,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.7,4653,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.75,4654,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.8,4656,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.85,4658,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.9,4660,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.95,4667,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.975,4672.025,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,quantile,0.99,4683.03,2022-07-02,2022-06-27,1 wk ahead cum death
+GM16,Berlin,point,,9,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.01,1,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.025,2,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.05,3,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.1,4,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.15,4.85000000000002,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.2,5,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.25,6,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.3,6,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.35,7,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.4,8,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.45,9,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.5,9,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.55,10,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.6,11,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.65,12,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.7,14,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.75,15,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.8,17,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.85,19,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.9,21,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.95,28,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.975,33.025,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,quantile,0.99,44.03,2022-07-02,2022-06-27,1 wk ahead inc death
+GM16,Berlin,point,,4660,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.01,4641,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.025,4643,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.05,4645,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.1,4647.9,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.15,4649.85,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.2,4650,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.25,4653,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.3,4653,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.35,4655,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.4,4657,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.45,4659,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.5,4660,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.55,4662,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.6,4664,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.65,4666,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.7,4670,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.75,4672,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.8,4676,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.85,4681,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.9,4687,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.95,4702,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.975,4714.025,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,quantile,0.99,4734.03,2022-07-09,2022-06-27,2 wk ahead cum death
+GM16,Berlin,point,,12,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.01,1,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.025,2,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.05,3,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.1,4.90000000000001,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.15,6,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.2,6,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.25,8,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.3,8,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.35,9,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.4,10,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.45,11,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.5,12,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.55,13,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.6,14,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.65,15,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.7,17,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.75,18,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.8,20,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.85,23,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.9,27,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.95,35,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.975,42,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,quantile,0.99,51,2022-07-09,2022-06-27,2 wk ahead inc death
+GM16,Berlin,point,,4673,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.01,4642,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.025,4645,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.05,4648,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.1,4651.9,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.15,4654.85,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.2,4656,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.25,4661,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.3,4661,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.35,4665,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.4,4668,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.45,4671,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.5,4673,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.55,4676,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.6,4679,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.65,4683,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.7,4689,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.75,4694,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.8,4701,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.85,4711,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.9,4724.1,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.95,4754.05,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.975,4788.025,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,quantile,0.99,4842.07,2022-07-16,2022-06-27,3 wk ahead cum death
+GM16,Berlin,point,,13,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.01,1,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.025,2,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.05,3,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.1,4,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.15,5,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.2,6,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.25,8,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.3,8,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.35,10,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.4,11,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.45,12,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.5,13,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.55,14,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.6,15,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.65,17,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.7,19,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.75,22,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.8,25,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.85,30,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.9,37.1000000000001,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.95,52.05,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.975,74,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,quantile,0.99,108.04,2022-07-16,2022-06-27,3 wk ahead inc death
+GM16,Berlin,point,,4686,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.01,4642,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.025,4646,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.05,4651,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.1,4655.9,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.15,4659.85,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.2,4662,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.25,4668,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.3,4669,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.35,4674,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.4,4678,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.45,4683,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.5,4686,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.55,4691,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.6,4696,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.65,4703,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.7,4712,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.75,4721,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.8,4732.2,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.85,4750.15,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.9,4778.1,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.95,4833.05,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.975,4910.075,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,quantile,0.99,5000.16,2022-07-23,2022-06-27,4 wk ahead cum death
+GM16,Berlin,point,,13,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.01,0,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.025,1,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.05,3,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.1,4,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.15,5,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.2,6,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.25,7,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.3,8,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.35,9,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.4,10,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.45,12,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.5,13,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.55,15,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.6,17,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.65,20,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.7,23,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.75,27,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.8,31.2,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.85,39.1500000000001,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.9,54,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.95,79,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.975,122.05,2022-07-23,2022-06-27,4 wk ahead inc death
+GM16,Berlin,quantile,0.99,158.09,2022-07-23,2022-06-27,4 wk ahead inc death
