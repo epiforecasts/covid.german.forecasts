@@ -1,9 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  2 JUN 2022 12:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  3 AUG 2022 18:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**manuscript.tex
-(./manuscript.tex
+**"/Users/nikos/github-synced/covid.german.forecasts/manuscript/final submissio
+n/changes.tex"
+
+(/Users/nikos/github-synced/covid.german.forecasts/manuscript/final submission/
+changes.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022basic/texmf-dist/tex/
 latex/base/article.cls
@@ -550,33 +553,70 @@ r/local/texlive/2022basic/texmf-dist/tex/generic/xstring/xstring.tex
 \decimalpart=\count331
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/oberdiek/settobox.sty
+Package: settobox 2016/05/16 v1.5 Assign box dimensions to length registers (HO
 )
+)
+\DIFdelgraphicsbox=\box73
+\DIFdelgraphicswidth=\skip82
+\DIFdelgraphicsheight=\skip83
+LaTeX Info: Redefining \DIFaddbegin on input line 315.
+LaTeX Info: Redefining \DIFaddend on input line 316.
+LaTeX Info: Redefining \DIFdelbegin on input line 317.
+LaTeX Info: Redefining \DIFdelend on input line 318.
+LaTeX Info: Redefining \DIFaddbeginFL on input line 323.
+LaTeX Info: Redefining \DIFaddendFL on input line 324.
+LaTeX Info: Redefining \DIFdelbeginFL on input line 325.
+LaTeX Info: Redefining \DIFdelendFL on input line 326.
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count332
+\lst@gtempboxa=\box74
+\lst@token=\toks41
+\lst@length=\count333
+\lst@currlwidth=\dimen270
+\lst@column=\count334
+\lst@pos=\count335
+\lst@lostspace=\dimen271
+\lst@width=\dimen272
+\lst@newlines=\count336
+\lst@lineno=\count337
+\lst@maxwidth=\dimen273
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count338
+\lst@skipnumbers=\count339
+\lst@framebox=\box75
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count332
-\l__pdf_internal_box=\box73
-) (./manuscript.aux)
-\openout1 = `manuscript.aux'.
+\l__color_backend_stack_int=\count340
+\l__pdf_internal_box=\box76
+) (./changes.aux)
+\openout1 = `changes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -614,26 +654,26 @@ LaTeX Font Info:    ... okay on input line 244.
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-Package hyperref Info: Link coloring OFF on input line 244.
-LaTeX Info: Redefining \ref on input line 244.
-LaTeX Info: Redefining \pageref on input line 244.
-LaTeX Info: Redefining \nameref on input line 244.
-(./manuscript.out) (./manuscript.out)
+Package hyperref Info: Link coloring OFF on input line 345.
+LaTeX Info: Redefining \ref on input line 345.
+LaTeX Info: Redefining \pageref on input line 345.
+LaTeX Info: Redefining \nameref on input line 345.
+(./changes.out) (./changes.out)
 \@outlinefile=\write3
-\openout3 = `manuscript.out'.
+\openout3 = `changes.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 244.
-Package microtype Info: Applying patch `item' on input line 244.
-Package microtype Info: Applying patch `toc' on input line 244.
-Package microtype Info: Applying patch `eqnum' on input line 244.
-Package microtype Info: Applying patch `footnote' on input line 244.
+LaTeX Info: Redefining \microtypecontext on input line 345.
+Package microtype Info: Applying patch `item' on input line 345.
+Package microtype Info: Applying patch `toc' on input line 345.
+Package microtype Info: Applying patch `eqnum' on input line 345.
+Package microtype Info: Applying patch `footnote' on input line 345.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 244.
+LaTeX Info: Redefining \showhyphens on input line 345.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -642,20 +682,21 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count333
-\scratchdimen=\dimen270
-\scratchbox=\box74
-\nofMPsegments=\count334
-\nofMParguments=\count335
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count336
-\MPscratchDim=\dimen271
-\MPnumerator=\count337
-\makeMPintoPDFobject=\count338
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count341
+\scratchdimen=\dimen274
+\scratchbox=\box77
+\nofMPsegments=\count342
+\nofMParguments=\count343
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count344
+\MPscratchDim=\dimen275
+\MPnumerator=\count345
+\makeMPintoPDFobject=\count346
+\everyMPtoPDFconversion=\toks43
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
@@ -665,9 +706,10 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 244.
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 2
-57.
+(lastpage)             ! on input line 345.
+\c@lstlisting=\count347
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 3
+58.
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -675,30 +717,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 259
+LaTeX Font Info:    Trying to load font information for U+msa on input line 360
 .
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 259
+LaTeX Font Info:    Trying to load font information for U+msb on input line 360
 .
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-\fe@count@abs@i=\count339
-\fe@count@abs@ii=\count340
+\fe@count@abs@i=\count348
+\fe@count@abs@ii=\count349
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [1
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-46.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+63.
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -706,362 +748,181 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[3] [4]
+[3]
 
-Package hyperref Warning: Suppressing empty link on input line 613.
+Package hyperref Warning: Suppressing empty link on input line 607.
 
-[5]
 
-Package hyperref Warning: Suppressing empty link on input line 647.
+Package hyperref Warning: Suppressing empty link on input line 607.
+
+
+Package hyperref Warning: Suppressing empty link on input line 626.
+
+
+Package hyperref Warning: Suppressing empty link on input line 633.
+
+[4] [5]
+
+LaTeX Warning: Reference `sensitivity-analysis' on page 6 undefined on input li
+ne 736.
+
+
+Package hyperref Warning: Suppressing empty link on input line 764.
+
+
+Package hyperref Warning: Suppressing empty link on input line 774.
+
+
+Package hyperref Warning: Suppressing empty link on input line 774.
+
+
+Package hyperref Warning: Suppressing empty link on input line 774.
 
 [6]
-<../analysis/plots/aggregate-performance-all-v4.png, id=222, 3011.25pt x 2740.2
-375pt>
-File: ../analysis/plots/aggregate-performance-all-v4.png Graphic file (type png
-)
-<use ../analysis/plots/aggregate-performance-all-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-v4.png  us
-ed on input line 682.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-<../analysis/plots/figure-forecasts-2.png, id=224, 3011.25pt x 3312.375pt>
-File: ../analysis/plots/figure-forecasts-2.png Graphic file (type png)
-<use ../analysis/plots/figure-forecasts-2.png>
-Package pdftex.def Info: ../analysis/plots/figure-forecasts-2.png  used on inpu
-t line 686.
-(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
-[7 <../analysis/plots/aggregate-performance-all-v4.png>] [8 <../analysis/plots/
-figure-forecasts-2.png>] [9] [10]
-<../analysis/plots/distribution_scores_wis-2.png, id=300, 2710.125pt x 1806.75p
-t>
-File: ../analysis/plots/distribution_scores_wis-2.png Graphic file (type png)
-<use ../analysis/plots/distribution_scores_wis-2.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2.png  used 
-on input line 874.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/aggregate-performance-rel-ensemble-v4.png, id=301, 3011.25pt
- x 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-rel-ensemble-v4.png Graphic file 
-(type png)
-<use ../analysis/plots/aggregate-performance-rel-ensemble-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-v
-4.png  used on input line 878.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
+
+Package hyperref Warning: Suppressing empty link on input line 831.
+
+
+Package hyperref Warning: Suppressing empty link on input line 834.
+
+[7]
+
+Package hyperref Warning: Suppressing empty link on input line 899.
+
+
+Package hyperref Warning: Suppressing empty link on input line 908.
+
+
+Package hyperref Warning: Suppressing empty link on input line 908.
+
+[8]
+
+Package hyperref Warning: Suppressing empty link on input line 929.
+
+
+Package hyperref Warning: Suppressing empty link on input line 929.
+
+
+Package hyperref Warning: Suppressing empty link on input line 934.
+
+
+Package hyperref Warning: Suppressing empty link on input line 934.
+
+
+Package hyperref Warning: Suppressing empty link on input line 943.
+
+
+Package hyperref Warning: Suppressing empty link on input line 943.
+
+
+Package hyperref Warning: Suppressing empty link on input line 943.
+
+
+Package hyperref Warning: Suppressing empty link on input line 943.
+
+
+Package hyperref Warning: Suppressing empty link on input line 954.
+
+
+Package hyperref Warning: Suppressing empty link on input line 960.
+
+
+Package hyperref Warning: Suppressing empty link on input line 973.
+
+[9]
+
+Package hyperref Warning: Suppressing empty link on input line 1026.
+
+
+Package hyperref Warning: Suppressing empty link on input line 1026.
+
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [11 <../analysis/plots/distribution_scores_wis-2.png>] [12 <../analysis/plots
-/aggregate-performance-rel-ensemble-v4.png>] [13] [14] [15] [16
+) [10]
 
-] [17
-
-] [18]
-<../crowd-forecast/Screenshot-forecasting-app.png, id=367, 2055.68pt x 991.705p
-t>
-File: ../crowd-forecast/Screenshot-forecasting-app.png Graphic file (type png)
-<use ../crowd-forecast/Screenshot-forecasting-app.png>
-Package pdftex.def Info: ../crowd-forecast/Screenshot-forecasting-app.png  used
- on input line 1182.
-(pdftex.def)             Requested size: 379.4175pt x 183.03885pt.
-[19
-
- <../crowd-forecast/Screenshot-forecasting-app.png>] [20
-
-] [21] [22]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[23
-
-] [24]
-<../analysis/plots/aggregate-performance-all-Germany-v4.png, id=440, 3011.25pt 
-x 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-all-Germany-v4.png Graphic file (
-type png)
-<use ../analysis/plots/aggregate-performance-all-Germany-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Germany-v4
-.png  used on input line 1443.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-<../analysis/plots/aggregate-performance-all-Poland-v4.png, id=441, 3011.25pt x
- 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-all-Poland-v4.png Graphic file (t
-ype png)
-<use ../analysis/plots/aggregate-performance-all-Poland-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-Poland-v4.
-png  used on input line 1450.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-[25
-
- <../analysis/plots/aggregate-performance-all-Germany-v4.png>]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png, id=451, 
-3011.25pt x 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png Grap
-hic file (type png)
-<use ../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-v4.png  used on input line 1458.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-[26 <../analysis/plots/aggregate-performance-all-Poland-v4.png>]
-<../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png, id=4
-59, 3011.25pt x 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png 
-Graphic file (type png)
-<use ../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-2-weeks-locati
-ons-all-rel-v4.png  used on input line 1466.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-[27 <../analysis/plots/aggregate-performance-2-weeks-locations-all-v4.png>] [28
- <../analysis/plots/aggregate-performance-2-weeks-locations-all-rel-v4.png>]
-<../analysis/plots/daily_truth.png, id=474, 3011.25pt x 2409.0pt>
-File: ../analysis/plots/daily_truth.png Graphic file (type png)
-<use ../analysis/plots/daily_truth.png>
-Package pdftex.def Info: ../analysis/plots/daily_truth.png  used on input line 
-1476.
-(pdftex.def)             Requested size: 379.4175pt x 303.51355pt.
-<../analysis/plots/daily-data-updates.png, id=475, 2710.125pt x 1806.75pt>
-File: ../analysis/plots/daily-data-updates.png Graphic file (type png)
-<use ../analysis/plots/daily-data-updates.png>
-Package pdftex.def Info: ../analysis/plots/daily-data-updates.png  used on inpu
-t line 1480.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-[29
-
- <../analysis/plots/daily_truth.png>]
-<../analysis/plots/weekly-data-updates.png, id=484, 2710.125pt x 1806.75pt>
-File: ../analysis/plots/weekly-data-updates.png Graphic file (type png)
-<use ../analysis/plots/weekly-data-updates.png>
-Package pdftex.def Info: ../analysis/plots/weekly-data-updates.png  used on inp
-ut line 1484.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-[30 <../analysis/plots/daily-data-updates.png>] [31 <../analysis/plots/weekly-d
-ata-updates.png>]
-<../analysis/plots/figure-forecasts-1.png, id=498, 3011.25pt x 3312.375pt>
-File: ../analysis/plots/figure-forecasts-1.png Graphic file (type png)
-<use ../analysis/plots/figure-forecasts-1.png>
-Package pdftex.def Info: ../analysis/plots/figure-forecasts-1.png  used on inpu
-t line 1494.
-(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
-<../analysis/plots/figure-forecasts-3.png, id=499, 3011.25pt x 3312.375pt>
-File: ../analysis/plots/figure-forecasts-3.png Graphic file (type png)
-<use ../analysis/plots/figure-forecasts-3.png>
-Package pdftex.def Info: ../analysis/plots/figure-forecasts-3.png  used on inpu
-t line 1498.
-(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
-[32
-
- <../analysis/plots/figure-forecasts-1.png>]
-<../analysis/plots/figure-forecasts-4.png, id=508, 3011.25pt x 3312.375pt>
-File: ../analysis/plots/figure-forecasts-4.png Graphic file (type png)
-<use ../analysis/plots/figure-forecasts-4.png>
-Package pdftex.def Info: ../analysis/plots/figure-forecasts-4.png  used on inpu
-t line 1502.
-(pdftex.def)             Requested size: 379.4175pt x 417.33115pt.
-[33 <../analysis/plots/figure-forecasts-3.png>] [34 <../analysis/plots/figure-f
-orecasts-4.png>]
-<../analysis/plots/distribution_scores_wis-1.png, id=523, 2710.125pt x 1806.75p
-t>
-File: ../analysis/plots/distribution_scores_wis-1.png Graphic file (type png)
-<use ../analysis/plots/distribution_scores_wis-1.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1.png  used 
-on input line 1514.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-3.png, id=524, 2710.125pt x 1806.75p
-t>
-File: ../analysis/plots/distribution_scores_wis-3.png Graphic file (type png)
-<use ../analysis/plots/distribution_scores_wis-3.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3.png  used 
-on input line 1518.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-4.png, id=525, 2710.125pt x 1806.75p
-t>
-File: ../analysis/plots/distribution_scores_wis-4.png Graphic file (type png)
-<use ../analysis/plots/distribution_scores_wis-4.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4.png  used 
-on input line 1522.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-[35
-
- <../analysis/plots/distribution_scores_wis-1.png> <../analysis/plots/distribut
-ion_scores_wis-3.png>]
-<../analysis/plots/distribution_scores_wis-1-ranks.png, id=537, 2710.125pt x 18
-06.75pt>
-File: ../analysis/plots/distribution_scores_wis-1-ranks.png Graphic file (type 
-png)
-<use ../analysis/plots/distribution_scores_wis-1-ranks.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-1-ranks.png 
- used on input line 1530.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-2-ranks.png, id=538, 2710.125pt x 18
-06.75pt>
-File: ../analysis/plots/distribution_scores_wis-2-ranks.png Graphic file (type 
-png)
-<use ../analysis/plots/distribution_scores_wis-2-ranks.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-2-ranks.png 
- used on input line 1534.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-[36 <../analysis/plots/distribution_scores_wis-4.png> <../analysis/plots/distri
-bution_scores_wis-1-ranks.png>]
-<../analysis/plots/distribution_scores_wis-3-ranks.png, id=549, 2710.125pt x 18
-06.75pt>
-File: ../analysis/plots/distribution_scores_wis-3-ranks.png Graphic file (type 
-png)
-<use ../analysis/plots/distribution_scores_wis-3-ranks.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-3-ranks.png 
- used on input line 1538.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-<../analysis/plots/distribution_scores_wis-4-ranks.png, id=550, 2710.125pt x 18
-06.75pt>
-File: ../analysis/plots/distribution_scores_wis-4-ranks.png Graphic file (type 
-png)
-<use ../analysis/plots/distribution_scores_wis-4-ranks.png>
-Package pdftex.def Info: ../analysis/plots/distribution_scores_wis-4-ranks.png 
- used on input line 1542.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-[37 <../analysis/plots/distribution_scores_wis-2-ranks.png> <../analysis/plots/
-distribution_scores_wis-3-ranks.png>]
-<../analysis/plots/difference-wis-crowd-ensemble.png, id=562, 2710.125pt x 1053
-.9375pt>
-File: ../analysis/plots/difference-wis-crowd-ensemble.png Graphic file (type pn
-g)
-<use ../analysis/plots/difference-wis-crowd-ensemble.png>
-Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-ensemble.png  u
-sed on input line 1546.
-(pdftex.def)             Requested size: 379.4175pt x 147.55025pt.
-<../analysis/plots/difference-wis-crowd-renewal.png, id=563, 2710.125pt x 1053.
-9375pt>
-File: ../analysis/plots/difference-wis-crowd-renewal.png Graphic file (type png
-)
-<use ../analysis/plots/difference-wis-crowd-renewal.png>
-Package pdftex.def Info: ../analysis/plots/difference-wis-crowd-renewal.png  us
-ed on input line 1550.
-(pdftex.def)             Requested size: 379.4175pt x 147.55025pt.
-[38 <../analysis/plots/distribution_scores_wis-4-ranks.png> <../analysis/plots/
-difference-wis-crowd-ensemble.png>] [39 <../analysis/plots/difference-wis-crowd
--renewal.png>]
-<../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png, id=580, 3011
-.25pt x 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png Graphic 
-file (type png)
-<use ../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-rel-ensemble-m
-ean-v4.png  used on input line 1563.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package hyperref Warning: Suppressing empty link on input line 1070.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package hyperref Warning: Suppressing empty link on input line 1075.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package hyperref Warning: Suppressing empty link on input line 1085.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[40 <../analysis/plots/aggregate-performance-rel-ensemble-mean-v4.png>] [41] [4
-2] [43] [44]
-<../analysis/plots/aggregate-performance-all-late-period-v4.png, id=614, 3011.2
-5pt x 2740.2375pt>
-File: ../analysis/plots/aggregate-performance-all-late-period-v4.png Graphic fi
-le (type png)
-<use ../analysis/plots/aggregate-performance-all-late-period-v4.png>
-Package pdftex.def Info: ../analysis/plots/aggregate-performance-all-late-perio
-d-v4.png  used on input line 1815.
-(pdftex.def)             Requested size: 379.4175pt x 345.24667pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package hyperref Warning: Suppressing empty link on input line 1094.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package hyperref Warning: Suppressing empty link on input line 1094.
 
-[45
+[11]
 
- <../analysis/plots/aggregate-performance-all-late-period-v4.png>]
+Package hyperref Warning: Suppressing empty link on input line 1111.
 
-LaTeX Warning: Text page 46 contains only floats.
-
-[46]
-<../analysis/plots/number-forecasters.png, id=630, 2525.435pt x 2425.06pt>
-File: ../analysis/plots/number-forecasters.png Graphic file (type png)
-<use ../analysis/plots/number-forecasters.png>
-Package pdftex.def Info: ../analysis/plots/number-forecasters.png  used on inpu
-t line 1963.
-(pdftex.def)             Requested size: 379.4175pt x 364.33536pt.
-[47
+[12] [13] [14] [15
 
 ]
-<../analysis/plots/ensemble-members.png, id=637, 2525.435pt x 2425.06pt>
-File: ../analysis/plots/ensemble-members.png Graphic file (type png)
-<use ../analysis/plots/ensemble-members.png>
-Package pdftex.def Info: ../analysis/plots/ensemble-members.png  used on input 
-line 1967.
-(pdftex.def)             Requested size: 379.4175pt x 364.33536pt.
-[48 <../analysis/plots/number-forecasters.png>] [49 <../analysis/plots/ensemble
--members.png>]
-<../analysis/plots/comparison-forecast-interals.png, id=652, 2710.125pt x 1806.
-75pt>
-File: ../analysis/plots/comparison-forecast-interals.png Graphic file (type png
-)
-<use ../analysis/plots/comparison-forecast-interals.png>
-Package pdftex.def Info: ../analysis/plots/comparison-forecast-interals.png  us
-ed on input line 1977.
-(pdftex.def)             Requested size: 379.4175pt x 252.94327pt.
-[50
+\@float@every@text=\toks44
+\c@text=\count350
+[16
 
- <../analysis/plots/comparison-forecast-interals.png>]
-Underfull \hbox (badness 1348) in paragraph at lines 2075--2075
+] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29]
+Underfull \hbox (badness 1348) in paragraph at lines 3046--3046
 \T1/cmr/m/n/10 (+20) COVID-19 Fore-cast Hub: 4 De-cem-ber 2020 snap-shot. Zen-o
 do; 2020.
  []
 
+[30
 
-Underfull \hbox (badness 1097) in paragraph at lines 2113--2113
+]
+Underfull \hbox (badness 1097) in paragraph at lines 3084--3084
 \T1/cmr/m/n/10 (+20) fluenza in the U.S. PLOS Com-pu-ta-tional Bi-ol-ogy. 2019;
 15: e1007486.
  []
 
-[51]
-Underfull \hbox (badness 1688) in paragraph at lines 2136--2136
+
+Underfull \hbox (badness 1688) in paragraph at lines 3107--3107
 []\T1/cmr/m/n/10 (+20) Hoogeveen S, Sarafoglou A, Wa-gen-mak-ers E-J. Laypeo-pl
 e Can Pre-dict
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 2136--2136
+Underfull \hbox (badness 1527) in paragraph at lines 3107--3107
 \T1/cmr/m/n/10 (+20) in Meth-ods and Prac-tices in Psy-cho-log-i-cal Sci-ence. 
 2020;3: 267--285.
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 2142--2142
+Underfull \hbox (badness 1584) in paragraph at lines 3113--3113
 \T1/cmr/m/n/10 (+20) can bet on it. 2020 [cited 13 Oct 2021]. Avail-able: []$\T
 1/cmtt/m/n/10 https : / / www .
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 2149--2149
+Underfull \hbox (badness 1824) in paragraph at lines 3120--3120
 \T1/cmr/m/n/10 (+20) kets: Does Money Mat-ter? Elec-tronic Mar-kets. 2004;14: 2
 43--251.
  []
 
-[52]
-Underfull \hbox (badness 1454) in paragraph at lines 2212--2212
+[31]
+Underfull \hbox (badness 1454) in paragraph at lines 3183--3183
 []\T1/cmr/m/n/10 (+20) ECDC. Down-load his-tor-i-cal data (to 14 De-cem-ber 202
 0) on the daily
  []
 
 
-Overfull \hbox (16.74411pt too wide) in paragraph at lines 2212--2212
+Overfull \hbox (16.74411pt too wide) in paragraph at lines 3183--3183
 \T1/cmtt/m/n/10 download-[]todays-[]data-[]geographic-[]distribution-[]covid-[]
 19-[]cases-[]worldwide$[] 
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 2219--2219
+Underfull \hbox (badness 5189) in paragraph at lines 3190--3190
 \T1/cmr/m/n/10 (+20) des RKI zu COVID-19. 2021 [cited 30 May 2021]. Avail-able:
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2219--2219
+Underfull \hbox (badness 10000) in paragraph at lines 3190--3190
 []$\T1/cmtt/m/n/10 https : / / www . rki . de / DE / Content / InfAZ / N / Neua
 rtiges _ Coronavirus /
  []
@@ -1069,73 +930,76 @@ rtiges _ Coronavirus /
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2226--2226
+Underfull \hbox (badness 10000) in paragraph at lines 3197--3197
 \T1/cmr/m/n/10 (+20) Avail-able: []$\T1/cmtt/m/n/10 https : / / forsal . pl / l
 ifestyle / zdrowie / artykuly / 8017628 ,[]
  []
 
 
-Overfull \hbox (177.78027pt too wide) in paragraph at lines 2226--2226
+Overfull \hbox (177.78027pt too wide) in paragraph at lines 3197--3197
 \T1/cmtt/m/n/10 rozbieznosci-[]w-[]statystykach-[]koronawirusa-[]22-[]tys-[]prz
 ypadkow-[]beda-[]doliczone-[]do-[]ogolnej-[]liczby-[]wynikow .
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 2233--2233
+Underfull \hbox (badness 2165) in paragraph at lines 3204--3204
 []\T1/cmr/m/n/10 (+20) Ärzteblatt DÄG Redak-tion Deutsches. SARS-CoV-2-Diagnost
 ik: RKI
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 2251--2251
+Underfull \hbox (badness 2376) in paragraph at lines 3222--3222
 \T1/cmr/m/n/10 (+20) 2020 [cited 30 May 2021]. Avail-able: []$\T1/cmtt/m/n/10 h
 ttps : / / ourworldindata . org /
  []
 
-[53]
-Underfull \hbox (badness 1033) in paragraph at lines 2293--2293
+[32]
+Underfull \hbox (badness 1033) in paragraph at lines 3264--3264
 \T1/cmr/m/n/10 (+20) pub-licly avail-able data. 2020. Avail-able: []$\T1/cmtt/m
 /n/10 http : / / virological . org / t /
  []
 
 
-Overfull \hbox (164.65848pt too wide) in paragraph at lines 2293--2293
+Overfull \hbox (164.65848pt too wide) in paragraph at lines 3264--3264
 \T1/cmtt/m/n/10 epidemiological-[]data-[]from-[]the-[]ncov-[]2019-[]outbreak-[]
 early-[]descriptions-[]from-[]publicly-[]available-[]data /
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 2305--2305
+Underfull \hbox (badness 1571) in paragraph at lines 3276--3276
 []\T1/cmr/m/n/10 (+20) Bracher J, Ray EL, Gneit-ing T, Re-ich NG. Eval-u-at-ing
  epi-demic fore-
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 2305--2305
+Underfull \hbox (badness 1019) in paragraph at lines 3276--3276
 \T1/cmr/m/n/10 (+20) casts in an in-ter-val for-mat. PLoS Com-put Biol. 2021;17
 : e1008618.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2325--2325
+Underfull \hbox (badness 10000) in paragraph at lines 3370--3370
 \T1/cmtt/m/n/10 com / en / coronavirus-[]germany-[]to-[]impose-[]one-[]month-[]
 partial-[]lockdown /
  []
 
-[54] 
+
 AED: lastpage setting LastPage
-[55] (./manuscript.aux)
-Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 59158F36FA87CB75DBCC8ECEBAD5D0F3;7546.
+[33] (./changes.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `changes.out' has not changed.
+(rerunfilecheck)             Checksum: E6493804CB87C858B45F98BE52DC440C;2158.
  ) 
 Here is how much of TeX's memory you used:
- 19474 strings out of 479719
- 321074 string characters out of 5880575
- 759612 words of memory out of 5000000
- 36764 multiletter control sequences out of 15000+600000
- 482725 words of font info for 107 fonts, out of 8000000 for 9000
+ 20447 strings out of 479719
+ 323688 string characters out of 5880575
+ 810623 words of memory out of 5000000
+ 37862 multiletter control sequences out of 15000+600000
+ 482499 words of font info for 104 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 67i,12n,76p,1631b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,14n,76p,2554b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1
 .enc}</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/c
@@ -1146,19 +1010,20 @@ amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022basic/texmf-dist/font
-s/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022basic/texmf-dist/f
-onts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022basic/texmf-dis
-t/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022basic/texmf-
-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022basic/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022basic/
-texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/2022bas
-ic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022
-basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on manuscript.pdf (55 pages, 10803927 bytes).
+ype1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2022basic/texmf-dis
+t/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022basic/texmf-
+dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022basic/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022basic/
+texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022bas
+ic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022
+basic/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2
+022basic/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texliv
+e/2022basic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/tex
+live/2022basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on changes.pdf (33 pages, 526748 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
- 792 compressed objects within 8 object streams
- 263 named destinations out of 1000 (max. 500000)
- 27578 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 612 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
+ 159 named destinations out of 1000 (max. 500000)
+ 27257 words of extra memory for PDF output out of 29859 (max. 10000000)
 

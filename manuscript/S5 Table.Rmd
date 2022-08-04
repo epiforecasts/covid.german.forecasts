@@ -1,0 +1,40 @@
+---
+output: 
+  pdf_document:
+    keep_tex: true
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+
+```{r}
+library(kableExtra)
+add_caption <- function(table, caption, label = NULL) {
+  if (is.null(label)) {
+    label <- paste0("tab:", opts_current$get("label"))
+  }
+  table <- gsub(pattern = "begin\\{table\\}\\[!h\\]",
+                replacement = paste0("begin\\{table\\}[!h]\n", 
+                                     "\\\\caption\\{",
+                                     "\\\\\\label\\{", label, "\\}",
+                                     caption,
+                                     "\\\\\\\\\\\\hspace{\\\\textwidth}\\}\n"),
+                x = table)
+  return(table)
+}
+
+```
+
+
+```{r}
+caption <- 
+  "Scores for one and two week ahead forecasts (cut to three significant digits and rounded) for the different versions of the median ensemble. Note that scores for cases (which include the whole period from October 12th 2020 until March 1st 2021) and deaths (which include only forecasts from the 21st of December 2020 on) are computed on different subsets. Numbers in brackets show the metrics relative to the Hub ensemble (i.e. the median ensemble of all other models submitted to the German and Polish Forecast Hub, excluding our contributions). WIS is the mean weighted interval score (lower values are better), WIS - sd is the standard deviation of all scores achieved by a model. Dispersion, over-prediction and under-prediction together sum up to the weighted interval score. Bias (between -1 and 1, 0 is ideal) represents the general average tendency of a model to over- or underpredict. 50\\\\% and 90\\\\%-coverage are the percentage of observed values that fell within the 50\\\\% and 90\\\\% prediction intervals of a model."
+```
+
+```{r score-table-ensemble-2}
+table <- readRDS("../analysis/plots/table_median-ensemble_scores_4_ahead.rds")
+# add_caption(table, caption)
+table
+```

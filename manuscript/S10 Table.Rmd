@@ -1,0 +1,78 @@
+---
+output: 
+  pdf_document:
+    keep_tex: true
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+
+```{r}
+library(kableExtra)
+```
+
+```{r score-table-ensemble-2}
+rbind(
+  list(
+    Name = "Hub-ensemble-realised", 
+    `Explanation` = "Official Forecast Hub median ensemble. Created by the Forecast Hub officially under the name 'KITCOVIDhub-median\\_ensemble' and used as the default ensemble. Included are our crowd forecasts as well as the renewal model (with one missed submission on December 28 2020, but not the convolution model which was deemed to similar to the renewal model."
+  ),
+  list(
+    Name = "Hub-ensemble-realised-mean", 
+    `Explanation` = "Official Forecast Hub mean ensemble. Created by the Forecast Hub officially under the name 'KITCOVIDhub-mean\\_ensemble'."
+  ),
+  list(Name = "", Explanation = ""),
+  
+  list(
+    Name = "Hub-ensemble", 
+    `Explanation` = "Version of the official Hub median ensemble which excludes all our contributions."
+  ),
+  list(
+    Name = "Hub-ensemble-mean", 
+    `Explanation` = "Version of the official Hub mean ensemble which excludes all our contributions."
+  ),
+  list(
+    Name = "Hub-ensemble-with-renewal, 
+    Hub-ensemble-with-renewal-mean", 
+    `Explanation` = "Versions of the official Hub ensembles which of our contributions includes only the Renewal model."
+  ),
+  list(
+    Name = "Hub-ensemble-with-crowd, 
+    Hub-ensemble-with-crowd-mean", 
+    `Explanation` = "Versions of the official Hub ensembles which of our contributions includes only the Crowd forecast."
+  ),
+  list(
+    Name = "Hub-ensemble-with-convolution, 
+    Hub-ensemble-with-convolution-mean", 
+    `Explanation` = "Versions of the official Hub ensembles which of our contributions includes only the Convolution model (which originally was never included in any official Hub ensemble)."
+  ),
+    list(
+    Name = "Hub-ensemble-with-all, 
+    Hub-ensemble-with-all-mean", 
+    `Explanation` = "Versions of the official Hub ensembles which includes all our contributions. For cases, this is identical to the official Hub ensembles, but for deaths the convolution model was added."
+  ),
+  
+  list(Name = "", Explanation = ""),
+  list(
+    Name = "Crowd forecast", 
+    `Explanation` = "Submitted to the Forecast Hub as 'epiforecasts-EpiExpert'"
+  ),  
+  list(
+    Name = "Renewal model", 
+    `Explanation` = "Submitted to the Forecast Hub as 'epiforecasts-EpiNow2'"
+  ),  
+  list(
+    Name = "Convolution model", 
+    `Explanation` = "Submitted to the Forecast Hub as 'epiforecasts-EpiNow2\\_secondary'"
+  )
+) %>%
+  kableExtra::kbl(format = "latex", booktabs = TRUE, 
+                  escape = FALSE,
+                  longtable = TRUE,
+                  linesep = c('\\addlinespace \\addlinespace')) %>%
+  kableExtra::column_spec(1, width = "4.5cm") %>%
+  kableExtra::column_spec(2, width = "7.3cm") %>%
+  kableExtra::kable_styling(latex_options = c("striped", "repeat_header")) 
+```
