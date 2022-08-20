@@ -505,8 +505,9 @@ regimes (for example in Germany from the 11th of November on, {[}36{]}).
 The ECDC data as well as the data published by the Polish Ministry of
 Health were also subject to data revisions, although most of them (with
 a notable exception of a data update for October 12 2020 in Germany)
-only affected daily, not weekly data (see Figs
-\nameref{fig:daily-truth-update} and \nameref{fig:weekly-truth-update}).
+only affected daily, not weekly data (see
+\nameref{fig:daily-truth-update} and \nameref{fig:weekly-truth-update}
+Figs).
 
 \hypertarget{crowd-forecasts}{%
 \subsection{Crowd forecasts}\label{crowd-forecasts}}
@@ -524,21 +525,21 @@ the default being log-normal) to represent the probability that the
 forecasted quantity took certain values. Median and width of the
 uncertainty could be adjusted by either interacting with a figure
 showing their forecast or providing numerical values (see screenshot in
-\nameref{fig:screenshot} in the SI). The default shown was a repetition
-of the last known observation with constant uncertainty around it
-computed as the standard deviation of the last four changes in weekly
-log observed forecasts (i.e.~as
+\nameref{fig:screenshot}). The default shown was a repetition of the
+last known observation with constant uncertainty around it computed as
+the standard deviation of the last four changes in weekly log observed
+forecasts (i.e.~as
 \(\sigma(log(value4) - log(value3), log(value3) - log(value2), \ldots )\)).
 A comparison of the crowd forecasts against the default baseline shown
-in the application is displayed in \nameref{fig:compare-forecasters} in
-the Appendix. Our interface also allowed participants to view past
-observations based on the hub data, as well as their forecasts, on a
-logarithmic scale and presented additional contextual COVID-19 data
-sourced from {[}39{]}. These data included, for example, notifications
-of both test positive COVID-19 cases and COVID-19 linked deaths and the
-number of COVID-19 tests conducted over time. From November 26 2020 on
-we displayed weekly small reports with a visualisation of past forecasts
-and scores on our website, epiforecasts.io.
+in the application is displayed in \nameref{fig:compare-forecasters}.
+Our interface also allowed participants to view past observations based
+on the hub data, as well as their forecasts, on a logarithmic scale and
+presented additional contextual COVID-19 data sourced from {[}39{]}.
+These data included, for example, notifications of both test positive
+COVID-19 cases and COVID-19 linked deaths and the number of COVID-19
+tests conducted over time. From November 26 2020 on we displayed weekly
+small reports with a visualisation of past forecasts and scores on our
+website, epiforecasts.io.
 
 Forecasts were stored in a Google Sheet and downloaded, cleaned and
 processed every week for submission to the Forecast Hub. If a forecaster
@@ -570,37 +571,37 @@ We used two Bayesian semi-mechanistic models from the \texttt{EpiNow2} R
 package (version 1.3.3) as our model-based forecasts {[}40{]}. The first
 of these models, here called ``renewal model'', used the renewal
 equation {[}41{]} to predict reported cases and deaths (see details in
-\nameref{txt:details-models} in the SI). It estimated the effective
-reproduction number \(R_t\) (the average number of people each person
-infected at time t is expected to infect in turn) and modelled future
-infections as a weighted sum of past infection multiplied by \(R_t\).
-\(R_t\) was assumed to stay constant beyond the forecast date, roughly
-corresponding to continuing the latest exponential trend in infections.
-On the 9th of November we altered the date when \(R_t\) was assumed to
-be constant from two weeks prior to the date of the forecast to the
-forecast date, which we found to yield a more stable \(R_t\) estimate.
-Reported case and death notifications were obtained by convolving
-predicted infections over data-based delay distributions {[}40,42--44{]}
-to model the time between infection and report date. The renewal model
-was used to predict cases as well as deaths with forecasts being
-generated for each target separately. Death forecasts from the renewal
-model were therefore not informed by past cases. One submission of the
-renewal model on December 28th 2020 was delayed and therefore not
-included in the official Forecast hub ensemble.
+\nameref{txt:details-models}). It estimated the effective reproduction
+number \(R_t\) (the average number of people each person infected at
+time t is expected to infect in turn) and modelled future infections as
+a weighted sum of past infection multiplied by \(R_t\). \(R_t\) was
+assumed to stay constant beyond the forecast date, roughly corresponding
+to continuing the latest exponential trend in infections. On the 9th of
+November we altered the date when \(R_t\) was assumed to be constant
+from two weeks prior to the date of the forecast to the forecast date,
+which we found to yield a more stable \(R_t\) estimate. Reported case
+and death notifications were obtained by convolving predicted infections
+over data-based delay distributions {[}40,42--44{]} to model the time
+between infection and report date. The renewal model was used to predict
+cases as well as deaths with forecasts being generated for each target
+separately. Death forecasts from the renewal model were therefore not
+informed by past cases. One submission of the renewal model on December
+28th 2020 was delayed and therefore not included in the official
+Forecast hub ensemble.
 
-The second model (``convolution model'', see details in SI) was only
-used to forecast deaths and was added later, starting December 7th 2020
-(with the first forecast from December 7th suffering from a software bug
-and therefore disregarded in all further analyses). The convolution
-model was submitted, but never included in the official Forecast hub
-ensemble due to concerns that it could be too similar to the renewal
-model. The convolution model predicted deaths as a fraction of infected
-people who would die with some delay, by using a convolution of reported
-cases with a distribution that described the delay from case report to
-death and a scaling factor (the case-fatality ratio). Both the renewal
-and the convolution model used daily observations and assumed a negative
-binomial observation model with a multiplicative day-of-the-week effect
-{[}40{]}.
+The second model (``convolution model'', see details in
+\nameref{txt:details-models}) was only used to forecast deaths and was
+added later, starting December 7th 2020 (with the first forecast from
+December 7th suffering from a software bug and therefore disregarded in
+all further analyses). The convolution model was submitted, but never
+included in the official Forecast hub ensemble due to concerns that it
+could be too similar to the renewal model. The convolution model
+predicted deaths as a fraction of infected people who would die with
+some delay, by using a convolution of reported cases with a distribution
+that described the delay from case report to death and a scaling factor
+(the case-fatality ratio). Both the renewal and the convolution model
+used daily observations and assumed a negative binomial observation
+model with a multiplicative day-of-the-week effect {[}40{]}.
 
 Line list data used to inform the prior for the delay from symptom onset
 to test positive case report or death in the model-based forecasts was
@@ -621,8 +622,8 @@ including the convolution model were available. To ensure robustness of
 our results we conducted a sensitivity analysis where all forecasts
 (including cases) were scored only over the later period for which all
 forecasts were available (see \nameref{fig:agg-performance-all-late} and
-\nameref{tab:score-table-late-2} and \nameref{tab:score-table-late-4}s
-in the SI). Results remained broadly unchanged.
+\nameref{tab:score-table-late-2} and \nameref{tab:score-table-late-4}s).
+Results remained broadly unchanged.
 
 Forecasts were analysed using the following scoring metrics: The
 weighted interval score (WIS) {[}47{]}, the absolute error, relative
@@ -647,30 +648,29 @@ that all quantiles are above the observed value. Empirical coverage is
 the percentage of observed values that fall inside a given prediction
 interval (e.g.~how many observed values fall inside all 50\% prediction
 intervals). Scoring metrics are explained in more detail in
-\nameref{tab:scoring-metrics} in the SI. All scores were calculated
-using the \texttt{scoringutils} R package {[}49{]}.
+\nameref{tab:scoring-metrics}. All scores were calculated using the
+\texttt{scoringutils} R package {[}49{]}.
 
 At all stages of the evaluation our forecasts were compared to the
 median ensemble of all \emph{other} models submitted to the German and
 Polish Forecast Hub (``Hub ensemble''). This ``Hub ensemble'' was
 retrospectively computed and excludes all our models, leaving on average
 five ensemble member models (see \nameref{tab:table-ensemble-versions}
-and \nameref{fig:num-ensemble-members} in the SI). What we call ``Hub
-ensemble'' in this article therefore differs from the ``official Hub
-ensemble'' (here called ``hub-ensemble-realised'') which included crowd
-forecasts as well as renewal model forecasts. To enhance
-interpretability of scores we mainly report WIS relative to the Hub
-ensemble in the main text, i.e.~we divided the average scores for a
-given model by the average score achieved by the Hub ensemble on the
-same set of forecasts (with values \textgreater1 implying worse and
-values \textless1 implying better performance than the Hub ensemble). In
-addition to comparing our forecasts against the hub ensemble excluding
-our models, we also assessed the impact of our forecasts on the
-performance of the forecasting hub by recalculating separate versions of
-the Hub ensemble with only some (or all) of our forecasts included.
-Versions that included either all of our models
-(``hub-ensemble-with-all'') or only one of them
-(``hub-ensemble-with-X'') were computed retrospectively.
+and \nameref{fig:num-ensemble-members}). What we call ``Hub ensemble''
+in this article therefore differs from the ``official Hub ensemble''
+(here called ``hub-ensemble-realised'') which included crowd forecasts
+as well as renewal model forecasts. To enhance interpretability of
+scores we mainly report WIS relative to the Hub ensemble in the main
+text, i.e.~we divided the average scores for a given model by the
+average score achieved by the Hub ensemble on the same set of forecasts
+(with values \textgreater1 implying worse and values \textless1 implying
+better performance than the Hub ensemble). In addition to comparing our
+forecasts against the hub ensemble excluding our models, we also
+assessed the impact of our forecasts on the performance of the
+forecasting hub by recalculating separate versions of the Hub ensemble
+with only some (or all) of our forecasts included. Versions that
+included either all of our models (``hub-ensemble-with-all'') or only
+one of them (``hub-ensemble-with-X'') were computed retrospectively.
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -706,16 +706,16 @@ A, C: Visualisation of 50\% prediction intervals of two week ahead forecasts aga
 For cases, crowd forecasts had a lower mean weighted interval score
 (WIS, lower values indicate better performance) than both the renewal
 model and the Hub ensemble across all forecast horizons (Fig
-\ref{fig:agg-performance-all}A) and locations (Fig
-\nameref{fig:performance-locations-rel}A). For two week ahead forecasts,
-mean WIS relative to the Hub ensemble (= 1) was 0.89 for crowd forecasts
-and 1.40 for the renewal model (\nameref{tab:score-table-2} Table).
-Across all forecasting approaches, locations and forecast horizons, the
-distribution of WIS values was very right-skewed, and average
-performance was heavily influenced by outliers (Fig
-\ref{fig:distribution-scores}). Overall, low variance in forecast
-performance was closely linked with good mean performance (Figs
-\ref{fig:agg-performance-all}H and and \ref{fig:agg-performance-all}A),
+\ref{fig:agg-performance-all}A) and locations
+(\nameref{fig:performance-locations-rel}A Fig). For two week ahead
+forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for
+crowd forecasts and 1.40 for the renewal model
+(\nameref{tab:score-table-2} Table). Across all forecasting approaches,
+locations and forecast horizons, the distribution of WIS values was very
+right-skewed, and average performance was heavily influenced by outliers
+(Fig \ref{fig:distribution-scores}). Overall, low variance in forecast
+performance was closely linked with good mean performance (Fig
+\ref{fig:agg-performance-all}H and \ref{fig:agg-performance-all}A),
 suggesting that the ability to avoid large errors was an important
 factor in determining overall performance. The impact of outlier values
 was especially pronounced for the renewal model, which had more outliers
@@ -756,7 +756,7 @@ model performed more in line with other forecasts there.
 All forecasting approaches, including the Hub ensemble, were
 overconfident, i.e.~they showed lower than nominal coverage (meaning
 that 50\% (90\%) prediction intervals generally covered less than 50\%
-(90\%) of the actually observed values) (Figs
+(90\%) of the actually observed values) (Fig
 \ref{fig:agg-performance-all}C and \ref{fig:agg-performance-all}D).
 Coverage for all forecasts deteriorated with increasing forecast
 horizon, indicating that all forecasting approaches struggled to
@@ -775,14 +775,14 @@ In spite of good performance in terms of the absolute error (Fig
 forecasts which were severely overconfident (covering only 36\% and 55\%
 of all observations with the 50\% and 90\% prediction intervals of all
 forecasts made at a two week forecast horizon, and only 5\% and 38\%
-four weeks ahead) (Fig \ref{fig:agg-performance-all}C, D as well as
-\nameref{tab:score-table-2} and \nameref{tab:score-table-4}s). Despite
-worse performance in terms of absolute error (Fig
-\ref{fig:agg-performance-all}G), the renewal model achieved better
-calibration (comparable to the Hub ensemble), as uncertainty increased
-rapidly across forecast horizons. The crowd forecasts, on the other
-hand, showed a smaller bias than the renewal model, but were
-overconfident.
+four weeks ahead) (Fig \ref{fig:agg-performance-all}C and
+\ref{fig:agg-performance-all}D as well as \nameref{tab:score-table-2}
+and \nameref{tab:score-table-4}s). Despite worse performance in terms of
+absolute error (Fig \ref{fig:agg-performance-all}G), the renewal model
+achieved better calibration (comparable to the Hub ensemble), as
+uncertainty increased rapidly across forecast horizons. The crowd
+forecasts, on the other hand, showed a smaller bias than the renewal
+model, but were overconfident.
 
 The renewal model exhibited a noticeable tendency towards
 over-predicting reported cases across all horizons. The crowd forecast
@@ -791,21 +791,21 @@ ensemble showed no systematic bias (Fig \ref{fig:agg-performance-all}F).
 Regardless of a general relative tendency to over-predict, all
 forecasting approaches incurred larger absolute penalties from over-
 than from under-prediction (see decomposition of the WIS into absolute
-penalties for over-prediction, under-prediction and dispersion in Figs
+penalties for over-prediction, under-prediction and dispersion in Fig
 \ref{fig:agg-performance-all}A and \ref{fig:agg-performance-all}B, as
 well as \nameref{tab:score-table-2} and \nameref{tab:score-table-4}s).
 
 Generally, trends in overall performance were broadly similar across
-locations (Figs \nameref{fig:performance-locations} and
-\nameref{fig:performance-locations-rel}). Due to the differing
+locations (\nameref{fig:performance-locations} and
+\nameref{fig:performance-locations-rel} Figs). Due to the differing
 population sizes and numbers of notifications in Germany and Poland
 absolute scores were difficult to compare directly. However, relative to
 the Hub ensemble, the crowd forecasts performed noticeably better in
 Germany than in Poland and the renewal model better in Poland than in
-Germany (Figs \nameref{fig:performance-locations-rel}A,
+Germany (\nameref{fig:performance-locations-rel}A,
 \nameref{fig:performance-locations-rel}G,
-\nameref{fig:agg-performance-all-Germany},
-\nameref{fig:agg-performance-all-Poland}).
+\nameref{fig:agg-performance-all-Germany} and
+\nameref{fig:agg-performance-all-Poland} Figs).
 
 \hypertarget{death-forecasts}{%
 \subsection{Death Forecasts}\label{death-forecasts}}
@@ -862,15 +862,14 @@ had the greatest coverage, with empirical coverage of the 50\% and 90\%
 prediction intervals exceeding 50\%, and 90\%, respectively, across all
 forecast horizons. Coverage for the crowd forecasts and our model-based
 approaches was generally lower than that of the Hub ensemble and mostly
-slightly lower than nominal coverage (Figs
-\ref{fig:agg-performance-all}C and \ref{fig:agg-performance-all}D). As
-for cases, the crowd forecast tended to have the narrowest prediction
-intervals and uncertainty increased most slowly across forecast
-horizons, and the renewal model forecasts generally were widest. The
-convolution model had relatively narrow prediction intervals for short
-forecast horizons, but had rapidly (and non-linearly) increasing
-uncertainty for longer forecast horizons, driven by increasing
-uncertainty in the underlying case forecasts.
+slightly lower than nominal coverage (Fig \ref{fig:agg-performance-all}C
+and \ref{fig:agg-performance-all}D). As for cases, the crowd forecast
+tended to have the narrowest prediction intervals and uncertainty
+increased most slowly across forecast horizons, and the renewal model
+forecasts generally were widest. The convolution model had relatively
+narrow prediction intervals for short forecast horizons, but had rapidly
+(and non-linearly) increasing uncertainty for longer forecast horizons,
+driven by increasing uncertainty in the underlying case forecasts.
 
 For deaths, the ensemble of crowd forecasts had a consistent tendency to
 over-predict (see Fig \ref{fig:agg-performance-all}F). The convolution
@@ -879,7 +878,7 @@ under-prediction steadily decreasing for longer forecast horizons. The
 renewal model (which over-predicted for cases) and the Hub ensemble
 slightly tended towards under-prediction. For deaths, absolute over- and
 under-prediction penalties were more in line with a general relative
-tendency to over- or under-predict than for cases (Figs
+tendency to over- or under-predict than for cases (Fig
 \ref{fig:agg-performance-all}A and \ref{fig:agg-performance-all}B, as
 well as \nameref{tab:score-table-2} and \nameref{tab:score-table-4}s).
 
@@ -911,7 +910,7 @@ the official Hub ensemble, there were on average 7.1 models included
 included either all of our models (``hub-ensemble-with-all'') or only
 one of them (``hub-ensemble-with-X'') were computed retrospectively. An
 overview of all models and ensemble versions is shown in
-\nameref{tab:table-ensemble-versions} in the SI.
+\nameref{tab:table-ensemble-versions}.
 
 For cases, our contributions (compared to the Hub ensemble without our
 contributions) consistently improved performance across all forecasting
@@ -1092,6 +1091,359 @@ from the availability of tools suitable to appeal to a greater audience.
 Given the good performance we and previous authors observed in spite of
 the limited resources available and the small number of participants,
 this seems worthwhile to further develop and explore.
+
+\clearpage
+
+\section*{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-mcgowanCollaborativeEffortsForecast2019}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{McGowan CJ, Biggerstaff M, Johansson M, Apfeldorf KM,
+Ben-Nun M, Brooks L, et al. Collaborative efforts to forecast seasonal
+influenza in the {United States}, 2015--2016. Scientific Reports.
+2019;9: 683.
+doi:\href{https://doi.org/10.1038/s41598-018-36361-9}{10.1038/s41598-018-36361-9}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-reichCollaborativeMultiyearMultimodel2019}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Reich NG, Brooks LC, Fox SJ, Kandula S, McGowan CJ,
+Moore E, et al. A collaborative multiyear, multimodel assessment of
+seasonal influenza forecasting in the {United States}. PNAS. 2019;116:
+3146--3154.
+doi:\href{https://doi.org/10.1073/pnas.1812594116}{10.1073/pnas.1812594116}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shamanForecastingSeasonalOutbreaks2012}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Shaman J, Karspeck A. Forecasting seasonal outbreaks of
+influenza. PNAS. 2012;109: 20425--20430.
+doi:\href{https://doi.org/10.1073/pnas.1208772109}{10.1073/pnas.1208772109}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-biggerstaffResultsCentersDisease2016}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Biggerstaff M, Alper D, Dredze M, Fox S, Fung IC-H,
+Hickmann KS, et al. Results from the centers for disease control and
+prevention's predict the 2013--2014 {Influenza Season Challenge}. BMC
+Infectious Diseases. 2016;16: 357.
+doi:\href{https://doi.org/10.1186/s12879-016-1669-x}{10.1186/s12879-016-1669-x}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-johanssonOpenChallengeAdvance2019}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Johansson MA, Apfeldorf KM, Dobson S, Devita J, Buczak
+AL, Baugher B, et al. An open challenge to advance probabilistic
+forecasting for dengue epidemics. PNAS. 2019;116: 24268--24274.
+doi:\href{https://doi.org/10.1073/pnas.1909865116}{10.1073/pnas.1909865116}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-yamanaSuperensembleForecastsDengue2016}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Yamana TK, Kandula S, Shaman J. Superensemble forecasts
+of dengue outbreaks. Journal of The Royal Society Interface. 2016;13:
+20160410.
+doi:\href{https://doi.org/10.1098/rsif.2016.0410}{10.1098/rsif.2016.0410}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-colon-gonzalezProbabilisticSeasonalDengue2021}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Colón-González FJ, Bastos LS, Hofmann B, Hopkin A,
+Harpham Q, Crocker T, et al. Probabilistic seasonal dengue forecasting
+in {Vietnam}: {A} modelling study using superensembles. PLOS Medicine.
+2021;18: e1003542.
+doi:\href{https://doi.org/10.1371/journal.pmed.1003542}{10.1371/journal.pmed.1003542}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-viboudRAPIDDEbolaForecasting2018}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Viboud C, Sun K, Gaffey R, Ajelli M, Fumanelli L, Merler
+S, et al. The {RAPIDD} ebola forecasting challenge: {Synthesis} and
+lessons learnt. Epidemics. 2018;22: 13--21.
+doi:\href{https://doi.org/10.1016/j.epidem.2017.08.002}{10.1016/j.epidem.2017.08.002}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-funkAssessingPerformanceRealtime2019}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Funk S, Camacho A, Kucharski AJ, Lowe R, Eggo RM,
+Edmunds WJ. Assessing the performance of real-time epidemic forecasts:
+{A} case study of {Ebola} in the {Western Area} region of {Sierra
+Leone}, 2014-15. PLOS Computational Biology. 2019;15: e1006785.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1006785}{10.1371/journal.pcbi.1006785}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-delvalleSummaryResults201420152018}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Del Valle SY, McMahon BH, Asher J, Hatchett R, Lega JC,
+Brown HE, et al. Summary results of the 2014-2015 {DARPA Chikungunya}
+challenge. BMC Infectious Diseases. 2018;18: 245.
+doi:\href{https://doi.org/10.1186/s12879-018-3124-7}{10.1186/s12879-018-3124-7}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-farrowHumanJudgmentApproach2017}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Farrow DC, Brooks LC, Hyun S, Tibshirani RJ, Burke DS,
+Rosenfeld R. A human judgment approach to epidemiological forecasting.
+PLOS Computational Biology. 2017;13: e1005248.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1005248}{10.1371/journal.pcbi.1005248}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-funkShorttermForecastsInform2020}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Funk S, Abbott S, Atkins BD, Baguelin M, Baillie JK,
+Birrell P, et al. Short-term forecasts to inform the response to the
+{Covid-19} epidemic in the {UK}. medRxiv. 2020; 2020.11.11.20220962.
+doi:\href{https://doi.org/10.1101/2020.11.11.20220962}{10.1101/2020.11.11.20220962}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cramerCOVID19ForecastHub2020}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Cramer E, Reich NG, Wang SY, Niemi J, Hannan A, House K,
+et al. {COVID-19 Forecast Hub}: 4 {December} 2020 snapshot. {Zenodo};
+2020.
+doi:\href{https://doi.org/10.5281/zenodo.3963371}{10.5281/zenodo.3963371}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cramerEvaluationIndividualEnsemble2021}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Cramer E, Ray EL, Lopez VK, Bracher J, Brennen A,
+Rivadeneira AJC, et al. Evaluation of individual and ensemble
+probabilistic forecasts of {COVID-19} mortality in the {US}. medRxiv.
+2021; 2021.02.03.21250974.
+doi:\href{https://doi.org/10.1101/2021.02.03.21250974}{10.1101/2021.02.03.21250974}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bracherShorttermForecastingCOVID192021}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Bracher J, Wolffram D, Deuschel J, Görgen K, Ketterer
+JL, Ullrich A, et al. Short-term forecasting of {COVID-19} in {Germany}
+and {Poland} during the second wave -- a preregistered study. medRxiv.
+2021; 2020.12.24.20248826.
+doi:\href{https://doi.org/10.1101/2020.12.24.20248826}{10.1101/2020.12.24.20248826}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bracherNationalSubnationalShortterm2021}{}}%
+\CSLLeftMargin{16. }%
+\CSLRightInline{Bracher J, Wolffram D, Deuschel J, Görgen K, Ketterer
+JL, Ullrich A, et al. National and subnational short-term forecasting of
+{COVID-19} in {Germany} and {Poland}, early 2021. 2021;
+2021.11.05.21265810.
+doi:\href{https://doi.org/10.1101/2021.11.05.21265810}{10.1101/2021.11.05.21265810}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-europeancovid-19forecasthubEuropeanCovid19Forecast2021}{}}%
+\CSLLeftMargin{17. }%
+\CSLRightInline{European Covid-19 Forecast Hub. European {Covid-19
+Forecast Hub}. 2021 {[}cited 30 May 2021{]}. Available:
+\url{https://covid19forecasthub.eu/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-reichAccuracyRealtimeMultimodel2019}{}}%
+\CSLLeftMargin{18. }%
+\CSLRightInline{Reich NG, McGowan CJ, Yamana TK, Tushar A, Ray EL,
+Osthus D, et al. Accuracy of real-time multi-model ensemble forecasts
+for seasonal influenza in the {U}.{S}. PLOS Computational Biology.
+2019;15: e1007486.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1007486}{10.1371/journal.pcbi.1007486}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tetlockForecastingTournamentsTools2014}{}}%
+\CSLLeftMargin{19. }%
+\CSLRightInline{Tetlock PE, Mellers BA, Rohrbaugh N, Chen E. Forecasting
+{Tournaments}: {Tools} for {Increasing Transparency} and {Improving} the
+{Quality} of {Debate}. Curr Dir Psychol Sci. 2014;23: 290--295.
+doi:\href{https://doi.org/10.1177/0963721414534257}{10.1177/0963721414534257}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-atanasovDistillingWisdomCrowds2016}{}}%
+\CSLLeftMargin{20. }%
+\CSLRightInline{Atanasov P, Rescober P, Stone E, Swift SA,
+Servan-Schreiber E, Tetlock P, et al. Distilling the {Wisdom} of
+{Crowds}: {Prediction Markets} vs. {Prediction Polls}. Management
+Science. 2016;63: 691--706.
+doi:\href{https://doi.org/10.1287/mnsc.2015.2374}{10.1287/mnsc.2015.2374}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hoogeveenLaypeopleCanPredict2020}{}}%
+\CSLLeftMargin{21. }%
+\CSLRightInline{Hoogeveen S, Sarafoglou A, Wagenmakers E-J. Laypeople
+{Can Predict Which Social-Science Studies Will Be Replicated
+Successfully}. Advances in Methods and Practices in Psychological
+Science. 2020;3: 267--285.
+doi:\href{https://doi.org/10.1177/2515245920919667}{10.1177/2515245920919667}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-replicationmarketsReplicationMarketsReliable2020}{}}%
+\CSLLeftMargin{22. }%
+\CSLRightInline{ReplicationMarkets. Replication {Markets} -- {Reliable}
+research replicates\ldots you can bet on it. 2020 {[}cited 13 Oct
+2021{]}. Available: \url{https://www.replicationmarkets.com/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-servan-schreiberPredictionMarketsDoes2004}{}}%
+\CSLLeftMargin{23. }%
+\CSLRightInline{Servan-Schreiber E, Wolfers J, Pennock DM, Galebach B.
+Prediction {Markets}: {Does Money Matter}? Electronic Markets. 2004;14:
+243--251.
+doi:\href{https://doi.org/10.1080/1019678042000245254}{10.1080/1019678042000245254}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mcandrewExpertJudgmentModel2020}{}}%
+\CSLLeftMargin{24. }%
+\CSLRightInline{McAndrew TC, Reich NG. An expert judgment model to
+predict early stages of the {COVID-19} outbreak in the {United States}.
+medRxiv. 2020; 2020.09.21.20196725.
+doi:\href{https://doi.org/10.1101/2020.09.21.20196725}{10.1101/2020.09.21.20196725}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-recchiaHowWellDid2021}{}}%
+\CSLLeftMargin{25. }%
+\CSLRightInline{Recchia G, Freeman ALJ, Spiegelhalter D. How well did
+experts and laypeople forecast the size of the {COVID-19} pandemic? PLOS
+ONE. 2021;16: e0250935.
+doi:\href{https://doi.org/10.1371/journal.pone.0250935}{10.1371/journal.pone.0250935}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-metaculusPreliminaryLookMetaculus2020}{}}%
+\CSLLeftMargin{26. }%
+\CSLRightInline{Metaculus. A {Preliminary Look} at {Metaculus} and
+{Expert Forecasts}. 22 Jun 2020 {[}cited 30 May 2021{]}. Available:
+\url{https://www.metaculus.com/news/2020/06/02/LRT/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hypermindHypermindSupercollectiveIntelligence2021}{}}%
+\CSLLeftMargin{27. }%
+\CSLRightInline{Hypermind. Hypermind \textbar{} {Supercollective}
+intelligence for decision makers. {Hypermind}; 2021 {[}cited 13 Oct
+2021{]}. Available: \url{https://www.hypermind.com/en/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-csetforetellCSETForetell2021}{}}%
+\CSLLeftMargin{28. }%
+\CSLRightInline{CSET Foretell. {CSET Foretell}. 2021 {[}cited 13 Oct
+2021{]}. Available: \url{https://www.cset-foretell.com/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-predictitPredictIt2021}{}}%
+\CSLLeftMargin{29. }%
+\CSLRightInline{PredictIt. {PredictIt}. 2021 {[}cited 13 Oct 2021{]}.
+Available: \url{https://www.predictit.org/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-heldProbabilisticForecastingInfectious2017}{}}%
+\CSLLeftMargin{30. }%
+\CSLRightInline{Held L, Meyer S, Bracher J. Probabilistic forecasting in
+infectious disease epidemiology: The 13th {Armitage} lecture. Statistics
+in Medicine. 2017;36: 3443--3460.
+doi:\href{https://doi.org/10.1002/sim.7363}{10.1002/sim.7363}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-crowdforecastr}{}}%
+\CSLLeftMargin{31. }%
+\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S.
+Crowdforecastr: Eliciting crowd forecasts in r shiny. 2020.
+doi:\href{https://doi.org/10.5281/zenodo.4618519}{10.5281/zenodo.4618519}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-covidgermanforecasts}{}}%
+\CSLLeftMargin{32. }%
+\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S.
+Covid.german.forecasts: Forecasting covid-19 related metrics for the
+german/poland forecast hub. 2020. }
+
+\leavevmode\vadjust pre{\hypertarget{ref-ecdcDownloadHistoricalData2020}{}}%
+\CSLLeftMargin{33. }%
+\CSLRightInline{ECDC. Download historical data (to 14 {December} 2020)
+on the daily number of new reported {COVID-19} cases and deaths
+worldwide. {European Centre for Disease Prevention and Control}; 14 Dec
+2020 {[}cited 30 May 2021{]}. Available:
+\url{https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rkiRKICoronavirusSARSCoV22021}{}}%
+\CSLLeftMargin{34. }%
+\CSLRightInline{RKI. {RKI} - {Coronavirus SARS-CoV-2} - {Aktueller
+Lage-}/{Situationsbericht} des {RKI} zu {COVID-19}. 2021 {[}cited 30 May
+2021{]}. Available:
+\url{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-forsal.plRozbieznosciStatystykachKoronawirusa2020}{}}%
+\CSLLeftMargin{35. }%
+\CSLRightInline{Forsal.pl. Rozbieżności w statystykach koronawirusa. 22
+tys. przypadków będą doliczone do ogólnej liczby wyników. 2020 {[}cited
+30 May 2021{]}. Available:
+\url{https://forsal.pl/lifestyle/zdrowie/artykuly/8017628,rozbieznosci-w-statystykach-koronawirusa-22-tys-przypadkow-beda-doliczone-do-ogolnej-liczby-wynikow.html}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-aerzteblattSARSCoV2DiagnostikRKIPasst2020}{}}%
+\CSLLeftMargin{36. }%
+\CSLRightInline{Ärzteblatt DÄG Redaktion Deutsches.
+SARS-CoV-2-Diagnostik: RKI passt Testempfehlungen an. {Deutsches
+Ärzteblatt}; 3 Nov 2020 {[}cited 30 May 2021{]}. Available:
+\url{https://www.aerzteblatt.de/nachrichten/118001/SARS-CoV-2-Diagnostik-RKI-passt-Testempfehlungen-an}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-golem}{}}%
+\CSLLeftMargin{37. }%
+\CSLRightInline{Fay C, Guyader V, Rochette S, Girard C. Golem: A
+framework for robust shiny applications. 2021. Available:
+\url{https://github.com/ThinkR-open/golem}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shiny}{}}%
+\CSLLeftMargin{38. }%
+\CSLRightInline{Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie
+Y, et al. Shiny: Web application framework for r. 2021. Available:
+\url{https://CRAN.R-project.org/package=shiny}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ourworldindataCOVID19DataExplorer2020}{}}%
+\CSLLeftMargin{39. }%
+\CSLRightInline{Our World in Data. {COVID-19 Data Explorer}. {Our World
+in Data}; 2020 {[}cited 30 May 2021{]}. Available:
+\url{https://ourworldindata.org/coronavirus-data-explorer}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-epinow2}{}}%
+\CSLLeftMargin{40. }%
+\CSLRightInline{Abbott S, Hellewell J, Hickson J, Munday J, Gostic K,
+Ellis P, et al. EpiNow2: Estimate real-time case counts and time-varying
+epidemiological parameters. -. 2020;-: --.
+doi:\href{https://doi.org/10.5281/zenodo.3957489}{10.5281/zenodo.3957489}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-fraserEstimatingIndividualHousehold2007}{}}%
+\CSLLeftMargin{41. }%
+\CSLRightInline{Fraser C. Estimating {Individual} and {Household
+Reproduction Numbers} in an {Emerging Epidemic}. PLOS ONE. 2007;2: e758.
+doi:\href{https://doi.org/10.1371/journal.pone.0000758}{10.1371/journal.pone.0000758}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-epiforecasts.ioux2fcovidCovid19TemporalVariation2020}{}}%
+\CSLLeftMargin{42. }%
+\CSLRightInline{epiforecasts.io/covid. Covid-19: {Temporal} variation in
+transmission during the {COVID-19} outbreak. {Covid-19}; 2020 {[}cited
+30 May 2021{]}. Available: \url{https://epiforecasts.io/covid/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-sherrattExploringSurveillanceData2021}{}}%
+\CSLLeftMargin{43. }%
+\CSLRightInline{Sherratt K, Abbott S, Meakin SR, Hellewell J, Munday JD,
+Bosse N, et al. Exploring surveillance data biases when estimating the
+reproduction number: With insights into subpopulation transmission of
+{Covid-19} in {England}. 2021; 2020.10.18.20214585.
+doi:\href{https://doi.org/10.1101/2020.10.18.20214585}{10.1101/2020.10.18.20214585}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-abbottEstimatingTimevaryingReproduction2020a}{}}%
+\CSLLeftMargin{44. }%
+\CSLRightInline{Abbott S, Hellewell J, Thompson RN, Sherratt K, Gibbs
+HP, Bosse NI, et al. Estimating the time-varying reproduction number of
+{SARS-CoV-2} using national and subnational case counts. 2020 {[}cited
+14 Oct 2021{]}.
+doi:\href{https://doi.org/10.12688/wellcomeopenres.16006.1}{10.12688/wellcomeopenres.16006.1}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-kraemer2020epidemiological}{}}%
+\CSLLeftMargin{45. }%
+\CSLRightInline{Xu B, Gutierrez B, Hill S, Scarpino S, Loskill A, Wu J,
+et al. Epidemiological data from the nCoV-2019 outbreak: Early
+descriptions from publicly available data. 2020. Available:
+\url{http://virological.org/t/epidemiological-data-from-the-ncov-2019-outbreak-early-descriptions-from-publicly-available-data/337}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rstan}{}}%
+\CSLLeftMargin{46. }%
+\CSLRightInline{Stan Development Team. RStan: The r interface to stan.
+2020. Available: \url{http://mc-stan.org/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bracherEvaluatingEpidemicForecasts2021}{}}%
+\CSLLeftMargin{47. }%
+\CSLRightInline{Bracher J, Ray EL, Gneiting T, Reich NG. Evaluating
+epidemic forecasts in an interval format. PLoS Comput Biol. 2021;17:
+e1008618.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1008618}{10.1371/journal.pcbi.1008618}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gneiting_strictly_2007}{}}%
+\CSLLeftMargin{48. }%
+\CSLRightInline{Gneiting T, Raftery AE. Strictly proper scoring rules,
+prediction, and estimation. Journal of the American Statistical
+Association. 2007;102: 359--378.
+doi:\href{https://doi.org/10.1198/016214506000001437}{10.1198/016214506000001437}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-scoringutils}{}}%
+\CSLLeftMargin{49. }%
+\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S. Scoringutils:
+Utilities for scoring and assessing predictions. 2020.
+doi:\href{https://doi.org/10.5281/zenodo.4618017}{10.5281/zenodo.4618017}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-deutschewelleCoronavirusGermanyImpose2020}{}}%
+\CSLLeftMargin{50. }%
+\CSLRightInline{Deutsche Welle. Coronavirus: {Germany} to impose
+one-month partial lockdown \textbar{} {DW} \textbar{} 28.10.2020. 2020
+{[}cited 29 Jun 2021{]}. Available:
+\url{https://www.dw.com/en/coronavirus-germany-to-impose-one-month-partial-lockdown/a-55421241}}
+
+\end{CSLReferences}
 
 \clearpage
 
@@ -1529,362 +1881,9 @@ Shown are the median, as well as the 50\% and 90\% prediction intervals
 baseline shown in red is what forecasters saw when they opened the app
 (the baseline shown was constant across all forecast horizons).
 
-\paragraph*{S1 Acknoweledgmenents.}
+\paragraph*{S1 Acknowledgmenents.}
 
 \textbf{Members of the CMMID COVID-19 working group}
-
-\clearpage
-
-\section*{References}
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-mcgowanCollaborativeEffortsForecast2019}{}}%
-\CSLLeftMargin{1. }%
-\CSLRightInline{McGowan CJ, Biggerstaff M, Johansson M, Apfeldorf KM,
-Ben-Nun M, Brooks L, et al. Collaborative efforts to forecast seasonal
-influenza in the {United States}, 2015--2016. Scientific Reports.
-2019;9: 683.
-doi:\href{https://doi.org/10.1038/s41598-018-36361-9}{10.1038/s41598-018-36361-9}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-reichCollaborativeMultiyearMultimodel2019}{}}%
-\CSLLeftMargin{2. }%
-\CSLRightInline{Reich NG, Brooks LC, Fox SJ, Kandula S, McGowan CJ,
-Moore E, et al. A collaborative multiyear, multimodel assessment of
-seasonal influenza forecasting in the {United States}. PNAS. 2019;116:
-3146--3154.
-doi:\href{https://doi.org/10.1073/pnas.1812594116}{10.1073/pnas.1812594116}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-shamanForecastingSeasonalOutbreaks2012}{}}%
-\CSLLeftMargin{3. }%
-\CSLRightInline{Shaman J, Karspeck A. Forecasting seasonal outbreaks of
-influenza. PNAS. 2012;109: 20425--20430.
-doi:\href{https://doi.org/10.1073/pnas.1208772109}{10.1073/pnas.1208772109}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-biggerstaffResultsCentersDisease2016}{}}%
-\CSLLeftMargin{4. }%
-\CSLRightInline{Biggerstaff M, Alper D, Dredze M, Fox S, Fung IC-H,
-Hickmann KS, et al. Results from the centers for disease control and
-prevention's predict the 2013--2014 {Influenza Season Challenge}. BMC
-Infectious Diseases. 2016;16: 357.
-doi:\href{https://doi.org/10.1186/s12879-016-1669-x}{10.1186/s12879-016-1669-x}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-johanssonOpenChallengeAdvance2019}{}}%
-\CSLLeftMargin{5. }%
-\CSLRightInline{Johansson MA, Apfeldorf KM, Dobson S, Devita J, Buczak
-AL, Baugher B, et al. An open challenge to advance probabilistic
-forecasting for dengue epidemics. PNAS. 2019;116: 24268--24274.
-doi:\href{https://doi.org/10.1073/pnas.1909865116}{10.1073/pnas.1909865116}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-yamanaSuperensembleForecastsDengue2016}{}}%
-\CSLLeftMargin{6. }%
-\CSLRightInline{Yamana TK, Kandula S, Shaman J. Superensemble forecasts
-of dengue outbreaks. Journal of The Royal Society Interface. 2016;13:
-20160410.
-doi:\href{https://doi.org/10.1098/rsif.2016.0410}{10.1098/rsif.2016.0410}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-colon-gonzalezProbabilisticSeasonalDengue2021}{}}%
-\CSLLeftMargin{7. }%
-\CSLRightInline{Colón-González FJ, Bastos LS, Hofmann B, Hopkin A,
-Harpham Q, Crocker T, et al. Probabilistic seasonal dengue forecasting
-in {Vietnam}: {A} modelling study using superensembles. PLOS Medicine.
-2021;18: e1003542.
-doi:\href{https://doi.org/10.1371/journal.pmed.1003542}{10.1371/journal.pmed.1003542}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-viboudRAPIDDEbolaForecasting2018}{}}%
-\CSLLeftMargin{8. }%
-\CSLRightInline{Viboud C, Sun K, Gaffey R, Ajelli M, Fumanelli L, Merler
-S, et al. The {RAPIDD} ebola forecasting challenge: {Synthesis} and
-lessons learnt. Epidemics. 2018;22: 13--21.
-doi:\href{https://doi.org/10.1016/j.epidem.2017.08.002}{10.1016/j.epidem.2017.08.002}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-funkAssessingPerformanceRealtime2019}{}}%
-\CSLLeftMargin{9. }%
-\CSLRightInline{Funk S, Camacho A, Kucharski AJ, Lowe R, Eggo RM,
-Edmunds WJ. Assessing the performance of real-time epidemic forecasts:
-{A} case study of {Ebola} in the {Western Area} region of {Sierra
-Leone}, 2014-15. PLOS Computational Biology. 2019;15: e1006785.
-doi:\href{https://doi.org/10.1371/journal.pcbi.1006785}{10.1371/journal.pcbi.1006785}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-delvalleSummaryResults201420152018}{}}%
-\CSLLeftMargin{10. }%
-\CSLRightInline{Del Valle SY, McMahon BH, Asher J, Hatchett R, Lega JC,
-Brown HE, et al. Summary results of the 2014-2015 {DARPA Chikungunya}
-challenge. BMC Infectious Diseases. 2018;18: 245.
-doi:\href{https://doi.org/10.1186/s12879-018-3124-7}{10.1186/s12879-018-3124-7}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-farrowHumanJudgmentApproach2017}{}}%
-\CSLLeftMargin{11. }%
-\CSLRightInline{Farrow DC, Brooks LC, Hyun S, Tibshirani RJ, Burke DS,
-Rosenfeld R. A human judgment approach to epidemiological forecasting.
-PLOS Computational Biology. 2017;13: e1005248.
-doi:\href{https://doi.org/10.1371/journal.pcbi.1005248}{10.1371/journal.pcbi.1005248}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-funkShorttermForecastsInform2020}{}}%
-\CSLLeftMargin{12. }%
-\CSLRightInline{Funk S, Abbott S, Atkins BD, Baguelin M, Baillie JK,
-Birrell P, et al. Short-term forecasts to inform the response to the
-{Covid-19} epidemic in the {UK}. medRxiv. 2020; 2020.11.11.20220962.
-doi:\href{https://doi.org/10.1101/2020.11.11.20220962}{10.1101/2020.11.11.20220962}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-cramerCOVID19ForecastHub2020}{}}%
-\CSLLeftMargin{13. }%
-\CSLRightInline{Cramer E, Reich NG, Wang SY, Niemi J, Hannan A, House K,
-et al. {COVID-19 Forecast Hub}: 4 {December} 2020 snapshot. {Zenodo};
-2020.
-doi:\href{https://doi.org/10.5281/zenodo.3963371}{10.5281/zenodo.3963371}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-cramerEvaluationIndividualEnsemble2021}{}}%
-\CSLLeftMargin{14. }%
-\CSLRightInline{Cramer E, Ray EL, Lopez VK, Bracher J, Brennen A,
-Rivadeneira AJC, et al. Evaluation of individual and ensemble
-probabilistic forecasts of {COVID-19} mortality in the {US}. medRxiv.
-2021; 2021.02.03.21250974.
-doi:\href{https://doi.org/10.1101/2021.02.03.21250974}{10.1101/2021.02.03.21250974}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-bracherShorttermForecastingCOVID192021}{}}%
-\CSLLeftMargin{15. }%
-\CSLRightInline{Bracher J, Wolffram D, Deuschel J, Görgen K, Ketterer
-JL, Ullrich A, et al. Short-term forecasting of {COVID-19} in {Germany}
-and {Poland} during the second wave -- a preregistered study. medRxiv.
-2021; 2020.12.24.20248826.
-doi:\href{https://doi.org/10.1101/2020.12.24.20248826}{10.1101/2020.12.24.20248826}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-bracherNationalSubnationalShortterm2021}{}}%
-\CSLLeftMargin{16. }%
-\CSLRightInline{Bracher J, Wolffram D, Deuschel J, Görgen K, Ketterer
-JL, Ullrich A, et al. National and subnational short-term forecasting of
-{COVID-19} in {Germany} and {Poland}, early 2021. 2021;
-2021.11.05.21265810.
-doi:\href{https://doi.org/10.1101/2021.11.05.21265810}{10.1101/2021.11.05.21265810}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-europeancovid-19forecasthubEuropeanCovid19Forecast2021}{}}%
-\CSLLeftMargin{17. }%
-\CSLRightInline{European Covid-19 Forecast Hub. European {Covid-19
-Forecast Hub}. 2021 {[}cited 30 May 2021{]}. Available:
-\url{https://covid19forecasthub.eu/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-reichAccuracyRealtimeMultimodel2019}{}}%
-\CSLLeftMargin{18. }%
-\CSLRightInline{Reich NG, McGowan CJ, Yamana TK, Tushar A, Ray EL,
-Osthus D, et al. Accuracy of real-time multi-model ensemble forecasts
-for seasonal influenza in the {U}.{S}. PLOS Computational Biology.
-2019;15: e1007486.
-doi:\href{https://doi.org/10.1371/journal.pcbi.1007486}{10.1371/journal.pcbi.1007486}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-tetlockForecastingTournamentsTools2014}{}}%
-\CSLLeftMargin{19. }%
-\CSLRightInline{Tetlock PE, Mellers BA, Rohrbaugh N, Chen E. Forecasting
-{Tournaments}: {Tools} for {Increasing Transparency} and {Improving} the
-{Quality} of {Debate}. Curr Dir Psychol Sci. 2014;23: 290--295.
-doi:\href{https://doi.org/10.1177/0963721414534257}{10.1177/0963721414534257}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-atanasovDistillingWisdomCrowds2016}{}}%
-\CSLLeftMargin{20. }%
-\CSLRightInline{Atanasov P, Rescober P, Stone E, Swift SA,
-Servan-Schreiber E, Tetlock P, et al. Distilling the {Wisdom} of
-{Crowds}: {Prediction Markets} vs. {Prediction Polls}. Management
-Science. 2016;63: 691--706.
-doi:\href{https://doi.org/10.1287/mnsc.2015.2374}{10.1287/mnsc.2015.2374}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-hoogeveenLaypeopleCanPredict2020}{}}%
-\CSLLeftMargin{21. }%
-\CSLRightInline{Hoogeveen S, Sarafoglou A, Wagenmakers E-J. Laypeople
-{Can Predict Which Social-Science Studies Will Be Replicated
-Successfully}. Advances in Methods and Practices in Psychological
-Science. 2020;3: 267--285.
-doi:\href{https://doi.org/10.1177/2515245920919667}{10.1177/2515245920919667}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-replicationmarketsReplicationMarketsReliable2020}{}}%
-\CSLLeftMargin{22. }%
-\CSLRightInline{ReplicationMarkets. Replication {Markets} -- {Reliable}
-research replicates\ldots you can bet on it. 2020 {[}cited 13 Oct
-2021{]}. Available: \url{https://www.replicationmarkets.com/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-servan-schreiberPredictionMarketsDoes2004}{}}%
-\CSLLeftMargin{23. }%
-\CSLRightInline{Servan-Schreiber E, Wolfers J, Pennock DM, Galebach B.
-Prediction {Markets}: {Does Money Matter}? Electronic Markets. 2004;14:
-243--251.
-doi:\href{https://doi.org/10.1080/1019678042000245254}{10.1080/1019678042000245254}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-mcandrewExpertJudgmentModel2020}{}}%
-\CSLLeftMargin{24. }%
-\CSLRightInline{McAndrew TC, Reich NG. An expert judgment model to
-predict early stages of the {COVID-19} outbreak in the {United States}.
-medRxiv. 2020; 2020.09.21.20196725.
-doi:\href{https://doi.org/10.1101/2020.09.21.20196725}{10.1101/2020.09.21.20196725}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-recchiaHowWellDid2021}{}}%
-\CSLLeftMargin{25. }%
-\CSLRightInline{Recchia G, Freeman ALJ, Spiegelhalter D. How well did
-experts and laypeople forecast the size of the {COVID-19} pandemic? PLOS
-ONE. 2021;16: e0250935.
-doi:\href{https://doi.org/10.1371/journal.pone.0250935}{10.1371/journal.pone.0250935}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-metaculusPreliminaryLookMetaculus2020}{}}%
-\CSLLeftMargin{26. }%
-\CSLRightInline{Metaculus. A {Preliminary Look} at {Metaculus} and
-{Expert Forecasts}. 22 Jun 2020 {[}cited 30 May 2021{]}. Available:
-\url{https://www.metaculus.com/news/2020/06/02/LRT/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-hypermindHypermindSupercollectiveIntelligence2021}{}}%
-\CSLLeftMargin{27. }%
-\CSLRightInline{Hypermind. Hypermind \textbar{} {Supercollective}
-intelligence for decision makers. {Hypermind}; 2021 {[}cited 13 Oct
-2021{]}. Available: \url{https://www.hypermind.com/en/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-csetforetellCSETForetell2021}{}}%
-\CSLLeftMargin{28. }%
-\CSLRightInline{CSET Foretell. {CSET Foretell}. 2021 {[}cited 13 Oct
-2021{]}. Available: \url{https://www.cset-foretell.com/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-predictitPredictIt2021}{}}%
-\CSLLeftMargin{29. }%
-\CSLRightInline{PredictIt. {PredictIt}. 2021 {[}cited 13 Oct 2021{]}.
-Available: \url{https://www.predictit.org/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-heldProbabilisticForecastingInfectious2017}{}}%
-\CSLLeftMargin{30. }%
-\CSLRightInline{Held L, Meyer S, Bracher J. Probabilistic forecasting in
-infectious disease epidemiology: The 13th {Armitage} lecture. Statistics
-in Medicine. 2017;36: 3443--3460.
-doi:\href{https://doi.org/10.1002/sim.7363}{10.1002/sim.7363}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-crowdforecastr}{}}%
-\CSLLeftMargin{31. }%
-\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S.
-Crowdforecastr: Eliciting crowd forecasts in r shiny. 2020.
-doi:\href{https://doi.org/10.5281/zenodo.4618519}{10.5281/zenodo.4618519}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-covidgermanforecasts}{}}%
-\CSLLeftMargin{32. }%
-\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S.
-Covid.german.forecasts: Forecasting covid-19 related metrics for the
-german/poland forecast hub. 2020. }
-
-\leavevmode\vadjust pre{\hypertarget{ref-ecdcDownloadHistoricalData2020}{}}%
-\CSLLeftMargin{33. }%
-\CSLRightInline{ECDC. Download historical data (to 14 {December} 2020)
-on the daily number of new reported {COVID-19} cases and deaths
-worldwide. {European Centre for Disease Prevention and Control}; 14 Dec
-2020 {[}cited 30 May 2021{]}. Available:
-\url{https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-rkiRKICoronavirusSARSCoV22021}{}}%
-\CSLLeftMargin{34. }%
-\CSLRightInline{RKI. {RKI} - {Coronavirus SARS-CoV-2} - {Aktueller
-Lage-}/{Situationsbericht} des {RKI} zu {COVID-19}. 2021 {[}cited 30 May
-2021{]}. Available:
-\url{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-forsal.plRozbieznosciStatystykachKoronawirusa2020}{}}%
-\CSLLeftMargin{35. }%
-\CSLRightInline{Forsal.pl. Rozbieżności w statystykach koronawirusa. 22
-tys. przypadków będą doliczone do ogólnej liczby wyników. 2020 {[}cited
-30 May 2021{]}. Available:
-\url{https://forsal.pl/lifestyle/zdrowie/artykuly/8017628,rozbieznosci-w-statystykach-koronawirusa-22-tys-przypadkow-beda-doliczone-do-ogolnej-liczby-wynikow.html}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-aerzteblattSARSCoV2DiagnostikRKIPasst2020}{}}%
-\CSLLeftMargin{36. }%
-\CSLRightInline{Ärzteblatt DÄG Redaktion Deutsches.
-SARS-CoV-2-Diagnostik: RKI passt Testempfehlungen an. {Deutsches
-Ärzteblatt}; 3 Nov 2020 {[}cited 30 May 2021{]}. Available:
-\url{https://www.aerzteblatt.de/nachrichten/118001/SARS-CoV-2-Diagnostik-RKI-passt-Testempfehlungen-an}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-golem}{}}%
-\CSLLeftMargin{37. }%
-\CSLRightInline{Fay C, Guyader V, Rochette S, Girard C. Golem: A
-framework for robust shiny applications. 2021. Available:
-\url{https://github.com/ThinkR-open/golem}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-shiny}{}}%
-\CSLLeftMargin{38. }%
-\CSLRightInline{Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie
-Y, et al. Shiny: Web application framework for r. 2021. Available:
-\url{https://CRAN.R-project.org/package=shiny}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-ourworldindataCOVID19DataExplorer2020}{}}%
-\CSLLeftMargin{39. }%
-\CSLRightInline{Our World in Data. {COVID-19 Data Explorer}. {Our World
-in Data}; 2020 {[}cited 30 May 2021{]}. Available:
-\url{https://ourworldindata.org/coronavirus-data-explorer}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-epinow2}{}}%
-\CSLLeftMargin{40. }%
-\CSLRightInline{Abbott S, Hellewell J, Hickson J, Munday J, Gostic K,
-Ellis P, et al. EpiNow2: Estimate real-time case counts and time-varying
-epidemiological parameters. -. 2020;-: --.
-doi:\href{https://doi.org/10.5281/zenodo.3957489}{10.5281/zenodo.3957489}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-fraserEstimatingIndividualHousehold2007}{}}%
-\CSLLeftMargin{41. }%
-\CSLRightInline{Fraser C. Estimating {Individual} and {Household
-Reproduction Numbers} in an {Emerging Epidemic}. PLOS ONE. 2007;2: e758.
-doi:\href{https://doi.org/10.1371/journal.pone.0000758}{10.1371/journal.pone.0000758}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-epiforecasts.ioux2fcovidCovid19TemporalVariation2020}{}}%
-\CSLLeftMargin{42. }%
-\CSLRightInline{epiforecasts.io/covid. Covid-19: {Temporal} variation in
-transmission during the {COVID-19} outbreak. {Covid-19}; 2020 {[}cited
-30 May 2021{]}. Available: \url{https://epiforecasts.io/covid/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-sherrattExploringSurveillanceData2021}{}}%
-\CSLLeftMargin{43. }%
-\CSLRightInline{Sherratt K, Abbott S, Meakin SR, Hellewell J, Munday JD,
-Bosse N, et al. Exploring surveillance data biases when estimating the
-reproduction number: With insights into subpopulation transmission of
-{Covid-19} in {England}. 2021; 2020.10.18.20214585.
-doi:\href{https://doi.org/10.1101/2020.10.18.20214585}{10.1101/2020.10.18.20214585}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-abbottEstimatingTimevaryingReproduction2020a}{}}%
-\CSLLeftMargin{44. }%
-\CSLRightInline{Abbott S, Hellewell J, Thompson RN, Sherratt K, Gibbs
-HP, Bosse NI, et al. Estimating the time-varying reproduction number of
-{SARS-CoV-2} using national and subnational case counts. 2020 {[}cited
-14 Oct 2021{]}.
-doi:\href{https://doi.org/10.12688/wellcomeopenres.16006.1}{10.12688/wellcomeopenres.16006.1}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-kraemer2020epidemiological}{}}%
-\CSLLeftMargin{45. }%
-\CSLRightInline{Xu B, Gutierrez B, Hill S, Scarpino S, Loskill A, Wu J,
-et al. Epidemiological data from the nCoV-2019 outbreak: Early
-descriptions from publicly available data. 2020. Available:
-\url{http://virological.org/t/epidemiological-data-from-the-ncov-2019-outbreak-early-descriptions-from-publicly-available-data/337}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-rstan}{}}%
-\CSLLeftMargin{46. }%
-\CSLRightInline{Stan Development Team. RStan: The r interface to stan.
-2020. Available: \url{http://mc-stan.org/}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-bracherEvaluatingEpidemicForecasts2021}{}}%
-\CSLLeftMargin{47. }%
-\CSLRightInline{Bracher J, Ray EL, Gneiting T, Reich NG. Evaluating
-epidemic forecasts in an interval format. PLoS Comput Biol. 2021;17:
-e1008618.
-doi:\href{https://doi.org/10.1371/journal.pcbi.1008618}{10.1371/journal.pcbi.1008618}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-gneiting_strictly_2007}{}}%
-\CSLLeftMargin{48. }%
-\CSLRightInline{Gneiting T, Raftery AE. Strictly proper scoring rules,
-prediction, and estimation. Journal of the American Statistical
-Association. 2007;102: 359--378.
-doi:\href{https://doi.org/10.1198/016214506000001437}{10.1198/016214506000001437}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-scoringutils}{}}%
-\CSLLeftMargin{49. }%
-\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S. Scoringutils:
-Utilities for scoring and assessing predictions. 2020.
-doi:\href{https://doi.org/10.5281/zenodo.4618017}{10.5281/zenodo.4618017}}
-
-\leavevmode\vadjust pre{\hypertarget{ref-deutschewelleCoronavirusGermanyImpose2020}{}}%
-\CSLLeftMargin{50. }%
-\CSLRightInline{Deutsche Welle. Coronavirus: {Germany} to impose
-one-month partial lockdown \textbar{} {DW} \textbar{} 28.10.2020. 2020
-{[}cited 29 Jun 2021{]}. Available:
-\url{https://www.dw.com/en/coronavirus-germany-to-impose-one-month-partial-lockdown/a-55421241}}
-
-\end{CSLReferences}
 
 \nolinenumbers
 
