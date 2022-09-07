@@ -290,8 +290,8 @@ aggregate_performance <- function(data,
           legend.box="vertical", legend.margin=margin()) &
     labs(x = xlabel)
     
-    ggsave(here(output_dir, paste0(plotname, "-v4.png")), 
-           height = 9.1, width = 10)
+    ggsave(here(output_dir, paste0(plotname, "-v4.tiff")), 
+           height = 9.1, width = 10, device = "tiff", dpi = 300)
 }
 
 
@@ -478,7 +478,8 @@ forecasts_and_scores <- function(data,
             legend.box="vertical", legend.margin = margin()) 
     
     ggsave(here(output_dir, 
-                paste0(plotname, "-", i, ".png")), width = 10, height = 11)
+                paste0(plotname, "-", i, ".tiff")), width = 10, height = 11, 
+           device = "tiff", dpi = 300)
     
   }
 }
@@ -809,8 +810,8 @@ for (i in 1:4) {
           legend.box="vertical", legend.margin=margin()) 
     
   ggsave(here("analysis", "plots", 
-              paste0("distribution_scores_wis-", i, ".png")), 
-         plot = pl_wis, height = 6, width = 9)
+              paste0("distribution_scores_wis-", i, ".tiff")), 
+         plot = pl_wis, height = 6, width = 9, device = "tiff", dpi = 300)
 }
 
 # create plots for the distributions of WIS rank

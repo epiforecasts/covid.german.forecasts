@@ -91,7 +91,7 @@ author_summary: |
 
 bibliography:
   - references.bib
-  - GermanPolishpaper.bib
+  - germanpolishpaper.bib
 csl: plos.csl
 ---
 
@@ -106,6 +106,8 @@ library(knitr)
 ```
 
 # Introduction
+
+\cite{mcgowanCollaborativeEffortsForecast2019}
 
 Infectious disease modelling has a long tradition and has helped inform public health decisions both through scenario modelling, as well as actual forecasts of (among others) influenza [e.g. @mcgowanCollaborativeEffortsForecast2019; @reichCollaborativeMultiyearMultimodel2019; @shamanForecastingSeasonalOutbreaks2012; @biggerstaffResultsCentersDisease2016], dengue fever [e.g. @johanssonOpenChallengeAdvance2019; @yamanaSuperensembleForecastsDengue2016; @colon-gonzalezProbabilisticSeasonalDengue2021], ebola [e.g. @viboudRAPIDDEbolaForecasting2018; @funkAssessingPerformanceRealtime2019], chikungunya [e.g. @delvalleSummaryResults201420152018; @farrowHumanJudgmentApproach2017] and now COVID-19 [e.g. @funkShorttermForecastsInform2020; @cramerCOVID19ForecastHub2020; @cramerEvaluationIndividualEnsemble2021; @bracherShorttermForecastingCOVID192021; @bracherNationalSubnationalShortterm2021; @europeancovid-19forecasthubEuropeanCovid19Forecast2021]. Applications of epidemiological models differ in the way they make statements about the future. Forecasts aim to predict the future as it will occur, while scenario modelling and projections aim to represent what the future could look like under certain scenario assumptions or if conditions stayed the same as they were in the past. Forecasts can be judged by comparing them against observed data. Since it is much harder to fairly assess the accuracy and usefulness of projections and scenario modelling in the same way, this work focuses on forecasts, which represent only a subset of all epidemiological modelling. 
 
@@ -218,7 +220,7 @@ cat("\\begin{figure}[H]\n",
 
 ## Case Forecasts
 
-For cases, crowd forecasts had a lower mean weighted interval score (WIS, lower values indicate better performance) than both the renewal model and the Hub ensemble across all forecast horizons (Fig \ref{fig:agg-performance-all}A) and locations (\nameref{fig:performance-locations-rel}A Fig). For two week ahead forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for crowd forecasts and 1.40 for the renewal model (\nameref{tab:score-table-2} Table). Across all forecasting approaches, locations and forecast horizons, the distribution of WIS values was very right-skewed, and average performance was heavily influenced by outliers (Fig \ref{fig:distribution-scores}). Overall, low variance in forecast performance was closely linked with good mean performance (Fig \ref{fig:agg-performance-all}H and \ref{fig:agg-performance-all}A), suggesting that the ability to avoid large errors was an important factor in determining overall performance. The impact of outlier values was especially pronounced for the renewal model, which had more outliers (Fig \ref{fig:distribution-scores}), as well as the highest standard deviation of WIS values (standard deviation of the WIS relative to the WIS sd of the Hub ensemble was 1.54 at the two weeks ahead horizon), while the ensemble of crowd forecasts (rel. WIS sd 0.76) and the Hub ensemble (= 1) showed more stable performance. 
+For cases, crowd forecasts had a lower mean weighted interval score (WIS, lower values indicate better performance) than both the renewal model and the Hub ensemble across all forecast horizons (Fig \ref{fig:agg-performance-all}A) and locations (\nameref{fig:performance-locations-rel}A Fig). For two week ahead forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for crowd forecasts and 1.40 for the renewal model (\nameref{tab:score-table-2} Table). Across all forecasting approaches, locations and forecast horizons, the distribution of WIS values was very right-skewed, and average performance was heavily influenced by outliers. Overall, low variance in forecast performance was closely linked with good mean performance (Fig \ref{fig:agg-performance-all}H and \ref{fig:agg-performance-all}A), suggesting that the ability to avoid large errors was an important factor in determining overall performance. The impact of outlier values was especially pronounced for the renewal model, which had more outliers, as well as the highest standard deviation of WIS values (standard deviation of the WIS relative to the WIS sd of the Hub ensemble was 1.54 at the two weeks ahead horizon), while the ensemble of crowd forecasts (rel. WIS sd 0.76) and the Hub ensemble (= 1) showed more stable performance. 
 
 To varying degrees, all forecasts exhibited trend-following behaviour and were rarely able to predict a change in trend before it had happened. For example, all forecasts failed to predict the change in trend from increase to decrease that happened in November in Germany and severely overshot reported cases (Fig \ref{fig:forecasts-and-truth}A). This was most striking for the renewal model, which extrapolated unconstrained exponential growth based on the recent past of observations. The Hub ensemble and the crowd forecast, which had both been under-predicting throughout October, also failed to predict the change in trend after cases peaked, but less severely so. Human forecasters, possibly aware of the semi-lockdown announced on November 2nd 2020 [@deutschewelleCoronavirusGermanyImpose2020] and the change in the testing regime (with stricter test criteria) on November 11th 2020 [@aerzteblattSARSCoV2DiagnostikRKIPasst2020], were fastest to adapt to the new trend, and the Hub ensemble slowest. In December, cases rose again in Germany, with all models under-predicting this growth to varying extents. As in October, the renewal model captured the phase of exponential growth in cases slightly better than other approaches, but again overshot when reported case numbers fell over Christmas. The large variance in predictions in January in Germany (severe under-prediction followed by severe over-prediction) may in part be caused by the fact that the renewal model operated on daily data and therefore was susceptible to fluctuations in daily reporting around Christmas that would not have influenced on weekly reporting. Similar trends in performance were evident in Poland, with the crowd forecast quickest at adapting to the change in trend in November. In general, there were fewer large outlier forecasts in Poland and in particular the renewal model performed more in line with other forecasts there. 
 
@@ -315,6 +317,9 @@ Further work should explore the effects of humans refining their mathematical mo
 
 
 \section*{References}
+\bibliographystyle{plos2015}
+\bibliography{germanpolishpaper.bib, references.bib}
+
 ::: {#refs}
 :::
 
@@ -335,7 +340,7 @@ Further work should explore the effects of humans refining their mathematical mo
 
 
 
-\section*{Acknowledgments}
+\section*{Acknowledgements}
 
 We thank all forecasters who participated in this study for their contribution. 
 
@@ -972,6 +977,10 @@ cat("\\paragraph{S25 Fig.}\n",
     sep = "")
 ```
 
-\paragraph*{S1 Acknowledgmenents.}
+\paragraph*{S1 Acknowledgements.}
 \textbf{Members of the CMMID COVID-19 working group}
+
+
+
+
 
