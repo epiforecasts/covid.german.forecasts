@@ -1,0 +1,127 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\begin{table}[!h]
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{>{}llccccccccc}
+\toprule
+  & Model & WIS & WIS - sd & dispersion & Underpred. & Overpred. & Bias & Abs. error & 50\%-Cov. & 90\%-Cov.\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{11}{l}{\textbf{Cases}}\\
+\hline
+\cellcolor{white}{} & Crowd forecast & 7010 (0.8) & 7480 (0.64) & 2680 (0.73) & 1700 (1.38) & 2630 (0.68) & -0.01 & 10400 (0.82) & 0.55 & 0.79\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble & 8770 (1) & 11700 (1) & 3670 (1) & 1230 (1) & 3870 (1) & -0.04 & 12700 (1) & 0.57 & 0.81\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-3}{*}{\raggedright\arraybackslash 1 wk ahead}} & Renewal & 8740 (1) & 11800 (1.01) & 2190 (0.6) & 2720 (2.21) & 3830 (0.99) & 0.18 & 12000 (0.94) & 0.48 & 0.71\\
+\cmidrule{1-11}
+\cellcolor{white}{} & Crowd forecast & 16200 (0.89) & 16600 (0.76) & 3660 (0.6) & 5930 (1.56) & 6600 (0.78) & -0.01 & 23300 (0.87) & 0.36 & 0.55\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble & 18300 (1) & 21900 (1) & 6140 (1) & 3800 (1) & 8410 (1) & -0.03 & 26800 (1) & 0.43 & 0.64\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-3}{*}{\raggedright\arraybackslash 2 wk ahead}} & Renewal & 25600 (1.4) & 33800 (1.54) & 5420 (0.88) & 5920 (1.56) & 14200 (1.69) & 0.17 & 34600 (1.29) & 0.43 & 0.67\\
+\cmidrule{1-11}
+\addlinespace[0.3em]
+\multicolumn{11}{l}{\textbf{Deaths}}\\
+\hline
+\cellcolor{white}{} & Convolution & 255 (1.03) & 343 (1.01) & 82 (0.89) & 142 (1.23) & 31.1 (0.75) & -0.18 & 399 (1.19) & 0.42 & 0.79\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Crowd forecast & 265 (1.07) & 317 (0.94) & 78.2 (0.85) & 82 (0.71) & 105 (2.52) & 0.08 & 402 (1.2) & 0.38 & 0.79\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble & 248 (1) & 338 (1) & 92.2 (1) & 115 (1) & 41.6 (1) & -0.04 & 334 (1) & 0.62 & 0.92\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-4}{*}{\raggedright\arraybackslash 1 wk ahead}} & Renewal & 298 (1.2) & 403 (1.19) & 87 (0.94) & 107 (0.93) & 105 (2.52) & -0.07 & 413 (1.24) & 0.50 & 0.79\\
+\cmidrule{1-11}
+\cellcolor{white}{} & Convolution & 357 (1.22) & 573 (1.49) & 104 (0.79) & 204 (1.89) & 48.8 (0.94) & -0.10 & 565 (1.32) & 0.33 & 0.79\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Crowd forecast & 368 (1.26) & 442 (1.15) & 107 (0.81) & 102 (0.94) & 160 (3.08) & 0.14 & 576 (1.34) & 0.38 & 0.75\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble & 292 (1) & 385 (1) & 132 (1) & 108 (1) & 51.9 (1) & 0.01 & 429 (1) & 0.62 & 0.96\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-4}{*}{\raggedright\arraybackslash 2 wk ahead}} & Renewal & 524 (1.79) & 671 (1.74) & 155 (1.17) & 133 (1.23) & 236 (4.55) & -0.02 & 750 (1.75) & 0.50 & 0.71\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{document}

@@ -1,0 +1,60 @@
+---
+output: 
+  pdf_document:
+    keep_tex: true
+geometry: margin=2cm
+---
+
+```{r echo=FALSE}
+
+library(kableExtra)
+library(magrittr)
+
+wis <- list(
+  Metric = "WIS (Weighted) interval score", 
+  `Explanation` = r"(The weighted interval score (smaller values are better) is a proper scoring rule for quantile forecasts. It converges to the continuos ranked probability score (which itself is a generalisation of the absolute error to probabilistic forecasts) for an increasing number of intervals. The score can be decomposed into a dispersion (uncertainty) component and penalties for over- and underprediction. For a single interval, the score is computed as 
+  $$IS_\alpha(F,y) = (u-l) + \frac{2}{\alpha} \cdot (l-y) \cdot 1(y \leq l) + \frac{2}{\alpha} \cdot (y-u) \cdot 1(y \geq u), $$ 
+  where $1()$ is the indicator function, $y$ is the true value, and $l$ and $u$ are the $\frac{\alpha}{2}$ and $1 - \frac{\alpha}{2}$ quantiles of the predictive distribution $F$, i.e. the lower and upper bound of a single prediction interval. For a set of $K$ prediction intervals and the median $m$, the score is computed as a weighted sum, 
+  $$WIS = \frac{1}{K + 0.5} \cdot \left( w_0 \cdot |y - m| + \sum_{k = 1}^{K} w_k \cdot IS_{\alpha}(F, y) \right), $$
+  where $w_k$ is a weight for every interval. Usually, $w_k = \frac{\alpha_k}{2}$ and $w_0 = 0.5$. 
+
+Its proximity to the absolute error means that when averaging across multiple targets (e.g. different weeks), it will be dominated by targets with higher absolute values.)", 
+  `Caveats` = "The wis is based on measures of absolute error. When averaging across multiple targets, it will therefore be dominated by targets with higher absolute values.",
+  `References` = ""
+)
+
+interval_coverage <- list(
+  `Metric` = "Interval coverage", 
+  `Explanation` = r"(Interval coverage is a measure of marginal calibration and indicates the proportion of observed values that fall in a given prediction interval range. Nominal coverage represents the percentage of observed values that should ideally be covered (e.g. we would like a 50 percent prediction interval to cover on average 50 percent of the observations), while empirical coverage is the actual percentage of observations covered by a certain prediction interval.)",
+  `Caveats` = "",
+  `References` = ""
+)
+
+bias <- list(
+  `Metric` = "Bias", 
+  `Explanation` = r"((Relative) bias is a measure of the general tendency of a forecaster to over- or underpredict. Values are between -1 and 1 and 0 ideally. For continuous forecasts, bias is given as 
+$$B(F, y) = 1 - 2 \cdot (F (y)), $$ 
+where $F$ is the CDF of the predictive distribution and $y$ is the observed value. 
+
+For quantile forecasts, $F(y)$ is replaced by a quantile rank. The appropriate quantile rank is determined by whether the median forecast is below  or above the true value. We then take the innermost quantile rank for which the quantile is still larger (under-prediction) or smaller (over-prediction) than the observed value. 
+
+In contrast to the over- and underprediction penalties of the interval score it is bound between 0 and 1 and represents a general tendency of forecasts to be biased rather than the absolute amount of over- and underprediction. It is therefore a more robust measurement.)",
+  `Caveats` = "",
+  `References` = ""
+)
+
+data <- rbind(as.data.frame(wis), 
+              as.data.frame(interval_coverage),
+              as.data.frame(bias))
+
+data[, 1:2] %>%
+  kableExtra::kbl(format = "latex", booktabs = TRUE, 
+                  escape = FALSE,
+                  longtable = TRUE,
+                  linesep = c('\\addlinespace \\addlinespace')) %>%
+  kableExtra::column_spec(1, width = "2.5cm") %>%
+  kableExtra::column_spec(2, width = "9.3cm") %>%
+  kableExtra::kable_styling(latex_options = c("striped", "repeat_header")) 
+
+```
+

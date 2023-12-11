@@ -1,0 +1,139 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\begin{table}[!h]
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{>{}llccccccccc}
+\toprule
+  & Model & WIS & WIS - sd & dispersion & Underpred. & Overpred. & Bias & Abs. error & 50\%-Cov. & 90\%-Cov.\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{11}{l}{\textbf{Cases}}\\
+\hline
+\cellcolor{white}{} & Hub-ensemble-mean & 8680 (1) & 10300 (1) & 3700 (1) & 1460 (1) & 3520 (1) & -0.02 & 13400 (1) & 0.50 & 0.86\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-realised-mean & 7600 (0.88) & 8770 (0.85) & 3360 (0.91) & 1090 (0.75) & 3140 (0.89) & 0.01 & 11900 (0.89) & 0.52 & 0.90\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-crowd-mean & 8050 (0.93) & 9070 (0.88) & 3520 (0.95) & 1410 (0.97) & 3120 (0.89) & -0.02 & 12600 (0.94) & 0.48 & 0.88\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-4}{*}{\raggedright\arraybackslash 1 wk ahead}} & Hub-ensemble-with-renewal-mean & 8090 (0.93) & 9780 (0.95) & 3490 (0.94) & 1110 (0.76) & 3490 (0.99) & 0.02 & 12700 (0.95) & 0.57 & 0.88\\
+\cmidrule{1-11}
+\cellcolor{white}{} & Hub-ensemble-mean & 19000 (1) & 22100 (1) & 5960 (1) & 3690 (1) & 9340 (1) & 0.02 & 28800 (1) & 0.33 & 0.79\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-realised-mean & 17100 (0.9) & 20600 (0.93) & 5550 (0.93) & 2850 (0.77) & 8660 (0.93) & 0.05 & 26000 (0.9) & 0.38 & 0.76\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-crowd-mean & 17600 (0.93) & 20000 (0.9) & 5540 (0.93) & 3790 (1.03) & 8230 (0.88) & 0.01 & 26800 (0.93) & 0.36 & 0.76\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-4}{*}{\raggedright\arraybackslash 2 wk ahead}} & Hub-ensemble-with-renewal-mean & 18300 (0.96) & 22600 (1.02) & 5910 (0.99) & 2640 (0.72) & 9720 (1.04) & 0.06 & 27700 (0.96) & 0.38 & 0.76\\
+\cmidrule{1-11}
+\addlinespace[0.3em]
+\multicolumn{11}{l}{\textbf{Deaths}}\\
+\hline
+\cellcolor{white}{} & Hub-ensemble-mean & 229 (1) & 292 (1) & 101 (1) & 90.4 (1) & 36.7 (1) & -0.07 & 315 (1) & 0.71 & 0.92\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-realised-mean & 219 (0.96) & 289 (0.99) & 96.8 (0.96) & 79.8 (0.88) & 42.6 (1.16) & -0.04 & 297 (0.94) & 0.71 & 0.88\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-all-mean & 217 (0.95) & 287 (0.98) & 95.3 (0.94) & 83.1 (0.92) & 38.7 (1.05) & -0.07 & 300 (0.95) & 0.67 & 0.88\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-convolution-mean & 225 (0.98) & 292 (1) & 98.7 (0.98) & 94.2 (1.04) & 32 (0.87) & -0.09 & 314 (1) & 0.71 & 0.92\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-crowd-mean & 222 (0.97) & 289 (0.99) & 98 (0.97) & 84.1 (0.93) & 39.6 (1.08) & -0.04 & 295 (0.94) & 0.71 & 0.88\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-6}{*}{\raggedright\arraybackslash 1 wk ahead}} & Hub-ensemble-with-renewal-mean & 225 (0.98) & 290 (0.99) & 99.7 (0.99) & 84.7 (0.94) & 40.5 (1.1) & -0.05 & 314 (1) & 0.71 & 0.88\\
+\cmidrule{1-11}
+\cellcolor{white}{} & Hub-ensemble-mean & 256 (1) & 306 (1) & 138 (1) & 64.5 (1) & 53.2 (1) & 0.04 & 374 (1) & 0.67 & 0.96\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-realised-mean & 270 (1.05) & 338 (1.1) & 136 (0.99) & 65.2 (1.01) & 68.1 (1.28) & 0.06 & 413 (1.1) & 0.75 & 0.92\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-all-mean & 268 (1.05) & 346 (1.13) & 133 (0.96) & 78.7 (1.22) & 57.1 (1.07) & 0.05 & 408 (1.09) & 0.75 & 0.96\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-convolution-mean & 259 (1.01) & 322 (1.05) & 133 (0.96) & 81.7 (1.27) & 44.4 (0.83) & 0.03 & 380 (1.02) & 0.67 & 0.96\\
+\cmidrule{2-11}
+\cellcolor{white}{} & Hub-ensemble-with-crowd-mean & 264 (1.03) & 315 (1.03) & 133 (0.96) & 70.1 (1.09) & 60 (1.13) & 0.06 & 404 (1.08) & 0.71 & 0.96\\
+\cmidrule{2-11}
+\cellcolor{white}{\multirow{-6}{*}{\raggedright\arraybackslash 2 wk ahead}} & Hub-ensemble-with-renewal-mean & 264 (1.03) & 332 (1.08) & 141 (1.02) & 60.1 (0.93) & 63.1 (1.19) & 0.06 & 390 (1.04) & 0.79 & 0.92\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{document}

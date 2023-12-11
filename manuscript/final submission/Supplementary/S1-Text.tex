@@ -1,0 +1,243 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Text S1. Further details on the semi-mechanistic forecasting models},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Text S1. Further details on the semi-mechanistic forecasting models}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{text-s1.-further-details-on-the-semi-mechanistic-forecasting-models}{%
+\subsection{Text S1. Further details on the semi-mechanistic forecasting models}\label{text-s1.-further-details-on-the-semi-mechanistic-forecasting-models}}
+
+\hypertarget{renewal-equation-model}{%
+\subsubsection{Renewal equation model}\label{renewal-equation-model}}
+
+The model was initialised prior to the first observed data point by assuming constant exponential growth for the mean of assumed delays from infection to case report.
+
+\begin{align}
+  I_{t} &= I_0 \exp  \left(r t \right)  \\
+  I_0 &\sim \mathcal{LN}(\log I_{obs}, 0.2) \\
+  r &\sim \mathcal{LN}(r_{obs}, 0.2) 
+\end{align}
+
+Where \(I_{obs}\) and \(r_{obs}\) are estimated from the first week of observed data. For the time window of the observed data infections were then modelled by weighting previous infections by the generation time and scaling by the instantaneous reproduction number. These infections were then convolved to cases by date (\(O_t\)) and cases by date of report (\(D_t\)) using log-normal delay distributions. This model can be defined mathematically as follows,
+
+\begin{align}
+  \log R_{t} &= \log R_{t-1} + \mathrm{GP}_t \\
+  I_t &= R_t \sum_{\tau = 1}^{15} w(\tau | \mu_{w}, \sigma_{w}) I_{t - \tau} \\
+  O_t &= \sum_{\tau = 0}^{15} \xi_{O}(\tau | \mu_{\xi_{O}}, \sigma_{\xi_{O}}) I_{t-\tau} \\
+  D_t &= \alpha \sum_{\tau = 0}^{15} \xi_{D}(\tau | \mu_{\xi_{D}}, \sigma_{\xi_{D}}) O_{t-\tau} \\ 
+  C_t &\sim \mathrm{NB}\left(\omega_{(t \mod 7)}D_t, \phi\right)
+\end{align}
+
+Where,
+\begin{align}
+     w &\sim \mathcal{G}(\mu_{w}, \sigma_{w}) \\
+    \xi_{O} &\sim \mathcal{LN}(\mu_{\xi_{O}}, \sigma_{\xi_{O}}) \\
+    \xi_{D} &\sim \mathcal{LN}(\mu_{\xi_{D}}, \sigma_{\xi_{D}}) 
+\end{align}
+
+This model used the following priors for cases,
+
+\begin{align}
+     R_0 &\sim \mathcal{LN}(0.079, 0.18) \\
+    \mu_w &\sim \mathcal{N}(3.6, 0.7) \\
+    \sigma_w &\sim \mathcal{N}(3.1, 0.8) \\
+    \mu_{\xi_{O}} &\sim \mathcal{N}(1.62, 0.064) \\
+    \sigma_{\xi_{O}} &\sim \mathcal{N}(0.418, 0.069) \\
+    \mu_{\xi_{D}} &\sim \mathcal{N}(0.614, 0.066) \\
+    \sigma_{\xi_{D}} &\sim \mathcal{N}(1.51, 0.048) \\
+    \alpha &\sim \mathcal{N}(0.25, 0.05) \\
+    \frac{\omega}{7} &\sim \mathrm{Dirichlet}(1, 1, 1, 1, 1, 1, 1) \\
+    \phi &\sim \frac{1}{\sqrt{\mathcal{N}(0, 1)}}
+\end{align}
+
+and updated the reporting process as follows when forecasting deaths,
+
+\begin{align}
+    \mu_{\xi_{D}} &\sim \mathcal{N}(2.29, 0.076) \\
+    \sigma_{\xi_{D}} &\sim \mathcal{N}(0.76, 0.055) \\
+    \alpha &\sim \mathcal{N}(0.005, 0.0025) 
+\end{align}
+
+\(\alpha\), \(\mu\), \(\sigma\), and \(\phi\) were truncated to be greater than 0 and with \(\xi\), and \(w\) normalised to sum to 1.
+
+The prior for the generation time was sourced from (Ganyani et al. 2020) but refit using a log-normal incubation period with a mean of 5.2 days (SD 1.1) and SD of 1.52 days (SD 1.1) with this incubation period also being used as a prior (Lauer et al. 2020) for \(\xi_{O}\). This resulted in a gamma-distributed generation time with mean 3.6 days (standard deviation (SD) 0.7), and SD of 3.1 days (SD 0.8) for all estimates. We estimated the delay between symptom onset and case report or death required to convolve latent infections to observations by fitting an integer adjusted log-normal distribution to 10 subsampled bootstraps of a public linelist for cases in Germany from April 2020 to June 2020 with each bootstrap using 1\% or 1769 samples of the available data (Xu et al. 2020; Abbott, Sherratt, et al. 2020) and combining the posteriors for the mean and standard deviation of the log-normal distribution (Abbott, Hellewell, et al. 2020; epiforecasts.io/covid 2020; {``Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the {Covid-19} Outbreak in {England} \textbar{} {medRxiv}''} n.d.; Stan Development Team 2020).
+
+\(GP_t\) is an approximate Hilbert space Gaussian process as defined in (Riutort-Mayol et al. 2020) using a Matern 3/2 kernel using a boundary factor of 1.5 and 17 basis functions (20\% of the number of days used in fitting). The length scale of the Gaussian process was given a log-normal prior with a mean of 21 days, and a standard deviation of 7 days truncated to be greater than 3 days and less than 60 days. The magnitude of the Gaussian process was assumed to be normally distributed centred at 0 with a standard deviation of 0.1.
+
+From the forecast time horizon (\(T\)) and onwards the last value of the Gaussian process was used (hence \(R_t\) was assumed to be fixed) and latent infections were adjusted to account for the proportion of the population that was susceptible to infection as follows,
+
+\begin{equation}
+    I_t = (N - I^c_{t-1}) \left(1 - \exp \left(\frac{-I'_t}{N - I^c_{T}}\right)\right),
+\end{equation}
+
+where \(I^c_t = \sum_{s< t} I_s\) are cumulative infections by \(t-1\) and \(I'_t\) are the unadjusted infections defined above. This adjustment is based on that implemented in the \texttt{epidemia} R package (Scott et al. 2020; Bhatt et al., n.d.).
+
+\hypertarget{convolution-model}{%
+\paragraph{Convolution model}\label{convolution-model}}
+
+The convolution model shares the same observation model as the renewal model but rather than assuming that an observation is predicted by itself using the renewal equation instead assumes that it is predicted entirely by another observation after some parametric delay. It can be defined mathematically as follows,
+
+\begin{equation} 
+    D_{t} \sim \mathrm{NB}\left(\omega_{(t \mod 7)} \alpha \sum_{\tau = 0}^{30} \xi(\tau | \mu, \sigma) C_{t-\tau},  \phi \right)
+\end{equation}
+
+with the following priors,
+
+\begin{align}
+    \frac{\omega}{7} &\sim \mathrm{Dirichlet}(1, 1, 1, 1, 1, 1, 1) \\
+    \alpha &\sim \mathcal{N}(0.01, 0.02) \\
+    \xi &\sim \mathcal{LN}(\mu, \sigma) \\
+    \mu &\sim \mathcal{N}(2.5, 0.5) \\
+\sigma &\sim \mathcal{N}(0.47, 0.2) \\
+\phi &\sim \frac{1}{\sqrt{\mathcal{N}(0, 1)}}
+\end{align}
+
+with \(\alpha\), \(\mu\), \(\sigma\), and \(\phi\) truncated to be greater than 0 and with \(\xi\) normalised such that \(\sum_{\tau = 0}^{30} \xi(\tau | \mu, \sigma) = 1\).
+
+\hypertarget{model-fitting}{%
+\subsubsection{Model fitting}\label{model-fitting}}
+
+Both models were implemented using the \texttt{EpiNow2} R package (version 1.3.3) (Abbott, Hellewell, et al. 2020). Each forecast target was fitted independently for each model using Markov-chain Monte Carlo (MCMC) in stan (Stan Development Team 2020). A minimum of 4 chains were used with a warmup of 250 samples for the renewal equation-based model and 1000 samples for the convolution model. 2000 samples total post warmup were used for the renewal equation model and 4000 samples for the convolution model. Different settings were chosen for each model to optimise compute time contingent on convergence. Convergence was assessed using the R hat diagnostic (Stan Development Team 2020). For the convolution model forecast the case forecast from the renewal equation model was used in place of observed cases beyond the forecast horizon using 1000 posterior samples. 12 weeks of data was used for both models though only 3 weeks of data were included in the likelihood for the convolution model.
+
+\clearpage
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-epinow2}{}}%
+Abbott, Sam, Joel Hellewell, Joe Hickson, James Munday, Katelyn Gostic, Peter Ellis, Katharine Sherratt, et al. 2020. {``EpiNow2: Estimate Real-Time Case Counts and Time-Varying Epidemiological Parameters.''} \emph{-} - (-): --. \url{https://doi.org/10.5281/zenodo.3957489}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-covidregionaldata}{}}%
+Abbott, Sam, Katharine Sherratt, Jonnie Bevan, Hamish Gibbs, Joel Hellewell, James Munday, Patrick Barks, Paul Campbell, Flavio Finger, and Sebastian Funk. 2020. {``Covidregionaldata: Subnational Data for the Covid-19 Outbreak.''} \emph{-} - (-): --. \url{https://doi.org/10.5281/zenodo.3957539}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bhattSemiMechanisticBayesianModeling}{}}%
+Bhatt, Samir, Neil Ferguson, Seth Flaxman, Axel Gandy, Swapnil Mishra, and James A Scott. n.d. {``Semi-{Mechanistic Bayesian} Modeling of {COVID-19} with {Renewal Processes},''} 14.
+
+\leavevmode\vadjust pre{\hypertarget{ref-epiforecasts.ioux2fcovidCovid19TemporalVariation2020}{}}%
+epiforecasts.io/covid. 2020. {``Covid-19: {Temporal} Variation in Transmission During the {COVID-19} Outbreak.''} {Covid-19}. 2020. \url{https://epiforecasts.io/covid/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-EvaluatingUseReproduction}{}}%
+{``Evaluating the Use of the Reproduction Number as an Epidemiological Tool, Using Spatio-Temporal Trends of the {Covid-19} Outbreak in {England} \textbar{} {medRxiv}.''} n.d. Accessed May 30, 2021. \url{https://www.medrxiv.org/content/10.1101/2020.10.18.20214585v1}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-generationinterval}{}}%
+Ganyani, Tapiwa, Cecile Kremer, Dongxuan Chen, Andrea Torneri, Christel Faes, Jacco Wallinga, and Niel Hens. 2020. {``Estimating the Generation Interval for Coronavirus Disease (COVID-19) Based on Symptom Onset Data, March 2020.''} \emph{Eurosurveillance} 25 (17).
+
+\leavevmode\vadjust pre{\hypertarget{ref-incubationperiod}{}}%
+Lauer, Stephen A, Kyra H Grantz, Qifang Bi, Forrest K Jones, Qulu Zheng, Hannah R Meredith, Andrew S Azman, Nicholas G Reich, and Justin Lessler. 2020. {``The Incubation Period of Coronavirus Disease 2019 (COVID-19) from Publicly Reported Confirmed Cases: Estimation and Application.''} \emph{Annals of Internal Medicine} 172 (9): 577--82.
+
+\leavevmode\vadjust pre{\hypertarget{ref-approxGP}{}}%
+Riutort-Mayol, Gabriel, Paul-Christian Bürkner, Michael R. Andersen, Arno Solin, and Aki Vehtari. 2020. {``Practical Hilbert Space Approximate Bayesian Gaussian Processes for Probabilistic Programming.''} \url{https://arxiv.org/abs/2004.11408}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-epidemia}{}}%
+Scott, James A., Axel Gandy, Swapnil Mishra, Juliette Unwin, Seth Flaxman, and Samir Bhatt. 2020. {``Epidemia: Modeling of Epidemics Using Hierarchical Bayesian Models.''} \url{https://imperialcollegelondon.github.io/epidemia/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-rstan}{}}%
+Stan Development Team. 2020. {``RStan: The r Interface to Stan.''} \url{http://mc-stan.org/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-kraemer2020epidemiological}{}}%
+Xu, Bo, Bernardo Gutierrez, Sarah Hill, Samuel Scarpino, Alyssa Loskill, Jessie Wu, Kara Sewalk, et al. 2020. {``Epidemiological Data from the nCoV-2019 Outbreak: Early Descriptions from Publicly Available Data.''} \url{http://virological.org/t/epidemiological-data-from-the-ncov-2019-outbreak-early-descriptions-from-publicly-available-data/337}.
+
+\end{CSLReferences}
+
+\end{document}

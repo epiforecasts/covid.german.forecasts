@@ -1,0 +1,19 @@
+---
+output: 
+  pdf_document:
+    keep_tex: true
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+
+```{r}
+library(kableExtra)
+```
+
+```{r score-table-ensemble-2}
+table <- readRDS("../analysis/plots/table_mean-ensemble_scores_4_ahead.rds")
+table
+```
