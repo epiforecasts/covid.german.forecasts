@@ -1,0 +1,1891 @@
+% Template for PLoS
+% Version 3.5 March 2018
+%
+% % % % % % % % % % % % % % % % % % % % % %
+%
+% -- IMPORTANT NOTE
+%
+% This template contains comments intended
+% to minimize problems and delays during our production
+% process. Please follow the template instructions
+% whenever possible.
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% Once your paper is accepted for publication,
+% PLEASE REMOVE ALL TRACKED CHANGES in this file
+% and leave only the final text of your manuscript.
+% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
+% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info or contact us at latex@plos.org.
+%
+%
+% There are no restrictions on package use within the LaTeX files except that
+% no packages listed in the template may be deleted.
+%
+% Please do not include colors or graphics in the text.
+%
+% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- FIGURES AND TABLES
+%
+% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
+%
+% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
+% - Figures should be uploaded separately from your manuscript file.
+% - Figures generated using LaTeX should be extracted and removed from the PDF before submission.
+% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig" instead of "Figure".
+% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
+%
+% Tables should be cell-based and may not contain:
+% - spacing/line breaks within cells to alter layout or alignment
+% - do not nest tabular environments (no tabular environments within tabular environments)
+% - no graphics or colored text (cell background color/shading OK)
+% See http://journals.plos.org/plosone/s/tables for table guidelines.
+%
+% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- EQUATIONS, MATH SYMBOLS, SUBSCRIPTS, AND SUPERSCRIPTS
+%
+% IMPORTANT
+% Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
+%
+% For inline equations, please be sure to include all portions of an equation in the math environment.
+%
+% Do not include text that is not math in the math environment.
+%
+% Please add line breaks to long display equations when possible in order to fit size of the column.
+%
+% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
+%
+% When adding superscript or subscripts outside of brackets/braces, please group using {}.
+%
+% Do not use \cal for caligraphic font.  Instead, use \mathcal{}
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Please contact latex@plos.org with any questions.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% Use Unicode characters when possible
+\usepackage[utf8x]{inputenc}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+% \usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace}
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in
+\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+% Use the PLoS provided BiBTeX style
+% \bibliographystyle{plos2015}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+%\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+%\setlength{\headheight}{27.023pt}
+%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\today}
+
+%% Include all macros below
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+% Pandoc citation processing
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{lineno}
+\usepackage[T1]{fontenc}
+\linenumbers
+\newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}}
+\newfloat{text}{thp}{}
+\floatname{text}{Text}
+\renewcommand{\figurename}{}
+\newcommand{\newfigurename}{Hello}
+\setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+\usepackage{nameref,hyperref}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+
+\usepackage{forarray}
+\usepackage{xstring}
+\newcommand{\getIndex}[2]{
+  \ForEach{,}{\IfEq{#1}{\thislevelitem}{\number\thislevelcount\ExitForEach}{}}{#2}
+}
+
+\setcounter{secnumdepth}{0}
+
+\newcommand{\getAff}[1]{
+  \getIndex{#1}{London School of Hygiene \& Tropical
+Medicine,CMMID,Karlsruhe Institute of Technology Institute of Economic
+Theory and Statistics,Max Planck Institute for Multidisciplinary
+Sciences,UK Health Security Agency,Imperial College London}
+}
+
+\begin{document}
+\vspace*{0.2in}
+
+
+% Title must be 250 characters or less.
+\begin{flushleft}
+{\Large
+\textbf\newline{Comparing human and model-based forecasts of COVID-19 in
+Germany and
+Poland} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+}
+\newline
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+\\
+Nikos I. Bosse\textsuperscript{\getAff{London School of Hygiene \&
+Tropical Medicine}, \getAff{CMMID}}\textsuperscript{*},
+Sam Abbott\textsuperscript{\getAff{London School of Hygiene \& Tropical
+Medicine}, \getAff{CMMID}},
+Johannes Bracher\textsuperscript{\getAff{Karlsruhe Institute of
+Technology Institute of Economic Theory and Statistics}},
+Habakuk Hain\textsuperscript{\getAff{Max Planck Institute for
+Multidisciplinary Sciences}},
+Billy J. Quilty\textsuperscript{\getAff{London School of Hygiene \&
+Tropical Medicine}, \getAff{CMMID}},
+Mark Jit\textsuperscript{\getAff{London School of Hygiene \& Tropical
+Medicine}, \getAff{CMMID}},
+Centre for the Mathematical Modelling of Infectious Diseases COVID-19
+Working Group\textsuperscript{\getAff{London School of Hygiene \&
+Tropical Medicine}, \getAff{CMMID}},
+Edwin van Leeuwen\textsuperscript{\getAff{UK Health Security
+Agency}, \getAff{London School of Hygiene \& Tropical Medicine}},
+Anne Cori\textsuperscript{\getAff{Imperial College London}},
+Sebastian Funk\textsuperscript{\getAff{London School of Hygiene \&
+Tropical Medicine}, \getAff{CMMID}}\\
+\bigskip
+\textbf{\getAff{London School of Hygiene \& Tropical
+Medicine}}Department of Infectious Disease Epidemiology, London School
+of Hygiene \& Tropical Medicine, London, United Kingdom\\
+\textbf{\getAff{CMMID}}Centre for the Mathematical Modelling of
+Infectious Diseases (members of the CMMID COVID-19 working group are
+listed in S1 Acknowledgements), London, United Kingdom\\
+\textbf{\getAff{Karlsruhe Institute of Technology Institute of Economic
+Theory and Statistics}}Institute of Economic Theory and Statistics,
+Karlsruhe Institute of Technology, Karlsruhe, Germany\\
+\textbf{\getAff{Max Planck Institute for Multidisciplinary Sciences}}Max
+Planck Institute for Multidisciplinary Sciences, Göttingen, Germany\\
+\textbf{\getAff{UK Health Security Agency}}UK Health Security Agency,
+London United Kingdom\\
+\textbf{\getAff{Imperial College London}}MRC Centre for Outbreak
+Analysis and Modelling, Department of Infectious Disease Epidemiology,
+School of Public Health, Imperial College London, London, United
+Kingdom\\
+\bigskip
+* nikos.bosse@lshtm.ac.uk\\
+\end{flushleft}
+% Please keep the abstract below 300 words
+\section*{Abstract}
+Forecasts based on epidemiological modelling have played an important
+role in shaping public policy throughout the COVID-19 pandemic. This
+modelling combines knowledge about infectious disease dynamics with the
+subjective opinion of the researcher who develops and refines the model
+and often also adjusts model outputs. Developing a forecast model is
+difficult, resource- and time-consuming. It is therefore worth asking
+what modelling is able to add beyond the subjective opinion of the
+researcher alone. To investigate this, we analysed different real-time
+forecasts of cases of and deaths from COVID-19 in Germany and Poland
+over a 1-4 week horizon submitted to the German and Polish Forecast Hub.
+We compared crowd forecasts elicited from researchers and volunteers,
+against a) forecasts from two semi-mechanistic models based on common
+epidemiological assumptions and b) the ensemble of all other models
+submitted to the Forecast Hub. We found crowd forecasts, despite being
+overconfident, to outperform all other methods across all forecast
+horizons when forecasting cases (weighted interval score relative to the
+Hub ensemble 2 weeks ahead: 0.89). Forecasts based on computational
+models performed comparably better when predicting deaths (rel. WIS
+1.26), suggesting that epidemiological modelling and human judgement can
+complement each other in important ways.
+
+% Please keep the Author Summary between 150 and 200 words
+% Use first person. PLOS ONE authors please skip this step.
+% Author Summary not valid for PLOS ONE submissions.
+\section*{Author summary}
+Mathematical models of COVID-19 have played a key role in informing
+governments across the world. While mathematical models are informed by
+our knowledge of infectious disease dynamics, they are ultimately
+developed and iteratively adjusted by the researchers and shaped by
+their subjective opinions. To investigate what modelling is able to add
+beyond the subjective opinion of the researcher alone, we compared human
+forecasts with model-based predictions of COVID-19 cases and deaths
+submitted to the so-called German/Polish Forecast Hub (which collates a
+variety of models from a range of teams). \textbar{} We found that our
+human forecasts consistently outperformed an aggregate of all available
+model-based forecasts when predicting cases, but not when predicting
+deaths. Our findings suggest that human insight may be most valuable
+when forecasting highly uncertain quantities, which depend on many
+factors that are hard to model using equations, while mathematical
+models may be most useful in settings like predicting deaths, where
+leading indicators with a clear connection to the target variable are
+available. This potentially has very relevant policy implications, as
+agencies informing policy-makers could benefit from routinely eliciting
+human forecasts in addition to model-based predictions to inform
+policies.
+
+\linenumbers
+
+% Use "Eq" instead of "Equation" for equation citations.
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Infectious disease modelling has a long tradition and has helped inform
+public health decisions both through scenario modelling, as well as
+actual forecasts of (among others) influenza {[}e.g. 1,2--4{]}, dengue
+fever {[}e.g. 5,6,7{]}, ebola {[}e.g. 8,9{]}, chikungunya {[}e.g.
+10,11{]} and now COVID-19 {[}e.g. 12,13--17{]}. Applications of
+epidemiological models differ in the way they make statements about the
+future. Forecasts aim to predict the future as it will occur, while
+scenario modelling and projections aim to represent what the future
+could look like under certain scenario assumptions or if conditions
+stayed the same as they were in the past. Forecasts can be judged by
+comparing them against observed data. Since it is much harder to fairly
+assess the accuracy and usefulness of projections and scenario modelling
+in the same way, this work focuses on forecasts, which represent only a
+subset of all epidemiological modelling.
+
+Since March 2020, forecasts of COVID-19 from multiple teams have been
+collected, aggregated and compared by Forecast Hubs such as the US
+Forecast Hub {[}13,14{]}, the German and Polish Forecast Hub {[}15,16{]}
+and the European Forecast Hub {[}17{]}. Often, different individual
+forecasts are combined into a single forecast, e.g.~by taking the mean
+or median of all forecasts. These ensemble forecasts usually tend to
+perform better and more consistently than individual forecasts (see e.g.
+{[}6{]}; {[}18{]}).
+
+Individual computational models usually rely to varying degrees on
+mechanistic assumptions about infectious disease dynamics (such as
+SIR-type compartmental models that aim to represent how individuals move
+from being susceptible to infected and then recovered or dead). Some are
+more statistical in nature (such as time series models that detect
+statistical patterns without explicitly modelling disease dynamics). How
+exactly such a mathematical or computational model is constructed and
+which assumptions are made depends on subjective opinion and judgement
+of the researcher who develops and refines the model. Models are
+commonly adjusted and improved based on whether the model output looks
+plausible to the researchers involved.
+
+The process of model construction and refinement is laborious and
+time-consuming, and it is therefore worth asking what modelling can add
+beyond the subjective judgment of the researcher alone. In this work, we
+ask this question specifically in the context of predictive performance,
+and set aside other advantages of epidemiological modelling (such as
+reproducibility or the ability to obtain a deeper fundamental
+understanding of how diseases spread). One natural way to do this is to
+compare the predictive performance of forecasts based on computational
+models (``model-based forecasts'') against forecasts made by individual
+humans without explicit use of a computer model (``direct human
+forecasts'') or a combination of multiple such forecasts (``crowd
+forecasts'').
+
+Previous work has examined such direct human forecasts in various
+contexts, such as geopolitics {[}19,20{]}, meta-science {[}21,22{]},
+sports {[}23{]} and epidemiology {[}11,24,25{]}. Several prediction
+platforms {[}26--28{]} and prediction markets {[}29{]} have been created
+to collate expert and non-expert predictions. However, with the notable
+exception of {[}11{]}, these forecasts were not designed to be evaluated
+alongside model-based forecasts and usually follow their own (often
+binary) prediction formats. Direct human forecasts may be able to take
+into account insights and relationships between variables which are hard
+to specify using epidemiological models. However, it is not entirely
+clear in which situations human forecasts perform well or badly. For
+example, {[}11{]} found that humans could outperform computer models at
+predicting the 2014/15 and 2015/16 flu season in the US, a setting where
+the disease was well known and information about previous seasons was
+available. However, humans tended to do slightly worse at predicting the
+2014/15 outbreak of chikungunya in the Americas, a disease previously
+largely unobserved and unknown in these regions at the time.
+
+In this study, we analyse the performance of direct human forecasts
+relative to model-based forecasts and discuss the added benefit of
+epidemiological modelling over human judgement alone. As a case study,
+we use different forecasts, involving varying degrees of human
+intervention, which we submitted in real time to the German and Polish
+Forecast Hub. In contrast to {[}11{]} we elicited not only point
+predictions, but full predictive distributions (``probabilistic
+forecasts'', see e.g. {[}30{]}) from participants. This allows us to
+compare not only predictive accuracy, but also how well human
+forecasters and model-based forecasts were able to quantify forecast
+uncertainty.
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\hypertarget{ethics-statement}{%
+\subsection{Ethics statement}\label{ethics-statement}}
+
+This study has been approved by the London School of Hygiene \& Tropical
+Medicine Research Ethics Committee (reference number 22290). Consent
+from participants was obtained in written form.
+
+\hypertarget{overview}{%
+\subsection{Overview}\label{overview}}
+
+We created and submitted the following forecasts to the German and
+Polish Forecast Hub: 1) a direct human forecast (henceforth called
+``crowd forecast''), elicited from participants through a web
+application {[}31{]} and 2) two semi-mechanistic model-based forecasts
+(``renewal model'' and ``convolution model'') informed by basic
+assumptions about COVID-19 epidemiology. While the two semi-mechanistic
+forecasts were necessarily shaped by our implicit assumptions and
+decisions, they were designed such as to minimise the amount of human
+intervention involved. For example, we refrained from adjusting model
+outputs or refining the models based on past performance. Forecasts were
+created in real time over a period of 21 weeks from October 12th 2020
+until March 1st 2021 and submitted to the German and Polish Forecast hub
+{[}15,16{]}. All code and tools necessary to generate the forecasts and
+make a forecast submission are available in the
+\texttt{covid.german.forecasts} R package {[}32{]}. This repository also
+contains a record of all forecasts submitted to the German and Polish
+Forecast Hub. Forecasts were evaluated using a variety of scoring
+metrics and compared among each other and against an ensemble of all
+other models submitted to the German and Polish Forecast Hub.
+
+\hypertarget{forecast-targets-and-interaction-with-the-german-and-polish-forecast-hub}{%
+\subsection{Forecast targets and interaction with the German and Polish
+Forecast
+Hub}\label{forecast-targets-and-interaction-with-the-german-and-polish-forecast-hub}}
+
+The German and Polish Forecast Hub (now mostly merged into the {[}17{]})
+elicits predictions for various COVID-19 related forecast targets from
+different research groups every week. Forecasts had to be made every
+Monday (with submissions allowed until Tuesday 3pm) and were permitted
+to use any data that was available by Monday 11.59pm. We submitted
+forecasts for incident and cumulative weekly reported numbers of cases
+of and deaths from COVID-19 on a national level in Germany and Poland
+over a one to four week forecast horizon. Forecasts were submitted on
+Mondays, but weeks were defined as ending on a Saturday (and starting on
+Sunday), meaning that forecast horizons were in fact 5, 12, 19 and 26
+days. Submissions were required in a quantile-based format with 23
+quantiles of each output measure at levels 0.01, 0.025, 0.05, 0.10,
+0.15, \ldots, 0.95, 0.975, 0.99. Forecasts submitted to the Forecast Hub
+were combined into different ensembles every week, with the median
+ensemble (i.e., the \(\alpha\)-quantile of the ensemble is given by the
+median of all submitted \(\alpha\)-quantiles) being the default ensemble
+shown on all official Forecast hub visualisations
+(https://kitmetricslab.github.io/forecasthub/forecast).
+
+Data on daily reported test positive cases and deaths linked to COVID-19
+were provided by the organisers of the German and Polish Forecast hub.
+Until December 14th, 2020, these data were sourced from the European
+Centre for Disease Control {[}33{]}. After ECDC stopped publishing daily
+data, observations were sourced from the Robert Koch Institute (RKI) and
+the Polish Ministry of Health for the remainder of the submission period
+{[}34{]}. These data are subject to reporting artefacts, (such as for
+example delayed case reporting in Poland on the 24th November,
+{[}35{]}), changes in reporting over time, and variation in testing
+regimes (for example in Germany from the 11th of November on, {[}36{]}).
+The ECDC data as well as the data published by the Polish Ministry of
+Health were also subject to data revisions, although most of them (with
+a notable exception of a data update for October 12 2020 in Germany)
+only affected daily, not weekly data (see
+\nameref{fig:daily-truth-update} and \nameref{fig:weekly-truth-update}
+Figs).
+
+\hypertarget{crowd-forecasts}{%
+\subsection{Crowd forecasts}\label{crowd-forecasts}}
+
+Our crowd forecasts were created as an ensemble of forecasts made by
+individual participants every week through a web application
+(https://cmmid-lshtm.shinyapps.io/crowd-forecast/). Weekly forecasts had
+to be submitted before Tuesday 12pm every week, but participants were
+asked to only use any information or data that was already available by
+Monday night. The application was built using the \texttt{shiny} and
+\texttt{golem} R packages {[}37,38{]} and is available in the
+\texttt{crowdforecastr} R package {[}31{]}. To make a forecast in the
+application participants could select a predictive distribution (with
+the default being log-normal) to represent the probability that the
+forecasted quantity took certain values. Median and width of the
+uncertainty could be adjusted by either interacting with a figure
+showing their forecast or providing numerical values (see screenshot in
+\nameref{fig:screenshot}). The default shown was a repetition of the
+last known observation with constant uncertainty around it computed as
+the standard deviation of the last four changes in weekly log observed
+forecasts (i.e.~as
+\(\sigma(log(value4) - log(value3), log(value3) - log(value2), \ldots )\)).
+A comparison of the crowd forecasts against the default baseline shown
+in the application is displayed in \nameref{fig:compare-forecasters}.
+Our interface also allowed participants to view past observations based
+on the hub data, as well as their forecasts, on a logarithmic scale and
+presented additional contextual COVID-19 data sourced from {[}39{]}.
+These data included, for example, notifications of both test positive
+COVID-19 cases and COVID-19 linked deaths and the number of COVID-19
+tests conducted over time. From November 26 2020 on we displayed weekly
+small reports with a visualisation of past forecasts and scores on our
+website, epiforecasts.io.
+
+Forecasts were stored in a Google Sheet and downloaded, cleaned and
+processed every week for submission to the Forecast Hub. If a forecaster
+had submitted multiple predictions for a single target, only the latest
+submission was kept. Information on the chosen distribution as well as
+the parameters for median and width were used to obtain the required set
+of 23 quantiles from that distribution. Forecasts from all forecasters
+were then aggregated using an unweighted quantile-wise mean (i.e., the
+\(\alpha\)-quantile of the ensemble is given by the mean of all
+submitted \(\alpha\)-quantiles). To avoid issues with users trying out
+the app and submitting a random forecast, we required that a forecaster
+needed to make a forecast for at least two targets for a given forecast
+in order to be included in the crowd forecast ensemble. On a few
+occasions we deleted forecasts that were clearly the result of a user or
+software error (such as for example forecasts that were zero
+everywhere).
+
+Participants were recruited mostly within the Centre of Mathematical
+Modeling of Infectious Diseases at the London School of Hygiene \&
+Tropical Medicine, but participants were also invited personally or via
+social media to submit predictions. Depending on whether they had a
+background in either statistics, forecasting or epidemiology,
+participants were asked to self-identify as `experts' or `non-experts'.
+
+\hypertarget{model-based-forecasts}{%
+\subsection{Model-based forecasts}\label{model-based-forecasts}}
+
+We used two Bayesian semi-mechanistic models from the \texttt{EpiNow2} R
+package (version 1.3.3) as our model-based forecasts {[}40{]}. The first
+of these models, here called ``renewal model'', used the renewal
+equation {[}41{]} to predict reported cases and deaths (see details in
+\nameref{txt:details-models}). It estimated the effective reproduction
+number \(R_t\) (the average number of people each person infected at
+time t is expected to infect in turn) and modelled future infections as
+a weighted sum of past infection multiplied by \(R_t\). \(R_t\) was
+assumed to stay constant beyond the forecast date, roughly corresponding
+to continuing the latest exponential trend in infections. On the 9th of
+November we altered the date when \(R_t\) was assumed to be constant
+from two weeks prior to the date of the forecast to the forecast date,
+which we found to yield a more stable \(R_t\) estimate. Reported case
+and death notifications were obtained by convolving predicted infections
+over data-based delay distributions {[}40,42--44{]} to model the time
+between infection and report date. The renewal model was used to predict
+cases as well as deaths with forecasts being generated for each target
+separately. Death forecasts from the renewal model were therefore not
+informed by past cases. One submission of the renewal model on December
+28th 2020 was delayed and therefore not included in the official
+Forecast hub ensemble.
+
+The second model (``convolution model'', see details in
+\nameref{txt:details-models}) was only used to forecast deaths and was
+added later, starting December 7th 2020 (with the first forecast from
+December 7th suffering from a software bug and therefore disregarded in
+all further analyses). The convolution model was submitted, but never
+included in the official Forecast hub ensemble due to concerns that it
+could be too similar to the renewal model. The convolution model
+predicted deaths as a fraction of infected people who would die with
+some delay, by using a convolution of reported cases with a distribution
+that described the delay from case report to death and a scaling factor
+(the case-fatality ratio). Both the renewal and the convolution model
+used daily observations and assumed a negative binomial observation
+model with a multiplicative day-of-the-week effect {[}40{]}.
+
+Line list data used to inform the prior for the delay from symptom onset
+to test positive case report or death in the model-based forecasts was
+sourced from {[}45{]} with data available up to the 1st of August. All
+model fitting was done using Markov-chain Monte Carlo (MCMC) in stan
+{[}46{]} with each location and forecast target being fitted separately.
+
+\hypertarget{analysis}{%
+\subsection{Analysis}\label{analysis}}
+
+For the main analysis we focused mostly on two week ahead forecasts, as
+COVID-19 forecasts, especially for cases, were in the past found to have
+poor predictive performance beyond this horizon {[}15{]}. Forecasts for
+cases were scored using the full period from October 2020 until March
+2021. To ensure comparability between models, all death forecasts were
+scored using only the period from December 14th on, where all models
+including the convolution model were available. To ensure robustness of
+our results we conducted a sensitivity analysis where all forecasts
+(including cases) were scored only over the later period for which all
+forecasts were available (see \nameref{fig:agg-performance-all-late} and
+\nameref{tab:score-table-late-2} and \nameref{tab:score-table-late-4}s).
+Results remained broadly unchanged.
+
+Forecasts were analysed using the following scoring metrics: The
+weighted interval score (WIS) {[}47{]}, the absolute error, relative
+bias, and empirical coverage of the 50\% and 90\% prediction intervals.
+The WIS is a proper scoring rule {[}48{]}, meaning that in expectation
+the score is optimised by reporting a predictive distribution that is
+identical to the true data-generating distribution. Forecasters are
+therefore incentivised to report their true belief about the future. The
+WIS can be understood as a generalisation of the absolute error to
+quantile-based forecasts (also meaning that smaller values are better)
+and can be decomposed into three separate penalties: forecast spread
+(i.e.~uncertainty of forecasts), over-prediction and under-prediction.
+While the over- and under-prediction components of the WIS capture the
+amount of over-prediction and under-prediction in absolute terms, we
+also look at a relative tendency to make biased forecasts. The bias
+metric {[}9{]} we use captures how much probability mass of the forecast
+was above or below the true value (mapped to values between -1 and 1)
+and therefore represents a general tendency to over- or under-predict in
+relative terms. A value of -1 implies that all quantiles of the
+predictive distribution are below the observed value and a value of 1
+that all quantiles are above the observed value. Empirical coverage is
+the percentage of observed values that fall inside a given prediction
+interval (e.g.~how many observed values fall inside all 50\% prediction
+intervals). Scoring metrics are explained in more detail in
+\nameref{tab:scoring-metrics}. All scores were calculated using the
+\texttt{scoringutils} R package {[}49{]}.
+
+At all stages of the evaluation our forecasts were compared to the
+median ensemble of all \emph{other} models submitted to the German and
+Polish Forecast Hub (``Hub ensemble''). This ``Hub ensemble'' was
+retrospectively computed and excludes all our models, leaving on average
+five ensemble member models (see \nameref{tab:table-ensemble-versions}
+and \nameref{fig:num-ensemble-members}). What we call ``Hub ensemble''
+in this article therefore differs from the ``official Hub ensemble''
+(here called ``hub-ensemble-realised'') which included crowd forecasts
+as well as renewal model forecasts. To enhance interpretability of
+scores we mainly report WIS relative to the Hub ensemble in the main
+text, i.e.~we divided the average scores for a given model by the
+average score achieved by the Hub ensemble on the same set of forecasts
+(with values \textgreater1 implying worse and values \textless1 implying
+better performance than the Hub ensemble). In addition to comparing our
+forecasts against the hub ensemble excluding our models, we also
+assessed the impact of our forecasts on the performance of the
+forecasting hub by recalculating separate versions of the Hub ensemble
+with only some (or all) of our forecasts included. Versions that
+included either all of our models (``hub-ensemble-with-all'') or only
+one of them (``hub-ensemble-with-X'') were computed retrospectively.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\hypertarget{crowd-forecast-participation}{%
+\subsection{Crowd forecast
+participation}\label{crowd-forecast-participation}}
+
+A total number of 32 participants submitted forecasts, 17 of those
+self-identified as `expert' in either forecasting or epidemiology. The
+median number of forecasters for any given forecast target was 6, the
+minimum 2 and the maximum 10. The mean number of submissions from an
+individual forecaster was 4.7 but the median number was only one - most
+participants dropped out after their first submission. Only two
+participants submitted a forecast every single week, both of whom are
+authors on this study.
+
+\begin{figure}[H]
+\caption{\bf{Visualisation of aggregate performance metrics for forecasts one to four weeks into the future.}}
+A, B: mean weighted interval score (WIS, lower indicates better performance) across horizons. WIS is decomposed into its components dispersion, over-prediction and under-prediction. C: Empirical coverage of the 50\% prediction intervals (50\% coverage is perfect). D: Empirical coverage of the 90\% prediction intervals. E: Dispersion (same as in panel A, B). Higher values mean greater dispersion of the forecast and imply ceteris paribus a worse score. F: Bias, i.e. general (relative) tendency to over- or underpredict. Values are between -1 (complete under-prediction) and 1 (complete over-prediction) and 0 ideally. G: Absolute error of the median forecast (lower is better). H. Standard deviation of all WIS values for different horizons
+\label{fig:agg-performance-all}
+\end{figure}
+
+\begin{figure}[H]
+\caption{\bf{Two week ahead forecasts and corresponding scores. }}
+A, C: Visualisation of 50\% prediction intervals of two week ahead forecasts against the reported values. Forecasts that were not scored (because there was no complete set of death forecasts available) are greyed out. B, D: Visualisation of corresponding WIS.
+\label{fig:forecasts-and-truth}
+\end{figure}
+
+\hypertarget{case-forecasts}{%
+\subsection{Case Forecasts}\label{case-forecasts}}
+
+For cases, crowd forecasts had a lower mean weighted interval score
+(WIS, lower values indicate better performance) than both the renewal
+model and the Hub ensemble across all forecast horizons (Fig
+\ref{fig:agg-performance-all}A) and locations
+(\nameref{fig:performance-locations-rel}A Fig). For two week ahead
+forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for
+crowd forecasts and 1.40 for the renewal model
+(\nameref{tab:score-table-2} Table). Across all forecasting approaches,
+locations and forecast horizons, the distribution of WIS values was very
+right-skewed, and average performance was heavily influenced by
+outliers. Overall, low variance in forecast performance was closely
+linked with good mean performance (Fig \ref{fig:agg-performance-all}H
+and \ref{fig:agg-performance-all}A), suggesting that the ability to
+avoid large errors was an important factor in determining overall
+performance. The impact of outlier values was especially pronounced for
+the renewal model, which had more outliers, as well as the highest
+standard deviation of WIS values (standard deviation of the WIS relative
+to the WIS sd of the Hub ensemble was 1.54 at the two weeks ahead
+horizon), while the ensemble of crowd forecasts (rel. WIS sd 0.76) and
+the Hub ensemble (= 1) showed more stable performance.
+
+To varying degrees, all forecasts exhibited trend-following behaviour
+and were rarely able to predict a change in trend before it had
+happened. For example, all forecasts failed to predict the change in
+trend from increase to decrease that happened in November in Germany and
+severely overshot reported cases (Fig \ref{fig:forecasts-and-truth}A).
+This was most striking for the renewal model, which extrapolated
+unconstrained exponential growth based on the recent past of
+observations. The Hub ensemble and the crowd forecast, which had both
+been under-predicting throughout October, also failed to predict the
+change in trend after cases peaked, but less severely so. Human
+forecasters, possibly aware of the semi-lockdown announced on November
+2nd 2020 {[}50{]} and the change in the testing regime (with stricter
+test criteria) on November 11th 2020 {[}36{]}, were fastest to adapt to
+the new trend, and the Hub ensemble slowest. In December, cases rose
+again in Germany, with all models under-predicting this growth to
+varying extents. As in October, the renewal model captured the phase of
+exponential growth in cases slightly better than other approaches, but
+again overshot when reported case numbers fell over Christmas. The large
+variance in predictions in January in Germany (severe under-prediction
+followed by severe over-prediction) may in part be caused by the fact
+that the renewal model operated on daily data and therefore was
+susceptible to fluctuations in daily reporting around Christmas that
+would not have influenced on weekly reporting. Similar trends in
+performance were evident in Poland, with the crowd forecast quickest at
+adapting to the change in trend in November. In general, there were
+fewer large outlier forecasts in Poland and in particular the renewal
+model performed more in line with other forecasts there.
+
+All forecasting approaches, including the Hub ensemble, were
+overconfident, i.e.~they showed lower than nominal coverage (meaning
+that 50\% (90\%) prediction intervals generally covered less than 50\%
+(90\%) of the actually observed values) (Fig
+\ref{fig:agg-performance-all}C and \ref{fig:agg-performance-all}D).
+Coverage for all forecasts deteriorated with increasing forecast
+horizon, indicating that all forecasting approaches struggled to
+quantify uncertainty appropriately for case forecasts. This was
+especially an issue for crowd forecasts, which had markedly shorter
+prediction intervals (i.e., narrower and more confident predictive
+distributions) than other approaches (Fig
+\ref{fig:agg-performance-all}E) and only showed a small increase in
+uncertainty across forecast horizons. The crowd forecasts prediction
+intervals were also noticeably narrower than the default baseline shown
+to forecasters in the application (see
+\nameref{fig:compare-forecasters}).
+
+In spite of good performance in terms of the absolute error (Fig
+\ref{fig:agg-performance-all}G), the narrow forecast intervals led to
+forecasts which were severely overconfident (covering only 36\% and 55\%
+of all observations with the 50\% and 90\% prediction intervals of all
+forecasts made at a two week forecast horizon, and only 5\% and 38\%
+four weeks ahead) (Fig \ref{fig:agg-performance-all}C and
+\ref{fig:agg-performance-all}D as well as \nameref{tab:score-table-2}
+and \nameref{tab:score-table-4}s). Despite worse performance in terms of
+absolute error (Fig \ref{fig:agg-performance-all}G), the renewal model
+achieved better calibration (comparable to the Hub ensemble), as
+uncertainty increased rapidly across forecast horizons. The crowd
+forecasts, on the other hand, showed a smaller bias than the renewal
+model, but were overconfident.
+
+The renewal model exhibited a noticeable tendency towards
+over-predicting reported cases across all horizons. The crowd forecast
+tended to over-predict at longer forecast horizons, whereas the Hub
+ensemble showed no systematic bias (Fig \ref{fig:agg-performance-all}F).
+Regardless of a general relative tendency to over-predict, all
+forecasting approaches incurred larger absolute penalties from over-
+than from under-prediction (see decomposition of the WIS into absolute
+penalties for over-prediction, under-prediction and dispersion in Fig
+\ref{fig:agg-performance-all}A and \ref{fig:agg-performance-all}B, as
+well as \nameref{tab:score-table-2} and \nameref{tab:score-table-4}s).
+
+Generally, trends in overall performance were broadly similar across
+locations (\nameref{fig:performance-locations} and
+\nameref{fig:performance-locations-rel} Figs). Due to the differing
+population sizes and numbers of notifications in Germany and Poland
+absolute scores were difficult to compare directly. However, relative to
+the Hub ensemble, the crowd forecasts performed noticeably better in
+Germany than in Poland and the renewal model better in Poland than in
+Germany (\nameref{fig:performance-locations-rel}A,
+\nameref{fig:performance-locations-rel}G,
+\nameref{fig:agg-performance-all-Germany} and
+\nameref{fig:agg-performance-all-Poland} Figs).
+
+\hypertarget{death-forecasts}{%
+\subsection{Death Forecasts}\label{death-forecasts}}
+
+For deaths, the Hub ensemble outperformed the crowd forecasts as well as
+our model-based approaches across all forecast horizons and locations
+(Figs \ref{fig:agg-performance-all}B and
+\nameref{fig:performance-locations}B). Relative WIS values for the
+models two weeks ahead were 1.22 (convolution model), 1.26 (crowd
+forecast), 1 (Hub ensemble) and 1.79 (renewal model). The crowd
+forecasts performed better than the renewal model across all forecast
+horizons and locations (Figs \ref{fig:agg-performance-all}B and
+\nameref{fig:performance-locations}B), and also better than the
+convolution model three and four weeks ahead. Poor performance of the
+renewal model, especially at longer horizons, indicates that an approach
+that does not know about past cases, but instead estimates and projects
+a separate \(R_t\) trace from deaths, does not use the available
+information efficiently. The convolution model was able to outperform
+both the renewal model and the crowd forecasts at shorter forecast
+horizons (where the delay between cases and deaths means that future
+deaths are largely informed by present cases), but saw performance
+deteriorate at three and four weeks ahead (where case predictions from
+the renewal model were increasingly used to inform death predictions)
+(Fig \ref{fig:agg-performance-all}B, \nameref{tab:score-table-4}).
+
+As past cases and hospitalisations can be used as predictors, predicting
+a change in trend may be easier for deaths than for cases. Even though
+all forecasts generally struggled with this, there were some instances
+where changing trends were well captured or even anticipated. In Poland,
+for example, the Hub ensemble was able to capture or even anticipate the
+peak in deaths in December quite well (whereas the renewal model and
+crowd forecast did not). The renewal model, which mostly exhibited
+trend-following behaviour, correctly predicted another increase in
+weekly deaths in mid-January (potentially based on changes in daily
+deaths, as the renewal model did not know about past cases). In Germany
+in early January, all models predicted a decrease in deaths two to three
+weeks before it actually happened. Predictions from the renewal model at
+that time were likely strongly influenced by an unexpected drop in
+reported deaths in December. The other forecasting approaches and in
+particular, the convolution model may have been affected by potentially
+under-reported case numbers around Christmas. When the decrease that all
+models had predicted to happen in early January failed to materialise,
+the renewal model and the crowd forecast noticeably over-corrected and
+over-predicted deaths in the following weeks, while the Hub ensemble,
+and to a slightly lesser degree, the convolution model were able to
+capture the downturn well when it finally happened at the end of
+January.
+
+Death forecasts, generally, showed greater coverage of the 50\% and 90\%
+prediction intervals than case forecasts and no decrease in coverage
+across forecast horizons, indicating that it might be easier to
+appropriately quantify uncertainty for death forecasts. The Hub ensemble
+had the greatest coverage, with empirical coverage of the 50\% and 90\%
+prediction intervals exceeding 50\%, and 90\%, respectively, across all
+forecast horizons. Coverage for the crowd forecasts and our model-based
+approaches was generally lower than that of the Hub ensemble and mostly
+slightly lower than nominal coverage (Fig \ref{fig:agg-performance-all}C
+and \ref{fig:agg-performance-all}D). As for cases, the crowd forecast
+tended to have the narrowest prediction intervals and uncertainty
+increased most slowly across forecast horizons, and the renewal model
+forecasts generally were widest. The convolution model had relatively
+narrow prediction intervals for short forecast horizons, but had rapidly
+(and non-linearly) increasing uncertainty for longer forecast horizons,
+driven by increasing uncertainty in the underlying case forecasts.
+
+For deaths, the ensemble of crowd forecasts had a consistent tendency to
+over-predict (see Fig \ref{fig:agg-performance-all}F). The convolution
+model had a strong tendency to under-predict, with the magnitude of
+under-prediction steadily decreasing for longer forecast horizons. The
+renewal model (which over-predicted for cases) and the Hub ensemble
+slightly tended towards under-prediction. For deaths, absolute over- and
+under-prediction penalties were more in line with a general relative
+tendency to over- or under-predict than for cases (Fig
+\ref{fig:agg-performance-all}A and \ref{fig:agg-performance-all}B, as
+well as \nameref{tab:score-table-2} and \nameref{tab:score-table-4}s).
+
+\begin{figure}[H]
+\caption{\bf{Distribution of scores. }}
+A: Distribution of weighted interval scores for two week ahead forecasts of the different models and forecast targets. Points denote single forecasts scores, while the shaded area shows an estimated probability density. B: Distribution of WIS separate by country. Black squares indicate median and black circles mean scores.
+\label{fig:distribution-scores}
+\end{figure}
+
+\begin{figure}[H]
+\caption{\bf{Relative aggregate performance metrics across forecast horizons for different versions of the Hub median ensemble.}}
+“Hub-ensemble” \textit{excludes} all our models, Hub-ensemble-all \textit{includes} all of our models, “Hub-ensemble-realised” is the actual hub-ensemble observed in reality, which includes the renewal model and the crowd forecasts, but not the convolution model. A, B: mean weighted interval score (WIS) across horizons relative to the Hub ensemble (lower values indicate better performance). C, D: Empirical coverage of the 50\% and 90\% prediction intervals minus empirical coverage observed for the Hub ensemble. E: Dispersion relative to the dispersion of the Hub ensemble. Higher values mean greater dispersion of the forecast and imply ceteris paribus a worse score. F: Bias, i.e. general (relative) tendency to over- orunderpredict. Values are between -1 (complete under-prediction) and 1 (complete over-prediction) and 0 ideally. G: Absolute error of the median forecast relative to the Hub ensemble. H. Standard deviation of all WIS values for different horizons relative to the Hub ensemble.
+\label{fig:agg-performance-ensemble-rel}
+\end{figure}
+
+\hypertarget{contribution-to-the-forecast-hub}{%
+\subsection{Contribution to the Forecast
+Hub}\label{contribution-to-the-forecast-hub}}
+
+\label{contributions-hub}
+
+Of our three models, only the renewal model and the crowd forecast were
+included in the official Forecast Hub median ensemble
+(``hub-ensemble-realised''), while the convolution model was never
+included as it was deemed too similar to the existing renewal model. In
+the official Hub ensemble, there were on average 7.1 models included
+(including our own), with a median of 7, a minimum of 4 (on 28 December
+2020 over the Christmas period) and a maximum of 10. Versions that
+included either all of our models (``hub-ensemble-with-all'') or only
+one of them (``hub-ensemble-with-X'') were computed retrospectively. An
+overview of all models and ensemble versions is shown in
+\nameref{tab:table-ensemble-versions}.
+
+For cases, our contributions (compared to the Hub ensemble without our
+contributions) consistently improved performance across all forecasting
+horizons (rel. WIS 0.9 two weeks ahead, see
+\nameref{tab:score-table-ensemble-2} Table). Contributions from the
+crowd forecasts alone also improved performance of the Hub ensemble
+across all forecast horizons, while contributions from the renewal model
+had a negative effect for longer horizons (rel. WIS 1.02 three weeks
+ahead, 1.06 four weeks ahead). The realised ensemble including both
+models performed better or equal compared to all versions with only one
+model included for up to three weeks ahead, suggesting synergistic
+effects. Only for predictions four weeks ahead would removing the
+renewal model have improved performance
+(\nameref{tab:score-table-ensemble-4}). The realised ensemble performed
+comparably to the crowd forecasts for predictions one to two weeks
+ahead, and worse for greater forecast horizons.
+
+For deaths, contributions from the renewal model and crowd forecast
+together improved performance only for one week ahead predictions and
+showed an increasingly negative impact on performance for longer
+horizons (rel. WIS of the Hub-ensemble-realised 1.01 two weeks ahead,
+1.05 four weeks ahead, \nameref{tab:score-table-ensemble-2} and
+\nameref{tab:score-table-ensemble-4}s). Individual contributions from
+both the renewal model and the crowd forecast were largely negative,
+while a version of the Hub ensemble with only the convolution model
+included would have performed consistently better across all forecast
+horizons (with the positive impact increasing for longer horizons). This
+is especially interesting as the convolution model performed
+consistently worse than the pre-existing Hub ensemble (Fig
+\ref{fig:agg-performance-all}) and especially worse for longer horizons.
+
+We also considered the impact of our contributions on a version of the
+Hub ensemble constructed by taking the quantile-wise mean, rather than
+the median. General trends were similar, with the notable exception of
+the convolution model, which had a consistently positive impact on the
+median ensemble, but a mixed and mostly slightly negative impact on the
+mean ensemble (Figs \ref{fig:agg-performance-ensemble-rel}B and
+\nameref{fig:agg-performance-ensemble-mean}B). This may happen if a
+model is more correct directionally relative to the pre-existing
+ensemble, but overshoots in absolute terms, thereby moving the ensemble
+too far. For both the mean and the median ensemble, changes in
+performance from adding or removing models were of a similar order of
+magnitude, suggesting that at least in this instance, with a relatively
+small ensemble size, the median ensemble was not necessarily more
+`robust' to changes than the mean ensemble. However, the ensemble
+version with all our forecasts included (``hub-ensemble-with-all'')
+tended to perform relatively better for the median ensemble than the
+mean ensemble, suggesting that adding more models may be more beneficial
+or `safer' for the median than for the mean ensemble as directional
+errors can more easily cancel out than errors in absolute terms.
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+Epidemiological forecasting modelling combines knowledge about
+infectious disease dynamics with the subjective opinion of the
+researcher who develops and refines the model. In this study, we
+compared forecasts of cases of and deaths from COVID-19 in Germany and
+Poland based purely on human judgement and elicited from a crowd of
+researchers and volunteers against forecasts from two semi-mechanistic
+epidemiological models. In spite of the small number of participants and
+a general tendency to be overconfident, crowd forecasts consistently
+outperformed our epidemiological models as well as the Hub ensemble when
+forecasting cases but not when forecasting deaths. This suggests that
+humans might be relatively good at foreseeing trends that are hard to
+model but may struggle to form an intuition for the exact relationship
+between cases and deaths.
+
+Past studies have evaluated the performance of model-based forecasting
+approaches as well as human experts and non-experts in various contexts.
+However, most of these studies either focused only on the evaluation of
+(expert-tuned) model-based approaches {[}e.g. 12,13,14{]}, or
+exclusively on human forecasts {[}19,20,24,25{]}. In contrast, we
+directly compared human and model-based forecasts. This is similar to
+the approach taken by {[}11{]}, but extends it in several ways. While
+Farrow et al.~only asked for point predictions and constructed a
+predictive distribution from these, we asked participants to provide a
+full predictive distribution, allowing us to compare human forecasts and
+models without any further assumptions, as well as to analyse how humans
+quantified their uncertainty. In addition, we compared crowd forecasts
+to two semi-mechanistic models informed by basic epidemiological
+knowledge of COVID-19, allowing us to assess not only relative
+performance but also to analyse qualitative differences between human
+judgement and model-based insight. In terms of interpretability of the
+results, exact knowledge of our two models, as well as focus on a
+limited set of targets and locations was a major advantage of our study
+compared to larger studies conducted by the Forecast Hubs
+{[}12--15,17{]}.
+
+The strong performance of crowd forecasts in our study is in line with
+results from Farrow et al.~who also report strong performance of human
+predictions in past Flu challenges despite difficulties to recruit a
+large number of participants. The advantage of crowd forecasts we
+observed over our semi-mechanistic models is likely in part explained by
+the fact that we compared an ensemble of crowd forecasts with single
+models. However, this probably explains only part of the difference, and
+performance relative to the Hub ensemble strongly suggests that human
+insight is valuable when forecasting highly volatile and potentially
+hard-to-predict quantities such as case numbers. One potential
+explanation is that humans can have access to data that is not available
+to or hard to integrate into model-based forecasts. Relatively good
+performance of our semi-mechanistic models short-term, but not
+longer-term, suggests that model-based forecasts are helpful to
+extrapolate from current conditions, but require some form of human
+intervention or additional assumptions to inform forecasts when
+conditions change over time. This human intervention may be particularly
+important when dealing with artefacts in reporting and data anomalies
+(and especially when using daily, rather than weekly data). The large
+variance in predictions in January in Germany for example (severe
+under-prediction followed by severe over-prediction, see Fig
+\ref{fig:forecasts-and-truth}A), may in part be caused by the fact that
+the renewal model operated on daily data and therefore was susceptible
+to fluctuations in daily reporting which have less of an influence on
+weekly reporting.
+
+Our results suggest that human intervention may be less beneficial when
+forecasting deaths (especially at shorter horizons, when deaths are
+largely dependent on already observed cases), which benefits from the
+ability to model the delays and exact epidemiological relationships
+between different leading and lagged indicators. Relatively good
+performance of the convolution model, especially compared to the poor
+performance of the renewal model on deaths (which used only deaths to
+estimate and predict the effective reproduction number) underlines the
+importance of including leading indicators such as cases as a predictor
+for deaths.
+
+Given the low number of participants in our study, it is difficult to
+generalise conclusions about crowd predictions to other settings. Using
+R shiny as a platform for the web application arguably created some
+limits to user experience and performance, influencing the number of
+participants and potentially creating a self-selection effect.
+Motivating forecasters to contribute regularly proved challenging,
+especially given that the majority of our participants were from the UK
+and may not have been familiar with all relevant details of the
+situation in Germany and Poland. On the other hand, R shiny facilitated
+quick development and allowed us to provide our crowd forecasting
+tooling as an open source R package, meaning that it is available for
+others to use, for example in settings like early-stage outbreaks where
+model-based forecasts are not available. In light of the relatively
+small number of Hub ensemble models, performance of the Hub ensemble is
+also difficult to generalise. More research is needed to replicate these
+findings and investigate how crowd forecasts compare against the types
+of models and model ensembles policy makers use to inform their
+decisions.
+
+Our work suggests that crowd forecasts and model-based forecasts could
+have different strengths and may be able to complement each other. When
+choosing a suitable approach for a given task it is important to take
+into account how the output will be used. In this work we focused on
+forecasts (which aim to predict future data points whilst accounting for
+all factors that might influence them), whereas policy makers might be
+more interested in projections (which show what would happen in the
+absence of any events that could change the trend) or scenario
+modelling. Forecasts may not be a suitable basis for informing policy
+decisions, if forecasters already have factored in the expectation of a
+future intervention. Model-based approaches can be either forecasts or
+projections depending on the assumptions, whereas eliciting projections
+that are not influenced by implicit assumptions about the future from
+humans may be harder.
+
+Further work should explore the effects of humans refining their
+mathematical models or changing model outputs in more detail.
+Model-based forecasts could be used as an input to human judgement, with
+researchers adjusting predictions generated by models. Seeing a
+model-based forecast could help humans calibrate uncertainty better,
+while allowing for manual intervention to adapt spurious trend
+predictions. Tools need to be developed to facilitate this process at a
+larger scale. Human insight could also be used as an input to models.
+Such a `hybrid' forecasting approach could for example ask humans to
+predict the trend of the effective reproduction number \(R_t\) or the
+doubling rate (i.e.~how the epidemic evolves) into the future and use
+this to estimate the exact number of cases, hospitalisations or deaths
+this would imply. In light of severe overconfidence, yet good
+performance in terms of the absolute error, post-processing of human
+forecasts to adjust and widen prediction intervals may be another
+promising approach. Crowd forecasting in general could benefit greatly
+from the availability of tools suitable to appeal to a greater audience.
+Given the good performance we and previous authors observed in spite of
+the limited resources available and the small number of participants,
+this seems worthwhile to further develop and explore.
+
+\clearpage
+
+\section*{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-mcgowanCollaborativeEffortsForecast2019}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{McGowan CJ, Biggerstaff M, Johansson M, Apfeldorf KM,
+Ben-Nun M, Brooks L, et al. Collaborative efforts to forecast seasonal
+influenza in the {United States}, 2015--2016. Scientific Reports.
+2019;9: 683.
+doi:\href{https://doi.org/10.1038/s41598-018-36361-9}{10.1038/s41598-018-36361-9}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-reichCollaborativeMultiyearMultimodel2019}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Reich NG, Brooks LC, Fox SJ, Kandula S, McGowan CJ,
+Moore E, et al. A collaborative multiyear, multimodel assessment of
+seasonal influenza forecasting in the {United States}. PNAS. 2019;116:
+3146--3154.
+doi:\href{https://doi.org/10.1073/pnas.1812594116}{10.1073/pnas.1812594116}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shamanForecastingSeasonalOutbreaks2012}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Shaman J, Karspeck A. Forecasting seasonal outbreaks of
+influenza. PNAS. 2012;109: 20425--20430.
+doi:\href{https://doi.org/10.1073/pnas.1208772109}{10.1073/pnas.1208772109}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-biggerstaffResultsCentersDisease2016}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Biggerstaff M, Alper D, Dredze M, Fox S, Fung IC-H,
+Hickmann KS, et al. Results from the centers for disease control and
+prevention's predict the 2013--2014 {Influenza Season Challenge}. BMC
+Infectious Diseases. 2016;16: 357.
+doi:\href{https://doi.org/10.1186/s12879-016-1669-x}{10.1186/s12879-016-1669-x}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-johanssonOpenChallengeAdvance2019}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Johansson MA, Apfeldorf KM, Dobson S, Devita J, Buczak
+AL, Baugher B, et al. An open challenge to advance probabilistic
+forecasting for dengue epidemics. PNAS. 2019;116: 24268--24274.
+doi:\href{https://doi.org/10.1073/pnas.1909865116}{10.1073/pnas.1909865116}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-yamanaSuperensembleForecastsDengue2016}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Yamana TK, Kandula S, Shaman J. Superensemble forecasts
+of dengue outbreaks. Journal of The Royal Society Interface. 2016;13:
+20160410.
+doi:\href{https://doi.org/10.1098/rsif.2016.0410}{10.1098/rsif.2016.0410}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-colon-gonzalezProbabilisticSeasonalDengue2021}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Colón-González FJ, Bastos LS, Hofmann B, Hopkin A,
+Harpham Q, Crocker T, et al. Probabilistic seasonal dengue forecasting
+in {Vietnam}: {A} modelling study using superensembles. PLOS Medicine.
+2021;18: e1003542.
+doi:\href{https://doi.org/10.1371/journal.pmed.1003542}{10.1371/journal.pmed.1003542}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-viboudRAPIDDEbolaForecasting2018}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Viboud C, Sun K, Gaffey R, Ajelli M, Fumanelli L, Merler
+S, et al. The {RAPIDD} ebola forecasting challenge: {Synthesis} and
+lessons learnt. Epidemics. 2018;22: 13--21.
+doi:\href{https://doi.org/10.1016/j.epidem.2017.08.002}{10.1016/j.epidem.2017.08.002}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-funkAssessingPerformanceRealtime2019}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Funk S, Camacho A, Kucharski AJ, Lowe R, Eggo RM,
+Edmunds WJ. Assessing the performance of real-time epidemic forecasts:
+{A} case study of {Ebola} in the {Western Area} region of {Sierra
+Leone}, 2014-15. PLOS Computational Biology. 2019;15: e1006785.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1006785}{10.1371/journal.pcbi.1006785}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-delvalleSummaryResults201420152018}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Del Valle SY, McMahon BH, Asher J, Hatchett R, Lega JC,
+Brown HE, et al. Summary results of the 2014-2015 {DARPA Chikungunya}
+challenge. BMC Infectious Diseases. 2018;18: 245.
+doi:\href{https://doi.org/10.1186/s12879-018-3124-7}{10.1186/s12879-018-3124-7}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-farrowHumanJudgmentApproach2017}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Farrow DC, Brooks LC, Hyun S, Tibshirani RJ, Burke DS,
+Rosenfeld R. A human judgment approach to epidemiological forecasting.
+PLOS Computational Biology. 2017;13: e1005248.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1005248}{10.1371/journal.pcbi.1005248}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-funkShorttermForecastsInform2020}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Funk S, Abbott S, Atkins BD, Baguelin M, Baillie JK,
+Birrell P, et al. Short-term forecasts to inform the response to the
+{Covid-19} epidemic in the {UK}. medRxiv. 2020; 2020.11.11.20220962.
+doi:\href{https://doi.org/10.1101/2020.11.11.20220962}{10.1101/2020.11.11.20220962}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cramerCOVID19ForecastHub2020}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Cramer E, Reich NG, Wang SY, Niemi J, Hannan A, House K,
+et al. {COVID-19 Forecast Hub}: 4 {December} 2020 snapshot. {Zenodo};
+2020.
+doi:\href{https://doi.org/10.5281/zenodo.3963371}{10.5281/zenodo.3963371}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cramerEvaluationIndividualEnsemble2021}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Cramer E, Ray EL, Lopez VK, Bracher J, Brennen A,
+Rivadeneira AJC, et al. Evaluation of individual and ensemble
+probabilistic forecasts of {COVID-19} mortality in the {US}. medRxiv.
+2021; 2021.02.03.21250974.
+doi:\href{https://doi.org/10.1101/2021.02.03.21250974}{10.1101/2021.02.03.21250974}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bracherShorttermForecastingCOVID192021}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Bracher J, Wolffram D, Deuschel J, Görgen K, Ketterer
+JL, Ullrich A, et al. Short-term forecasting of {COVID-19} in {Germany}
+and {Poland} during the second wave -- a preregistered study. medRxiv.
+2021; 2020.12.24.20248826.
+doi:\href{https://doi.org/10.1101/2020.12.24.20248826}{10.1101/2020.12.24.20248826}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bracherNationalSubnationalShortterm2021}{}}%
+\CSLLeftMargin{16. }%
+\CSLRightInline{Bracher J, Wolffram D, Deuschel J, Görgen K, Ketterer
+JL, Ullrich A, et al. National and subnational short-term forecasting of
+{COVID-19} in {Germany} and {Poland}, early 2021. 2021;
+2021.11.05.21265810.
+doi:\href{https://doi.org/10.1101/2021.11.05.21265810}{10.1101/2021.11.05.21265810}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-europeancovid-19forecasthubEuropeanCovid19Forecast2021}{}}%
+\CSLLeftMargin{17. }%
+\CSLRightInline{European Covid-19 Forecast Hub. European {Covid-19
+Forecast Hub}. 2021 {[}cited 30 May 2021{]}. Available:
+\url{https://covid19forecasthub.eu/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-reichAccuracyRealtimeMultimodel2019}{}}%
+\CSLLeftMargin{18. }%
+\CSLRightInline{Reich NG, McGowan CJ, Yamana TK, Tushar A, Ray EL,
+Osthus D, et al. Accuracy of real-time multi-model ensemble forecasts
+for seasonal influenza in the {U}.{S}. PLOS Computational Biology.
+2019;15: e1007486.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1007486}{10.1371/journal.pcbi.1007486}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tetlockForecastingTournamentsTools2014}{}}%
+\CSLLeftMargin{19. }%
+\CSLRightInline{Tetlock PE, Mellers BA, Rohrbaugh N, Chen E. Forecasting
+{Tournaments}: {Tools} for {Increasing Transparency} and {Improving} the
+{Quality} of {Debate}. Curr Dir Psychol Sci. 2014;23: 290--295.
+doi:\href{https://doi.org/10.1177/0963721414534257}{10.1177/0963721414534257}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-atanasovDistillingWisdomCrowds2016}{}}%
+\CSLLeftMargin{20. }%
+\CSLRightInline{Atanasov P, Rescober P, Stone E, Swift SA,
+Servan-Schreiber E, Tetlock P, et al. Distilling the {Wisdom} of
+{Crowds}: {Prediction Markets} vs. {Prediction Polls}. Management
+Science. 2016;63: 691--706.
+doi:\href{https://doi.org/10.1287/mnsc.2015.2374}{10.1287/mnsc.2015.2374}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hoogeveenLaypeopleCanPredict2020}{}}%
+\CSLLeftMargin{21. }%
+\CSLRightInline{Hoogeveen S, Sarafoglou A, Wagenmakers E-J. Laypeople
+{Can Predict Which Social-Science Studies Will Be Replicated
+Successfully}. Advances in Methods and Practices in Psychological
+Science. 2020;3: 267--285.
+doi:\href{https://doi.org/10.1177/2515245920919667}{10.1177/2515245920919667}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-replicationmarketsReplicationMarketsReliable2020}{}}%
+\CSLLeftMargin{22. }%
+\CSLRightInline{ReplicationMarkets. Replication {Markets} -- {Reliable}
+research replicates\ldots you can bet on it. 2020 {[}cited 13 Oct
+2021{]}. Available: \url{https://www.replicationmarkets.com/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-servan-schreiberPredictionMarketsDoes2004}{}}%
+\CSLLeftMargin{23. }%
+\CSLRightInline{Servan-Schreiber E, Wolfers J, Pennock DM, Galebach B.
+Prediction {Markets}: {Does Money Matter}? Electronic Markets. 2004;14:
+243--251.
+doi:\href{https://doi.org/10.1080/1019678042000245254}{10.1080/1019678042000245254}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mcandrewExpertJudgmentModel2020}{}}%
+\CSLLeftMargin{24. }%
+\CSLRightInline{McAndrew TC, Reich NG. An expert judgment model to
+predict early stages of the {COVID-19} outbreak in the {United States}.
+medRxiv. 2020; 2020.09.21.20196725.
+doi:\href{https://doi.org/10.1101/2020.09.21.20196725}{10.1101/2020.09.21.20196725}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-recchiaHowWellDid2021}{}}%
+\CSLLeftMargin{25. }%
+\CSLRightInline{Recchia G, Freeman ALJ, Spiegelhalter D. How well did
+experts and laypeople forecast the size of the {COVID-19} pandemic? PLOS
+ONE. 2021;16: e0250935.
+doi:\href{https://doi.org/10.1371/journal.pone.0250935}{10.1371/journal.pone.0250935}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-metaculusPreliminaryLookMetaculus2020}{}}%
+\CSLLeftMargin{26. }%
+\CSLRightInline{Metaculus. A {Preliminary Look} at {Metaculus} and
+{Expert Forecasts}. 22 Jun 2020 {[}cited 30 May 2021{]}. Available:
+\url{https://www.metaculus.com/news/2020/06/02/LRT/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hypermindHypermindSupercollectiveIntelligence2021}{}}%
+\CSLLeftMargin{27. }%
+\CSLRightInline{Hypermind. Hypermind \textbar{} {Supercollective}
+intelligence for decision makers. {Hypermind}; 2021 {[}cited 13 Oct
+2021{]}. Available: \url{https://www.hypermind.com/en/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-csetforetellCSETForetell2021}{}}%
+\CSLLeftMargin{28. }%
+\CSLRightInline{CSET Foretell. {CSET Foretell}. 2021 {[}cited 13 Oct
+2021{]}. Available: \url{https://www.cset-foretell.com/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-predictitPredictIt2021}{}}%
+\CSLLeftMargin{29. }%
+\CSLRightInline{PredictIt. {PredictIt}. 2021 {[}cited 13 Oct 2021{]}.
+Available: \url{https://www.predictit.org/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-heldProbabilisticForecastingInfectious2017}{}}%
+\CSLLeftMargin{30. }%
+\CSLRightInline{Held L, Meyer S, Bracher J. Probabilistic forecasting in
+infectious disease epidemiology: The 13th {Armitage} lecture. Statistics
+in Medicine. 2017;36: 3443--3460.
+doi:\href{https://doi.org/10.1002/sim.7363}{10.1002/sim.7363}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-crowdforecastr}{}}%
+\CSLLeftMargin{31. }%
+\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S.
+Crowdforecastr: Eliciting crowd forecasts in r shiny. 2020.
+doi:\href{https://doi.org/10.5281/zenodo.4618519}{10.5281/zenodo.4618519}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-covidgermanforecasts}{}}%
+\CSLLeftMargin{32. }%
+\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S.
+Covid.german.forecasts: Forecasting covid-19 related metrics for the
+german/poland forecast hub. 2020. }
+
+\leavevmode\vadjust pre{\hypertarget{ref-ecdcDownloadHistoricalData2020}{}}%
+\CSLLeftMargin{33. }%
+\CSLRightInline{ECDC. Download historical data (to 14 {December} 2020)
+on the daily number of new reported {COVID-19} cases and deaths
+worldwide. {European Centre for Disease Prevention and Control}; 14 Dec
+2020 {[}cited 30 May 2021{]}. Available:
+\url{https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rkiRKICoronavirusSARSCoV22021}{}}%
+\CSLLeftMargin{34. }%
+\CSLRightInline{RKI. {RKI} - {Coronavirus SARS-CoV-2} - {Aktueller
+Lage-}/{Situationsbericht} des {RKI} zu {COVID-19}. 2021 {[}cited 30 May
+2021{]}. Available:
+\url{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-forsal.plRozbieznosciStatystykachKoronawirusa2020}{}}%
+\CSLLeftMargin{35. }%
+\CSLRightInline{Forsal.pl. Rozbieżności w statystykach koronawirusa. 22
+tys. przypadków będą doliczone do ogólnej liczby wyników. 2020 {[}cited
+30 May 2021{]}. Available:
+\url{https://forsal.pl/lifestyle/zdrowie/artykuly/8017628,rozbieznosci-w-statystykach-koronawirusa-22-tys-przypadkow-beda-doliczone-do-ogolnej-liczby-wynikow.html}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-aerzteblattSARSCoV2DiagnostikRKIPasst2020}{}}%
+\CSLLeftMargin{36. }%
+\CSLRightInline{Ärzteblatt DÄG Redaktion Deutsches.
+SARS-CoV-2-Diagnostik: RKI passt Testempfehlungen an. {Deutsches
+Ärzteblatt}; 3 Nov 2020 {[}cited 30 May 2021{]}. Available:
+\url{https://www.aerzteblatt.de/nachrichten/118001/SARS-CoV-2-Diagnostik-RKI-passt-Testempfehlungen-an}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-golem}{}}%
+\CSLLeftMargin{37. }%
+\CSLRightInline{Fay C, Guyader V, Rochette S, Girard C. Golem: A
+framework for robust shiny applications. 2021. Available:
+\url{https://github.com/ThinkR-open/golem}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shiny}{}}%
+\CSLLeftMargin{38. }%
+\CSLRightInline{Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie
+Y, et al. Shiny: Web application framework for r. 2021. Available:
+\url{https://CRAN.R-project.org/package=shiny}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ourworldindataCOVID19DataExplorer2020}{}}%
+\CSLLeftMargin{39. }%
+\CSLRightInline{Our World in Data. {COVID-19 Data Explorer}. {Our World
+in Data}; 2020 {[}cited 30 May 2021{]}. Available:
+\url{https://ourworldindata.org/coronavirus-data-explorer}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-epinow2}{}}%
+\CSLLeftMargin{40. }%
+\CSLRightInline{Abbott S, Hellewell J, Hickson J, Munday J, Gostic K,
+Ellis P, et al. EpiNow2: Estimate real-time case counts and time-varying
+epidemiological parameters. -. 2020;-: --.
+doi:\href{https://doi.org/10.5281/zenodo.3957489}{10.5281/zenodo.3957489}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-fraserEstimatingIndividualHousehold2007}{}}%
+\CSLLeftMargin{41. }%
+\CSLRightInline{Fraser C. Estimating {Individual} and {Household
+Reproduction Numbers} in an {Emerging Epidemic}. PLOS ONE. 2007;2: e758.
+doi:\href{https://doi.org/10.1371/journal.pone.0000758}{10.1371/journal.pone.0000758}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-epiforecasts.ioux2fcovidCovid19TemporalVariation2020}{}}%
+\CSLLeftMargin{42. }%
+\CSLRightInline{epiforecasts.io/covid. Covid-19: {Temporal} variation in
+transmission during the {COVID-19} outbreak. {Covid-19}; 2020 {[}cited
+30 May 2021{]}. Available: \url{https://epiforecasts.io/covid/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-sherrattExploringSurveillanceData2021}{}}%
+\CSLLeftMargin{43. }%
+\CSLRightInline{Sherratt K, Abbott S, Meakin SR, Hellewell J, Munday JD,
+Bosse N, et al. Exploring surveillance data biases when estimating the
+reproduction number: With insights into subpopulation transmission of
+{Covid-19} in {England}. 2021; 2020.10.18.20214585.
+doi:\href{https://doi.org/10.1101/2020.10.18.20214585}{10.1101/2020.10.18.20214585}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-abbottEstimatingTimevaryingReproduction2020a}{}}%
+\CSLLeftMargin{44. }%
+\CSLRightInline{Abbott S, Hellewell J, Thompson RN, Sherratt K, Gibbs
+HP, Bosse NI, et al. Estimating the time-varying reproduction number of
+{SARS-CoV-2} using national and subnational case counts. 2020 {[}cited
+14 Oct 2021{]}.
+doi:\href{https://doi.org/10.12688/wellcomeopenres.16006.1}{10.12688/wellcomeopenres.16006.1}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-kraemer2020epidemiological}{}}%
+\CSLLeftMargin{45. }%
+\CSLRightInline{Xu B, Gutierrez B, Hill S, Scarpino S, Loskill A, Wu J,
+et al. Epidemiological data from the nCoV-2019 outbreak: Early
+descriptions from publicly available data. 2020. Available:
+\url{http://virological.org/t/epidemiological-data-from-the-ncov-2019-outbreak-early-descriptions-from-publicly-available-data/337}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rstan}{}}%
+\CSLLeftMargin{46. }%
+\CSLRightInline{Stan Development Team. RStan: The r interface to stan.
+2020. Available: \url{http://mc-stan.org/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bracherEvaluatingEpidemicForecasts2021}{}}%
+\CSLLeftMargin{47. }%
+\CSLRightInline{Bracher J, Ray EL, Gneiting T, Reich NG. Evaluating
+epidemic forecasts in an interval format. PLoS Comput Biol. 2021;17:
+e1008618.
+doi:\href{https://doi.org/10.1371/journal.pcbi.1008618}{10.1371/journal.pcbi.1008618}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gneiting_strictly_2007}{}}%
+\CSLLeftMargin{48. }%
+\CSLRightInline{Gneiting T, Raftery AE. Strictly proper scoring rules,
+prediction, and estimation. Journal of the American Statistical
+Association. 2007;102: 359--378.
+doi:\href{https://doi.org/10.1198/016214506000001437}{10.1198/016214506000001437}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-scoringutils}{}}%
+\CSLLeftMargin{49. }%
+\CSLRightInline{Bosse NI, Abbott S, EpiForecasts, Funk S. Scoringutils:
+Utilities for scoring and assessing predictions. 2020.
+doi:\href{https://doi.org/10.5281/zenodo.4618017}{10.5281/zenodo.4618017}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-deutschewelleCoronavirusGermanyImpose2020}{}}%
+\CSLLeftMargin{50. }%
+\CSLRightInline{Deutsche Welle. Coronavirus: {Germany} to impose
+one-month partial lockdown \textbar{} {DW} \textbar{} 28.10.2020. 2020
+{[}cited 29 Jun 2021{]}. Available:
+\url{https://www.dw.com/en/coronavirus-germany-to-impose-one-month-partial-lockdown/a-55421241}}
+
+\end{CSLReferences}
+
+\clearpage
+
+\section*{Acknowledgements}
+
+We thank all forecasters who participated in this study for their
+contribution.
+
+\clearpage
+
+\beginsupplement
+
+\section*{Supporting information}
+
+\paragraph*{S1 Table.}
+\label{tab:scoring-metrics}
+
+\textbf{Overview of the scoring metrics used.}
+
+\paragraph*{S1 Text.}
+\label{txt:details-models}
+
+\textbf{Further details on the semi-mechanistic forecasting models.}
+
+\paragraph*{S1 Fig.}
+\label{fig:screenshot}
+
+\textbf{Screenshot of the crowdforecasting app used to elicit predictions (made in June 2021).}
+
+\paragraph*{S2}
+
+\textbf{Table.} \label{tab:score-table-2}
+\textbf{Scores for one and two week ahead forecasts.} Scores are cut to
+three significant digits and rounded). Note that scores for cases (which
+include the whole period from October 12th 2020 until March 1st 2021)
+and deaths (which include only forecasts from the 21st of December 2020
+on) are computed on different subsets. Numbers in brackets show the
+metrics relative to the Hub ensemble (i.e.~the median ensemble of all
+other models submitted to the German and Polish Forecast Hub, excluding
+our contributions). WIS is the mean weighted interval score (lower
+values are better), WIS - sd is the standard deviation of all scores
+achieved by a model. Dispersion, over-prediction and under-prediction
+together sum up to the weighted interval score. Bias (between -1 and 1,
+0 is ideal) represents the general average tendency of a model to over-
+or underpredict. 50\% and 90\%-coverage are the percentage of observed
+values that fell within the 50\% and 90\% prediction intervals of a
+model.
+
+\paragraph*{S3 Table.}
+\label{tab:score-table-4}
+
+\textbf{Scores for three and four weeks ahead forecasts.} Scores are cut
+to three significant digits and rounded). Note that scores for cases
+(which include the whole period from October 12th 2020 until March 1st
+2021) and deaths (which include only forecasts from the 21st of December
+2020 on) are computed on different subsets. Numbers in brackets show the
+metrics relative to the Hub ensemble (i.e.~the median ensemble of all
+other models submitted to the German and Polish Forecast Hub, excluding
+our contributions). WIS is the mean weighted interval score (lower
+values are better), WIS - sd is the standard deviation of all scores
+achieved by a model. Dispersion, over-prediction and under-prediction
+together sum up to the weighted interval score. Bias (between -1 and 1,
+0 is ideal) represents the general average tendency of a model to over-
+or underpredict. 50\% and 90\%-coverage are the percentage of observed
+values that fell within the 50\% and 90\% prediction intervals of a
+model.
+
+\paragraph{S2}
+
+\textbf{Fig.} \label{fig:agg-performance-all-Germany}
+\textbf{Visualisation of aggregate performance metrics for forecasts one to four weeks into the future in Germany.}
+A, B: mean weighted interval score (WIS, lower indicates better
+performance) across horizons. WIS is decomposed into its components
+dispersion, over-prediction and under-prediction. C: Empirical coverage
+of the 50\% prediction intervals (50\% coverage is perfect). D:
+Empirical coverage of the 90\% prediction intervals. E: Dispersion (same
+as in panel A, B). Higher values mean greater dispersion of the forecast
+and imply ceteris paribus a worse score. F: Bias, i.e.~general
+(relative) tendency to over- or underpredict. Values are between -1
+(complete under-prediction) and 1 (complete over-prediction) and 0
+ideally. G: Absolute error of the median forecast (lower is better). H.
+Standard deviation of all WIS values for different horizons
+
+\paragraph{S3}
+
+\textbf{Fig.} \label{fig:agg-performance-all-Poland}
+\textbf{Visualisation of aggregate performance metrics for forecasts one to four weeks into the future in Poland.}
+A, B: mean weighted interval score (WIS, lower indicates better
+performance) across horizons. WIS is decomposed into its components
+dispersion, over-prediction and under-prediction. C: Empirical coverage
+of the 50\% prediction intervals (50\% coverage is perfect). D:
+Empirical coverage of the 90\% prediction intervals. E: Dispersion (same
+as in panel A, B). Higher values mean greater dispersion of the forecast
+and imply ceteris paribus a worse score. F: Bias, i.e.~general
+(relative) tendency to over- or underpredict. Values are between -1
+(complete under-prediction) and 1 (complete over-prediction) and 0
+ideally. G: Absolute error of the median forecast (lower is better). H.
+Standard deviation of all WIS values for different horizons
+
+\paragraph{S4}
+
+\textbf{Fig.} \label{fig:performance-locations}
+\textbf{Visualisation of aggregate performance metrics across locations.}
+A, B: mean weighted interval score (WIS, lower indicates better
+performance) across horizons. WIS is decomposed into its components
+dispersion, over-prediction and under-prediction. C: Empirical coverage
+of the 50\% prediction intervals (50\% coverage is perfect). D:
+Empirical coverage of the 90\% prediction intervals. E: Dispersion (same
+as in panel A, B). Higher values mean greater dispersion of the forecast
+and imply ceteris paribus a worse score. F: Bias, i.e.~general
+(relative) tendency to over- or underpredict. Values are between -1
+(complete under-prediction) and 1 (complete over-prediction) and 0
+ideally. G: Absolute error of the median forecast (lower is better). H.
+Standard deviation of WIS values.
+
+\paragraph{S5}
+
+\textbf{Fig.} \label{fig:performance-locations-rel}
+\textbf{Visualisation of aggregate performance metrics across locations in relative terms.}
+A, B: mean weighted interval score (WIS) across locations (lower values
+indicate better performance). C, D: Empirical coverage of the 50\% and
+90\% prediction intervals. E: Dispersion. Higher values mean greater
+dispersion of the forecast and imply ceteris paribus a worse score. F:
+Bias, i.e.~general (relative) tendency to over- orunderpredict. Values
+are between -1 (complete under-prediction) and 1 (complete
+over-prediction) and 0 ideally. G: Absolute error of the median
+forecast. H. Standard deviation of WIS values.
+
+\paragraph{S6}
+
+\textbf{Fig.} \label{fig:daily-truth}
+\textbf{Visualisation of daily report data.} The black line represents
+weekly data divided by seven. Data were last accessed through the German
+and Polish Forecast Hub on August 21 2021.
+
+\paragraph{S7}
+
+\textbf{Fig.} \label{fig:daily-truth-update}
+\textbf{Visualisation of the absolute difference between the daily report data at the time and the data now.}
+In Germany, there were zero cases and deaths reported on 2020-10-12, and
+only later 2467 cases and 6 deaths were added. Data were last accessed
+through the German and Polish Forecast Hub on May 10 2022.
+
+\paragraph{S8}
+
+\textbf{Fig.} \label{fig:weekly-truth-update}
+\textbf{Visualisation of the relative difference between the weekly report data at the time and the data now.}
+Apart from the data that was retrospectively added on 2020-10-12, data
+updates did not have a noticeable effect on weekly data (as shown in the
+forecasting application). Data were last accessed through the German and
+Polish Forecast Hub on May 10 2022.
+
+\paragraph{S9 Fig.}
+\label{fig:forecasts-and-truth-1}
+
+\textbf{Visualisation of forecasts and scores for one week ahead forecasts.}
+A, C: Visualisation of 50\% prediction intervals of one week ahead
+forecasts against the reported values. Forecasts that were not scored
+(because there was no complete set of death forecasts available) are
+greyed out. B, D: Visualisation of corresponding WIS.
+
+\paragraph{S10 Fig.}
+\label{fig:forecasts-and-truth-3}
+
+\textbf{Visualisation of forecasts and scores for three week ahead forecasts.}
+A, C: Visualisation of 50\% prediction intervals of three week ahead
+forecasts against the reported values. Forecasts that were not scored
+(because there was no complete set of death forecasts available) are
+greyed out. B, D: Visualisation of corresponding WIS.
+
+\paragraph{S11 Fig.}
+\label{fig:forecasts-and-truth-4}
+
+\textbf{Visualisation of forecasts and scores for three week ahead forecasts.}
+A, C: Visualisation of 50\% prediction intervals of four week ahead
+forecasts against the reported values. Forecasts that were not scored
+(because there was no complete set of death forecasts available) are
+greyed out. B, D: Visualisation of corresponding WIS.
+
+\paragraph{S12 Fig.}
+\label{fig:distribution-scores-1}
+
+\textbf{Distribution of weighted interval scores for one week ahead forecasts}
+A: Distribution of weighted interval scores for one week ahead forecasts
+of the different models and forecast targets pooled across locations. B:
+Distribution of WIS separate by country.
+
+\paragraph{S13 Fig.}
+\label{A: Distribution of weighted interval scores for three week ahead forecasts of the different models and forecast targets pooled across locations. B: Distribution of WIS separate by country.}
+
+\textbf{Distribution of weighted interval scores for three week ahead forecasts}
+A: Distribution of weighted interval scores for three week ahead
+forecasts of the different models and forecast targets pooled across
+locations. B: Distribution of WIS separate by country.
+
+\paragraph{S14 Fig.}
+\label{A: Distribution of weighted interval scores for four week ahead forecasts of the different models and forecast targets pooled across locations. B: Distribution of WIS separate by country.}
+
+\textbf{Distribution of weighted interval scores for four week ahead forecasts}
+A: Distribution of weighted interval scores for four week ahead
+forecasts of the different models and forecast targets pooled across
+locations. B: Distribution of WIS separate by country.
+
+\paragraph{S15 Fig.}
+\label{fig:distribution-scores-ranks-1}
+
+\textbf{Distribution of model ranks (in terms of WIS) for one week ahead forecasts}
+A: Distribution of the ranks (determined by the weighted interval score)
+for one week ahead forecasts of the different models and forecast
+targets, pooled across locations. B: Distribution of ranks separate by
+country.
+
+\paragraph{S16 Fig.}
+\label{A: Distribution of the ranks (determined by the weighted interval score) for two week ahead forecasts of the different models and forecast targets, pooled across locations. B: Distribution of ranks separate by country.}
+
+\textbf{Distribution of model ranks (in terms of WIS) for two week ahead forecasts}
+A: Distribution of the ranks (determined by the weighted interval score)
+for two week ahead forecasts of the different models and forecast
+targets, pooled across locations. B: Distribution of ranks separate by
+country.
+
+\paragraph{S17 Fig.}
+\label{A: Distribution of the ranks (determined by the weighted interval score) for three week ahead forecasts of the different models and forecast targets, pooled across locations. B: Distribution of ranks separate by country.}
+
+\textbf{Distribution of model ranks (in terms of WIS) for three week ahead forecasts}
+A: Distribution of the ranks (determined by the weighted interval score)
+for three week ahead forecasts of the different models and forecast
+targets, pooled across locations. B: Distribution of ranks separate by
+country.
+
+\paragraph{S18 Fig.}
+\label{A: Distribution of the ranks (determined by the weighted interval score) for four week ahead forecasts of the different models and forecast targets, pooled across locations. B: Distribution of ranks separate by country.}
+
+\textbf{Distribution of model ranks (in terms of WIS) for four week ahead forecasts}
+A: Distribution of the ranks (determined by the weighted interval score)
+for four week ahead forecasts of the different models and forecast
+targets, pooled across locations. B: Distribution of ranks separate by
+country.
+
+\paragraph{S19 Fig.}
+\label{fig:distribution-scores-differences}
+
+\textbf{Difference in WIS between the Crowd forecast and the Hub ensemble for two week ahead forecasts.}
+Values below zero mean better performance of the Crowd forecasts.
+
+\paragraph{S20 Fig.}
+\label{fig:distribution-scores-differences-renewal}
+
+\textbf{Difference in WIS between the Crowd forecast and the Renewal model for two week ahead forecasts.}
+Values below zero mean better performance of the Crowd forecasts.
+
+\paragraph{S21}
+
+\textbf{Fig.} \label{fig:agg-performance-ensemble-mean}
+\textbf{Visualisation of aggregate performance metrics across forecast horizons for the different versions of the Hub mean ensemble.}
+``Hub-ensemble'' \textit{excludes} all our models, Hub-ensemble-all
+\textit{includes} all of our models, ``Hub-ensemble-realised'' is the
+actual hub-ensemble observed in reality, which includes the renewal
+model and the crowd forecasts, but ont the convolution model. Values
+(except for Bias) are computed as differences to the Hub ensemble which
+excludes our contributions. For Coverage, this is an absolute
+difference, for other metrics this is a percentage difference. A, B:
+mean weighted interval score (WIS) across horizons relative to the Hub
+ensemble (lower values indicate better performance). C, D: Empirical
+coverage of the 50\% and 90\% prediction intervals minus empirical
+coverage observed for the Hub ensemble. E: Dispersion relative to the
+dispersion of the Hub ensemble. Higher values mean greater dispersion of
+the forecast and imply ceteris paribus a worse score. F: Bias,
+i.e.~general (relative) tendency to over- orunderpredict. Values are
+between -1 (complete under-prediction) and 1 (complete over-prediction)
+and 0 ideally. G: Absolute error of the median forecast relative to the
+Hub ensemble. H. Standard deviation of all WIS values for different
+horizons relative to the Hub ensemble.
+
+\paragraph{S4}
+
+\textbf{Table.} \label{tab:score-table-ensemble-2}
+\textbf{Scores for one and two week ahead forecasts for the different versions of the median ensemble.}
+Scores are cut to three significant digits and rounded. Note that scores
+for cases (which include the whole period from October 12th 2020 until
+March 1st 2021) and deaths (which include only forecasts from the 21st
+of December 2020 on) are computed on different subsets. Numbers in
+brackets show the metrics relative to the Hub ensemble (i.e.~the median
+ensemble of all other models submitted to the German and Polish Forecast
+Hub, excluding our contributions). WIS is the mean weighted interval
+score (lower values are better), WIS - sd is the standard deviation of
+all scores achieved by a model. Dispersion, over-prediction and
+under-prediction together sum up to the weighted interval score. Bias
+(between -1 and 1, 0 is ideal) represents the general average tendency
+of a model to over- or underpredict. 50\% and 90\%-coverage are the
+percentage of observed values that fell within the 50\% and 90\%
+prediction intervals of a model.
+
+\paragraph{S5 Table.}
+\label{tab:score-table-ensemble-4}
+
+\textbf{Scores for three and four week ahead forecasts for the different versions of the median ensemble.}
+Scores are cut to three significant digits and rounded. Note that scores
+for cases (which include the whole period from October 12th 2020 until
+March 1st 2021) and deaths (which include only forecasts from the 21st
+of December 2020 on) are computed on different subsets. Numbers in
+brackets show the metrics relative to the Hub ensemble (i.e.~the median
+ensemble of all other models submitted to the German and Polish Forecast
+Hub, excluding our contributions). WIS is the mean weighted interval
+score (lower values are better), WIS - sd is the standard deviation of
+all scores achieved by a model. Dispersion, over-prediction and
+under-prediction together sum up to the weighted interval score. Bias
+(between -1 and 1, 0 is ideal) represents the general average tendency
+of a model to over- or underpredict. 50\% and 90\%-coverage are the
+percentage of observed values that fell within the 50\% and 90\%
+prediction intervals of a model.
+
+\paragraph{S6 Table.}
+\label{tab:score-table-ensemble-mean-2}
+
+\textbf{Scores for one and two week ahead forecasts for the different versions of the mean ensemble}
+Scores are cut to three significant digits and rounded. Note that scores
+for cases (which include the whole period from October 12th 2020 until
+March 1st 2021) and deaths (which include only forecasts from the 21st
+of December 2020 on) are computed on different subsets. Numbers in
+brackets show the metrics relative to the Hub mean ensemble (i.e.~the
+mean ensemble of all other models submitted to the German and Polish
+Forecast Hub, excluding our contributions). WIS is the mean weighted
+interval score (lower values are better), WIS - sd is the standard
+deviation of all scores achieved by a model. Dispersion, over-prediction
+and under-prediction together sum up to the weighted interval score.
+Bias (between -1 and 1, 0 is ideal) represents the general average
+tendency of a model to over- or underpredict. 50\% and 90\%-coverage are
+the percentage of observed values that fell within the 50\% and 90\%
+prediction intervals of a model.
+
+\paragraph{S7 Table.}
+\label{tab:score-table-ensemble-mean-4}
+
+\textbf{Scores for three and four week ahead forecasts for the different versions of the mean ensemble}
+Scores are cut to three significant digits and rounded. Note that scores
+for cases (which include the whole period from October 12th 2020 until
+March 1st 2021) and deaths (which include only forecasts from the 21st
+of December 2020 on) are computed on different subsets. Numbers in
+brackets show the metrics relative to the Hub mean ensemble (i.e.~the
+mean ensemble of all other models submitted to the German and Polish
+Forecast Hub, excluding our contributions). WIS is the mean weighted
+interval score (lower values are better), WIS - sd is the standard
+deviation of all scores achieved by a model. Dispersion, over-prediction
+and under-prediction together sum up to the weighted interval score.
+Bias (between -1 and 1, 0 is ideal) represents the general average
+tendency of a model to over- or underpredict. 50\% and 90\%-coverage are
+the percentage of observed values that fell within the 50\% and 90\%
+prediction intervals of a model.
+
+\paragraph{S22 Fig.}
+\label{fig:agg-performance-all-late}
+
+\textbf{Visualisation of aggregate performance metrics across forecast horizons (period from December 14th 2020 on)}
+From December 14th 2020 on, all models were available. In the original
+analysis, cases and deaths were scored on different periods, as the
+convolution model was only added later. This sensitivity analysis shows
+performance of all models restricted to the period from December 14 2020
+until March 1st 2021 where all models were available. A, B: mean
+weighted interval score (WIS, lower indicates better performance) across
+horizons. WIS is decomposed into its components dispersion,
+over-prediction and under-prediction. C: Empirical coverage of the 50\%
+prediction intervals (50\% coverage is perfect). D: Empirical coverage
+of the 90\% prediction intervals. E: Dispersion (same as in panel A, B).
+Higher values mean greater dispersion of the forecast and imply ceteris
+paribus a worse score. F: Bias, i.e.~general (relative) tendency to
+over- or underpredict. Values are between -1 (complete under-prediction)
+and 1 (complete over-prediction) and 0 ideally. G: Absolute error of the
+median forecast (lower is better). H. Standard deviation of all WIS
+values for different horizons
+
+\paragraph{S8}
+
+\textbf{Table.} \label{tab:score-table-late-2}
+\textbf{Scores for one and two week ahead forecasts (sensitivity analysis)}
+Scores are cut to three significant digits and rounded. In the original
+analysis, cases and deaths were scored on different periods, as the
+convolution model was only added later. This table shows performance of
+all models restricted to the period from December 14 2020 until March
+1st 2021 where all models were available. Numbers in brackets show the
+metrics relative to the Hub ensemble (i.e.~the median ensemble of all
+other models submitted to the German and Polish Forecast Hub, excluding
+our contributions). WIS is the mean weighted interval score (lower
+values are better), WIS - sd is the standard deviation of all scores
+achieved by a model. Dispersion, over-prediction and under-prediction
+together sum up to the weighted interval score. Bias (between -1 and 1,
+0 is ideal) represents the general average tendency of a model to over-
+or underpredict. 50\% and 90\%-coverage are the percentage of observed
+values that fell within the 50\% and 90\% prediction intervals of a
+model.
+
+\paragraph{S9 Table.}
+\label{tab:score-table-late-4}
+
+\textbf{Scores for three and four week ahead forecasts (sensitivity analysis)}
+Scores are cut to three significant digits and rounded. In the original
+analysis, cases and deaths were scored on different periods, as the
+convolution model was only added later. This table shows performance of
+all models restricted to the period from December 14 2020 until March
+1st 2021 where all models were available. Numbers in brackets show the
+metrics relative to the Hub ensemble (i.e.~the median ensemble of all
+other models submitted to the German and Polish Forecast Hub, excluding
+our contributions). WIS is the mean weighted interval score (lower
+values are better), WIS - sd is the standard deviation of all scores
+achieved by a model. Dispersion, over-prediction and under-prediction
+together sum up to the weighted interval score. Bias (between -1 and 1,
+0 is ideal) represents the general average tendency of a model to over-
+or underpredict. 50\% and 90\%-coverage are the percentage of observed
+values that fell within the 50\% and 90\% prediction intervals of a
+model.
+
+\paragraph{S10 Table.}
+\label{tab:table-ensemble-versions}
+
+\textbf{Overview of the models and ensembles used.}
+
+\paragraph{S23 Fig.}
+\label{fig:num-forecasters}
+
+\textbf{Number of participants who submitted a forecast over time.}
+
+\paragraph{S24 Fig.}
+\label{fig:num-ensemble-members}
+
+\textbf{Number of member models in the official Hub ensemble} This
+includes our crowd forecasts and the renewal model. Note that the
+renewal model was not included in the ensemble on December 28th 2020.
+
+\paragraph{S25 Fig.}
+\label{fig:compare-forecasters}
+
+\textbf{Crowd forecasts and baseline shown in the application for a two week horizon.}
+Shown are the median, as well as the 50\% and 90\% prediction intervals
+(in order of decreasing opacity). For any given point in time, the
+baseline shown in red is what forecasters saw when they opened the app
+(the baseline shown was constant across all forecast horizons).
+
+\paragraph*{S1 Acknowledgements.}
+
+\textbf{Members of the CMMID COVID-19 working group}
+
+\nolinenumbers
+
+
+
+\end{document}

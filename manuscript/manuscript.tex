@@ -697,6 +697,12 @@ A, B: mean weighted interval score (WIS, lower indicates better performance) acr
 \end{figure}
 
 \begin{figure}[H]
+\caption{\bf{Distribution of scores. }}
+A: Distribution of weighted interval scores for two week ahead forecasts of the different models and forecast targets. Points denote single forecasts scores, while the shaded area shows an estimated probability density. B: Distribution of WIS separate by country. Black squares indicate median and black circles mean scores.
+\label{fig:distribution-scores}
+\end{figure}
+
+\begin{figure}[H]
 \caption{\bf{Two week ahead forecasts and corresponding scores. }}
 A, C: Visualisation of 50\% prediction intervals of two week ahead forecasts against the reported values. Forecasts that were not scored (because there was no complete set of death forecasts available) are greyed out. B, D: Visualisation of corresponding WIS.
 \label{fig:forecasts-and-truth}
@@ -714,17 +720,18 @@ forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for
 crowd forecasts and 1.40 for the renewal model
 (\nameref{tab:score-table-2} Table). Across all forecasting approaches,
 locations and forecast horizons, the distribution of WIS values was very
-right-skewed, and average performance was heavily influenced by
-outliers. Overall, low variance in forecast performance was closely
-linked with good mean performance (Fig \ref{fig:agg-performance-all}H
-and \ref{fig:agg-performance-all}A), suggesting that the ability to
-avoid large errors was an important factor in determining overall
-performance. The impact of outlier values was especially pronounced for
-the renewal model, which had more outliers, as well as the highest
-standard deviation of WIS values (standard deviation of the WIS relative
-to the WIS sd of the Hub ensemble was 1.54 at the two weeks ahead
-horizon), while the ensemble of crowd forecasts (rel. WIS sd 0.76) and
-the Hub ensemble (= 1) showed more stable performance.
+right-skewed, and average performance was heavily influenced by outliers
+(see Fig \ref{fig:distribution-scores}). Overall, low variance in
+forecast performance was closely linked with good mean performance (Fig
+\ref{fig:agg-performance-all}H and \ref{fig:agg-performance-all}A),
+suggesting that the ability to avoid large errors was an important
+factor in determining overall performance. The impact of outlier values
+was especially pronounced for the renewal model, which had more
+outliers, as well as the highest standard deviation of WIS values
+(standard deviation of the WIS relative to the WIS sd of the Hub
+ensemble was 1.54 at the two weeks ahead horizon), while the ensemble of
+crowd forecasts (rel. WIS sd 0.76) and the Hub ensemble (= 1) showed
+more stable performance.
 
 To varying degrees, all forecasts exhibited trend-following behaviour
 and were rarely able to predict a change in trend before it had
@@ -882,12 +889,6 @@ under-prediction penalties were more in line with a general relative
 tendency to over- or under-predict than for cases (Fig
 \ref{fig:agg-performance-all}A and \ref{fig:agg-performance-all}B, as
 well as \nameref{tab:score-table-2} and \nameref{tab:score-table-4}s).
-
-\begin{figure}[H]
-\caption{\bf{Distribution of scores. }}
-A: Distribution of weighted interval scores for two week ahead forecasts of the different models and forecast targets. Points denote single forecasts scores, while the shaded area shows an estimated probability density. B: Distribution of WIS separate by country. Black squares indicate median and black circles mean scores.
-\label{fig:distribution-scores}
-\end{figure}
 
 \begin{figure}[H]
 \caption{\bf{Relative aggregate performance metrics across forecast horizons for different versions of the Hub median ensemble.}}

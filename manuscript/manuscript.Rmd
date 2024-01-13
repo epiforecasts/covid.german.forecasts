@@ -199,6 +199,27 @@ cat("\\begin{figure}[H]\n",
 ```
 
 
+
+```{r}
+captiontitle <- "Distribution of scores. "
+caption <- "A: Distribution of weighted interval scores for two week ahead forecasts of the different models and forecast targets. Points denote single forecasts scores, while the shaded area shows an estimated probability density. B: Distribution of WIS separate by country. Black squares indicate median and black circles mean scores."
+label <- "fig:distribution-scores"
+```
+
+```{r distribution-scores, fig.cap=caption, eval = FALSE}
+# knitr::include_graphics("../analysis/plots/distribution_scores_wis-2.png")
+```
+
+```{r, results = "asis"}
+cat("\\begin{figure}[H]\n", 
+    "\\caption{\\bf{", captiontitle, "}}\n", 
+    caption, "\n",
+    "\\label{", label, "}\n", 
+    "\\end{figure}", sep = "")
+```
+
+
+
 ```{r}
 captiontitle <- "Two week ahead forecasts and corresponding scores. "
 caption <- "A, C: Visualisation of 50\\% prediction intervals of two week ahead forecasts against the reported values. Forecasts that were not scored (because there was no complete set of death forecasts available) are greyed out. B, D: Visualisation of corresponding WIS."
@@ -220,7 +241,7 @@ cat("\\begin{figure}[H]\n",
 
 ## Case Forecasts
 
-For cases, crowd forecasts had a lower mean weighted interval score (WIS, lower values indicate better performance) than both the renewal model and the Hub ensemble across all forecast horizons (Fig \ref{fig:agg-performance-all}A) and locations (\nameref{fig:performance-locations-rel}A Fig). For two week ahead forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for crowd forecasts and 1.40 for the renewal model (\nameref{tab:score-table-2} Table). Across all forecasting approaches, locations and forecast horizons, the distribution of WIS values was very right-skewed, and average performance was heavily influenced by outliers. Overall, low variance in forecast performance was closely linked with good mean performance (Fig \ref{fig:agg-performance-all}H and \ref{fig:agg-performance-all}A), suggesting that the ability to avoid large errors was an important factor in determining overall performance. The impact of outlier values was especially pronounced for the renewal model, which had more outliers, as well as the highest standard deviation of WIS values (standard deviation of the WIS relative to the WIS sd of the Hub ensemble was 1.54 at the two weeks ahead horizon), while the ensemble of crowd forecasts (rel. WIS sd 0.76) and the Hub ensemble (= 1) showed more stable performance. 
+For cases, crowd forecasts had a lower mean weighted interval score (WIS, lower values indicate better performance) than both the renewal model and the Hub ensemble across all forecast horizons (Fig \ref{fig:agg-performance-all}A) and locations (\nameref{fig:performance-locations-rel}A Fig). For two week ahead forecasts, mean WIS relative to the Hub ensemble (= 1) was 0.89 for crowd forecasts and 1.40 for the renewal model (\nameref{tab:score-table-2} Table). Across all forecasting approaches, locations and forecast horizons, the distribution of WIS values was very right-skewed, and average performance was heavily influenced by outliers (see Fig \ref{fig:distribution-scores}). Overall, low variance in forecast performance was closely linked with good mean performance (Fig \ref{fig:agg-performance-all}H and \ref{fig:agg-performance-all}A), suggesting that the ability to avoid large errors was an important factor in determining overall performance. The impact of outlier values was especially pronounced for the renewal model, which had more outliers, as well as the highest standard deviation of WIS values (standard deviation of the WIS relative to the WIS sd of the Hub ensemble was 1.54 at the two weeks ahead horizon), while the ensemble of crowd forecasts (rel. WIS sd 0.76) and the Hub ensemble (= 1) showed more stable performance. 
 
 To varying degrees, all forecasts exhibited trend-following behaviour and were rarely able to predict a change in trend before it had happened. For example, all forecasts failed to predict the change in trend from increase to decrease that happened in November in Germany and severely overshot reported cases (Fig \ref{fig:forecasts-and-truth}A). This was most striking for the renewal model, which extrapolated unconstrained exponential growth based on the recent past of observations. The Hub ensemble and the crowd forecast, which had both been under-predicting throughout October, also failed to predict the change in trend after cases peaked, but less severely so. Human forecasters, possibly aware of the semi-lockdown announced on November 2nd 2020 [@deutschewelleCoronavirusGermanyImpose2020] and the change in the testing regime (with stricter test criteria) on November 11th 2020 [@aerzteblattSARSCoV2DiagnostikRKIPasst2020], were fastest to adapt to the new trend, and the Hub ensemble slowest. In December, cases rose again in Germany, with all models under-predicting this growth to varying extents. As in October, the renewal model captured the phase of exponential growth in cases slightly better than other approaches, but again overshot when reported case numbers fell over Christmas. The large variance in predictions in January in Germany (severe under-prediction followed by severe over-prediction) may in part be caused by the fact that the renewal model operated on daily data and therefore was susceptible to fluctuations in daily reporting around Christmas that would not have influenced on weekly reporting. Similar trends in performance were evident in Poland, with the crowd forecast quickest at adapting to the change in trend in November. In general, there were fewer large outlier forecasts in Poland and in particular the renewal model performed more in line with other forecasts there. 
 
@@ -242,26 +263,6 @@ As past cases and hospitalisations can be used as predictors, predicting a chang
 Death forecasts, generally, showed greater coverage of the 50% and 90% prediction intervals than case forecasts and no decrease in coverage across forecast horizons, indicating that it might be easier to appropriately quantify uncertainty for death forecasts. The Hub ensemble had the greatest coverage, with empirical coverage of the 50% and 90% prediction intervals exceeding 50%, and 90%, respectively, across all forecast horizons. Coverage for the crowd forecasts and our model-based approaches was generally lower than that of the Hub ensemble and mostly slightly lower than nominal coverage (Fig \ref{fig:agg-performance-all}C and \ref{fig:agg-performance-all}D). As for cases, the crowd forecast tended to have the narrowest prediction intervals and uncertainty increased most slowly across forecast horizons, and the renewal model forecasts generally were widest. The convolution model had relatively narrow prediction intervals for short forecast horizons, but had rapidly (and non-linearly) increasing uncertainty for longer forecast horizons, driven by increasing uncertainty in the underlying case forecasts. 
 
 For deaths, the ensemble of crowd forecasts had a consistent tendency to over-predict (see Fig \ref{fig:agg-performance-all}F). The convolution model had a strong tendency to under-predict, with the magnitude of under-prediction steadily decreasing for longer forecast horizons. The renewal model (which over-predicted for cases) and the Hub ensemble slightly tended towards under-prediction. For deaths, absolute over- and under-prediction penalties were more in line with a general relative tendency to over- or under-predict than for cases (Fig \ref{fig:agg-performance-all}A and \ref{fig:agg-performance-all}B, as well as \nameref{tab:score-table-2} and \nameref{tab:score-table-4}s). 
-
-```{r}
-captiontitle <- "Distribution of scores. "
-caption <- "A: Distribution of weighted interval scores for two week ahead forecasts of the different models and forecast targets. Points denote single forecasts scores, while the shaded area shows an estimated probability density. B: Distribution of WIS separate by country. Black squares indicate median and black circles mean scores."
-label <- "fig:distribution-scores"
-```
-
-```{r distribution-scores, fig.cap=caption, eval = FALSE}
-# knitr::include_graphics("../analysis/plots/distribution_scores_wis-2.png")
-```
-
-```{r, results = "asis"}
-cat("\\begin{figure}[H]\n", 
-    "\\caption{\\bf{", captiontitle, "}}\n", 
-    caption, "\n",
-    "\\label{", label, "}\n", 
-    "\\end{figure}", sep = "")
-```
-
-
 
 
 ```{r}
