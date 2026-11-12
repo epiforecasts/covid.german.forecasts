@@ -1,5 +1,7 @@
 # Comparing human and model-based forecasts of COVID-19 in Germany and Poland
 
+> **Archived.** No longer maintained; last updated December 2023.
+
 This repository holds the data and analysis scripts used for the paper "Comparing human and model-based forecasts of COVID-19 in Germany and Poland". It is also still used to to create weekly forecast submissions from the epiforecasts team at the London School of Hygiene & Tropical Medicine to the [German and Polish Forecast Hub](https://kitmetricslab.github.io/forecasthub/forecast). 
 
 ## Abstract
